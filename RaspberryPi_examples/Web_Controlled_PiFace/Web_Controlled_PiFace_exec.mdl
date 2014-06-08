@@ -1,0 +1,115 @@
+Model {
+  Name                    "Web_Controlled_PiFace_exec"
+  Version                 3.00
+  #RexVersion             "2.10.3 rev. 4099, Date 2014-05-13"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "Web_Controlled_PiFace_exec"
+    Location                [10, 31, 255, 379]
+    #GUID                   06eb7513-3603-4d98-8e52-a52eb191a7dc
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [20, 18, 65, 307]
+      SourceBlock             "execlib/EXEC"
+      target                  "PC - Linux"
+      tick                    "0.01"
+      ntick0                  1
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   22deffa1-0394-494b-9120-8fa2cdda6361
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [130, 68, 180, 82]
+      SourceBlock             "execlib/IODRV"
+      module                  "RPiDrv"
+      classname               "RPiDrv"
+      cfgname                 ""
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   1dbaee9b-4763-47bd-9f0a-6d12c46e4148
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPiDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [130, 33, 180, 47]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   d2ed1989-cb74-4671-848c-1be18226cbe2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "Web_Controlled_PiFace_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [130, 173, 180, 187]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   bf3da571-18a5-4c7a-bf02-7d9f6bc4a892
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "RPiDrv"
+      DstPort                 1
+      #GUID                   80994ab4-b3f3-4d8f-b821-ed3c39373be0
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "RPI"
+      DstPort                 1
+      #GUID                   91308724-8beb-497a-89a3-d72e1ae81c0e
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "Web_Controlled_PiFace_task"
+      DstPort                 1
+      #GUID                   cff4a95d-20ef-4f5c-bfea-6326f4863790
+    }
+  }
+}

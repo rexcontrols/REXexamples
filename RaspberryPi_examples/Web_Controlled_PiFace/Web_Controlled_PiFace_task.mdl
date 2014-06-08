@@ -1,0 +1,452 @@
+Model {
+  Name                    "Web_Controlled_PiFace_task"
+  Version                 3.00
+  #RexVersion             "2.10.3 rev. 4099, Date 2014-05-13"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "Web_Controlled_PiFace_task"
+    Location                [267, 32, 949, 379]
+    #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
+    Block {
+      BlockType               Reference
+      Name                    "AND_"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [260, 78, 295, 102]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   447520f0-65a4-4da7-99ce-64e2d1e90922
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_BLINK"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [200, 158, 215, 182]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      "0.1"
+      t2                      "0.2"
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   0e8dcb1b-1241-43f5-8915-db6d17c3d173
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_HEARTBEAT"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [525, 248, 540, 272]
+      SourceBlock             "genlib/BIS"
+      Y0                      on
+      t1                      "0.7"
+      t2                      "0.8"
+      t3                      "0.9"
+      t4                      "1.0"
+      t5                      0
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   2700e8c9-d49b-4c80-bc6a-7a074586db39
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [170, 148, 190, 162]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   60a892e9-cb37-4fec-b2a1-95dfb0a62534
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OUT4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [520, 58, 540, 72]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   00f2f877-0501-42cd-8539-fbdcfd17cde5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OUT5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [520, 88, 540, 102]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   b28d1244-3111-46a4-9dc4-eda71489abfc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OUT6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [520, 118, 540, 132]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   c723298b-fc7d-46ab-908f-c4a225399897
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_OUT7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [520, 148, 540, 162]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   45cf95fa-e32e-4478-b968-91f8dc9a6a20
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [195, 58, 220, 72]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   d0b1d816-cd63-40f5-8c62-e203a8fc5209
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [565, 248, 655, 262]
+      ShowName                off
+      GotoTag                 "RPI__GPIO16"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   0b2b783c-0d4e-4991-bcb2-67bf99a9ce20
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISSW1"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [265, 148, 295, 182]
+      SourceBlock             "logiclib/ISSW"
+      #GUID                   da2d9bf7-cb6d-4528-9e44-1d3b61697cef
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [305, 120, 315, 130]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      #GUID                   309c09b6-2d8a-43a0-8b26-e3c38eacc472
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_START"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [140, 228, 155, 242]
+      SourceBlock             "genlib/MP"
+      pwidth                  1
+      BSTATE                  off
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   83304338-db84-43d0-8001-630d31846ccb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "NOT_"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [135, 18, 160, 32]
+      SourceBlock             "logiclib/NOT_"
+      #GUID                   b756a8bf-50d6-40eb-9814-0d49323e4c0e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "NOT_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [135, 58, 160, 72]
+      SourceBlock             "logiclib/NOT_"
+      #GUID                   78d10880-e558-445c-9f3c-dd5f741dfbd0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "NOT_2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [135, 188, 160, 202]
+      SourceBlock             "logiclib/NOT_"
+      #GUID                   4b5e0ef1-924b-4c3a-962a-cc4182e1db2b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "NOT_3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [135, 258, 160, 272]
+      SourceBlock             "logiclib/NOT_"
+      #GUID                   1a23d503-7bf9-4da2-8c95-58f3a64f39cb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OR_"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [210, 248, 245, 272]
+      SourceBlock             "logiclib/OR_"
+      #GUID                   7ab2be69-71e3-4d72-92d2-54090c91d3b0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFIU"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [25, 16, 55, 104]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   1c41e766-c64e-4a79-83fb-cef14f8138d1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFO"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [610, 16, 640, 104]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   d725c8b4-d29a-4dfc-9202-113d24123ccd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RS"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [325, 58, 360, 82]
+      SourceBlock             "logiclib/RS"
+      #GUID                   c10730f3-41cd-4676-968c-25ae6a11e2c1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TIMER_"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [275, 248, 315, 272]
+      SourceBlock             "logiclib/TIMER_"
+      mode                    "1: Pulse generator"
+      pt                      5
+      #GUID                   70e8f080-912f-4cfe-a5a7-6895beff4ae9
+    }
+    Line {
+      SrcBlock                "AND_"
+      SrcPort                 1
+      Points                  [10, 0]
+      DstBlock                "RS"
+      DstPort                 2
+      #GUID                   37f6b527-6ac1-4764-95c0-1a431a0557f7
+    }
+    Line {
+      SrcBlock                "BIS_BLINK"
+      SrcPort                 1
+      DstBlock                "ISSW1"
+      DstPort                 2
+      #GUID                   071e595d-040d-43da-8d84-35f039cc5e50
+    }
+    Line {
+      SrcBlock                "BIS_HEARTBEAT"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   ee77c3ed-522e-4bb7-90a1-ae653439839a
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "ISSW1"
+      DstPort                 1
+      #GUID                   72e1e854-0d7f-4ed4-af30-f967e6607ca0
+    }
+    Line {
+      SrcBlock                "CNB_OUT4"
+      SrcPort                 1
+      DstBlock                "RPI__PFO"
+      DstPort                 5
+      #GUID                   055683ef-5049-44f5-aaec-1d751abcae9c
+    }
+    Line {
+      SrcBlock                "CNB_OUT5"
+      SrcPort                 1
+      Points                  [25, 0; 0, -20]
+      DstBlock                "RPI__PFO"
+      DstPort                 6
+      #GUID                   78907e22-8d4c-4971-a25f-451225a546b4
+    }
+    Line {
+      SrcBlock                "CNB_OUT6"
+      SrcPort                 1
+      Points                  [35, 0; 0, -40]
+      DstBlock                "RPI__PFO"
+      DstPort                 7
+      #GUID                   61502afa-c899-44aa-b36c-53c6d8e8ef48
+    }
+    Line {
+      SrcBlock                "CNB_OUT7"
+      SrcPort                 1
+      Points                  [45, 0; 0, -60]
+      DstBlock                "RPI__PFO"
+      DstPort                 8
+      #GUID                   a1a1cf0e-f330-44b9-b8e5-3940402805e1
+    }
+    Line {
+      SrcBlock                "EDGE_"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   1f7d46f8-2763-46da-8267-8e05f1d42b00
+      Branch {
+        Points                  [0, 20]
+        DstBlock                "AND_"
+        DstPort                 1
+        #GUID                   2eacaaa0-e66c-4bad-83d2-9da4f683d56b
+      }
+      Branch {
+        DstBlock                "RS"
+        DstPort                 1
+        #GUID                   9cebfc18-51f3-430d-8b7a-32ad3ee3036b
+      }
+    }
+    Line {
+      SrcBlock                "ISSW1"
+      SrcPort                 1
+      Points                  [165, 0; 0, -120]
+      DstBlock                "RPI__PFO"
+      DstPort                 3
+      #GUID                   f5acee3b-9ada-4b2b-88ae-ab301c0c1309
+    }
+    Line {
+      SrcBlock                "LPBRK"
+      SrcPort                 1
+      Points                  [-65, 0; 0, -30]
+      DstBlock                "AND_"
+      DstPort                 2
+      #GUID                   86151e6f-7ab2-4dbf-8982-508c001eb8a8
+    }
+    Line {
+      SrcBlock                "MP_START"
+      SrcPort                 1
+      Points                  [35, 0]
+      DstBlock                "OR_"
+      DstPort                 1
+      #GUID                   5d52d34c-8bfe-46fa-bc8c-f14121353e2d
+    }
+    Line {
+      SrcBlock                "NOT_"
+      SrcPort                 1
+      DstBlock                "RPI__PFO"
+      DstPort                 1
+      #GUID                   f1a4f067-d9ba-4027-b631-9fdc02540d57
+    }
+    Line {
+      SrcBlock                "NOT_1"
+      SrcPort                 1
+      DstBlock                "EDGE_"
+      DstPort                 1
+      #GUID                   e76a531f-0beb-4114-a51c-5bcb56b9eb36
+    }
+    Line {
+      SrcBlock                "NOT_2"
+      SrcPort                 1
+      Points                  [85, 0]
+      DstBlock                "ISSW1"
+      DstPort                 3
+      #GUID                   4ab2b2a8-cf30-4a1c-be7c-e422d0bc5757
+    }
+    Line {
+      SrcBlock                "NOT_3"
+      SrcPort                 1
+      DstBlock                "OR_"
+      DstPort                 2
+      #GUID                   31c5d38d-31c8-4911-9283-9c668251616c
+    }
+    Line {
+      SrcBlock                "OR_"
+      SrcPort                 1
+      DstBlock                "TIMER_"
+      DstPort                 1
+      #GUID                   65deb098-59ce-45a8-9a0a-872c8bd5d670
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 1
+      DstBlock                "NOT_"
+      DstPort                 1
+      #GUID                   e8ae750d-c3c9-4069-8571-1cb93173cf1c
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 2
+      Points                  [55, 0; 0, 30]
+      DstBlock                "NOT_1"
+      DstPort                 1
+      #GUID                   994498cf-8534-4d3b-b136-2644313f9bc2
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 3
+      Points                  [45, 0; 0, 150]
+      DstBlock                "NOT_2"
+      DstPort                 1
+      #GUID                   8fa12a1d-79f5-4c1c-97a1-eefdc998a5f3
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 4
+      Points                  [30, 0; 0, 210]
+      DstBlock                "NOT_3"
+      DstPort                 1
+      #GUID                   0687d8b3-9d3d-43c7-ba90-5ad89753ef52
+    }
+    Line {
+      SrcBlock                "RS"
+      SrcPort                 1
+      Points                  [25, 0]
+      #GUID                   f0f05645-b7c0-4d1e-8455-83ed400b9d58
+      Branch {
+        Points                  [0, 60]
+        DstBlock                "LPBRK"
+        DstPort                 1
+        #GUID                   efdef72b-5dd7-4a34-96eb-dc493ab99844
+      }
+      Branch {
+        Points                  [65, 0; 0, -30]
+        DstBlock                "RPI__PFO"
+        DstPort                 2
+        #GUID                   4500f580-e5e0-4386-899e-d729e4b0a938
+      }
+    }
+    Line {
+      SrcBlock                "TIMER_"
+      SrcPort                 1
+      Points                  [155, 0; 0, -200]
+      DstBlock                "RPI__PFO"
+      DstPort                 4
+      #GUID                   703c6f09-208d-4edb-82a9-32d134f4cba7
+    }
+  }
+}

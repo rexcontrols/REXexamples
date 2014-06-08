@@ -1,0 +1,277 @@
+Model {
+  Name                    "simple_pidu"
+  Version                 3.00
+  #RexVersion             "2.10.3 rev. 4168, Date 2014-05-22"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "simple_pidu"
+    Location                [206, 26, 670, 354]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Reference
+      Name                    "CNB_MAN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 148, 50, 162]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   de07ef6e-f06b-4193-9ffb-91a2825dc92d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [335, 98, 350, 112]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   bd1941b7-9f46-4e0a-bd73-a620d95acbdc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_hv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 118, 50, 132]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   feff9b40-0640-4f55-ba3c-878d9b0686ea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_sp"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 89, 50, 101]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     5
+      BackgroundColor         "magenta"
+      #GUID                   021454e3-4160-4d35-a849-91d477ec4353
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [155, 55, 165, 65]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      NamePlacement           ""
+      FontSize                10
+      #GUID                   a6f698dc-594b-4f7f-ac9c-90d215b5cdaa
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK_2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [170, 175, 180, 185]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      NamePlacement           ""
+      FontSize                10
+      #GUID                   5cca29b2-7bf5-4739-acdf-52e73a6ab6d1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MDL_PROCESS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [230, 78, 255, 92]
+      SourceBlock             "modellib/MDL"
+      ShowName                on
+      NamePlacement           ""
+      k0                      10
+      del                     0
+      tau1                    3
+      tau2                    5
+      BackgroundColor         "yellow"
+      #GUID                   59b0ed8d-e460-4cf2-a7a7-2dcd0a091db7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PIDU"
+      Ports                   [7, 4, 0, 0, 0]
+      Position                [135, 76, 180, 154]
+      SourceBlock             "reglib/PIDU"
+      ShowName                on
+      NamePlacement           ""
+      irtype                  "7: PID"
+      RACT                    off
+      k                       "0.75"
+      ti                      "4.3"
+      td                      "1.07"
+      nd                      10
+      b                       "0.5"
+      c                       0
+      tt                      "2.1"
+      hilim                   1
+      lolim                   -1
+      dz                      0
+      icotype                 "1: Analog"
+      BackgroundColor         "lightBlue"
+      #GUID                   eff15adb-50cd-49fc-8e97-83b1ed3bb1d0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [380, 52, 425, 128]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       3
+      l                       100
+      btype                   8
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   1ab2533d-94df-4e7f-8baa-84a7c4427c36
+    }
+    Line {
+      SrcBlock                "CNB_MAN"
+      SrcPort                 1
+      Points                  [35, 0; 0, -20]
+      DstBlock                "PIDU"
+      DstPort                 6
+      #GUID                   44de48b8-afc6-41fa-983c-f17b52978590
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   0e8512cd-760e-4cc5-a688-fd9c666d3dfb
+    }
+    Line {
+      SrcBlock                "CNR_hv"
+      SrcPort                 1
+      DstBlock                "PIDU"
+      DstPort                 5
+      #GUID                   cb5a24a8-58af-4d8c-8542-1fa353d3f6ee
+    }
+    Line {
+      SrcBlock                "CNR_sp"
+      SrcPort                 1
+      Points                  [25, 0]
+      #GUID                   840d4481-f62e-4957-89cd-567c91ef23ff
+      Branch {
+        DstBlock                "PIDU"
+        DstPort                 2
+        #GUID                   8f29730f-9ae2-428e-aebc-9231af63f66f
+      }
+      Branch {
+        Points                  [0, -55; 285, 0]
+        DstBlock                "TRND"
+        DstPort                 1
+        #GUID                   bbb95e84-0df2-4d26-9731-1aa2e639e557
+      }
+    }
+    Line {
+      SrcBlock                "LPBRK_1"
+      SrcPort                 1
+      Points                  [-45, 0; 0, 55]
+      DstBlock                "PIDU"
+      DstPort                 4
+      #GUID                   3b662c17-9ed4-4a78-a49e-a9f4dba5d537
+    }
+    Line {
+      SrcBlock                "LPBRK_2"
+      SrcPort                 1
+      Points                  [-50, 0; 0, -75]
+      DstBlock                "PIDU"
+      DstPort                 3
+      #GUID                   05ab89a1-7f32-4371-b4f4-9522bb46b27d
+    }
+    Line {
+      SrcBlock                "MDL_PROCESS"
+      SrcPort                 1
+      Points                  [30, 0]
+      #GUID                   4d7d1e6b-366b-43b5-be56-059336f706b5
+      Branch {
+        Points                  [0, 95]
+        DstBlock                "LPBRK_2"
+        DstPort                 1
+        #GUID                   0d13ce28-5e95-4867-bc32-c94c3f5bcbd5
+      }
+      Branch {
+        DstBlock                "TRND"
+        DstPort                 3
+        #GUID                   c62618b0-53d6-4639-8775-1f2ffe9afec8
+      }
+    }
+    Line {
+      SrcBlock                "PIDU"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   f33431e0-c779-415c-8eec-dd5d310a6045
+      Branch {
+        DstBlock                "MDL_PROCESS"
+        DstPort                 1
+        #GUID                   8a4424d2-647d-4c29-924a-6c3bb0af60e5
+      }
+      Branch {
+        Points                  [0, -25]
+        #GUID                   7517e7ba-7f84-488e-9c0b-99baa3cbf662
+        Branch {
+          DstBlock                "LPBRK_1"
+          DstPort                 1
+          #GUID                   9388b3dc-68dd-4873-8877-ce370fe315db
+        }
+        Branch {
+          Points                  [160, 0; 0, 15]
+          DstBlock                "TRND"
+          DstPort                 2
+          #GUID                   399918b5-b64e-4513-823c-8d04f7db03d6
+        }
+      }
+    }
+    Annotation {
+      Position                [230, 250]
+      Text                    "This task demonstrates the use of a simple PID "
+"controller unit\nwith bumpless switching of manual and automatic modes.\n\nCha"
+"nge the CNR_sp constant in automatic mode or the CNR_hv\nconstant in manual mo"
+"de and observe the controller action (mv)\nand the process reaction (pv)."
+      #GUID                   dbf0df54-535c-4a8c-8f11-53761ea4e3df
+    }
+  }
+}

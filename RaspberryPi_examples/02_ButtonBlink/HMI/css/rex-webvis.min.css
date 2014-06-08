@@ -1,0 +1,405 @@
+/**********************************************
+			REX SVG BLOCK STYLES 
+***********************************************/
+
+.rex-block{
+    cursor:pointer;
+}
+
+.rex-block-monitor rect
+{
+	fill: rgba(0, 218, 0, 0.19) !important;
+	stroke: rgba(12, 73, 0, 0.79) !important;
+}
+
+.rex-block-monitor path
+{
+	stroke: rgba(12, 73, 0, 0.79) !important;
+}
+
+.rex-block-hover rect
+{
+	fill: rgba(77, 77, 77, 0.15) !important;
+	stroke: rgba(54, 54, 54, 0.57) !important;
+}
+
+.rex-block-hover path
+{
+	stroke: rgba(54, 54, 54, 0.57) !important;
+}
+
+/**********************************************
+				REX DIALOG STYLES 
+***********************************************/
+#rex-dialog-container{
+    text-align: left;
+	width: 100%;
+	height: 100%;
+}
+
+#rex-dialog-container svg 
+{
+	margin: 0px auto;
+	display: block;         
+}
+
+.rex-dialog-desc{
+	margin-bottom: 10;
+	margin-right: 20;
+	font-size: 14;
+}
+
+.rex-dialog-input
+{
+}
+
+.rex-dialog-input input
+{
+	padding: 2px;
+}
+
+.rex-dialog-input-failed
+{
+}
+
+.rex-dialog-input-failed img
+{
+	display:inline !important;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.rex-dialog-input-failed input
+{
+	position:relative;
+	border: 1px solid #FF5925;
+	color: #FF5925;
+	-webkit-animation: shake_it 0.2s 0 4
+}
+
+@-webkit-keyframes shake_it
+{
+0%		{left:0px;}
+50%		{left:5px;}
+100%	{left:0px;}
+}
+
+@-webkit-keyframes show
+{
+0%		{left:0px;}
+50%		{transform: rotate(0deg);left:5px;}
+100%	{left:0px;}
+}.draggable {
+  cursor: move;
+  position: relative;		
+}
+
+.dlresize {
+  cursor: se-resize;
+  position: relative;		
+}
+
+#rex_charts text{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.rex-block-hover rect{
+  fill: #a6a1ff !important;
+  stroke: #0000ff !important;	
+}
+
+.rex-block-hover path{
+  stroke: #0000ff !important;	
+}
+.wsv-column{	
+        width: 330px;        	
+        /*float: left;*/
+        display: inline-block;       
+        /*margin-right: -6px;*/
+        vertical-align: top;
+}
+
+.wsv-column-name{
+    padding: 5px;
+    height: 30px;
+    white-space: normal;
+}
+
+.wsv-section-name{
+    padding: 5px;
+    height: 30px;
+    white-space: normal;
+}
+.wsv-section-name h2{
+	margin: 0px;
+	color:#FFFFFF;
+        text-align: center;
+}
+
+.wsv-row{	
+    padding: 5px;
+    height: 30px;
+    white-space: normal;
+    /* color:#FFFFFF; */  
+    text-align: left;
+}
+
+.wsv-row .odd{
+	/* background-color: #EBF7FF; */
+}
+
+.wsv-row .wsv-row-label{
+    display: inline-block;
+    width: 150px;
+    font-size: 10pt;    
+}
+
+.wsv-row .ui-spinner{
+	width:152px;
+}
+
+.wsv-row .ui-buttonset .ui-button{
+	width: 74px;
+}
+
+.wsv-row .mp-button{
+	width:152px;
+}
+
+.digital-input{
+	color:#000000;
+	display: inline-block;
+	height: 18px;
+}
+.wsv-row .on{
+	background-color: #FFFFFF; 
+}
+.wsv-row .off{
+	background-color: #000000; 
+}
+
+.wsv-row .ui-select-custom{
+    width: 152px;
+    border: none;
+}
+
+/* Based on the http://colorschemedesigner.com/#3w61TjxwRw0w0 */
+.primary{background-color: #78ADD3;}
+.primary .ui-state-default{background-color: #477FA6; color:#212121;}
+.primary .ui-state-active {background-color: #17496C; color:#FFFFFF;}
+
+.wsv-column_1 .wsv-section_1{	background-color: #78ADD3;}
+.wsv-column_1 .wsv-section_2{	background-color: #A66C20;}
+.wsv-column_1 .wsv-section_3{	background-color: #76D9AC;}
+.wsv-column_1 .wsv-section_4{	background-color: #8587D9;}
+
+.wsv-column_2 .wsv-section_1{	background-color: #8587D9;}
+.wsv-column_2 .wsv-section_2{	background-color: #76D9AC;}
+.wsv-column_2 .wsv-section_3{	background-color: #A66C20;}
+.wsv-column_2 .wsv-section_4{	background-color: #78ADD3;}
+
+.wsv-column_3 .wsv-section_1{	background-color: #76D9AC;}
+.wsv-column_3 .wsv-section_2{	background-color: #A66C20;}
+.wsv-column_3 .wsv-section_3{	background-color: #78ADD3;}
+.wsv-column_3 .wsv-section_4{	background-color: #8587D9;}
+    
+body{
+    font-family: Verdana,Arial,sans-serif;
+    margin: 0px;
+}
+h1{
+    font-weight: bold;
+    font-size: 18pt;
+    /*font-family: Verdana,Arial,sans-serif;*/
+}
+h2{
+    font-size: 14pt;
+}
+
+#header{
+    background-color: #006BB9;
+    color:white;
+    height: 40px;
+    /* text-align: center; */
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+#header #rex-logo{                        
+    margin-left:10px; 
+	margin-top:-3px; 
+    float:left;
+    height: 35px;	
+}
+#header #connect-btn{
+    margin-left:10px; 
+    color:white; 
+    background: transparent;
+    float:left;
+    margin-right:40px; 
+    margin-top: -3px;
+    height: 35px;
+}
+#header-title{    
+    text-align: center;
+    margin: 0 100px;
+}
+#header h1{
+	margin: 0px;
+}
+
+#current-time{
+    float: right;
+    margin-right: 10px;
+}
+
+#menu-btn{
+    float: right;
+    margin-right: 10px;
+    color:white; 
+    background: transparent;  
+    position: relative;
+    line-height: 31px;
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+    font-size: 30px;
+    margin-top: -3px;
+    text-align: center;        
+}
+
+#menu-btn .ui-button-text{    
+    line-height: 31px;    
+    padding: 0px;    
+}
+#menu-btn:not(.ui-state-hover){
+    border: solid 1px #006BB9;
+}
+.number-in-circle {
+    border-radius: 50%;
+    font-size: 5pt;
+    width: 12px;
+    height: 12px;
+    padding: 1px;
+    background: rgba(255,69,0,0.8);    
+    color: white;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    line-height: 10px;
+}
+
+#menu{
+    position:absolute;
+    right: 10px;
+    top: 50px;
+    height: 40%;
+    width: 330px;
+    padding: 10px 0px 10px 10px;
+    z-index: 10;
+    background-color: white;    
+}
+
+#log{    
+    height: calc(100% - 10px);    
+    overflow:auto;
+    font-size: 8pt;        
+    padding: 5px;    
+    background: #A3B4BF url("../images/rex_logo_t_50.png") no-repeat center center;
+}
+
+#controls{
+    text-align:center;
+    margin: 10px;
+}
+
+#content{    
+	/* http://colorschemedesigner.com/#3w61T4Y--w0w0 */
+    background-color: #DAF0FF;            
+    margin-bottom: 10px;
+    padding: 5px;
+    overflow: auto;
+    white-space: nowrap;
+    text-align: center;
+    
+    position: absolute;
+    top: 60px;
+    bottom: 0px;
+    left:10px;
+    right:10px;
+}
+
+#content:not(input), #rex-chart{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.no-text-select{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#content svg{
+    width: 99%;
+    height: 99%;
+}    
+
+#svg-holder{
+    margin-bottom: 5px;
+}
+
+#controls {}
+
+#controls div{	
+	float:left;
+	width:350px;	
+}
+#rex-chart{        
+    position:absolute;
+    /* height: 200px; */    
+    font-size: 0.7em;
+    bottom: 70px; 
+    left: 10px;
+    right: 10px;
+} 
+
+#rex-chart.no-log{
+    bottom: 10px;
+}
+
+#rex-charts{    
+	width:100%;
+	height:100%;
+}
+
+#footer{
+
+    background-color: #006BB9;
+    color:white;
+    height: 25px;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin-top: 10px;
+    font-size: 10pt;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;    
+}
+#footer a{
+	color:white;
+	text-decoration: none;
+}

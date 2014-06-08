@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- REX WebVis Template version=0.3.177 -->
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <!-- %Redirect% -->
+        <link rel="shortcut icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.ico">
+        <link rel="icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.png">
+
+        <title><!-- %Title% --></title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/metro-theme/jquery-ui-1.10.2.custom.css">
+        <link rel="stylesheet" type="text/css" href="css/metro-theme/jquery-ui-timepicker-addon.min.css">
+        <link rel="stylesheet" type="text/css" href="css/rex-webvis.min.css">
+
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/Globalize/01-globalize.js"></script>
+        <script type="text/javascript" src="js/Globalize/02-globalize.culture.cs.js"></script>
+        <script type="text/javascript" src="js/jQuery/01-jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/02-jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/03-jquery-disabler.js"></script>
+        <script type="text/javascript" src="js/jQuery/04-jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/05-jquery-ui-timepicker-addon.min.js"></script>
+
+        <script type="text/javascript" src="js/rex-webvis.min.js?version=0.3.177"></script>
+
+
+        
+                    <script type='text/javascript'>
+                        $(document).ready(function() {
+    /* Item types 
+     * DR - Digital Read  
+     *      (options:{label_false:'OFF',
+     *                label_true:'ON',
+     *                reverse_meaning:true,                 *                
+     *                color_true:'green',
+     *                color_false:'red')                 *                
+     * DW - Digital Write (options:{label_false:'OFF',label_true:'ON'})
+     * MP - Manual Pulse
+     * PB - Push Button
+     * AR - Analog Read
+     *       (options:{type:'time'|type:'date'|type:'datetime')   
+     * AW - Analog Write
+     *       (options:{type:'time'|type:'date'|type:'datetime')
+     * ALT - Analog Lookup Table (values:{name:value})
+     * ES - Empty Space 
+     */
+
+    /* The example of the item
+     * {alias:<alias of the signal>, name:<displayed name>, cstring:<Connection string>, type:<type of the signal>, options:<Options if neccessary>}                                 
+     */
+
+    /* !!! ATTENTION It is posible to add items to various sections,
+     * but every item must have UNIQUE ALIAS !!! */
+
+                var controls = {
+                    column:1,
+                    name:'User controls',
+                    rows:[
+                    {alias: 'PID_MAN', name:'Controller mode', cstring: 'simple_pidu.CNB_MAN:YCN', type: 'DW', options: {label_false: 'AUT',
+                            label_true: 'MAN'}},
+                    {alias: 'SP_AW', name: 'Setpoint', cstring: 'simple_pidu.CNR_sp:ycn', type: 'AW'},
+                    {alias: 'HV_AW', name: 'Hand value', cstring: 'simple_pidu.CNR_hv:ycn', type: 'AW'},
+                ]};
+            
+                REX.WebBuDi.addSection(controls);
+
+                var FBD = {
+                    column:1,
+                    background_color: '#8587D9',
+                    name:'Control algorithm in detail',
+                    rows:[
+                    {alias: 'mylink', name: 'Open FBD', label: '--->', url: 'index_WebFBD.html', type: 'LINK'},
+                ]};
+            
+                REX.WebBuDi.addSection(FBD);
+
+                var pidu = {
+                    column:2,
+                    name:'PID controller unit',
+                    rows:[
+                    {alias: 'PIDU_K', cstring: 'simple_pidu.PIDU:k', type: 'AW'},
+                    {alias: 'PIDU_TI', cstring: 'simple_pidu.PIDU:ti', type: 'AW'},
+                    {alias: 'PIDU_TD', cstring: 'simple_pidu.PIDU:td', type: 'AW'},
+                    {alias: 'PIDU_IR_TYPE', cstring: 'simple_pidu.PIDU:irtype', type: 'ALT', values: {1: "D", 2: "I", 3: "ID", 4: "P", 5: "PD", 6: "PI", 7: "PID"}},
+                    {type: 'ES'}
+                ]};
+            
+                REX.WebBuDi.addSection(pidu);
+
+                var signals = {
+                    column:3,
+                    name:'Signals',
+                    rows:[
+                    {alias: 'SP', name: 'Setpoint', cstring: 'simple_pidu.PIDU:sp', type: 'AR'},
+                    {alias: 'PV', name: 'Process value',  cstring: 'simple_pidu.PIDU:pv', type: 'AR'},
+                    {alias: 'HV', name: 'Hand value',  cstring: 'simple_pidu.PIDU:hv', type: 'AR'},
+                    {alias: 'MV', name: 'Manipulated variable',  cstring: 'simple_pidu.PIDU:mv', type: 'AR'},
+                    {alias: 'MAN', name: 'Controller mode',  cstring: 'simple_pidu.PIDU:MAN', type: 'DR', options: {label_false: 'AUT', label_true: 'MAN'}}
+                ]};
+            
+                REX.WebBuDi.addSection(signals);
+                
+    /** Add old signal to trend with alias
+     REX.WebBuDi.addTrendSignal(alias) -> alias is string only
+     REX.WebBuDi.addTrendSignal({alias:<alias>,options:{color:<color>,tBegin:0,buffercapacity:100}})
+     
+     Add new signal to trend with options
+     REX.WebBuDi.addTrendSignal({alias:<alias>,cstring:<connection string>) 
+     ie. REX.WebBuDi.addTrendSignal('SP');
+     
+     REX.WebBuDi.addTrendSignal({alias:<alias>,cstring:<connection string>,options:{color:<color>,tBegin:0,buffercapacity:100}}) 
+     ie. REX.WebBuDi.addTrendSignal({alias:'TV',cstring:'mtuner.PIDMA:tv', options:{color:"orange"}});
+     
+     <option>
+     color - color of the line
+     tBegin - When signal starts
+     buffercapacity - Number of buffered values
+     */
+    REX.WebBuDi.addTrendSignal({alias: 'SP', name: 'Setpoint'});
+    REX.WebBuDi.addTrendSignal({alias: 'PV', name: 'Process value'});
+    REX.WebBuDi.addTrendSignal({alias: 'MV', name: 'Manipulated variable'});
+
+    // Adjust size of the trend. Value is in <0;1> interval.
+    // It represents the percentage of the visible screen
+    REX.WebBuDi.setTrendSize(0.39);
+
+    // Set WS server address (use only if the websocket server 
+    // is NOT running on the same machine as the webserver providing this page)
+    // REX.WebBuDi.setWsIP('127.0.0.1:8008/rex');
+
+    // Set REX target device address (use only if the websocket 
+    // server is NOT running on the same machine as the RexCore runtime module)
+    // REX.WebBuDi.setTargetIP('127.0.0.1');
+
+    // Set refresh rate (Default: 100 ms)
+    //REX.WebBuDi.setRefreshRate(100);
+
+    // Change title of the page
+    REX.WebVis.setTitle('Simple PID Controller');
+
+    // auto connect
+    REX.WebBuDi.connect();
+
+
+});
+                    </script>
+                
+
+    </head>
+    <body>
+        <div id="header">                    
+            <img id="rex-logo" src="images/rex_logo_white.png" alt="REX Controls" />
+            <button id='connect-btn'>Connect</button>
+            <div id='menu-btn' class="no-text-select"><img src="images/menu-icon.svg" alt="&#9776;"></div>
+            <div id="current-time"><h1>XX:XX:XX</h1></div>            
+            <div id="header-title">                        
+                <h1><!-- %Header-Title% --></h1>
+            </div>
+        </div>        
+        <div id="menu" style="display: none;">
+            <div id="log"></div>
+        </div>
+
+        <div id="content">
+            <!-- BEGIN OF CUSTOM CONTENT -->
+
+            <!-- END OF CUSTOM CONTENT -->
+        </div>
+
+        <div id="rex-chart" style="display:none;">
+            <!-- Size of the trend and viewbox must have the same size to achieve proper autoscale capabilities -->
+            <svg id="rex-charts" viewBox="0 0 1000 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+
+    </body>
+</html>
+
