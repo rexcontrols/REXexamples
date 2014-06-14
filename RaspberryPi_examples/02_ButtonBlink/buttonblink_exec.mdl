@@ -42,8 +42,8 @@ Model {
       Position                [15, 13, 60, 302]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
-      tick                    "0.01"
-      ntick0                  2
+      tick                    "0.02"
+      ntick0                  1
       ntick1                  50
       ntick2                  100
       ntick3                  1200
