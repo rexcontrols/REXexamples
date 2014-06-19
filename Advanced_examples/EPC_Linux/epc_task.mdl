@@ -1,0 +1,371 @@
+Model {
+  Name                    "epc_task"
+  Version                 3.00
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "Auto"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  Created                 "Tue Aug 28 12:33:33 2001"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "mertlj"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon Jan 07 09:53:40 2008"
+  ModelVersionFormat      "1.%<AutoIncrement:43>"
+  ConfigurationManager    "none"
+  #RexVersion             "2.10.3 rev. 4257, Date 2014-06-16"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "epc_task"
+    Location                [216, 31, 690, 504]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "automatic"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    ZoomFactor              100
+    AutoZoom                on
+    ReportName              "simulink-default.rpt"
+    #GUID                   64a78286-c1c8-44ea-aaf5-d5afc6d5fdb3
+    Block {
+      BlockType               Reference
+      Name                    "BIS"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [70, 238, 85, 262]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      1
+      t2                      2
+      t3                      3
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   a3c389c0-ba2d-4cc7-aa01-812e738e9bb9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EPC"
+      Ports                   [12, 15, 0, 0, 0]
+      Position                [215, 201, 285, 389]
+      SourceBlock             "speclib/EPC"
+      cmd                     "/rex/rexcore/epc_script.sh"
+      ifns                    "epc_uVec1;epc_uVec2"
+      ofns                    "epc_yVec1;epc_yVec2"
+      sl                      1
+      ifm                     10000
+      format                  "1: Space-delimited values"
+      BackgroundColor         "cyan"
+      #GUID                   85c9b017-5456-44c2-a821-2b7a6eac4ffa
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_EXECUTE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [75, 408, 90, 422]
+      SourceBlock             "genlib/MP"
+      pwidth                  1
+      BSTATE                  on
+      RPTF                    off
+      #GUID                   8f5ddbff-feb7-47f1-84a8-81ada4ff6dc2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOV_data"
+      Ports                   [9, 1, 0, 0, 0]
+      Position                [120, 166, 180, 264]
+      SourceBlock             "matrixlib/RTOV"
+      capacity                3
+      offset                  0
+      n                       3
+      #GUID                   c09a52ae-63b4-45a5-953c-26ff44bd98e9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOV_time"
+      Ports                   [9, 1, 0, 0, 0]
+      Position                [120, 281, 180, 379]
+      SourceBlock             "matrixlib/RTOV"
+      capacity                3
+      offset                  0
+      n                       3
+      #GUID                   b9b2db64-ee3f-4020-ae66-64e17a38d42e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_saw"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 208, 85, 222]
+      SourceBlock             "genlib/SG"
+      SourceType              "SG"
+      isig                    "3: SAWTOOTH"
+      amp                     1
+      freq                    "0.05"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: DEGREE"
+      NamePlacement           ""
+      ShowName                on
+      #GUID                   468c34af-cebe-4044-bd7f-0fd71d76b6a9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_sine"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 178, 85, 192]
+      SourceBlock             "genlib/SG"
+      SourceType              "SG"
+      isig                    "1: SINE"
+      amp                     1
+      freq                    "0.01"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: DEGREE"
+      NamePlacement           ""
+      ShowName                on
+      #GUID                   ed045053-97b3-47b6-84d7-478ae3ec4990
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TIME"
+      Ports                   [0, 3, 0, 0, 0]
+      Position                [45, 293, 85, 327]
+      SourceBlock             "genlib/TIME"
+      tz                      "1: Local time"
+      #GUID                   085c4ee8-e594-4f0d-836e-02f2e33f7e7f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "VTOR"
+      Ports                   [1, 8, 0, 0, 0]
+      Position                [335, 166, 395, 254]
+      SourceBlock             "matrixlib/VTOR"
+      n                       5
+      offset                  0
+      #GUID                   182c2eaa-ef96-4259-9061-c881ed59733e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "VTOR1"
+      Ports                   [1, 8, 0, 0, 0]
+      Position                [335, 271, 395, 359]
+      SourceBlock             "matrixlib/VTOR"
+      n                       3
+      offset                  0
+      #GUID                   c133687a-5977-47d9-b5ff-e6f508a5279d
+    }
+    Line {
+      SrcBlock                "BIS"
+      SrcPort                 1
+      Points                  [15, 0]
+      DstBlock                "RTOV_data"
+      DstPort                 4
+      #GUID                   ac7e3abe-d3ab-433d-b3a7-a2bfde036095
+    }
+    Line {
+      SrcBlock                "EPC"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "VTOR"
+      DstPort                 1
+      #GUID                   54c2ad3a-3d90-4a23-a284-b1febed74f59
+    }
+    Line {
+      SrcBlock                "EPC"
+      SrcPort                 2
+      Points                  [30, 0]
+      DstBlock                "VTOR1"
+      DstPort                 1
+      #GUID                   90455027-7321-4f2e-882c-fb0181a40be0
+    }
+    Line {
+      SrcBlock                "MP_EXECUTE"
+      SrcPort                 1
+      Points                  [105, 0]
+      DstBlock                "EPC"
+      DstPort                 9
+      #GUID                   9b71c273-e031-4a54-8baa-90b4b86c7abb
+    }
+    Line {
+      SrcBlock                "RTOV_data"
+      SrcPort                 1
+      DstBlock                "EPC"
+      DstPort                 1
+      #GUID                   dbf0d1c0-7130-4d70-ad00-4f8084a4577f
+    }
+    Line {
+      SrcBlock                "RTOV_time"
+      SrcPort                 1
+      Points                  [10, 0; 0, -100]
+      DstBlock                "EPC"
+      DstPort                 2
+      #GUID                   ba07c17a-1108-4d1c-a077-1bd53755f47b
+    }
+    Line {
+      SrcBlock                "SG_saw"
+      SrcPort                 1
+      Points                  [10, 0; 0, -20]
+      DstBlock                "RTOV_data"
+      DstPort                 3
+      #GUID                   35ddf6a3-d75b-4ebd-a34d-a81e999163ae
+    }
+    Line {
+      SrcBlock                "SG_sine"
+      SrcPort                 1
+      DstBlock                "RTOV_data"
+      DstPort                 2
+      #GUID                   5138d033-faa0-4677-b487-77811f166059
+    }
+    Line {
+      SrcBlock                "TIME"
+      SrcPort                 1
+      DstBlock                "RTOV_time"
+      DstPort                 2
+      #GUID                   af86c233-bb0e-42c2-86dd-e619aa0569d4
+    }
+    Line {
+      SrcBlock                "TIME"
+      SrcPort                 2
+      DstBlock                "RTOV_time"
+      DstPort                 3
+      #GUID                   d1c69204-c0c5-461e-b631-4455b407819f
+    }
+    Line {
+      SrcBlock                "TIME"
+      SrcPort                 3
+      DstBlock                "RTOV_time"
+      DstPort                 4
+      #GUID                   ce12bf3a-fd32-4a1c-ae1a-9563ff9b4ea4
+    }
+    Annotation {
+      Position                [180, 25]
+      Text                    "Example of EPC block usage in Linux"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   0769b06e-86b9-4d92-9928-3a27d37b47a8
+    }
+    Annotation {
+      Position                [235, 95]
+      Text                    "Instructions:\n1. Copy the .sh file and the .cs"
+"v files to /rex/rexcore on the target device\n2. Make the script executable: s"
+"udo chmod +x /rex/rexcore/epc_script.sh\n3. Compile and download the executive"
+" to the target device\n4. Change the BSTATE parameter of MP_EXECUTE block and "
+"watch the \n    outputs of the VTOR blocks.\n5. Inspect the working files of t"
+"he EPC block in /rex/rexcore/ on the target \n    device."
+      #GUID                   4155d6b5-cb71-499a-a8c6-440de1e9adc2
+    }
+  }
+}
