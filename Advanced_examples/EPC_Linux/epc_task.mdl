@@ -93,7 +93,7 @@ Model {
   LastModifiedDate        "Mon Jan 07 09:53:40 2008"
   ModelVersionFormat      "1.%<AutoIncrement:43>"
   ConfigurationManager    "none"
-  #RexVersion             "2.10.3 rev. 4257, Date 2014-06-16"
+  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -359,12 +359,13 @@ Model {
     }
     Annotation {
       Position                [235, 95]
-      Text                    "Instructions:\n1. Copy the .sh file and the .cs"
-"v files to /rex/rexcore on the target device\n2. Make the script executable: s"
-"udo chmod +x /rex/rexcore/epc_script.sh\n3. Compile and download the executive"
-" to the target device\n4. Change the BSTATE parameter of MP_EXECUTE block and "
-"watch the \n    outputs of the VTOR blocks.\n5. Inspect the working files of t"
-"he EPC block in /rex/rexcore/ on the target \n    device."
+      Text                    "Instructions:\n1. Read the EPC block descriptio"
+"n (left-click the block and press the F1 key)!\n2. Copy the .sh file and the ."
+"csv files to /rex/rexcore on the target device\n3. Make the script executable:"
+" sudo chmod +x /rex/rexcore/epc_script.sh\n4. Compile and download the executi"
+"ve to the target device\n5. Change the BSTATE parameter of MP_EXECUTE block an"
+"d watch the \n    outputs of the VTOR blocks.\n6. Inspect the working files of"
+" the EPC block in /rex/rexcore/ on the target \n    device."
       #GUID                   4155d6b5-cb71-499a-a8c6-440de1e9adc2
     }
   }
