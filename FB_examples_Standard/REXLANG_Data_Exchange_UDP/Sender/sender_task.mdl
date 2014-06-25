@@ -33,13 +33,13 @@ Model {
   }
   System {
     Name                    "sender_task"
-    Location                [200, 26, 553, 357]
+    Location                [200, 26, 596, 357]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
       Name                    "BIS"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [105, 108, 120, 132]
+      Position                [105, 128, 120, 152]
       SourceBlock             "genlib/BIS"
       Y0                      off
       t1                      1
@@ -57,7 +57,7 @@ Model {
       BlockType               Reference
       Name                    "CNI"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [80, 68, 140, 82]
+      Position                [80, 88, 140, 102]
       SourceBlock             "mathlib/CNI"
       icn                     87654321
       #GUID                   a372da76-f99b-4120-b3c0-9b76457093da
@@ -66,7 +66,7 @@ Model {
       BlockType               Reference
       Name                    "CNR"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [80, 158, 140, 172]
+      Position                [80, 178, 140, 192]
       SourceBlock             "mathlib/CNR"
       ycn                     "-247.18"
       #GUID                   1fb7ced2-926f-4ba5-97e4-3df781f6ceb7
@@ -75,7 +75,7 @@ Model {
       BlockType               Reference
       Name                    "REXLANG"
       Ports                   [17, 17, 0, 0, 0]
-      Position                [195, 86, 245, 264]
+      Position                [195, 106, 245, 284]
       SourceBlock             "speclib/REXLANG"
       srcname                 "sender_rexlang.stl"
       srctype                 "1: STL"
@@ -104,7 +104,7 @@ Model {
       BlockType               Reference
       Name                    "SG_SINE"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 193, 125, 207]
+      Position                [100, 213, 125, 227]
       SourceBlock             "genlib/SG"
       isig                    "1: SINE"
       amp                     10
@@ -151,6 +151,13 @@ Model {
       FontWeight              "bold"
       FontSize                16
       #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
+    }
+    Annotation {
+      Position                [200, 50]
+      Name                    "Change the IP addresses in the sender_rexlang.s"
+"tl file if necessary.\nThe IP addresses are defined by hexadecimal numbers, e."
+"g. 0xC0A80164."
+      #GUID                   8ea0877f-99eb-499d-a2f3-ad429402a698
     }
   }
 }

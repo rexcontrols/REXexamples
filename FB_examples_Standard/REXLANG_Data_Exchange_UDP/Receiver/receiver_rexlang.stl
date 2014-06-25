@@ -11,19 +11,19 @@
 #define SENDER_IP    0xC0A80164 //192.168.1.100
 #define senderPort   4000
 #define receiverPort 4001
-#define BUFFER_SIZE  50
+#define BUFFER_SIZE  50    //maximum number of bytes to receive
 
-long output(0) signal0;
-long output(1) signal1;
-double output(2) signal2;
-double output(3) signal3;
-long output(14) receivedBytes;
-long output(15) handle;
+long output(0) signal0;    //integer number received from the sender
+long output(1) signal1;    //integer number received from the sender
+double output(2) signal2;  //real number received from the sender
+double output(3) signal3;  //real number received from the sender
+long output(14) receivedBytes; //number of received bytes
+long output(15) handle;    //handle of the UDP socket
 
-long output(10) dat0;
-long output(11) dat1;
-long output(12) dat2;
-long output(13) dat3;
+long output(10) dat0;      //the first byte of the received data
+long output(11) dat1;      //the second byte of the received data
+long output(12) dat2;      //the third byte of the received data
+long output(13) dat3;      //the fourth byte of the received data
 
 long hRecvLoc;   //socket handle
 long buffer[BUFFER_SIZE]; //buffer for incoming data

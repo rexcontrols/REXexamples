@@ -2,6 +2,8 @@
 *                                                      *
 *   REXLANG example - data exchange via UDP protocol   *
 *                                                      *
+*   Sender station                                     *
+*                                                      *
 *   (c) REX Controls, www.rexcontrols.com              *
 *                                                      *
 *******************************************************/
@@ -11,18 +13,18 @@
 #define SENDER_IP    0xC0A80164 //192.168.1.100
 #define senderPort   4000
 #define receiverPort 4001
-#define BUFFER_SIZE  50
+#define BUFFER_SIZE  50    //maximum number of bytes to send
 
-long input(0) signal0;
-long input(1) signal1;
-double input(2) signal2;
-double input(3) signal3;
-long output(15) handle;
+long input(0) signal0;     //integer number to send to the receiver
+long input(1) signal1;     //integer number to send to the receiver
+double input(2) signal2;   //real number to send to the receiver
+double input(3) signal3;   //real number to send to the receiver
+long output(15) handle;    //handle of the UDP socket
 
-long hSendLoc;   //socket handle
-long buffer[BUFFER_SIZE]; //buffer for incoming data
-long dataCnt;    //number of bytes sent
-long convData[2];    //array for data conversion
+long hSendLoc;             //socket handle
+long buffer[BUFFER_SIZE];  //buffer for incoming data
+long dataCnt;              //number of bytes sent
+long convData[2];          //array for data conversion
 
 /* Function for conversion of decimal number (the val parameter) to 2 numbers 
 of type long (i.e. 8 bytes) representing the number in the double format 
