@@ -90,9 +90,9 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "CNB1"
+      Name                    "CNB_PUMP"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [415, 123, 435, 137]
+      Position                [395, 158, 415, 172]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       #GUID                   1bc1989b-63a9-445f-9a9b-ad77a9b016d6
@@ -182,7 +182,7 @@ Model {
       Ports                   [1, 0, 0, 0, 0]
       Position                [610, 23, 700, 37]
       ShowName                off
-      GotoTag                 "RPI__GPIO23U"
+      GotoTag                 "RPI__GPIO23H"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   a2a215a5-e794-41d6-a744-4df1e11998d9
@@ -193,7 +193,7 @@ Model {
       Ports                   [1, 0, 0, 0, 0]
       Position                [610, 123, 700, 137]
       ShowName                off
-      GotoTag                 "RPI__GPIO24U"
+      GotoTag                 "RPI__GPIO24H"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   a3ec5caf-9a91-4452-b817-979224995e3e
@@ -416,32 +416,12 @@ Model {
       #GUID                   c29a50bd-c80b-4873-a456-54b005c719a6
     }
     Line {
-      SrcBlock                "CNB1"
+      SrcBlock                "CNB_PUMP"
       SrcPort                 1
+      Points                  [5, 0; 0, -35]
       DstBlock                "ISSW_1"
       DstPort                 2
       #GUID                   cea086ef-2b89-420e-8e9e-eafa14cc6604
-    }
-    Line {
-      SrcBlock                "CNI_MORNING_ON"
-      SrcPort                 1
-      DstBlock                "REL_GEQ"
-      DstPort                 2
-      #GUID                   f4ab023d-5223-47ea-aeac-d9fbd2ea5beb
-    }
-    Line {
-      SrcBlock                "CNI_MORNING_OFF"
-      SrcPort                 1
-      DstBlock                "REL_LT"
-      DstPort                 2
-      #GUID                   3ac082db-2144-4565-a050-b5cd6886d8ba
-    }
-    Line {
-      SrcBlock                "CNI_AFTERNOON_ON"
-      SrcPort                 1
-      DstBlock                "REL_GEQ1"
-      DstPort                 2
-      #GUID                   5afabbb7-f6d0-4c9d-9cf1-2cb35ea35f51
     }
     Line {
       SrcBlock                "CNI_AFTERNOON_OFF"
@@ -451,11 +431,11 @@ Model {
       #GUID                   d74f8456-1b78-4019-bf22-2dffc99452b9
     }
     Line {
-      SrcBlock                "CNI_LIGHTS_ON"
+      SrcBlock                "CNI_AFTERNOON_ON"
       SrcPort                 1
-      DstBlock                "REL_GEQ2"
+      DstBlock                "REL_GEQ1"
       DstPort                 2
-      #GUID                   52dbe990-2c43-4c5a-816b-85392bbb38b1
+      #GUID                   5afabbb7-f6d0-4c9d-9cf1-2cb35ea35f51
     }
     Line {
       SrcBlock                "CNI_LIGHTS_OFF"
@@ -463,6 +443,27 @@ Model {
       DstBlock                "REL_LT2"
       DstPort                 2
       #GUID                   207f7d9a-05cd-414b-9da8-13250242ba58
+    }
+    Line {
+      SrcBlock                "CNI_LIGHTS_ON"
+      SrcPort                 1
+      DstBlock                "REL_GEQ2"
+      DstPort                 2
+      #GUID                   52dbe990-2c43-4c5a-816b-85392bbb38b1
+    }
+    Line {
+      SrcBlock                "CNI_MORNING_OFF"
+      SrcPort                 1
+      DstBlock                "REL_LT"
+      DstPort                 2
+      #GUID                   3ac082db-2144-4565-a050-b5cd6886d8ba
+    }
+    Line {
+      SrcBlock                "CNI_MORNING_ON"
+      SrcPort                 1
+      DstBlock                "REL_GEQ"
+      DstPort                 2
+      #GUID                   f4ab023d-5223-47ea-aeac-d9fbd2ea5beb
     }
     Line {
       SrcBlock                "EDGE_RISING"
