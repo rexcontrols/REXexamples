@@ -1,95 +1,4 @@
-/**********************************************
-			REX SVG BLOCK STYLES 
-***********************************************/
-
-.rex-block{
-    cursor:pointer;
-}
-
-.rex-block-monitor rect
-{
-	fill: rgba(0, 218, 0, 0.19) !important;
-	stroke: rgba(12, 73, 0, 0.79) !important;
-}
-
-.rex-block-monitor path
-{
-	stroke: rgba(12, 73, 0, 0.79) !important;
-}
-
-.rex-block-hover rect
-{
-	fill: rgba(77, 77, 77, 0.15) !important;
-	stroke: rgba(54, 54, 54, 0.57) !important;
-}
-
-.rex-block-hover path
-{
-	stroke: rgba(54, 54, 54, 0.57) !important;
-}
-
-/**********************************************
-				REX DIALOG STYLES 
-***********************************************/
-#rex-dialog-container{
-    text-align: left;
-	width: 100%;
-	height: 100%;
-}
-
-#rex-dialog-container svg 
-{
-	margin: 0px auto;
-	display: block;         
-}
-
-.rex-dialog-desc{
-	margin-bottom: 10;
-	margin-right: 20;
-	font-size: 14;
-}
-
-.rex-dialog-input
-{
-}
-
-.rex-dialog-input input
-{
-	padding: 2px;
-}
-
-.rex-dialog-input-failed
-{
-}
-
-.rex-dialog-input-failed img
-{
-	display:inline !important;
-	vertical-align: middle;
-	margin-left: 10px;
-}
-
-.rex-dialog-input-failed input
-{
-	position:relative;
-	border: 1px solid #FF5925;
-	color: #FF5925;
-	-webkit-animation: shake_it 0.2s 0 4
-}
-
-@-webkit-keyframes shake_it
-{
-0%		{left:0px;}
-50%		{left:5px;}
-100%	{left:0px;}
-}
-
-@-webkit-keyframes show
-{
-0%		{left:0px;}
-50%		{transform: rotate(0deg);left:5px;}
-100%	{left:0px;}
-}.draggable {
+.draggable {
   cursor: move;
   position: relative;		
 }
@@ -115,98 +24,6 @@
 .rex-block-hover path{
   stroke: #0000ff !important;	
 }
-.wsv-column{	
-        width: 330px;        	
-        /*float: left;*/
-        display: inline-block;       
-        /*margin-right: -6px;*/
-        vertical-align: top;
-}
-
-.wsv-column-name{
-    padding: 5px;
-    height: 30px;
-    white-space: normal;
-}
-
-.wsv-section-name{
-    padding: 5px;
-    height: 30px;
-    white-space: normal;
-}
-.wsv-section-name h2{
-	margin: 0px;
-	color:#FFFFFF;
-        text-align: center;
-}
-
-.wsv-row{	
-    padding: 5px;
-    height: 30px;
-    white-space: normal;
-    /* color:#FFFFFF; */  
-    text-align: left;
-}
-
-.wsv-row .odd{
-	/* background-color: #EBF7FF; */
-}
-
-.wsv-row .wsv-row-label{
-    display: inline-block;
-    width: 150px;
-    font-size: 10pt;    
-}
-
-.wsv-row .ui-spinner{
-	width:152px;
-}
-
-.wsv-row .ui-buttonset .ui-button{
-	width: 74px;
-}
-
-.wsv-row .mp-button{
-	width:152px;
-}
-
-.digital-input{
-	color:#000000;
-	display: inline-block;
-	height: 18px;
-}
-.wsv-row .on{
-	background-color: #FFFFFF; 
-}
-.wsv-row .off{
-	background-color: #000000; 
-}
-
-.wsv-row .ui-select-custom{
-    width: 152px;
-    border: none;
-}
-
-/* Based on the http://colorschemedesigner.com/#3w61TjxwRw0w0 */
-.primary{background-color: #78ADD3;}
-.primary .ui-state-default{background-color: #477FA6; color:#212121;}
-.primary .ui-state-active {background-color: #17496C; color:#FFFFFF;}
-
-.wsv-column_1 .wsv-section_1{	background-color: #78ADD3;}
-.wsv-column_1 .wsv-section_2{	background-color: #A66C20;}
-.wsv-column_1 .wsv-section_3{	background-color: #76D9AC;}
-.wsv-column_1 .wsv-section_4{	background-color: #8587D9;}
-
-.wsv-column_2 .wsv-section_1{	background-color: #8587D9;}
-.wsv-column_2 .wsv-section_2{	background-color: #76D9AC;}
-.wsv-column_2 .wsv-section_3{	background-color: #A66C20;}
-.wsv-column_2 .wsv-section_4{	background-color: #78ADD3;}
-
-.wsv-column_3 .wsv-section_1{	background-color: #76D9AC;}
-.wsv-column_3 .wsv-section_2{	background-color: #A66C20;}
-.wsv-column_3 .wsv-section_3{	background-color: #78ADD3;}
-.wsv-column_3 .wsv-section_4{	background-color: #8587D9;}
-    
 body{
     font-family: Verdana,Arial,sans-serif;
     margin: 0px;
@@ -403,3 +220,203 @@ h2{
 	color:white;
 	text-decoration: none;
 }
+/**********************************************
+			REX SVG BLOCK STYLES 
+***********************************************/
+
+.rex-block{
+    cursor:pointer;
+}
+
+.rex-block-monitor rect
+{
+	fill: rgba(0, 218, 0, 0.19) !important;
+	stroke: rgba(12, 73, 0, 0.79) !important;
+}
+
+.rex-block-monitor path
+{
+	stroke: rgba(12, 73, 0, 0.79) !important;
+}
+
+.rex-block-hover rect
+{
+	fill: rgba(77, 77, 77, 0.15) !important;
+	stroke: rgba(54, 54, 54, 0.57) !important;
+}
+
+.rex-block-hover path
+{
+	stroke: rgba(54, 54, 54, 0.57) !important;
+}
+
+/**********************************************
+				REX DIALOG STYLES 
+***********************************************/
+#rex-dialog-container{
+    text-align: left;
+	width: 100%;
+	height: 100%;
+}
+
+#rex-dialog-container svg 
+{
+	margin: 0px auto;
+	display: block;         
+}
+
+.rex-dialog-desc{
+	margin-bottom: 10;
+	margin-right: 20;
+	font-size: 14;
+}
+
+.rex-dialog-input
+{
+}
+
+.rex-dialog-input input
+{
+	padding: 2px;
+}
+
+.rex-dialog-input-failed
+{
+}
+
+.rex-dialog-input-failed img
+{
+	display:inline !important;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+.rex-dialog-input-failed input
+{
+	position:relative;
+	border: 1px solid #FF5925;
+	color: #FF5925;
+	-webkit-animation: shake_it 0.2s 0 4
+}
+
+@-webkit-keyframes shake_it
+{
+0%		{left:0px;}
+50%		{left:5px;}
+100%	{left:0px;}
+}
+
+@-webkit-keyframes show
+{
+0%		{left:0px;}
+50%		{transform: rotate(0deg);left:5px;}
+100%	{left:0px;}
+}
+
+#rex-watch-hint{
+    background-color: black;
+    opacity: 0.7;
+    color: white;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+
+    position: absolute;
+    width: 300px;
+    left: 50%;
+    margin-left:-150px;
+    top:65px;
+    text-align: center;
+    padding: 10px;
+    display: none;
+}.wbd-column{	
+        width: 330px;        	
+        /*float: left;*/
+        display: inline-block;       
+        /*margin-right: -6px;*/
+        vertical-align: top;
+}
+
+.wbd-column-title{
+    padding: 5px;
+    height: 30px;
+    white-space: normal;
+}
+
+.wbd-section-title{
+    padding: 5px;
+    height: 30px;
+    white-space: normal;
+}
+.wbd-section-title h2{
+	margin: 0px;
+	color:#FFFFFF;
+        text-align: center;
+}
+
+.wbd-row{	
+    padding: 5px;
+    height: 30px;
+    white-space: normal;
+    /* color:#FFFFFF; */  
+    text-align: left;
+}
+
+.wbd-row .odd{
+	/* background-color: #EBF7FF; */
+}
+
+.wbd-row .wbd-row-desc{
+    display: inline-block;
+    width: 150px;
+    font-size: 10pt;    
+}
+
+.wbd-row .ui-spinner{
+	width:152px;
+}
+
+.wbd-row .ui-buttonset .ui-button{
+	width: 74px;
+}
+
+.wbd-row .mp-button{
+	width:152px;
+}
+
+.digital-input{
+	color:#000000;
+	display: inline-block;
+	height: 18px;
+}
+.wbd-row .on{
+	background-color: #FFFFFF; 
+}
+.wbd-row .off{
+	background-color: #000000; 
+}
+
+.wbd-row .ui-select-custom{
+    width: 152px;
+    border: none;
+}
+
+/* Based on the http://colorschemedesigner.com/#3w61TjxwRw0w0 */
+.primary{background-color: #78ADD3;}
+.primary .ui-state-default{background-color: #477FA6; color:#212121;}
+.primary .ui-state-active {background-color: #17496C; color:#FFFFFF;}
+
+.wbd-column_1 .wbd-section_1{	background-color: #78ADD3;}
+.wbd-column_1 .wbd-section_2{	background-color: #A66C20;}
+.wbd-column_1 .wbd-section_3{	background-color: #76D9AC;}
+.wbd-column_1 .wbd-section_4{	background-color: #8587D9;}
+
+.wbd-column_2 .wbd-section_1{	background-color: #8587D9;}
+.wbd-column_2 .wbd-section_2{	background-color: #76D9AC;}
+.wbd-column_2 .wbd-section_3{	background-color: #A66C20;}
+.wbd-column_2 .wbd-section_4{	background-color: #78ADD3;}
+
+.wbd-column_3 .wbd-section_1{	background-color: #76D9AC;}
+.wbd-column_3 .wbd-section_2{	background-color: #A66C20;}
+.wbd-column_3 .wbd-section_3{	background-color: #78ADD3;}
+.wbd-column_3 .wbd-section_4{	background-color: #8587D9;}
+    

@@ -1,3 +1,15 @@
+This document describes all jQuery modules with licences:
+
+jQuery
+=======================
+- Source: https://jquery.org/
+- Licence: [MIT][https://jquery.org/license/]
+
+jQuery UI
+=======================
+- Source: http://jqueryui.com/
+- Licence: [MIT][https://jquery.org/license/]
+
 DISABLER
 =======================
 - http://dougestep.com/dme/jquery-disabler-widget
