@@ -1,0 +1,4 @@
+*.txt eol=crlf
+*.stl eol=crlf
+*.mdl eol=crlf
+*.html eol=crlf
