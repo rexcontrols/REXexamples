@@ -1,0 +1,272 @@
+Model {
+  Name                    "minimal_task"
+  Version                 7.5
+  MdlSubVersion           0
+  SavedCharacterEncoding  "windows-1250"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime        "0.035000"
+  OverrideScopeRefreshTime on
+  DisableAllScopes        off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength    120
+  Created                 "Fri Sep 17 13:31:26 2010"
+  Creator                 "jsobota"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "jsobota"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon May 16 10:26:28 2011"
+  RTWModifiedTimeStamp    227442227
+  ModelVersionFormat      "1.%<AutoIncrement:7>"
+  ConfigurationManager    "none"
+  SampleTimeColors        off
+  SampleTimeAnnotations   off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ShowTestPointIcons      on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons         on
+  SortedOrder             off
+  ExecutionContextIcon    off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  SimulationMode          "normal"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  CovReportOnPause        on
+  CovModelRefEnable       "Off"
+  CovExternalEMLEnable    off
+  ExtModeBatchMode        off
+  ExtModeEnableFloating   on
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    BlockRotation           0
+    BlockMirror             off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "minimal_task"
+    Location                [181, 28, 505, 354]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    TiledPaperMargins       [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ZoomFactor              100
+    ReportName              "simulink-default.rpt"
+    SIDHighWatermark        7
+    #GUID                   dc18c976-d294-4afb-97eb-1e2c7ffcc8a8
+    Block {
+      BlockType               Reference
+      Name                    "CNR1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 117, 60, 133]
+      SourceBlock             "mathlib/CNR"
+      SID                     5
+      LibraryVersion          "1.130"
+      SourceType              "CNR"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      ycn                     "3.7"
+      #GUID                   903f5ee8-b01c-4be2-a441-a0010ea453dd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 147, 60, 163]
+      SourceBlock             "mathlib/CNR"
+      SID                     6
+      LibraryVersion          "1.130"
+      SourceType              "CNR"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      ycn                     "4.3"
+      #GUID                   4375e422-343b-46e4-93c7-ce3c607c8f56
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [17, 17, 0, 0, 0]
+      Position                [130, 106, 180, 284]
+      SourceBlock             "speclib/REXLANG"
+      SID                     4
+      LibraryVersion          "1.88"
+      SourceType              "REXLANG"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      tab_matlab              "BASIC"
+      srcname                 "minimal_rexlang.stl"
+      srctype                 "1: STL"
+      stack                   0
+      debug                   "1: No check"
+      p0                      "2.6"
+      p1                      "8.9"
+      p2                      0
+      p3                      0
+      p4                      0
+      p5                      0
+      p6                      0
+      p7                      0
+      p8                      0
+      p9                      0
+      p10                     0
+      p11                     0
+      p12                     0
+      p13                     0
+      p14                     0
+      p15                     0
+      fname                   ""
+      #GUID                   bf1ba61a-13b6-41a1-a2c7-104b76363ee0
+    }
+    Line {
+      SrcBlock                "CNR1"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 2
+      #GUID                   295d2476-c4b4-427a-aa48-8ea6c3a0ef78
+    }
+    Line {
+      SrcBlock                "CNR2"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 5
+      #GUID                   eb912fc0-55a9-41dd-83cf-a3f538c2e822
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 4
+      Points                  [45, 0]
+      #GUID                   f71460d4-2c29-44c5-8369-a93cd1fbc895
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 12
+      Points                  [45, 0]
+      #GUID                   62aabf89-277a-4759-8c3a-667c0b41925c
+    }
+    Annotation {
+      Position                [165, 25]
+      Text                    "REXLANG - User programmable block"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6be559b1-1863-4fae-babd-2a1f8aeb0ce5
+    }
+    Annotation {
+      Position                [155, 50]
+      Text                    "Minimal example"
+      FontSize                12
+      #GUID                   9b312570-962b-49dd-8eeb-21e904256f5d
+    }
+    Annotation {
+      Position                [235, 155]
+      Text                    "sum of inputs"
+      #GUID                   1c1973b2-1a87-4194-b1fc-3049d0de1587
+    }
+    Annotation {
+      Position                [245, 235]
+      Text                    "sum of parameters"
+      #GUID                   67cc487c-161f-45a9-bc3e-eb371b91ec05
+    }
+  }
+}
