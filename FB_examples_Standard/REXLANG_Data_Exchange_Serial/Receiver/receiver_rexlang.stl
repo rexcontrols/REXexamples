@@ -17,10 +17,13 @@
 #define CON_COM7 39
 #define CON_COM8 40
 #define CON_COM9 41        // COM9 in Windows, /dev/ttyS9 in Linux
-#define CON_COM_FNAME 63   // serial device defined by the fname parameter
+#define CON_COM_FNAME 63   // serial device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/ttyAMA0 on the Raspberry Pi minicomputer) )
 
 #define COM_BAUDRATE 57600 //baudrate, e.g. 9600, 19200, 57600, 115200
-#define COM_PARITY 0       //parity, 0=none
+
+#define COM_PARITY_NONE 0  //no parity
+#define COM_PARITY_ODD  1  //odd parity
+#define COM_PARITY_EVEN 2  //even parity
 
 #define BUFFER_SIZE  50    //maximum number of bytes to receive
 
@@ -73,7 +76,7 @@ int main(void)
   long i;
   if (hCom<0)
   {
-    hCom = Open(CON_COM9,COM_BAUDRATE,COM_PARITY);  //opening serial device
+    hCom = Open(CON_COM9,COM_BAUDRATE,COM_PARITY_NONE);  //opening serial device
   }
   else 
   {
