@@ -71,7 +71,8 @@ void DoubleAsLong(double val, long ares[])
 	
 	val=(val-1.0)*((double)0x00100000);
 	ares[1] = ares[1]|(i=(long)val);
-	ares[0] = (long)((val-i)*pow(2.0,32.0));
+	rmax=((val-i)*pow(2.0,32.0));
+	ares[0] = rmax>0x7FFFFFFF? ((long)(rmax-0x7FFFFFFF))|0x80000000 : (long)rmax;  
 }
 
 /* Initialization of the REXLANG algorithm */

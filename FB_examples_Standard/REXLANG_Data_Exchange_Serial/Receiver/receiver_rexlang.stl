@@ -49,8 +49,10 @@ number in the double format according to IEEE 754 to a decimal number.
 Little-endian format is used. */
 double LongAsDouble(long val[])
 {
-	double lbase=((double)(val[1]&0xFFFFF))/((double)0x00100000)+val[0]*pow(2.0,-52.0);
+	double lbase=((double)(val[1]&0xFFFFF))/((double)0x00100000)+(val[0]&0x7FFFFFFF)*pow(2.0,-52.0);
 	long lexp=(val[1]>>20)&0x7FF;
+	if(val[0]&0x80000000)
+		lbase+=pow(2.0,-21.0);
 	if(lexp==0)
 		return 0.0;
 	if(lexp==0x7FF)
