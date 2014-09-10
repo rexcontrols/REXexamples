@@ -131,7 +131,7 @@ int main(void)
     buffer[19] = convData[1] >> 16;
     buffer[20] = convData[1] >> 24;
     //now all the data can be sent
-    dataCnt = Send(hCom,buffer,20); //send data, number of bytes = 20
+    dataCnt = Send(hCom,buffer,21); //send data, number of bytes = 21
   }  
   handle = hCom;
   return 0;
