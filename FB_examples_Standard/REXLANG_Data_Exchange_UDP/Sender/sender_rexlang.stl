@@ -92,32 +92,32 @@ int main(void)
   else 
   {
     //signal 0 is of type long, therefore 4 bytes of data
-    buffer[0] = signal0;
-    buffer[1] = signal0 >> 8;
-    buffer[2] = signal0 >> 16;
-    buffer[3] = signal0 >> 24;
+    buffer[0] = signal0 & 0xFF;
+    buffer[1] = signal0 >> 8 & 0xFF;
+    buffer[2] = signal0 >> 16 & 0xFF;
+    buffer[3] = signal0 >> 24 & 0xFF;
     //signal 1 is just a binary signal, therefore 1 byte
-    buffer[4] = signal1;
+    buffer[4] = signal1 & 0xFF;
     //signal 2 is of type double, therefore we convert it to 8 bytes
     DoubleAsLong(signal2,convData);
-    buffer[5] = convData[0];
-    buffer[6] = convData[0] >> 8;
-    buffer[7] = convData[0] >> 16;
-    buffer[8] = convData[0] >> 24;
-    buffer[9] = convData[1];
-    buffer[10] = convData[1] >> 8;
-    buffer[11] = convData[1] >> 16;
-    buffer[12] = convData[1] >> 24 ;
+    buffer[5] = convData[0] & 0xFF;
+    buffer[6] = convData[0] >> 8 & 0xFF;
+    buffer[7] = convData[0] >> 16 & 0xFF;
+    buffer[8] = convData[0] >> 24 & 0xFF;
+    buffer[9] = convData[1] & 0xFF;
+    buffer[10] = convData[1] >> 8 & 0xFF;
+    buffer[11] = convData[1] >> 16 & 0xFF;
+    buffer[12] = convData[1] >> 24 & 0xFF;
     //signal 3 is of type double, therefore we convert it to 8 bytes
     DoubleAsLong(signal3,convData);
-    buffer[13] = convData[0];
-    buffer[14] = convData[0] >> 8;
-    buffer[15] = convData[0] >> 16;
-    buffer[16] = convData[0] >> 24;
-    buffer[17] = convData[1];
-    buffer[18] = convData[1] >> 8;
-    buffer[19] = convData[1] >> 16;
-    buffer[20] = convData[1] >> 24;
+    buffer[13] = convData[0] & 0xFF;
+    buffer[14] = convData[0] >> 8 & 0xFF;
+    buffer[15] = convData[0] >> 16 & 0xFF;
+    buffer[16] = convData[0] >> 24 & 0xFF;
+    buffer[17] = convData[1] & 0xFF;
+    buffer[18] = convData[1] >> 8 & 0xFF;
+    buffer[19] = convData[1] >> 16 & 0xFF;
+    buffer[20] = convData[1] >> 24 & 0xFF;
     //now all the data can be sent
     dataCnt = Send(hSendLoc,buffer,21); //send data, number of bytes = 21
   }  
