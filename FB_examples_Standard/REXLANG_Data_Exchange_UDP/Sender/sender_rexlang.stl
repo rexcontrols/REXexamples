@@ -29,7 +29,7 @@ long convData[2];          //array for data conversion
 /* Function for conversion of decimal number (the val parameter) to 2 numbers 
 of type long (i.e. 8 bytes) representing the number in the double format 
 according to IEEE 754. Little-endian format is used. */
-void DoubleAsLong(double val, long ares[])
+long DoubleAsLong(double val, long ares[])
 {
 	double rmax=pow(2.0,1022.0);
 	long lexp=0, i;
@@ -83,7 +83,7 @@ int init(void)
 }
 
 /* The body of REXLANG algorithm */
-int main(void)
+long main(void)
 {
   if (hSendLoc<0)
   {
@@ -126,7 +126,7 @@ int main(void)
 }
 
 /* Closing the REXLANG algorithm */
-int exit(void)
+long exit(void)
 {
 	if(hSendLoc>=0) Close(hSendLoc);
   return 0;

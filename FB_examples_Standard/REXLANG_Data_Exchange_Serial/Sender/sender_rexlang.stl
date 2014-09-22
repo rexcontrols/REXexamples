@@ -88,14 +88,14 @@ void DoubleAsLong(double val, long ares[])
 }
 
 /* Initialization of the REXLANG algorithm */
-int init(void)
+long init(void)
 {
   hCom = -1;
 	return 0;
 }
 
 /* The body of REXLANG algorithm */
-int main(void)
+long main(void)
 {
   if (hCom<0)
   {
@@ -138,7 +138,7 @@ int main(void)
 }
 
 /* Closing the REXLANG algorithm */
-int exit(void)
+long exit(void)
 {
 	if(hCom>=0) Close(hCom);
   return 0;

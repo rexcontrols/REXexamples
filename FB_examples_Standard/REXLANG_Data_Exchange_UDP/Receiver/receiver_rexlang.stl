@@ -51,7 +51,7 @@ double LongAsDouble(long val[])
 }
 
 /* Initialization of the REXLANG algorithm */
-int init(void)
+long init(void)
 {
   hRecvLoc = -1;
   dataCnt = 0;
@@ -59,7 +59,7 @@ int init(void)
 }
 
 /* The body of REXLANG algorithm */
-int main(void)
+long main(void)
 {
   long i;
   if (hRecvLoc<0)
@@ -94,7 +94,7 @@ int main(void)
 }
 
 /* Closing the REXLANG algorithm */
-int exit(void)
+long exit(void)
 {
 	if(hRecvLoc>=0) Close(hRecvLoc);
   return 0;

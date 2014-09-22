@@ -65,7 +65,7 @@ double LongAsDouble(long val[])
 }
 
 /* Initialization of the REXLANG algorithm */
-int init(void)
+long init(void)
 {
   hCom = -1;
   dataCnt = 0;
@@ -73,7 +73,7 @@ int init(void)
 }
 
 /* The body of REXLANG algorithm */
-int main(void)
+long main(void)
 {
   long i;
   if (hCom<0)
@@ -108,7 +108,7 @@ int main(void)
 }
 
 /* Closing the REXLANG algorithm */
-int exit(void)
+long exit(void)
 {
 	if(hCom>=0) Close(hCom);
   return 0;
