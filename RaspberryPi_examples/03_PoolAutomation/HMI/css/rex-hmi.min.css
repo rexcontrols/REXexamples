@@ -382,6 +382,18 @@ h2{
 .wbd-row .mp-button{
 	width:152px;
 }
+.wbd-row .digital-read{
+    cursor: auto;
+}
+
+.wbd-row .analog-read{
+    display: inline-block;
+    width:152px;
+    line-height: 20px;    
+}
+.wbd-row .analog-read span{     
+    padding: 0 0 0 .4em;
+}
 
 .digital-input{
 	color:#000000;
