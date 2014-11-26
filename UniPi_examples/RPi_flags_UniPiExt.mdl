@@ -1,0 +1,158 @@
+Model {
+  Name                    "RPi_flags_UniPiExt"
+  Version                 3.00
+  #RexVersion             "2.10.4 rev. 4700, Date 2014-10-03"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "RPi_flags_UniPiExt"
+    Location                [12, 33, 469, 400]
+    #GUID                   e6059b7f-76c1-441f-b9c4-fe18bf168aba
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [115, 127, 260, 143]
+      ShowName                off
+      GotoTag                 "UNP__RLY2_A0x21"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   ba842ef7-a8c1-4a81-a544-5917c30e35c3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [115, 147, 260, 163]
+      ShowName                off
+      GotoTag                 "UNP__RLY3_A33"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c3974022-95e6-4299-9018-a26fdfaa630a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto34"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [115, 107, 260, 123]
+      ShowName                off
+      GotoTag                 "UNP__RLY1_A33"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   48adee18-dbe2-428a-aa20-0989ac15daf6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [115, 182, 260, 198]
+      ShowName                off
+      GotoTag                 "UNP__RLY8_A0x21"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   e1b8bc7d-0eb3-49d4-8412-9e4cedda2cab
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP__RLY_A0x21"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [175, 221, 205, 309]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   812a7cbf-745f-46be-9fcf-95fb50831cf7
+    }
+    Annotation {
+      Position                [80, 115]
+      Text                    "relay 1"
+      #GUID                   ea176522-77d8-4ddb-92e5-52f4cddb4276
+    }
+    Annotation {
+      Position                [80, 135]
+      Text                    "relay 2"
+      #GUID                   cfb589fc-d827-4d53-9883-4a8b798f48e3
+    }
+    Annotation {
+      Position                [80, 155]
+      Text                    "relay 3"
+      #GUID                   f4878529-e9c3-4cda-96c2-351e5ada6ee5
+    }
+    Annotation {
+      Position                [165, 170]
+      Text                    "..."
+      #GUID                   b8b92ba5-8114-4141-b757-068e07a406c1
+    }
+    Annotation {
+      Position                [80, 190]
+      Text                    "relay 8"
+      #GUID                   3c82d02a-6ca7-470c-92ea-10c182e2f19f
+    }
+    Annotation {
+      Position                [230, 30]
+      Text                    "UniPi expansion boards input/output flags"
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      #GUID                   c29fac1c-e1b8-4c56-9384-11f673ec4dd5
+    }
+    Annotation {
+      Position                [130, 70]
+      Text                    "8x relay board (EMO-R-8)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   c4cd14bf-578b-4463-a017-d271cc117fe3
+    }
+    Annotation {
+      Position                [150, 230]
+      Text                    "relay 1"
+      #GUID                   dac84153-424e-4652-802d-241eda1b63f9
+    }
+    Annotation {
+      Position                [150, 240]
+      Text                    "relay 2"
+      #GUID                   a73d8df3-df8f-4cc8-93c5-927d82bb7c42
+    }
+    Annotation {
+      Position                [150, 300]
+      Text                    "relay 8"
+      #GUID                   f5a580ce-2cb1-4c31-a79e-392e7bdda67c
+    }
+    Annotation {
+      Position                [150, 250]
+      Text                    "relay 3"
+      #GUID                   e97661db-9de0-4071-9567-91a159229aa8
+    }
+    Annotation {
+      Position                [210, 95]
+      Text                    "I2C address 33 (=0x21), change it according to "
+"the A0-A2 jumper setting"
+      #GUID                   9dfad21f-ac95-46a0-8316-20fa7302f8f2
+    }
+  }
+}

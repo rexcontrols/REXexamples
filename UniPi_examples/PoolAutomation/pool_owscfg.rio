@@ -1,0 +1,14 @@
+OwsDrv {
+  Version                 1.00
+  TargetName              "localhost:4304"
+  MaxRequests             1
+  MaxRetries              3
+  Timeout                 10
+  ItemCount               1
+  Item {
+    Name                    "temperature"
+    Path                    "/28.14A750050000/temperature12"
+    IOType                  0x0018
+    InitValue               "32"
+  }
+}

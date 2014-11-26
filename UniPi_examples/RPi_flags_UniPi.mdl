@@ -1,0 +1,533 @@
+Model {
+  Name                    "RPi_flags_UniPi"
+  Version                 3.00
+  #RexVersion             "2.10.5 rev. 4803, Date 2014-11-07"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "RPi_flags_UniPi"
+    Location                [12, 33, 624, 852]
+    #GUID                   e6059b7f-76c1-441f-b9c4-fe18bf168aba
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 83, 125, 97]
+      ShowName                off
+      GotoTag                 "UNP__AI1"
+      BackgroundColor         "yellow"
+      #GUID                   5dbfe339-c38b-4c1f-b82d-019afd0dd414
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 103, 125, 117]
+      ShowName                off
+      GotoTag                 "UNP__AI2"
+      BackgroundColor         "yellow"
+      #GUID                   f3dc96ba-3746-418c-8997-1290f1af7de9
+    }
+    Block {
+      BlockType               From
+      Name                    "From25"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 288, 125, 302]
+      ShowName                off
+      GotoTag                 "UNP__I01"
+      BackgroundColor         "yellow"
+      #GUID                   59d0d1e3-0e81-4795-b578-c6458a26f865
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 148, 125, 162]
+      ShowName                off
+      GotoTag                 "UNP__AIA1"
+      BackgroundColor         "yellow"
+      #GUID                   c66b5e76-a148-4947-9cb9-cacd86393fa2
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 168, 125, 182]
+      ShowName                off
+      GotoTag                 "UNP__AIA2"
+      BackgroundColor         "yellow"
+      #GUID                   35e60d67-a8c9-4063-8afc-1d069525e196
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 213, 165, 227]
+      ShowName                off
+      GotoTag                 "UNP__AIA1V12"
+      BackgroundColor         "yellow"
+      #GUID                   0a5e701b-0839-48bd-8aa0-ab8e4d489e47
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 233, 165, 247]
+      ShowName                off
+      GotoTag                 "UNP__AIA1V18G2"
+      BackgroundColor         "yellow"
+      #GUID                   a9f8e93b-23b9-4ea5-b59d-769afc9ea407
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 308, 125, 322]
+      ShowName                off
+      GotoTag                 "UNP__I02"
+      BackgroundColor         "yellow"
+      #GUID                   e98defa3-c2a7-4d6e-bada-ed70e150bcbb
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 328, 125, 342]
+      ShowName                off
+      GotoTag                 "UNP__I03"
+      BackgroundColor         "yellow"
+      #GUID                   ea59209a-929b-4d12-b3aa-0ad7e2022d6d
+    }
+    Block {
+      BlockType               From
+      Name                    "From9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 363, 125, 377]
+      ShowName                off
+      GotoTag                 "UNP__I12"
+      BackgroundColor         "yellow"
+      #GUID                   f5a514e9-b0a6-4947-a800-ce9112a7794d
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [485, 313, 575, 327]
+      ShowName                off
+      GotoTag                 "UNP__RLY2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   e5647f41-18a0-49d8-8c01-368d13ea5a24
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [485, 108, 575, 122]
+      ShowName                off
+      GotoTag                 "UNP__AO"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f60a2e9f-5323-412f-836f-d4ab00560095
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [485, 333, 575, 347]
+      ShowName                off
+      GotoTag                 "UNP__RLY3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   bb828858-ff83-4fb4-beb0-26c02cdcdd11
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto34"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [485, 293, 575, 307]
+      ShowName                off
+      GotoTag                 "UNP__RLY1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   48adee18-dbe2-428a-aa20-0989ac15daf6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [485, 368, 575, 382]
+      ShowName                off
+      GotoTag                 "UNP__RLY8"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   7b03d23d-e495-4280-8721-226d0e2c57ce
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [485, 133, 575, 147]
+      ShowName                off
+      GotoTag                 "UNP__AO1X"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   72d9fe15-3489-4e3e-bb29-0c9401225786
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP__DATA"
+      Ports                   [0, 16, 0, 0, 0]
+      Position                [60, 426, 90, 594]
+      SourceBlock             "inoutlib/INHEXD"
+      BackgroundColor         "yellow"
+      #GUID                   6e11ef98-5e01-419b-8ce4-41885b79d42e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP__DATA_WRITE"
+      Ports                   [16, 0, 0, 0, 0]
+      Position                [525, 426, 555, 594]
+      SourceBlock             "inoutlib/OUTHEXD"
+      BackgroundColor         "lightBlue"
+      #GUID                   a761a1f5-d382-4428-8520-0d4ea2cbb622
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP__RTC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [60, 696, 90, 784]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   66dfbe3f-52f1-4e18-9e5d-bb8406b07cdc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP__RTC_WRITE"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [525, 696, 555, 784]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   812a7cbf-745f-46be-9fcf-95fb50831cf7
+    }
+    Annotation {
+      Position                [130, 705]
+      Text                    "year"
+      #GUID                   d9ccbfa5-23b4-4355-8fc6-52559bc43df4
+    }
+    Annotation {
+      Position                [130, 715]
+      Text                    "month"
+      #GUID                   b3162a99-0af6-4d26-b774-ae056a6bdbaa
+    }
+    Annotation {
+      Position                [130, 725]
+      Text                    "day"
+      #GUID                   1e7cd011-4b30-436b-bda3-25f5b3929d83
+    }
+    Annotation {
+      Position                [130, 735]
+      Text                    "hour"
+      #GUID                   67b12979-e133-4e8e-b25d-4b8b2eebf86b
+    }
+    Annotation {
+      Position                [130, 745]
+      Text                    "minute"
+      #GUID                   445b5891-2f89-43d6-8a0c-012eb7c5dd81
+    }
+    Annotation {
+      Position                [130, 755]
+      Text                    "second"
+      #GUID                   9c3546e3-3e1c-4600-b271-a007b31ab374
+    }
+    Annotation {
+      Position                [485, 705]
+      Text                    "year"
+      #GUID                   da6c5ad0-8c8b-4612-8e6c-501dfb46b2fe
+    }
+    Annotation {
+      Position                [485, 715]
+      Text                    "month"
+      #GUID                   51bff192-c4bd-4c55-b825-f34d16515c07
+    }
+    Annotation {
+      Position                [485, 725]
+      Text                    "day"
+      #GUID                   260ff85f-7c61-4578-baf9-4c2a9b03f155
+    }
+    Annotation {
+      Position                [485, 735]
+      Text                    "hour"
+      #GUID                   ba0937be-00dc-4072-8782-e850447930e8
+    }
+    Annotation {
+      Position                [485, 745]
+      Text                    "minute"
+      #GUID                   fe88ef73-d8d4-4993-bbf2-55604080586e
+    }
+    Annotation {
+      Position                [485, 755]
+      Text                    "second"
+      #GUID                   2b771c15-e7aa-4576-b3ff-32ce6c50f8bc
+    }
+    Annotation {
+      Position                [485, 775]
+      Text                    "SET"
+      #GUID                   b3d547d4-5ec3-4421-9a0e-f57a7ec08fb2
+    }
+    Annotation {
+      Position                [485, 765]
+      Text                    "day of week"
+      #GUID                   662dd7d2-0795-4a86-a240-461b2d54be61
+    }
+    Annotation {
+      Position                [80, 275]
+      Text                    "Digital inputs"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   7efb42a7-b718-47e6-b29a-f817d997f61c
+    }
+    Annotation {
+      Position                [130, 765]
+      Text                    "day of week"
+      #GUID                   acf317ff-65c4-4a89-987a-fd3f5949cf74
+    }
+    Annotation {
+      Position                [65, 685]
+      Text                    "RTC read"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   7b7494fd-df14-4489-bc6a-c0b59f13d6bd
+    }
+    Annotation {
+      Position                [450, 70]
+      Text                    "Analog outputs"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   9861cb88-7c0b-4b10-9eb2-07e1820f78d3
+    }
+    Annotation {
+      Position                [475, 275]
+      Text                    "Digital outputs (relays)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   d004c8ad-1008-4832-a663-899007059226
+    }
+    Annotation {
+      Position                [430, 685]
+      Text                    "RTC write"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   b5852bbc-c6e7-4f40-9d57-eee99670635c
+    }
+    Annotation {
+      Position                [450, 300]
+      Text                    "relay 1"
+      #GUID                   ea176522-77d8-4ddb-92e5-52f4cddb4276
+    }
+    Annotation {
+      Position                [450, 320]
+      Text                    "relay 2"
+      #GUID                   cfb589fc-d827-4d53-9883-4a8b798f48e3
+    }
+    Annotation {
+      Position                [475, 435]
+      Text                    "integer value 0"
+      #GUID                   9ee10d7a-259d-4e66-900f-64187609f4bf
+    }
+    Annotation {
+      Position                [475, 455]
+      Text                    "integer value 2"
+      #GUID                   38e8db23-95e1-4c9f-8ef7-bada6732dc3e
+    }
+    Annotation {
+      Position                [480, 445]
+      Text                    "..."
+      #GUID                   f43db996-ccb2-436a-9bcf-95294c5c5bc0
+    }
+    Annotation {
+      Position                [475, 575]
+      Text                    "integer value 14"
+      #GUID                   55bddf46-d4ac-4ea4-ba20-9709b6c8f331
+    }
+    Annotation {
+      Position                [505, 585]
+      Text                    "SET"
+      #GUID                   b0ab8dda-4265-45e1-9f11-6da81002988a
+    }
+    Annotation {
+      Position                [475, 525]
+      Text                    "integer value 9"
+      #GUID                   40489785-f1f7-49f5-8d04-351b8fb0d619
+    }
+    Annotation {
+      Position                [480, 490]
+      Text                    "..."
+      #GUID                   223779e8-d628-4a0e-9bc7-dbab973fef27
+    }
+    Annotation {
+      Position                [480, 550]
+      Text                    "..."
+      #GUID                   04c21999-55ff-493c-b95e-726404f57d74
+    }
+    Annotation {
+      Position                [135, 30]
+      Text                    "UniPi input/output flags"
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      #GUID                   c29fac1c-e1b8-4c56-9384-11f673ec4dd5
+    }
+    Annotation {
+      Position                [90, 70]
+      Text                    "Analog inputs"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   c4cd14bf-578b-4463-a017-d271cc117fe3
+    }
+    Annotation {
+      Position                [200, 90]
+      Text                    "voltage input, 0..10V, 16-bit"
+      #GUID                   73d79828-368e-4364-baac-a8a022ae9f0e
+    }
+    Annotation {
+      Position                [200, 110]
+      Text                    "voltage input, 0..10V, 16-bit"
+      #GUID                   dc228f0b-42cd-4f34-a4f9-bdb504ed52b6
+    }
+    Annotation {
+      Position                [85, 135]
+      Text                    "Asynchronous mode:"
+      #GUID                   b55dfb65-fe67-4993-b35e-7dc212ce2ffc
+    }
+    Annotation {
+      Position                [200, 150]
+      Text                    "voltage input, 0..10V, 16-bit"
+      #GUID                   2356a9d6-0af7-470e-8932-4b2b69510e83
+    }
+    Annotation {
+      Position                [200, 170]
+      Text                    "voltage input, 0..10V, 16-bit"
+      #GUID                   2654eeef-3073-4eb3-ad3c-6049c91ebd6f
+    }
+    Annotation {
+      Position                [245, 220]
+      Text                    "voltage input, 0..10V, 12-bit"
+      #GUID                   61c71c22-cf74-45a4-975d-73f80c74caef
+    }
+    Annotation {
+      Position                [245, 240]
+      Text                    "voltage input, 0..5V, 18-bit"
+      #GUID                   017834dd-73e5-43e4-8957-48c2ee10b4af
+    }
+    Annotation {
+      Position                [70, 200]
+      Text                    "Special uses:"
+      #GUID                   c9d5c5f4-17be-478b-8821-b7f9f7483e00
+    }
+    Annotation {
+      Position                [75, 350]
+      Text                    "..."
+      #GUID                   1b49f079-e6fe-4097-8540-d06c639294d9
+    }
+    Annotation {
+      Position                [435, 115]
+      Text                    "voltage, 0..100%"
+      #GUID                   7433a0c1-12ce-4504-b576-6dba130ab202
+    }
+    Annotation {
+      Position                [165, 295]
+      Text                    "input I01"
+      #GUID                   ee554651-86c3-4a52-b0b7-ee3434858f49
+    }
+    Annotation {
+      Position                [165, 315]
+      Text                    "input I02"
+      #GUID                   62b56f00-b8f7-4ad3-b3d3-8e760c5175f9
+    }
+    Annotation {
+      Position                [165, 335]
+      Text                    "input I03"
+      #GUID                   ab4652fa-c625-4d57-9b6b-94fe57bb7aa5
+    }
+    Annotation {
+      Position                [165, 370]
+      Text                    "input I12"
+      #GUID                   03b2a654-fd7b-46cf-95a3-29955c950d9c
+    }
+    Annotation {
+      Position                [450, 340]
+      Text                    "relay 3"
+      #GUID                   f4878529-e9c3-4cda-96c2-351e5ada6ee5
+    }
+    Annotation {
+      Position                [535, 355]
+      Text                    "..."
+      #GUID                   b8b92ba5-8114-4141-b757-068e07a406c1
+    }
+    Annotation {
+      Position                [450, 375]
+      Text                    "relay 8"
+      #GUID                   3c82d02a-6ca7-470c-92ea-10c182e2f19f
+    }
+    Annotation {
+      Position                [135, 410]
+      Text                    "Persistent data read (SRAM)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   b3ee6811-7c94-44b3-b65a-dbebfeeb86c1
+    }
+    Annotation {
+      Position                [470, 410]
+      Text                    "Persistent data write (SRAM)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   212a9203-284c-4cb8-9f1f-60a87d0f7ce5
+    }
+    Annotation {
+      Position                [305, 660]
+      Text                    "It is highly recommended to configure the RTC c"
+"hip as a valid hwclock device!"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   b9e0c2c3-6d79-476d-a675-df64aaa16824
+    }
+    Annotation {
+      Position                [415, 140]
+      Text                    "PWM on pin 18, 0..1023"
+      #GUID                   c8dff686-3423-4b86-b0e9-d6bd1b4dbdbd
+    }
+    Annotation {
+      Position                [460, 90]
+      Text                    "Read the documentation first!"
+      #GUID                   db4b9073-5670-44d8-86a6-5e8a69931db7
+    }
+  }
+}
