@@ -1,7 +1,7 @@
 REX Control System and the UniPi board
 ======================================
 
-This example is a modification of the original example related to the [tutorial on using the REX Control System](http://www.rexcontrols.com/articles/turning-raspberry-pi-into-a-plc-blinking-leds-exam)
+This example is a modification of the original example related to the [tutorial on using the REX Control System](http://www.rexcontrols.com/articles/turning-raspberry-pi-into-a-plc-adding-a-pushbutto)
 on Raspberry Pi.
  
 Visit the [REX Controls company webpage](http://www.rexcontrols.com/rex-control-system-raspberry-pi) for more 
