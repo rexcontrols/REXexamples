@@ -1,0 +1,194 @@
+Model {
+  Name                    "buttonblink_task"
+  Version                 3.00
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "buttonblink_task"
+    Location                [204, 33, 633, 359]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "BIS_BLINK_RELAY2"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [60, 118, 75, 142]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      off
+      t1                      1
+      t2                      2
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      bEdit                   off
+      #GUID                   e9a4c92f-65f2-4252-9631-a6ac1b50b173
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_BLINK_RELAY3"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [60, 183, 75, 207]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      off
+      t1                      "0.2"
+      t2                      "0.4"
+      t3                      0
+      t4                      0
+      t5                      0
+      t6                      0
+      t7                      "2.0"
+      t8                      0
+      RPT                     on
+      bEdit                   off
+      #GUID                   5fc085dc-ded8-40f8-80e5-ccd5e50adb11
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RELAY1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 73, 80, 87]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   d8a7ec68-9d1a-4123-b264-a798eef063b7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RLY3_DEFAULT"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [155, 158, 175, 172]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   9b9e3e06-6013-4475-95bd-84adf60a51c2
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 233, 115, 247]
+      ShowName                off
+      GotoTag                 "UNP__I01"
+      BackgroundColor         "yellow"
+      #GUID                   a2d9d49e-7f4d-49be-9f63-33691b77940f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 73, 395, 87]
+      ShowName                off
+      GotoTag                 "UNP__RLY1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a2a215a5-e794-41d6-a744-4df1e11998d9
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 118, 395, 132]
+      ShowName                off
+      GotoTag                 "UNP__RLY2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a3ec5caf-9a91-4452-b817-979224995e3e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 183, 395, 197]
+      ShowName                off
+      GotoTag                 "UNP__RLY3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   054af83e-51f7-4c99-b899-3336e2f2985f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISSW"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [245, 173, 275, 207]
+      SourceBlock             "logiclib/ISSW"
+      #GUID                   43ecde54-4d19-4f36-a9fd-9fb58e12570f
+    }
+    Line {
+      SrcBlock                "BIS_BLINK_RELAY2"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   9a862708-2d5e-4cf4-aead-1ec16279eedf
+    }
+    Line {
+      SrcBlock                "BIS_BLINK_RELAY3"
+      SrcPort                 1
+      DstBlock                "ISSW"
+      DstPort                 2
+      #GUID                   77ef3c2a-043c-4506-a45e-72c10caa1531
+    }
+    Line {
+      SrcBlock                "CNB_RELAY1"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   a397a92e-de42-4fd4-924d-a7a335f79a01
+    }
+    Line {
+      SrcBlock                "CNB_RLY3_DEFAULT"
+      SrcPort                 1
+      Points                  [50, 0]
+      DstBlock                "ISSW"
+      DstPort                 1
+      #GUID                   54f57188-4f3b-4171-a24f-7019fa9b556a
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      Points                  [110, 0]
+      DstBlock                "ISSW"
+      DstPort                 3
+      #GUID                   9307453a-aff2-4225-9529-71b32353ec47
+    }
+    Line {
+      SrcBlock                "ISSW"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   01db43e6-0929-4e53-954a-85ba043c4777
+    }
+  }
+}
