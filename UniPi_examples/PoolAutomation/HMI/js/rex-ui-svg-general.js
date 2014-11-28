@@ -1,6 +1,6 @@
 /* GENERAL
-* Version 0.1.125
-* Created 2014-08-29 15:08 */
+* Version 0.1.126
+* Created 2014-10-27 17:10 */
 
 /**
  * SVG component represents BarGraph.
@@ -243,64 +243,60 @@ REX.UI.SVG.Button = function(svgElem, args) {
     var $o = that.options || {};
     var CSScustomizable = REX.HELPERS.parseBoolean($o.CSS_customizable) || false;
     var onMouseDownValue = REX.HELPERS.parseBoolean($o.reverseMeaning) ? 0 : 1;
+    var fontScale = parseFloat($o.fontScale) || 1;
     var elementTitle = $(that.element).find('title').text();
 
     //var textElems = that.element.getElementsByTagName('text');
-    var button = document.createElement('button');
-    button.setAttribute('style', 'width:100%; height:100%;');
-
-    $(button).button();
-    button.innerHTML = $o.text;
-
-    that.div.appendChild(button);
+    var button = $(document.createElement('button')).button();
+    $(that.div).append(button);
     
-    if (CSScustomizable){
-        that.$c.STYLE.on('change', function(i) {
-          var intVal = parseInt(i.getValue());
-          if(intVal === Number.NaN || intVal < 0) return;
-          that.div.className = elementTitle+"-"+intVal.toString();
-    });
-        
-    }
-
-    if (parseInt($o.font_size) > -1 && !isNaN(parseInt($o.font_size))) {
-        button.style.fontSize = $o.font_size;
-    }
+    button.attr('style', 'width:100%; height:100%;');
+    button.text($o.text);
     
-    else {
-        function updateFontSize() {
-            button.style.fontSize = that.element.getScreenCTM().a * 1 + 'em';
-        }
-        updateFontSize();
-        $(window).resize(function() {
-            updateFontSize();
+    if (CSScustomizable) {
+        that.$c.STYLE.on('change', function (i) {
+            var intVal = parseInt(i.getValue());
+            if (intVal === Number.NaN || intVal < 0)
+                return;
+            that.div.className = elementTitle + "-" + intVal.toString();
         });
     }
+
+    // Init font autoresize
+    function updateFontSize() {
+        var ctm = that.element.getScreenCTM();
+        // Scale according the width or height which is better
+        button.css('font-size',Math.min(ctm.a,ctm.d) * fontScale + 'em');
+    }
+    updateFontSize();
+    $(window).resize(function () {
+        updateFontSize();
+    });
+    
 
     if (that.$c.BUTTON.type === 'R') {
         REX.LOG.error('Connection String: ' + that.$c.BUTTON.cstring + '(' + that.$c.BUTTON.alias + ') is read-only');
         return that;
     }
-
-    button.addEventListener('mousedown', function(evt) {
+    
+    button.bind('touchend touchcancel touchleave mouseup mouseout', function (evt) {
+        if (evt.button && evt.button > 0) {
+            return;
+        } // Primary mouse button only            
+        REX.LOG.debug($o.text + ' mouse up');
+        if ($o.type === 'PushButton') {
+            that.$c.BUTTON.setValue(1 - onMouseDownValue, true);
+        }
+        that.fireCallback('mouseup');
+    }).bind('touchstart mousedown', function (evt) {
+        if (evt.button && evt.button > 0) {
+            return;
+        } // Primary mouse button only            
+        REX.LOG.debug($o.text + ' mouse down');
         that.$c.BUTTON.setValue(onMouseDownValue, true);
         that.fireCallback('mousedown');
-    }, false);
-
-    button.addEventListener('mouseup', function(evt) {
-        if ($o.type === 'PushButton') {
-            that.$c.BUTTON.setValue(1 - onMouseDownValue, true);
-        }
-        that.fireCallback('mouseup');
-    }, false);
+    });
     
-    button.addEventListener('mouseout', function(evt) {
-        if ($o.type === 'PushButton') {
-            that.$c.BUTTON.setValue(1 - onMouseDownValue, true);
-        }
-        that.fireCallback('mouseup');
-    }, false);
-
     return that;
 };
 /**

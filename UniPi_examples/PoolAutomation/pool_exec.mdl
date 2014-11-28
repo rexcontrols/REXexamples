@@ -1,7 +1,7 @@
 Model {
   Name                    "pool_exec"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4826, Date 2014-11-24"
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +33,7 @@ Model {
   }
   System {
     Name                    "pool_exec"
-    Location                [12, 33, 299, 359]
+    Location                [12, 33, 246, 359]
     #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
     Block {
       BlockType               Reference
@@ -103,7 +103,7 @@ Model {
       BlockType               Reference
       Name                    "pool_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 168, 150, 182]
+      Position                [85, 168, 135, 182]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -135,18 +135,18 @@ Model {
       #GUID                   d2df86f6-6a26-41a9-939c-a699323b24b1
     }
     Line {
-      SrcBlock                "UNP"
-      SrcPort                 1
-      DstBlock                "OWS"
-      DstPort                 1
-      #GUID                   a3aedb27-431e-4a1f-a31a-277d8929e85a
-    }
-    Line {
       SrcBlock                "RPiDrv"
       SrcPort                 1
       DstBlock                "OwsDrv"
       DstPort                 1
       #GUID                   0b340a44-0445-49f2-8196-a461cb35b4ec
+    }
+    Line {
+      SrcBlock                "UNP"
+      SrcPort                 1
+      DstBlock                "OWS"
+      DstPort                 1
+      #GUID                   a3aedb27-431e-4a1f-a31a-277d8929e85a
     }
   }
 }

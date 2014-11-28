@@ -1,7 +1,7 @@
 Model {
   Name                    "pool_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4826, Date 2014-11-24"
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +33,7 @@ Model {
   }
   System {
     Name                    "pool_task"
-    Location                [322, 33, 1309, 929]
+    Location                [268, 33, 1213, 858]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
