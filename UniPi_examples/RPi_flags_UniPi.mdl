@@ -1,7 +1,7 @@
 Model {
   Name                    "RPi_flags_UniPi"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4803, Date 2014-11-07"
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +33,7 @@ Model {
   }
   System {
     Name                    "RPi_flags_UniPi"
-    Location                [12, 33, 624, 852]
+    Location                [12, 33, 624, 858]
     #GUID                   e6059b7f-76c1-441f-b9c4-fe18bf168aba
     Block {
       BlockType               From
@@ -139,7 +139,7 @@ Model {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 313, 575, 327]
+      Position                [485, 208, 575, 222]
       ShowName                off
       GotoTag                 "UNP__RLY2"
       TagVisibility           "local"
@@ -161,7 +161,7 @@ Model {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 333, 575, 347]
+      Position                [485, 228, 575, 242]
       ShowName                off
       GotoTag                 "UNP__RLY3"
       TagVisibility           "local"
@@ -172,7 +172,7 @@ Model {
       BlockType               Goto
       Name                    "Goto34"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 293, 575, 307]
+      Position                [485, 188, 575, 202]
       ShowName                off
       GotoTag                 "UNP__RLY1"
       TagVisibility           "local"
@@ -183,7 +183,7 @@ Model {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 368, 575, 382]
+      Position                [485, 263, 575, 277]
       ShowName                off
       GotoTag                 "UNP__RLY8"
       TagVisibility           "local"
@@ -205,7 +205,7 @@ Model {
       BlockType               Reference
       Name                    "UNP__DATA"
       Ports                   [0, 16, 0, 0, 0]
-      Position                [60, 426, 90, 594]
+      Position                [60, 451, 90, 619]
       SourceBlock             "inoutlib/INHEXD"
       BackgroundColor         "yellow"
       #GUID                   6e11ef98-5e01-419b-8ce4-41885b79d42e
@@ -214,10 +214,19 @@ Model {
       BlockType               Reference
       Name                    "UNP__DATA_WRITE"
       Ports                   [16, 0, 0, 0, 0]
-      Position                [525, 426, 555, 594]
+      Position                [525, 451, 555, 619]
       SourceBlock             "inoutlib/OUTHEXD"
       BackgroundColor         "lightBlue"
       #GUID                   a761a1f5-d382-4428-8520-0d4ea2cbb622
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP__RLY"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [525, 306, 555, 394]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   729fffc0-9606-4fde-b6c4-6b70182c1ce2
     }
     Block {
       BlockType               Reference
@@ -334,7 +343,7 @@ Model {
       #GUID                   9861cb88-7c0b-4b10-9eb2-07e1820f78d3
     }
     Annotation {
-      Position                [475, 275]
+      Position                [475, 170]
       Text                    "Digital outputs (relays)"
       FontWeight              "bold"
       FontSize                16
@@ -348,52 +357,52 @@ Model {
       #GUID                   b5852bbc-c6e7-4f40-9d57-eee99670635c
     }
     Annotation {
-      Position                [450, 300]
+      Position                [450, 195]
       Text                    "relay 1"
       #GUID                   ea176522-77d8-4ddb-92e5-52f4cddb4276
     }
     Annotation {
-      Position                [450, 320]
+      Position                [450, 215]
       Text                    "relay 2"
       #GUID                   cfb589fc-d827-4d53-9883-4a8b798f48e3
     }
     Annotation {
-      Position                [475, 435]
+      Position                [475, 460]
       Text                    "integer value 0"
       #GUID                   9ee10d7a-259d-4e66-900f-64187609f4bf
     }
     Annotation {
-      Position                [475, 455]
+      Position                [475, 480]
       Text                    "integer value 2"
       #GUID                   38e8db23-95e1-4c9f-8ef7-bada6732dc3e
     }
     Annotation {
-      Position                [480, 445]
+      Position                [480, 470]
       Text                    "..."
       #GUID                   f43db996-ccb2-436a-9bcf-95294c5c5bc0
     }
     Annotation {
-      Position                [475, 575]
+      Position                [475, 600]
       Text                    "integer value 14"
       #GUID                   55bddf46-d4ac-4ea4-ba20-9709b6c8f331
     }
     Annotation {
-      Position                [505, 585]
+      Position                [505, 610]
       Text                    "SET"
       #GUID                   b0ab8dda-4265-45e1-9f11-6da81002988a
     }
     Annotation {
-      Position                [475, 525]
+      Position                [475, 550]
       Text                    "integer value 9"
       #GUID                   40489785-f1f7-49f5-8d04-351b8fb0d619
     }
     Annotation {
-      Position                [480, 490]
+      Position                [480, 515]
       Text                    "..."
       #GUID                   223779e8-d628-4a0e-9bc7-dbab973fef27
     }
     Annotation {
-      Position                [480, 550]
+      Position                [480, 575]
       Text                    "..."
       #GUID                   04c21999-55ff-493c-b95e-726404f57d74
     }
@@ -483,29 +492,29 @@ Model {
       #GUID                   03b2a654-fd7b-46cf-95a3-29955c950d9c
     }
     Annotation {
-      Position                [450, 340]
+      Position                [450, 235]
       Text                    "relay 3"
       #GUID                   f4878529-e9c3-4cda-96c2-351e5ada6ee5
     }
     Annotation {
-      Position                [535, 355]
+      Position                [535, 250]
       Text                    "..."
       #GUID                   b8b92ba5-8114-4141-b757-068e07a406c1
     }
     Annotation {
-      Position                [450, 375]
+      Position                [450, 270]
       Text                    "relay 8"
       #GUID                   3c82d02a-6ca7-470c-92ea-10c182e2f19f
     }
     Annotation {
-      Position                [135, 410]
+      Position                [135, 435]
       Text                    "Persistent data read (SRAM)"
       FontWeight              "bold"
       FontSize                16
       #GUID                   b3ee6811-7c94-44b3-b65a-dbebfeeb86c1
     }
     Annotation {
-      Position                [470, 410]
+      Position                [470, 435]
       Text                    "Persistent data write (SRAM)"
       FontWeight              "bold"
       FontSize                16
@@ -528,6 +537,36 @@ Model {
       Position                [460, 90]
       Text                    "Read the documentation first!"
       #GUID                   db4b9073-5670-44d8-86a6-5e8a69931db7
+    }
+    Annotation {
+      Position                [500, 315]
+      Text                    "relay 1"
+      #GUID                   918f9d48-6c1b-41f9-aed1-e42b4cb4e8ba
+    }
+    Annotation {
+      Position                [500, 385]
+      Text                    "relay 8"
+      #GUID                   810767ff-a751-42f8-96c1-c2add1dab44c
+    }
+    Annotation {
+      Position                [500, 355]
+      Text                    "..."
+      #GUID                   42c8b84f-9024-4930-ac91-d76ed372d6b5
+    }
+    Annotation {
+      Position                [460, 300]
+      Text                    "Multi-flag:"
+      #GUID                   be8d97fa-6884-4f2a-b9d5-4259699c9b87
+    }
+    Annotation {
+      Position                [500, 325]
+      Text                    "relay 2"
+      #GUID                   f4f467c7-e80e-4cb6-88ac-9c08f5aa3937
+    }
+    Annotation {
+      Position                [500, 335]
+      Text                    "relay 3"
+      #GUID                   afd8d9a4-a74d-4957-974e-a0472fad0f4d
     }
   }
 }

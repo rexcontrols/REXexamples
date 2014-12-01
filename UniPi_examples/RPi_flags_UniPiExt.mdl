@@ -1,7 +1,7 @@
 Model {
   Name                    "RPi_flags_UniPiExt"
   Version                 3.00
-  #RexVersion             "2.10.4 rev. 4700, Date 2014-10-03"
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -83,7 +83,7 @@ Model {
       BlockType               Reference
       Name                    "UNP__RLY_A0x21"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [175, 221, 205, 309]
+      Position                [175, 236, 205, 324]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
       #GUID                   812a7cbf-745f-46be-9fcf-95fb50831cf7
@@ -129,22 +129,22 @@ Model {
       #GUID                   c4cd14bf-578b-4463-a017-d271cc117fe3
     }
     Annotation {
-      Position                [150, 230]
+      Position                [150, 245]
       Text                    "relay 1"
       #GUID                   dac84153-424e-4652-802d-241eda1b63f9
     }
     Annotation {
-      Position                [150, 240]
+      Position                [150, 255]
       Text                    "relay 2"
       #GUID                   a73d8df3-df8f-4cc8-93c5-927d82bb7c42
     }
     Annotation {
-      Position                [150, 300]
+      Position                [150, 315]
       Text                    "relay 8"
       #GUID                   f5a580ce-2cb1-4c31-a79e-392e7bdda67c
     }
     Annotation {
-      Position                [150, 250]
+      Position                [150, 265]
       Text                    "relay 3"
       #GUID                   e97661db-9de0-4071-9567-91a159229aa8
     }
@@ -153,6 +153,16 @@ Model {
       Text                    "I2C address 33 (=0x21), change it according to "
 "the A0-A2 jumper setting"
       #GUID                   9dfad21f-ac95-46a0-8316-20fa7302f8f2
+    }
+    Annotation {
+      Position                [85, 225]
+      Text                    "Multi-flag:"
+      #GUID                   241a5518-110b-41dd-be8f-a4264110beee
+    }
+    Annotation {
+      Position                [150, 290]
+      Text                    "..."
+      #GUID                   f449f5f8-9d88-431d-be8a-f09d3181e654
     }
   }
 }
