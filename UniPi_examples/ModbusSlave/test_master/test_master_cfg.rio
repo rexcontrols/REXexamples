@@ -1,0 +1,53 @@
+Modbus {
+  Name                    ""
+  BaudRate                19200
+  Parity                  0
+  SpaceTime               2
+  Timeout                 1000
+  Flags                   8
+  Gap                     30000
+  #GUID                   4b39f3f5-29ea-4198-9757-3441b2696af1
+  Slave {
+    Name                    "RPi_UniPi"
+    IPaddress               192.168.1.100
+    Subaddress              255
+    SlaveID                 0
+    MaxRequest              16
+    TCPport                 502
+  }
+  Item {
+    Name                    DIGITAL_INPUTS
+    SlaveAdr                0
+    RegisterAdr             0
+    Type                    0x00000204
+    Count                   1
+  }
+  Item {
+    Name                    AI1
+    SlaveAdr                0
+    RegisterAdr             1
+    Type                    0x00000204
+    Count                   1
+  }
+  Item {
+    Name                    AI2
+    SlaveAdr                0
+    RegisterAdr             2
+    Type                    0x00000204
+    Count                   1
+  }
+  Item {
+    Name                    RELAYS
+    SlaveAdr                0
+    RegisterAdr             2048
+    Type                    0x00000104
+    Count                   1
+  }
+  Item {
+    Name                    PWM18
+    SlaveAdr                0
+    RegisterAdr             2049
+    Type                    0x00000104
+    Count                   1
+  }
+}
