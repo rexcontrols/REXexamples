@@ -23,8 +23,8 @@ Modbus TCP slave device (UniPi) is supposed to have the IP address 192.168.1.100
 |         2048 | UniPi relays (LSB=relay 1)    | 0..255     |
 |         2049 | Analog output (PWM on pin 18) | 0..1023    |
 
-### Adding signals, changing Modbus register mapping, changing IP address of 
-the slave device ###
+### Adding signals, changing Modbus register mapping, changing IP address of the slave device ###
+
 Go to Modbus TCP Master driver (MTM block) configuration and press "Special 
 edit" for Modbus configuration. Make sure to read the Modbus driver 
 documentation (see below).
