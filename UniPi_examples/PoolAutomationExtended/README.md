@@ -19,6 +19,8 @@ for more information about the example projects and developing advanced
 automation and control solutions using the REX Control System and the Raspberry
 Pi.
 
+More info about the UniPi board can be found at [unipi.technology](http://www.unipi.technology)
+
 Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org)
 
 
