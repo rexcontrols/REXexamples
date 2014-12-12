@@ -77,7 +77,7 @@ Model {
       Ports                   [17, 17, 0, 0, 0]
       Position                [195, 106, 245, 284]
       SourceBlock             "speclib/REXLANG"
-      srcname                 "sender_rexlang.stl"
+      srcname                 "sender_rexlang.c"
       srctype                 "1: STL"
       stack                   0
       debug                   "1: No check"
