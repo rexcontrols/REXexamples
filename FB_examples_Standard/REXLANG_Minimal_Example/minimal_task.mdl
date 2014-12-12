@@ -196,7 +196,7 @@ Model {
       RTWMemSecDataInternal   "Inherit from model"
       RTWMemSecDataParameters "Inherit from model"
       tab_matlab              "BASIC"
-      srcname                 "minimal_rexlang.stl"
+      srcname                 "minimal_rexlang.c"
       srctype                 "1: STL"
       stack                   0
       debug                   "1: No check"
