@@ -29,7 +29,7 @@ long convData[2];          //array for data conversion
 /* Function for conversion of decimal number (the val parameter) to 2 numbers 
 of type long (i.e. 8 bytes) representing the number in the double format 
 according to IEEE 754. Little-endian format is used. */
-long DoubleAsLong(double val, long ares[])
+void DoubleAsLong(double val, long ares[])
 {
 	double rmax=pow(2.0,1022.0);
 	long lexp=0, i;
@@ -41,7 +41,7 @@ long DoubleAsLong(double val, long ares[])
 		val=-val;
 	}
 	if(val<1.0/rmax)
-		return 0; //zero
+		return; //zero
 	if(val>=1.0)
 	{
 		for(i=9;i>=0;--i)
@@ -73,7 +73,6 @@ long DoubleAsLong(double val, long ares[])
 	ares[1] = ares[1]|(i=(long)val);
 	rmax=((val-i)*pow(2.0,32.0));
 	ares[0] = rmax>0x7FFFFFFF? ((long)(rmax-0x7FFFFFFF))|0x80000000 : (long)rmax;  
-  return 0;
 }
 
 /* Initialization of the REXLANG algorithm */
