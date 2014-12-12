@@ -1,7 +1,7 @@
 Model {
   Name                    "sender_task"
   Version                 3.00
-  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -75,7 +75,7 @@ Model {
       BlockType               Reference
       Name                    "REXLANG"
       Ports                   [17, 17, 0, 0, 0]
-      Position                [195, 106, 245, 284]
+      Position                [245, 106, 295, 284]
       SourceBlock             "speclib/REXLANG"
       srcname                 "sender_rexlang.c"
       srctype                 "1: STL"
@@ -124,7 +124,7 @@ Model {
     Line {
       SrcBlock                "CNI"
       SrcPort                 1
-      Points                  [25, 0; 0, 30]
+      Points                  [30, 0; 0, 30]
       DstBlock                "REXLANG"
       DstPort                 2
       #GUID                   dbd3a908-cc38-41d8-b12b-d2dcd37395ae
@@ -147,14 +147,14 @@ Model {
     }
     Annotation {
       Position                [175, 25]
-      Name                    "Sender station, IP address 192.168.1.100"
+      Text                    "Sender station, IP address 192.168.1.100"
       FontWeight              "bold"
       FontSize                16
       #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
     }
     Annotation {
       Position                [200, 50]
-      Name                    "Change the IP addresses in the sender_rexlang.s"
+      Text                    "Change the IP addresses in the sender_rexlang.s"
 "tl file if necessary.\nThe IP addresses are defined by hexadecimal numbers, e."
 "g. 0xC0A80164."
       #GUID                   8ea0877f-99eb-499d-a2f3-ad429402a698
