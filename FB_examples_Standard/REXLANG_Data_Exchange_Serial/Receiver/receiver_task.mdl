@@ -137,8 +137,8 @@ Model {
     }
     Annotation {
       Position                [195, 50]
-      Text                    "Change the serial port in the sender_rexlang.c "
-"file if necessary."
+      Text                    "Change the serial port in the receiver_rexlang."
+"c file if necessary."
       #GUID                   8f79b992-fa0e-490d-82e8-f15ef7d4ddd7
     }
   }
