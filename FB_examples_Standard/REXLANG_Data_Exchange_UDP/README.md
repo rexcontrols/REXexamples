@@ -15,7 +15,7 @@ capabilities.
 
 ## Additional information ##
 
-Visit the [REX Controls company webpage](http://www.rexcontrols.com/rex-control-system-raspberry-pi) 
-for more information about the example projects and developing advanced 
-automation and control solutions using the REX Control System and the Raspberry
-Pi.
+Visit the [REX Controls company webpage](http://www.rexcontrols.com) for more 
+information about the example projects and developing advanced automation and 
+control solutions using the REX Control System.
+
