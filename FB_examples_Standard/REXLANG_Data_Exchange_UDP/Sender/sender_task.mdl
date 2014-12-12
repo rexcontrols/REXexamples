@@ -154,9 +154,9 @@ Model {
     }
     Annotation {
       Position                [200, 50]
-      Text                    "Change the IP addresses in the sender_rexlang.s"
-"tl file if necessary.\nThe IP addresses are defined by hexadecimal numbers, e."
-"g. 0xC0A80164."
+      Text                    "Change the IP addresses in the sender_rexlang.c"
+" file if necessary.\nThe IP addresses are defined by hexadecimal numbers, e.g."
+" 0xC0A80164."
       #GUID                   8ea0877f-99eb-499d-a2f3-ad429402a698
     }
   }

@@ -23,7 +23,7 @@ long init(void)
     return 0;
 }
 
-int main(void)
+long main(void)
 {
     i2c_chip_address = 0x68; // 7-bit address of the I2C device
     i2c_bufTx[0] = 0x98; // read channel 1, one-shot, 16bit, gain 1 (see MCP3422 datasheet)

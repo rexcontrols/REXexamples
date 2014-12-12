@@ -1,7 +1,7 @@
 Model {
   Name                    "sender_task"
   Version                 3.00
-  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -75,9 +75,9 @@ Model {
       BlockType               Reference
       Name                    "REXLANG"
       Ports                   [17, 17, 0, 0, 0]
-      Position                [195, 106, 245, 284]
+      Position                [245, 106, 295, 284]
       SourceBlock             "speclib/REXLANG"
-      srcname                 "sender_rexlang.stl"
+      srcname                 "sender_rexlang.c"
       srctype                 "1: STL"
       stack                   0
       debug                   "1: No check"
@@ -124,7 +124,7 @@ Model {
     Line {
       SrcBlock                "CNI"
       SrcPort                 1
-      Points                  [25, 0; 0, 30]
+      Points                  [30, 0; 0, 30]
       DstBlock                "REXLANG"
       DstPort                 2
       #GUID                   dbd3a908-cc38-41d8-b12b-d2dcd37395ae
@@ -146,17 +146,17 @@ Model {
       #GUID                   509d2fba-f731-494e-bee7-23f53d43dc98
     }
     Annotation {
-      Position                [200, 50]
-      Name                    "Change the serial port in the sender_rexlang.st"
-"l file if necessary."
-      #GUID                   8ea0877f-99eb-499d-a2f3-ad429402a698
-    }
-    Annotation {
       Position                [190, 25]
-      Name                    "Sender station, COM5 or /dev/ttyS5"
+      Text                    "Sender station, COM5 or /dev/ttyS5"
       FontWeight              "bold"
       FontSize                16
       #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
+    }
+    Annotation {
+      Position                [200, 50]
+      Text                    "Change the serial port in the sender_rexlang.c "
+"file if necessary."
+      #GUID                   8ea0877f-99eb-499d-a2f3-ad429402a698
     }
   }
 }

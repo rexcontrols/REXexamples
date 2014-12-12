@@ -1,7 +1,7 @@
 Model {
   Name                    "receiver_task"
   Version                 3.00
-  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -130,16 +130,16 @@ Model {
     }
     Annotation {
       Position                [175, 25]
-      Name                    "Receiver station, IP address 192.168.1.200"
+      Text                    "Receiver station, IP address 192.168.1.200"
       FontWeight              "bold"
       FontSize                16
       #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
     }
     Annotation {
       Position                [190, 50]
-      Name                    "Change the IP addresses in the receiver_rexlang"
-".stl file if necessary.\nThe IP addresses are defined by hexadecimal numbers, "
-"e.g. 0xC0A801C8."
+      Text                    "Change the IP addresses in the receiver_rexlang"
+".c file if necessary.\nThe IP addresses are defined by hexadecimal numbers, e."
+"g. 0xC0A801C8."
       #GUID                   c7854090-6d93-4fc6-8c77-ed2ef5476fa1
     }
   }
