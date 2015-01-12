@@ -1,0 +1,72 @@
+/************************************************************
+*
+* REXLANG - Using the MCP23017 I/O expander via I2C
+*
+*************************************************************/
+
+#define I2CDEV_FNAME 67 // I2C device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/i2c-1 on the Raspberry Pi minicomputer)
+
+long input(3) digital_out; //the signal controlling the outputs is connected to input u3 of the REXLANG block
+long output(10) digital_in; //the state of the input pins is published via output y10 of the REXLANG block 
+
+long i2c_bufTx[3]; //buffer for transmitting data
+long i2c_bufRx[3]; //buffer for receiving data
+long i2c_bus_handle;
+long i2c_chip_address;
+long i2c_register_address;
+long i2c_write_count;
+long i2c_read_count;
+long i2c_ret_fun;
+
+long init(void)
+{
+    i2c_bus_handle = Open(I2CDEV_FNAME); // open I2C device
+    i2c_chip_address = 0x20; // 7-bit address of the I2C device
+
+    // !!!!!!!!!!!!!
+    //By default, IOCON.BANK=0, therefore see Table 1-6 in the datasheet for register mapping
+    //Register addresses are significantly different for IOCON.BANK=1 (Table 1-5 in the datasheet) 
+    // !!!!!!!!!!!!!
+    
+    //Setting PORTA to output
+    i2c_bufTx[0] = 0x00; //register no. (IODIRA) 
+    i2c_bufTx[1] = 0x00; //IODIRA data, bitmask, 0=output, 1=input
+    i2c_write_count = 2;
+    i2c_read_count = 0;
+    i2c_ret_fun = I2C(i2c_bus_handle, i2c_chip_address, i2c_bufTx, i2c_write_count, i2c_bufRx, i2c_read_count);
+
+    //Setting PORTB to input
+    i2c_bufTx[0] = 0x01; //register no. (IODIRB) 
+    i2c_bufTx[1] = 0xFF; //IODIRB data, bitmask, 0=output, 1=input
+    i2c_write_count = 2;
+    i2c_read_count = 0;
+    i2c_ret_fun = I2C(i2c_bus_handle, i2c_chip_address, i2c_bufTx, i2c_write_count, i2c_bufRx, i2c_read_count);
+
+    //Enabling pull-up resistors on PORTB
+    i2c_bufTx[0] = 0x0D; //register no. (GPPUB) 
+    i2c_bufTx[1] = 0xFF; //GPPUB data, bitmask, 0=no pull-up, 1=pull-up enabled
+    i2c_write_count = 2;
+    i2c_read_count = 0;
+    i2c_ret_fun = I2C(i2c_bus_handle, i2c_chip_address, i2c_bufTx, i2c_write_count, i2c_bufRx, i2c_read_count);
+
+    return 0;
+}
+
+long main(void)
+{
+    //Controlling outputs
+    i2c_bufTx[0] = 0x12; //register no. (GPIOA)   
+    i2c_bufTx[1] = digital_out & 0xFF; //masking the data to control the outputs
+    i2c_write_count = 2;
+    i2c_read_count = 0;
+    i2c_ret_fun = I2C(i2c_bus_handle, i2c_chip_address, i2c_bufTx, i2c_write_count, i2c_bufRx, i2c_read_count);
+    
+    //Reading inputs
+    i2c_bufTx[0] = 0x13; //register no. (GPIOB)   
+    i2c_write_count = 1;
+    i2c_read_count = 1;
+    i2c_ret_fun = I2C(i2c_bus_handle, i2c_chip_address, i2c_bufTx, i2c_write_count, i2c_bufRx, i2c_read_count);
+    digital_in = i2c_bufRx[0]; //publishing the received data
+
+    return 0;
+}
