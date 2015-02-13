@@ -1,0 +1,78 @@
+Model {
+  Name                    "wsch_exec"
+  Version                 3.00
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "wsch_exec"
+    Location                [12, 33, 201, 379]
+    #GUID                   178edd63-535d-46f1-be17-48422df9eb5e
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [25, 23, 70, 312]
+      SourceBlock             "execlib/EXEC"
+      target                  "PC - Linux"
+      tick                    "0.05"
+      ntick0                  2
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   beb152cf-2e86-4659-a561-26529893c2f3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "wsch_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 178, 150, 192]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   f71a3710-e322-49d5-9938-35ca2959cb8e
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "wsch_task"
+      DstPort                 1
+      #GUID                   884bb02a-4abc-4537-90c6-a49378f6e91e
+    }
+  }
+}
