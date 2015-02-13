@@ -17,6 +17,9 @@ In order to enable configuration of the weekly schedule in a web browser the use
 
 However, a limitiation (or a bug) has been discovered while preparing this example. If you want to modify the user interface in Inkscape, make sure to patch the RexHMI template which the Inkscape extension uses for exporting the HMI. 
 
+## Acknowledgement ##
+
+Credits go to Frank Campo for his question and proposed solution.
 
 ## Documentation ##
 
