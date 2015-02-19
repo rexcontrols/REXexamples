@@ -1,0 +1,470 @@
+Model {
+  Name                    "master_task"
+  Version                 7.1
+  MdlSubVersion           0
+  SavedCharacterEncoding  "windows-1250"
+  SaveDefaultBlockParams  on
+  SampleTimeColors        off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ShowTestPointIcons      on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons         on
+  SortedOrder             off
+  ExecutionContextIcon    off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime        "0.035000"
+  OverrideScopeRefreshTime on
+  DisableAllScopes        off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  Created                 "Thu Jan 14 14:46:32 2010"
+  Creator                 "jsobota"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "jsobota"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Jan 19 10:05:35 2010"
+  RTWModifiedTimeStamp    0
+  ModelVersionFormat      "1.%<AutoIncrement:20>"
+  ConfigurationManager    "none"
+  SimulationMode          "normal"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  CovReportOnPause        on
+  CovModelRefEnable       "Off"
+  ExtModeBatchMode        off
+  ExtModeEnableFloating   on
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    BlockRotation           0
+    BlockMirror             off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "master_task"
+    Location                [213, 34, 701, 656]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    TiledPaperMargins       [0.196850, 0.196850, 0.196850, 0.196850]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ZoomFactor              100
+    ReportName              "simulink-default.rpt"
+    #GUID                   b1efc608-f54c-482f-8d84-a902872a8bc8
+    Block {
+      BlockType               Reference
+      Name                    "CNI"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 92, 180, 108]
+      SourceBlock             "mathlib/CNI"
+      icn                     111
+      #GUID                   85af24a5-0636-4954-b4b3-c79be87f71cb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 161, 180, 179]
+      SourceBlock             "mathlib/CNI"
+      icn                     64917
+      #GUID                   4103a37d-c230-423e-890f-c8691fe0bd18
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 197, 180, 213]
+      SourceBlock             "mathlib/CNI"
+      icn                     -29999
+      #GUID                   0cd881f0-a57d-41f7-94b8-fcb5c9b65aaf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 127, 180, 143]
+      SourceBlock             "mathlib/CNI"
+      icn                     -95
+      #GUID                   b4ad60f4-31a3-4f16-a5e4-c09fb3a2b226
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 246, 180, 264]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "-78.57"
+      #GUID                   d47ea172-73a8-422e-9cd1-395ad546f3d1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 286, 195, 304]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "-79315.18"
+      #GUID                   de365cec-a988-4f78-a550-b09b21b1f6be
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [105, 368, 230, 382]
+      ShowName                off
+      GotoTag                 "MBM__readReg0"
+      BackgroundColor         "yellow"
+      #GUID                   302694b0-c3da-489d-807e-183784e195b0
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [105, 408, 230, 422]
+      ShowName                off
+      GotoTag                 "MBM__readReg1"
+      BackgroundColor         "yellow"
+      #GUID                   6b595ae9-3b98-4418-9466-538dd8777285
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [105, 448, 230, 462]
+      ShowName                off
+      GotoTag                 "MBM__readReg2"
+      BackgroundColor         "yellow"
+      #GUID                   90b9367e-8ff7-443d-9ddf-455fa0f1b2fd
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [105, 488, 230, 502]
+      ShowName                off
+      GotoTag                 "MBM__readReg3"
+      BackgroundColor         "yellow"
+      #GUID                   705a0ea6-54ff-4d2f-b817-e15d764ce045
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [105, 528, 230, 542]
+      ShowName                off
+      GotoTag                 "MBM__readFloat"
+      BackgroundColor         "yellow"
+      #GUID                   7fa3f17f-3b03-42ee-a5d6-806811f99592
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [105, 568, 230, 582]
+      ShowName                off
+      GotoTag                 "MBM__readDouble"
+      BackgroundColor         "yellow"
+      #GUID                   b40cc2ac-b6b8-468f-a532-f02228480406
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [290, 368, 315, 382]
+      SourceBlock             "mathlib/GAIN"
+      k                       1
+      #GUID                   26399554-d3b4-4deb-96a9-99f06114f4ae
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [290, 408, 315, 422]
+      SourceBlock             "mathlib/GAIN"
+      k                       1
+      #GUID                   0778f59a-5984-4303-a256-2e56751ffcd2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [290, 448, 315, 462]
+      SourceBlock             "mathlib/GAIN"
+      k                       1
+      #GUID                   2476663a-328d-41d7-b2fb-f528f81dfac1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [290, 488, 315, 502]
+      SourceBlock             "mathlib/GAIN"
+      k                       1
+      #GUID                   5709c21d-ec2e-4f1c-bfb1-daa556446ef9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN4"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [290, 528, 315, 542]
+      SourceBlock             "mathlib/GAIN"
+      k                       1
+      #GUID                   d65c27ad-7f16-4363-888f-d3756a121637
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN5"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [290, 568, 315, 582]
+      SourceBlock             "mathlib/GAIN"
+      k                       1
+      #GUID                   51398ec5-e2f2-40c6-b48f-a7b71d4fc9fc
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [260, 248, 380, 262]
+      ShowName                off
+      GotoTag                 "MBM__writeFloat"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   90da1660-f83d-45f0-af7d-562a625b4f28
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [260, 93, 380, 107]
+      ShowName                off
+      GotoTag                 "MBM__writeReg0"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   494f43c4-fa68-4a0f-8d82-a48c31f3d870
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [260, 163, 380, 177]
+      ShowName                off
+      GotoTag                 "MBM__writeReg2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f2548fcc-04c6-4d98-ba28-cb9e7ee7f735
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [260, 198, 380, 212]
+      ShowName                off
+      GotoTag                 "MBM__writeReg3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   0a47511e-6094-4b15-988f-2a16e14c1d6b
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [260, 128, 380, 142]
+      ShowName                off
+      GotoTag                 "MBM__writeReg1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f77b8548-0fb9-4890-b496-c7d9c6de3454
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [260, 288, 380, 302]
+      ShowName                off
+      GotoTag                 "MBM__writeDouble"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b5e64c48-3662-4c62-a219-78bec7164dc1
+    }
+    Line {
+      SrcBlock                "CNI"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   acc17958-dda1-4d7f-a83c-bb929b6b8a27
+    }
+    Line {
+      SrcBlock                "CNI1"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   2b716cf2-9b7d-4776-9029-13b90ca72704
+    }
+    Line {
+      SrcBlock                "CNI2"
+      SrcPort                 1
+      DstBlock                "Goto3"
+      DstPort                 1
+      #GUID                   92f77d9d-f1c8-4ad6-8636-f47018c59f27
+    }
+    Line {
+      SrcBlock                "CNI3"
+      SrcPort                 1
+      DstBlock                "Goto4"
+      DstPort                 1
+      #GUID                   2acee98a-2e01-46d9-a2e1-12d4bac96e46
+    }
+    Line {
+      SrcBlock                "CNR"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   3987af10-e789-4802-8c0f-b106be3360b4
+    }
+    Line {
+      SrcBlock                "CNR1"
+      SrcPort                 1
+      DstBlock                "Goto5"
+      DstPort                 1
+      #GUID                   71e58bd4-6488-4c77-b795-09fe8f9ca748
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "GAIN"
+      DstPort                 1
+      #GUID                   56becaf6-fc0a-47f8-a1ec-6da08bb8d9b0
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "GAIN1"
+      DstPort                 1
+      #GUID                   89e36e12-033e-4e3e-9e77-1fd3327fcf53
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "GAIN2"
+      DstPort                 1
+      #GUID                   d2bc8f38-2a00-4ea2-8340-8ffd2e3fefac
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "GAIN3"
+      DstPort                 1
+      #GUID                   d39ce8b3-2944-4442-b467-807ead094cba
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      DstBlock                "GAIN4"
+      DstPort                 1
+      #GUID                   b373894d-26a4-4851-9939-116b0ee92fd9
+    }
+    Line {
+      SrcBlock                "From5"
+      SrcPort                 1
+      DstBlock                "GAIN5"
+      DstPort                 1
+      #GUID                   701829de-444a-44bb-a9bf-4d92e050b99d
+    }
+    Annotation {
+      Position                [240, 30]
+      Text                    "Modbus RTU master station, port COM1, baudrate "
+"19200"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   30d98409-46ee-49e2-a817-39a3a8d14549
+    }
+    Annotation {
+      Position                [235, 60]
+      Text                    "Change the serial port settings in the Modbus d"
+"river configuration\nif necessary (click \"Special edit\" in the MBM block par"
+"ameter dialog)"
+      #GUID                   8b9a2bcc-89bd-4853-975c-50913d9b6d59
+    }
+  }
+}
