@@ -1,7 +1,7 @@
 Model {
   Name                    "Web_Controlled_PiFace_task"
   Version                 3.00
-  #RexVersion             "2.10.3 rev. 4099, Date 2014-05-13"
+  #RexVersion             "2.10.6 rev. 5098, Date 2015-03-31"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -63,24 +63,6 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "BIS_HEARTBEAT"
-      Ports                   [0, 2, 0, 0, 0]
-      Position                [525, 248, 540, 272]
-      SourceBlock             "genlib/BIS"
-      Y0                      on
-      t1                      "0.7"
-      t2                      "0.8"
-      t3                      "0.9"
-      t4                      "1.0"
-      t5                      0
-      t6                      6
-      t7                      7
-      t8                      8
-      RPT                     on
-      #GUID                   2700e8c9-d49b-4c80-bc6a-7a074586db39
-    }
-    Block {
-      BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
       Position                [170, 148, 190, 162]
@@ -136,17 +118,6 @@ Model {
       SourceBlock             "logiclib/EDGE_"
       iedge                   "1: Rising edge"
       #GUID                   d0b1d816-cd63-40f5-8c62-e203a8fc5209
-    }
-    Block {
-      BlockType               Goto
-      Name                    "Goto"
-      Ports                   [1, 0, 0, 0, 0]
-      Position                [565, 248, 655, 262]
-      ShowName                off
-      GotoTag                 "RPI__GPIO16"
-      TagVisibility           "local"
-      BackgroundColor         "lightBlue"
-      #GUID                   0b2b783c-0d4e-4991-bcb2-67bf99a9ce20
     }
     Block {
       BlockType               Reference
@@ -268,13 +239,6 @@ Model {
       DstBlock                "ISSW1"
       DstPort                 2
       #GUID                   071e595d-040d-43da-8d84-35f039cc5e50
-    }
-    Line {
-      SrcBlock                "BIS_HEARTBEAT"
-      SrcPort                 1
-      DstBlock                "Goto"
-      DstPort                 1
-      #GUID                   ee77c3ed-522e-4bb7-90a1-ae653439839a
     }
     Line {
       SrcBlock                "CNB"
