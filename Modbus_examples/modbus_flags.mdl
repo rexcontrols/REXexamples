@@ -1,0 +1,141 @@
+Model {
+  Name                    "modbus_flags"
+  Version                 3.00
+  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "modbus_flags"
+    Location                [97, 104, 507, 468]
+    #GUID                   09f938fc-a7cf-456b-99a8-3a056a49186b
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 128, 145, 142]
+      ShowName                off
+      GotoTag                 "MTM__IN"
+      BackgroundColor         "yellow"
+      #GUID                   570ec27c-cecb-4aa8-a390-197f95d0dde8
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [255, 128, 345, 142]
+      ShowName                off
+      GotoTag                 "MTM__OUT"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   72a0a9de-216b-4aa6-b5ec-db8b7fa50d3c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__INHEXD"
+      Ports                   [0, 16, 0, 0, 0]
+      Position                [125, 161, 155, 329]
+      SourceBlock             "inoutlib/INHEXD"
+      BackgroundColor         "yellow"
+      #GUID                   5130e7f4-3ab1-4480-a4bd-7992ba608742
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__INOCT"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [40, 241, 70, 329]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   f257a41f-679d-4481-a642-c773757134b8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__INQUAD"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [40, 162, 70, 208]
+      SourceBlock             "inoutlib/INQUAD"
+      BackgroundColor         "yellow"
+      #GUID                   c1821268-b5ae-410a-bfc0-eabe60943be7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__OUTHEXD"
+      Ports                   [16, 0, 0, 0, 0]
+      Position                [330, 161, 360, 329]
+      SourceBlock             "inoutlib/OUTHEXD"
+      BackgroundColor         "lightBlue"
+      #GUID                   1c5b8bdb-3c7b-4546-9898-1bd0abb43476
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__OUTOCT"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [235, 241, 265, 329]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   a71dd6d3-55aa-48e5-b2f7-9c6ffd483d35
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__OUTQUAD"
+      Ports                   [4, 0, 0, 0, 0]
+      Position                [235, 162, 265, 208]
+      SourceBlock             "inoutlib/OUTQUAD"
+      BackgroundColor         "lightBlue"
+      #GUID                   1844c33e-95cf-406c-bacd-7af191e5aa61
+    }
+    Annotation {
+      Position                [195, 35]
+      Text                    "Modbus I/O flags"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   4a3bf737-f86d-4a61-8175-8764531b4db5
+    }
+    Annotation {
+      Position                [195, 65]
+      Text                    "The Modbus driver must be included in the proje"
+"ct\nand correctly configured prior to using these flags!"
+      #GUID                   668fb7f2-f471-4841-a98e-3d12c50d2a02
+    }
+    Annotation {
+      Position                [85, 105]
+      Text                    "Input signals"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   3498eb85-2af6-4bac-9669-8305bc3e3b96
+    }
+    Annotation {
+      Position                [285, 105]
+      Text                    "Output signals"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   e3489dff-5a61-4f1d-a576-741d7a59be83
+    }
+  }
+}
