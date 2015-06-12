@@ -1,0 +1,31 @@
+.BUTTON-1 {
+	display:none;
+}
+
+.BUTTON-2 {
+	transform:rotate(90deg);
+}
+
+.BUTTON-3 {
+  opacity: 0.5;
+}
+
+.BUTTON-4 {
+  background: #33ff00;
+  padding: 4px;
+}
+
+.BUTTON-5 {
+    resize: both;
+    overflow: auto;
+}
+
+.BUTTON-6 {
+    outline: 4px solid red;
+    outline-offset: 0px;
+}
+
+.BUTTON-7 {
+    cursor: wait;
+}
+ 
