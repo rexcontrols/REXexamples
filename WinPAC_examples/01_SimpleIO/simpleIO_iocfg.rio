@@ -1,0 +1,5 @@
+WpcDrv {
+  Version                 1.00
+  BaudRate1               115200
+  BaudRate3               115200
+}

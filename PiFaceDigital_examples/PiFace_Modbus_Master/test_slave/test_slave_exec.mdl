@@ -1,0 +1,123 @@
+Model {
+  Name                    "test_slave_exec"
+  Version                 3.00
+  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "test_slave_exec"
+    Location                [9, 30, 249, 353]
+    #GUID                   bdf91a63-cbfb-40fc-8d65-44487be250d6
+    Block {
+      BlockType               Reference
+      Name                    "EXEC_1"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [70, 23, 115, 292]
+      SourceBlock             "execlib/EXEC"
+      ShowName                on
+      NamePlacement           ""
+      target                  "PC - Windows"
+      tick                    "0.05"
+      ntick0                  2
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   c625f321-647d-415e-bd8d-a44391aaec3b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [145, 62, 195, 78]
+      SourceBlock             "execlib/IODRV"
+      ShowName                on
+      NamePlacement           ""
+      module                  "MbDrv"
+      classname               "MtsDrv"
+      cfgname                 "test_slave_cfg.rio"
+      factor                  10
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   08baae3f-851c-48da-8a32-5b7c3004de0a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MbDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [145, 27, 195, 43]
+      SourceBlock             "execlib/MODULE"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   01771832-5dcb-4458-b3df-756ddfe2b1c9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "test_slave_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [145, 167, 195, 183]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   1
+      stop                    2
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   5460a77c-cb1b-4fd3-851b-e2619fb2e1b8
+    }
+    Line {
+      SrcBlock                "EXEC_1"
+      SrcPort                 1
+      DstBlock                "MbDrv"
+      DstPort                 1
+      #GUID                   de05e88b-1cbd-46d1-85c3-e09b9e63f70f
+    }
+    Line {
+      SrcBlock                "EXEC_1"
+      SrcPort                 2
+      DstBlock                "MTS"
+      DstPort                 1
+      #GUID                   f7d87571-7678-48fb-9507-cc259c84a905
+    }
+    Line {
+      SrcBlock                "EXEC_1"
+      SrcPort                 5
+      DstBlock                "test_slave_task"
+      DstPort                 1
+      #GUID                   fff434dd-4b99-46d1-8555-7062811c7d5f
+    }
+  }
+}

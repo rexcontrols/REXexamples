@@ -1,0 +1,311 @@
+Model {
+  Name                    "simpleIO_task"
+  Version                 3.00
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Thu Jan 06 15:26:11 2005"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "mertlj"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Thu Mar 10 12:28:30 2011"
+  ModelVersionFormat      "1.%<AutoIncrement:269>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "simpleIO_task"
+    Location                [279, 31, 1255, 812]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "A4"
+    PaperUnits              "centimeters"
+    ZoomFactor              100
+    AutoZoom                on
+    ReportName              "simulink-default.rpt"
+    #GUID                   62f14105-1a81-4b58-b573-a03a0e3d482b
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [230, 178, 250, 192]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   796201bf-8003-46f7-8e45-cd396e054d64
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [460, 188, 480, 202]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   d7ca17ff-ecf1-4003-9e00-60b632fceb20
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [465, 218, 485, 232]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   1eb34375-a76c-4ee0-9090-65a805ce699d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [465, 248, 485, 262]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   106d9753-739a-43e6-8bc2-85965de1160a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [465, 283, 485, 297]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   9b681f40-7a3d-4ace-b27f-c15dd5427dad
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 138, 180, 152]
+      BackgroundColor         "lightBlue"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "WPC__S1I17X0"
+      #GUID                   e88fa5bd-681e-49ee-adfe-096866bbe515
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 168, 180, 182]
+      BackgroundColor         "lightBlue"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "WPC__S1I17X0"
+      #GUID                   8b608249-35e4-4d42-8daa-5f98da6e9e34
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [535, 118, 655, 132]
+      BackgroundColor         "yellow"
+      ShowName                off
+      GotoTag                 "WPC__SxI24V0"
+      TagVisibility           "local"
+      #GUID                   cd13227c-0bab-4958-bd6c-503f01d8f9f7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [450, 118, 475, 132]
+      SourceBlock             "genlib/SG"
+      isig                    "1: SINE"
+      amp                     "7.5"
+      freq                    "0.1"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      #GUID                   97459e10-9a6a-4278-807d-c4c5acb759bc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [275, 133, 320, 207]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   d20933c8-afe2-4d26-aaa5-da300e230727
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WPC__SxI48C0_7"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [90, 286, 120, 374]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "lightBlue"
+      SourceType              "INOCT"
+      #GUID                   401aca1d-6150-4527-9689-f65e88c17d0d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WPC__SxI64C0_7"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [595, 191, 625, 279]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "yellow"
+      SourceType              "OUTOCT"
+      #GUID                   bc865285-642e-401b-8f04-0d4224debb91
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   44d4b79e-2e24-438e-98a9-75e7c11bf835
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   570c3937-683f-4be1-8423-f57b6cb41f3b
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      Points                  [75, 0]
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   2e1ea7f2-ffba-4219-8240-613a8d89d403
+    }
+    Line {
+      SrcBlock                "SG"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   f3a7f2dc-4874-40e3-9566-04ab9e4c9f6d
+    }
+    Annotation {
+      Position                [481, 39]
+      Text                    "WinPAC 8x41 / ViewPAC"
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      #GUID                   81d880c7-1294-4e89-a489-af99d7928ef4
+    }
+  }
+}

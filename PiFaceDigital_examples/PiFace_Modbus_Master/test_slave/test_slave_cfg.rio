@@ -1,0 +1,45 @@
+Modbus {
+  Name                    ""
+  BaudRate                19200
+  Parity                  0
+  SpaceTime               2
+  Timeout                 1000
+  Flags                   12
+  Gap                     30000
+  #GUID                   29165b6f-601e-449a-a8fe-bcf91290d7eb
+  Item {
+    Name                    coil0
+    SlaveAdr                -1
+    RegisterAdr             0
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    coil1
+    SlaveAdr                -1
+    RegisterAdr             1
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    coil2
+    SlaveAdr                -1
+    RegisterAdr             2
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    coil3
+    SlaveAdr                -1
+    RegisterAdr             3
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    coil4_7
+    SlaveAdr                -1
+    RegisterAdr             4
+    Type                    0x00000201
+    Count                   4
+  }
+}

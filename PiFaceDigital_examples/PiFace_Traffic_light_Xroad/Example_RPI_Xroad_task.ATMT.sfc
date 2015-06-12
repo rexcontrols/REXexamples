@@ -1,0 +1,2038 @@
+<?xml version="1.0"?>
+<ChartData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <NSteps>16</NSteps>
+  <NTrasitions>64</NTrasitions>
+  <TargetDevice>REX_ATMT</TargetDevice>
+  <Name>Example_RPI_Xroad_task.ATMT</Name>
+  <ShapeList>
+    <Shape xsi:type="Step">
+      <Tag>Q6</Tag>
+      <BackColor>Orange</BackColor>
+      <GrabPoint>
+        <X>-10</X>
+        <Y>24</Y>
+      </GrabPoint>
+      <Location>
+        <X>525</X>
+        <Y>595</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>50</Height>
+      </Size>
+      <DependentShape />
+      <Hash>135</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>592</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>136</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-50</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>645</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>137</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <Name>READY - SIDE</Name>
+      <TimeOut>2</TimeOut>
+      <ShowTimeOut>false</ShowTimeOut>
+    </Shape>
+    <Shape xsi:type="Step">
+      <Tag>Q2</Tag>
+      <BackColor>Orange</BackColor>
+      <GrabPoint>
+        <X>52</X>
+        <Y>23</Y>
+      </GrabPoint>
+      <Location>
+        <X>670</X>
+        <Y>595</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>50</Height>
+      </Size>
+      <DependentShape />
+      <Hash>30</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>592</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>31</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-50</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>645</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>32</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <Name>READY - MAIN</Name>
+      <TimeOut>2</TimeOut>
+      <ShowTimeOut>false</ShowTimeOut>
+    </Shape>
+    <Shape xsi:type="Step">
+      <Tag>Q8</Tag>
+      <BackColor>Orange</BackColor>
+      <GrabPoint>
+        <X>29</X>
+        <Y>41</Y>
+      </GrabPoint>
+      <Location>
+        <X>525</X>
+        <Y>825</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>50</Height>
+      </Size>
+      <DependentShape />
+      <Hash>132</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>822</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>133</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-50</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>875</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>134</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <Name>YELLOW - SIDE</Name>
+      <TimeOut>2</TimeOut>
+      <ShowTimeOut>false</ShowTimeOut>
+    </Shape>
+    <Shape xsi:type="Step">
+      <Tag>Q7</Tag>
+      <BackColor>LawnGreen</BackColor>
+      <GrabPoint>
+        <X>29</X>
+        <Y>31</Y>
+      </GrabPoint>
+      <Location>
+        <X>525</X>
+        <Y>710</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>50</Height>
+      </Size>
+      <DependentShape />
+      <Hash>129</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>707</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>130</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-50</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>760</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>131</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <Name>GREEN - SIDE</Name>
+      <TimeOut>10</TimeOut>
+      <ShowTimeOut>false</ShowTimeOut>
+    </Shape>
+    <Shape xsi:type="Step">
+      <Tag>Q1</Tag>
+      <BackColor>Red</BackColor>
+      <GrabPoint>
+        <X>30</X>
+        <Y>5</Y>
+      </GrabPoint>
+      <Location>
+        <X>600</X>
+        <Y>460</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>50</Height>
+      </Size>
+      <DependentShape />
+      <Hash>4</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>457</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>5</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-50</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>510</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>6</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <Name>RED ALL</Name>
+      <TimeOut>3</TimeOut>
+      <ShowTimeOut>false</ShowTimeOut>
+    </Shape>
+    <Shape xsi:type="Step">
+      <Tag>Q3</Tag>
+      <BackColor>LawnGreen</BackColor>
+      <GrabPoint>
+        <X>29</X>
+        <Y>27</Y>
+      </GrabPoint>
+      <Location>
+        <X>670</X>
+        <Y>710</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>50</Height>
+      </Size>
+      <DependentShape />
+      <Hash>45</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>707</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>46</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-50</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>760</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>47</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <Name>GREEN - MAIN</Name>
+      <TimeOut>15</TimeOut>
+      <ShowTimeOut>false</ShowTimeOut>
+    </Shape>
+    <Shape xsi:type="Step">
+      <Tag>Q4</Tag>
+      <BackColor>Orange</BackColor>
+      <GrabPoint>
+        <X>15</X>
+        <Y>28</Y>
+      </GrabPoint>
+      <Location>
+        <X>670</X>
+        <Y>825</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>50</Height>
+      </Size>
+      <DependentShape />
+      <Hash>113</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>822</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>114</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-50</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>875</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>115</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <Name>YELLOW - MAIN</Name>
+      <TimeOut>2</TimeOut>
+      <ShowTimeOut>false</ShowTimeOut>
+    </Shape>
+    <Shape xsi:type="Step">
+      <Tag>Q0</Tag>
+      <GrabPoint>
+        <X>23</X>
+        <Y>32</Y>
+      </GrabPoint>
+      <Location>
+        <X>600</X>
+        <Y>290</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>50</Height>
+      </Size>
+      <DependentShape />
+      <Hash>1</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>287</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>2</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-50</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>340</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>3</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <Name>Init</Name>
+      <InitialBlock>true</InitialBlock>
+      <ShowTimeOut>false</ShowTimeOut>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C3</Tag>
+      <GrabPoint>
+        <X>4</X>
+        <Y>-167</Y>
+      </GrabPoint>
+      <Location>
+        <X>670</X>
+        <Y>785</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C3</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>724</X>
+            <Y>787</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>108</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>782</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>109</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>800</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>110</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C2</Tag>
+      <GrabPoint>
+        <X>4</X>
+        <Y>-57</Y>
+      </GrabPoint>
+      <Location>
+        <X>670</X>
+        <Y>675</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C2</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>724</X>
+            <Y>677</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>101</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>672</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>102</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>690</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>103</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C1</Tag>
+      <GrabPoint>
+        <X>12</X>
+        <Y>5</Y>
+      </GrabPoint>
+      <Location>
+        <X>670</X>
+        <Y>565</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C1</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>724</X>
+            <Y>567</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>42</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>562</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>43</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>580</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>44</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="DivS">
+      <Tag>DivS0</Tag>
+      <GrabPoint>
+        <X>31</X>
+        <Y>26</Y>
+      </GrabPoint>
+      <Location>
+        <X>600</X>
+        <Y>535</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>5</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>DivS0</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-104</X>
+            <Y>2</Y>
+          </GrabPoint>
+          <Location>
+            <X>704</X>
+            <Y>532</Y>
+          </Location>
+          <Size>
+            <Width>36</Width>
+            <Height>12</Height>
+          </Size>
+          <DependentShape />
+          <Hash>75</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>67</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>532</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>68</Hash>
+          <PinType>INPUT</PinType>
+          <Floating>true</Floating>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-2</X>
+            <Y>-5</Y>
+          </GrabPoint>
+          <Location>
+            <X>602</X>
+            <Y>540</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape>
+            <Shape xsi:type="Label">
+              <Tag>1</Tag>
+              <BackColor>Transparent</BackColor>
+              <GrabPoint>
+                <X>-5</X>
+                <Y>0</Y>
+              </GrabPoint>
+              <Location>
+                <X>607</X>
+                <Y>540</Y>
+              </Location>
+              <Size>
+                <Width>13</Width>
+                <Height>12</Height>
+              </Size>
+              <DependentShape />
+              <Hash>70</Hash>
+              <FixTextSize>true</FixTextSize>
+            </Shape>
+          </DependentShape>
+          <Hash>69</Hash>
+          <PinType>OUTPUT</PinType>
+          <Floating>true</Floating>
+          <EndPD />
+        </Shape>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-42</X>
+            <Y>-5</Y>
+          </GrabPoint>
+          <Location>
+            <X>642</X>
+            <Y>540</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape>
+            <Shape xsi:type="Label">
+              <Tag>2</Tag>
+              <BackColor>Transparent</BackColor>
+              <GrabPoint>
+                <X>-5</X>
+                <Y>0</Y>
+              </GrabPoint>
+              <Location>
+                <X>647</X>
+                <Y>540</Y>
+              </Location>
+              <Size>
+                <Width>13</Width>
+                <Height>12</Height>
+              </Size>
+              <DependentShape />
+              <Hash>72</Hash>
+              <FixTextSize>true</FixTextSize>
+            </Shape>
+          </DependentShape>
+          <Hash>71</Hash>
+          <PinType>OUTPUT</PinType>
+          <Floating>true</Floating>
+          <Priority>2</Priority>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <HideLabel>true</HideLabel>
+      <OutputsCount>2</OutputsCount>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C0</Tag>
+      <GrabPoint>
+        <X>38</X>
+        <Y>8</Y>
+      </GrabPoint>
+      <Location>
+        <X>600</X>
+        <Y>370</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C0</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>654</X>
+            <Y>372</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>7</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>367</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>8</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>385</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>9</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>20</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>3</PathEnds>
+      <PathEnds>8</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>625</X>
+          <Y>345</Y>
+        </PointF>
+        <PointF>
+          <X>625</X>
+          <Y>365</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="KonvS">
+      <Tag>ConvS0</Tag>
+      <GrabPoint>
+        <X>50</X>
+        <Y>2</Y>
+      </GrabPoint>
+      <Location>
+        <X>575</X>
+        <Y>420</Y>
+      </Location>
+      <Size>
+        <Width>100</Width>
+        <Height>5</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>ConvS0</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-104</X>
+            <Y>2</Y>
+          </GrabPoint>
+          <Location>
+            <X>679</X>
+            <Y>418</Y>
+          </Location>
+          <Size>
+            <Width>45</Width>
+            <Height>12</Height>
+          </Size>
+          <DependentShape />
+          <Hash>25</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>20</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-7</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>582</X>
+            <Y>417</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>22</Hash>
+          <PinType>INPUT</PinType>
+          <Floating>true</Floating>
+          <EndPD />
+        </Shape>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-47</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>417</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>23</Hash>
+          <PinType>INPUT</PinType>
+          <Floating>true</Floating>
+          <EndPD />
+        </Shape>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-87</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>662</X>
+            <Y>417</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>24</Hash>
+          <PinType>INPUT</PinType>
+          <Floating>true</Floating>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-47</X>
+            <Y>-5</Y>
+          </GrabPoint>
+          <Location>
+            <X>622</X>
+            <Y>425</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>21</Hash>
+          <PinType>OUTPUT</PinType>
+          <Floating>true</Floating>
+          <EndPD />
+        </Shape>
+      </Outputs>
+      <HideLabel>true</HideLabel>
+      <InputsCount>3</InputsCount>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>25</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>9</PathEnds>
+      <PathEnds>23</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>625</X>
+          <Y>390</Y>
+        </PointF>
+        <PointF>
+          <X>625</X>
+          <Y>415</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>25</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>21</PathEnds>
+      <PathEnds>5</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>625</X>
+          <Y>430</Y>
+        </PointF>
+        <PointF>
+          <X>625</X>
+          <Y>455</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>6</PathEnds>
+      <PathEnds>68</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>625</X>
+          <Y>515</Y>
+        </PointF>
+        <PointF>
+          <X>625</X>
+          <Y>530</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C5</Tag>
+      <GrabPoint>
+        <X>70</X>
+        <Y>8</Y>
+      </GrabPoint>
+      <Location>
+        <X>525</X>
+        <Y>565</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C5</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>579</X>
+            <Y>567</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>83</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>562</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>84</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>580</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>85</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>55</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>69</PathEnds>
+      <PathEnds>84</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>605</X>
+          <Y>545</Y>
+        </PointF>
+        <PointF>
+          <X>605</X>
+          <Y>560</Y>
+        </PointF>
+        <PointF>
+          <X>550</X>
+          <Y>560</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>71</PathEnds>
+      <PathEnds>43</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>645</X>
+          <Y>545</Y>
+        </PointF>
+        <PointF>
+          <X>645</X>
+          <Y>560</Y>
+        </PointF>
+        <PointF>
+          <X>695</X>
+          <Y>560</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>5</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>44</PathEnds>
+      <PathEnds>31</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>695</X>
+          <Y>585</Y>
+        </PointF>
+        <PointF>
+          <X>695</X>
+          <Y>590</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>674</X>
+        <Y>618</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>10</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>103</PathEnds>
+      <PathEnds>46</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>695</X>
+          <Y>695</Y>
+        </PointF>
+        <PointF>
+          <X>695</X>
+          <Y>705</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>674</X>
+        <Y>618</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>47</PathEnds>
+      <PathEnds>109</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>695</X>
+          <Y>765</Y>
+        </PointF>
+        <PointF>
+          <X>695</X>
+          <Y>780</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>674</X>
+        <Y>618</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>110</PathEnds>
+      <PathEnds>114</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>695</X>
+          <Y>805</Y>
+        </PointF>
+        <PointF>
+          <X>695</X>
+          <Y>820</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C4</Tag>
+      <GrabPoint>
+        <X>4</X>
+        <Y>-287</Y>
+      </GrabPoint>
+      <Location>
+        <X>670</X>
+        <Y>905</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C4</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>724</X>
+            <Y>907</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>118</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>902</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>119</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>692</X>
+            <Y>920</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>120</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>674</X>
+        <Y>618</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>20</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>115</PathEnds>
+      <PathEnds>119</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>695</X>
+          <Y>880</Y>
+        </PointF>
+        <PointF>
+          <X>695</X>
+          <Y>900</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>674</X>
+        <Y>618</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>110</Width>
+        <Height>565</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>120</PathEnds>
+      <PathEnds>24</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>695</X>
+          <Y>925</Y>
+        </PointF>
+        <PointF>
+          <X>695</X>
+          <Y>965</Y>
+        </PointF>
+        <PointF>
+          <X>775</X>
+          <Y>965</Y>
+        </PointF>
+        <PointF>
+          <X>775</X>
+          <Y>400</Y>
+        </PointF>
+        <PointF>
+          <X>665</X>
+          <Y>400</Y>
+        </PointF>
+        <PointF>
+          <X>665</X>
+          <Y>415</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C7</Tag>
+      <GrabPoint>
+        <X>68</X>
+        <Y>-167</Y>
+      </GrabPoint>
+      <Location>
+        <X>525</X>
+        <Y>785</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C7</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>579</X>
+            <Y>787</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>138</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>782</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>139</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>800</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>140</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C6</Tag>
+      <GrabPoint>
+        <X>68</X>
+        <Y>-57</Y>
+      </GrabPoint>
+      <Location>
+        <X>525</X>
+        <Y>675</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C6</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>579</X>
+            <Y>677</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>141</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>672</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>142</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>690</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>143</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>NaN</X>
+        <Y>NaN</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>20</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>137</PathEnds>
+      <PathEnds>142</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>550</X>
+          <Y>650</Y>
+        </PointF>
+        <PointF>
+          <X>550</X>
+          <Y>670</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>NaN</X>
+        <Y>NaN</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>10</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>143</PathEnds>
+      <PathEnds>130</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>550</X>
+          <Y>695</Y>
+        </PointF>
+        <PointF>
+          <X>550</X>
+          <Y>705</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>NaN</X>
+        <Y>NaN</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>131</PathEnds>
+      <PathEnds>139</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>550</X>
+          <Y>765</Y>
+        </PointF>
+        <PointF>
+          <X>550</X>
+          <Y>780</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>NaN</X>
+        <Y>NaN</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>140</PathEnds>
+      <PathEnds>133</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>550</X>
+          <Y>805</Y>
+        </PointF>
+        <PointF>
+          <X>550</X>
+          <Y>820</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Transition">
+      <Tag>C8</Tag>
+      <GrabPoint>
+        <X>68</X>
+        <Y>-287</Y>
+      </GrabPoint>
+      <Location>
+        <X>525</X>
+        <Y>905</Y>
+      </Location>
+      <Size>
+        <Width>50</Width>
+        <Height>15</Height>
+      </Size>
+      <DependentShape>
+        <Shape xsi:type="Label">
+          <Tag>C8</Tag>
+          <BackColor>Transparent</BackColor>
+          <GrabPoint>
+            <X>-54</X>
+            <Y>-2</Y>
+          </GrabPoint>
+          <Location>
+            <X>579</X>
+            <Y>907</Y>
+          </Location>
+          <Size>
+            <Width>23</Width>
+            <Height>13</Height>
+          </Size>
+          <DependentShape />
+          <Hash>10</Hash>
+        </Shape>
+      </DependentShape>
+      <Hash>144</Hash>
+      <Inputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>3</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>902</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>145</Hash>
+          <PinType>INPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Inputs>
+      <Outputs>
+        <Shape xsi:type="Pin">
+          <GrabPoint>
+            <X>-22</X>
+            <Y>-15</Y>
+          </GrabPoint>
+          <Location>
+            <X>547</X>
+            <Y>920</Y>
+          </Location>
+          <Size>
+            <Width>6</Width>
+            <Height>3</Height>
+          </Size>
+          <DependentShape />
+          <Hash>146</Hash>
+          <PinType>OUTPUT</PinType>
+          <EndPD />
+        </Shape>
+      </Outputs>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>NaN</X>
+        <Y>NaN</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>20</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>134</PathEnds>
+      <PathEnds>145</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>550</X>
+          <Y>880</Y>
+        </PointF>
+        <PointF>
+          <X>550</X>
+          <Y>900</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>5</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>85</PathEnds>
+      <PathEnds>136</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>550</X>
+          <Y>585</Y>
+        </PointF>
+        <PointF>
+          <X>550</X>
+          <Y>590</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>115</Width>
+        <Height>565</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>146</PathEnds>
+      <PathEnds>22</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>550</X>
+          <Y>925</Y>
+        </PointF>
+        <PointF>
+          <X>550</X>
+          <Y>965</Y>
+        </PointF>
+        <PointF>
+          <X>470</X>
+          <Y>965</Y>
+        </PointF>
+        <PointF>
+          <X>470</X>
+          <Y>400</Y>
+        </PointF>
+        <PointF>
+          <X>585</X>
+          <Y>400</Y>
+        </PointF>
+        <PointF>
+          <X>585</X>
+          <Y>415</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+    <Shape xsi:type="Path">
+      <GrabPoint>
+        <X>0</X>
+        <Y>0</Y>
+      </GrabPoint>
+      <Location>
+        <X>-2147483648</X>
+        <Y>-2147483648</Y>
+      </Location>
+      <Size>
+        <Width>0</Width>
+        <Height>20</Height>
+      </Size>
+      <DependentShape />
+      <Hash>0</Hash>
+      <PathEnds>32</PathEnds>
+      <PathEnds>102</PathEnds>
+      <XML_Vertexes>
+        <PointF>
+          <X>695</X>
+          <Y>650</Y>
+        </PointF>
+        <PointF>
+          <X>695</X>
+          <Y>670</Y>
+        </PointF>
+      </XML_Vertexes>
+    </Shape>
+  </ShapeList>
+</ChartData>

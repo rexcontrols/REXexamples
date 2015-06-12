@@ -1,0 +1,88 @@
+Modbus {
+  Name                    ""
+  BaudRate                19200
+  Parity                  0
+  SpaceTime               2
+  Timeout                 1000
+  Flags                   8
+  Gap                     30000
+  #GUID                   96d43ba9-e41a-4fd3-a96d-da136bf75a61
+  Slave {
+    Name                    "RPi_PiFace"
+    IPaddress               192.168.1.100
+    Subaddress              255
+    SlaveID                 0
+    MaxRequest              16
+    TCPport                 502
+  }
+  Item {
+    Name                    PiFaceDO0
+    SlaveAdr                0
+    RegisterAdr             0
+    Type                    0x00000101
+    Count                   1
+  }
+  Item {
+    Name                    PiFaceDO1
+    SlaveAdr                0
+    RegisterAdr             1
+    Type                    0x00000101
+    Count                   1
+  }
+  Item {
+    Name                    PiFaceDO2
+    SlaveAdr                0
+    RegisterAdr             2
+    Type                    0x00000101
+    Count                   1
+  }
+  Item {
+    Name                    PiFaceDO3
+    SlaveAdr                0
+    RegisterAdr             3
+    Type                    0x00000101
+    Count                   1
+  }
+  Item {
+    Name                    PiFaceDO4_7
+    SlaveAdr                0
+    RegisterAdr             4
+    Type                    0x00000101
+    Count                   4
+  }
+  Item {
+    Name                    PiFaceDI0
+    SlaveAdr                0
+    RegisterAdr             0
+    Type                    0x00000200
+    Count                   1
+  }
+  Item {
+    Name                    PiFaceDI1
+    SlaveAdr                0
+    RegisterAdr             1
+    Type                    0x00000200
+    Count                   1
+  }
+  Item {
+    Name                    PiFaceDI2
+    SlaveAdr                0
+    RegisterAdr             2
+    Type                    0x00000200
+    Count                   1
+  }
+  Item {
+    Name                    PiFaceDI3
+    SlaveAdr                0
+    RegisterAdr             3
+    Type                    0x00000200
+    Count                   1
+  }
+  Item {
+    Name                    PiFaceDI4_7
+    SlaveAdr                0
+    RegisterAdr             4
+    Type                    0x00000200
+    Count                   4
+  }
+}

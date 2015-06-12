@@ -1,0 +1,15 @@
+ODBC { 
+  Connection "DRIVER=MySQL;SERVER=147.228.47.178;PORT=3306;DATABASE=rexdata;UID=rexdb;PWD=rex.dbaccess;" 
+  Group { 
+    Mode 130 
+    SQL "sqltest" 
+    Period 5 
+    Items "teplota1,tlak,vykon,teplota2" 
+  } 
+  Group { 
+    Mode 1 
+    SQL "sqltest" 
+    Period 1 
+    Items "Time" 
+  } 
+}

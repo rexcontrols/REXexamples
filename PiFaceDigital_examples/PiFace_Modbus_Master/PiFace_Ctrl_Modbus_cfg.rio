@@ -1,0 +1,25 @@
+Modbus {
+  Name                    "Slave"
+  BaudRate                19200
+  Parity                  -1
+  SpaceTime               2
+  Timeout                 1000
+  Flags                   8
+  Gap                     30000
+  #GUID                   80a5e8c2-0751-4a76-898d-0dc4dec6d78f
+  Slave {
+    Name                    "MBslave"
+    IPaddress               192.168.1.55
+    Subaddress              255
+    SlaveID                 0
+    MaxRequest              16
+    TCPport                 502
+  }
+  Item {
+    Name                    ControlSignals
+    SlaveAdr                0
+    RegisterAdr             0
+    Type                    0x00000101
+    Count                   8
+  }
+}

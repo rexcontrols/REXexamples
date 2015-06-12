@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!-- REX HMI Template version=0.4.197 -->
+
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+        <!-- Disable caching -->
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        
+        
+        <link rel="shortcut icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.ico">
+        <link rel="icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.png">
+
+        <title><!-- %Title% --></title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/metro-theme/jquery-ui-1.10.2.custom.css">
+        <link rel="stylesheet" type="text/css" href="css/metro-theme/jquery-ui-timepicker-addon.min.css">
+        <link rel="stylesheet" type="text/css" href="css/rex-hmi.min.css">
+
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/Globalize/01-globalize.js"></script>
+        <script type="text/javascript" src="js/Globalize/02-globalize.culture.cs.js"></script>
+        <script type="text/javascript" src="js/jQuery/01-jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/02-jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/03-jquery-disabler.js"></script>
+        <script type="text/javascript" src="js/jQuery/04-jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/05-jquery-ui-timepicker-addon.min.js"></script>
+
+        <script type="text/javascript" src="js/rex-hmi.min.js?version=0.4.196"></script>
+
+
+        <script type='text/javascript'>
+            $(document).ready(function() {
+                var inputs = {
+                    column:1,
+                    title:'Inputs',
+                    rows:[
+                            {alias: 'input0', desc: 'In0 (Push button)', cstring: 'Web_Controlled_PiFace_task.RPI__PFIU:val0', type: 'DR', true_label: 'PRESSED', false_label: 'RELEASED', reverse_meaning: true},
+                            {alias: 'input1', desc: 'In1 (Switch)', cstring: 'Web_Controlled_PiFace_task.RPI__PFIU:val1', type: 'DR', true_label: 'PRESSED', false_label: 'RELEASED', reverse_meaning: true},
+                            {alias: 'input2', desc: 'In2 (Blink)', cstring: 'Web_Controlled_PiFace_task.RPI__PFIU:val2', type: 'DR', true_label: 'PRESSED', false_label: 'RELEASED', reverse_meaning: true},
+                            {alias: 'input3', desc: 'In3 (Timer)', cstring: 'Web_Controlled_PiFace_task.RPI__PFIU:val3', type: 'DR', true_label: 'PRESSED', false_label: 'RELEASED', reverse_meaning: true},
+                        ]
+                };
+                REX.WebBuDi.addSection(inputs);
+
+                var timer = {
+                    column:1,
+                    title:'Timer',
+                    background_color: '#78ADD3',
+                    rows:[
+                            {alias: 'delay', desc: 'Timer delay [s]', cstring: 'Web_Controlled_PiFace_task.TIMER_:pt', type: 'AW'},
+                            {alias: 'mp', desc: 'Timer start', label: 'START', cstring: 'Web_Controlled_PiFace_task.MP_START:BSTATE', type: 'MP'},
+                            {alias: 'et', desc: 'Elapsed time', cstring: 'Web_Controlled_PiFace_task.TIMER_:et', type: 'AR'},
+                            {alias: 'rt', desc: 'Remaining time', cstring: 'Web_Controlled_PiFace_task.SUB_remaining:y', type: 'AR'},                            
+                        ]
+                };
+                REX.WebBuDi.addSection(timer);
+
+                var outputs = {
+                    column:2,
+                    title:'Outputs',
+                    rows:[
+                        {alias: 'output0', desc: 'Out0 (Push button)', cstring: 'Web_Controlled_PiFace_task.RPI__PFO:val0', type: 'DR', label_true: 'ACTIVE', label_false: 'OFF'},
+                        {alias: 'output1', desc: 'Out1 (Switch)', cstring: 'Web_Controlled_PiFace_task.RPI__PFO:val1', type: 'DR', label_true: 'ACTIVE', label_false: 'OFF'},
+                        {alias: 'output2', desc: 'Out2 (Blink)', cstring: 'Web_Controlled_PiFace_task.RPI__PFO:val2', type: 'DR', label_true: 'ACTIVE', label_false: 'OFF'},
+                        {alias: 'output3', desc: 'Out3 (Timer)', cstring: 'Web_Controlled_PiFace_task.RPI__PFO:val3', type: 'DR', label_true: 'ACTIVE', label_false: 'OFF'},
+                        {alias: 'output4', desc: 'Out4', cstring: 'Web_Controlled_PiFace_task.CNB_OUT4:YCN', type: 'DW', label_true: 'ACTIVE', label_false: 'OFF', color_false: '#FF7777'},
+                        {alias: 'output5', desc: 'Out5', cstring: 'Web_Controlled_PiFace_task.CNB_OUT5:YCN', type: 'DW', label_true: 'ACTIVE', label_false: 'OFF', color_false: '#FF7777'},
+                        {alias: 'output6', desc: 'Out6', cstring: 'Web_Controlled_PiFace_task.CNB_OUT6:YCN', type: 'DW', label_true: 'ACTIVE', label_false: 'OFF', color_false: '#FF7777'},
+                        {alias: 'output7', desc: 'Out7', cstring: 'Web_Controlled_PiFace_task.CNB_OUT7:YCN', type: 'DW', label_true: 'ACTIVE', label_false: 'OFF', color_false: '#FF7777'},
+                        {type: 'ES'},
+                    ]
+                };
+                REX.WebBuDi.addSection(outputs);
+                
+                // Set WS server address (use only if the websocket server 
+                // is NOT running on the same machine as the webserver providing this page)
+                // REX.WebBuDi.setWsIP('127.0.0.1:8008/rex');
+
+                // Set REX target device address (use only if the websocket 
+                // server is NOT running on the same machine as the RexCore runtime module)
+                // REX.WebBuDi.setTargetIP('127.0.0.1');
+
+                // Set refresh rate (Default: 100 ms)
+                // REX.WebBuDi.setRefreshRate(100);
+
+                // Change title of the page
+                REX.WebBuDi.setTitle('Web Controlled PiFace Digital');
+
+                // auto connect
+                REX.WebBuDi.connect();
+            });
+    </script>
+
+    </head>
+    <body>
+        <div id="header">                    
+            <img id="rex-logo" src="images/rex_logo_white.png" alt="REX Controls" />
+            <button id='connect-btn'>Connect</button>
+            <div id='menu-btn' class="no-text-select"><img src="images/menu-icon.svg" alt="&#9776;"></div>
+            <div id="current-time"><h1>XX:XX:XX</h1></div>            
+            <div id="header-title">                        
+                <h1><!-- %Header-Title% --></h1>
+            </div>
+        </div>        
+        <div id="menu" style="display: none;">
+            <div id="log"></div>
+        </div>
+
+        <div id="content">
+            <!-- BEGIN OF CUSTOM CONTENT -->
+
+            <!-- END OF CUSTOM CONTENT -->
+        </div>
+
+        <div id="rex-chart" style="display:none;">
+            <!-- Size of the trend and viewbox must have the same size to achieve proper autoscale capabilities -->
+            <svg id="rex-charts" viewBox="0 0 1000 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+
+    </body>
+</html>
+

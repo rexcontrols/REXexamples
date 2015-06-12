@@ -1,0 +1,159 @@
+Model {
+  Name                    "mysql_task"
+  Version                 3.00
+  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "mysql_task"
+    Location                [206, 33, 929, 514]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "CNR"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [485, 123, 505, 137]
+      SourceBlock             "mathlib/CNR"
+      ycn                     1
+      #GUID                   75e32aa0-19c8-417f-92c1-ad1192045b92
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [485, 63, 505, 77]
+      SourceBlock             "mathlib/CNR"
+      ycn                     3
+      #GUID                   9937f906-3f94-44d3-b34b-6dd0e9cc3e24
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [590, 33, 680, 47]
+      ShowName                off
+      GotoTag                 "DB__teplota1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a2a215a5-e794-41d6-a744-4df1e11998d9
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [590, 63, 680, 77]
+      ShowName                off
+      GotoTag                 "DB__tlak"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f2b76968-c04a-4888-a18a-de5053c66988
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [590, 93, 680, 107]
+      ShowName                off
+      GotoTag                 "DB__vykon"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   38daa646-63ee-4f83-a9a5-ae9a99682412
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [590, 123, 680, 137]
+      ShowName                off
+      GotoTag                 "DB__teplota2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   8cb8bfc1-a1d1-40d1-adb0-c5eb6029b635
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [485, 93, 500, 107]
+      SourceBlock             "genlib/MP"
+      pwidth                  15
+      BSTATE                  off
+      RPTF                    off
+      #GUID                   b6dd4fb2-27b3-4052-8ca7-4d8281a1bf46
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [485, 33, 510, 47]
+      SourceBlock             "genlib/SG"
+      isig                    "1: SINE"
+      amp                     100
+      freq                    "0.01"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      #GUID                   25b4c2a6-2b9c-4a3f-9543-fdcb99e63d82
+    }
+    Line {
+      SrcBlock                "CNR"
+      SrcPort                 1
+      DstBlock                "Goto3"
+      DstPort                 1
+      #GUID                   7a694c66-bc8b-4ba2-8cc7-43693b6fce93
+    }
+    Line {
+      SrcBlock                "CNR1"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   f6d75666-4f1a-45fc-84e5-db9946e788a2
+    }
+    Line {
+      SrcBlock                "MP"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   26922878-b05a-4335-89d6-89e155d505c7
+    }
+    Line {
+      SrcBlock                "SG"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   3443823e-d2c5-4ef2-9f9c-c4a08c0d8df6
+    }
+    Annotation {
+      Position                [640, 15]
+      Text                    "Writing data to database"
+      #GUID                   5ff68ddd-5f5a-4590-9bd4-cf91c838f0a4
+    }
+  }
+}

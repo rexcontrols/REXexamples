@@ -1,0 +1,122 @@
+Modbus {
+  Name                    "Slave"
+  BaudRate                19200
+  Parity                  -1
+  SpaceTime               2
+  Timeout                 1000
+  Flags                   12
+  Gap                     30000
+  #GUID                   0405d119-d870-45e7-8c9a-630ca85e2c07
+  Item {
+    Name                    Out0
+    SlaveAdr                -1
+    RegisterAdr             0
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    Out1
+    SlaveAdr                -1
+    RegisterAdr             1
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    Out2
+    SlaveAdr                -1
+    RegisterAdr             2
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    Out3
+    SlaveAdr                -1
+    RegisterAdr             3
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    Out4
+    SlaveAdr                -1
+    RegisterAdr             4
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    Out5
+    SlaveAdr                -1
+    RegisterAdr             5
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    Out6
+    SlaveAdr                -1
+    RegisterAdr             6
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    Out7
+    SlaveAdr                -1
+    RegisterAdr             7
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    In0
+    SlaveAdr                -1
+    RegisterAdr             0
+    Type                    0x00000100
+    Count                   1
+  }
+  Item {
+    Name                    In1
+    SlaveAdr                -1
+    RegisterAdr             1
+    Type                    0x00000100
+    Count                   1
+  }
+  Item {
+    Name                    In2
+    SlaveAdr                -1
+    RegisterAdr             2
+    Type                    0x00000100
+    Count                   1
+  }
+  Item {
+    Name                    In3
+    SlaveAdr                -1
+    RegisterAdr             3
+    Type                    0x00000100
+    Count                   1
+  }
+  Item {
+    Name                    In4
+    SlaveAdr                -1
+    RegisterAdr             4
+    Type                    0x00000100
+    Count                   1
+  }
+  Item {
+    Name                    In5
+    SlaveAdr                -1
+    RegisterAdr             5
+    Type                    0x00000100
+    Count                   1
+  }
+  Item {
+    Name                    In6
+    SlaveAdr                -1
+    RegisterAdr             6
+    Type                    0x00000100
+    Count                   1
+  }
+  Item {
+    Name                    In7
+    SlaveAdr                -1
+    RegisterAdr             7
+    Type                    0x00000100
+    Count                   1
+  }
+}

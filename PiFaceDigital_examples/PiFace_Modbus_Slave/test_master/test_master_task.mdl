@@ -1,0 +1,333 @@
+Model {
+  Name                    "test_master_task"
+  Version                 3.00
+  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "test_master_task"
+    Location                [270, 29, 768, 489]
+    #GUID                   f4ddb680-563b-4fa7-9a5d-b4f1c1fa7573
+    Block {
+      BlockType               Reference
+      Name                    "ANDOCT"
+      Ports                   [8, 2, 0, 0, 0]
+      Position                [190, 41, 225, 129]
+      SourceBlock             "logiclib/ANDOCT"
+      nl                      0
+      #GUID                   a0796e27-fb11-4f92-a62b-c0e060b7477f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [290, 128, 315, 142]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      #GUID                   6da3f5e8-327b-4f72-a381-91c15024d99c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [290, 168, 315, 182]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      #GUID                   c6280e76-7724-4553-906c-f4c13e4e91c1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [290, 218, 315, 232]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      #GUID                   09886cbd-a7a9-4354-a555-c7c4c4097ebc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [290, 253, 315, 267]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      #GUID                   1246ff50-e599-419c-b922-0793f3ebbdea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [290, 293, 315, 307]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      #GUID                   21604b7f-af0d-48ba-ad69-2789580c45b1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [290, 333, 315, 347]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      #GUID                   6226c5af-5f00-4243-8d64-9dcedd58ab7e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_relay0"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [290, 48, 315, 62]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      #GUID                   aea75916-4744-4901-b435-7bc8baa75380
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_relay1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [290, 88, 315, 102]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      #GUID                   c36af375-60b0-4c38-86c5-bc517966880b
+    }
+    Block {
+      BlockType               From
+      Name                    "From_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 43, 155, 57]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__PiFaceDI0"
+      BackgroundColor         "yellow"
+      #GUID                   007f7eee-129b-4cb7-85a7-1415c71aaa30
+    }
+    Block {
+      BlockType               From
+      Name                    "From_2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 63, 155, 77]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__PiFaceDI1"
+      BackgroundColor         "yellow"
+      #GUID                   409099a1-bdff-4f59-8d1a-d8a25045818a
+    }
+    Block {
+      BlockType               From
+      Name                    "From_3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 83, 155, 97]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__PiFaceDI2"
+      BackgroundColor         "yellow"
+      #GUID                   e96b0401-1ecc-4ee2-a6fe-9ddca9e4fa5e
+    }
+    Block {
+      BlockType               From
+      Name                    "From_4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 103, 155, 117]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__PiFaceDI3"
+      BackgroundColor         "yellow"
+      #GUID                   30b28f5c-1cc0-405e-9d67-39ac5724af7d
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [355, 48, 475, 62]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__PiFaceDO0"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   94138cc4-5b19-426d-984e-64118a2867a6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [355, 88, 475, 102]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__PiFaceDO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   555f3591-d8a9-4660-b2a5-b7c4eec70109
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [355, 128, 475, 142]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__PiFaceDO2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   1636534a-7c09-4e18-a41e-be50e7d1fc82
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [355, 168, 475, 182]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__PiFaceDO3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   cd7b72b9-b511-4509-86d0-6d1f109abdfd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__PiFaceDI4_7"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [65, 152, 95, 198]
+      SourceBlock             "inoutlib/INQUAD"
+      BackgroundColor         "yellow"
+      #GUID                   3dcefe7b-8148-4cd5-beee-d064cde91fca
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__PiFaceDO4_7"
+      Ports                   [4, 0, 0, 0, 0]
+      Position                [405, 217, 435, 263]
+      SourceBlock             "inoutlib/OUTQUAD"
+      BackgroundColor         "lightBlue"
+      #GUID                   9c4400f5-7db1-4f94-b9ab-14b029db3527
+    }
+    Line {
+      SrcBlock                "CNB_DO2"
+      SrcPort                 1
+      DstBlock                "Goto_3"
+      DstPort                 1
+      #GUID                   bf59ebe7-c637-4964-b78b-1e3fbb2b83f6
+    }
+    Line {
+      SrcBlock                "CNB_DO3"
+      SrcPort                 1
+      DstBlock                "Goto_4"
+      DstPort                 1
+      #GUID                   5ad33aa9-2ea8-44cf-a211-e6e0322ed9e2
+    }
+    Line {
+      SrcBlock                "CNB_DO4"
+      SrcPort                 1
+      DstBlock                "MTM__PiFaceDO4_7"
+      DstPort                 1
+      #GUID                   4517034a-30df-4671-af0a-78570c646527
+    }
+    Line {
+      SrcBlock                "CNB_DO5"
+      SrcPort                 1
+      Points                  [15, 0; 0, -25]
+      DstBlock                "MTM__PiFaceDO4_7"
+      DstPort                 2
+      #GUID                   825b31d5-1ddd-4329-8ae2-868f05f7e795
+    }
+    Line {
+      SrcBlock                "CNB_DO6"
+      SrcPort                 1
+      Points                  [25, 0; 0, -55]
+      DstBlock                "MTM__PiFaceDO4_7"
+      DstPort                 3
+      #GUID                   533d3276-ec4c-43db-9cb1-2da6edc4808e
+    }
+    Line {
+      SrcBlock                "CNB_DO7"
+      SrcPort                 1
+      Points                  [35, 0; 0, -85]
+      DstBlock                "MTM__PiFaceDO4_7"
+      DstPort                 4
+      #GUID                   3fc57e56-b51b-4995-a109-a43c11cd8144
+    }
+    Line {
+      SrcBlock                "CNB_relay0"
+      SrcPort                 1
+      DstBlock                "Goto_1"
+      DstPort                 1
+      #GUID                   f8aababc-4097-4c65-8968-410ea67fe766
+    }
+    Line {
+      SrcBlock                "CNB_relay1"
+      SrcPort                 1
+      DstBlock                "Goto_2"
+      DstPort                 1
+      #GUID                   f256df9e-d48f-47bb-aaa2-0fa55259ac57
+    }
+    Line {
+      SrcBlock                "From_1"
+      SrcPort                 1
+      DstBlock                "ANDOCT"
+      DstPort                 1
+      #GUID                   2a3de653-4e88-4922-9d3b-48bb90a3d40f
+    }
+    Line {
+      SrcBlock                "From_2"
+      SrcPort                 1
+      DstBlock                "ANDOCT"
+      DstPort                 3
+      #GUID                   e8f4dcc9-f647-4836-854a-3f6973463b6f
+    }
+    Line {
+      SrcBlock                "From_3"
+      SrcPort                 1
+      DstBlock                "ANDOCT"
+      DstPort                 5
+      #GUID                   8ad55b22-b852-406b-89a1-f27f2753b21f
+    }
+    Line {
+      SrcBlock                "From_4"
+      SrcPort                 1
+      DstBlock                "ANDOCT"
+      DstPort                 7
+      #GUID                   7480a51b-ae5b-4b18-917d-de3118872432
+    }
+  }
+}
