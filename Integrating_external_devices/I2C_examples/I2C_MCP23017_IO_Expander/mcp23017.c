@@ -24,8 +24,10 @@ long init(void)
     i2c_chip_address = 0x20; // 7-bit address of the I2C device
 
     // !!!!!!!!!!!!!
-    //By default, IOCON.BANK=0, therefore see Table 1-6 in the datasheet for register mapping
-    //Register addresses are significantly different for IOCON.BANK=1 (Table 1-5 in the datasheet) 
+    // By default, IOCON.BANK=0, therefore see Table 1-6 in the datasheet for register mapping
+    //
+    // Table 1-5, which confusingly appears sooner in the datasheet, displays register addresses 
+    // for IOCON.BANK=1, which are significantly different 
     // !!!!!!!!!!!!!
     
     //Setting PORTA to output

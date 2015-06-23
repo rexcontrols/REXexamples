@@ -1,7 +1,7 @@
 /* REX UI SVG JS library
 * Authors: Ondrej Severa, Lubomir Kristek
-* Version 0.1.125
-* Created 2014-08-29 15:08 */
+* Version 0.1.171
+* Created 2015-06-12 14:06 */
 
 // Create new namespace
 extend(REX,"UI.SVG");
@@ -325,6 +325,12 @@ REX.UI.SVG.HMIConfig = function(svgElem, args) {
                     case "disable_log":
                         if (REX.HELPERS.parseBoolean(options[o])) {
                             REX.HMI.disableLog();
+                        }
+                        break;
+                    case "debug":
+                        if (REX.HELPERS.parseBoolean(options[o])) {
+                            REX.HMI.debug = true;
+                            REX.LOG.debug('HMI Config - debug mode enabled!');
                         }
                         break;
                     default:

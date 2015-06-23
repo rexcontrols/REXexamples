@@ -1,0 +1,17 @@
+Modbus {
+  Name                    "/dev/ttyUSB0"
+  BaudRate                9600
+  Parity                  0
+  SpaceTime               2
+  Timeout                 1000
+  Flags                   0
+  Gap                     30000
+  #GUID                   b380c195-9832-4304-86ba-834580ca2828
+  Item {
+    Name                    DO
+    SlaveAdr                1
+    RegisterAdr             9
+    Type                    0x00400104
+    Count                   1
+  }
+}

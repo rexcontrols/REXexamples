@@ -33,13 +33,13 @@ Model {
   }
   System {
     Name                    "logo_task"
-    Location                [216, 31, 990, 719]
+    Location                [216, 31, 772, 645]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [525, 433, 545, 447]
+      Position                [220, 548, 240, 562]
       SourceBlock             "lib/CNB"
       YCN                     on
       #GUID                   a3024711-0061-4d9a-b30f-fe360a4d7810
@@ -81,10 +81,28 @@ Model {
       #GUID                   36c8e431-6a78-4f92-9327-c2116340f5be
     }
     Block {
+      BlockType               Reference
+      Name                    "CNB_RED"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [270, 388, 290, 402]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   6f9709a8-f4df-464d-9287-4d07e3babb32
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_WHITE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [270, 353, 290, 367]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   4c7a64f3-1adf-4159-a5f4-3a356be0abeb
+    }
+    Block {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [330, 393, 420, 407]
+      Position                [25, 508, 115, 522]
       ShowName                off
       GotoTag                 "S7C__AI1"
       ForegroundColor         "black"
@@ -183,7 +201,7 @@ Model {
       BlockType               From
       Name                    "From2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [330, 413, 420, 427]
+      Position                [25, 528, 115, 542]
       ShowName                off
       GotoTag                 "S7C__AI2"
       ForegroundColor         "black"
@@ -279,10 +297,32 @@ Model {
       #GUID                   02987e13-7535-4d24-9093-45dba9ae942a
     }
     Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [345, 353, 435, 367]
+      ShowName                off
+      GotoTag                 "S7C__M25"
+      TagVisibility           "local"
+      BackgroundColor         "yellow"
+      #GUID                   a51eee0b-800a-4230-a871-ef27ff180a95
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [345, 388, 435, 402]
+      ShowName                off
+      GotoTag                 "S7C__M29"
+      TagVisibility           "local"
+      BackgroundColor         "yellow"
+      #GUID                   447a9ee6-2b4a-4bd6-afe1-2ab2e5549960
+    }
+    Block {
       BlockType               Reference
       Name                    "LIN_AI1"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [500, 393, 525, 407]
+      Position                [195, 508, 220, 522]
       SourceBlock             "mathlib/LIN"
       u1                      0
       y1                      0
@@ -294,7 +334,7 @@ Model {
       BlockType               Reference
       Name                    "LIN_AI2"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [450, 413, 475, 427]
+      Position                [145, 528, 170, 542]
       SourceBlock             "mathlib/LIN"
       u1                      0
       y1                      0
@@ -306,7 +346,7 @@ Model {
       BlockType               Reference
       Name                    "TRND_Analog"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [570, 388, 615, 462]
+      Position                [265, 503, 310, 577]
       SourceBlock             "lib/TRND"
       n                       2
       l                       9000
@@ -358,6 +398,20 @@ Model {
       #GUID                   efefd0dd-b55d-4383-bb90-a5b820146289
     }
     Line {
+      SrcBlock                "CNB_RED"
+      SrcPort                 1
+      DstBlock                "Goto6"
+      DstPort                 1
+      #GUID                   ffa75774-5cd2-47db-a68c-dae5b3956413
+    }
+    Line {
+      SrcBlock                "CNB_WHITE"
+      SrcPort                 1
+      DstBlock                "Goto4"
+      DstPort                 1
+      #GUID                   485cb050-f942-4dc4-985d-2ed8b7c8d2d4
+    }
+    Line {
       SrcBlock                "From"
       SrcPort                 1
       DstBlock                "LIN_AI1"
@@ -387,7 +441,7 @@ Model {
       #GUID                   12b35d90-5e64-4ff0-9b5d-7faed38c0c0d
     }
     Annotation {
-      Position                [455, 375]
+      Position                [150, 490]
       Text                    "Reading and recording analog signals"
       FontWeight              "bold"
       FontSize                14
@@ -430,6 +484,13 @@ Model {
 "\"algorithm\" attached).\n\nSee the S7Drv driver documentation for details.\n"
 "\nSiemens and LOGO! are trademarks of Siemens AG."
       #GUID                   314dadbe-c9c3-4bf3-9f54-f1181e8dab2c
+    }
+    Annotation {
+      Position                [295, 335]
+      Text                    "Backlight"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   5064103d-4992-46f6-9dbf-16c4692ec98d
     }
   }
 }

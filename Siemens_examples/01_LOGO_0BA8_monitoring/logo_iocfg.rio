@@ -1,6 +1,6 @@
 S7comm {
   Address                 "147.228.47.65"
-  Mode                    0x0010
+  Mode                    0x0018
   Rack                    0
   Slot                    0
   LocalTSAP               256
@@ -10,5 +10,5 @@ S7comm {
 #" 16=swap bytes, 32=single item query, 256=read info, 512=server configuration"
   #Comment2               "Area: 129=Input, 130=Output, 131=Memory, 132=DataBl"
 #"ock, 28=Counter, 29=Timer"
-  #GUID                   56c39503-9cf8-4a5e-805c-d5715191a8a9
+  #GUID                   115dd73e-8371-47b1-b535-6d1110024c4b
 }

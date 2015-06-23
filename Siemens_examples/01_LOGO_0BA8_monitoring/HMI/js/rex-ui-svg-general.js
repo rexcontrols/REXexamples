@@ -1,6 +1,6 @@
 /* GENERAL
-* Version 0.1.125
-* Created 2014-08-29 15:08 */
+* Version 0.1.171
+* Created 2015-06-12 14:06 */
 
 /**
  * SVG component represents BarGraph.
@@ -15,15 +15,16 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
     var $o = that.options || {};
     
     // Load options or default values
-    var r_min = parseFloat($o.a_rangeMin) || 0;       //minimum rozsahu
-    var r_max = parseFloat($o.b_rangeMax) || 100;     //maximum rozsahu
-    var tick_step = $o.c_tickStep || 5;               //krok maleho tiku
-    var main_tick_step = $o.d_mainTickStep || 10;     //krok hlavniho tiku s oznacenim
-    var dig_precision = $o.e_digitalPrecision || 2;   //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
-    var o_units = $o.f_units || " ";                  //jednotky
-    var zoneStartValues = stringToArray($o.g_zoneStartValues) || null;
-    var zoneEndValues = stringToArray($o.h_zoneEndValues) || null;
-    var zoneColors = stringToArray($o.i_zoneColors) || null;
+    var r_min = parseFloat($o.rangeMin) || 0;       //minimum rozsahu
+    var r_max = parseFloat($o.rangeMax) || 100;     //maximum rozsahu
+    var tick_step = $o.tickStep || 5;               //krok maleho tiku
+    var main_tick_step = $o.mainTickStep || 10;     //krok hlavniho tiku s oznacenim
+    var dig_precision = $o.digitalPrecision || 2;   //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
+    var o_units = $o.units || " ";                  //jednotky
+    var colorZones = $o.colorZones || null;    //barevne zony
+    var colorOfLimits = $o.colorOfLimits || "#ff0000";
+    var levelColor1 = $o.levelColor1 || "#01d2ff";
+    var levelColor2 = $o.levelColor2 || "#001070";
    
     // Get SVG elements for manipulation
     var bargraph_area = that.getChildByTag("bargraph_area"),             //cely objekt
@@ -31,11 +32,16 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
         bargraph_capacity = that.getChildByTag("bargraph_capacity"),     //celkova velikost (kapacita) bargrafu
         border = that.getChildByTag("border"),                           //okraj (ramecek)
         digitalval = that.getChildByTag("digitalval"),                   //digitalni hodnota
+        displayBox = that.getChildByTag("display_box"),                  //ramecek digitalni hodnoty
+        stopC1 = that.getChildByTag("stopC1"),
+        stopC2 = that.getChildByTag("stopC2"),
         units = that.getChildByTag("units");                             //jednotky
 
     //Global variables
     var center_x = bargraph_area.getBBox().width / 2;       //x-ova souradnice stredu 
     var center_y = bargraph_area.getBBox().height / 2;      //y-ova souradnice stredu
+    var centerXDBox = displayBox.getBBox().x + displayBox.getBBox().width / 2;
+    var centerYDBox = displayBox.getBBox().y + displayBox.getBBox().height / 2;
     var font_size_units = 24;
     var font_size_digitalval = 24;
     var tick_counter = 0;
@@ -45,10 +51,14 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
     var colorRanges = new Array();
     var zoneCounter = 0;
 
+    //Set level color
+    stopC1.style.stopColor = levelColor1;
+    stopC2.style.stopColor = levelColor2;
+
     //Set units
         units.textContent = o_units;
         units.setAttributeNS(null, "style", "font-size:" + font_size_units + "px; fill:#ffffff; font-family:Arial");
-        units.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((center_x - units.parentNode.getBBox().width / 2) - units.parentNode.getBBox().x) + "," + 0 + ")");
+        units.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((centerXDBox - units.parentNode.getBBox().width / 2) - units.parentNode.getBBox().x) + "," + 0 +")");
 
     //Set digital value
         digitalval.setAttributeNS(null, "style", "font-size:" + font_size_digitalval + "px; font-family:Arial");
@@ -77,14 +87,14 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
             i = i + 1;
         }
     //Draw color range
-    for (var n = 0; n < zoneStartValues.length; n++) {
-        drawColorRange(parseFloat(zoneStartValues[n]), parseFloat(zoneEndValues[n]), zoneColors[n]);
+    for (var n = 0; n < colorZones.length; n++) {
+        drawColorRange(parseFloat(colorZones[n].startValue), parseFloat(colorZones[n].endValue), colorZones[n].color);
     }
 
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed    
-        that.$c.VALUE.on('change', function (itm) {
+        that.$c.value.on('change', function (itm) {
             var level = itm.getValue();
             if (level >= r_min && level <= r_max) {
                 bargraph_level.setAttributeNS(null, "height", (bargraph_capacity.getBBox().height) * (level - r_min) / Math.abs(r_max - r_min));
@@ -92,11 +102,10 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
                 digitalval.style.fill = "#00ffff";
             } else {
                 if (level > r_max) {
-                    /*
                     bargraph_level.setAttributeNS(null, "height", bargraph_capacity.getBBox().height);
-                    digitalval.style.fill = "#ff0000";
-                    border.setAttributeNS(null, "style", "fill:#ff0000");
-                    */
+                    digitalval.style.fill = colorOfLimits;
+                    border.style.fill = colorOfLimits;
+                    /*
                     while (r_max <= level) {
                         var tmp = r_min;
                         r_min = r_min + 0.5 * Math.abs(r_max - tmp);
@@ -106,13 +115,12 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
                     changeColorRange();
                     bargraph_level.setAttributeNS(null, "height", (bargraph_capacity.getBBox().height) * (level - r_min) / Math.abs(r_max - r_min));
                     digitalval.style.fill = "#00ffff";
-                    
-                } else {
-                    /*
-                    bargraph_level.setAttributeNS(null, "height", 0.001);
-                    digitalval.style.fill = "#ff0000";
-                    border.setAttributeNS(null, "style", "fill:#ff0000");
                     */
+                } else {
+                    bargraph_level.setAttributeNS(null, "height", 0.001);
+                    digitalval.style.fill = colorOfLimits;
+                    border.style.fill = colorOfLimits;
+                    /*
                     while (r_min >= level) {
                         var tmp = r_min;
                         r_min = r_min - Math.abs(r_max - tmp);
@@ -122,11 +130,12 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
                     changeColorRange();
                     bargraph_level.setAttributeNS(null, "height", (bargraph_capacity.getBBox().height) * (level - r_min) / Math.abs(r_max - r_min));
                     digitalval.style.fill = "#00ffff";
-                    
+                    */
                 }   
             }
             digitalval.textContent = level.toFixed(dig_precision);
-            digitalval.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((center_x - digitalval.parentNode.getBBox().width / 2) - digitalval.parentNode.getBBox().x) + "," + 0 + ")");
+            digitalval.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((centerXDBox - digitalval.parentNode.getBBox().width / 2) - digitalval.parentNode.getBBox().x) + ","
+                + parseInt((centerYDBox - digitalval.parentNode.getBBox().height / 2) - digitalval.parentNode.getBBox().y) + ")");
         });
 
     function createTick(i,tick_height,tick_width) {
@@ -152,7 +161,7 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
         text.setAttributeNS(null, "y", y);
         text.setAttributeNS(null, "fill", "#ffffff");
         text.setAttributeNS(null, "style", "font-size:" + font_size + "px; font-family:Arial");
-        text.textContent = Math.round((parseFloat(r_min) + i * main_tick_step) * 100) / 100;
+        text.textContent = Math.round((parseFloat(r_min) + i * main_tick_step) * 10000) / 10000;
         bargraph_area.appendChild(text);
         translate_x = -text.getBBox().width - 3;
         translate_y = text.getBBox().height / 2 - 3;
@@ -228,9 +237,6 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
     
     return that;
 };
-
-
-
 /**
  * SVG component represents Button.
  * @param {SVGElement} svgElem 
@@ -243,63 +249,115 @@ REX.UI.SVG.Button = function(svgElem, args) {
     var $o = that.options || {};
     var CSScustomizable = REX.HELPERS.parseBoolean($o.CSS_customizable) || false;
     var onMouseDownValue = REX.HELPERS.parseBoolean($o.reverseMeaning) ? 0 : 1;
+    var fontScale = parseFloat($o.fontScale) || 1;
     var elementTitle = $(that.element).find('title').text();
 
     //var textElems = that.element.getElementsByTagName('text');
-    var button = document.createElement('button');
-    button.setAttribute('style', 'width:100%; height:100%;');
+    var button = $(document.createElement('button')).button();
+    $(that.div).append(button);
 
-    $(button).button();
-    button.innerHTML = $o.text;
+    button.attr('style', 'width:100%; height:100%; white-space: normal;');
+    button.text($o.text);
 
-    that.div.appendChild(button);
-    
-    if (CSScustomizable){
+    if (CSScustomizable) {
         that.$c.STYLE.on('change', function(i) {
-          var intVal = parseInt(i.getValue());
-          if(intVal === Number.NaN || intVal < 0) return;
-          that.div.className = elementTitle+"-"+intVal.toString();
-    });
-        
-    }
-
-    if (parseInt($o.font_size) > -1 && !isNaN(parseInt($o.font_size))) {
-        button.style.fontSize = $o.font_size;
-    }
-    
-    else {
-        function updateFontSize() {
-            button.style.fontSize = that.element.getScreenCTM().a * 1 + 'em';
-        }
-        updateFontSize();
-        $(window).resize(function() {
-            updateFontSize();
+            var intVal = parseInt(i.getValue());
+            if (intVal === Number.NaN || intVal < 0)
+                return;
+            that.div.className = elementTitle + "-" + intVal.toString();
         });
     }
+
+    // Init font autoresize
+    function updateFontSize() {
+        var ctm = that.svg.getScreenCTM();
+        // Scale according the width or height which is better
+        button.css('font-size', Math.min(ctm.a, ctm.d) * fontScale + 'em');
+    }
+    updateFontSize();
+    $(window).resize(function() {
+        updateFontSize();
+    });
+
 
     if (that.$c.BUTTON.type === 'R') {
         REX.LOG.error('Connection String: ' + that.$c.BUTTON.cstring + '(' + that.$c.BUTTON.alias + ') is read-only');
         return that;
     }
 
-    button.addEventListener('mousedown', function(evt) {
-        that.$c.BUTTON.setValue(onMouseDownValue, true);
-        that.fireCallback('mousedown');
-    }, false);
+    if ($o.type === 'ToggleButton') {
 
-    button.addEventListener('mouseup', function(evt) {
-        if ($o.type === 'PushButton') {
-            that.$c.BUTTON.setValue(1 - onMouseDownValue, true);
+        //four lines to get background for state-active class    
+        var $inspector = $("<div>").css('display', 'none').addClass('ui-state-active');
+        $("body").append($inspector); // add to DOM, in order to read the CSS property
+        var background = $inspector.css('background-color');
+        $inspector.remove(); // and remove from DOM
+
+        if (typeof that.$c.BUTTON_R === "undefined") {
+            REX.LOG.error('Element: ' + that.id + ' has an empty BUTTON_R connection. The ToggleButton will not work.');
+            return that;
         }
-        that.fireCallback('mouseup');
-    }, false);
-    
-    button.addEventListener('mouseout', function(evt) {
-        if ($o.type === 'PushButton') {
-            that.$c.BUTTON.setValue(1 - onMouseDownValue, true);
+        that.$c.BUTTON_R.on('change', function(itm) {
+            if (itm.getValue() === (1 - onMouseDownValue)) {
+                $(button).css("background", "");
+                active = false;
+            }
+            else {
+                $(button).css("background", background);
+                active = true;
+            }
+        });
+    }
+
+    var pressed = false;
+
+    button.bind('touchend touchcancel touchleave mouseup mouseout', function(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+        if (evt.handled !== true) {
+            // Primary mouse button only       
+            // Invoke only when the button was pressed before
+            if (!(evt.button && evt.button > 0) && pressed) {
+                REX.LOG.debug($o.text + ' ' + evt.type);
+                if ($o.type === 'PushButton') {
+                    that.$c.BUTTON.setValue(1 - onMouseDownValue, true);
+                }
+                that.fireCallback('mouseup');
+                pressed = false;
+            }
+            evt.handled = true;
+        } else {
+            return false;
         }
-        that.fireCallback('mouseup');
-    }, false);
+    }).bind('touchstart mousedown', function(evt) {
+        evt.stopPropagation();
+        evt.preventDefault();
+        if (evt.handled !== true) {
+            // Primary mouse button only            
+            if (!(evt.button && evt.button > 0)) {
+                if ($o.type === 'ToggleButton') {
+                    if (!active) {
+                        that.$c.BUTTON.setValue(onMouseDownValue, true);
+                        active = true;
+                    }
+                    else {
+                        that.$c.BUTTON.setValue(1 - onMouseDownValue, true);
+                        active = false;
+                    }
+
+                }
+                else {
+                    REX.LOG.debug($o.text + ' ' + evt.type);
+                    that.$c.BUTTON.setValue(onMouseDownValue, true);
+                }
+                that.fireCallback('mousedown');
+                pressed = true;
+            }
+            evt.handled = true;
+        } else {
+            return false;
+        }
+    });
 
     return that;
 };
@@ -335,15 +393,15 @@ REX.UI.SVG.ComboBox = function(svgElem, args) {
                 break;
             }
         }
-        that.$c.WRITE.setValue(parseInt(active), true);
+        that.$c.write.setValue(parseInt(active), true);
     });
     
-    if (that.$c.WRITE.type === 'R') {
-        REX.LOG.error('Connection String: ' + that.$c.WRITE.cstring + '(' + that.$c.WRITE.alias + ') is read-only');
+    if (that.$c.write.type === 'R') {
+        REX.LOG.error('Connection String: ' + that.$c.write.cstring + '(' + that.$c.write.alias + ') is read-only');
         return that;
     }
     
-    that.$c.READ.on('change', function (itm) {
+    that.$c.read.on('change', function (itm) {
        var value = itm.getValue();
        $('#'+selectorId).val(value.toString());
        $('#'+selectorId).selectmenu();
@@ -394,6 +452,17 @@ REX.UI.SVG.ControlLed = function(svgElem,args) {
 
 
 
+
+REX.UI.SVG.CustomHTML = function(svgElem, args) {
+     // Inherit from base component
+    var that = Object.create(REX.UI.SVG.HTMLComponent(svgElem, args));
+    var $o = that.options || {};
+    var html = $o.html;
+
+    $(that.div).html(html);
+
+    return that;
+};
 /**
  * SVG component represents Display.
  * @param {SVGElement} svgElem 
@@ -407,10 +476,10 @@ REX.UI.SVG.Display = function(svgElem,args) {
     var $o = that.options || {};    
     
     // Load options or default values
-    var range_min = $o.range_min || 0;
-    var range_max = $o.range_max || 100;
-    var color_max = $o.color_max || '#ff0000';
-    var color_min = $o.color_min || '#ffff00';
+    var range_min = $o.rangeMin || 0;
+    var range_max = $o.rangeMax || 100;
+    var color_max = $o.colorAbove || '#ff0000';
+    var color_min = $o.colorBelow || '#ffff00';
     var color = $o.color || "black";
     var precision = $o.precision || 4;  //pocet cifer po zaukrouhleni
     
@@ -420,7 +489,7 @@ REX.UI.SVG.Display = function(svgElem,args) {
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed    
-    that.$c.VALUE.on('change',function (i){
+    that.$c.value.on('change',function (i){
       if(i.getValue() < range_min){
         number.style.fill = color_min;
       } else if(i.getValue() > range_max){
@@ -449,12 +518,19 @@ REX.UI.SVG.DisplayWithBox = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var o_precision = $o.precision || 2,
+    var precision = $o.precision || 2,
+        rangeMin = $o.rangeMin || 0,
+        rangeMax = $o.rangeMax || 100,
+        colorAbove = $o.colorAbove || '#ff0000',
+        colorBelow = $o.colorBelow || '#ffff00',
+        color = $o.color || "#00ffff",
         o_units = $o.units || " ";
 
     // Get SVG elements for manipulation
     var digitalvalue_area = that.getChildByTag("digitalval_area"),
         digitalvalue = that.getChildByTag("digitalval"),
+        textbox = that.getChildByTag("textbox"),
+        text = that.getChildByTag("text"),
         units = that.getChildByTag("units");
 
     //Global variables
@@ -463,14 +539,26 @@ REX.UI.SVG.DisplayWithBox = function (svgElem, args) {
 
     //Set units
     units.textContent = o_units;
-    units.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((center_x - units.parentNode.getBBox().width / 2) - units.parentNode.getBBox().x) + "," + 0 + ")");
+    units.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt(
+        (center_x - units.parentNode.getBBox().width / 2) - units.parentNode.getBBox().x) + "," + 0 + ")");
 
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed
-    that.$c.VALUE.on('change', function (itm) {
-        digitalvalue.textContent = itm.getValue().toFixed(o_precision);
-        digitalvalue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((center_x - digitalvalue.parentNode.getBBox().width/2) - digitalvalue.parentNode.getBBox().x) + "," + 0 + ")");
+    that.$c.value.on('change', function (itm) {
+        var fontSize = digitalvalue.style.fontSize;
+
+        if (itm.getValue() < rangeMin) digitalvalue.style.fill = colorBelow;
+        else if (itm.getValue() <= rangeMax) digitalvalue.style.fill = color;
+        else digitalvalue.style.fill = colorAbove;
+
+        digitalvalue.textContent = itm.getValue().toFixed(precision);
+        if (digitalvalue.parentNode.getBBox().width >= textbox.getBBox().width * 0.95)
+            digitalvalue.style.fontSize = parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 0.9 + "px";
+        else if (digitalvalue.parentNode.getBBox().width < textbox.getBBox().width * 0.9)
+            digitalvalue.style.fontSize = parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 1.1 + "px";
+        digitalvalue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt(
+            (digitalvalue_area.getBBox().width / 2 - digitalvalue.parentNode.getBBox().width / 2) - digitalvalue.parentNode.getBBox().x) + "," + 0 + ")");
     });
 
     return that;
@@ -495,9 +583,8 @@ REX.UI.SVG.Gauge180 = function (svgElem, args) {
     var main_tick_step = $o.d_mainTickStep || 10;     //krok hlavniho tiku s oznacenim
     var dig_precision = $o.e_digitalPrecision || 2;   //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
     var o_units = $o.f_units || " ";                  //jednotky
-    var zoneStartValues =  stringToArray($o.g_zoneStartValues) || null;
-    var zoneEndValues =  stringToArray($o.h_zoneEndValues) || null;
-    var zoneColors =  stringToArray($o.i_zonecolors) || null;
+    var colorZones = $o.colorZones || null; //barevne rozsahy
+    var colorOfLimits = $o.colorOfLimits || "#ff0000";
 
     // Get SVG elements for manipulation
     var gauge_area = that.getChildByTag("gauge_area");   //cely objekt
@@ -551,8 +638,8 @@ REX.UI.SVG.Gauge180 = function (svgElem, args) {
     }
 
     //Draw color range
-    for (var n = 0; n < zoneStartValues.length; n++){
-        drawColorRange(parseFloat(zoneStartValues[n]), parseFloat(zoneEndValues[n]), zoneColors[n]);
+    for (var n = 0; n < colorZones.length; n++){
+        drawColorRange(parseFloat(colorZones[n].startValue), parseFloat(colorZones[n].endValue), colorZones[n].color);
     }
 
     // Change z-index on the top
@@ -563,12 +650,12 @@ REX.UI.SVG.Gauge180 = function (svgElem, args) {
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed    
-    that.$c.VALUE.on('change', function (itm) {
+    that.$c.value.on('change', function (itm) {
         var value = itm.getValue();
         var angle = (value - r_min) * (180 / Math.abs(r_max - r_min)) - 90;
         if (value >= r_min && value <= r_max) {
             hand.setAttributeNS(null, "transform", "rotate(" + angle + "," + center_x + "," + center_y + ")");
-            digitalval.setAttributeNS(null, "fill", "#00ffff");
+            digitalval.style.fill = "#00ffff";
             border.setAttributeNS(null, "style", "fill:#000000");
         }
 
@@ -576,8 +663,8 @@ REX.UI.SVG.Gauge180 = function (svgElem, args) {
             if (value > r_max) {
 
                 hand.setAttributeNS(null, "transform", "rotate(" + 90 + "," + center_x + "," + center_y + ")");
-                digitalval.setAttributeNS(null, "fill", "#ff0000");
-                border.setAttributeNS(null, "style", "fill:#ff0000");
+                digitalval.style.fill = colorOfLimits;
+                border.style.fill = colorOfLimits;
                 /*
                 var tmp = r_min;
                 r_min = r_min + 0.5 * Math.abs(r_max - tmp);
@@ -587,8 +674,8 @@ REX.UI.SVG.Gauge180 = function (svgElem, args) {
             } else {
 
                 hand.setAttributeNS(null, "transform", "rotate(" + -90 + "," + center_x + "," + center_y + ")");
-                digitalval.setAttributeNS(null, "fill", "#ff0000");
-                border.setAttributeNS(null, "style", "fill:#ff0000");
+                digitalval.style.fill = colorOfLimits;
+                border.style.fill = colorOfLimits;
                 /*
                 var tmp = r_min;
                 r_min = r_min - 0.5 * Math.abs(r_max - tmp);
@@ -726,10 +813,8 @@ REX.UI.SVG.Gauge270 = function(svgElem,args) {
     var main_tick_step = $o.d_mainTickStep || 10;     //krok hlavniho tiku s oznacenim
     var dig_precision = $o.e_digitalPrecision || 2;   //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
     var o_units = $o.f_units || " ";                  //jednotky
-    var zoneStartValues = stringToArray($o.g_zoneStartValues) || null;
-    var zoneEndValues = stringToArray($o.h_zoneEndValues) || null;
-    var zoneColors = stringToArray($o.i_zoneColors) || null;
-
+    var colorZones = $o.colorZones || null; //barevne rozsahy
+    var colorOfLimits = $o.colorOfLimits || "#ff0000";
 
     // Get SVG elements for manipulation
     var gauge_area = that.getChildByTag("gauge_area");   //cely objekt
@@ -784,8 +869,8 @@ REX.UI.SVG.Gauge270 = function(svgElem,args) {
     }
 
     //Draw color range
-    for (var n = 0; n < zoneStartValues.length; n++) {
-        drawColorRange(parseFloat(zoneStartValues[n]), parseFloat(zoneEndValues[n]), zoneColors[n]);
+    for (var n = 0; n < colorZones.length; n++) {
+        drawColorRange(parseFloat(colorZones[n].startValue), parseFloat(colorZones[n].endValue), colorZones[n].color);
     }
 
     // Change z-index on the top
@@ -795,20 +880,20 @@ REX.UI.SVG.Gauge270 = function(svgElem,args) {
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed    
-    that.$c.VALUE.on('change', function(itm) {
+    that.$c.value.on('change', function(itm) {
         var value = itm.getValue();
         var angle = (value - r_min) * (270 / Math.abs(r_max - r_min));
         if (value >= r_min && value <= r_max) {
             hand1.setAttributeNS(null, "transform", "rotate(" + angle + "," + center_x + "," + center_y + ")");
             hand2.setAttributeNS(null, "transform", "rotate(" + angle + "," + center_x + "," + center_y + ")");
-            digitalval.setAttributeNS(null, "fill", "#00ffff");
+            digitalval.style.fill = "#00ffff";
             border.setAttributeNS(null, "style", "fill:#000000");
         } else {
             if (value > r_max) {
                 hand1.setAttributeNS(null, "transform", "rotate(" + 270 + "," + center_x + "," + center_y + ")");
                 hand2.setAttributeNS(null, "transform", "rotate(" + 270 + "," + center_x + "," + center_y + ")");
-                digitalval.setAttributeNS(null, "fill", "#ff0000");
-                border.setAttributeNS(null, "style", "fill:#ff0000");
+                digitalval.style.fill = colorOfLimits;
+                border.style.fill = colorOfLimits;
                 /*
                 var tmp = r_min;
                 r_min = r_min + 0.5 * Math.abs(r_max - tmp);
@@ -818,8 +903,8 @@ REX.UI.SVG.Gauge270 = function(svgElem,args) {
             } else {
                 hand1.setAttributeNS(null, "transform", "rotate(" + 0 + "," + center_x + "," + center_y + ")");
                 hand2.setAttributeNS(null, "transform", "rotate(" + 0 + "," + center_x + "," + center_y + ")");
-                digitalval.setAttributeNS(null, "fill", "#ff0000");
-                border.setAttributeNS(null, "style", "fill:#ff0000");
+                digitalval.style.fill = colorOfLimits;
+                border.style.fill = colorOfLimits;
                 /*
                 var tmp = r_min;
                 r_min = r_min - 0.5 * Math.abs(r_max - tmp);
@@ -1075,7 +1160,12 @@ REX.UI.SVG.GeneralComponent = function(svgElem, args) {
 
     that.opacity = function(opacity) {
         var opacityA = parseFloat(opacityMin) + opacityR * (opacity - opacitySMin) / (opacitySMax - opacitySMin);
-        that.element.setAttribute('opacity', opacityA);
+        that.element.setAttribute('opacity', Math.abs(opacityA));
+        if (opacityA <= 0) {
+            $(that.element).css('pointer-events', 'none');
+        }
+        else
+            $(that.element).css('pointer-events', 'auto');
     };
 
     if (typeof that.$c.COLOR !== "undefined") {
@@ -1182,6 +1272,25 @@ REX.UI.SVG.HTMLComponent = function(svgElem,args) {
     
     var div=document.createElement('div');
     
+    if ($(that.element).parent().attr("rexsvg:module") === "GeneralComponent") {
+        that.parGroup = that.element.parentElement;
+        var oldOpacity = that.parGroup.getAttribute("opacity");
+        var timer;
+
+        function watch() {
+            var newOpacity = that.parGroup.getAttribute("opacity");
+            if (newOpacity !== oldOpacity) {
+                $(div).css("opacity", newOpacity);
+                $(div).css("pointer-events", $(that.parGroup).css("pointer-events"));
+            }
+            oldOpacity = newOpacity;
+        }
+        timer = setInterval(watch, 200);
+
+    }
+     
+      
+      
     div.style.position='absolute';
     
     $(div).addClass('ui-svg-div');
@@ -1213,8 +1322,6 @@ REX.UI.SVG.HTMLComponent = function(svgElem,args) {
     that.div=div;
     return that;
 };
-
-
 /**
  * SVG component represents numeric input.
  * @param {SVGElement} svgElem 
@@ -1222,54 +1329,76 @@ REX.UI.SVG.HTMLComponent = function(svgElem,args) {
  * @returns {REX.UI.SVG.Fan} New SVG numeric input component
  */
 REX.UI.SVG.Input = function(svgElem, args) {
-    // Inherit from base component
+     // Inherit from base component
     var that = Object.create(REX.UI.SVG.HTMLComponent(svgElem, args));
     var $o = that.options || {};
+    var fontScale = parseFloat($o.fontScale) || 1;
 
     that.div.setAttribute('class', 'ui-spinner ui-state-default ui-widget ui-widget-content ui-corner-all');
 
-    var input = document.createElement('input');
-    input.setAttribute('type', 'text');
-    input.setAttribute('value', 'NaN');
-    input.setAttribute('name', 'value');
-    input.setAttribute('class', 'ui-spinner-input');
-    input.style.width = '100%';
-    input.style.height = '100%';
+    var input = $(document.createElement('input'));    
+    input.attr('type', 'text');
+    input.attr('value', 'NaN');
+    input.attr('name', 'value');
+    input.attr('class', 'ui-spinner-input');
+    input.css('width','100%');
+    input.css('height','100%');
+    input.css('margin','0 0 0 .2em');
 
-    that.div.appendChild(input);
+    $(that.div).append(input);
     updateFontSize();
-
+    
     $(window).resize(function() {
         updateFontSize();
     });
 
+    // Init font autoresize
     function updateFontSize() {
-        input.style.fontSize = that.element.getScreenCTM().a * 1 + 'em';
+        var ctm = that.svg.getScreenCTM();
+        // Scale according the width or height which is better
+        input.css('font-size',Math.min(ctm.a,ctm.d) * fontScale + 'em');
     }
+    updateFontSize();
+    $(window).resize(function () {
+        updateFontSize();
+    });
 
-    function isNumber(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
-    }
-
-    that.$c.value.on('change', function(i) {
-        input.value = i.getValue();
+    that.$c.value.on('read', function(i) {
+        input.val(i.getValue());
     });
 
     if (that.$c.value.type === 'R') {
         REX.LOG.error('Connection String: ' + that.$c.value.cstring + '(' + that.$c.value.alias + ') is read-only');
         return that;
     }
+    
+    input.focus(function (evt) {
+        that.$c.value.disableRefresh = true;
+    }).blur(function (evt) {
+        that.$c.value.disableRefresh = false;        
+        that.$c.value.group.read();
+    });
 
-    input.addEventListener('keypress', function(evt) {
-        if (!evt.keyCode || evt.keyCode === 13) {// keyCode 13 - ENTER                           
-            var text = evt.target.value.replace(',', '.');
-            if (isNumber(text)) {
-                REX.HELPERS.removeClass(that.div, 'ui-state-error');
-                that.$c.value.setValue(parseFloat(text), true);
+    input.addClass('ui-spinner-input');
+    input.keypress(function (evt) {
+        var keyCode = evt.keyCode || evt.which;
+        if (keyCode === 13) { //Enter keycode
+            var numberStr = input.prop('value').replace(',', '.');
+            if (REX.HELPERS.isNumber(numberStr))
+            {
+                input.removeClass('ui-state-error');
+                that.$c.value.setValue(parseFloat(numberStr), true);
             }
             else {
-                REX.HELPERS.appendClass(that.div, 'ui-state-error');
+                input.addClass('ui-state-error');
             }
+        }
+
+    });
+    input.keyup(function (evt) {
+        var keyCode = evt.keyCode || evt.which;
+        if (keyCode === 27) { //ESC keycode
+            input.blur();
         }
     });
 
@@ -1323,7 +1452,8 @@ REX.UI.SVG.PushOnOff = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var initialPosition = $o.initialPosition || null;
+    var reverse_meaning = $o.reverse_meaning || false;
+    var type = $o.type || 'PushButton';
  
     // Get SVG elements for manipulation
     var pushOnOffArea = that.getChildByTag("pushOnOff_area"),
@@ -1333,68 +1463,87 @@ REX.UI.SVG.PushOnOff = function (svgElem, args) {
 
     //Global variables
     var centerX = pushOnOffArea.getBBox().width / 2,
-        centerY = pushOnOffArea.getBBox().height / 2,
-        init = false,
+        centerY = pushOnOffArea.getBBox().height / 2,        
         currentPosition = 0;
 
-    pushOnOffArea.addEventListener("click", switchValue, false);
+    //pushOnOffArea.addEventListener("click", switchValue, false);
     pushOnOffArea.addEventListener("mouseover", mOver, false);
     pushOnOffArea.addEventListener("mouseout", mOut, false);
-    pushOnOffArea.addEventListener("mousedown", mOver, false);
+    pushOnOffArea.addEventListener("mousedown", mDown, false);
     pushOnOffArea.addEventListener("mouseup", mOut, false);
 
-    function switchValue(event) {
-        if (currentPosition == 0) {
-            buttonP1.style.fill = "#33ff00";
-            buttonP3.style.fill = "#33aa22";
-            that.$c.POWER_W.setValue(true, true);
-            currentPosition = 1;
-        } else {
-            buttonP1.style.fill = "#b3b3b3";
-            buttonP3.style.fill = "#808080";
-            that.$c.POWER_W.setValue(false, true);
+    function setValue(val) {
+        if (val === 0) {
+            that.$c.VALUE_W.setValue(reverse_meaning, true);            
             currentPosition = 0;
+        } else {            
+            that.$c.VALUE_W.setValue(!reverse_meaning, true);            
+            currentPosition = 1;
         }
     }
 
     function mOver(event) {
-        if(currentPosition == 0)
+        if (currentPosition == 0) {
             buttonP1.style.fill = "#838383";
-        else
+            buttonP3.style.fill = "#838383";
+        }
+        else {
             buttonP1.style.fill = "#33bb22";
+            buttonP3.style.fill = "#33bb22";
+        }
     }
 
     function mOut(event) {
-        if (currentPosition == 0)
+        refresh_from.disableRefresh = false;
+        if (type === 'PushButton') {
+            setValue(0);
+        }
+        if (currentPosition == 0) {
             buttonP1.style.fill = "#b3b3b3";
-        else
+            buttonP3.style.fill = "#b3b3b3";
+        }
+        else {
             buttonP1.style.fill = "#33ff00";
+            buttonP3.style.fill = "#33ff00";
+        }
     }
 
-    // Add anonymous function as event listener. There are two events
-    // 'read' - it is called every time when item is read
-    // 'change' - called for the first time and every time item value is changed
-    that.$c.POWER_R.on('change', function (itm) {
-        if (!itm.getValue()) {
+    function mDown(event) {
+        refresh_from.disableRefresh = true;
+        if (type === 'ToggleButton') {
+            var val = currentPosition ? 0 : 1; // Inverse value
+            setValue(val);
+        }
+        else {
+            setValue(1);
+        }
+        if (currentPosition === 0) {
+            buttonP1.style.fill = "#636363";
+            buttonP3.style.fill = "#636363";
+        }
+        else {
+            buttonP1.style.fill = "#338811";
+            buttonP3.style.fill = "#338811";
+        }
+    }
+    
+    var refresh_from = that.$c.VALUE_R || that.$c.VALUE_W;
+    refresh_from.on('change', function onChange(itm) {
+        if (reverse_meaning) {
+            currentPosition = (itm.getValue() === 0) ? 1 : 0;
+        }
+        else {
+            currentPosition = itm.getValue();
+        }
+        if (currentPosition === 0) {
             buttonP1.style.fill = "#b3b3b3";
             buttonP3.style.fill = "#808080";
-            currentPosition = 0;
         } else {
             buttonP1.style.fill = "#33ff00";
-            buttonP3.style.fill = "#33ff22";
-            currentPosition = 1;
-        }
-
-        if (!init & initialPosition !== null) {
-            if (initialPosition.toLowerCase() === 'on') {
-                that.$c.POWER_W.setValue(true, true);
-            } else if (initialPosition.toLowerCase() === 'off') {
-                that.$c.POWER_W.setValue(false, true);
-            }
-            init = true;
+            buttonP3.style.fill = "#33aa22";
         }
     });
-
+    
     return that;
 };
 
@@ -1414,29 +1563,30 @@ REX.UI.SVG.SliderHorizontal = function (svgElem, args) {
     // Get SVG elements for manipulation
     var sliderArea = that.getChildByTag("slider_area"),
         level = that.getChildByTag("slider_level"),
-        capacity = that.getChildByTag("slider_capacity"),
+        levelBox = that.getChildByTag("slider_capacity"),
         dragPoint = that.getChildByTag("drag_point"),
-        digitalValue = that.getChildByTag("digitalval");
+        digitalValue = that.getChildByTag("digitalval"),
+        textBox = that.getChildByTag("text_box");
 
     //Load options or default values
-    var minValue = parseFloat($o.a_minValue) || 0,
-        maxValue = parseFloat($o.b_maxValue) || 100,
-        initialValue = parseFloat($o.d_initialValue) || null,
-        step = parseFloat($o.c_step) || 1,
-        digitalPrecision = parseFloat($o.e_digitalPrecision) || 2,
-        fSize = parseFloat($o.f_fontSize) || 18,
-        label = $o.g_label || "";
+    var minValue = parseFloat($o.minValue) || 0,
+        maxValue = parseFloat($o.maxValue) || 100,
+        initialValue = parseFloat($o.initialValue) || null,
+        step = parseFloat($o.step) || 1,
+        digitalPrecision = parseFloat($o.digitalPrecision) || 0,
+        fSize = parseFloat($o.fontSize) || 18,
+        label = $o.label || "";
+        digitalValue.style.fontSize = fSize + "px";
+        createLabel();
 
     //Global variables
     var setPoint,
         setPointChanged = false,
         sliderActive = false,
-        initialLevelWidth = level.getBBox().width,
-        capacityOffset = $('#' + capacity.id).offset().left - $('#' + sliderArea.id).offset().left,
-        capacityOffsetLeft = $('#' + capacity.id).offset().left,
+        activeArea = createActiveArea(),
+        activePoint = activeArea.createSVGPoint(),
         init = false;
 
-    createLabel();
     sliderArea.addEventListener("mousedown", sliderDown,false);
     document.addEventListener("mouseup", sliderUp,false);
     document.addEventListener("mousemove", sliderMove, false);
@@ -1444,34 +1594,42 @@ REX.UI.SVG.SliderHorizontal = function (svgElem, args) {
 
     function sliderDown(event) {
         sliderActive = true;
+        updatePosition(event);
+    }
+
+    function sliderMove(event) {
+        updatePosition(event);
+    }
+
+    function sliderClick(event) {
+        updatePosition(event);
     }
 
     function sliderUp(event) {
         sliderActive = false;
-        if (setPointChanged)
-        that.$c.VALUE_W.setValue(parseFloat(setPoint), true);
+        if (setPointChanged) {
+            that.$c.value_W.setValue(parseFloat(setPoint), true);
+            setPointChanged = false;
+        }
     }
 
-    function sliderMove(event) {
-        var position = event.pageX - $('#' + capacity.id).offset().left;
-        if (sliderActive && position > 0 && position < capacity.getBBox().width -1) {
+    function updatePosition(event) {
+        activePoint.x = event.pageX;
+        activePoint.y = event.pageY;
+        var newPoint = coordinateTransform(activePoint, activeArea);
+        var position = newPoint.x;
+        setValue(position);
+        if (sliderActive && position > -1 && position < levelBox.getBBox().width + 1) {
             dragPoint.setAttributeNS(null, "transform", "translate(" + parseFloat(position) + "," + 0 + ")");
             level.setAttributeNS(null, "width", position);
-            setValue(position);
-        }
-    }
-
-    function sliderClick(event) {
-        var position = event.pageX - $('#' + capacity.id).offset().left - capacityOffset;
-        if (sliderActive && position > 0 && position < capacity.getBBox().width-1) {
-            dragPoint.setAttributeNS(null, "transform", "translate(" +parseFloat(position) + "," + 0 + ")");
-            level.setAttributeNS(null, "width", position);
-            setValue(position);
-        }
+            digitalValue.textContent = setPoint.toFixed(digitalPrecision);
+            transformDisplay();
+            setPointChanged = true;
+       }
     }
 
     function setValue(val) {
-        var relativeStep = (capacity.getBBox().width - 2) / (Math.abs(maxValue - minValue) / step);
+        var relativeStep = (levelBox.getBBox().width) / (Math.abs(maxValue - minValue) / step);
         if (val % relativeStep < relativeStep) {
             setPoint = minValue + Math.round(val / relativeStep) * step;
             if (setPoint < minValue) {
@@ -1480,16 +1638,13 @@ REX.UI.SVG.SliderHorizontal = function (svgElem, args) {
             else if (setPoint > maxValue) {
                 setPoint = maxValue;
             }
-            digitalValue.textContent = setPoint.toFixed(digitalPrecision);
-            digitalValue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((sliderArea.getBBox().width / 2 - digitalValue.parentNode.getBBox().width / 2) - digitalValue.parentNode.getBBox().x + 25) + "," + 0 + ")");
-            setPointChanged = true;
         }
     }
 
-    that.$c.VALUE_R.on('change', function (itm) {
+    that.$c.value_R.on('change', function (itm) {
         updateSlider(itm.getValue());
         if (!init && initialValue != null) {
-            that.$c.VALUE_W.setValue(parseFloat(initialValue), true);
+            that.$c.value_W.setValue(parseFloat(initialValue), true);
             init = true;
         }
     });
@@ -1498,7 +1653,7 @@ REX.UI.SVG.SliderHorizontal = function (svgElem, args) {
         var setP = setPointValue;
         var position;
         if (setP >= minValue && setP <= maxValue) {
-            position = (setP - minValue) * (capacity.getBBox().width) / Math.abs(maxValue - minValue);
+            position = (setP - minValue) * (levelBox.getBBox().width) / Math.abs(maxValue - minValue);
         } else {
             if (setP < minValue) {
                 setP = minValue;
@@ -1506,14 +1661,34 @@ REX.UI.SVG.SliderHorizontal = function (svgElem, args) {
             }
             else {
                 setP = maxValue;
-                position = capacity.getBBox().width;
+                position = levelBox.getBBox().width;
             }
         }
         digitalValue.textContent = setP.toFixed(digitalPrecision);
-        digitalValue.style.fontSize = fSize + "px";
-        digitalValue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((sliderArea.getBBox().width / 2 - digitalValue.parentNode.getBBox().width / 2) - digitalValue.parentNode.getBBox().x + 25) + "," + 0 + ")");
+        transformDisplay();
         dragPoint.setAttributeNS(null, "transform", "translate(" + parseFloat(position) + "," + 0 + ")");
         level.setAttributeNS(null, "width", position);
+    }
+
+    function coordinateTransform(screenPoint, someSvgObject) {
+        var CTM = someSvgObject.getScreenCTM();
+        if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+            var newCoordinates = screenPoint.matrixTransform(CTM.inverse());
+            newCoordinates.x -= (levelBox.getBBox().x);
+            return newCoordinates;
+        } else {
+            return screenPoint.matrixTransform(CTM.inverse());
+        }
+    }
+
+    function createActiveArea() {
+        var area = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
+        area.setAttribute('x', levelBox.getBBox().x);
+        area.setAttribute('y', levelBox.getBBox().y);
+        area.setAttribute('width', levelBox.getBBox().width);
+        area.setAttribute('height', levelBox.getBBox().height);
+        sliderArea.appendChild(area);
+        return area;
     }
 
     function createLabel() {
@@ -1522,13 +1697,23 @@ REX.UI.SVG.SliderHorizontal = function (svgElem, args) {
         text.setAttributeNS(null, "style", "font-size:" + fSize + "px; font-family:Arial");
         text.textContent = label;
         sliderArea.appendChild(text);
-        text.setAttributeNS(null, "x", sliderArea.getBBox().width / 2 - text.getBBox().width / 2 + 13);
-        text.setAttributeNS(null, "y", (sliderArea.getBBox().height - text.getBBox().height * 1.1));
+        text.setAttributeNS(null, "x", levelBox.getBBox().x + levelBox.getBBox().width / 2 - text.getBBox().width / 2);
+        text.setAttributeNS(null, "y", (levelBox.getBBox().y + levelBox.getBBox().height + text.getBBox().height * 1.1));
+    }
+
+    function transformDisplay() {
+        var fontSize = digitalValue.style.fontSize;
+        if (digitalValue.parentNode.getBBox().width >= textBox.getBBox().width * 0.9)
+            digitalValue.style.fontSize = parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 0.9 + "px";
+        else if (digitalValue.parentNode.getBBox().width < textBox.getBBox().width * 0.85 && parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 1.05 < fSize)
+            digitalValue.style.fontSize = parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 1.05 + "px";
+        digitalValue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt(textBox.getBBox().x + (textBox.getBBox().width / 2
+            - digitalValue.parentNode.getBBox().width / 2) - digitalValue.parentNode.getBBox().x) + "," + parseInt(textBox.getBBox().y +
+            (textBox.getBBox().height / 2 - digitalValue.parentNode.getBBox().height / 2) - digitalValue.parentNode.getBBox().y) + ")");
     }
 
    return that;
 };
-
 /**
  * SVG component represents Slider.
  * @param {SVGElement} svgElem 
@@ -1545,28 +1730,33 @@ REX.UI.SVG.SliderVertical = function (svgElem, args) {
     // Get SVG elements for manipulation
     var sliderArea = that.getChildByTag("slider_area"),
         level = that.getChildByTag("slider_level"),
-        capacity = that.getChildByTag("slider_capacity"),
+        levelBox = that.getChildByTag("slider_capacity"),
         dragPoint = that.getChildByTag("drag_point"),
-        digitalValue = that.getChildByTag("digitalval");
+        digitalValue = that.getChildByTag("digitalval"),
+        textBox = that.getChildByTag("text_box");
 
     //Load options or default values
-    var minValue = parseFloat($o.a_minValue) || 0,
-        maxValue = parseFloat($o.b_maxValue) || 100,
-        initialValue = parseFloat($o.d_initialValue) || null,
-        step = parseFloat($o.c_step) || 1,
-        digitalPrecision = parseFloat($o.e_digitalPrecision) || 2,
-        fSize = parseFloat($o.f_fontSize) || 18,
-        label = $o.g_label || "";
+    var minValue = parseFloat($o.minValue) || 0,
+        maxValue = parseFloat($o.maxValue) || 100,
+        initialValue = parseFloat($o.initialValue) || null,
+        step = parseFloat($o.step) || 1,
+        digitalPrecision = parseFloat($o.digitalPrecision) || 0,
+        fSize = parseFloat($o.fontSize) || 18,
+        label = $o.label || "";
+        digitalValue.style.fontSize = fSize + "px";
+        createLabel();
+        level.setAttributeNS(null, "transform", "rotate(" + 180 + "," + (levelBox.getBBox().x +
+         levelBox.getBBox().width / 2) + "," + (levelBox.getBBox().y + levelBox.getBBox().height) + ")");
+
 
     //Global variables
     var setPoint,
         setPointChanged = false,
         sliderActive = false,
-        initialLevelWidth = level.getBBox().width,
+        activeArea = createActiveArea(),
+        activePoint = activeArea.createSVGPoint(),
         init = false;
 
-    level.setAttributeNS(null, "transform", "rotate(" + 180 + "," + (capacity.getBBox().x + capacity.getBBox().width / 2) + "," + (capacity.getBBox().y+ capacity.getBBox().height)+ ")");
-    createLabel();
     sliderArea.addEventListener("mousedown", sliderDown,false);
     document.addEventListener("mouseup", sliderUp,false);
     document.addEventListener("mousemove", sliderMove, false);
@@ -1574,34 +1764,42 @@ REX.UI.SVG.SliderVertical = function (svgElem, args) {
 
     function sliderDown(event) {
         sliderActive = true;
+        updatePosition(event);
+    }
+
+    function sliderMove(event) {
+        updatePosition(event);
+    }
+
+    function sliderClick(event) {
+        updatePosition(event);
     }
 
     function sliderUp(event) {
         sliderActive = false;
-        if (setPointChanged)
-        that.$c.VALUE_W.setValue(parseFloat(setPoint), true);
-    }
-
-    function sliderMove(event) {
-        var position = $('#' + capacity.id).offset().top + capacity.getBBox().height - event.pageY;
-        if (sliderActive && position >= -1 && position < capacity.getBBox().height + 0.3) {
-            dragPoint.setAttributeNS(null, "transform", "translate(" + 0 + "," + -parseFloat(position) + ")");
-            level.setAttributeNS(null, "height", position);
-            setValue(position);
+        if (setPointChanged) {
+            that.$c.value_W.setValue(parseFloat(setPoint), true);
+            setPointChanged = false;
         }
     }
 
-    function sliderClick(event) {
-        var position = $('#' + capacity.id).offset().top + capacity.getBBox().height - event.pageY;
-        if (sliderActive && position >= -1 && position < capacity.getBBox().width + 0.3) {
+    function updatePosition(event) {
+        activePoint.x = event.pageX;
+        activePoint.y = event.pageY;
+        var newPoint = coordinateTransform(activePoint, activeArea);
+        var position = levelBox.getBBox().height - newPoint.y;
+        setValue(position);
+        if (sliderActive && position > -1 && position < levelBox.getBBox().height + 1) {
             dragPoint.setAttributeNS(null, "transform", "translate(" + 0 + "," + -parseFloat(position) + ")");
             level.setAttributeNS(null, "height", position);
-            setValue(position);
+            digitalValue.textContent = setPoint.toFixed(digitalPrecision);
+            transformDisplay();
+            setPointChanged = true;
         }
     }
 
     function setValue(val) {
-        var relativeStep = (capacity.getBBox().height) / (Math.abs(maxValue - minValue) / step);
+        var relativeStep = (levelBox.getBBox().height) / (Math.abs(maxValue - minValue) / step);
         if (val % relativeStep < relativeStep) {
             setPoint = minValue + Math.round(val / relativeStep) * step;
             if (setPoint < minValue) {
@@ -1610,16 +1808,13 @@ REX.UI.SVG.SliderVertical = function (svgElem, args) {
             else if (setPoint > maxValue){
                 setPoint = maxValue;
             }
-            digitalValue.textContent = setPoint.toFixed(digitalPrecision);
-            digitalValue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((sliderArea.getBBox().width / 2 - digitalValue.parentNode.getBBox().width / 2) - digitalValue.parentNode.getBBox().x) + "," + 0 + ")");
-            setPointChanged = true;
         }
     }
 
-    that.$c.VALUE_R.on('change', function (itm) {
+    that.$c.value_R.on('change', function (itm) {
         updateSlider(itm.getValue());
         if (!init && initialValue != null) {
-            that.$c.VALUE_W.setValue(parseFloat(initialValue), true);
+            that.$c.value_W.setValue(parseFloat(initialValue), true);
             init = true;
         }
     });
@@ -1628,7 +1823,7 @@ REX.UI.SVG.SliderVertical = function (svgElem, args) {
         var setP = setPointValue;
         var position;
         if (setP >= minValue && setP <= maxValue) {
-            position = (setP - minValue) * (capacity.getBBox().height) / Math.abs(maxValue - minValue);
+            position = (setP - minValue) * (levelBox.getBBox().height) / Math.abs(maxValue - minValue);
         } else {
             if (setP < minValue) {
                 setP = minValue;
@@ -1636,14 +1831,34 @@ REX.UI.SVG.SliderVertical = function (svgElem, args) {
             }
             else {
                 setP = maxValue;
-                position = capacity.getBBox().height;
+                position = levelBox.getBBox().height;
             }
         }
         digitalValue.textContent = setP.toFixed(digitalPrecision);
-        digitalValue.style.fontSize = fSize + "px";
-        digitalValue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((sliderArea.getBBox().width / 2 - digitalValue.parentNode.getBBox().width / 2) - digitalValue.parentNode.getBBox().x) + "," + 0 + ")");
+        transformDisplay();
         dragPoint.setAttributeNS(null, "transform", "translate(" + 0 + "," + -parseFloat(position) + ")");
         level.setAttributeNS(null, "height", position);
+    }
+
+    function coordinateTransform(screenPoint, someSvgObject) {
+        var CTM = someSvgObject.getScreenCTM();
+        if (/Firefox[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
+            var newCoordinates = screenPoint.matrixTransform(CTM.inverse());
+            newCoordinates.y -= (levelBox.getBBox().y);
+            return newCoordinates;
+        } else {
+            return screenPoint.matrixTransform(CTM.inverse());
+        }
+    }
+
+    function createActiveArea() {
+        var area = document.createElementNS("http://www.w3.org/2000/svg", 'svg');
+        area.setAttribute('x', levelBox.getBBox().x);
+        area.setAttribute('y', levelBox.getBBox().y);
+        area.setAttribute('width', levelBox.getBBox().width);
+        area.setAttribute('height', levelBox.getBBox().height);
+        sliderArea.appendChild(area);
+        return area;
     }
 
     function createLabel() {
@@ -1652,13 +1867,23 @@ REX.UI.SVG.SliderVertical = function (svgElem, args) {
         text.setAttributeNS(null, "style", "font-size:" + fSize + "px; font-family:Arial");
         text.textContent = label;
         sliderArea.appendChild(text);
-        text.setAttributeNS(null, "x", sliderArea.getBBox().width/2 - text.getBBox().width/2);
-        text.setAttributeNS(null, "y", (sliderArea.getBBox().height - text.getBBox().height * 1.1));
+        text.setAttributeNS(null, "x", levelBox.getBBox().x + levelBox.getBBox().width/2 - text.getBBox().width/2);
+        text.setAttributeNS(null, "y", (levelBox.getBBox().y + levelBox.getBBox().height + text.getBBox().height * 1.1));
+    }
+
+    function transformDisplay() {
+        var fontSize = digitalValue.style.fontSize;
+        if (digitalValue.parentNode.getBBox().width >= textBox.getBBox().width * 0.9)
+            digitalValue.style.fontSize = parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 0.9 + "px";
+        else if (digitalValue.parentNode.getBBox().width < textBox.getBBox().width * 0.85 && parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 1.05 < fSize)
+            digitalValue.style.fontSize = parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 1.05 + "px";
+        digitalValue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt(textBox.getBBox().x + (textBox.getBBox().width / 2
+            - digitalValue.parentNode.getBBox().width / 2) - digitalValue.parentNode.getBBox().x) + "," + parseInt(textBox.getBBox().y +
+            (textBox.getBBox().height / 2 - digitalValue.parentNode.getBBox().height / 2) - digitalValue.parentNode.getBBox().y) + ")");
     }
 
    return that;
 };
-
 /**
  * SVG component represents Switch.
  * @param {SVGElement} svgElem 
@@ -1673,8 +1898,7 @@ REX.UI.SVG.Switch = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var initialPosition = $o.initialPosition || null,
-        valuesOfPositions = stringToArray($o.valuesOfPositions) || null;
+    var positions = $o.positions || null;
  
     // Get SVG elements for manipulation
     var switchArea = that.getChildByTag("switch_area"),
@@ -1683,9 +1907,13 @@ REX.UI.SVG.Switch = function (svgElem, args) {
     //Global variables
     var centerX = switchArea.getBBox().width / 2,
         centerY = switchArea.getBBox().height / 2 - 1,
-        currentPosition,
-        points = new Array(),
-        init = false;
+        currentPosition = 0,
+        points = new Array();
+
+    var valuesOfPositions = new Array();
+    for (var j = 0; j < positions.length; j++) {
+        valuesOfPositions[j] = positions[j].valueOfPosition;
+    }
 
     var i = 0;
     var pointAngle = 360 / valuesOfPositions.length;
@@ -1694,34 +1922,27 @@ REX.UI.SVG.Switch = function (svgElem, args) {
         i++;
     }
 
-    switchArea.addEventListener("click", switchValueLeft, false);
-    switchArea.addEventListener("contextmenu", switchValueRight,false);
+    switchArea.addEventListener("click", switchValueRight, false);
+    switchArea.addEventListener("contextmenu", switchValueLeft,false);
 
     function switchValueRight(event) {
             event.preventDefault();
-            hand.setAttributeNS(null, "transform", "rotate(" + (-90 + currentPosition*pointAngle + pointAngle) + "," + centerX + "," + centerY + ")");
-            that.$c.VALUE_W.setValue(parseFloat(valuesOfPositions[(currentPosition + 1) % valuesOfPositions.length]), true);
-            points[currentPosition].style.fill = "#ffffff";
-            points[currentPosition].setAttributeNS(null, "r", 1);
             currentPosition = (currentPosition + 1) % valuesOfPositions.length;
-            points[currentPosition].style.fill = "#00ff00";
-            points[currentPosition].setAttributeNS(null, "r", 2);
+            that.$c.value_W.setValue(parseFloat(valuesOfPositions[currentPosition]), true);
+            refresh();
     }
 
     function switchValueLeft(event) {
-        hand.setAttributeNS(null, "transform", "rotate(" + (-90 + currentPosition * pointAngle - pointAngle) + "," + centerX + "," + centerY + ")");
-        points[currentPosition].style.fill = "#ffffff";
-        points[currentPosition].setAttributeNS(null, "r", 1);
+        event.preventDefault();        
         currentPosition = currentPosition - 1 % valuesOfPositions.length;
         if (currentPosition < 0) currentPosition = valuesOfPositions.length - 1;
-        that.$c.VALUE_W.setValue(parseFloat(valuesOfPositions[currentPosition]), true);
-        points[currentPosition].style.fill = "#00ff00";
-        points[currentPosition].setAttributeNS(null, "r", 2);
+        that.$c.value_W.setValue(parseFloat(valuesOfPositions[currentPosition]), true);
+        refresh();
     }
 
     function createPoint(i) {
-        var x = centerX + Math.sqrt(centerX / 1.6888 * centerX / 1.6888 + centerY / 1.6888 * centerY / 1.6888) * Math.cos((270 - pointAngle * i) * Math.PI / 180);
-        var y = centerY - Math.sqrt(centerX / 1.6888 * centerX / 1.6888 + centerY / 1.6888 * centerY / 1.6888) * Math.sin((270 - pointAngle * i) * Math.PI / 180);
+        var x = centerX + Math.sqrt(centerX / 1.6888 * centerX / 1.6888 + centerY / 1.6888 * centerY / 1.6888) * Math.cos((180 - pointAngle * i) * Math.PI / 180);
+        var y = centerY - Math.sqrt(centerX / 1.6888 * centerX / 1.6888 + centerY / 1.6888 * centerY / 1.6888) * Math.sin((180 - pointAngle * i) * Math.PI / 180);
 
         var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
         circle.setAttributeNS(null, "cx", x);
@@ -1732,13 +1953,11 @@ REX.UI.SVG.Switch = function (svgElem, args) {
         switchArea.appendChild(circle);
         points[i] = circle;
     }
-
-    // Add anonymous function as event listener. There are two events
-    // 'read' - it is called every time when item is read
-    // 'change' - called for the first time and every time item value is changed
-    that.$c.VALUE_R.on('change', function (itm) {
+    
+    var refresh_from = that.$c.value_R || that.$c.value_W;
+    refresh_from.on('change', function onChange(itm) {
         if (valuesOfPositions.lastIndexOf(itm.getValue().toString()) >= 0) {
-            currentAngle = -90 + pointAngle * valuesOfPositions.lastIndexOf(itm.getValue().toString());
+            var currentAngle = pointAngle * valuesOfPositions.lastIndexOf(itm.getValue().toString());
             hand.setAttributeNS(null, "transform", "rotate(" + currentAngle + "," + centerX + "," + centerY + ")");
             currentPosition = valuesOfPositions.lastIndexOf(itm.getValue().toString());
             for (var i = 0; i < points.length; i++) {
@@ -1750,7 +1969,7 @@ REX.UI.SVG.Switch = function (svgElem, args) {
         } else {
             for (var i = 0; i < valuesOfPositions.length -1; i++) {
                 if (itm.getValue() > parseFloat(valuesOfPositions[i]) && itm.getValue() < parseFloat(valuesOfPositions[i + 1])) {
-                    currentAngle = -90 + pointAngle * i;
+                    var currentAngle = pointAngle * i;
                     hand.setAttributeNS(null, "transform", "rotate(" + currentAngle + "," + centerX + "," + centerY + ")");
                     currentPosition = i;
                     for (var j = 0; j < points.length; j++) {
@@ -1762,26 +1981,11 @@ REX.UI.SVG.Switch = function (svgElem, args) {
                 }
             }
         }
-        if (!init && initialPosition != null) {
-            currentAngle = -90 + pointAngle * valuesOfPositions.lastIndexOf(initialPosition);
-            hand.setAttributeNS(null, "transform", "rotate(" + currentAngle + "," + centerX + "," + centerY + ")");
-            currentPosition = valuesOfPositions.lastIndexOf(initialPosition);
-            points[currentPosition].style.fill = "#00ff00";
-            points[currentPosition].setAttributeNS(null, "r", 2);
-            that.$c.VALUE_W.setValue(parseFloat(valuesOfPositions[currentPosition]), true);
-            init = true;
-        }
     });
-
-    function stringToArray(stringLine) {
-        var splitChar = " ";
-        var array = null;
-        if (stringLine.indexOf(",") >= 0)
-            splitChar = ",";
-        else if (stringLine.indexOf(" ") >= 0)
-            splitChar = " ";
-        array = stringLine.split(splitChar);
-        return array;
+    
+    function refresh(){
+        refresh_from.setValue(that.$c.value_W.getValue());
+        refresh_from.fireCallback('change');
     }
 
     return that;
@@ -1801,7 +2005,7 @@ REX.UI.SVG.SwitchOnOff = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var initialPosition = parseInt($o.initialPosition) || null;
+    var reverse_meaning = $o.reverse_meaning || false;
  
     // Get SVG elements for manipulation
     var switchArea = that.getChildByTag("switch_area"),
@@ -1815,47 +2019,41 @@ REX.UI.SVG.SwitchOnOff = function (svgElem, args) {
         init = false;
 
     switchArea.addEventListener("click", switchValue, false);
-
-    function switchValue(event) {
-        if (currentPosition == 0) {
-            hand.setAttributeNS(null, "transform", "rotate(" + 90 + "," + centerX + "," + centerY + ")");
-            that.$c.VALUE_W.setValue(true, true);
-            numberOne.style.fill = "#00ff00";
-            currentPosition = 1;
-        } else {
+    switchArea.addEventListener("contextmenu", switchValue, false);
+    
+    function refresh() {
+        if (currentPosition === 0) {
             hand.setAttributeNS(null, "transform", "rotate(" + 0 + "," + centerX + "," + centerY + ")");
-            that.$c.VALUE_W.setValue(false, true);
             numberOne.style.fill = "#ffffff";
-            currentPosition = 0;
+        }
+        else {
+            hand.setAttributeNS(null, "transform", "rotate(" + 90 + "," + centerX + "," + centerY + ")");
+            numberOne.style.fill = "#00ff00";
         }
     }
 
-    // Add anonymous function as event listener. There are two events
-    // 'read' - it is called every time when item is read
-    // 'change' - called for the first time and every time item value is changed
-    that.$c.VALUE_R.on('change', function (itm) {
-        if (!itm.getValue()) {
-            hand.setAttributeNS(null, "transform", "rotate(" + 0 + "," + centerX + "," + centerY + ")");
-            numberOne.style.fill = "#ffffff";
+    function switchValue(event) {
+        event.preventDefault();
+        if (currentPosition === 0) {            
+            that.$c.VALUE_W.setValue(!reverse_meaning, true);            
+            currentPosition = 1;                        
+        } else {            
+            that.$c.VALUE_W.setValue(reverse_meaning, true);
             currentPosition = 0;
-        } else {
-            hand.setAttributeNS(null, "transform", "rotate(" + 90 + "," + centerX + "," + centerY + ")");
-            numberOne.style.fill = "#00ff00";
-            currentPosition = 1;
         }
-       if (!init && initialPosition != null) {
-            if (initialPosition == 0){ 
-                that.$c.VALUE_W.setValue(false, true);
-                currentPosition = 0;
-            }
-            else {
-                that.$c.VALUE_W.setValue(true, true);
-                hand.setAttributeNS(null, "transform", "rotate(" + 90 + "," + centerX + "," + centerY + ")");
-                numberOne.style.fill = "#00ff00";
-                currentPosition = 1;
-            }
-            init = true;
+        refresh();
+    }
+    
+    
+    var refresh_from = that.$c.VALUE_R || that.$c.VALUE_W;
+    refresh_from.on('change', function onChange(itm) {
+        if (reverse_meaning) {
+            currentPosition = (itm.getValue() === 0) ? 1 : 0;
         }
+        else {
+            currentPosition = itm.getValue();
+        }
+        refresh();
     });
 
     return that;
@@ -1884,7 +2082,7 @@ REX.UI.SVG.Trend = function(svgElem,args) {
         width : eBB.width,
         height : eBB.height,
         backColor : $o.chart.backgroundColor,
-        backColorIntensity : 1-parseFloat($o.chart.backgroundOpacity),
+        backColorIntensity : parseFloat($o.chart.backgroundOpacity),
         joinXAxis : ($o.chart.type.toLowerCase() === 'time'),
         margin: {l:.1,t:.1,b:.1,r:.1},
         x_axis: {name: $o.xAxis.name, orientation: 'horizontal', type: REX.HELPERS.parseBoolean($o.xAxis.axisRadial) ? 'radial' : 'linear' , drawtickline: false, drawlabel: true, sectick: 4, maintick: Math.floor(eBB.width/70), scale: REX.HELPERS.parseBoolean($o.xAxis.log10Scale) ? 'log' : 'dec', min: parseFloat($o.xAxis.min), max: parseFloat($o.xAxis.max), smart: true},

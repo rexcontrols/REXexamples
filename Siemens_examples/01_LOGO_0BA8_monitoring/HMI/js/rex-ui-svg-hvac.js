@@ -1,6 +1,6 @@
 /* HVAC
-* Version 0.1.125
-* Created 2014-08-29 15:08 */
+* Version 0.1.171
+* Created 2015-06-12 14:06 */
 
 /**
  * SVG component represents Air filter.
@@ -283,7 +283,7 @@ REX.UI.SVG.ExternalThermometer = function(svgElem,args) {
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed  
-    that.$c.TEMP.on('change',function (i){
+    that.$c.temp.on('change',function (i){
       otemp.textContent = (i.getValue()).toFixed(1);
       });
 	   
@@ -296,12 +296,12 @@ REX.UI.SVG.ExternalThermometer = function(svgElem,args) {
  * @param {Object} args It is possible to specify {type:"",svg:SVG_ELEMENT,defs:DEFS_ELEMENT}
  * @returns {REX.UI.SVG.Fan} New SVG Fan component
  */
-REX.UI.SVG.Fan = function(svgElem,args) {
+REX.UI.SVG.Fan = function (svgElem, args) {
     // Inherit from base component
-    var that = Object.create(REX.UI.SVG.Component(svgElem,args));
+    var that = Object.create(REX.UI.SVG.Component(svgElem, args));
     // Store options for simple usage
-    var $o = that.options || {};    
-    
+    var $o = that.options || {};
+
     // Load options or default values
     var on_color = $o.on_color || '#00ff00';
     var error_color = $o.off_color || '#ff0000';
@@ -322,104 +322,119 @@ REX.UI.SVG.Fan = function(svgElem,args) {
             run1 = 0,
             run2 = 0,
             run3 = 0;
-                
-    doRefresh();
-        
+
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed    
-    that.$c.OHEAT.on('change', function(i) {
-        if(that.$c.OHEAT.getValue()){
-          ofan.style.fill = error_color;
-          oelectric.style.fill = error_color;
-          oheat = 1;
-        }else{
-          obox.style.fill = "white";
-          ofan.style.fill = "white";
-          oelectric.style.fill = "white";
-          oheat = 0;
+    that.$c.OHEAT.on('change', function (i) {
+        if (that.$c.OHEAT.getValue()) {
+            ofan.style.fill = error_color;
+            oelectric.style.fill = error_color;
+            oheat = 1;
+        } else {
+            obox.style.fill = "white";
+            ofan.style.fill = "white";
+            oelectric.style.fill = "white";
+            oheat = 0;
+        }
+        doRefresh();
+    });
+
+    that.$c.RUNNING.on('change', function (i) {
+        if (i.getValue()) {
+            run = 1;
+        } else {
+            run = 0;
+        }
+        doRefresh();
+    });
+
+    that.$c.L1.on('change', function (i) {
+        if (i.getValue()) {
+            run1 = 1;
+            obladesanim.setAttribute("dur", "10s");
+            power1.style.fill = on_color;
+        } else {
+            run1 = 0;
+            power1.style.fill = "white";
         }
         doRefresh();
     });
     
-    that.$c.RUNNING.on('change', function(i) {
-        if(i.getValue()){
-            run = 1;
-        }else{
-            run = 0;
-        }
-        doRefresh();   
-    });
-    
-    that.$c.L1.on('change', function(i) {
-        if(i.getValue()){
-            run1 = 1;
-            obladesanim.setAttribute("dur", "10s");
-            power1.style.fill = on_color;
-	       }else{
-            run1 = 0;
-            power1.style.fill = "white";
-	       }
-         doRefresh();
-    });
-    
+    // If L2 is set
     if (that.$c.L2) {
-	      //power2.setAttribute("visibility","visible");
-       power2.style.visibility = "visible"   
-        that.$c.L2.on('change', function(i) {
-            if(i.getValue()){
-		          run2 = 1;
-              obladesanim.setAttribute("dur", "5s");
-		          power2.style.fill = on_color;
-	          }else{
-              run2 = 0;
-		          obladesanim.setAttribute("dur", "10s");
-		          power2.style.fill = "white";
+        that.$c.L2.on('change', function (i) {
+            if (i.getValue()) {
+                run2 = 1;
+                obladesanim.setAttribute("dur", "5s");
+                power2.style.fill = on_color;
+            } else {
+                run2 = 0;
+                obladesanim.setAttribute("dur", "10s");
+                power2.style.fill = "white";
             } // Level 1
-            doRefresh();  
-            });
-    }	   
-	
+            doRefresh();
+        });
+    } else {
+        power2.style.visibility = "hidden";
+    }
+    
+    // If L3 is set
     if (that.$c.L3) {
-	      //power3.setAttribute("visibility","visible");
-       power3.style.visibility = "visible"    
-        that.$c.L3.on('change', function(i) {
-            if(i.getValue()){
-		          run3 = 1;
-              obladesanim.setAttribute("dur", "1s");
-		          power3.style.fill = on_color;
-		        }else{
-              run3 = 0;
-		          obladesanim.setAttribute("dur", "5s");
-		          power3.style.fill = "white";
+        that.$c.L3.on('change', function (i) {
+            if (i.getValue()) {
+                run3 = 1;
+                obladesanim.setAttribute("dur", "1s");
+                power3.style.fill = on_color;
+            } else {
+                run3 = 0;
+                obladesanim.setAttribute("dur", "5s");
+                power3.style.fill = "white";
             } // Level 2
             doRefresh();
-            });     
+        });
+    } else {
+        power3.style.visibility = "hidden";
     }
-    
-    function doRefresh(){
-      obladesanim.endElement();
-            if(run1 || run2 || run3){
-              obladesanim.beginElement();
-              ofan.style.fill = warning_color;
-              ofuse.style.fill = "white"; 
-              if(run){
+
+    var firstRun = true;
+
+    function startAnimation() {
+        obladesanim.beginElement();
+        firstRun = false;
+    }
+
+    function stopAnimation() {
+        if (!firstRun) { //Google Chrome workeround
+            obladesanim.endElement();
+        }
+    }
+
+    function doRefresh() {
+        stopAnimation();
+        if (run1 || run2 || run3) {
+            startAnimation();
+            ofan.style.fill = warning_color;
+            ofuse.style.fill = "white";
+            if (run) {
                 ofan.style.fill = on_color;
                 ofuse.style.fill = on_color;
-              }
-            }else if(run){
-                obladesanim.beginElement();
-                ofan.style.fill = warning_color;
-                ofuse.style.fill = on_color;
-              }else if(oheat){
-                ofan.style.fill = error_color;
-                ofuse.style.fill = "white"; 
-              }else{
-                ofan.style.fill = "white";
-                ofuse.style.fill = "white";
             }
+        } else if (run) {
+            startAnimation();
+            ofan.style.fill = warning_color;
+            ofuse.style.fill = on_color;
+        } else if (oheat) {
+            ofan.style.fill = error_color;
+            ofuse.style.fill = "white";
+        } else {
+            ofan.style.fill = "white";
+            ofuse.style.fill = "white";
+        }
     }
-    
+
+    doRefresh();
+
     return that;
 };
 
@@ -624,7 +639,7 @@ REX.UI.SVG.Thermometer = function(svgElem,args) {
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed  
-    that.$c.TEMP.on('change',function (i){
+    that.$c.temp.on('change',function (i){
       otemp.textContent = (i.getValue()).toFixed(1);
       });
 	   
