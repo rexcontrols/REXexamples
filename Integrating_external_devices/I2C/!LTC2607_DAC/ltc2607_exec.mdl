@@ -1,7 +1,7 @@
 Model {
-  Name                    "exec"
+  Name                    "ltc2607_exec"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -32,18 +32,18 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "exec"
-    Location                [35, 39, 299, 438]
+    Name                    "ltc2607_exec"
+    Location                [14, 36, 183, 373]
     #GUID                   3511e771-d54f-4db4-a329-911130732965
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [75, 48, 120, 337]
+      Position                [15, 13, 60, 302]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.01"
-      ntick0                  5
+      ntick0                  10
       ntick1                  50
       ntick2                  100
       ntick3                  1200
@@ -55,9 +55,9 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "main"
+      Name                    "ltc2607_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [155, 203, 205, 217]
+      Position                [95, 168, 145, 182]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -70,7 +70,7 @@ Model {
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "main"
+      DstBlock                "ltc2607_task"
       DstPort                 1
       #GUID                   49dfc8a6-50b3-434e-a9bc-f3c76d54b0be
     }
