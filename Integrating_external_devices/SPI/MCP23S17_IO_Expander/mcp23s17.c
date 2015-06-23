@@ -39,6 +39,7 @@ long init(void)
 		Trace(1, spi_bufRx[1]);  //	bits per word
 		Trace(2, spi_bufRx[2]);  //	clock frequency
 	
+    // Addressing the device
     spi_opcode_write = 0x40; // ( 0 | 1 | 0 | 0 | A2 | A1 | A0 | R/W ), write=0
     spi_opcode_read  = 0x41; // ( 0 | 1 | 0 | 0 | A2 | A1 | A0 | R/W ), read=1
 
