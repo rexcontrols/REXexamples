@@ -13,7 +13,6 @@ long i2c_bufTx[3]; //buffer for transmitting data
 long i2c_bufRx[3]; //buffer for receiving data
 long i2c_bus_handle;
 long i2c_chip_address;
-long i2c_register_address;
 long i2c_write_count;
 long i2c_read_count;
 long i2c_ret_fun;
