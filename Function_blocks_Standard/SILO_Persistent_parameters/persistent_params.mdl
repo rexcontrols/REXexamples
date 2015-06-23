@@ -1,0 +1,397 @@
+Model {
+  Name                    "persistent_params"
+  Version                 3.00
+  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "persistent_params"
+    Location                [222, 34, 888, 550]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Reference
+      Name                    "AND_"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [275, 283, 310, 307]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   b60546cd-2e3a-4a9c-b12c-a733973f73cb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_STARTUP"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [55, 143, 70, 167]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      1
+      t2                      0
+      t3                      3
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     off
+      #GUID                   8dfe2067-2c96-464e-878c-6a44d07bcdeb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [115, 443, 135, 457]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   8086de17-34f2-446e-a7c5-5f230a250467
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [355, 138, 375, 152]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      #GUID                   4f188903-fab6-49ca-b471-067c5c13c74c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [170, 348, 190, 362]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      #GUID                   4c979fc2-d108-4274-882c-769338725725
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_myparam2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 273, 80, 287]
+      SourceBlock             "mathlib/CNR"
+      ycn                     2
+      #GUID                   40c2ba0e-352d-4971-9ffc-2ff14aeea693
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIF_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [350, 103, 375, 117]
+      SourceBlock             "mathlib/DIF_"
+      #GUID                   3d4c64ae-1767-4085-aca1-7163d83f9ad6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIF_2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [165, 313, 190, 327]
+      SourceBlock             "mathlib/DIF_"
+      #GUID                   d1249c4d-8838-467d-91e6-f5a9db2e046f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [230, 185, 240, 195]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      #GUID                   f80ee737-e025-4845-8d34-e0b7c4bac00e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [230, 65, 240, 75]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      #GUID                   94aee994-239d-47ad-b11d-7478a4abe279
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PARR_myparam1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [270, 98, 305, 122]
+      SourceBlock             "paramlib/PARR"
+      par                     1
+      SATF                    off
+      hilim                   1
+      lolim                   -1
+      #GUID                   70f939a0-e893-4624-bcc4-b203058f82e9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [405, 103, 430, 127]
+      SourceBlock             "mathlib/REL"
+      irel                    "2: inequality (!=)"
+      #GUID                   5493a7cc-e274-43a3-bac8-e0523f711eaa
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL2"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [220, 313, 245, 337]
+      SourceBlock             "mathlib/REL"
+      irel                    "2: inequality (!=)"
+      #GUID                   afca2296-5a3c-40af-ae91-2a4a8b8ef6a1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [480, 273, 515, 297]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".CNR_myparam2:ycn"
+      SETF                    off
+      #GUID                   2d3160a2-b797-4730-a0d1-874dd1c88c91
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SILO_myparam"
+      Ports                   [3, 3, 0, 0, 0]
+      Position                [160, 98, 215, 132]
+      SourceBlock             "paramlib/SILO"
+      fname                   "myparam1.txt"
+      CSF                     off
+      CLF                     off
+      yerr                    0
+      #GUID                   ecec639c-ae66-46f6-b429-d477434a4537
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SILO_myparam2"
+      Ports                   [3, 3, 0, 0, 0]
+      Position                [355, 273, 410, 307]
+      SourceBlock             "paramlib/SILO"
+      fname                   "myparam2.txt"
+      CSF                     off
+      CLF                     off
+      yerr                    0
+      #GUID                   cd03c87a-4f74-41f9-ab7e-405aed14c456
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [170, 398, 215, 472]
+      SourceBlock             "arclib/TRND"
+      n                       1
+      l                       10000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   63c5009d-ba38-4cc2-bd58-f1eaf9699248
+    }
+    Line {
+      SrcBlock                "AND_"
+      SrcPort                 1
+      DstBlock                "SILO_myparam2"
+      DstPort                 2
+      #GUID                   4ffe2bf7-92ea-4b5b-a625-4d21fae1f55c
+    }
+    Line {
+      SrcBlock                "BIS_STARTUP"
+      SrcPort                 1
+      Points                  [45, 0]
+      #GUID                   9dc5d832-ba38-4182-83ca-aaf54e6356fc
+      Branch {
+        Points                  [0, 100; 80, 0; 0, 40]
+        DstBlock                "AND_"
+        DstPort                 1
+        #GUID                   995e38d4-fea7-45dd-bf52-029a9c9af3df
+      }
+      Branch {
+        Points                  [115, 0; 0, -35]
+        DstBlock                "PARR_myparam1"
+        DstPort                 2
+        #GUID                   68cbf973-1d05-4d02-ade2-64999009df24
+      }
+    }
+    Line {
+      SrcBlock                "CNB1"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   135a14f0-e1e7-4e9a-97cc-682b33651310
+    }
+    Line {
+      SrcBlock                "CNR_myparam2"
+      SrcPort                 1
+      Points                  [50, 0]
+      #GUID                   ab6d0883-d14f-4a38-87e2-9c285671d8e0
+      Branch {
+        Points                  [0, 40]
+        #GUID                   aec149f8-5097-4f0d-a4d1-d0423a300dc3
+        Branch {
+          DstBlock                "DIF_2"
+          DstPort                 1
+          #GUID                   19e914f7-ed3d-4361-8b06-3db9a42907e8
+        }
+        Branch {
+          Points                  [0, 90]
+          DstBlock                "TRND"
+          DstPort                 1
+          #GUID                   ad3db82e-e9f4-4224-a34a-437f0a7ffd00
+        }
+      }
+      Branch {
+        Points                  [180, 0]
+        #GUID                   a2887bff-3ff3-4085-b62a-782f5ac345d8
+        Branch {
+          Points                  [0, -25; 110, 0]
+          #GUID                   76e964e3-5897-4886-9921-cf4c18d40dcc
+        }
+        Branch {
+          DstBlock                "SILO_myparam2"
+          DstPort                 1
+          #GUID                   2ece8d92-ebd9-4967-871a-a9a8778d1ca6
+        }
+      }
+    }
+    Line {
+      SrcBlock                "CNR1"
+      SrcPort                 1
+      Points                  [10, 0]
+      DstBlock                "REL1"
+      DstPort                 2
+      #GUID                   3cbed050-5971-4c59-b7ab-e2eed5511dca
+    }
+    Line {
+      SrcBlock                "CNR2"
+      SrcPort                 1
+      Points                  [10, 0]
+      DstBlock                "REL2"
+      DstPort                 2
+      #GUID                   3d913f68-0b04-4b40-8085-0127485971d5
+    }
+    Line {
+      SrcBlock                "DIF_1"
+      SrcPort                 1
+      DstBlock                "REL1"
+      DstPort                 1
+      #GUID                   471a2680-4fe2-434f-ae2d-54a8e99e2dea
+    }
+    Line {
+      SrcBlock                "DIF_2"
+      SrcPort                 1
+      DstBlock                "REL2"
+      DstPort                 1
+      #GUID                   afc3c67f-e1fb-40c1-90e6-94cd350fc1c0
+    }
+    Line {
+      SrcBlock                "LPBRK"
+      SrcPort                 1
+      Points                  [-90, 0; 0, -75]
+      DstBlock                "SILO_myparam"
+      DstPort                 2
+      #GUID                   154f7e0b-95de-4bd8-9a3b-f509c0b4bddc
+    }
+    Line {
+      SrcBlock                "LPBRK1"
+      SrcPort                 1
+      Points                  [-90, 0; 0, 35]
+      DstBlock                "SILO_myparam"
+      DstPort                 1
+      #GUID                   712e1a11-efa1-4172-8a0c-95a3dbdb4944
+    }
+    Line {
+      SrcBlock                "PARR_myparam1"
+      SrcPort                 1
+      Points                  [15, 0]
+      #GUID                   c263b663-8af6-4bd7-921a-c26c6958cff5
+      Branch {
+        DstBlock                "DIF_1"
+        DstPort                 1
+        #GUID                   fff72a20-811d-422a-9cb2-bf53e69b52ce
+      }
+      Branch {
+        Points                  [0, -40]
+        #GUID                   a4346771-5aaf-4d33-affb-7d3649839359
+        Branch {
+          Points                  [200, 0]
+          #GUID                   f546e0e7-f9cf-46b4-abcc-f1fa762814b9
+        }
+        Branch {
+          DstBlock                "LPBRK1"
+          DstPort                 1
+          #GUID                   d920cf71-3064-4227-acf9-2c7ec76761af
+        }
+      }
+    }
+    Line {
+      SrcBlock                "REL1"
+      SrcPort                 1
+      Points                  [15, 0; 0, 75]
+      DstBlock                "LPBRK"
+      DstPort                 1
+      #GUID                   f0c9ad2f-f4ab-4dd8-b6a2-85847f20fa7c
+    }
+    Line {
+      SrcBlock                "REL2"
+      SrcPort                 1
+      Points                  [10, 0]
+      DstBlock                "AND_"
+      DstPort                 2
+      #GUID                   c5063684-3126-4aca-b15d-ecc5637634d1
+    }
+    Line {
+      SrcBlock                "SILO_myparam"
+      SrcPort                 1
+      DstBlock                "PARR_myparam1"
+      DstPort                 1
+      #GUID                   dd19380c-f59a-4014-8d58-914da1fecc5f
+    }
+    Line {
+      SrcBlock                "SILO_myparam2"
+      SrcPort                 1
+      DstBlock                "SETPR"
+      DstPort                 1
+      #GUID                   9a6c8b61-e360-4e3b-bf19-58fb914834ad
+    }
+    Annotation {
+      Position                [405, 60]
+      Text                    "tady je vase konstanta"
+      #GUID                   47a34d56-4592-48f4-8651-7d7e5ddf5689
+    }
+    Annotation {
+      Position                [355, 245]
+      Text                    "tady je vase konstanta"
+      #GUID                   82441984-4623-4939-b146-7a247e21704a
+    }
+  }
+}
