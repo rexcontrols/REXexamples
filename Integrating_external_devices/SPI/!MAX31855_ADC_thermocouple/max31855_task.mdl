@@ -1,0 +1,202 @@
+Model {
+  Name                    "max31855_task"
+  Version                 3.00
+  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "max31855_task"
+    Location                [205, 34, 760, 361]
+    #GUID                   3157d45e-4e92-4cb7-bda7-1051db13651e
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [410, 133, 430, 147]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   6204dee5-9143-428a-925b-a3e03e7d5b0c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_cold_junction"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [220, 128, 245, 142]
+      SourceBlock             "mathlib/LIN"
+      u1                      2032
+      y1                      127
+      u2                      -880
+      y2                      -55
+      #GUID                   88b5d34d-c1cc-4a4c-b62c-bda9905272d6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_thermocouple"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [220, 93, 245, 107]
+      SourceBlock             "mathlib/LIN"
+      u1                      6400
+      y1                      1600
+      u2                      -1000
+      y2                      -250
+      #GUID                   447b95ef-a4f0-4108-b46b-af91ecf3cdf0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [17, 17, 0, 0, 0]
+      Position                [55, 81, 105, 259]
+      SourceBlock             "speclib/REXLANG"
+      SID                     4
+      LibraryVersion          "1.88"
+      SourceType              "REXLANG"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      tab_matlab              "BASIC"
+      srcname                 "max31855.c"
+      srctype                 "1: STL"
+      stack                   0
+      debug                   "1: No check"
+      p0                      0
+      p1                      0
+      p2                      0
+      p3                      0
+      p4                      0
+      p5                      0
+      p6                      0
+      p7                      0
+      p8                      0
+      p9                      0
+      p10                     0
+      p11                     0
+      p12                     0
+      p13                     0
+      p14                     0
+      p15                     0
+      fname                   "/dev/spidev0.0"
+      #GUID                   9a80c6f8-ff81-462a-a9b6-ad6b44eaa6bf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [450, 88, 495, 162]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Measured values"
+      #GUID                   e03bccef-d548-4b98-a964-357d7074dbf2
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   7a39189e-9ae7-492c-b281-70e820c13d9f
+    }
+    Line {
+      SrcBlock                "LIN_cold_junction"
+      SrcPort                 1
+      Points                  [125, 0; 0, -25]
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   4fbecd90-480c-4fe0-96ea-204c2640f53e
+    }
+    Line {
+      SrcBlock                "LIN_thermocouple"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   84fd6295-eac7-4bb2-97a6-e39efd93480c
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 2
+      DstBlock                "LIN_thermocouple"
+      DstPort                 1
+      #GUID                   2cf16e13-6b2b-48a1-a667-6870d4a2d49a
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 3
+      Points                  [5, 0; 0, 25]
+      DstBlock                "LIN_cold_junction"
+      DstPort                 1
+      #GUID                   33d0e96c-a288-4ff5-be6c-ffadde8fbb37
+    }
+    Annotation {
+      Position                [200, 35]
+      Text                    "Reading MAX31855 thermocouple ADC via SPI"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   9890236f-17be-4741-997a-5ba9cd313be5
+    }
+    Annotation {
+      Position                [200, 55]
+      Text                    "See the max31855.c file for details."
+      #GUID                   93930d64-916d-4310-85f7-53fe28514322
+    }
+    Annotation {
+      Position                [160, 95]
+      Text                    "thermocouple data"
+      #GUID                   c35abfae-1813-4004-ba70-6930e5387515
+    }
+    Annotation {
+      Position                [330, 95]
+      Text                    "thermocouple temperature"
+      #GUID                   6d103d97-658d-468a-b2b5-0fba0c8bbe75
+    }
+    Annotation {
+      Position                [155, 135]
+      Text                    "cold junction\ndata"
+      #GUID                   877ad3fe-50e0-4f15-b04c-1c3ce815552b
+    }
+    Annotation {
+      Position                [325, 135]
+      Text                    "cold junction\ntemperature"
+      #GUID                   8966b91d-3916-49d0-aca0-8f4f883ea0ae
+    }
+  }
+}
