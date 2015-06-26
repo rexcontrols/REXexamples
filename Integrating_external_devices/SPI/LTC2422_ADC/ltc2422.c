@@ -7,7 +7,9 @@
 #define SPIDEV_FNAME 71 // SPI device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/spidev0.0 on the Raspberry Pi minicomputer)
 
 long output(0) channel0; //measured value from ADC channel 0 is published via output y0 of the REXLANG block
-long output(1) channel1; //measured value from ADC channel 1 is published via output y1 of the REXLANG block 
+long output(1) EXR0; //extended range indicator on channel0 (out-of-range warning)
+long output(2) channel1; //measured value from ADC channel 1 is published via output y1 of the REXLANG block
+long output(3) EXR1; //extended range indicator on channel1 (out-of-range warning)
 
 long spi_bufTx[3]; //buffer for transmitting data
 long spi_bufRx[3]; //buffer for receiving data
@@ -42,17 +44,30 @@ long init(void)
 
 int main(void)
 {
+  long EXR, SIG, CHANNEL;
+  long adc_value;
   //reading the result of ADC conversion
     spi_write_count = 0;
     spi_read_count = 3;
     spi_ret_fun = SPI(spi_bus_handle, 0, spi_bufTx, spi_write_count, spi_bufRx, spi_read_count);
 
-    if ((spi_bufRx[0] & 0x40) >> 6){ // ADC channel 1 
-      channel1 = ( (spi_bufRx[0] & 0x0F) << 16 ) + ( spi_bufRx[1] << 8) + spi_bufRx[2]; 
+    CHANNEL = (spi_bufRx[0] & 0x40) >> 6; //channel number
+    SIG = (spi_bufRx[0] & 0x20) >> 5; //SIG bit (1=positive voltage)
+    EXR = (spi_bufRx[0] & 0x10) >> 4; //EXR bit (1=extended range)
+    adc_value = ( (spi_bufRx[0] & 0x1F) << 16 ) + ( spi_bufRx[1] << 8) + spi_bufRx[2];
+    
+    if ( !SIG && (adc_value!=0) ){ 
+      adc_value = adc_value | 0xFFE00000; //filling the first 11 bits in 32-bit negative number representation      
+    }
+
+    if (CHANNEL) { // ADC channel 1 
+       channel1 = adc_value;
+       EXR1 = EXR;
     }
     else // ADC channel 0
     {
-      channel0 = ( (spi_bufRx[0] & 0x0F) << 16 ) + ( spi_bufRx[1] << 8) + spi_bufRx[2];
+      channel0 = adc_value;
+      EXR0 = EXR;
     }  
 
   return 0;
