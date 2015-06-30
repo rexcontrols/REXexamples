@@ -6,12 +6,13 @@ Modbus {
   Timeout                 1000
   Flags                   0
   Gap                     30000
-  #GUID                   b380c195-9832-4304-86ba-834580ca2828
+  #GUID                   44fcc59f-4a8b-467c-902f-81ee449e13dd
   Item {
     Name                    DO
     SlaveAdr                1
     RegisterAdr             9
-    Type                    0x00400104
+    Type                    0x00400504
     Count                   1
+    Value                   [ 0 ]
   }
 }
