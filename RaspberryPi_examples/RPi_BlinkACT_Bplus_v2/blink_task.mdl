@@ -1,0 +1,91 @@
+Model {
+  Name                    "blink_task"
+  Version                 3.00
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "blink_task"
+    Location                [205, 34, 693, 361]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "BIS_HEARTBEAT"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [115, 118, 130, 142]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      off
+      t1                      "0.7"
+      t2                      "0.8"
+      t3                      "0.9"
+      t4                      "1.0"
+      t5                      0
+      t6                      "1.0"
+      t7                      "2.0"
+      t8                      0
+      RPT                     on
+      bEdit                   off
+      #GUID                   5fc085dc-ded8-40f8-80e5-ccd5e50adb11
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [280, 118, 370, 132]
+      ShowName                off
+      GotoTag                 "RPI__GPIO47"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   054af83e-51f7-4c99-b899-3336e2f2985f
+    }
+    Line {
+      SrcBlock                "BIS_HEARTBEAT"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   3e71c7cb-0dab-4cff-b801-537d84b92965
+    }
+    Annotation {
+      Position                [230, 30]
+      Text                    "Blinking ACT LED on Raspberry Pi B+ or Raspberr"
+"y Pi 2"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   4f3c89ae-6192-44f6-a180-fe9d2f7e1234
+    }
+    Annotation {
+      Position                [110, 55]
+      Text                    "See the README.md file for details."
+      #GUID                   c2443fcf-1bb5-4ce3-a3d7-9318ebdc7466
+    }
+  }
+}
