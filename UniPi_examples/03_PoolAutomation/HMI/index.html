@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- REX HMI Template version=10.4.213 -->
+<!-- REX HMI Template version=10.7.229 -->
 
 <html>
     <head>
@@ -10,6 +10,10 @@
         <meta http-equiv="expires" content="-1" />
         <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
         <meta http-equiv="pragma" content="no-cache" />
+        
+        <!-- Allow fullscreen on mobile platforms -->
+        <meta name="mobile-web-app-capable" content="yes"><!-- Chrome -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> <!-- iOS -->
         
         
         <link rel="shortcut icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.ico">
@@ -32,7 +36,7 @@
         <script type="text/javascript" src="js/jQuery/04-jquery.ui.touch-punch.min.js"></script>
         <script type="text/javascript" src="js/jQuery/05-jquery-ui-timepicker-addon.min.js"></script>
 
-        <script type="text/javascript" src="js/rex-hmi.min.js?version=10.4.213"></script>
+        <script type="text/javascript" src="js/rex-hmi.min.js?version=10.7.229"></script>
 
 
         <script type='text/javascript'>
@@ -50,8 +54,8 @@
                   column: 2,
                   title: 'Pool monitoring',
                   rows: [
-                      {alias: 'pump', desc: 'Pool lights', cstring: 'pool_task.OR_LIGHTS:Y', type: 'DR', color_true: 'green'},
-                      {alias: 'lights', desc: 'Filtration pump', cstring: 'pool_task.ISSW_PUMP:n', type: 'DR', color_true: 'yellow', label_true: 'RUNNING', label_false: 'STOPPED'},
+                      {alias: 'lights', desc: 'Pool lights', cstring: 'pool_task.OR_LIGHTS:Y', type: 'DR', color_true: 'green'},
+                      {alias: 'pump', desc: 'Filtration pump', cstring: 'pool_task.ISSW_PUMP:n', type: 'DR', color_true: 'yellow', label_true: 'RUNNING', label_false: 'STOPPED'},
                       {alias: 'filtmode', desc: 'Filtration mode', cstring: 'pool_task.RS_NOFILTER:Q', type: 'DR', color_true: 'red', label_true: 'DISABLED', label_false: 'SCHEDULED'},
                   ]};
               REX.WebBuDi.addSection(status);
