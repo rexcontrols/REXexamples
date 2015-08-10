@@ -1,13 +1,15 @@
-/**********************************************************************************
-/*                        author: Ondrej Severa, 2013    
-/*                                Lubomir Kristek, 2014                           */
-/*                        version: 0.3                                            */
-/**********************************************************************************/
+/* REX UI SVG JS library
+* Authors: Ondrej Severa, Lubomir Kristek
+* Version 0.7.185
+* Created 2015-08-04 11:08 */
 
 // Create new namespace
 extend(REX,"UI.SVG");
 
 var REX_SVG_NS = "http://www.rexcontrols.com/rexsvg/";
+// Get current epoch in current time and substract timezone offset to get millisenconds from
+// UTC time
+var EPOCH_START = new Date(2000, 0, 1).getTime()-new Date(2000, 0, 1).getTimezoneOffset()*60*1000;
 
 $(document).ready(function() {
     var svgs = $('#content svg[rexsvg\\:module="REXSVG"]');
@@ -15,7 +17,7 @@ $(document).ready(function() {
         for (var i = 0; i < svgs.length; i++) {
             REX.UI.SVG.init(svgs[i]);
         }
-        REX.WebVis.connect();
+        REX.HMI.connect();
     }
 });
 
@@ -172,10 +174,17 @@ REX.UI.SVG.Component = function(element,args){
         // Add array of connection objects
         if(conn instanceof Array){
             for(var i=0; i<conn.length; i++){
-                REX.WebVis.addItem(
-                        conn[i].alias,
-                        replaceString(conn[i].cstring),
-                        conn[i].type);
+                if (conn[i].alias && replaceString(conn[i].cstring) && conn[i].type) {
+                    REX.HMI.addItem(
+                            conn[i].alias,
+                            replaceString(conn[i].cstring),
+                            conn[i].type);
+                }
+                else{
+                    REX.LOG.error('alias: ' + conn[i].alias 
+                            + ' cstring: ' + replaceString(conn[i].cstring)
+                            + ' or type:' + conn[i].type + ' is not defined');
+                }
             }            
         }
         else{
@@ -184,13 +193,13 @@ REX.UI.SVG.Component = function(element,args){
                     if(conn[prop] instanceof Object){
                         // If Object than add new item
                         if(conn[prop].cstring){
-                        $c[prop] = REX.WebVis.addItem(
+                        $c[prop] = REX.HMI.addItem(
                         conn[prop].alias,
                         replaceString(conn[prop].cstring),
                         conn[prop].type);
                         }
                         else {
-                            $c[prop] = REX.WebVis.$i(conn[prop].alias);
+                            $c[prop] = REX.HMI.$i(conn[prop].alias);
                             if (!$c[prop]) {
                                 REX.LOG.error(element.id + ": Alias " + itemStr + " is not found");
                                 // Assign empty Item to prevend error during initialization
@@ -201,7 +210,7 @@ REX.UI.SVG.Component = function(element,args){
                     // Othewise find item according to the alias
                     else{
                         var itemStr = replaceString(conn[prop]);
-                        var item = REX.WebVis.$i(itemStr);
+                        var item = REX.HMI.$i(itemStr);
                         if(item){$c[prop] = item;}
                         else{
                             REX.LOG.error(element.id + ": Alias "+itemStr+" is not found");                            
@@ -281,7 +290,97 @@ REX.UI.SVG.Component = function(element,args){
      */
     that.getChildByTag = function(tag){
         return getChildOfElementByTag(that.element,tag);
-    };    
+    };
+    
+    that.check = function (value, defaultVal) {
+        return (typeof value === 'undefined') ? defaultVal : value;
+    };
+    
+    that.checkNumber = function (value, defaultVal) {
+        if (typeof value === 'undefined'){
+            return defaultVal;
+        }        
+        if(REX.HELPERS.isNumber(value)){
+            return parseFloat(value);
+        }
+        else {            
+            REX.LOG.error('Parameter '+value+' is not number, using defaultValue');
+            return defaultVal;
+        }
+    };
+    
+    that.parseBoolean = function (string) {
+        if (!string) {
+            return false;
+        }
+        if (typeof string === 'string') {
+            switch (string.toLowerCase()) {
+                case "false":
+                case "no":
+                case "0":
+                case "":
+                    return false;
+                default:
+                    return true;
+            }
+        }
+        return false;
+    };
+    that.getDateFromREXSeconds = function(rexSeconds) {
+        var date = new Date((rexSeconds * 1000) + EPOCH_START);
+        return date;
+    };
+
+    that.getREXSecondsFromDate= function(date) {
+        return (date.getTime() - EPOCH_START) / 1000;
+    };
+
+    /**
+     Parse time in format "hh:mm:ss" or "hh:mm"
+     */
+    that.str2time= function(str) {
+        if (str.indexOf(':') === -1) {
+            return Number.NaN;
+        }
+        var timearr = str.split(':');
+        // "hh:mm"
+        if (timearr.length === 2) {
+            return Number(timearr[0]) * 3600 + Number(timearr[1]) * 60;
+        }
+        // "hh:mm:ss"
+        if (timearr.length === 3) {
+            return Number(timearr[0]) * 3600 + Number(timearr[1]) * 60 +
+                    Number(timearr[2]);
+        } else {
+            return Number.NaN;
+        }
+    };
+
+    that.time2str= function(totSec, format) {
+        if (totSec < 0) {
+            totSec = (3600 * 24) + totSec;
+        }
+        var hours = parseInt(totSec / 3600) % 24;
+        var minutes = parseInt(totSec / 60) % 60;
+        var seconds = totSec % 60;
+
+        var result = (hours < 10 ? "0" + hours : hours) +
+                ":" + (minutes < 10 ? "0" + minutes : minutes);
+
+        if (format && format.toLowerCase() === "hh:mm:ss") {
+            result += ":" + (seconds < 10 ? "0" + seconds : seconds);
+        }
+        return result;
+    };
+
+    that.date2str= function(date) {
+        var curr_date = date.getDate();
+        var curr_month = date.getMonth() + 1; //Months are zero based
+        var curr_year = date.getFullYear();
+        return (''+curr_year
+                + "/" + (curr_month < 10 ? "0" + curr_month : curr_month)       
+                + "/" + (curr_date < 10 ? "0" + curr_date : curr_date));
+    };
     
     return that;
 };
@@ -303,14 +402,14 @@ REX.UI.SVG.HMIConfig = function(svgElem, args) {
             if (options[o]) {
                 switch (o.toLowerCase()) {
                     case "ws_ip":
-                        REX.WebVis.setWsIP(options[o]);
+                        REX.HMI.setWsIP(options[o]);
                         break;
                     case "target_ip":
-                        REX.WebVis.setTargetIP(options[o]);
+                        REX.HMI.setTargetIP(options[o]);
                         break;
                     case "refresh_rate":
                         if (REX.HELPERS.isNumber(options[o])) {
-                            REX.WebVis.setRefreshRate(Number(options[o]));
+                            REX.HMI.setRefreshRate(Number(options[o]));
                         }
                         else {
                             REX.LOG.warn("HMIConfig: Refresh rate is not number, default value is used");
@@ -318,7 +417,13 @@ REX.UI.SVG.HMIConfig = function(svgElem, args) {
                         break;
                     case "disable_log":
                         if (REX.HELPERS.parseBoolean(options[o])) {
-                            REX.WebVis.disableLog();
+                            REX.HMI.disableLog();
+                        }
+                        break;
+                    case "debug":
+                        if (REX.HELPERS.parseBoolean(options[o])) {
+                            REX.HMI.debug = true;
+                            REX.LOG.debug('HMI Config - debug mode enabled!');
                         }
                         break;
                     default:
