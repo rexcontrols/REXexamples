@@ -5,7 +5,7 @@ This folder contains the source files for the demonstration project on monitorin
 Siemens LOGO! 0BA8 using the REX control algorithm.
 
 Run your own project in the LOGO! device. Any algorithm can be monitored and visualized. The 
-LOGO! acts as a server. See the example project logo_rex.lsc.
+LOGO! acts as a server. See the example project *logo_rex.lsc*.
 
 There is also a project for the REX Control System, which illustrates the access
 to Inputs (I, AI), Outputs (Q) and Variable Memory Table (V) from the control 
@@ -14,12 +14,17 @@ algorithm. REX acts as a client and connects to the LOGO! base module via Ethern
 Analog inputs of the LOGO! are read and stored in the TRND block in the REX 
 control algorithm, which provides a time-plot of the measured data in real-time.
 
-## Network configuration ##
-
-The IP address 192.168.1.111 is assumed in the LOGO! device. If the IP address 
-differs, **remember to change it** in the *logo_iocfg.rio* file according to your
+## Prerequisities ##
+- RexCore and S7Drv modules are installed on the target device
+- The LOGO! device is in RUN mode
+- The IP address 192.168.1.111 is assumed in the LOGO! device. If the IP address 
+differs, **remember to change it** in the configuration dialog of the IO driver file according to your
 LOGO! base module. As was already mentioned, LOGO! acts as a server the clients 
 connect to. 
+
+## Running the example ##
+- The **exec.mdl* file is the project main file
+- Open it with RexDraw, compile and download it to the target device
 
 ## User interface (HMI) ##
 The example is accompanied by a graphical user interface generated from Inkscape 
@@ -29,6 +34,7 @@ using the RexHMI extension.
 
 - [S7Drv - S7 communication driver](http://www.rexcontrols.com/media/DOC/ENGLISH/S7Drv_ENG.pdf)
 - [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##
 

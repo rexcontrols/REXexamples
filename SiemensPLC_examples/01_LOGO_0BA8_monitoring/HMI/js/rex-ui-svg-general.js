@@ -1,6 +1,6 @@
 /* GENERAL
-* Version 0.1.171
-* Created 2015-06-12 14:06 */
+* Version 0.7.185
+* Created 2015-08-04 11:08 */
 
 /**
  * SVG component represents BarGraph.
@@ -15,13 +15,13 @@ REX.UI.SVG.BarGraph = function(svgElem,args) {
     var $o = that.options || {};
     
     // Load options or default values
-    var r_min = parseFloat($o.rangeMin) || 0;       //minimum rozsahu
-    var r_max = parseFloat($o.rangeMax) || 100;     //maximum rozsahu
-    var tick_step = $o.tickStep || 5;               //krok maleho tiku
-    var main_tick_step = $o.mainTickStep || 10;     //krok hlavniho tiku s oznacenim
-    var dig_precision = $o.digitalPrecision || 2;   //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
-    var o_units = $o.units || " ";                  //jednotky
-    var colorZones = $o.colorZones || null;    //barevne zony
+    var r_min = parseFloat(that.check($o.rangeMin,0));   //minimum rozsahu
+    var r_max = parseFloat(that.check($o.rangeMax,100));         //maximum rozsahu
+    var tick_step = that.check($o.tickStep,5);          //krok maleho tiku
+    var main_tick_step = that.check($o.mainTickStep,10);//krok hlavniho tiku s oznacenim
+    var dig_precision = that.check($o.digitalPrecision,2);       //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
+    var o_units = $o.units || " ";                      //jednotky
+    var colorZones = $o.colorZones || null;             //barevne zony
     var colorOfLimits = $o.colorOfLimits || "#ff0000";
     var levelColor1 = $o.levelColor1 || "#01d2ff";
     var levelColor2 = $o.levelColor2 || "#001070";
@@ -247,9 +247,9 @@ REX.UI.SVG.Button = function(svgElem, args) {
     // Inherit from base component
     var that = Object.create(REX.UI.SVG.HTMLComponent(svgElem, args));
     var $o = that.options || {};
-    var CSScustomizable = REX.HELPERS.parseBoolean($o.CSS_customizable) || false;
-    var onMouseDownValue = REX.HELPERS.parseBoolean($o.reverseMeaning) ? 0 : 1;
-    var fontScale = parseFloat($o.fontScale) || 1;
+    var CSScustomizable = that.parseBoolean($o.CSS_customizable) || false;
+    var onMouseDownValue = that.parseBoolean($o.reverseMeaning) ? 0 : 1;
+    var fontScale = parseFloat(that.check($o.fontScale,1));
     var elementTitle = $(that.element).find('title').text();
 
     //var textElems = that.element.getElementsByTagName('text');
@@ -312,8 +312,8 @@ REX.UI.SVG.Button = function(svgElem, args) {
     var pressed = false;
 
     button.bind('touchend touchcancel touchleave mouseup mouseout', function(evt) {
-        evt.stopPropagation();
         evt.preventDefault();
+        this.blur();
         if (evt.handled !== true) {
             // Primary mouse button only       
             // Invoke only when the button was pressed before
@@ -329,9 +329,9 @@ REX.UI.SVG.Button = function(svgElem, args) {
         } else {
             return false;
         }
-    }).bind('touchstart mousedown', function(evt) {
-        evt.stopPropagation();
-        evt.preventDefault();
+    }).bind('touchstart mousedown', function(evt) {        
+        evt.preventDefault(); 
+        this.focus();
         if (evt.handled !== true) {
             // Primary mouse button only            
             if (!(evt.button && evt.button > 0)) {
@@ -422,8 +422,8 @@ REX.UI.SVG.ControlLed = function(svgElem,args) {
     var $o = that.options || {};    
     
     // Load options or default values
-    var onColor = REX.HELPERS.parseBoolean($o.reverseMeaning)? "white" : $o.color;
-    var offColor = REX.HELPERS.parseBoolean($o.reverseMeaning)? $o.color:"white";	    
+    var onColor = that.parseBoolean($o.reverseMeaning)? "white" : $o.color;
+    var offColor = that.parseBoolean($o.reverseMeaning)? $o.color:"white";	    
     
     // Get SVG elements for manipulation
     var oled1 = that.getChildByTag('radialgradient-start');
@@ -469,40 +469,53 @@ REX.UI.SVG.CustomHTML = function(svgElem, args) {
  * @param {Object} args It is possible to specify {type:"",svg:SVG_ELEMENT,defs:DEFS_ELEMENT}
  * @returns {REX.UI.SVG.Fan} New SVG Display component
  */
-REX.UI.SVG.Display = function(svgElem,args) {
+REX.UI.SVG.Display = function (svgElem, args) {    
     // Inherit from base component
-    var that = Object.create(REX.UI.SVG.Component(svgElem,args));
+    var that = Object.create(REX.UI.SVG.Component(svgElem, args));
     // Store options for simple usage
-    var $o = that.options || {};    
-    
+    var $o = that.options || {};
+
     // Load options or default values
-    var range_min = $o.rangeMin || 0;
-    var range_max = $o.rangeMax || 100;
+    var range_min = that.checkNumber($o.rangeMin, 0);
+    var range_max = that.checkNumber($o.rangeMax, 100);
     var color_max = $o.colorAbove || '#ff0000';
     var color_min = $o.colorBelow || '#ffff00';
     var color = $o.color || "black";
-    var precision = $o.precision || 4;  //pocet cifer po zaukrouhleni
-    
+    var format = $o.format || '';
+    var scale = that.checkNumber($o.scale, 1);
+    var offset = that.checkNumber($o.offset, 0);
+    var decimals = that.checkNumber($o.decimals, 4);
+
     // Get SVG elements for manipulation
     var number = that.getChildByTag("number");
-        
-    // Add anonymous function as event listener. There are two events
-    // 'read' - it is called every time when item is read
-    // 'change' - called for the first time and every time item value is changed    
-    that.$c.value.on('change',function (i){
-      if(i.getValue() < range_min){
-        number.style.fill = color_min;
-      } else if(i.getValue() > range_max){
-        number.style.fill = color_max;
-      } else {
-        number.style.fill = color;
-      }
-      
-      number.textContent = i.getValue().toFixed(precision);
-      
-      });
-      
-      return that;
+    
+    that.$c.value.on('change', function (itm) {
+        switch (format.toLowerCase()) {
+            case 'date':
+                number.textContent = that.date2str(that.getDateFromREXSeconds(itm.getValue()));
+                break;
+            case 'time':
+                number.textContent = that.getDateFromREXSeconds(itm.getValue()).toLocaleTimeString();
+                break;
+            case 'datetime':
+                number.textContent = that.date2str(that.getDateFromREXSeconds(itm.value)) + ' ' +
+                        that.getDateFromREXSeconds(itm.value).toLocaleTimeString();
+                break;
+            default:
+                if (itm.getValue() < range_min) {
+                    number.style.fill = color_min;
+                } else if (itm.getValue() > range_max) {
+                    number.style.fill = color_max;
+                } else {
+                    number.style.fill = color;
+                }
+                var resultValue = (itm.value * scale) + offset;                
+                number.textContent = '' + resultValue.toFixed(decimals);
+                break;
+        }
+    });
+
+    return that;
 };
 /**
  * SVG component represents DisplayWithBox.
@@ -518,13 +531,16 @@ REX.UI.SVG.DisplayWithBox = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var precision = $o.precision || 2,
-        rangeMin = $o.rangeMin || 0,
-        rangeMax = $o.rangeMax || 100,
+    var decimals = that.checkNumber($o.decimals,2),
+        rangeMin = that.checkNumber($o.rangeMin,0),
+        rangeMax = that.checkNumber($o.rangeMax,100),
         colorAbove = $o.colorAbove || '#ff0000',
         colorBelow = $o.colorBelow || '#ffff00',
         color = $o.color || "#00ffff",
         o_units = $o.units || " ";
+    var format = $o.format || '';
+    var scale = that.checkNumber($o.scale, 1);
+    var offset = that.checkNumber($o.offset, 0);
 
     // Get SVG elements for manipulation
     var digitalvalue_area = that.getChildByTag("digitalval_area"),
@@ -542,24 +558,57 @@ REX.UI.SVG.DisplayWithBox = function (svgElem, args) {
     units.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt(
         (center_x - units.parentNode.getBBox().width / 2) - units.parentNode.getBBox().x) + "," + 0 + ")");
 
-    // Add anonymous function as event listener. There are two events
-    // 'read' - it is called every time when item is read
-    // 'change' - called for the first time and every time item value is changed
+    function resizeFont() {
+        var fontSize = digitalvalue.style.fontSize,
+            dvBB = digitalvalue.parentNode.getBBox(),
+            tbBB = textbox.getBBox();
+        
+        // Change font size        
+        if (dvBB.width >= tbBB.width * 0.95) {
+            digitalvalue.style.fontSize = parseFloat(
+                    fontSize.substring(0, fontSize.indexOf('p'))) * 0.9 + "px";
+        }
+        else if (dvBB.width < tbBB.width * 0.9 && dvBB.height < tbBB.height) {
+            digitalvalue.style.fontSize = parseFloat(
+                    fontSize.substring(0, fontSize.indexOf('p'))) * 1.1 + "px";
+        }        
+        // Center text
+        digitalvalue.parentNode.setAttributeNS(null, "transform",
+            "translate(" + parseInt(
+                (digitalvalue_area.getBBox().width / 2 - dvBB.width / 2) - dvBB.x)
+                + "," + 0 + ")");
+    }
+    
     that.$c.value.on('change', function (itm) {
-        var fontSize = digitalvalue.style.fontSize;
-
-        if (itm.getValue() < rangeMin) digitalvalue.style.fill = colorBelow;
-        else if (itm.getValue() <= rangeMax) digitalvalue.style.fill = color;
-        else digitalvalue.style.fill = colorAbove;
-
-        digitalvalue.textContent = itm.getValue().toFixed(precision);
-        if (digitalvalue.parentNode.getBBox().width >= textbox.getBBox().width * 0.95)
-            digitalvalue.style.fontSize = parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 0.9 + "px";
-        else if (digitalvalue.parentNode.getBBox().width < textbox.getBBox().width * 0.9)
-            digitalvalue.style.fontSize = parseFloat(fontSize.substring(0, fontSize.indexOf('p'))) * 1.1 + "px";
-        digitalvalue.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt(
-            (digitalvalue_area.getBBox().width / 2 - digitalvalue.parentNode.getBBox().width / 2) - digitalvalue.parentNode.getBBox().x) + "," + 0 + ")");
+        switch (format.toLowerCase()) {
+            case 'date':
+                digitalvalue.textContent = that.date2str(that.getDateFromREXSeconds(itm.value));
+                break;
+            case 'time':
+                digitalvalue.textContent = that.getDateFromREXSeconds(itm.value).toLocaleTimeString();
+                break;
+            case 'datetime':
+                digitalvalue.textContent = that.date2str(that.getDateFromREXSeconds(itm.value)) + ' ' +
+                        that.getDateFromREXSeconds(itm.value).toLocaleTimeString();
+                break;
+            default:
+                if (itm.getValue() < rangeMin) {
+                    digitalvalue.style.fill = colorBelow;
+                }
+                else if (itm.getValue() <= rangeMax) {
+                    digitalvalue.style.fill = color;
+                }
+                else {
+                    digitalvalue.style.fill = colorAbove;
+                }
+                var resultValue = (itm.getValue() * scale) + offset;                                
+                digitalvalue.textContent = resultValue.toFixed(decimals);
+                break;
+        }
+        resizeFont();
     });
+    
+    resizeFont();
 
     return that;
 };
@@ -577,13 +626,15 @@ REX.UI.SVG.Gauge180 = function (svgElem, args) {
     var $o = that.options || {};
 
     // Load options or default values
-    var r_min = parseFloat($o.a_rangeMin) || 0;       //minimum rozsahu
-    var r_max = parseFloat($o.b_rangeMax) || 100;     //maximum rozsahu
-    var tick_step = $o.c_tickStep || 5;               //krok maleho tiku
-    var main_tick_step = $o.d_mainTickStep || 10;     //krok hlavniho tiku s oznacenim
-    var dig_precision = $o.e_digitalPrecision || 2;   //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
-    var o_units = $o.f_units || " ";                  //jednotky
-    var colorZones = $o.colorZones || null; //barevne rozsahy
+    var r_min = parseFloat(that.check($o.rangeMin,0));         //minimum rozsahu
+    var r_max = parseFloat(that.check($o.rangeMax,100));       //maximum rozsahu
+    var tick_step = that.check($o.tickStep,5);        //krok maleho tiku
+    //krok hlavniho tiku s oznacenim
+    var main_tick_step = that.check($o.mainTickStep,10);
+    //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
+    var dig_precision = that.check($o.digitalPrecision,2);   
+    var o_units = $o.units || " ";                  //jednotky
+    var colorZones = $o.colorZones || null;         //barevne rozsahy
     var colorOfLimits = $o.colorOfLimits || "#ff0000";
 
     // Get SVG elements for manipulation
@@ -807,12 +858,12 @@ REX.UI.SVG.Gauge270 = function(svgElem,args) {
     var $o = that.options || {};
     
     // Load options or default values
-    var r_min = parseFloat($o.a_rangeMin) || 0;       //minimum rozsahu
-    var r_max = parseFloat($o.b_rangeMax) || 100;     //maximum rozsahu
-    var tick_step = $o.c_tickStep || 5;               //krok maleho tiku
-    var main_tick_step = $o.d_mainTickStep || 10;     //krok hlavniho tiku s oznacenim
-    var dig_precision = $o.e_digitalPrecision || 2;   //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
-    var o_units = $o.f_units || " ";                  //jednotky
+    var r_min = parseFloat(that.check($o.rangeMin,0));         //minimum rozsahu
+    var r_max = parseFloat(that.check($o.rangeMax,100));       //maximum rozsahu
+    var tick_step = that.check($o.tickStep,5);               //krok maleho tiku
+    var main_tick_step = that.check($o.mainTickStep,10);     //krok hlavniho tiku s oznacenim
+    var dig_precision = that.check($o.digitalPrecision,2);   //pocet desetinnych mist pro zaokrouhleni digitalni hodnoty
+    var o_units = $o.units || " ";                  //jednotky
     var colorZones = $o.colorZones || null; //barevne rozsahy
     var colorOfLimits = $o.colorOfLimits || "#ff0000";
 
@@ -846,7 +897,7 @@ REX.UI.SVG.Gauge270 = function(svgElem,args) {
     hand.setAttributeNS(null, "style", "fill-opacity:1");
 
     //Set units
-    units.textContent = o_units;
+    units.textContent = ''+o_units;
     units.parentNode.setAttributeNS(null, "transform", "translate(" + parseInt((center_x - units.parentNode.getBBox().width / 2) - units.parentNode.getBBox().x) + "," + 0 + ")");
 
     //Draw ticks
@@ -1040,30 +1091,32 @@ REX.UI.SVG.GeneralComponent = function(svgElem, args) {
             R_max = hexToR(ocma) || 0,
             G_max = hexToG(ocma) || 0,
             B_max = hexToB(ocma) || 0,
-            rotationR = $o.rotationRange || 0,
-            rotationSMax = $o.rotationSignalMax || 0,
-            rotationSMin = $o.rotationSignalMin || 0,
-            rotOffsetX = parseFloat(that.element.getAttribute('inkscape:transform-center-x')) || 0,
-            rotOffsetY = parseFloat(that.element.getAttribute('inkscape:transform-center-y')) || 0,
+            rotationR = that.check($o.rotationRange,0),
+            rotationSMax = that.check($o.rotationSignalMax,0),
+            rotationSMin = that.check($o.rotationSignalMin,0),
+            rotOffsetX = parseFloat(
+                    that.element.getAttribute('inkscape:transform-center-x')) || 0,
+            rotOffsetY = parseFloat(
+                    that.element.getAttribute('inkscape:transform-center-y')) || 0,
             elemCenterX = bbox.x + bbox.width / 2,
             elemCenterY = bbox.y + bbox.height / 2,
-            scaleMax = $o.scaleMax || 0,
-            scaleMin = $o.scaleMin || 0,
-            scaleSMax = $o.scaleSignalMax || 0,
-            scaleSMin = $o.scaleSignalMin || 0,
-            scaleX = REX.HELPERS.parseBoolean($o.scaleX),
-            scaleY = REX.HELPERS.parseBoolean($o.scaleY),
-            opacityMax = $o.opacityMax || 0,
-            opacityMin = $o.opacityMin || 0,
+            scaleMax = that.check($o.scaleMax,0),
+            scaleMin = that.check($o.scaleMin,0),
+            scaleSMax = that.check($o.scaleSignalMax,0),
+            scaleSMin = that.check($o.scaleSignalMin,0),
+            scaleX = that.parseBoolean($o.scaleX),
+            scaleY = that.parseBoolean($o.scaleY),
+            opacityMax = that.check($o.opacityMax,0),
+            opacityMin = that.check($o.opacityMin,0),
             opacityR = opacityMax - opacityMin || 0,
-            opacitySMax = $o.opacitySignalMax || 0,
-            opacitySMin = $o.opacitySignalMin || 0,
-            txR = $o.xRange || 0,
-            txSMax = $o.xSignalMax || 0,
-            txSMin = $o.xSignalMin || 0,
-            tyR = $o.yRange || 0,
-            tySMax = $o.ySignalMax || 0,
-            tySMin = $o.ySignalMin || 0;
+            opacitySMax = that.check($o.opacitySignalMax,0),
+            opacitySMin = that.check($o.opacitySignalMin,0),
+            txR = that.check($o.xRange,0),
+            txSMax = that.check($o.xSignalMax,0),
+            txSMin = that.check($o.xSignalMin,0),
+            tyR = that.check($o.yRange,0),
+            tySMax = that.check($o.ySignalMax,0),
+            tySMin = that.check($o.ySignalMin,0);
     that.element.setAttribute('transform', '');
 
     that.changeColor = function(color) {
@@ -1332,7 +1385,13 @@ REX.UI.SVG.Input = function(svgElem, args) {
      // Inherit from base component
     var that = Object.create(REX.UI.SVG.HTMLComponent(svgElem, args));
     var $o = that.options || {};
-    var fontScale = parseFloat($o.fontScale) || 1;
+    
+    var fontScale = parseFloat(that.check($o.fontScale,1));    
+    var min = validateNumericOption('min', $o, -Number.MAX_VALUE);
+    var max = validateNumericOption('max', $o, Number.MAX_VALUE);
+    var scale = validateNumericOption('scale', $o, 1);
+    var offset = validateNumericOption('offset', $o, 0);        
+    var decimals = validateNumericOption('decimals', $o, 2);               
 
     that.div.setAttribute('class', 'ui-spinner ui-state-default ui-widget ui-widget-content ui-corner-all');
 
@@ -1362,21 +1421,48 @@ REX.UI.SVG.Input = function(svgElem, args) {
     $(window).resize(function () {
         updateFontSize();
     });
+    
+    function validateNumericOption(name, options, defaultValue){
+        if(options[name] && REX.HELPERS.isNumber(options[name])){
+            return options[name];
+        }
+        if(options[name] && !REX.HELPERS.isNumber(options[name]))
+        {
+           REX.LOG.error(options.alias + ": "
+                   + name 
+                   + " is not a number. Set to "
+                   + defaultValue);
+           options[name] = defaultValue;           
+           return options[name];
+        }        
+        if(options[name] !== "" && options[name] == 0){
+            return options[name];
+        }
+        else{
+            return defaultValue;
+        }        
+    }    
 
-    that.$c.value.on('read', function(i) {
-        input.val(i.getValue());
-    });
-
-    if (that.$c.value.type === 'R') {
-        REX.LOG.error('Connection String: ' + that.$c.value.cstring + '(' + that.$c.value.alias + ') is read-only');
+    if (that.$c.value_W.type === 'R') {
+        REX.LOG.error('Connection String: ' + that.$c.value_W.cstring + '(' + that.$c.value_W.alias + ') is read-only');
         return that;
     }
     
+    var refresh_from  = that.$c.value_W;
+    if(that.$c.value_R.cstring){ //Read item is defined
+        refresh_from  = that.$c.value_R;
+    }
+    // Enable periodic reading of the writegroup
+    if(refresh_from.group){refresh_from.group.readEnabled = true;}    
+    refresh_from.on('change', function(i) {
+        input.val(((i.getValue()*scale)+offset).toFixed(decimals));
+    });
+    
     input.focus(function (evt) {
-        that.$c.value.disableRefresh = true;
+        refresh_from.disableRefresh = true;
     }).blur(function (evt) {
-        that.$c.value.disableRefresh = false;        
-        that.$c.value.group.read();
+        refresh_from.disableRefresh = false; 
+        refresh_from.fireCallback('change');
     });
 
     input.addClass('ui-spinner-input');
@@ -1386,15 +1472,26 @@ REX.UI.SVG.Input = function(svgElem, args) {
             var numberStr = input.prop('value').replace(',', '.');
             if (REX.HELPERS.isNumber(numberStr))
             {
-                input.removeClass('ui-state-error');
-                that.$c.value.setValue(parseFloat(numberStr), true);
+                var number = Number(numberStr);
+                if (number >= min && number <= max) {
+                    input.removeClass('ui-state-error');
+                    number = (number - offset) / scale;
+                    that.$c.value_W.setValue(number, true);
+                    refresh_from.setValue(that.$c.value_W.getValue());
+                    refresh_from.fireCallback('change');
+                }
+                else {
+                    // TODO: Show tootltip with range
+                    input.addClass('ui-state-error');
+                    return;
+                }
             }
             else {
                 input.addClass('ui-state-error');
             }
         }
-
     });
+    
     input.keyup(function (evt) {
         var keyCode = evt.keyCode || evt.which;
         if (keyCode === 27) { //ESC keycode
@@ -1452,7 +1549,7 @@ REX.UI.SVG.PushOnOff = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var reverse_meaning = $o.reverse_meaning || false;
+    var reverse_meaning = that.parseBoolean($o.reverse_meaning);
     var type = $o.type || 'PushButton';
  
     // Get SVG elements for manipulation
@@ -1569,12 +1666,12 @@ REX.UI.SVG.SliderHorizontal = function (svgElem, args) {
         textBox = that.getChildByTag("text_box");
 
     //Load options or default values
-    var minValue = parseFloat($o.minValue) || 0,
-        maxValue = parseFloat($o.maxValue) || 100,
+    var minValue = parseFloat(that.check($o.minValue,0)),
+        maxValue = parseFloat(that.check($o.maxValue,100)),
         initialValue = parseFloat($o.initialValue) || null,
-        step = parseFloat($o.step) || 1,
-        digitalPrecision = parseFloat($o.digitalPrecision) || 0,
-        fSize = parseFloat($o.fontSize) || 18,
+        step = parseFloat(that.check($o.step,1)),
+        digitalPrecision = parseFloat(that.check($o.digitalPrecision,0)),
+        fSize = parseFloat(that.check($o.fontSize,18)),
         label = $o.label || "";
         digitalValue.style.fontSize = fSize + "px";
         createLabel();
@@ -1736,12 +1833,12 @@ REX.UI.SVG.SliderVertical = function (svgElem, args) {
         textBox = that.getChildByTag("text_box");
 
     //Load options or default values
-    var minValue = parseFloat($o.minValue) || 0,
-        maxValue = parseFloat($o.maxValue) || 100,
+    var minValue = parseFloat(that.check($o.minValue,0)),
+        maxValue = parseFloat(that.check($o.maxValue,100)),
         initialValue = parseFloat($o.initialValue) || null,
-        step = parseFloat($o.step) || 1,
-        digitalPrecision = parseFloat($o.digitalPrecision) || 0,
-        fSize = parseFloat($o.fontSize) || 18,
+        step = parseFloat(that.check($o.step,1)),
+        digitalPrecision = parseFloat(that.check($o.digitalPrecision,0)),
+        fSize = parseFloat(that.check($o.fontSize,18)),
         label = $o.label || "";
         digitalValue.style.fontSize = fSize + "px";
         createLabel();
@@ -2005,7 +2102,7 @@ REX.UI.SVG.SwitchOnOff = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var reverse_meaning = $o.reverse_meaning || false;
+    var reverse_meaning = that.parseBoolean($o.reverse_meaning);
  
     // Get SVG elements for manipulation
     var switchArea = that.getChildByTag("switch_area"),

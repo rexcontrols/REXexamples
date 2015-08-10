@@ -1,6 +1,6 @@
 /* HVAC
-* Version 0.1.171
-* Created 2015-06-12 14:06 */
+* Version 0.7.185
+* Created 2015-08-04 11:08 */
 
 /**
  * SVG component represents Air filter.
