@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Mon Mar 30 10:38:33 2009"
   ModelVersionFormat      "1.%<AutoIncrement:53>"
   ConfigurationManager    "None"
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,7 +126,7 @@ Model {
   }
   System {
     Name                    "simpleIO_exec"
-    Location                [11, 31, 210, 375]
+    Location                [14, 34, 213, 378]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -146,8 +146,8 @@ Model {
       Position                [30, 23, 75, 312]
       SourceBlock             "execlib/EXEC"
       target                  "Generic 1ms - Windows CE"
-      tick                    "0.015"
-      ntick0                  1
+      tick                    "0.01"
+      ntick0                  2
       ntick1                  50
       ntick2                  100
       ntick3                  1200
