@@ -8,6 +8,7 @@ on Raspberry Pi.
 
 - RexCore and RPiDrv module must be installed and running on the Raspberry Pi
 - I2C bus must be enabled on the Raspberry Pi
+- The wiring must comply with the attached schematics. 
 
 ## Running the example ##
 
