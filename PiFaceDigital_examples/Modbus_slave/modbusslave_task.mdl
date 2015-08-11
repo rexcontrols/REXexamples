@@ -1,7 +1,7 @@
 Model {
-  Name                    "PiFace_Modbus_task"
+  Name                    "modbusslave_task"
   Version                 3.00
-  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -32,14 +32,14 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "PiFace_Modbus_task"
-    Location                [278, 32, 573, 359]
+    Name                    "modbusslave_task"
+    Location                [278, 34, 743, 425]
     #GUID                   0ca2549b-4607-4cc3-86e5-3bb11353a870
     Block {
       BlockType               Reference
       Name                    "MTS__PiFaceDI"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [195, 21, 225, 109]
+      Position                [325, 121, 355, 209]
       SourceBlock             "inoutlib/OUTOCT"
       #GUID                   b4b07774-467c-4be1-b4b2-1467617de233
     }
@@ -47,7 +47,7 @@ Model {
       BlockType               Reference
       Name                    "MTS__PiFaceDO"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [95, 166, 125, 254]
+      Position                [130, 266, 160, 354]
       SourceBlock             "inoutlib/INOCT"
       #GUID                   91c21406-a215-4543-bca7-b3e454b31cd5
     }
@@ -55,7 +55,7 @@ Model {
       BlockType               Reference
       Name                    "RPI__PFIU"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [95, 21, 125, 109]
+      Position                [130, 121, 160, 209]
       SourceBlock             "inoutlib/INOCT"
       BackgroundColor         "yellow"
       #GUID                   bbc60b98-0f0e-412e-9e5c-1e0344edf825
@@ -64,7 +64,7 @@ Model {
       BlockType               Reference
       Name                    "RPI__PFO"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [195, 166, 225, 254]
+      Position                [325, 266, 355, 354]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
       #GUID                   63a9e915-ad3a-4c3c-bb41-07c207dac5b3
@@ -180,6 +180,47 @@ Model {
       DstBlock                "MTS__PiFaceDI"
       DstPort                 8
       #GUID                   383a70fc-7216-4f7f-85d7-a6dba223d9fe
+    }
+    Annotation {
+      Position                [105, 55]
+      Text                    "See the README.md file for details."
+      #GUID                   70a74f53-247e-49c4-8e63-64a64c8047b7
+    }
+    Annotation {
+      Position                [220, 25]
+      Text                    "Raspberry Pi with PiFace Digital as Modbus TCP "
+"slave"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   0616a74e-8fbc-4efc-baab-a740ad6238b2
+    }
+    Annotation {
+      Position                [345, 250]
+      Text                    "PiFace Digital outputs"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   7d987d63-02d7-4ad4-871a-63b50385e73b
+    }
+    Annotation {
+      Position                [145, 250]
+      Text                    "Modbus coils"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   5609ae06-3bea-4b54-bd86-0ce0da649221
+    }
+    Annotation {
+      Position                [140, 100]
+      Text                    "PiFace Digital inputs"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   21919a5c-fa84-4390-8740-4c86ad70a6de
+    }
+    Annotation {
+      Position                [335, 100]
+      Text                    "Modbus input contacts"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   1e422c55-1754-419a-a54c-20ae12a9c1cd
     }
   }
 }

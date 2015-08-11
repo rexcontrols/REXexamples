@@ -1,7 +1,7 @@
 Model {
   Name                    "test_master_task"
   Version                 3.00
-  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,22 +33,22 @@ Model {
   }
   System {
     Name                    "test_master_task"
-    Location                [270, 29, 768, 489]
+    Location                [204, 35, 810, 553]
     #GUID                   f4ddb680-563b-4fa7-9a5d-b4f1c1fa7573
     Block {
       BlockType               Reference
-      Name                    "ANDOCT"
-      Ports                   [8, 2, 0, 0, 0]
-      Position                [190, 41, 225, 129]
-      SourceBlock             "logiclib/ANDOCT"
-      nl                      0
-      #GUID                   a0796e27-fb11-4f92-a62b-c0e060b7477f
+      Name                    "BMOCT"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [245, 176, 280, 264]
+      SourceBlock             "logiclib/BMOCT"
+      shift                   0
+      #GUID                   d53ba6c3-1684-4789-af43-8b9249a01495
     }
     Block {
       BlockType               Reference
       Name                    "CNB_DO2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [290, 128, 315, 142]
+      Position                [355, 263, 380, 277]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -59,7 +59,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_DO3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [290, 168, 315, 182]
+      Position                [355, 303, 380, 317]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -70,7 +70,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_DO4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [290, 218, 315, 232]
+      Position                [355, 353, 380, 367]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -81,7 +81,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_DO5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [290, 253, 315, 267]
+      Position                [355, 388, 380, 402]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -92,7 +92,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_DO6"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [290, 293, 315, 307]
+      Position                [355, 428, 380, 442]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -103,7 +103,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_DO7"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [290, 333, 315, 347]
+      Position                [355, 468, 380, 482]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -114,7 +114,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_relay0"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [290, 48, 315, 62]
+      Position                [355, 183, 380, 197]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -125,7 +125,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_relay1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [290, 88, 315, 102]
+      Position                [355, 223, 380, 237]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -136,7 +136,7 @@ Model {
       BlockType               From
       Name                    "From_1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 43, 155, 57]
+      Position                [35, 178, 155, 192]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDI0"
@@ -147,7 +147,7 @@ Model {
       BlockType               From
       Name                    "From_2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 63, 155, 77]
+      Position                [35, 198, 155, 212]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDI1"
@@ -158,7 +158,7 @@ Model {
       BlockType               From
       Name                    "From_3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 83, 155, 97]
+      Position                [35, 218, 155, 232]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDI2"
@@ -169,7 +169,7 @@ Model {
       BlockType               From
       Name                    "From_4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 103, 155, 117]
+      Position                [35, 238, 155, 252]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDI3"
@@ -180,7 +180,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [355, 48, 475, 62]
+      Position                [420, 183, 540, 197]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDO0"
@@ -192,7 +192,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [355, 88, 475, 102]
+      Position                [420, 223, 540, 237]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDO1"
@@ -204,7 +204,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [355, 128, 475, 142]
+      Position                [420, 263, 540, 277]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDO2"
@@ -216,7 +216,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [355, 168, 475, 182]
+      Position                [420, 303, 540, 317]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDO3"
@@ -228,7 +228,7 @@ Model {
       BlockType               Reference
       Name                    "MTM__PiFaceDI4_7"
       Ports                   [0, 4, 0, 0, 0]
-      Position                [65, 152, 95, 198]
+      Position                [65, 272, 95, 318]
       SourceBlock             "inoutlib/INQUAD"
       BackgroundColor         "yellow"
       #GUID                   3dcefe7b-8148-4cd5-beee-d064cde91fca
@@ -237,7 +237,7 @@ Model {
       BlockType               Reference
       Name                    "MTM__PiFaceDO4_7"
       Ports                   [4, 0, 0, 0, 0]
-      Position                [405, 217, 435, 263]
+      Position                [470, 352, 500, 398]
       SourceBlock             "inoutlib/OUTQUAD"
       BackgroundColor         "lightBlue"
       #GUID                   9c4400f5-7db1-4f94-b9ab-14b029db3527
@@ -304,30 +304,100 @@ Model {
     Line {
       SrcBlock                "From_1"
       SrcPort                 1
-      DstBlock                "ANDOCT"
+      DstBlock                "BMOCT"
       DstPort                 1
-      #GUID                   2a3de653-4e88-4922-9d3b-48bb90a3d40f
+      #GUID                   f2ec995f-e7d9-4c74-87c7-494be56a8248
     }
     Line {
       SrcBlock                "From_2"
       SrcPort                 1
-      DstBlock                "ANDOCT"
-      DstPort                 3
-      #GUID                   e8f4dcc9-f647-4836-854a-3f6973463b6f
+      Points                  [5, 0; 0, -10]
+      DstBlock                "BMOCT"
+      DstPort                 2
+      #GUID                   f39768b6-7703-4654-881a-27b16c04beb4
     }
     Line {
       SrcBlock                "From_3"
       SrcPort                 1
-      DstBlock                "ANDOCT"
-      DstPort                 5
-      #GUID                   8ad55b22-b852-406b-89a1-f27f2753b21f
+      Points                  [15, 0; 0, -20]
+      DstBlock                "BMOCT"
+      DstPort                 3
+      #GUID                   cdd6baf3-42da-4f44-9d97-661ccb50668e
     }
     Line {
       SrcBlock                "From_4"
       SrcPort                 1
-      DstBlock                "ANDOCT"
+      Points                  [25, 0; 0, -30]
+      DstBlock                "BMOCT"
+      DstPort                 4
+      #GUID                   3deded15-2ef6-439f-a02e-ed95b48d02b4
+    }
+    Line {
+      SrcBlock                "MTM__PiFaceDI4_7"
+      SrcPort                 1
+      Points                  [95, 0; 0, -55]
+      DstBlock                "BMOCT"
+      DstPort                 5
+      #GUID                   5b9c1aba-18e0-48be-9891-729aa70f9f0f
+    }
+    Line {
+      SrcBlock                "MTM__PiFaceDI4_7"
+      SrcPort                 2
+      Points                  [105, 0; 0, -55]
+      DstBlock                "BMOCT"
+      DstPort                 6
+      #GUID                   58a84918-6817-4075-b9a2-7d6cb4574601
+    }
+    Line {
+      SrcBlock                "MTM__PiFaceDI4_7"
+      SrcPort                 3
+      Points                  [115, 0; 0, -55]
+      DstBlock                "BMOCT"
       DstPort                 7
-      #GUID                   7480a51b-ae5b-4b18-917d-de3118872432
+      #GUID                   d6d9fd59-d204-4e21-8e0a-15a51e1ba62c
+    }
+    Line {
+      SrcBlock                "MTM__PiFaceDI4_7"
+      SrcPort                 4
+      Points                  [125, 0; 0, -55]
+      DstBlock                "BMOCT"
+      DstPort                 8
+      #GUID                   113a32aa-fb7d-4e41-a7d4-ad3b375eb6f2
+    }
+    Annotation {
+      Position                [135, 20]
+      Text                    "Modbus TCP master for testing"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6896f4c8-9c52-41a4-aa3e-161191ac6c79
+    }
+    Annotation {
+      Position                [230, 55]
+      Text                    "IP address 192.168.1.100 is expected in the Mod"
+"bus TCP slave"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   2b861473-7d6a-4565-bdbf-195ed7060964
+    }
+    Annotation {
+      Position                [230, 85]
+      Text                    "Go to MTM driver configuration and press \"Spec"
+"ial edit\" for Modbus configuration.\n\nRead the README.md file for details."
+      #GUID                   d10311f2-3ce1-41db-bccd-2590a03c7fb1
+    }
+    Annotation {
+      Position                [90, 160]
+      Text                    "Modbus input contacts"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   caf350da-683c-43cb-a9cf-80086f28363c
+    }
+    Annotation {
+      Position                [485, 165]
+      Text                    "Modbus coils"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   de6703dd-c59a-4dfc-a8d5-2f83312efc00
     }
   }
 }
