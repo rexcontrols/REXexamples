@@ -8,6 +8,14 @@ Both the master and slave stations are implemented in the REX Control System
 but any of them can be replaced by another device supporting the Modbus TCP 
 protocol. 
 
+## Prerequisities ##
+- RexCore and MbDrv modules must be installed and running on the individual 
+devices to run the examples.
+
+## Running the examples ##
+- The **exec.mdl* file is the project main file.
+- Open it with RexDraw, compile and download it to the target device.
+
 ## Modbus registers##
 
 ### Data out (from the master's point of view) ###
@@ -39,9 +47,10 @@ to read the Modbus driver documentation (see below).
 
 - [MbDrv - Modbus driver](http://www.rexcontrols.com/media/DOC/ENGLISH/MbDrv_ENG.pdf)
 - [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##
 
-Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
 automation and control solutions using the REX Control System.

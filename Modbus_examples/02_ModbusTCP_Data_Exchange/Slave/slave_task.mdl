@@ -85,7 +85,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -137,7 +137,7 @@ Model {
       BlockType               Reference
       Name                    "CNI"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 362, 180, 378]
+      Position                [135, 377, 180, 393]
       SourceBlock             "mathlib/CNI"
       icn                     91
       #GUID                   85af24a5-0636-4954-b4b3-c79be87f71cb
@@ -146,7 +146,7 @@ Model {
       BlockType               Reference
       Name                    "CNI1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 431, 180, 449]
+      Position                [135, 446, 180, 464]
       SourceBlock             "mathlib/CNI"
       icn                     65432
       #GUID                   4103a37d-c230-423e-890f-c8691fe0bd18
@@ -155,7 +155,7 @@ Model {
       BlockType               Reference
       Name                    "CNI2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 467, 180, 483]
+      Position                [135, 482, 180, 498]
       SourceBlock             "mathlib/CNI"
       icn                     -32132
       #GUID                   0cd881f0-a57d-41f7-94b8-fcb5c9b65aaf
@@ -164,7 +164,7 @@ Model {
       BlockType               Reference
       Name                    "CNI3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 397, 180, 413]
+      Position                [135, 412, 180, 428]
       SourceBlock             "mathlib/CNI"
       icn                     -76
       #GUID                   b4ad60f4-31a3-4f16-a5e4-c09fb3a2b226
@@ -173,7 +173,7 @@ Model {
       BlockType               Reference
       Name                    "CNR"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 506, 180, 524]
+      Position                [135, 521, 180, 539]
       SourceBlock             "mathlib/CNR"
       ycn                     "-32.76"
       #GUID                   d47ea172-73a8-422e-9cd1-395ad546f3d1
@@ -182,7 +182,7 @@ Model {
       BlockType               Reference
       Name                    "CNR1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 546, 195, 564]
+      Position                [135, 561, 195, 579]
       SourceBlock             "mathlib/CNR"
       ycn                     "-98765.2"
       #GUID                   de365cec-a988-4f78-a550-b09b21b1f6be
@@ -305,7 +305,7 @@ Model {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 508, 380, 522]
+      Position                [260, 523, 380, 537]
       ShowName                off
       GotoTag                 "MTS__readFloat"
       TagVisibility           "local"
@@ -316,7 +316,7 @@ Model {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 363, 380, 377]
+      Position                [260, 378, 380, 392]
       ShowName                off
       GotoTag                 "MTS__readReg0"
       TagVisibility           "local"
@@ -327,7 +327,7 @@ Model {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 433, 380, 447]
+      Position                [260, 448, 380, 462]
       ShowName                off
       GotoTag                 "MTS__readReg2"
       TagVisibility           "local"
@@ -338,7 +338,7 @@ Model {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 468, 380, 482]
+      Position                [260, 483, 380, 497]
       ShowName                off
       GotoTag                 "MTS__readReg3"
       TagVisibility           "local"
@@ -349,7 +349,7 @@ Model {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 398, 380, 412]
+      Position                [260, 413, 380, 427]
       ShowName                off
       GotoTag                 "MTS__readReg1"
       TagVisibility           "local"
@@ -360,7 +360,7 @@ Model {
       BlockType               Goto
       Name                    "Goto5"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 548, 380, 562]
+      Position                [260, 563, 380, 577]
       ShowName                off
       GotoTag                 "MTS__readDouble"
       TagVisibility           "local"
@@ -464,6 +464,20 @@ Model {
 "iver configuration\nif necessary (click \"Special edit\" in the MTS block para"
 "meter dialog)"
       #GUID                   8b9a2bcc-89bd-4853-975c-50913d9b6d59
+    }
+    Annotation {
+      Position                [160, 95]
+      Text                    "Modbus Holding Registers"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   f6519f09-cbc1-4fc3-9861-d36221cc3d2f
+    }
+    Annotation {
+      Position                [320, 365]
+      Text                    "Modbus Holding Registers"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   7bec91a9-3d2c-4dcd-a46f-bcb696fb36e2
     }
   }
 }

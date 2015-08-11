@@ -85,7 +85,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -137,7 +137,7 @@ Model {
       BlockType               Reference
       Name                    "CNI"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 92, 180, 108]
+      Position                [135, 112, 180, 128]
       SourceBlock             "mathlib/CNI"
       icn                     111
       #GUID                   85af24a5-0636-4954-b4b3-c79be87f71cb
@@ -146,7 +146,7 @@ Model {
       BlockType               Reference
       Name                    "CNI1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 161, 180, 179]
+      Position                [135, 181, 180, 199]
       SourceBlock             "mathlib/CNI"
       icn                     64917
       #GUID                   4103a37d-c230-423e-890f-c8691fe0bd18
@@ -155,7 +155,7 @@ Model {
       BlockType               Reference
       Name                    "CNI2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 197, 180, 213]
+      Position                [135, 217, 180, 233]
       SourceBlock             "mathlib/CNI"
       icn                     -29999
       #GUID                   0cd881f0-a57d-41f7-94b8-fcb5c9b65aaf
@@ -164,7 +164,7 @@ Model {
       BlockType               Reference
       Name                    "CNI3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 127, 180, 143]
+      Position                [135, 147, 180, 163]
       SourceBlock             "mathlib/CNI"
       icn                     -95
       #GUID                   b4ad60f4-31a3-4f16-a5e4-c09fb3a2b226
@@ -173,7 +173,7 @@ Model {
       BlockType               Reference
       Name                    "CNR"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 246, 180, 264]
+      Position                [135, 266, 180, 284]
       SourceBlock             "mathlib/CNR"
       ycn                     "-78.57"
       #GUID                   d47ea172-73a8-422e-9cd1-395ad546f3d1
@@ -182,7 +182,7 @@ Model {
       BlockType               Reference
       Name                    "CNR1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [135, 286, 195, 304]
+      Position                [135, 306, 195, 324]
       SourceBlock             "mathlib/CNR"
       ycn                     "-79315.18"
       #GUID                   de365cec-a988-4f78-a550-b09b21b1f6be
@@ -191,7 +191,7 @@ Model {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [105, 368, 230, 382]
+      Position                [105, 383, 230, 397]
       ShowName                off
       GotoTag                 "MBM__readReg0"
       BackgroundColor         "yellow"
@@ -201,7 +201,7 @@ Model {
       BlockType               From
       Name                    "From1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [105, 408, 230, 422]
+      Position                [105, 423, 230, 437]
       ShowName                off
       GotoTag                 "MBM__readReg1"
       BackgroundColor         "yellow"
@@ -211,7 +211,7 @@ Model {
       BlockType               From
       Name                    "From2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [105, 448, 230, 462]
+      Position                [105, 463, 230, 477]
       ShowName                off
       GotoTag                 "MBM__readReg2"
       BackgroundColor         "yellow"
@@ -221,7 +221,7 @@ Model {
       BlockType               From
       Name                    "From3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [105, 488, 230, 502]
+      Position                [105, 503, 230, 517]
       ShowName                off
       GotoTag                 "MBM__readReg3"
       BackgroundColor         "yellow"
@@ -231,7 +231,7 @@ Model {
       BlockType               From
       Name                    "From4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [105, 528, 230, 542]
+      Position                [105, 543, 230, 557]
       ShowName                off
       GotoTag                 "MBM__readFloat"
       BackgroundColor         "yellow"
@@ -241,7 +241,7 @@ Model {
       BlockType               From
       Name                    "From5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [105, 568, 230, 582]
+      Position                [105, 583, 230, 597]
       ShowName                off
       GotoTag                 "MBM__readDouble"
       BackgroundColor         "yellow"
@@ -251,7 +251,7 @@ Model {
       BlockType               Reference
       Name                    "GAIN"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [290, 368, 315, 382]
+      Position                [290, 383, 315, 397]
       SourceBlock             "mathlib/GAIN"
       k                       1
       #GUID                   26399554-d3b4-4deb-96a9-99f06114f4ae
@@ -260,7 +260,7 @@ Model {
       BlockType               Reference
       Name                    "GAIN1"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [290, 408, 315, 422]
+      Position                [290, 423, 315, 437]
       SourceBlock             "mathlib/GAIN"
       k                       1
       #GUID                   0778f59a-5984-4303-a256-2e56751ffcd2
@@ -269,7 +269,7 @@ Model {
       BlockType               Reference
       Name                    "GAIN2"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [290, 448, 315, 462]
+      Position                [290, 463, 315, 477]
       SourceBlock             "mathlib/GAIN"
       k                       1
       #GUID                   2476663a-328d-41d7-b2fb-f528f81dfac1
@@ -278,7 +278,7 @@ Model {
       BlockType               Reference
       Name                    "GAIN3"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [290, 488, 315, 502]
+      Position                [290, 503, 315, 517]
       SourceBlock             "mathlib/GAIN"
       k                       1
       #GUID                   5709c21d-ec2e-4f1c-bfb1-daa556446ef9
@@ -287,7 +287,7 @@ Model {
       BlockType               Reference
       Name                    "GAIN4"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [290, 528, 315, 542]
+      Position                [290, 543, 315, 557]
       SourceBlock             "mathlib/GAIN"
       k                       1
       #GUID                   d65c27ad-7f16-4363-888f-d3756a121637
@@ -296,7 +296,7 @@ Model {
       BlockType               Reference
       Name                    "GAIN5"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [290, 568, 315, 582]
+      Position                [290, 583, 315, 597]
       SourceBlock             "mathlib/GAIN"
       k                       1
       #GUID                   51398ec5-e2f2-40c6-b48f-a7b71d4fc9fc
@@ -305,7 +305,7 @@ Model {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 248, 380, 262]
+      Position                [260, 268, 380, 282]
       ShowName                off
       GotoTag                 "MBM__writeFloat"
       TagVisibility           "local"
@@ -316,7 +316,7 @@ Model {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 93, 380, 107]
+      Position                [260, 113, 380, 127]
       ShowName                off
       GotoTag                 "MBM__writeReg0"
       TagVisibility           "local"
@@ -327,7 +327,7 @@ Model {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 163, 380, 177]
+      Position                [260, 183, 380, 197]
       ShowName                off
       GotoTag                 "MBM__writeReg2"
       TagVisibility           "local"
@@ -338,7 +338,7 @@ Model {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 198, 380, 212]
+      Position                [260, 218, 380, 232]
       ShowName                off
       GotoTag                 "MBM__writeReg3"
       TagVisibility           "local"
@@ -349,7 +349,7 @@ Model {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 128, 380, 142]
+      Position                [260, 148, 380, 162]
       ShowName                off
       GotoTag                 "MBM__writeReg1"
       TagVisibility           "local"
@@ -360,7 +360,7 @@ Model {
       BlockType               Goto
       Name                    "Goto5"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [260, 288, 380, 302]
+      Position                [260, 308, 380, 322]
       ShowName                off
       GotoTag                 "MBM__writeDouble"
       TagVisibility           "local"
@@ -465,6 +465,20 @@ Model {
 "river configuration\nif necessary (click \"Special edit\" in the MBM block par"
 "ameter dialog)"
       #GUID                   8b9a2bcc-89bd-4853-975c-50913d9b6d59
+    }
+    Annotation {
+      Position                [315, 95]
+      Text                    "Modbus Holding Registers"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   a94717cf-66fb-418e-bad0-8c38d95256a1
+    }
+    Annotation {
+      Position                [155, 370]
+      Text                    "Modbus Holding Registers"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   33498418-5c1f-41c9-8e57-8ea0a12141b3
     }
   }
 }
