@@ -37,12 +37,12 @@ Model {
     #GUID                   f4ddb680-563b-4fa7-9a5d-b4f1c1fa7573
     Block {
       BlockType               Reference
-      Name                    "ANDOCT"
-      Ports                   [8, 2, 0, 0, 0]
-      Position                [200, 96, 235, 184]
-      SourceBlock             "logiclib/ANDOCT"
-      nl                      0
-      #GUID                   a0796e27-fb11-4f92-a62b-c0e060b7477f
+      Name                    "BMOCT"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [260, 96, 295, 184]
+      SourceBlock             "logiclib/BMOCT"
+      shift                   0
+      #GUID                   35ffb76b-350a-4565-bcec-89e0a6f50269
     }
     Block {
       BlockType               From
@@ -92,7 +92,7 @@ Model {
       BlockType               Reference
       Name                    "MTS__coil4_7"
       Ports                   [0, 4, 0, 0, 0]
-      Position                [75, 207, 105, 253]
+      Position                [75, 182, 105, 228]
       SourceBlock             "inoutlib/INQUAD"
       BackgroundColor         "yellow"
       #GUID                   3dcefe7b-8148-4cd5-beee-d064cde91fca
@@ -100,30 +100,65 @@ Model {
     Line {
       SrcBlock                "From_1"
       SrcPort                 1
-      DstBlock                "ANDOCT"
+      DstBlock                "BMOCT"
       DstPort                 1
-      #GUID                   2a3de653-4e88-4922-9d3b-48bb90a3d40f
+      #GUID                   59c06b14-6940-4008-8d23-cb71b8cf0fc9
     }
     Line {
       SrcBlock                "From_2"
       SrcPort                 1
-      DstBlock                "ANDOCT"
-      DstPort                 3
-      #GUID                   e8f4dcc9-f647-4836-854a-3f6973463b6f
+      Points                  [5, 0; 0, -10]
+      DstBlock                "BMOCT"
+      DstPort                 2
+      #GUID                   263c2abf-6bf4-454f-bc74-8a24966f17ce
     }
     Line {
       SrcBlock                "From_3"
       SrcPort                 1
-      DstBlock                "ANDOCT"
-      DstPort                 5
-      #GUID                   8ad55b22-b852-406b-89a1-f27f2753b21f
+      Points                  [15, 0; 0, -20]
+      DstBlock                "BMOCT"
+      DstPort                 3
+      #GUID                   a06f6609-c041-4967-b2b8-6a3a00f37d16
     }
     Line {
       SrcBlock                "From_4"
       SrcPort                 1
-      DstBlock                "ANDOCT"
+      Points                  [25, 0; 0, -30]
+      DstBlock                "BMOCT"
+      DstPort                 4
+      #GUID                   4f68bc0d-3ddf-4a03-a755-7806e8be6c51
+    }
+    Line {
+      SrcBlock                "MTS__coil4_7"
+      SrcPort                 1
+      Points                  [95, 0; 0, -45]
+      DstBlock                "BMOCT"
+      DstPort                 5
+      #GUID                   11e91aed-94f4-4d34-97a2-6fd220495117
+    }
+    Line {
+      SrcBlock                "MTS__coil4_7"
+      SrcPort                 2
+      Points                  [105, 0; 0, -45]
+      DstBlock                "BMOCT"
+      DstPort                 6
+      #GUID                   90e5b36f-0586-44ec-b295-1ffbfc6b09c5
+    }
+    Line {
+      SrcBlock                "MTS__coil4_7"
+      SrcPort                 3
+      Points                  [115, 0; 0, -45]
+      DstBlock                "BMOCT"
       DstPort                 7
-      #GUID                   7480a51b-ae5b-4b18-917d-de3118872432
+      #GUID                   52197b6e-422b-4807-853e-bc841f42a35f
+    }
+    Line {
+      SrcBlock                "MTS__coil4_7"
+      SrcPort                 4
+      Points                  [125, 0; 0, -45]
+      DstBlock                "BMOCT"
+      DstPort                 8
+      #GUID                   1674324f-8b2b-434a-ab7c-4639117e0570
     }
     Annotation {
       Position                [145, 20]
