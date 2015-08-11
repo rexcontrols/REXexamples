@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- REX HMI Template version=10.7.229 -->
+
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+        <!-- Disable caching -->
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-store" />
+        <meta http-equiv="expires" content="-1" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        
+        <!-- Allow fullscreen on mobile platforms -->
+        <meta name="mobile-web-app-capable" content="yes"><!-- Chrome -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> <!-- iOS -->
+        
+        
+        <link rel="shortcut icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.ico">
+        <link rel="icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.png">
+
+        <title><!-- %Title% --></title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/metro-theme/jquery-ui-1.10.2.custom.css">
+        <link rel="stylesheet" type="text/css" href="css/metro-theme/jquery-ui-timepicker-addon.min.css">
+        <link rel="stylesheet" type="text/css" href="css/rex-hmi.min.css">
+
+
+        <!-- JS -->
+        <script type="text/javascript" src="js/Globalize/01-globalize.js"></script>
+        <script type="text/javascript" src="js/Globalize/02-globalize.culture.cs.js"></script>
+        <script type="text/javascript" src="js/jQuery/01-jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/02-jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/03-jquery-disabler.js"></script>
+        <script type="text/javascript" src="js/jQuery/04-jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="js/jQuery/05-jquery-ui-timepicker-addon.min.js"></script>
+
+        <script type="text/javascript" src="js/rex-hmi.min.js?version=10.7.229"></script>
+
+
+        <script type='text/javascript'>
+            $(document).ready(function() {
+              var controls = {
+                column: 1,
+                title: 'User controls',
+                rows: [
+                  {alias: 'rly1_write', desc: 'Relay1', cstring: 'buttonblink_task.CNB_RELAY1:YCN', type: 'DW'},
+                  {alias: 'out3default', desc: 'Out3 default', cstring: 'buttonblink_task.CNB_OUT3_DEFAULT:YCN', type: 'DW'},
+                  {alias: 'pushbutton', desc: 'Push button', cstring: 'buttonblink_task.RPI__PFI0U:value', type: 'DR', reverse_meaning: true, label_true: 'PRESSED', label_false: 'RELEASED'},
+                ]};
+              REX.WebBuDi.addSection(controls);
+              var status = {
+              column: 2,
+              title: 'Status of the outputs',
+              rows: [
+                {alias: 'rly1', desc: 'Relay 1', cstring: 'buttonblink_task.RPI__PFO1:value', type: 'DR'},
+                {alias: 'out2', desc: 'Output 2', cstring: 'buttonblink_task.RPI__PFO2:value', type: 'DR'},
+                {alias: 'out3', desc: 'Output 3', cstring: 'buttonblink_task.RPI__PFO3:value', type: 'DR'},
+              ]};
+              REX.WebBuDi.addSection(status);
+              // Set WS server address (use only if the websocket server 
+              // is NOT running on the same machine as the webserver providing this page)
+              // REX.WebBuDi.setWsIP('127.0.0.1:80/rex');
+              // Set REX target device address (use only if the websocket 
+              // server is NOT running on the same machine as the RexCore runtime module)
+              // REX.WebBuDi.setTargetIP('127.0.0.1');
+              // Set refresh rate (Default: 100 ms)
+              // REX.WebBuDi.setRefreshRate(100);
+              // Change title of the page
+              REX.WebBuDi.setTitle('PiFace Digital - blink example');
+              // auto connect
+              REX.WebBuDi.connect();
+            });
+    </script>
+
+    </head>
+    <body>
+        <div id="header">                    
+            <img id="rex-logo" src="images/rex_logo_white.png" alt="REX Controls" />
+            <button id='connect-btn'>Connect</button>
+            <div id='menu-btn' class="no-text-select"><img src="images/menu-icon.svg" alt="&#9776;"></div>
+            <div id="current-time"><h1>XX:XX:XX</h1></div>            
+            <div id="header-title">                        
+                <h1><!-- %Header-Title% --></h1>
+            </div>
+        </div>        
+        <div id="menu" style="display: none;">
+            <div id="log"></div>
+        </div>
+
+        <div id="content">
+            <!-- BEGIN OF CUSTOM CONTENT -->
+
+            <!-- END OF CUSTOM CONTENT -->
+        </div>
+
+        <div id="rex-chart" style="display:none;">
+            <!-- Size of the trend and viewbox must have the same size to achieve proper autoscale capabilities -->
+            <svg id="rex-charts" viewBox="0 0 1000 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+
+    </body>
+</html>
+
