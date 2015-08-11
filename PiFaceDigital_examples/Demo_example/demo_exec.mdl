@@ -1,7 +1,7 @@
 Model {
-  Name                    "Web_Controlled_PiFace_exec"
+  Name                    "demo_exec"
   Version                 3.00
-  #RexVersion             "2.10.3 rev. 4099, Date 2014-05-13"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -32,8 +32,8 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "Web_Controlled_PiFace_exec"
-    Location                [10, 31, 255, 379]
+    Name                    "demo_exec"
+    Location                [12, 34, 184, 382]
     #GUID                   06eb7513-3603-4d98-8e52-a52eb191a7dc
     Block {
       BlockType               Reference
@@ -57,7 +57,7 @@ Model {
       BlockType               Reference
       Name                    "RPI"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [130, 68, 180, 82]
+      Position                [100, 68, 150, 82]
       SourceBlock             "execlib/IODRV"
       module                  "RPiDrv"
       classname               "RPiDrv"
@@ -72,15 +72,15 @@ Model {
       BlockType               Reference
       Name                    "RPiDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [130, 33, 180, 47]
+      Position                [100, 33, 150, 47]
       SourceBlock             "execlib/MODULE"
       #GUID                   d2ed1989-cb74-4671-848c-1be18226cbe2
     }
     Block {
       BlockType               Reference
-      Name                    "Web_Controlled_PiFace_task"
+      Name                    "demo_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [130, 173, 180, 187]
+      Position                [100, 173, 150, 187]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -107,7 +107,7 @@ Model {
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "Web_Controlled_PiFace_task"
+      DstBlock                "demo_task"
       DstPort                 1
       #GUID                   cff4a95d-20ef-4f5c-bfea-6326f4863790
     }

@@ -1,7 +1,7 @@
 Model {
-  Name                    "Web_Controlled_PiFace_task"
+  Name                    "demo_task"
   Version                 3.00
-  #RexVersion             "2.10.6 rev. 5107, Date 2015-03-31"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -32,14 +32,14 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "Web_Controlled_PiFace_task"
-    Location                [267, 32, 1040, 380]
+    Name                    "demo_task"
+    Location                [206, 34, 892, 489]
     #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
     Block {
       BlockType               Reference
       Name                    "AND_"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [260, 78, 295, 102]
+      Position                [255, 173, 290, 197]
       SourceBlock             "logiclib/AND_"
       #GUID                   447520f0-65a4-4da7-99ce-64e2d1e90922
     }
@@ -47,7 +47,7 @@ Model {
       BlockType               Reference
       Name                    "BIS_BLINK"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [200, 158, 215, 182]
+      Position                [265, 278, 280, 302]
       SourceBlock             "genlib/BIS"
       Y0                      off
       t1                      "0.1"
@@ -63,27 +63,9 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "BIS_HEARTBEAT"
-      Ports                   [0, 2, 0, 0, 0]
-      Position                [525, 248, 540, 272]
-      SourceBlock             "genlib/BIS"
-      Y0                      off
-      t1                      "0.7"
-      t2                      "0.8"
-      t3                      "0.9"
-      t4                      "1.0"
-      t5                      0
-      t6                      6
-      t7                      7
-      t8                      8
-      RPT                     on
-      #GUID                   2700e8c9-d49b-4c80-bc6a-7a074586db39
-    }
-    Block {
-      BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [170, 148, 190, 162]
+      Position                [235, 268, 255, 282]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       #GUID                   60a892e9-cb37-4fec-b2a1-95dfb0a62534
@@ -92,7 +74,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_OUT4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [520, 58, 540, 72]
+      Position                [520, 138, 540, 152]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
@@ -102,7 +84,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_OUT5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [520, 88, 540, 102]
+      Position                [520, 168, 540, 182]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
@@ -112,7 +94,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_OUT6"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [520, 118, 540, 132]
+      Position                [520, 198, 540, 212]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
@@ -122,7 +104,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_OUT7"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [520, 148, 540, 162]
+      Position                [520, 228, 540, 242]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
@@ -132,37 +114,16 @@ Model {
       BlockType               Reference
       Name                    "EDGE_"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [195, 58, 220, 72]
+      Position                [195, 153, 220, 167]
       SourceBlock             "logiclib/EDGE_"
       iedge                   "1: Rising edge"
       #GUID                   d0b1d816-cd63-40f5-8c62-e203a8fc5209
     }
     Block {
       BlockType               Reference
-      Name                    "GETPR"
-      Ports                   [1, 2, 0, 0, 0]
-      Position                [275, 293, 310, 317]
-      SourceBlock             "paramlib/GETPR"
-      sc                      ".TIMER_:pt"
-      GETF                    off
-      #GUID                   790ec3d1-0b4d-4185-b083-cea88556c58d
-    }
-    Block {
-      BlockType               Goto
-      Name                    "Goto"
-      Ports                   [1, 0, 0, 0, 0]
-      Position                [565, 248, 655, 262]
-      ShowName                off
-      GotoTag                 "RPI__GPIO47"
-      TagVisibility           "local"
-      BackgroundColor         "lightBlue"
-      #GUID                   0b2b783c-0d4e-4991-bcb2-67bf99a9ce20
-    }
-    Block {
-      BlockType               Reference
       Name                    "ISSW1"
       Ports                   [3, 1, 0, 0, 0]
-      Position                [265, 148, 295, 182]
+      Position                [330, 268, 360, 302]
       SourceBlock             "logiclib/ISSW"
       #GUID                   da2d9bf7-cb6d-4528-9e44-1d3b61697cef
     }
@@ -170,7 +131,7 @@ Model {
       BlockType               Reference
       Name                    "LPBRK"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [305, 120, 315, 130]
+      Position                [295, 210, 305, 220]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
@@ -180,7 +141,7 @@ Model {
       BlockType               Reference
       Name                    "MP_START"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [140, 228, 155, 242]
+      Position                [205, 373, 220, 387]
       SourceBlock             "genlib/MP"
       pwidth                  1
       BSTATE                  off
@@ -192,7 +153,7 @@ Model {
       BlockType               Reference
       Name                    "NOT_"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [135, 18, 160, 32]
+      Position                [135, 98, 160, 112]
       SourceBlock             "logiclib/NOT_"
       #GUID                   b756a8bf-50d6-40eb-9814-0d49323e4c0e
     }
@@ -200,7 +161,7 @@ Model {
       BlockType               Reference
       Name                    "NOT_1"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [135, 58, 160, 72]
+      Position                [135, 153, 160, 167]
       SourceBlock             "logiclib/NOT_"
       #GUID                   78d10880-e558-445c-9f3c-dd5f741dfbd0
     }
@@ -208,7 +169,7 @@ Model {
       BlockType               Reference
       Name                    "NOT_2"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [135, 188, 160, 202]
+      Position                [135, 308, 160, 322]
       SourceBlock             "logiclib/NOT_"
       #GUID                   4b5e0ef1-924b-4c3a-962a-cc4182e1db2b
     }
@@ -216,7 +177,7 @@ Model {
       BlockType               Reference
       Name                    "NOT_3"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [135, 258, 160, 272]
+      Position                [135, 403, 160, 417]
       SourceBlock             "logiclib/NOT_"
       #GUID                   1a23d503-7bf9-4da2-8c95-58f3a64f39cb
     }
@@ -224,7 +185,7 @@ Model {
       BlockType               Reference
       Name                    "OR_"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [210, 248, 245, 272]
+      Position                [260, 393, 295, 417]
       SourceBlock             "logiclib/OR_"
       #GUID                   7ab2be69-71e3-4d72-92d2-54090c91d3b0
     }
@@ -232,7 +193,7 @@ Model {
       BlockType               Reference
       Name                    "RPI__PFIU"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [25, 16, 55, 104]
+      Position                [25, 96, 55, 184]
       SourceBlock             "inoutlib/INOCT"
       BackgroundColor         "yellow"
       #GUID                   1c41e766-c64e-4a79-83fb-cef14f8138d1
@@ -241,7 +202,7 @@ Model {
       BlockType               Reference
       Name                    "RPI__PFO"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [610, 16, 640, 104]
+      Position                [610, 96, 640, 184]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
       #GUID                   d725c8b4-d29a-4dfc-9202-113d24123ccd
@@ -250,23 +211,15 @@ Model {
       BlockType               Reference
       Name                    "RS"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [325, 58, 360, 82]
+      Position                [315, 153, 350, 177]
       SourceBlock             "logiclib/RS"
       #GUID                   c10730f3-41cd-4676-968c-25ae6a11e2c1
     }
     Block {
       BlockType               Reference
-      Name                    "SUB_remaining"
-      Ports                   [2, 1, 0, 0, 0]
-      Position                [365, 293, 390, 317]
-      SourceBlock             "mathlib/SUB"
-      #GUID                   bebdb11a-ac98-43a6-ba45-1414660765c6
-    }
-    Block {
-      BlockType               Reference
       Name                    "TIMER_"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [275, 248, 315, 272]
+      Position                [325, 393, 365, 417]
       SourceBlock             "logiclib/TIMER_"
       mode                    "1: Pulse generator"
       pt                      5
@@ -275,7 +228,7 @@ Model {
     Line {
       SrcBlock                "AND_"
       SrcPort                 1
-      Points                  [10, 0]
+      Points                  [5, 0]
       DstBlock                "RS"
       DstPort                 2
       #GUID                   37f6b527-6ac1-4764-95c0-1a431a0557f7
@@ -286,13 +239,6 @@ Model {
       DstBlock                "ISSW1"
       DstPort                 2
       #GUID                   071e595d-040d-43da-8d84-35f039cc5e50
-    }
-    Line {
-      SrcBlock                "BIS_HEARTBEAT"
-      SrcPort                 1
-      DstBlock                "Goto"
-      DstPort                 1
-      #GUID                   ee77c3ed-522e-4bb7-90a1-ae653439839a
     }
     Line {
       SrcBlock                "CNB"
@@ -350,16 +296,9 @@ Model {
       }
     }
     Line {
-      SrcBlock                "GETPR"
-      SrcPort                 1
-      DstBlock                "SUB_remaining"
-      DstPort                 1
-      #GUID                   57514af0-5b3f-44c9-bda7-fd2f3fdb9fab
-    }
-    Line {
       SrcBlock                "ISSW1"
       SrcPort                 1
-      Points                  [165, 0; 0, -120]
+      Points                  [100, 0; 0, -160]
       DstBlock                "RPI__PFO"
       DstPort                 3
       #GUID                   f5acee3b-9ada-4b2b-88ae-ab301c0c1309
@@ -367,7 +306,7 @@ Model {
     Line {
       SrcBlock                "LPBRK"
       SrcPort                 1
-      Points                  [-65, 0; 0, -30]
+      Points                  [-50, 0]
       DstBlock                "AND_"
       DstPort                 2
       #GUID                   86151e6f-7ab2-4dbf-8982-508c001eb8a8
@@ -375,7 +314,7 @@ Model {
     Line {
       SrcBlock                "MP_START"
       SrcPort                 1
-      Points                  [35, 0]
+      Points                  [20, 0]
       DstBlock                "OR_"
       DstPort                 1
       #GUID                   5d52d34c-8bfe-46fa-bc8c-f14121353e2d
@@ -397,7 +336,7 @@ Model {
     Line {
       SrcBlock                "NOT_2"
       SrcPort                 1
-      Points                  [85, 0]
+      Points                  [150, 0]
       DstBlock                "ISSW1"
       DstPort                 3
       #GUID                   4ab2b2a8-cf30-4a1c-be7c-e422d0bc5757
@@ -426,7 +365,7 @@ Model {
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 2
-      Points                  [55, 0; 0, 30]
+      Points                  [55, 0; 0, 45]
       DstBlock                "NOT_1"
       DstPort                 1
       #GUID                   994498cf-8534-4d3b-b136-2644313f9bc2
@@ -434,7 +373,7 @@ Model {
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 3
-      Points                  [45, 0; 0, 150]
+      Points                  [45, 0; 0, 190]
       DstBlock                "NOT_2"
       DstPort                 1
       #GUID                   8fa12a1d-79f5-4c1c-97a1-eefdc998a5f3
@@ -442,7 +381,7 @@ Model {
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 4
-      Points                  [30, 0; 0, 210]
+      Points                  [30, 0; 0, 275]
       DstBlock                "NOT_3"
       DstPort                 1
       #GUID                   0687d8b3-9d3d-43c7-ba90-5ad89753ef52
@@ -450,16 +389,16 @@ Model {
     Line {
       SrcBlock                "RS"
       SrcPort                 1
-      Points                  [25, 0]
+      Points                  [10, 0]
       #GUID                   f0f05645-b7c0-4d1e-8455-83ed400b9d58
       Branch {
-        Points                  [0, 60]
+        Points                  [0, 55]
         DstBlock                "LPBRK"
         DstPort                 1
         #GUID                   efdef72b-5dd7-4a34-96eb-dc493ab99844
       }
       Branch {
-        Points                  [65, 0; 0, -30]
+        Points                  [90, 0; 0, -45]
         DstBlock                "RPI__PFO"
         DstPort                 2
         #GUID                   4500f580-e5e0-4386-899e-d729e4b0a938
@@ -468,18 +407,43 @@ Model {
     Line {
       SrcBlock                "TIMER_"
       SrcPort                 1
-      Points                  [155, 0; 0, -200]
+      Points                  [105, 0; 0, -265]
       DstBlock                "RPI__PFO"
       DstPort                 4
       #GUID                   703c6f09-208d-4edb-82a9-32d134f4cba7
     }
-    Line {
-      SrcBlock                "TIMER_"
-      SrcPort                 2
-      Points                  [20, 0; 0, 45]
-      DstBlock                "SUB_remaining"
-      DstPort                 2
-      #GUID                   58bcd76c-e227-4b79-82d9-c61b3c67220d
+    Annotation {
+      Position                [245, 25]
+      Text                    "Demonstration algorithm for PiFace Digital on R"
+"aspberry Pi"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   588d2fb1-6ff1-488e-883d-d8a2fed35b24
+    }
+    Annotation {
+      Position                [110, 55]
+      Text                    "See the README.md file for details."
+      #GUID                   4271c14c-18e6-417c-a2e6-ed917cbd5c49
+    }
+    Annotation {
+      Position                [290, 95]
+      Text                    "simple pushbutton"
+      #GUID                   4d17a068-a3a5-4a73-9101-43fa9ef60345
+    }
+    Annotation {
+      Position                [290, 140]
+      Text                    "toggling relay state"
+      #GUID                   f9fe9b44-fd6e-4677-ba00-4483db29c08e
+    }
+    Annotation {
+      Position                [290, 255]
+      Text                    "enable blinking"
+      #GUID                   cf6364a1-518d-4438-a9e9-9e894c298dcd
+    }
+    Annotation {
+      Position                [290, 360]
+      Text                    "triggering a timer"
+      #GUID                   4635cf0e-450f-4813-bef5-8bae087e246f
     }
   }
 }
