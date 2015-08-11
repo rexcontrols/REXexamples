@@ -2,8 +2,6 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-   xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/"
    xmlns:ns0="http://www.rexcontrols.com/rexsvg"
    xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -3682,16 +3680,6 @@
          offset="1"
          style="stop-color:#35312E" />
     </linearGradient>
-    <foreignObject
-       id="foreignObject8"
-       height="1"
-       width="1"
-       y="0"
-       x="0"
-       requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
-      <i:pgfRef
-         xlink:href="#adobe_illustrator_pgf" />
-    </foreignObject>
     <linearGradient
        y2="197.72321"
        x2="27.268299"
