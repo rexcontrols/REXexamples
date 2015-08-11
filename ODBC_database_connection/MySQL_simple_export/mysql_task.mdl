@@ -1,7 +1,7 @@
 Model {
   Name                    "mysql_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,33 +33,33 @@ Model {
   }
   System {
     Name                    "mysql_task"
-    Location                [206, 33, 929, 514]
+    Location                [206, 33, 654, 359]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
-      Name                    "CNR"
+      Name                    "CNB_MAN"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [485, 123, 505, 137]
-      SourceBlock             "mathlib/CNR"
-      ycn                     1
-      #GUID                   75e32aa0-19c8-417f-92c1-ad1192045b92
+      Position                [110, 263, 130, 277]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   65103eed-85f5-4b5a-a82d-010dff99a5b9
     }
     Block {
       BlockType               Reference
-      Name                    "CNR1"
+      Name                    "CNR_power"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [485, 63, 505, 77]
+      Position                [105, 227, 140, 243]
       SourceBlock             "mathlib/CNR"
-      ycn                     3
+      ycn                     "83.7"
       #GUID                   9937f906-3f94-44d3-b34b-6dd0e9cc3e24
     }
     Block {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [590, 33, 680, 47]
+      Position                [205, 157, 325, 173]
       ShowName                off
-      GotoTag                 "DB__teplota1"
+      GotoTag                 "DB__temperature"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   a2a215a5-e794-41d6-a744-4df1e11998d9
@@ -68,9 +68,9 @@ Model {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [590, 63, 680, 77]
+      Position                [205, 192, 325, 208]
       ShowName                off
-      GotoTag                 "DB__tlak"
+      GotoTag                 "DB__valvepos"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   f2b76968-c04a-4888-a18a-de5053c66988
@@ -79,40 +79,43 @@ Model {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [590, 93, 680, 107]
+      Position                [205, 227, 325, 243]
       ShowName                off
-      GotoTag                 "DB__vykon"
+      GotoTag                 "DB__power"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   38daa646-63ee-4f83-a9a5-ae9a99682412
+      #GUID                   31743a59-2038-457a-a3e9-d417c5ad2046
     }
     Block {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [590, 123, 680, 137]
+      Position                [205, 262, 325, 278]
       ShowName                off
-      GotoTag                 "DB__teplota2"
+      GotoTag                 "DB__manual_mode"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   8cb8bfc1-a1d1-40d1-adb0-c5eb6029b635
+      #GUID                   adc617a5-9934-456e-81ca-1ee2c712bdc6
     }
     Block {
       BlockType               Reference
-      Name                    "MP"
+      Name                    "SG_sawtooth"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [485, 93, 500, 107]
-      SourceBlock             "genlib/MP"
-      pwidth                  15
-      BSTATE                  off
-      RPTF                    off
-      #GUID                   b6dd4fb2-27b3-4052-8ca7-4d8281a1bf46
+      Position                [110, 193, 135, 207]
+      SourceBlock             "genlib/SG"
+      isig                    "3: SAWTOOTH"
+      amp                     1
+      freq                    "0.003"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      #GUID                   68f1aacd-9e3a-44a4-9b77-1bb6dce297e6
     }
     Block {
       BlockType               Reference
-      Name                    "SG"
+      Name                    "SG_sine_wave"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [485, 33, 510, 47]
+      Position                [110, 158, 135, 172]
       SourceBlock             "genlib/SG"
       isig                    "1: SINE"
       amp                     100
@@ -123,37 +126,52 @@ Model {
       #GUID                   25b4c2a6-2b9c-4a3f-9543-fdcb99e63d82
     }
     Line {
-      SrcBlock                "CNR"
+      SrcBlock                "CNB_MAN"
       SrcPort                 1
       DstBlock                "Goto3"
       DstPort                 1
-      #GUID                   7a694c66-bc8b-4ba2-8cc7-43693b6fce93
+      #GUID                   b9455ee6-94db-4bd7-a42e-97414c80b4a7
     }
     Line {
-      SrcBlock                "CNR1"
-      SrcPort                 1
-      DstBlock                "Goto1"
-      DstPort                 1
-      #GUID                   f6d75666-4f1a-45fc-84e5-db9946e788a2
-    }
-    Line {
-      SrcBlock                "MP"
+      SrcBlock                "CNR_power"
       SrcPort                 1
       DstBlock                "Goto2"
       DstPort                 1
-      #GUID                   26922878-b05a-4335-89d6-89e155d505c7
+      #GUID                   99bdccab-1161-4dac-9c2c-6dfbe5a14742
     }
     Line {
-      SrcBlock                "SG"
+      SrcBlock                "SG_sawtooth"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   b6cb751f-f275-4765-b544-55d8f3bbf450
+    }
+    Line {
+      SrcBlock                "SG_sine_wave"
       SrcPort                 1
       DstBlock                "Goto"
       DstPort                 1
       #GUID                   3443823e-d2c5-4ef2-9f9c-c4a08c0d8df6
     }
     Annotation {
-      Position                [640, 15]
+      Position                [255, 140]
       Text                    "Writing data to database"
       #GUID                   5ff68ddd-5f5a-4590-9bd4-cf91c838f0a4
+    }
+    Annotation {
+      Position                [120, 20]
+      Text                    "Exporting data to database"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   cd195015-2968-4888-888a-da5311a31c2c
+    }
+    Annotation {
+      Position                [210, 65]
+      Text                    "This example illustrates exporting data from th"
+"e algorithm to MySQL database.\nDatabase access credentials must be correctly "
+"configured and ODBC data \nconnector must be installed.\n\nSee the README.md f"
+"ile for additional information."
+      #GUID                   f58a54d9-0f97-4418-8775-0b946a8ef391
     }
   }
 }
