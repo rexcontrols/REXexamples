@@ -1,7 +1,7 @@
 Model {
-  Name                    "PiFace_Ctrl_Modbus_exec"
+  Name                    "modbusmaster_exec"
   Version                 3.00
-  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -32,8 +32,8 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "PiFace_Ctrl_Modbus_exec"
-    Location                [9, 32, 254, 359]
+    Name                    "modbusmaster_exec"
+    Location                [12, 33, 257, 360]
     #GUID                   bdf91a63-cbfb-40fc-8d65-44487be250d6
     Block {
       BlockType               Reference
@@ -65,7 +65,7 @@ Model {
       NamePlacement           ""
       module                  "MbDrv"
       classname               "MtmDrv"
-      cfgname                 "PiFace_Ctrl_Modbus_cfg.rio"
+      cfgname                 "modbusmaster_iocfg.rio"
       factor                  10
       stack                   10240
       pri                     3
@@ -81,22 +81,6 @@ Model {
       ShowName                on
       NamePlacement           ""
       #GUID                   01771832-5dcb-4458-b3df-756ddfe2b1c9
-    }
-    Block {
-      BlockType               Reference
-      Name                    "PiFace_Ctrl_Modbus_task"
-      Ports                   [1, 1, 0, 0, 0]
-      Position                [120, 167, 170, 183]
-      SourceBlock             "execlib/TASK"
-      ShowName                on
-      NamePlacement           ""
-      factor                  1
-      start                   1
-      stop                    2
-      stack                   10240
-      filename                ""
-      MDLOPEN                 on
-      #GUID                   5460a77c-cb1b-4fd3-851b-e2619fb2e1b8
     }
     Block {
       BlockType               Reference
@@ -121,6 +105,22 @@ Model {
       SourceBlock             "execlib/MODULE"
       #GUID                   319d853a-ae45-45d0-b5f1-ce923a5d0f92
     }
+    Block {
+      BlockType               Reference
+      Name                    "modbusmaster_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 167, 170, 183]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   5460a77c-cb1b-4fd3-851b-e2619fb2e1b8
+    }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 1
@@ -138,7 +138,7 @@ Model {
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "PiFace_Ctrl_Modbus_task"
+      DstBlock                "modbusmaster_task"
       DstPort                 1
       #GUID                   2504ffed-10f8-4dd9-9645-e8dd68c79080
     }

@@ -1,7 +1,7 @@
 Model {
-  Name                    "PiFace_Ctrl_Modbus_task"
+  Name                    "modbusmaster_task"
   Version                 3.00
-  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -32,81 +32,94 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "PiFace_Ctrl_Modbus_task"
-    Location                [278, 32, 573, 359]
+    Name                    "modbusmaster_task"
+    Location                [278, 33, 770, 267]
     #GUID                   0ca2549b-4607-4cc3-86e5-3bb11353a870
     Block {
       BlockType               Reference
       Name                    "MTM__ControlSignals"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [195, 96, 225, 184]
+      Position                [200, 91, 230, 179]
       SourceBlock             "inoutlib/OUTOCT"
-      #GUID                   b4b07774-467c-4be1-b4b2-1467617de233
+      #GUID                   0db641c1-d91f-47a8-8185-6b225fba0587
     }
     Block {
       BlockType               Reference
       Name                    "RPI__PFIU"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [95, 96, 125, 184]
+      Position                [95, 91, 125, 179]
       SourceBlock             "inoutlib/INOCT"
       BackgroundColor         "yellow"
-      #GUID                   bbc60b98-0f0e-412e-9e5c-1e0344edf825
+      #GUID                   e945d7f5-8f16-4c2f-a303-0d42a87b6a2c
     }
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 1
       DstBlock                "MTM__ControlSignals"
       DstPort                 1
-      #GUID                   c85dc892-764a-497c-9460-3f19736e699a
+      #GUID                   1e967d61-6998-4897-aa2d-bcb948f47699
     }
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 2
       DstBlock                "MTM__ControlSignals"
       DstPort                 2
-      #GUID                   f3bc9487-9fa4-4995-b907-b6d841b6970c
+      #GUID                   2ff5e0a4-7f26-4ebb-b04d-a6958b25cfd5
     }
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 3
       DstBlock                "MTM__ControlSignals"
       DstPort                 3
-      #GUID                   e33d791b-c86c-48e9-a459-4917bbee6fe8
+      #GUID                   9c41ae80-bee8-4701-a9bf-6c319f41c916
     }
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 4
       DstBlock                "MTM__ControlSignals"
       DstPort                 4
-      #GUID                   ce02f039-4961-4917-b7f1-5952395bcafa
+      #GUID                   a9786268-3c30-47b1-b358-e98bc0a148a9
     }
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 5
       DstBlock                "MTM__ControlSignals"
       DstPort                 5
-      #GUID                   076727e4-cfeb-4cbe-9f99-0616399b0d55
+      #GUID                   08417f45-6a31-40f6-b32e-f18d7603e52a
     }
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 6
       DstBlock                "MTM__ControlSignals"
       DstPort                 6
-      #GUID                   ad01916b-92ad-4278-b1d2-70c94c5204c0
+      #GUID                   b73b57b8-a477-4397-bf91-8ee4f771ff4d
     }
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 7
       DstBlock                "MTM__ControlSignals"
       DstPort                 7
-      #GUID                   91019692-963d-4892-86eb-8028ef2821cd
+      #GUID                   959c205b-5f12-47ab-9451-9d894c016a2e
     }
     Line {
       SrcBlock                "RPI__PFIU"
       SrcPort                 8
       DstBlock                "MTM__ControlSignals"
       DstPort                 8
-      #GUID                   383a70fc-7216-4f7f-85d7-a6dba223d9fe
+      #GUID                   b4def669-ec53-430e-beae-0006cf7281b6
+    }
+    Annotation {
+      Position                [105, 50]
+      Text                    "See the README.md file for details."
+      #GUID                   8c100fcb-df0f-48d0-a45e-12071af9e8dc
+    }
+    Annotation {
+      Position                [240, 20]
+      Text                    "Controlling Modbus TCP device with inputs of Pi"
+"Face Digital"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   eb53e712-0afb-4850-9a46-930eb3ec660c
     }
   }
 }

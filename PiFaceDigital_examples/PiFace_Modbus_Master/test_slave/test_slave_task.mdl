@@ -1,7 +1,7 @@
 Model {
   Name                    "test_slave_task"
   Version                 3.00
-  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +33,13 @@ Model {
   }
   System {
     Name                    "test_slave_task"
-    Location                [270, 29, 768, 489]
+    Location                [210, 35, 673, 358]
     #GUID                   f4ddb680-563b-4fa7-9a5d-b4f1c1fa7573
     Block {
       BlockType               Reference
       Name                    "ANDOCT"
       Ports                   [8, 2, 0, 0, 0]
-      Position                [190, 41, 225, 129]
+      Position                [200, 96, 235, 184]
       SourceBlock             "logiclib/ANDOCT"
       nl                      0
       #GUID                   a0796e27-fb11-4f92-a62b-c0e060b7477f
@@ -48,7 +48,7 @@ Model {
       BlockType               From
       Name                    "From_1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 43, 155, 57]
+      Position                [45, 98, 165, 112]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil0"
@@ -59,7 +59,7 @@ Model {
       BlockType               From
       Name                    "From_2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 63, 155, 77]
+      Position                [45, 118, 165, 132]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil1"
@@ -70,7 +70,7 @@ Model {
       BlockType               From
       Name                    "From_3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 83, 155, 97]
+      Position                [45, 138, 165, 152]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil2"
@@ -81,7 +81,7 @@ Model {
       BlockType               From
       Name                    "From_4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 103, 155, 117]
+      Position                [45, 158, 165, 172]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil3"
@@ -92,7 +92,7 @@ Model {
       BlockType               Reference
       Name                    "MTS__coil4_7"
       Ports                   [0, 4, 0, 0, 0]
-      Position                [65, 152, 95, 198]
+      Position                [75, 207, 105, 253]
       SourceBlock             "inoutlib/INQUAD"
       BackgroundColor         "yellow"
       #GUID                   3dcefe7b-8148-4cd5-beee-d064cde91fca
@@ -124,6 +124,19 @@ Model {
       DstBlock                "ANDOCT"
       DstPort                 7
       #GUID                   7480a51b-ae5b-4b18-917d-de3118872432
+    }
+    Annotation {
+      Position                [145, 20]
+      Text                    "Modbus TCP slave implementation"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   483bf345-0e76-4ab3-8125-0e0289292cc6
+    }
+    Annotation {
+      Position                [230, 60]
+      Text                    "8 coils at addresses 0 to 7\n\nUse Modbus comma"
+"nds FC05 (write single coil) or FC15 (write multiple coils) at the master."
+      #GUID                   4fd9c02e-a5f3-49ae-b9b4-9a3aa33470ac
     }
   }
 }

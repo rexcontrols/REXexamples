@@ -6,7 +6,7 @@ Modbus {
   Timeout                 1000
   Flags                   12
   Gap                     30000
-  #GUID                   29165b6f-601e-449a-a8fe-bcf91290d7eb
+  #GUID                   abde078f-8519-4658-9449-a5b5ad1c02d1
   Item {
     Name                    coil0
     SlaveAdr                -1
