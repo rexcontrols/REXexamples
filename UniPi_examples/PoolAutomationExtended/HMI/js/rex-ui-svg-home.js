@@ -1,6 +1,6 @@
 /* HOME
-* Version 0.1.126
-* Created 2014-10-27 17:10 */
+* Version 0.7.185
+* Created 2015-08-04 11:08 */
 
 /**
  * SVG component represents AirCirculator.
@@ -94,7 +94,7 @@ REX.UI.SVG.Boiler = function (svgElem, args) {
     var currenttemp;
     var boileron;
 
-    that.$c.SETTEMP.on('change', function (itm) {
+    that.$c.setTemp.on('change', function (itm) {
         settemp = itm.getValue();
     });
 
@@ -108,7 +108,7 @@ REX.UI.SVG.Boiler = function (svgElem, args) {
         }
     });
 
-    that.$c.CURRENTTEMP.on('change', function (itm) {
+    that.$c.currentTemp.on('change', function (itm) {
         currenttemp = itm.getValue();
         if (boileron) {
             if (settemp < currenttemp) fire.style.opacity = "0.2";
@@ -207,7 +207,7 @@ REX.UI.SVG.HandleValve = function (svgElem, args) {
             handle.setAttributeNS(null, "transform", "rotate(" + -90 + "," + centerX + "," + centerY + ")");
             currentPosition = 1;
         }
-        if (!init && initialPosition != null) {
+        if (!init && initialPosition != '-' && initialPosition != null) {
             if (initialPosition.toLowerCase() == "off"){ 
                 that.$c.FLOW_W.setValue(false, true);
             }
@@ -276,7 +276,7 @@ REX.UI.SVG.HandleValveT = function (svgElem, args) {
             that.$c.FLOW1_W.setValue(false, true);
             currentPosition = 2;
         }
-        if (!init && initialPosition != null) {
+        if (!init && initialPosition != '-' && initialPosition != null) {
             if (initialPosition.toLowerCase() == "1"){ 
                 that.$c.FLOW1_W.setValue(true, true);
             }
@@ -293,7 +293,7 @@ REX.UI.SVG.HandleValveT = function (svgElem, args) {
             handle.setAttributeNS(null, "transform", "rotate(" + -90 + "," + centerX + "," + centerY + ")");
             currentPosition = 1;
         }
-        if (!init && initialPosition != null) {
+        if (!init && initialPosition != '-' && initialPosition != null) {
             if (initialPosition.toLowerCase() == "2") {
                 that.$c.FLOW2_W.setValue(true, true);
             }
@@ -318,91 +318,55 @@ REX.UI.SVG.Heater = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var heatingColor = $o.colorHeating || "#ff0000",
-        coolingColor = $o.colorCooling || "#0000ff",
-        offColor = $o.colorOff || "#808080";
+    var heatingColor = $o.heatingColor || "#ff0000",
+        colorMin = $o.colorMin || "#0000ff",
+        colorMax = $o.colorMax || "#ff0000",
+        colorSignalMin = $o.coloSignalMin || 0,
+        colorSignalMax = $o.coloSignalMax || 100,
+        offColor = "#808080";
  
     // Get SVG elements for manipulation
     var heaterArea = that.getChildByTag("heater_area"),
-        spiral = that.getChildByTag("spiral");
+        spiral = that.getChildByTag("spiral"),
+        heaterWindow = that.getChildByTag("heater_window");
 
     //Global variables
-    var settemp;
-    var currenttemp;
-    var heateron;
-
-    that.$c.SETTEMP.on('change', function (itm) {
-        settemp = itm.getValue();
-    });
+    var currenttemp,
+        RGBmin = hexToRGB(colorMin),
+        RGBmax = hexToRGB(colorMax);
 
     that.$c.POWER.on('change', function (itm) {
         if (itm.getValue()) {
-            heateron = true;
-        } else {
-            heateron = false;
-        }
-    });
-
-    that.$c.CURRENTTEMP.on('change', function (itm) {
-        currenttemp = itm.getValue();
-        if (heateron) {
-            if (settemp <= currenttemp) spiral.style.fill = coolingColor;
-            else spiral.style.fill = heatingColor;
+            spiral.style.fill = heatingColor;
         } else {
             spiral.style.fill = offColor;
         }
     });
 
-    return that;
-};
-
-/**
- * SVG component represents Heating.
- * @param {SVGElement} svgElem 
- * @param {Object} args It is possible to specify {type:"",svg:SVG_ELEMENT,defs:DEFS_ELEMENT}
- * @returns {REX.UI.SVG.Heating} New SVG Heating component
- */
-
-REX.UI.SVG.Heating = function (svgElem, args) {
-    // Inherit from base component
-    var that = Object.create(REX.UI.SVG.Component(svgElem, args));
-    // Store options for simple usage
-    var $o = that.options || {};
-
-    // Get options or default values
-    var colorOn = $o.colorOn || "#33ee00",
-        colorOff = $o.colorOff || "#808080";
- 
-    // Get SVG elements for manipulation
-    var heaterArea = that.getChildByTag("heating_area"),
-        heating = that.getChildByTag("heating");
-
-    //Global variables
-    var settemp;
-    var currenttemp;
-    var heatingon;
-
-    that.$c.SETTEMP.on('change', function (itm) {
-        settemp = itm.getValue();
-    });
-
-    that.$c.POWER.on('change', function (itm) {
-        if (itm.getValue()) {
-            heatingon = true;
-        } else {
-            heatingon = false;
-        }
-    });
-
-    that.$c.CURRENTTEMP.on('change', function (itm) {
+    that.$c.currentTemp.on('change', function (itm) {
         currenttemp = itm.getValue();
-        if (heatingon) {
-            if (settemp <= currenttemp) heating.style.fill = colorOff;
-            else heating.style.fill = colorOn;
-        } else {
-            heating.style.fill = colorOff;
+        var R, G, B;
+
+        if (currenttemp > colorSignalMin && currenttemp < colorSignalMax) {
+            R = Math.round(RGBmin[0] + ((RGBmax[0] - RGBmin[0]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            G = Math.round(RGBmin[1] + ((RGBmax[1] - RGBmin[1]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            B = Math.round(RGBmin[2] + ((RGBmax[2] - RGBmin[2]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            updateColor("rgb(" + R + "," + G + "," + B + ")");
         }
+        else if (currenttemp <= colorSignalMin) updateColor(colorMin);
+        else if (currenttemp >= colorSignalMax) updateColor(colorMax);
+        else updateColor(offColor);
     });
+
+    function hexToRGB(hex) {
+        hex = hex.substring(1, 7);
+        var decimal = parseInt(hex, 16);
+        return [(decimal >> 16) & 255, (decimal >> 8) & 255, decimal & 255];
+    }
+
+    function updateColor(colorString) {
+        heaterWindow.style.fill = colorString;
+    }
 
     return that;
 };
@@ -651,6 +615,79 @@ REX.UI.SVG.PumpRotation = function (svgElem, args) {
 };
 
 /**
+ * SVG component represents Heating.
+ * @param {SVGElement} svgElem 
+ * @param {Object} args It is possible to specify {type:"",svg:SVG_ELEMENT,defs:DEFS_ELEMENT}
+ * @returns {REX.UI.SVG.Heating} New SVG Heating component
+ */
+
+REX.UI.SVG.Radiator = function (svgElem, args) {
+    // Inherit from base component
+    var that = Object.create(REX.UI.SVG.Component(svgElem, args));
+    // Store options for simple usage
+    var $o = that.options || {};
+
+    // Get options or default values
+    var pipeColor = $o.inOutColor || "#0000ff",
+        colorMin = $o.colorMin || "#0000ff",
+        colorMax = $o.colorMax || "#ff0000",
+        colorSignalMin = $o.coloSignalMin || 0,
+        colorSignalMax = $o.coloSignalMax || 100,
+        offColor = "#ffffff";
+ 
+    // Get SVG elements for manipulation
+    var radiatorArea = that.getChildByTag("radiator_area"),
+        radiator = that.getChildByTag("radiator"),
+        gradient1 = that.getChildByTag("gradient1"),
+        gradient2 = that.getChildByTag("gradient2"),
+        stopC1 = that.getChildByTag("stopColor1"),
+        stopC2 = that.getChildByTag("stopColor2");
+
+
+    //Global variables
+    var currenttemp,
+        RGBmin = hexToRGB(colorMin),
+        RGBmax = hexToRGB(colorMax);
+
+    that.$c.POWER.on('change', function (itm) {
+        if (itm.getValue()) {
+            stopC1.style.stopColor = pipeColor;
+            stopC2.style.stopColor = pipeColor;
+        } else {
+            stopC1.style.stopColor = offColor;
+            stopC2.style.stopColor = offColor;
+        }
+    });
+
+    that.$c.currentTemp.on('change', function (itm) {
+        currenttemp = itm.getValue();
+        var R, G, B;
+
+        if (currenttemp > colorSignalMin && currenttemp < colorSignalMax) {
+            R = Math.round(RGBmin[0] + ((RGBmax[0] - RGBmin[0]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            G = Math.round(RGBmin[1] + ((RGBmax[1] - RGBmin[1]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            B = Math.round(RGBmin[2] + ((RGBmax[2] - RGBmin[2]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            updateColor("rgb(" + R + "," + G + "," + B + ")");
+        }
+        else if (currenttemp <= colorSignalMin) updateColor(colorMin);
+        else if (currenttemp >= colorSignalMax) updateColor(colorMax);
+        else updateColor(offColor);
+    });
+
+    function hexToRGB(hex) {
+        hex = hex.substring(1, 7);
+        var decimal = parseInt(hex, 16);
+        return [(decimal >> 16) & 255, (decimal >> 8) & 255, decimal & 255];
+    }
+
+    function updateColor(colorString) {
+        radiator.style.fill = colorString;
+    }
+
+    return that;
+};
+
+/**
  * SVG component represents Shower.
  * @param {SVGElement} svgElem 
  * @param {Object} args It is possible to specify {type:"",svg:SVG_ELEMENT,defs:DEFS_ELEMENT}
@@ -719,7 +756,7 @@ REX.UI.SVG.Tank = function (svgElem, args) {
     // Add anonymous function as event listener. There are two events
     // 'read' - it is called every time when item is read
     // 'change' - called for the first time and every time item value is changed
-    that.$c.LEVEL.on('change', function (itm) {
+    that.$c.level.on('change', function (itm) {
         var currentLevel = itm.getValue();
         if (currentLevel >= 0 && currentLevel <= capacity) {
             tankLevel.setAttributeNS(null, "height",(levelWindow.getBBox().height * currentLevel / capacity));
@@ -763,45 +800,69 @@ REX.UI.SVG.WaterBoiler = function (svgElem, args) {
     var $o = that.options || {};
 
     // Get options or default values
-    var heatingColor = $o.colorHeating || "#ff0000",
-        coolingColor = $o.colorCooling || "#0000ff",
-        offColor = $o.colorOff || "#808080";
+    var heatingColor = $o.heatingColor || "#ff0000",
+        coolingColor = $o.coolingColor || "#0000ff",
+        colorMax = $o.colorMax || "#ff0000",
+        colorMin = $o.colorMin || "#0000ff",
+        colorSignalMin = $o.colorSignalMin || 0,
+        colorSignalMax = $o.colorSignalMax || 10,
+        offColor = "#c7c7c7";
  
     // Get SVG elements for manipulation
     var boilerArea = that.getChildByTag("boiler_area"),
         levelWindow = that.getChildByTag("level_window"),
-        spiral = that.getChildByTag("spiral");
+        spiral = that.getChildByTag("spiral"),
+        gradient = that.getChildByTag("gradient"),
+        stopColorLeft = that.getChildByTag("stopCLeft"),
+        stopColorRight = that.getChildByTag("stopCRight");
+        levelWindow.style.fill = "url(#" + gradient.id + ")";
 
-    //Global variables
-    var settemp;
-    var currenttemp;
-    var heateron;
+    var currenttemp,
+        RGBmin = hexToRGB(colorMin),
+        RGBmax = hexToRGB(colorMax);
 
-    that.$c.SETTEMP.on('change', function (itm) {
-        settemp = itm.getValue();
-    });
-
-    that.$c.POWER.on('change', function (itm) {
-        if (itm.getValue()) {
-            heateron = true;
-            levelWindow.style.fill = "#00bbff";
-        } else {
-            heateron = false;
-            levelWindow.style.fill = "#f2f2f2";
+    that.$c.power.on('change', function (itm) {
+        switch (itm.getValue()) {
+            case 0:
+                spiral.style.fill = offColor;
+                break;
+            case 1:
+                spiral.style.fill = heatingColor;
+                break;
+            case -1:
+                spiral.style.fill = coolingColor;
+                break;
+            default:
+                spiral.style.fill = offColor;
         }
     });
 
-    that.$c.CURRENTTEMP.on('change', function (itm) {
+    that.$c.currentTemp.on('change', function (itm) {
         currenttemp = itm.getValue();
-        if (heateron) {
-            if (settemp <= currenttemp) spiral.style.fill = coolingColor;
-            else spiral.style.fill = heatingColor;
-        } else {
-            spiral.style.fill = offColor;
-        }
+        var R, G, B;
+
+        if (currenttemp > colorSignalMin && currenttemp < colorSignalMax) {
+            R = Math.round(RGBmin[0] + ((RGBmax[0] - RGBmin[0]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            G = Math.round(RGBmin[1] + ((RGBmax[1] - RGBmin[1]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            B = Math.round(RGBmin[2] + ((RGBmax[2] - RGBmin[2]) * (currenttemp - colorSignalMin)) / (colorSignalMax - colorSignalMin));
+            updateColor("rgb(" + R + "," + G + "," + B + ")");
+        } 
+        else if (currenttemp <= colorSignalMin) updateColor(colorMin);
+        else if (currenttemp >= colorSignalMax) updateColor(colorMax);
+        else updateColor(offColor);
     });
+
+    function hexToRGB(hex) {
+        hex = hex.substring(1, 7);
+        var decimal = parseInt(hex, 16);
+        return [(decimal >> 16) & 255, (decimal >> 8) & 255, decimal & 255];
+    }
+
+    function updateColor(colorString) {
+        stopColorLeft.style.stopColor = colorString;
+        stopColorRight.style.stopColor = colorString;
+    }
 
     return that;
 };
-
 
