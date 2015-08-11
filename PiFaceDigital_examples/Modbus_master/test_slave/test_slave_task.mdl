@@ -39,7 +39,7 @@ Model {
       BlockType               Reference
       Name                    "BMOCT"
       Ports                   [8, 1, 0, 0, 0]
-      Position                [260, 96, 295, 184]
+      Position                [260, 131, 295, 219]
       SourceBlock             "logiclib/BMOCT"
       shift                   0
       #GUID                   35ffb76b-350a-4565-bcec-89e0a6f50269
@@ -48,7 +48,7 @@ Model {
       BlockType               From
       Name                    "From_1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 98, 165, 112]
+      Position                [45, 133, 165, 147]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil0"
@@ -59,7 +59,7 @@ Model {
       BlockType               From
       Name                    "From_2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 118, 165, 132]
+      Position                [45, 153, 165, 167]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil1"
@@ -70,7 +70,7 @@ Model {
       BlockType               From
       Name                    "From_3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 138, 165, 152]
+      Position                [45, 173, 165, 187]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil2"
@@ -81,7 +81,7 @@ Model {
       BlockType               From
       Name                    "From_4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 158, 165, 172]
+      Position                [45, 193, 165, 207]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil3"
@@ -92,7 +92,7 @@ Model {
       BlockType               Reference
       Name                    "MTS__coil4_7"
       Ports                   [0, 4, 0, 0, 0]
-      Position                [75, 182, 105, 228]
+      Position                [75, 217, 105, 263]
       SourceBlock             "inoutlib/INQUAD"
       BackgroundColor         "yellow"
       #GUID                   3dcefe7b-8148-4cd5-beee-d064cde91fca
@@ -172,6 +172,13 @@ Model {
       Text                    "8 coils at addresses 0 to 7\n\nUse Modbus comma"
 "nds FC05 (write single coil) or FC15 (write multiple coils) at the master."
       #GUID                   4fd9c02e-a5f3-49ae-b9b4-9a3aa33470ac
+    }
+    Annotation {
+      Position                [85, 115]
+      Text                    "Modbus coils"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   93cb326c-2a23-4b29-ba98-ba0436103622
     }
   }
 }
