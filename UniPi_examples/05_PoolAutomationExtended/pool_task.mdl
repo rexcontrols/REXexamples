@@ -1272,10 +1272,10 @@ Model {
     Line {
       SrcBlock                "From1"
       SrcPort                 1
-      Points                  [10, 0; 0, -295]
+      Points                  [10, 0; 0, -265]
       DstBlock                "UNP__RLY"
-      DstPort                 5
-      #GUID                   754219ed-22fa-440c-b349-558c65317509
+      DstPort                 8
+      #GUID                   bda30881-ae08-4cf6-a958-740b94e960e6
     }
     Line {
       SrcBlock                "From2"
@@ -1700,17 +1700,18 @@ Model {
       #GUID                   abe58d4f-d5ac-44f0-b602-58cee33fc1de
     }
     Annotation {
-      Position                [375, 55]
-      Text                    "Go to OWS driver configuration and press \"Spec"
-"ial edit\" to configure the 1-Wire sensor (64-bit ID)"
-      #GUID                   b2c31e5a-97a2-4f9d-80f3-b8b19c88b867
-    }
-    Annotation {
-      Position                [375, 30]
+      Position                [120, 25]
       Text                    "Pool automation with UniPi"
       FontWeight              "bold"
       FontSize                16
       #GUID                   2ae8677e-4c83-46bd-9341-2f8e9f338465
+    }
+    Annotation {
+      Position                [250, 60]
+      Text                    "Go to OWS driver configuration and press \"Spec"
+"ial edit\" to configure the 1-Wire sensor (64-bit ID).\n\nRead the README.md f"
+"ile for detailed information."
+      #GUID                   b2c31e5a-97a2-4f9d-80f3-b8b19c88b867
     }
   }
 }
