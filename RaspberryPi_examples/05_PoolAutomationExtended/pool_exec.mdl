@@ -1,5 +1,5 @@
 Model {
-  Name                    "pool_inksc_exec"
+  Name                    "pool_exec"
   Version                 3.00
   #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
@@ -32,8 +32,8 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "pool_inksc_exec"
-    Location                [11, 35, 184, 361]
+    Name                    "pool_exec"
+    Location                [14, 33, 187, 359]
     #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
     Block {
       BlockType               Reference
@@ -78,7 +78,7 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "pool_inksc_task"
+      Name                    "pool_task"
       Ports                   [1, 1, 0, 0, 0]
       Position                [100, 168, 150, 182]
       SourceBlock             "execlib/TASK"
@@ -107,7 +107,7 @@ Model {
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "pool_inksc_task"
+      DstBlock                "pool_task"
       DstPort                 1
       #GUID                   d2df86f6-6a26-41a9-939c-a699323b24b1
     }
