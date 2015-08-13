@@ -1,7 +1,7 @@
 Model {
-  Name                    "exec"
+  Name                    "pidcontrol_exec"
   Version                 3.00
-  #RexVersion             "2.10.3 rev. 4168, Date 2014-05-22"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -32,8 +32,8 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "exec"
-    Location                [6, 26, 193, 354]
+    Name                    "pidcontrol_exec"
+    Location                [12, 35, 199, 363]
     #GUID                   f5ffee10-7913-470f-b666-c0336984f207
     Block {
       BlockType               Reference
@@ -57,15 +57,15 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "simple_pidu"
+      Name                    "pidcontrol_task"
       Ports                   [1, 1, 0, 0, 0]
       Position                [110, 172, 160, 188]
       SourceBlock             "execlib/TASK"
       ShowName                on
       NamePlacement           ""
       factor                  1
-      start                   1
-      stop                    2
+      start                   0
+      stop                    1
       stack                   10240
       filename                ""
       MDLOPEN                 on
@@ -74,7 +74,7 @@ Model {
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "simple_pidu"
+      DstBlock                "pidcontrol_task"
       DstPort                 1
       #GUID                   b3d4b2b0-4bf1-4406-aa87-32b3c40d619a
     }

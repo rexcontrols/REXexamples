@@ -1,7 +1,7 @@
 Model {
-  Name                    "exec"
+  Name                    "archiving_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.6 rev. 5107, Date 2015-03-31"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -15,7 +15,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -32,19 +32,17 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "exec"
-    Location                [13, 34, 200, 362]
-    #GUID                   f5ffee10-7913-470f-b666-c0336984f207
+    Name                    "archiving_exec"
+    Location                [10, 33, 190, 365]
+    #GUID                   39cb8861-5961-447a-bf17-61959d76aae1
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [25, 21, 75, 304]
+      Position                [20, 18, 65, 307]
       SourceBlock             "execlib/EXEC"
-      ShowName                on
-      NamePlacement           ""
-      target                  "PC - Windows"
-      tick                    "0.005"
+      target                  "PC - Linux"
+      tick                    "0.05"
       ntick0                  1
       ntick1                  50
       ntick2                  100
@@ -53,30 +51,48 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
-      #GUID                   80ecde70-6db6-4e25-9dc2-328f3241afee
+      #GUID                   0b2d71c6-c300-46d9-935a-fd2fc96683d9
     }
     Block {
       BlockType               Reference
-      Name                    "persistent_params"
+      Name                    "analog_archive"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [110, 172, 160, 188]
+      Position                [105, 103, 155, 117]
+      SourceBlock             "execlib/ARC"
+      atype                   "3: Disk"
+      asize                   102400
+      nmarks                  720
+      ldaymax                 1048576
+      period                  15
+      #GUID                   d9b2c0a2-45b1-4e05-9645-3fd834de9c77
+    }
+    Block {
+      BlockType               Reference
+      Name                    "archiving_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [105, 173, 155, 187]
       SourceBlock             "execlib/TASK"
-      ShowName                on
-      NamePlacement           ""
       factor                  1
       start                   0
       stop                    1
       stack                   10240
       filename                ""
       MDLOPEN                 on
-      #GUID                   85bc7725-5b9a-49db-bdb2-cceb7477a788
+      #GUID                   86a91f34-8f6c-4d78-9c40-ed194e3c0d59
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 3
+      DstBlock                "analog_archive"
+      DstPort                 1
+      #GUID                   066e8b0a-9a70-4dce-b0f0-33c4321d8c23
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
-      DstBlock                "persistent_params"
+      DstBlock                "archiving_task"
       DstPort                 1
-      #GUID                   b3d4b2b0-4bf1-4406-aa87-32b3c40d619a
+      #GUID                   78ff6767-ed7e-4761-9eee-99c47d45a19e
     }
   }
 }

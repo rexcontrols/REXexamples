@@ -89,7 +89,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.10.3 rev. 4382, Date 2014-07-12"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -122,7 +122,7 @@ Model {
   }
   System {
     Name                    "minimal_task"
-    Location                [181, 28, 505, 354]
+    Location                [193, 35, 762, 361]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -142,7 +142,7 @@ Model {
       BlockType               Reference
       Name                    "CNR1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [30, 117, 60, 133]
+      Position                [70, 102, 100, 118]
       SourceBlock             "mathlib/CNR"
       SID                     5
       LibraryVersion          "1.130"
@@ -162,7 +162,7 @@ Model {
       BlockType               Reference
       Name                    "CNR2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [30, 147, 60, 163]
+      Position                [70, 132, 100, 148]
       SourceBlock             "mathlib/CNR"
       SID                     6
       LibraryVersion          "1.130"
@@ -182,7 +182,7 @@ Model {
       BlockType               Reference
       Name                    "REXLANG"
       Ports                   [17, 17, 0, 0, 0]
-      Position                [130, 106, 180, 284]
+      Position                [170, 91, 220, 269]
       SourceBlock             "speclib/REXLANG"
       SID                     4
       LibraryVersion          "1.88"
@@ -246,27 +246,29 @@ Model {
       #GUID                   62aabf89-277a-4759-8c3a-667c0b41925c
     }
     Annotation {
-      Position                [165, 25]
-      Text                    "REXLANG - User programmable block"
+      Position                [275, 140]
+      Text                    "sum of inputs"
+      #GUID                   1c1973b2-1a87-4194-b1fc-3049d0de1587
+    }
+    Annotation {
+      Position                [285, 220]
+      Text                    "sum of parameters"
+      #GUID                   67cc487c-161f-45a9-bc3e-eb371b91ec05
+    }
+    Annotation {
+      Position                [275, 25]
+      Text                    "REXLANG - Minimal example on using the user pro"
+"grammable block"
       FontWeight              "bold"
       FontSize                16
       #GUID                   6be559b1-1863-4fae-babd-2a1f8aeb0ce5
     }
     Annotation {
-      Position                [155, 50]
-      Text                    "Minimal example"
+      Position                [160, 50]
+      Text                    "See the README.md file for detailed information"
+"."
       FontSize                12
       #GUID                   9b312570-962b-49dd-8eeb-21e904256f5d
-    }
-    Annotation {
-      Position                [235, 155]
-      Text                    "sum of inputs"
-      #GUID                   1c1973b2-1a87-4194-b1fc-3049d0de1587
-    }
-    Annotation {
-      Position                [245, 235]
-      Text                    "sum of parameters"
-      #GUID                   67cc487c-161f-45a9-bc3e-eb371b91ec05
     }
   }
 }

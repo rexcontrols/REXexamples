@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- REX HMI Template version=10.4.213 -->
+<!-- REX HMI Template version=10.7.229 -->
 
 <html>
     <head>
@@ -10,6 +10,10 @@
         <meta http-equiv="expires" content="-1" />
         <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
         <meta http-equiv="pragma" content="no-cache" />
+        
+        <!-- Allow fullscreen on mobile platforms -->
+        <meta name="mobile-web-app-capable" content="yes"><!-- Chrome -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> <!-- iOS -->
         
         
         <link rel="shortcut icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.ico">
@@ -32,7 +36,7 @@
         <script type="text/javascript" src="js/jQuery/04-jquery.ui.touch-punch.min.js"></script>
         <script type="text/javascript" src="js/jQuery/05-jquery-ui-timepicker-addon.min.js"></script>
 
-        <script type="text/javascript" src="js/rex-hmi.min.js?version=10.4.213"></script>
+        <script type="text/javascript" src="js/rex-hmi.min.js?version=10.7.229"></script>
 
 
         <script type='text/javascript'>
@@ -41,14 +45,12 @@
                     column:1,
                     name:'User controls',
                     rows:[
-                    {alias: 'PID_MAN', name:'Controller mode', cstring: 'simple_pidu.CNB_MAN:YCN', type: 'DW', options: {label_false: 'AUT',
+                    {alias: 'PID_MAN', name:'Controller mode', cstring: 'pidcontrol_task.CNB_MAN:YCN', type: 'DW', options: {label_false: 'AUT',
                             label_true: 'MAN'}},
-                    {alias: 'SP_AW', name: 'Setpoint', cstring: 'simple_pidu.CNR_sp:ycn', type: 'AW'},
-                    {alias: 'HV_AW', name: 'Hand value', cstring: 'simple_pidu.CNR_hv:ycn', type: 'AW'},
+                    {alias: 'SP_AW', name: 'Setpoint', cstring: 'pidcontrol_task.CNR_sp:ycn', type: 'AW'},
+                    {alias: 'HV_AW', name: 'Hand value', cstring: 'pidcontrol_task.CNR_hv:ycn', type: 'AW'},
                 ]};
-            
                 REX.WebBuDi.addSection(controls);
-
                 var FBD = {
                     column:1,
                     background_color: '#8587D9',
@@ -56,57 +58,45 @@
                     rows:[
                     {alias: 'mylink', name: 'Open FBD', label: '--->', url: 'index_WebWatch.html', type: 'LINK'},
                 ]};
-            
                 REX.WebBuDi.addSection(FBD);
-
                 var pidu = {
                     column:2,
                     name:'PID controller unit',
                     rows:[
-                    {alias: 'PIDU_K', cstring: 'simple_pidu.PIDU:k', type: 'AW'},
-                    {alias: 'PIDU_TI', cstring: 'simple_pidu.PIDU:ti', type: 'AW'},
-                    {alias: 'PIDU_TD', cstring: 'simple_pidu.PIDU:td', type: 'AW'},
-                    {alias: 'PIDU_IR_TYPE', cstring: 'simple_pidu.PIDU:irtype', type: 'ALT', values: {1: "D", 2: "I", 3: "ID", 4: "P", 5: "PD", 6: "PI", 7: "PID"}},
+                    {alias: 'PIDU_K', cstring: 'pidcontrol_task.PIDU:k', type: 'AW'},
+                    {alias: 'PIDU_TI', cstring: 'pidcontrol_task.PIDU:ti', type: 'AW'},
+                    {alias: 'PIDU_TD', cstring: 'pidcontrol_task.PIDU:td', type: 'AW'},
+                    {alias: 'PIDU_IR_TYPE', cstring: 'pidcontrol_task.PIDU:irtype', type: 'ALT', values: {1: "D", 2: "I", 3: "ID", 4: "P", 5: "PD", 6: "PI", 7: "PID"}},
                     {type: 'ES'}
                 ]};
-            
                 REX.WebBuDi.addSection(pidu);
-
                 var signals = {
                     column:3,
                     name:'Signals',
                     rows:[
-                    {alias: 'SP', name: 'Setpoint', cstring: 'simple_pidu.PIDU:sp', type: 'AR'},
-                    {alias: 'PV', name: 'Process value',  cstring: 'simple_pidu.PIDU:pv', type: 'AR'},
-                    {alias: 'HV', name: 'Hand value',  cstring: 'simple_pidu.PIDU:hv', type: 'AR'},
-                    {alias: 'MV', name: 'Manipulated variable',  cstring: 'simple_pidu.PIDU:mv', type: 'AR'},
-                    {alias: 'MAN', name: 'Controller mode',  cstring: 'simple_pidu.PIDU:MAN', type: 'DR', options: {label_false: 'AUT', label_true: 'MAN'}}
+                    {alias: 'SP', name: 'Setpoint', cstring: 'pidcontrol_task.PIDU:sp', type: 'AR'},
+                    {alias: 'PV', name: 'Process value',  cstring: 'pidcontrol_task.PIDU:pv', type: 'AR'},
+                    {alias: 'HV', name: 'Hand value',  cstring: 'pidcontrol_task.PIDU:hv', type: 'AR'},
+                    {alias: 'MV', name: 'Manipulated variable',  cstring: 'pidcontrol_task.PIDU:mv', type: 'AR'},
+                    {alias: 'MAN', name: 'Controller mode',  cstring: 'pidcontrol_task.PIDU:MAN', type: 'DR', options: {label_false: 'AUT', label_true: 'MAN'}}
                 ]};
-            
                 REX.WebBuDi.addSection(signals);
-                
                 REX.WebBuDi.addTrendSignal({alias: 'SP', name: 'Setpoint'});
                 REX.WebBuDi.addTrendSignal({alias: 'PV', name: 'Process value'});
                 REX.WebBuDi.addTrendSignal({alias: 'MV', name: 'Manipulated variable'});
-
                 // Adjust size of the trend. Value is in <0;1> interval.
                 // It represents the percentage of the visible screen
                 REX.WebBuDi.setTrendSize(0.39);
-            
                 // Set WS server address (use only if the websocket server 
                 // is NOT running on the same machine as the webserver providing this page)
                 // REX.WebBuDi.setWsIP('127.0.0.1:8008/rex');
-            
                 // Set REX target device address (use only if the websocket 
                 // server is NOT running on the same machine as the RexCore runtime module)
                 // REX.WebBuDi.setTargetIP('127.0.0.1');
-            
                 // Set refresh rate (Default: 100 ms)
                 //REX.WebBuDi.setRefreshRate(100);
-            
                 // Change title of the page
                 REX.WebBuDi.setTitle('Simple PID controller');
-
                 // auto connect
                 REX.WebBuDi.connect();
             });
