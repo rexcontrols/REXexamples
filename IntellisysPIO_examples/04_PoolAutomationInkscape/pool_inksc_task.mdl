@@ -1,0 +1,738 @@
+Model {
+  Name                    "pool_inksc_task"
+  Version                 3.00
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "pool_inksc_task"
+    Location                [204, 33, 946, 577]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "AND_"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [320, 453, 355, 477]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   a1770c07-f75d-490e-8cc4-052d48e736d4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "AND_1"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [320, 413, 355, 437]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   e5028890-a2e1-463b-911f-80fad2ffbce4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "AND_2"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [275, 168, 310, 192]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   bc19285c-e517-43ff-816d-5bf9efa36566
+    }
+    Block {
+      BlockType               Reference
+      Name                    "AND_3"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [275, 258, 310, 282]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   ea5adf0d-87b4-4931-8ed5-ed6d97c58ccc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "AND_DAYLIGHT"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [275, 343, 310, 367]
+      SourceBlock             "logiclib/AND_"
+      #GUID                   21f7e08a-9e2e-4db5-96c0-8ebc1dc466ec
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_PUMP"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [395, 213, 415, 227]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      #GUID                   1bc1989b-63a9-445f-9a9b-ad77a9b016d6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_AFTERNOON_OFF"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 303, 120, 317]
+      SourceBlock             "mathlib/CNI"
+      icn                     14
+      BackgroundColor         "magenta"
+      #GUID                   9ee77c28-8ad0-4811-a437-7e82fb459fb3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_AFTERNOON_ON"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 263, 120, 277]
+      SourceBlock             "mathlib/CNI"
+      icn                     13
+      BackgroundColor         "magenta"
+      #GUID                   509a0d4c-5423-48fa-9c8e-0d5beb5be33a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_LIGHTS_OFF"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 123, 120, 137]
+      SourceBlock             "mathlib/CNI"
+      icn                     1
+      BackgroundColor         "magenta"
+      #GUID                   54f5667e-8c6f-43a3-9170-be7f1a717bcd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_LIGHTS_ON"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 83, 120, 97]
+      SourceBlock             "mathlib/CNI"
+      icn                     21
+      BackgroundColor         "magenta"
+      #GUID                   62dbd24b-9dae-4c98-a79a-60ed64357205
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_MORNING_OFF"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 213, 120, 227]
+      SourceBlock             "mathlib/CNI"
+      icn                     4
+      BackgroundColor         "magenta"
+      #GUID                   46d2ff28-3274-4ae8-87bd-ee11b995ac0a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_MORNING_ON"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 173, 120, 187]
+      SourceBlock             "mathlib/CNI"
+      icn                     2
+      BackgroundColor         "magenta"
+      #GUID                   d700aa3b-1c9c-4c5b-9cab-68fe2b8380f6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_SUNRISE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 348, 120, 362]
+      SourceBlock             "mathlib/CNI"
+      icn                     5
+      BackgroundColor         "magenta"
+      #GUID                   49295b1e-cb82-4b46-942b-9051e50c60d3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_SUNSET"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 388, 120, 402]
+      SourceBlock             "mathlib/CNI"
+      icn                     21
+      BackgroundColor         "magenta"
+      #GUID                   6d7fb690-1e00-4a8b-bdf5-6047682499f6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_RISING"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [245, 453, 270, 467]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   dd1e2660-478a-483c-b008-95cb5f41f8e3
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [10, 453, 100, 467]
+      ShowName                off
+      GotoTag                 "PIO__SW1"
+      BackgroundColor         "yellow"
+      #GUID                   a2d9d49e-7f4d-49be-9f63-33691b77940f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [610, 78, 700, 92]
+      ShowName                off
+      GotoTag                 "PIO__DO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a2a215a5-e794-41d6-a744-4df1e11998d9
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [610, 178, 700, 192]
+      ShowName                off
+      GotoTag                 "PIO__DO2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a3ec5caf-9a91-4452-b817-979224995e3e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [610, 278, 700, 292]
+      ShowName                off
+      GotoTag                 "PIO__LED_RED"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   054af83e-51f7-4c99-b899-3336e2f2985f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISSW_FMODE"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [475, 168, 505, 202]
+      SourceBlock             "logiclib/ISSW"
+      #GUID                   d50b1776-a874-4073-a94d-59b52f8fbb82
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [370, 500, 380, 510]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      #GUID                   6bff9a27-c1d9-4b94-8d4d-3d01633bf6b3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [370, 395, 380, 405]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      #GUID                   5004c63b-8c0e-4862-9ed7-f8c52d181ba5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_BUTTON"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 488, 115, 502]
+      SourceBlock             "genlib/MP"
+      pwidth                  "0.2"
+      BSTATE                  off
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   f82e7fe4-bbff-460c-9057-0cdd7d3d872f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OR_"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [175, 453, 210, 477]
+      SourceBlock             "logiclib/OR_"
+      #GUID                   a2acea09-278d-4fdc-a682-4ddc78efe1bf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OR_FILTER"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [345, 168, 380, 192]
+      SourceBlock             "logiclib/OR_"
+      #GUID                   39afee28-0aaa-4259-a8f6-67198595be21
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OR_LIGHTS"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [275, 78, 310, 102]
+      SourceBlock             "logiclib/OR_"
+      #GUID                   a32d4e05-d714-4565-af2b-dda6114f9565
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL_GEQ"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [200, 163, 225, 187]
+      SourceBlock             "mathlib/REL"
+      irel                    "6: greater or equal (>=)"
+      #GUID                   b674fc3d-cc59-4490-b92a-eab2fa791a59
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL_GEQ1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [200, 253, 225, 277]
+      SourceBlock             "mathlib/REL"
+      irel                    "6: greater or equal (>=)"
+      #GUID                   d40a47ee-aa91-4758-9f0b-aef387b74412
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL_GEQ2"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [200, 73, 225, 97]
+      SourceBlock             "mathlib/REL"
+      irel                    "6: greater or equal (>=)"
+      #GUID                   2ceaf5c3-8e28-4a74-af71-143bc1d3f634
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL_GEQ3"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [200, 338, 225, 362]
+      SourceBlock             "mathlib/REL"
+      irel                    "6: greater or equal (>=)"
+      #GUID                   3c87b769-7c23-4acb-a0e6-c3ac6b6b3cf8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL_LT"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [200, 203, 225, 227]
+      SourceBlock             "mathlib/REL"
+      irel                    "3: less than (<)"
+      #GUID                   e15dd3d2-5055-47a9-8b3e-b9354e3b727a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL_LT1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [200, 293, 225, 317]
+      SourceBlock             "mathlib/REL"
+      irel                    "3: less than (<)"
+      #GUID                   81a88420-9df5-41e2-9699-e15c4a0873e2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL_LT2"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [200, 113, 225, 137]
+      SourceBlock             "mathlib/REL"
+      irel                    "3: less than (<)"
+      #GUID                   2bb6ae14-be26-473f-bad1-607169dfd05c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL_LT3"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [200, 378, 225, 402]
+      SourceBlock             "mathlib/REL"
+      irel                    "3: less than (<)"
+      #GUID                   e0009eae-1892-4567-9051-afa4e300ecdc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RS_NOFILTER"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [380, 443, 415, 467]
+      SourceBlock             "logiclib/RS"
+      #GUID                   97212cbe-2f47-4de8-bc8a-a2f2d0388ea5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TIME"
+      Ports                   [0, 3, 0, 0, 0]
+      Position                [15, 163, 55, 197]
+      SourceBlock             "genlib/TIME"
+      tz                      "1: Local time"
+      #GUID                   86e80bec-1433-4a2d-80cb-7b74b4404def
+    }
+    Line {
+      SrcBlock                "AND_"
+      SrcPort                 1
+      DstBlock                "RS_NOFILTER"
+      DstPort                 2
+      #GUID                   0e3b8b5c-0d84-483a-8fff-72b6a628bfd2
+    }
+    Line {
+      SrcBlock                "AND_1"
+      SrcPort                 1
+      Points                  [5, 0]
+      DstBlock                "RS_NOFILTER"
+      DstPort                 1
+      #GUID                   41d79434-59ed-423b-91bd-6aa5f509996e
+    }
+    Line {
+      SrcBlock                "AND_2"
+      SrcPort                 1
+      DstBlock                "OR_FILTER"
+      DstPort                 1
+      #GUID                   bc439a94-371f-4060-bcf0-6f26c3a4efdf
+    }
+    Line {
+      SrcBlock                "AND_3"
+      SrcPort                 1
+      Points                  [10, 0; 0, -80]
+      DstBlock                "OR_FILTER"
+      DstPort                 2
+      #GUID                   b20cbe6b-52ad-475f-89a8-688d89efeccf
+    }
+    Line {
+      SrcBlock                "CNB_PUMP"
+      SrcPort                 1
+      Points                  [5, 0; 0, -35]
+      DstBlock                "ISSW_FMODE"
+      DstPort                 2
+      #GUID                   cea086ef-2b89-420e-8e9e-eafa14cc6604
+    }
+    Line {
+      SrcBlock                "CNI_AFTERNOON_OFF"
+      SrcPort                 1
+      DstBlock                "REL_LT1"
+      DstPort                 2
+      #GUID                   d74f8456-1b78-4019-bf22-2dffc99452b9
+    }
+    Line {
+      SrcBlock                "CNI_AFTERNOON_ON"
+      SrcPort                 1
+      DstBlock                "REL_GEQ1"
+      DstPort                 2
+      #GUID                   5afabbb7-f6d0-4c9d-9cf1-2cb35ea35f51
+    }
+    Line {
+      SrcBlock                "CNI_LIGHTS_OFF"
+      SrcPort                 1
+      DstBlock                "REL_LT2"
+      DstPort                 2
+      #GUID                   207f7d9a-05cd-414b-9da8-13250242ba58
+    }
+    Line {
+      SrcBlock                "CNI_LIGHTS_ON"
+      SrcPort                 1
+      DstBlock                "REL_GEQ2"
+      DstPort                 2
+      #GUID                   52dbe990-2c43-4c5a-816b-85392bbb38b1
+    }
+    Line {
+      SrcBlock                "CNI_MORNING_OFF"
+      SrcPort                 1
+      DstBlock                "REL_LT"
+      DstPort                 2
+      #GUID                   3ac082db-2144-4565-a050-b5cd6886d8ba
+    }
+    Line {
+      SrcBlock                "CNI_MORNING_ON"
+      SrcPort                 1
+      DstBlock                "REL_GEQ"
+      DstPort                 2
+      #GUID                   f4ab023d-5223-47ea-aeac-d9fbd2ea5beb
+    }
+    Line {
+      SrcBlock                "CNI_SUNRISE"
+      SrcPort                 1
+      DstBlock                "REL_GEQ3"
+      DstPort                 2
+      #GUID                   255b78d3-d683-459a-b3ec-657ba59e767c
+    }
+    Line {
+      SrcBlock                "CNI_SUNSET"
+      SrcPort                 1
+      DstBlock                "REL_LT3"
+      DstPort                 2
+      #GUID                   fbd04a58-4783-4161-8a00-ebe5c31a0f6f
+    }
+    Line {
+      SrcBlock                "EDGE_RISING"
+      SrcPort                 1
+      Points                  [25, 0]
+      #GUID                   517de5f1-ccc1-4083-b345-6682e60d7700
+      Branch {
+        DstBlock                "AND_"
+        DstPort                 1
+        #GUID                   0e4dcb45-8470-4478-9c9e-a123d9d50de6
+      }
+      Branch {
+        Points                  [0, -30]
+        DstBlock                "AND_1"
+        DstPort                 2
+        #GUID                   90062f35-78d1-47f8-9a5e-312b2f91880c
+      }
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "OR_"
+      DstPort                 1
+      #GUID                   8db44b95-fa6d-4d12-93b0-3a9879d99543
+    }
+    Line {
+      SrcBlock                "ISSW_FMODE"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   0245d47f-27f6-4e18-8655-9c2dffef1997
+    }
+    Line {
+      SrcBlock                "LPBRK"
+      SrcPort                 1
+      Points                  [-65, 0; 0, -35]
+      DstBlock                "AND_"
+      DstPort                 2
+      #GUID                   9d69d2be-13ed-40f0-b5cc-443ee16a07d5
+    }
+    Line {
+      SrcBlock                "LPBRK1"
+      SrcPort                 1
+      Points                  [-65, 0; 0, 20]
+      DstBlock                "AND_1"
+      DstPort                 1
+      #GUID                   674f3a78-3265-42fa-a060-137e7ed4e7da
+    }
+    Line {
+      SrcBlock                "MP_BUTTON"
+      SrcPort                 1
+      Points                  [40, 0]
+      DstBlock                "OR_"
+      DstPort                 2
+      #GUID                   aef31af9-f426-450e-9db1-dca35bede31e
+    }
+    Line {
+      SrcBlock                "OR_"
+      SrcPort                 1
+      DstBlock                "EDGE_RISING"
+      DstPort                 1
+      #GUID                   5009779e-d177-4d2c-bf06-60844b773ad3
+    }
+    Line {
+      SrcBlock                "OR_FILTER"
+      SrcPort                 1
+      DstBlock                "ISSW_FMODE"
+      DstPort                 1
+      #GUID                   b3c7b118-32eb-402f-a39e-ff872eb1663c
+    }
+    Line {
+      SrcBlock                "OR_LIGHTS"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   d61fbe6e-b601-4038-92ad-c2a237b20433
+    }
+    Line {
+      SrcBlock                "REL_GEQ"
+      SrcPort                 1
+      DstBlock                "AND_2"
+      DstPort                 1
+      #GUID                   715d9ea9-e900-4bfb-9002-fd8b8fe35f80
+    }
+    Line {
+      SrcBlock                "REL_GEQ1"
+      SrcPort                 1
+      DstBlock                "AND_3"
+      DstPort                 1
+      #GUID                   fbe5d7b2-81b2-4a54-9e46-001de90e304f
+    }
+    Line {
+      SrcBlock                "REL_GEQ2"
+      SrcPort                 1
+      DstBlock                "OR_LIGHTS"
+      DstPort                 1
+      #GUID                   421377d9-4e33-4d83-9953-6bc6cc116933
+    }
+    Line {
+      SrcBlock                "REL_GEQ3"
+      SrcPort                 1
+      DstBlock                "AND_DAYLIGHT"
+      DstPort                 1
+      #GUID                   9fef057a-afde-496f-8da3-74264cdfe058
+    }
+    Line {
+      SrcBlock                "REL_LT"
+      SrcPort                 1
+      Points                  [20, 0; 0, -30]
+      DstBlock                "AND_2"
+      DstPort                 2
+      #GUID                   49205b86-172a-41d7-97af-ee11bab1d205
+    }
+    Line {
+      SrcBlock                "REL_LT1"
+      SrcPort                 1
+      Points                  [20, 0; 0, -30]
+      DstBlock                "AND_3"
+      DstPort                 2
+      #GUID                   28113c20-3af9-48c9-8bc8-a17de9068ac2
+    }
+    Line {
+      SrcBlock                "REL_LT2"
+      SrcPort                 1
+      Points                  [20, 0; 0, -30]
+      DstBlock                "OR_LIGHTS"
+      DstPort                 2
+      #GUID                   7e44a222-71cf-40ab-adc8-13591cb21ebe
+    }
+    Line {
+      SrcBlock                "REL_LT3"
+      SrcPort                 1
+      Points                  [20, 0; 0, -30]
+      DstBlock                "AND_DAYLIGHT"
+      DstPort                 2
+      #GUID                   b97c2253-0ec1-40c0-b123-3955dc726dd9
+    }
+    Line {
+      SrcBlock                "RS_NOFILTER"
+      SrcPort                 1
+      Points                  [25, 0]
+      #GUID                   c23159f9-2a79-46ef-a48f-ccda67ae898a
+      Branch {
+        Points                  [0, 55]
+        DstBlock                "LPBRK"
+        DstPort                 1
+        #GUID                   6fdad177-dac4-4c48-9c19-22947eed549a
+      }
+      Branch {
+        Points                  [0, -165]
+        #GUID                   dec50c29-7555-42e1-ab88-07f6b52e9d13
+        Branch {
+          DstBlock                "Goto2"
+          DstPort                 1
+          #GUID                   bfc6e9f1-f616-40a7-bb55-0b579b7e05a8
+        }
+        Branch {
+          Points                  [0, -90]
+          DstBlock                "ISSW_FMODE"
+          DstPort                 3
+          #GUID                   e8431527-65b2-46c2-91a3-9deb9467ed22
+        }
+      }
+    }
+    Line {
+      SrcBlock                "RS_NOFILTER"
+      SrcPort                 2
+      Points                  [5, 0; 0, -60]
+      DstBlock                "LPBRK1"
+      DstPort                 1
+      #GUID                   6e4c7c14-3409-4a18-b539-5727278adf56
+    }
+    Line {
+      SrcBlock                "TIME"
+      SrcPort                 1
+      Points                  [115, 0]
+      #GUID                   1fd9419a-181b-457d-ac3e-c22b3e7302a0
+      Branch {
+        DstBlock                "REL_GEQ"
+        DstPort                 1
+        #GUID                   1320f79c-b52f-4fce-be73-ef94a2dfccb7
+      }
+      Branch {
+        Points                  [0, 40]
+        #GUID                   21528447-3612-4af4-b581-019cb874f561
+        Branch {
+          DstBlock                "REL_LT"
+          DstPort                 1
+          #GUID                   fa52a6c1-9d41-4776-bbaf-068937ebc5e4
+        }
+        Branch {
+          Points                  [0, 50]
+          #GUID                   cd615d0c-b33a-4bc1-8f6e-742d8953617e
+          Branch {
+            DstBlock                "REL_GEQ1"
+            DstPort                 1
+            #GUID                   4d6b0a05-b72d-4e49-b015-54c77ffd9753
+          }
+          Branch {
+            Points                  [0, 40]
+            #GUID                   efd30956-635c-43da-8944-e0c59ffc0538
+            Branch {
+              Points                  [0, 45]
+              #GUID                   f9a47d36-9513-4894-8071-bb2f5e80de77
+              Branch {
+                DstBlock                "REL_GEQ3"
+                DstPort                 1
+                #GUID                   c4a581c8-57a2-44ca-a563-1c23bc93e8ca
+              }
+              Branch {
+                Points                  [0, 40]
+                DstBlock                "REL_LT3"
+                DstPort                 1
+                #GUID                   3e6ce5ce-5dbb-4a65-a94d-2e5e99b4af2e
+              }
+            }
+            Branch {
+              DstBlock                "REL_LT1"
+              DstPort                 1
+              #GUID                   ed175e0b-4010-427d-8d4e-4b83e2a1a60c
+            }
+          }
+        }
+      }
+      Branch {
+        Points                  [0, -50]
+        #GUID                   1881b18a-b3aa-4843-a09d-70c33809dda9
+        Branch {
+          Points                  [0, -40]
+          DstBlock                "REL_GEQ2"
+          DstPort                 1
+          #GUID                   a57e4916-f464-4102-8dc9-a424518daf17
+        }
+        Branch {
+          DstBlock                "REL_LT2"
+          DstPort                 1
+          #GUID                   d817b0ec-8389-4ce8-9f94-9e1677879f4a
+        }
+      }
+    }
+    Annotation {
+      Position                [660, 70]
+      Text                    "Pool lights"
+      #GUID                   5ff68ddd-5f5a-4590-9bd4-cf91c838f0a4
+    }
+    Annotation {
+      Position                [660, 170]
+      Text                    "Filtration pump"
+      #GUID                   dfdf5200-5c6a-4472-8d74-b312bdd42815
+    }
+    Annotation {
+      Position                [660, 270]
+      Text                    "Mode indicator"
+      #GUID                   e81aa591-5f5f-4e6e-9ca4-50abf34d8ec1
+    }
+    Annotation {
+      Position                [100, 55]
+      Text                    "See the README.md file for details."
+      #GUID                   f72737a2-a228-4b68-be07-8e318da45be1
+    }
+    Annotation {
+      Position                [145, 25]
+      Text                    "Pool automation with Intellisys PIO"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   a7d53e3e-d6e1-44d5-8349-209e1ad9f45f
+    }
+    Annotation {
+      Position                [55, 445]
+      Text                    "Onboard push-button"
+      #GUID                   787de267-0afc-4222-941a-6ff23fdc6e39
+    }
+  }
+}
