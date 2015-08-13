@@ -1,21 +1,37 @@
-Pool automation with simple web-based HMI 
-=========================================
+REX Control System and the Intellisys PIO board
+===============================================
 
-This folder contains the source files for the demonstration project on pool 
-automation using the REX Control System and the Raspberry Pi minicomputer with 
-the Intellisys PIO add-on board.
-
-This example is a modification of the original example related to the [tutorial 
-on using the REX Control System](http://www.rexcontrols.com/articles/raspberry-pi-as-a-plc-pool-automation-project)
+This example is a modification of the original example related to the 
+[tutorial on using the REX Control System](http://www.rexcontrols.com/articles/getting-started-with-rex-on-raspberry-pi)
 on Raspberry Pi.
 
-The control algorithm is accompanied by a simple web-based HMI.
+## Prerequisities ##
 
-Visit the [REX Controls company webpage](http://www.rexcontrols.com/rex-control-system-raspberry-pi) 
+- RexCore and RPiDrv module must be installed and running on the Raspberry Pi
+- I2C bus must be enabled on the Raspberry Pi
+- The wiring must comply with the attached schematics. 
+
+## Running the example ##
+
+- The **exec.mdl* file is the project main file
+- Open it with RexDraw, compile and download it to the target device
+
+## User interface (HMI) ##
+
+The example is accompanied by a HTML5-based user interface built on the 
+WebBuDi framework (Web Buttons and Displays). See the above mentioned tutorial 
+for instructions on deploying the HMI on the Raspberry Pi.
+
+## Documentation ##
+
+- [Getting started with REX and PIO board](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_PIO_ENG.pdf)
+- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
+
+## Additional information ##
+
+- More info about the Intellisys PIO board can be found at [www.intellisys.it/pio](http://www.intellisys.it/pio/).
+- Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
+- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using the REX Control System and the Raspberry 
-Pi.
-
-More info about the Intellisys PIO board can be found at [www.intellisys.it/pio](http://www.intellisys.it/pio/).
-
-Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
+automation and control solutions using the REX Control System.

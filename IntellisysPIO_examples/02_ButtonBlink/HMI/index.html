@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- REX HMI Template version=10.4.213 -->
+<!-- REX HMI Template version=10.7.229 -->
 
 <html>
     <head>
@@ -10,6 +10,10 @@
         <meta http-equiv="expires" content="-1" />
         <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
         <meta http-equiv="pragma" content="no-cache" />
+        
+        <!-- Allow fullscreen on mobile platforms -->
+        <meta name="mobile-web-app-capable" content="yes"><!-- Chrome -->
+        <meta name="apple-mobile-web-app-capable" content="yes"> <!-- iOS -->
         
         
         <link rel="shortcut icon" href="http://www.rexcontrols.com/images_rexcontrols/favicon.ico">
@@ -32,7 +36,7 @@
         <script type="text/javascript" src="js/jQuery/04-jquery.ui.touch-punch.min.js"></script>
         <script type="text/javascript" src="js/jQuery/05-jquery-ui-timepicker-addon.min.js"></script>
 
-        <script type="text/javascript" src="js/rex-hmi.min.js?version=10.4.213"></script>
+        <script type="text/javascript" src="js/rex-hmi.min.js?version=10.7.229"></script>
 
 
         <script type='text/javascript'>
@@ -42,29 +46,29 @@
                 title: 'User controls',
                 rows: [
                   {alias: 'rly1_write', desc: 'Relay1', cstring: 'buttonblink_task.CNB_RELAY1:YCN', type: 'DW'},
-                  {alias: 'reddefault', desc: 'Red LED default', cstring: 'buttonblink_task.CNB_RED_DEFAULT:YCN', type: 'DW'},
-                  {alias: 'pushbutton', desc: 'Push button', cstring: 'buttonblink_task.PIO__SW1:value', type: 'DR', reverse_meaning: false, label_true: 'PRESSED', label_false: 'RELEASED'},
+                  {alias: 'out3default', desc: 'Out3 default', cstring: 'buttonblink_task.CNB_OUT3_DEFAULT:YCN', type: 'DW'},
+                  {alias: 'pushbutton', desc: 'Push button', cstring: 'buttonblink_task.RPI__PFI0U:value', type: 'DR', reverse_meaning: true, label_true: 'PRESSED', label_false: 'RELEASED'},
                 ]};
               REX.WebBuDi.addSection(controls);
               var status = {
               column: 2,
-              title: 'Status of the relays',
+              title: 'Status of the outputs',
               rows: [
-                {alias: 'rly1', desc: 'Relay 1', cstring: 'buttonblink_task.PIO__DO1:value', type: 'DR'},
-                {alias: 'rly2', desc: 'Relay 2', cstring: 'buttonblink_task.PIO__DO2:value', type: 'DR'},
-                {alias: 'red', desc: 'Red LED', cstring: 'buttonblink_task.PIO__LED_RED:value', type: 'DR'},
+                {alias: 'rly1', desc: 'Relay 1', cstring: 'buttonblink_task.RPI__PFO1:value', type: 'DR'},
+                {alias: 'out2', desc: 'Output 2', cstring: 'buttonblink_task.RPI__PFO2:value', type: 'DR'},
+                {alias: 'out3', desc: 'Output 3', cstring: 'buttonblink_task.RPI__PFO3:value', type: 'DR'},
               ]};
               REX.WebBuDi.addSection(status);
               // Set WS server address (use only if the websocket server 
               // is NOT running on the same machine as the webserver providing this page)
-              // REX.WebBuDi.setWsIP('127.0.0.1/rex');
+              // REX.WebBuDi.setWsIP('127.0.0.1:80/rex');
               // Set REX target device address (use only if the websocket 
               // server is NOT running on the same machine as the RexCore runtime module)
               // REX.WebBuDi.setTargetIP('127.0.0.1');
               // Set refresh rate (Default: 100 ms)
               // REX.WebBuDi.setRefreshRate(100);
               // Change title of the page
-              REX.WebBuDi.setTitle('UniPi - blink example');
+              REX.WebBuDi.setTitle('PiFace Digital - blink example');
               // auto connect
               REX.WebBuDi.connect();
             });
