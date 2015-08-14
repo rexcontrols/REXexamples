@@ -44,7 +44,6 @@ the Receiver station.
 
 ## Additional information ##
 
-- Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
 - Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
 automation and control solutions using the REX Control System.

@@ -105,8 +105,10 @@ long main(void)
     buffer[1] = signal0 >> 8 & 0xFF;
     buffer[2] = signal0 >> 16 & 0xFF;
     buffer[3] = signal0 >> 24 & 0xFF;
+    
     //signal 1 is just a binary signal, therefore 1 byte
     buffer[4] = signal1 & 0xFF;
+    
     //signal 2 is of type double, therefore we convert it to 8 bytes
     DoubleAsLong(signal2,convData);
     buffer[5] = convData[0] & 0xFF;
@@ -117,6 +119,7 @@ long main(void)
     buffer[10] = convData[1] >> 8 & 0xFF;
     buffer[11] = convData[1] >> 16 & 0xFF;
     buffer[12] = convData[1] >> 24 & 0xFF;
+    
     //signal 3 is of type double, therefore we convert it to 8 bytes
     DoubleAsLong(signal3,convData);
     buffer[13] = convData[0] & 0xFF;
@@ -127,6 +130,7 @@ long main(void)
     buffer[18] = convData[1] >> 8 & 0xFF;
     buffer[19] = convData[1] >> 16 & 0xFF;
     buffer[20] = convData[1] >> 24 & 0xFF;
+    
     //now all the data can be sent
     dataCnt = Send(hCom,buffer,21); //send data, number of bytes = 21
   }  
