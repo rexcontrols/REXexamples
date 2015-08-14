@@ -1,18 +1,21 @@
-Using the MCP23017 I/O expander 
-===============================
+Reading MCP3422 ADC data 
+========================
 
-This folder contains the source files for working with the GPIO pins of the
-MCP23017 16-bit I/O expander via I2C bus (e.g. on the Raspberry Pi or ALIX). 
-The example is based on the REXLANG user-programmable function block of the REX
-Control System. 
+This folder contains the source files for reading ADC data from the MCP3422 
+2-channel ADC via I2C bus, which is available e.g. on the Raspberry Pi 
+minicomputer. The example is based on the REXLANG user-programmable function 
+block of the REX Control System. 
 
-The GPIO port A is used for digital outputs. The GPIO port B is used for digital
-inputs with the internal pull-up resistors enabled. 
+Data from only one channel are read for keeping the example clear. See the
+source code for details on changing the channel and resolution.
+
+The measured data is recorded in the TRND block which allows displaying of the 
+trends (graphs) in the *RexView* diagnostic tool. 
 
 ## Timing of the project ##
 
-The algorithm runs each 200 milliseconds (0.2 s). See the EXEC function block,  
-tick x ntick0 = 0.1 x 2 = 0.2 
+The algorithm runs each 1000 milliseconds (1 s). See the EXEC function block,  
+tick x ntick0 = 0.5 x 2 = 1.0 
 
 ## Prerequisities ##
 - RexCore must be installed and running on the target device (Raspberry Pi).
@@ -25,12 +28,8 @@ tick x ntick0 = 0.1 x 2 = 0.2
 - Specify the I2C bus by the fname parameter of the REXLANG function block.
 - Compile and download it to the target device.
 - Switch to online mode and watch the algorithm.
-- Enable online monitoring of the CNB_GPA blocks (Target->Monitor selection) and 
-the BDOCT_GPIOB block.
-- Toggle the CNB_GPA constants and observe the pins of the MCP23017 I/O 
-expander.
-- Apply external voltage to GPIOB pins and observe the outputs of BDOCT_GPIOB 
-block.  
+- Enable online monitoring of the REXLANG block (Target->Monitor selection).
+- Apply external voltage to the ADC pins and observe the received data.  
 
 ## Documentation ##
 
@@ -45,5 +44,3 @@ block.
 - Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
 automation and control solutions using the REX Control System.
-
-

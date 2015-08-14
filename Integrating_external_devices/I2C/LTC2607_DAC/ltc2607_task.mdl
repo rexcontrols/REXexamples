@@ -1,7 +1,7 @@
 Model {
   Name                    "ltc2607_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -134,18 +134,18 @@ Model {
       #GUID                   4c495d82-ef4d-40bf-89f7-b331abd4ce2b
     }
     Line {
-      SrcBlock                "CNI_channelA"
-      SrcPort                 1
-      DstBlock                "REXLANG"
-      DstPort                 2
-      #GUID                   7c94c7b7-e434-4928-ad99-ec8a123063f5
-    }
-    Line {
       SrcBlock                "ADD"
       SrcPort                 1
       DstBlock                "GAIN"
       DstPort                 1
       #GUID                   17439019-a3ca-4681-a839-64d03340de46
+    }
+    Line {
+      SrcBlock                "CNI_channelA"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 2
+      #GUID                   7c94c7b7-e434-4928-ad99-ec8a123063f5
     }
     Line {
       SrcBlock                "CNR_bias"
@@ -203,8 +203,8 @@ Model {
       #GUID                   92cd986f-3588-4c8c-a5ea-d0b9d11f0fef
     }
     Annotation {
-      Position                [85, 160]
-      Text                    "Sine wave on channel B"
+      Position                [105, 160]
+      Text                    "Sine wave 0%..100% on channel B"
       #GUID                   365acdbc-1be6-4280-b5ef-bd818c6a529b
     }
   }
