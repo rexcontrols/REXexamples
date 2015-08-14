@@ -1,13 +1,17 @@
-Data exchange over a serial line 
-================================
+Data exchange via serial communication 
+======================================
 
-This folder contains the source files for the demonstration project on data
-exchange over a serial line between two devices.
+It is possible to integrate arbitrary devices with serial communication (RS-232, 
+RS-485, UART) using the REXLANG programmable function block. The examples in the 
+individual folders illustrate the integration of various devices. 
 
-Both the sender and receiver stations are implemented in the REX Control System
-but any of them can be replaced by another device with serial communication. 
+## Documentation ##
 
-Visit the [REX Controls company webpage](http://www.rexcontrols.com) for more 
-information about the example projects and developing advanced automation and 
-control solutions using the REX Control System.
+- [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
+
+## Additional information ##
+
+- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+for more information about the example projects and developing advanced 
+automation and control solutions using the REX Control System.
 

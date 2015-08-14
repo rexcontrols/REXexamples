@@ -1,7 +1,7 @@
 Model {
   Name                    "receiver_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +33,7 @@ Model {
   }
   System {
     Name                    "receiver_task"
-    Location                [200, 26, 604, 357]
+    Location                [212, 34, 616, 366]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
@@ -54,7 +54,7 @@ Model {
       srctype                 "1: STL"
       stack                   0
       debug                   "1: No check"
-      fname                   "datafile.dat"
+      fname                   "/dev/ttyS9"
       p0                      ""
       p1                      ""
       p2                      ""
@@ -129,16 +129,16 @@ Model {
       #GUID                   2ee8e213-2bd8-4cd8-a349-c120fb3ad0ee
     }
     Annotation {
-      Position                [195, 25]
-      Text                    "Receiver station, COM9 or /dev/ttyS9"
+      Position                [170, 25]
+      Text                    "Receiver station, /dev/ttyS9"
       FontWeight              "bold"
       FontSize                16
       #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
     }
     Annotation {
-      Position                [195, 50]
-      Text                    "Change the serial port in the receiver_rexlang."
-"c file if necessary."
+      Position                [170, 50]
+      Text                    "See the README.md file for detailed information"
+"."
       #GUID                   8f79b992-fa0e-490d-82e8-f15ef7d4ddd7
     }
   }

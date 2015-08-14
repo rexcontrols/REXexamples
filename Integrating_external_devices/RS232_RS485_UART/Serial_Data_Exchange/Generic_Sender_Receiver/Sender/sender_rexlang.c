@@ -8,16 +8,7 @@
 *                                                      *
 *******************************************************/
 
-#define CON_COM1 33	       // COM1 in Windows, /dev/ttyS1 in Linux
-#define CON_COM2 34
-#define CON_COM3 35
-#define CON_COM4 36
-#define CON_COM5 37        // COM5 in Windows, /dev/ttyS5 in Linux
-#define CON_COM6 38
-#define CON_COM7 39
-#define CON_COM8 40
-#define CON_COM9 41        // COM9 in Windows, /dev/ttyS9 in Linux
-#define CON_COM_FNAME 63   // serial device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/ttyAMA0 on the Raspberry Pi minicomputer) )
+#define COM_DEVICE_FNAME 63   // serial device is defined by the fname parameter of the REXLANG block (e.g. /dev/ttyS0 in Linux or COM1: in Windows)
 
 #define COM_BAUDRATE 57600 //baudrate, e.g. 9600, 19200, 57600, 115200
 
@@ -27,16 +18,20 @@
 
 #define BUFFER_SIZE  50    //maximum number of bytes to send
 
+//assigning inputs to variables, these variables are READ-ONLY
 long input(0) signal0;     //integer number to send to the receiver
 long input(1) signal1;     //integer number to send to the receiver
 double input(2) signal2;   //real number to send to the receiver
 double input(3) signal3;   //real number to send to the receiver
+
+//assigning variables to outputs, these variables are WRITE-ONLY
 long output(15) handle;    //handle of the serial device
 
+//declaration of variables
 long hCom;                 //communication handle
 long buffer[BUFFER_SIZE];  //buffer for incoming data
 long dataCnt;              //number of bytes sent
-long convData[2];          //array for data conversion
+long convData[2];          //array for data conversions
 
 /* Function for conversion of decimal number (the val parameter) to 2 numbers 
 of type long (i.e. 8 bytes) representing the number in the double format 
@@ -88,18 +83,20 @@ void DoubleAsLong(double val, long ares[])
 }
 
 /* Initialization of the REXLANG algorithm */
+// the init procedure is executed once when the REXLANG function block initializes
 long init(void)
 {
   hCom = -1;
 	return 0;
 }
 
-/* The body of REXLANG algorithm */
+/* The body of the REXLANG algorithm */
+// the main procedure is executed once in each sampling period
 long main(void)
 {
   if (hCom<0)
   {
-    hCom = Open(CON_COM5,COM_BAUDRATE,COM_PARITY_NONE);  //opening serial device
+    hCom = Open(COM_DEVICE_FNAME,COM_BAUDRATE,COM_PARITY_NONE);  //opening serial device
   }
   else 
   {
@@ -133,11 +130,14 @@ long main(void)
     //now all the data can be sent
     dataCnt = Send(hCom,buffer,21); //send data, number of bytes = 21
   }  
+  //publishing the serial communication handle through output signal (for debugging)
   handle = hCom;
   return 0;
 }
 
 /* Closing the REXLANG algorithm */
+//the exit procedure is executed once when the task is correctly terminated
+// (system shutdown, downloading new control algorithm, etc.)
 long exit(void)
 {
 	if(hCom>=0) Close(hCom);

@@ -1,7 +1,7 @@
 Model {
   Name                    "sender_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +33,7 @@ Model {
   }
   System {
     Name                    "sender_task"
-    Location                [200, 26, 596, 357]
+    Location                [215, 35, 611, 366]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
@@ -81,7 +81,7 @@ Model {
       srctype                 "1: STL"
       stack                   0
       debug                   "1: No check"
-      fname                   "datafile.dat"
+      fname                   "/dev/ttyS5"
       p0                      ""
       p1                      ""
       p2                      ""
@@ -146,17 +146,17 @@ Model {
       #GUID                   509d2fba-f731-494e-bee7-23f53d43dc98
     }
     Annotation {
-      Position                [190, 25]
-      Text                    "Sender station, COM5 or /dev/ttyS5"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
+      Position                [195, 55]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   49b5d816-328e-4003-9bae-adcd3d8007fe
     }
     Annotation {
-      Position                [200, 50]
-      Text                    "Change the serial port in the sender_rexlang.c "
-"file if necessary."
-      #GUID                   8ea0877f-99eb-499d-a2f3-ad429402a698
+      Position                [195, 30]
+      Text                    "Sender station, /dev/ttyS5"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6d9ffc5f-9562-4602-b469-999294e19676
     }
   }
 }
