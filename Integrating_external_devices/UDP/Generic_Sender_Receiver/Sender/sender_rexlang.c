@@ -15,16 +15,20 @@
 #define receiverPort 4001
 #define BUFFER_SIZE  50    //maximum number of bytes to send
 
+//assigning inputs to variables, these variables are READ-ONLY
 long input(0) signal0;     //integer number to send to the receiver
 long input(1) signal1;     //integer number to send to the receiver
 double input(2) signal2;   //real number to send to the receiver
 double input(3) signal3;   //real number to send to the receiver
+
+//assigning variables to outputs, these variables are WRITE-ONLY
 long output(15) handle;    //handle of the UDP socket
 
+//declaration of variables
 long hSendLoc;             //socket handle
 long buffer[BUFFER_SIZE];  //buffer for incoming data
 long dataCnt;              //number of bytes sent
-long convData[2];          //array for data conversion
+long convData[2];          //array for data conversions
 
 /* Function for conversion of decimal number (the val parameter) to 2 numbers 
 of type long (i.e. 8 bytes) representing the number in the double format 
@@ -76,13 +80,15 @@ void DoubleAsLong(double val, long ares[])
 }
 
 /* Initialization of the REXLANG algorithm */
+// the init procedure is executed once when the REXLANG function block initializes
 int init(void)
 {
   hSendLoc = -1;
 	return 0;
 }
 
-/* The body of REXLANG algorithm */
+/* The body of the REXLANG algorithm */
+// the main procedure is executed once in each sampling period
 long main(void)
 {
   if (hSendLoc<0)
@@ -96,8 +102,10 @@ long main(void)
     buffer[1] = signal0 >> 8 & 0xFF;
     buffer[2] = signal0 >> 16 & 0xFF;
     buffer[3] = signal0 >> 24 & 0xFF;
+    
     //signal 1 is just a binary signal, therefore 1 byte
     buffer[4] = signal1 & 0xFF;
+    
     //signal 2 is of type double, therefore we convert it to 8 bytes
     DoubleAsLong(signal2,convData);
     buffer[5] = convData[0] & 0xFF;
@@ -108,6 +116,7 @@ long main(void)
     buffer[10] = convData[1] >> 8 & 0xFF;
     buffer[11] = convData[1] >> 16 & 0xFF;
     buffer[12] = convData[1] >> 24 & 0xFF;
+    
     //signal 3 is of type double, therefore we convert it to 8 bytes
     DoubleAsLong(signal3,convData);
     buffer[13] = convData[0] & 0xFF;
@@ -118,14 +127,18 @@ long main(void)
     buffer[18] = convData[1] >> 8 & 0xFF;
     buffer[19] = convData[1] >> 16 & 0xFF;
     buffer[20] = convData[1] >> 24 & 0xFF;
+    
     //now all the data can be sent
     dataCnt = Send(hSendLoc,buffer,21); //send data, number of bytes = 21
   }  
+  //publishing the UDP communication handle through output signal (for debugging)
   handle = hSendLoc;
   return 0;
 }
 
 /* Closing the REXLANG algorithm */
+//the exit procedure is executed once when the task is correctly terminated
+// (system shutdown, downloading new control algorithm, etc.)
 long exit(void)
 {
 	if(hSendLoc>=0) Close(hSendLoc);

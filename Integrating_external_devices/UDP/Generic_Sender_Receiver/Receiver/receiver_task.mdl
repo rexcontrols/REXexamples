@@ -1,7 +1,7 @@
 Model {
   Name                    "receiver_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +33,13 @@ Model {
   }
   System {
     Name                    "receiver_task"
-    Location                [200, 26, 604, 357]
+    Location                [213, 33, 619, 365]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
       Name                    "CNB_RUN"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [190, 138, 210, 152]
+      Position                [190, 163, 210, 177]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   3fcaf061-5f4b-4357-ae12-ce0d51b6f4a4
@@ -48,7 +48,7 @@ Model {
       BlockType               Reference
       Name                    "REXLANG"
       Ports                   [17, 17, 0, 0, 0]
-      Position                [65, 86, 115, 264]
+      Position                [65, 111, 115, 289]
       SourceBlock             "speclib/REXLANG"
       srcname                 "receiver_rexlang.c"
       srctype                 "1: STL"
@@ -77,7 +77,7 @@ Model {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [240, 93, 285, 167]
+      Position                [240, 118, 285, 192]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       1000
@@ -136,10 +136,9 @@ Model {
       #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
     }
     Annotation {
-      Position                [190, 50]
+      Position                [180, 65]
       Text                    "Change the IP addresses in the receiver_rexlang"
-".c file if necessary.\nThe IP addresses are defined by hexadecimal numbers, e."
-"g. 0xC0A801C8."
+".c file if necessary.\n\nSee the README.md file for detailed information.\n"
       #GUID                   c7854090-6d93-4fc6-8c77-ed2ef5476fa1
     }
   }

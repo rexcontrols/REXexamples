@@ -1,7 +1,7 @@
 Model {
   Name                    "receiver_exec"
   Version                 3.00
-  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +33,7 @@ Model {
   }
   System {
     Name                    "receiver_exec"
-    Location                [6, 25, 186, 357]
+    Location                [11, 33, 191, 365]
     #GUID                   39cb8861-5961-447a-bf17-61959d76aae1
     Block {
       BlockType               Reference
