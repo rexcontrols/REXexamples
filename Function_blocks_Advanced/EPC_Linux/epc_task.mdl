@@ -93,7 +93,7 @@ Model {
   LastModifiedDate        "Mon Jan 07 09:53:40 2008"
   ModelVersionFormat      "1.%<AutoIncrement:43>"
   ConfigurationManager    "none"
-  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -125,7 +125,7 @@ Model {
   }
   System {
     Name                    "epc_task"
-    Location                [216, 31, 690, 504]
+    Location                [222, 33, 808, 506]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -142,7 +142,7 @@ Model {
       BlockType               Reference
       Name                    "BIS"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [70, 238, 85, 262]
+      Position                [75, 163, 90, 187]
       SourceBlock             "genlib/BIS"
       Y0                      off
       t1                      1
@@ -160,9 +160,9 @@ Model {
       BlockType               Reference
       Name                    "EPC"
       Ports                   [12, 15, 0, 0, 0]
-      Position                [215, 201, 285, 389]
+      Position                [280, 126, 350, 314]
       SourceBlock             "speclib/EPC"
-      cmd                     "/rex/rexcore/epc_script.sh"
+      cmd                     "/bin/bash /rex/rexcore/epc_script.sh"
       ifns                    "epc_uVec1;epc_uVec2"
       ofns                    "epc_yVec1;epc_yVec2"
       sl                      1
@@ -175,18 +175,19 @@ Model {
       BlockType               Reference
       Name                    "MP_EXECUTE"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [75, 408, 90, 422]
+      Position                [80, 333, 95, 347]
       SourceBlock             "genlib/MP"
       pwidth                  1
       BSTATE                  on
       RPTF                    off
+      BackgroundColor         "magenta"
       #GUID                   8f5ddbff-feb7-47f1-84a8-81ada4ff6dc2
     }
     Block {
       BlockType               Reference
       Name                    "RTOV_data"
       Ports                   [9, 1, 0, 0, 0]
-      Position                [120, 166, 180, 264]
+      Position                [125, 91, 185, 189]
       SourceBlock             "matrixlib/RTOV"
       capacity                3
       offset                  0
@@ -197,7 +198,7 @@ Model {
       BlockType               Reference
       Name                    "RTOV_time"
       Ports                   [9, 1, 0, 0, 0]
-      Position                [120, 281, 180, 379]
+      Position                [125, 206, 185, 304]
       SourceBlock             "matrixlib/RTOV"
       capacity                3
       offset                  0
@@ -208,7 +209,7 @@ Model {
       BlockType               Reference
       Name                    "SG_saw"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [60, 208, 85, 222]
+      Position                [65, 133, 90, 147]
       SourceBlock             "genlib/SG"
       SourceType              "SG"
       isig                    "3: SAWTOOTH"
@@ -225,7 +226,7 @@ Model {
       BlockType               Reference
       Name                    "SG_sine"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [60, 178, 85, 192]
+      Position                [65, 103, 90, 117]
       SourceBlock             "genlib/SG"
       SourceType              "SG"
       isig                    "1: SINE"
@@ -242,7 +243,7 @@ Model {
       BlockType               Reference
       Name                    "TIME"
       Ports                   [0, 3, 0, 0, 0]
-      Position                [45, 293, 85, 327]
+      Position                [50, 218, 90, 252]
       SourceBlock             "genlib/TIME"
       tz                      "1: Local time"
       #GUID                   085c4ee8-e594-4f0d-836e-02f2e33f7e7f
@@ -251,7 +252,7 @@ Model {
       BlockType               Reference
       Name                    "VTOR"
       Ports                   [1, 8, 0, 0, 0]
-      Position                [335, 166, 395, 254]
+      Position                [435, 91, 495, 179]
       SourceBlock             "matrixlib/VTOR"
       n                       5
       offset                  0
@@ -261,7 +262,7 @@ Model {
       BlockType               Reference
       Name                    "VTOR1"
       Ports                   [1, 8, 0, 0, 0]
-      Position                [335, 271, 395, 359]
+      Position                [435, 196, 495, 284]
       SourceBlock             "matrixlib/VTOR"
       n                       3
       offset                  0
@@ -278,7 +279,7 @@ Model {
     Line {
       SrcBlock                "EPC"
       SrcPort                 1
-      Points                  [30, 0]
+      Points                  [65, 0]
       DstBlock                "VTOR"
       DstPort                 1
       #GUID                   54c2ad3a-3d90-4a23-a284-b1febed74f59
@@ -286,7 +287,7 @@ Model {
     Line {
       SrcBlock                "EPC"
       SrcPort                 2
-      Points                  [30, 0]
+      Points                  [65, 0]
       DstBlock                "VTOR1"
       DstPort                 1
       #GUID                   90455027-7321-4f2e-882c-fb0181a40be0
@@ -294,7 +295,7 @@ Model {
     Line {
       SrcBlock                "MP_EXECUTE"
       SrcPort                 1
-      Points                  [105, 0]
+      Points                  [120, 0; 0, -80]
       DstBlock                "EPC"
       DstPort                 9
       #GUID                   9b71c273-e031-4a54-8baa-90b4b86c7abb
@@ -351,22 +352,17 @@ Model {
       #GUID                   ce12bf3a-fd32-4a1c-ae1a-9563ff9b4ea4
     }
     Annotation {
-      Position                [180, 25]
-      Text                    "Example of EPC block usage in Linux"
+      Position                [150, 25]
+      Text                    "EPC - calling external programs in Linux"
       FontSize                14
       FontWeight              "bold"
       #GUID                   0769b06e-86b9-4d92-9928-3a27d37b47a8
     }
     Annotation {
-      Position                [235, 95]
-      Text                    "Instructions:\n1. Read the EPC block descriptio"
-"n (left-click the block and press the F1 key)!\n2. Copy the .sh file and the ."
-"csv files to /rex/rexcore on the target device\n3. Make the script executable:"
-" sudo chmod +x /rex/rexcore/epc_script.sh\n4. Compile and download the executi"
-"ve to the target device\n5. Change the BSTATE parameter of MP_EXECUTE block an"
-"d watch the \n    outputs of the VTOR blocks.\n6. Inspect the working files of"
-" the EPC block in /rex/rexcore/ on the target \n    device."
-      #GUID                   4155d6b5-cb71-499a-a8c6-440de1e9adc2
+      Position                [135, 50]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   b02b0f0b-e249-43de-829a-4e61b69e8c9d
     }
   }
 }

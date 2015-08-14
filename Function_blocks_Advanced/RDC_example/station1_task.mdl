@@ -1,7 +1,7 @@
 Model {
   Name                    "station1_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   rev.                    "3173,"
   Date                    "2013-05-31"
   BlockDefaults {
@@ -41,16 +41,16 @@ Model {
       BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [250, 178, 270, 192]
+      Position                [250, 198, 270, 212]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   d300e41b-a1c0-4bf2-a06b-3d57996e1b1b
     }
     Block {
       BlockType               Reference
-      Name                    "RDC"
+      Name                    "RDC_S1"
       Ports                   [17, 18, 0, 0, 0]
-      Position                [150, 106, 205, 294]
+      Position                [150, 126, 205, 314]
       SourceBlock             "speclib/RDC"
       target                  "192.168.1.200"
       rport                   1288
@@ -63,11 +63,11 @@ Model {
       BlockType               Reference
       Name                    "SG_SINE"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 123, 70, 137]
+      Position                [45, 143, 70, 157]
       SourceBlock             "genlib/SG"
       isig                    "1: SINE"
-      amp                     "0.1"
-      freq                    "1.0000000E+000"
+      amp                     1
+      freq                    "0.05"
       phase                   "0.0000000E+000"
       ifrunit                 "1: Hz"
       iphunit                 "1: degrees"
@@ -77,7 +77,7 @@ Model {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [295, 133, 340, 207]
+      Position                [295, 153, 340, 227]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       10800
@@ -101,14 +101,14 @@ Model {
       #GUID                   5eb65ca4-c5a4-4b84-b90a-c59066da9445
     }
     Line {
-      SrcBlock                "RDC"
+      SrcBlock                "RDC_S1"
       SrcPort                 5
       DstBlock                "TRND"
       DstPort                 2
       #GUID                   0aaa9965-8672-4c8b-ac1c-faf90128aafc
     }
     Line {
-      SrcBlock                "RDC"
+      SrcBlock                "RDC_S1"
       SrcPort                 13
       Points                  [20, 0; 0, -70]
       DstBlock                "TRND"
@@ -121,7 +121,7 @@ Model {
       Points                  [50, 0]
       #GUID                   555dbcac-2f27-4593-9e6e-bd057e1fbbd2
       Branch {
-        DstBlock                "RDC"
+        DstBlock                "RDC_S1"
         DstPort                 2
         #GUID                   96f14035-6e52-455f-a89a-8dd93cb6694e
       }
@@ -133,17 +133,19 @@ Model {
       }
     }
     Annotation {
+      Position                [195, 70]
+      Text                    "Data exchange between 2 target devices of the R"
+"EX Control System\nvia the RDC function block\n\nSee the README.md file for de"
+"tailed information."
+      #GUID                   1fbb18a2-2efc-44e9-90ee-776dbc5ab7bb
+    }
+    Annotation {
       Position                [195, 25]
-      Text                    "Station 1, IP 192.168.1.100, port 1288"
+      Text                    "RDC example, Station 1, IP 192.168.1.100, port "
+"1288"
       FontWeight              "bold"
       FontSize                14
       #GUID                   328187ad-2d15-463f-b0ee-8649d3965e16
-    }
-    Annotation {
-      Position                [195, 50]
-      Text                    "Data exchange between 2 target devices of the R"
-"EX Control System\nvia the RDC function block"
-      #GUID                   1fbb18a2-2efc-44e9-90ee-776dbc5ab7bb
     }
   }
 }

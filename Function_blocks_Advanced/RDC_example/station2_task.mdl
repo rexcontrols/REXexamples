@@ -1,7 +1,7 @@
 Model {
   Name                    "station2_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   rev.                    "3173,"
   Date                    "2013-05-31"
   BlockDefaults {
@@ -35,13 +35,13 @@ Model {
   }
   System {
     Name                    "station2_task"
-    Location                [205, 34, 570, 374]
+    Location                [205, 34, 577, 408]
     #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
     Block {
       BlockType               Reference
       Name                    "ADD"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [150, 243, 175, 267]
+      Position                [150, 278, 175, 302]
       SourceBlock             "mathlib/ADD"
       #GUID                   73994b1d-829d-46d8-bbd8-b188bc668321
     }
@@ -49,7 +49,7 @@ Model {
       BlockType               Reference
       Name                    "CNR"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [90, 253, 110, 267]
+      Position                [90, 288, 110, 302]
       SourceBlock             "mathlib/CNR"
       ycn                     3
       #GUID                   1a163510-195c-4553-8efd-763cd9163033
@@ -58,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "LPBRK"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [220, 90, 230, 100]
+      Position                [160, 130, 170, 140]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
@@ -66,9 +66,9 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "RDC"
+      Name                    "RDC_S2"
       Ports                   [17, 18, 0, 0, 0]
-      Position                [200, 131, 255, 319]
+      Position                [200, 166, 255, 354]
       SourceBlock             "speclib/RDC"
       target                  "192.168.1.100"
       rport                   1288
@@ -80,7 +80,7 @@ Model {
     Line {
       SrcBlock                "ADD"
       SrcPort                 1
-      DstBlock                "RDC"
+      DstBlock                "RDC_S2"
       DstPort                 12
       #GUID                   c1b142e1-9b1e-4ca8-8f6e-bead7195407f
     }
@@ -94,7 +94,7 @@ Model {
     Line {
       SrcBlock                "LPBRK"
       SrcPort                 1
-      Points                  [-175, 0; 0, 80; 90, 0]
+      Points                  [-115, 0; 0, 75; 90, 0]
       #GUID                   18143e10-40e3-42ac-ad69-8466551b5c38
       Branch {
         Points                  [0, 75]
@@ -103,36 +103,38 @@ Model {
         #GUID                   849770b3-cb77-4af8-9458-0ebe32af8b1e
       }
       Branch {
-        DstBlock                "RDC"
+        DstBlock                "RDC_S2"
         DstPort                 4
         #GUID                   820a7e82-fd99-42f4-9e25-f3243d1684a5
       }
     }
     Line {
-      SrcBlock                "RDC"
+      SrcBlock                "RDC_S2"
       SrcPort                 3
-      Points                  [35, 0; 0, -65]
+      Points                  [35, 0; 0, -60]
       DstBlock                "LPBRK"
       DstPort                 1
       #GUID                   43d8006c-152a-4e14-b419-054078699a45
     }
     Annotation {
-      Position                [155, 20]
-      Text                    "Station 2, IP 192.168.1.200, port 1288"
+      Position                [185, 20]
+      Text                    "RDC example, Station 2, IP 192.168.1.200, port "
+"1288"
       FontWeight              "bold"
       FontSize                14
       #GUID                   61953acf-a687-498a-abc5-f53f5ed73d6b
     }
     Annotation {
-      Position                [185, 75]
-      Text                    "The incoming data is looped back in raw form an"
-"d also with an offset."
-      #GUID                   2038d195-4f12-461a-adad-a52449f9e340
+      Position                [305, 205]
+      Text                    "incoming data"
+      #GUID                   cc44b9fc-ba65-447f-9c07-37ff0bcdce84
     }
     Annotation {
-      Position                [180, 50]
+      Position                [180, 75]
       Text                    "Data exchange between 2 target devices of the R"
-"EX Control System\nvia the RDC function block."
+"EX Control System\nvia the RDC function block.\n\nThe incoming data is looped "
+"back in raw form and also with an offset.\n\nSee the README.md file for detail"
+"ed information."
       #GUID                   7ddebc8d-9636-4c09-98e9-0764877c8d35
     }
   }
