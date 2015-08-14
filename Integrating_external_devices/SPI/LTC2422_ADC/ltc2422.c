@@ -6,6 +6,7 @@
 
 #define SPIDEV_FNAME 71 // SPI device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/spidev0.0 on the Raspberry Pi minicomputer)
 
+//assigning variables to outputs, these variables are WRITE-ONLY
 long output(0) channel0; //measured value from ADC channel 0 is published via output y0 of the REXLANG block
 long output(1) EXR0; //extended range indicator on channel0 (out-of-range warning)
 long output(2) channel1; //measured value from ADC channel 1 is published via output y1 of the REXLANG block
@@ -18,6 +19,8 @@ long spi_write_count;
 long spi_read_count;
 long spi_ret_fun;
 
+/* Initialization of the REXLANG algorithm */
+// The init procedure is executed once when the REXLANG function block initializes.
 long init(void)
 {
   spi_bus_handle = Open(SPIDEV_FNAME); // open SPI device
@@ -42,6 +45,8 @@ long init(void)
 	return 0;
 }
 
+/* The body of the REXLANG algorithm */
+// The main procedure is executed once in each sampling period
 int main(void)
 {
   long EXR, SIG, CHANNEL;
@@ -60,6 +65,7 @@ int main(void)
       adc_value = adc_value | 0xFFE00000; //filling the first 11 bits in 32-bit negative number representation      
     }
 
+    //publishing the received data
     if (CHANNEL) { // ADC channel 1 
        channel1 = adc_value;
        EXR1 = EXR;
@@ -70,5 +76,14 @@ int main(void)
       EXR0 = EXR;
     }  
 
+  return 0;
+}
+
+/* Closing the REXLANG algorithm */
+// The exit procedure is executed once when the task is correctly terminated
+// (system shutdown, downloading new control algorithm, etc.).
+long exit(void)
+{
+  if(spi_bus_handle>=0) Close(spi_bus_handle); // close SPI bus
   return 0;
 }

@@ -9,21 +9,42 @@ function block of the REX Control System.
 The GPIO port A is used as digital outputs, the GPIO port B is used as digital
 inputs with the internal pull-up resistors enabled. 
 
-## Prerequisities ##
+See the source **.c* file for details on SPI communication.
 
-- SPI bus must be enabled and available (e.g. /dev/spidev0.0 on the Raspberry Pi)
+## Timing of the project ##
+
+The algorithm runs each 200 milliseconds (0.2 s). See the EXEC function block,  
+tick x ntick0 = 0.1 x 2 = 0.2 
+
+## Prerequisities ##
+- RexCore must be installed and running on the target device (e.g. Raspberry Pi).
+- SPI bus must be enabled and available (e.g. /dev/spidev0.0).
+- The wiring must comply with the attached datasheet. 
+
+## Running the example ##
+- The **exec.mdl* file is the project main file.
+- Open it with *RexDraw*.
+- Specify the SPI bus by the fname parameter of the REXLANG function block.
+- Compile and download it to the target device.
+- Switch to online mode and watch the algorithm.
+- Enable online monitoring of the CNB_GPA blocks (Target->Monitor selection) and 
+the BDOCT_GPIOB block.
+- Toggle the CNB_GPA constants and observe the pins of the MCP23S17 I/O 
+expander.
+- Apply external voltage to GPIOB pins and observe the outputs of BDOCT_GPIOB 
+block.  
 
 ## Documentation ##
 
+- **Press F1 for help** on the selected function block in the *RexDraw* program.
 - [Getting started with REX on the Raspberry Pi minicomputer](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
 - [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- MCP23S17 datasheet (attached)
+- [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##
 
-Visit the [REX Controls company webpage](http://www.rexcontrols.com/rex-control-system-raspberry-pi) 
+- Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
+- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using the REX Control System and the Raspberry
-Pi.
-
-Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org)
-
+automation and control solutions using the REX Control System.

@@ -1,7 +1,7 @@
 Model {
   Name                    "ltc2422_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -243,15 +243,16 @@ Model {
       #GUID                   9890236f-17be-4741-997a-5ba9cd313be5
     }
     Annotation {
-      Position                [200, 55]
-      Text                    "See the read_ltc2422.c file for details."
-      #GUID                   93930d64-916d-4310-85f7-53fe28514322
-    }
-    Annotation {
       Position                [270, 200]
       Text                    "Change LIN_CH0:y2 and LIN_CH1:y2 according \nto"
 " the voltage reference (3.3V is assumed by default)."
       #GUID                   c24e10f4-7b16-4bf0-b31d-962ffc54b9f5
+    }
+    Annotation {
+      Position                [200, 55]
+      Text                    "See the README.md and ltc2422.c files for detai"
+"ls."
+      #GUID                   93930d64-916d-4310-85f7-53fe28514322
     }
   }
 }

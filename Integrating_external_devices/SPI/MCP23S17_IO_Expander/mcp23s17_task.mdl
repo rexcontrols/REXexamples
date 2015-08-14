@@ -1,5 +1,5 @@
 Model {
-  Name                    "mcp23S17_task"
+  Name                    "mcp23s17_task"
   Version                 7.5
   MdlSubVersion           0
   SavedCharacterEncoding  "windows-1250"
@@ -89,7 +89,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -121,7 +121,7 @@ Model {
     FontAngle               "normal"
   }
   System {
-    Name                    "mcp23S17_task"
+    Name                    "mcp23s17_task"
     Location                [204, 34, 682, 361]
     Open                    on
     ModelBrowserVisibility  off
@@ -163,6 +163,7 @@ Model {
       Position                [40, 93, 60, 107]
       SourceBlock             "mathlib/CNB"
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   88076768-1b39-4fe2-a690-8e4a497a2513
     }
     Block {
@@ -172,6 +173,7 @@ Model {
       Position                [95, 108, 115, 122]
       SourceBlock             "mathlib/CNB"
       YCN                     on
+      BackgroundColor         "magenta"
       #GUID                   5a811739-e304-41b5-942a-4417c3332c58
     }
     Block {
@@ -181,6 +183,7 @@ Model {
       Position                [40, 133, 60, 147]
       SourceBlock             "mathlib/CNB"
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   5c8ef43c-da6f-4ae4-ba05-931dec3005f4
     }
     Block {
@@ -190,6 +193,7 @@ Model {
       Position                [95, 148, 115, 162]
       SourceBlock             "mathlib/CNB"
       YCN                     on
+      BackgroundColor         "magenta"
       #GUID                   8b6a9b13-996f-4d8e-9013-28d6564506be
     }
     Block {
@@ -199,6 +203,7 @@ Model {
       Position                [40, 173, 60, 187]
       SourceBlock             "mathlib/CNB"
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   7a2c51cb-7137-468f-8e91-dd6e2bc2b91e
     }
     Block {
@@ -208,6 +213,7 @@ Model {
       Position                [95, 188, 115, 202]
       SourceBlock             "mathlib/CNB"
       YCN                     on
+      BackgroundColor         "magenta"
       #GUID                   ce0d8103-659f-4474-b9ac-d2adbbca1ea4
     }
     Block {
@@ -217,6 +223,7 @@ Model {
       Position                [40, 213, 60, 227]
       SourceBlock             "mathlib/CNB"
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   dbd843d8-9fc7-4f93-b3a5-02c9642de155
     }
     Block {
@@ -226,6 +233,7 @@ Model {
       Position                [95, 228, 115, 242]
       SourceBlock             "mathlib/CNB"
       YCN                     on
+      BackgroundColor         "magenta"
       #GUID                   0ee2e1e5-85dd-4112-af56-ed6b8171363a
     }
     Block {

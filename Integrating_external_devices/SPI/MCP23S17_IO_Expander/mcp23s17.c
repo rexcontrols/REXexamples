@@ -6,9 +6,11 @@
 
 #define SPIDEV_FNAME 71 // SPI device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/spidev0.0 on the Raspberry Pi minicomputer)
 
+//assigning inputs to variables, these variables are READ-ONLY
 long input(3) digital_out; //the signal controlling the outputs is connected to input u3 of the REXLANG block
 long output(10) digital_in; //the state of the input pins is published via output y10 of the REXLANG block 
 
+//declaration of variables
 long spi_bufTx[3]; //buffer for transmitting data
 long spi_bufRx[3]; //buffer for receiving data
 long spi_bus_handle;
@@ -18,6 +20,8 @@ long spi_write_count;
 long spi_read_count;
 long spi_ret_fun;
 
+/* Initialization of the REXLANG algorithm */
+// The init procedure is executed once when the REXLANG function block initializes.
 long init(void)
 {
     spi_bus_handle = Open(SPIDEV_FNAME); // open SPI device
@@ -77,6 +81,8 @@ long init(void)
     return 0;
 }
 
+/* The body of the REXLANG algorithm */
+// The main procedure is executed once in each sampling period
 long main(void)
 {
     //Controlling outputs
@@ -95,4 +101,13 @@ long main(void)
     spi_ret_fun = SPI(spi_bus_handle, 0, spi_bufTx, spi_write_count, spi_bufRx, spi_read_count);
     digital_in = spi_bufRx[2]; //publishing the received data
     return 0;
+}
+
+/* Closing the REXLANG algorithm */
+// The exit procedure is executed once when the task is correctly terminated
+// (system shutdown, downloading new control algorithm, etc.).
+long exit(void)
+{
+  if(spi_bus_handle>=0) Close(spi_bus_handle); // close SPI bus
+  return 0;
 }
