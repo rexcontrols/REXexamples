@@ -7,6 +7,7 @@ function blocks of the REX Control System.
 ## Documentation ##
 
 - [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Licensing of individual function blocks](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/licensing.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

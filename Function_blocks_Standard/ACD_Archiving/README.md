@@ -24,8 +24,17 @@ block EXEC/ARC).
 The algorithm runs each 50 milliseconds (0.05 s). See the EXEC function block,  
 tick x ntick0 = 0.05 x 1 = 0.05 
 
+## Prerequisities ##
+- RexCore must be installed and running on the target device.
+
+## Running the example ##
+- The **exec.mdl* file is the project main file.
+- Open it with *RexDraw*, compile and download it to the target device.
+
 ## Documentation ##
 
+- **Press F1 for help** on the selected function block in the *RexDraw* program.
+- [ACD function block documentation](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/ACD.html)
 - [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
