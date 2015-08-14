@@ -38,6 +38,7 @@ block.
 - [Getting started with REX on the Raspberry Pi minicomputer](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
 - [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
 - MCP23017 datasheet (attached)
+- [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##
 

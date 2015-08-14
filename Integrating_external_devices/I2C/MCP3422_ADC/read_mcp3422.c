@@ -4,7 +4,7 @@
 *
 *************************************************************/
 
-#define I2CDEV_FNAME 67 // I2C device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/i2c-1 on the Raspberry Pi minicomputer) )
+#define I2CDEV_FNAME 67 // I2C device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/i2c-1 on the Raspberry Pi minicomputer)
 
 //assigning variables to outputs, these variables are WRITE-ONLY
 long output(0) adc_value;
