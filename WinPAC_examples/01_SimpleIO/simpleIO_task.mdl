@@ -188,7 +188,7 @@ Model {
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
       Position                [40, 133, 160, 147]
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       ShowName                off
       CloseFcn                "tagdialog Close"
       GotoTag                 "WPC__S0I17X0"
@@ -199,7 +199,7 @@ Model {
       Name                    "From1"
       Ports                   [0, 1, 0, 0, 0]
       Position                [40, 153, 160, 167]
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       ShowName                off
       CloseFcn                "tagdialog Close"
       GotoTag                 "WPC__S0I17X1"
@@ -210,7 +210,7 @@ Model {
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
       Position                [535, 138, 655, 152]
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       ShowName                off
       GotoTag                 "WPC__S2I24V0"
       TagVisibility           "local"
@@ -264,7 +264,7 @@ Model {
       Ports                   [0, 8, 0, 0, 0]
       Position                [80, 261, 110, 349]
       SourceBlock             "inoutlib/INOCT"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       SourceType              "INOCT"
       #GUID                   401aca1d-6150-4527-9689-f65e88c17d0d
     }
@@ -274,7 +274,7 @@ Model {
       Ports                   [8, 0, 0, 0, 0]
       Position                [595, 226, 625, 314]
       SourceBlock             "inoutlib/OUTOCT"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       SourceType              "OUTOCT"
       #GUID                   bc865285-642e-401b-8f04-0d4224debb91
     }
