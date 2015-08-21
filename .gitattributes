@@ -1,4 +1,6 @@
-*.txt eol=crlf
-*.stl eol=crlf
+*.md eol=crlf
 *.mdl eol=crlf
+*.rio eol=crlf
+*.c eol=crlf
+*.stl eol=crlf 
 *.html eol=crlf
