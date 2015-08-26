@@ -10,9 +10,9 @@ synchronized in a demo algorithm, which illustrates seamless integration of
 various I/O devices using the REX Control System.
 
 The ATMT state automaton cycles through 4 states to gradually increase the speed 
-of the "LED snake". Individual pulse generator is selected based on the ATMT 
-automaton state. The generated pulses move the snake bit by bit (literally - 
-bitwise shift to left is used).
+of the "LED snake". The appropriate pulse generator is selected according to the 
+ATMT automaton state. The generated pulses move the snake bit by bit (literally 
+- bitwise shift to left is used).
 
 ## Prerequisities ##
 
@@ -29,6 +29,7 @@ bitwise shift to left is used).
 
 ## Documentation ##
 
+- **Press F1 for help** on the selected function block in the *RexDraw* program.
 - [Getting started with REX and UniPi board (Raspberry Pi)](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
 - [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
 - [OwsDrv - 1-Wire driver](http://www.rexcontrols.com/media/DOC/ENGLISH/OwsDrv_ENG.pdf)

@@ -27,6 +27,7 @@ which allow displaying of the trends (graphs) in the RexView diagnostic tool.
  
 ## Documentation ##
 
+- **Press F1 for help** on the selected function block in the *RexDraw* program.
 - [Getting started with REX and UniPi board (Raspberry Pi)](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
 - [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
 - [OwsDrv - 1-Wire driver](http://www.rexcontrols.com/media/DOC/ENGLISH/OwsDrv_ENG.pdf)

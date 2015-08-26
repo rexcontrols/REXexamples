@@ -22,6 +22,7 @@ for instructions on deploying the HMI on the Raspberry Pi.
 
 ## Documentation ##
 
+- **Press F1 for help** on the selected function block in the *RexDraw* program.
 - [Getting started with REX and UniPi board](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
 - [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
