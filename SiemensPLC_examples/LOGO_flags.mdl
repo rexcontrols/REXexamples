@@ -1,7 +1,7 @@
 Model {
   Name                    "LOGO_flags"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -43,7 +43,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AI1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   f1461cd3-e174-481c-b2cf-7b6742ee0e34
     }
     Block {
@@ -54,7 +54,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AM1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   8b9919b6-7fed-49bf-b541-b960f3f15a59
     }
     Block {
@@ -65,7 +65,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q7"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   f682415f-7cb7-454e-a623-450954b2ac8e
     }
     Block {
@@ -76,7 +76,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q8"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   a8ace5ff-0d2e-4af3-bbf8-e7bef79a4a82
     }
     Block {
@@ -87,7 +87,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__M1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   baf21c79-3106-43e3-bf1a-3338a1f7bd80
     }
     Block {
@@ -98,7 +98,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AI2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   babf7aa3-89cd-49cb-906e-f38839cc1e8b
     }
     Block {
@@ -109,7 +109,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   b39890c1-af1e-4f7a-978b-2d1706c8ff9f
     }
     Block {
@@ -120,7 +120,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   4d492275-f96f-4946-8d27-8fafd9be92a4
     }
     Block {
@@ -131,7 +131,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I3"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   b694a826-44eb-4a60-a481-7d0795e02dd1
     }
     Block {
@@ -142,7 +142,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I4"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   dd4cf58c-b7b2-404f-b099-c0dd3c9517d9
     }
     Block {
@@ -153,7 +153,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I5"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   5d708408-83d1-4119-aeb7-5b6a8dddc93d
     }
     Block {
@@ -164,7 +164,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I6"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   e5ac3ec6-8c07-45f3-82df-6f3cd38bf760
     }
     Block {
@@ -175,7 +175,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   f17e9278-6648-4539-831d-f1bcd3b661f2
     }
     Block {
@@ -186,7 +186,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I7"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   30f6cc9b-53f9-4622-948b-f2e130c23618
     }
     Block {
@@ -197,7 +197,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I8"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   a74022be-68e4-4d40-8dc8-0e92f01f7522
     }
     Block {
@@ -208,7 +208,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AI3"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   83826b19-b901-47ac-9f90-b5b617f1fa7b
     }
     Block {
@@ -219,7 +219,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AI4"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   2fa2f966-c1cb-4e65-9858-252e0cfc64dd
     }
     Block {
@@ -230,7 +230,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AM63"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   e9cbd1c6-ffb7-4ee7-b8ae-2823425f89a7
     }
     Block {
@@ -241,7 +241,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__VD2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   08c1686d-6866-4006-8f36-aa12287bec78
     }
     Block {
@@ -252,7 +252,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__M64"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   31413e76-cf27-4194-ae61-2ea4b44f2a60
     }
     Block {
@@ -263,7 +263,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AI8"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   cca0cb09-bafe-484a-8510-4e86821b6087
     }
     Block {
@@ -274,7 +274,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   03a9c81f-a326-4b6c-9633-f8d2cca9df26
     }
     Block {
@@ -285,7 +285,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   e6cc7f52-9f08-41cc-bcdb-87145a24151d
     }
     Block {
@@ -296,7 +296,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   6e140403-77bc-4c31-ad17-d57a7fd02695
     }
     Block {
@@ -307,7 +307,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ3"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   4a765a8b-fcab-43ad-b564-d57382dc2d95
     }
     Block {
@@ -318,7 +318,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ4"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   18773c81-5227-49c3-bba0-bf76463463c0
     }
     Block {
@@ -329,7 +329,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ8"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   24c24fa4-b470-4160-a0f9-740190cbe771
     }
     Block {
@@ -340,7 +340,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__VW0"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   53ce5b08-3b5a-438f-9124-11b228499c79
     }
     Block {
@@ -351,7 +351,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q3"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   18209b6e-eaf9-4fb4-831c-957b78e875e9
     }
     Block {
@@ -362,7 +362,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q4"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   6f11fb1a-769c-4660-82c3-921c5a288b47
     }
     Block {
@@ -373,7 +373,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AM2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   1c4cd378-aa31-43b5-aa57-cc96c4c4b55c
     }
     Block {
@@ -384,7 +384,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__M2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   c7121a1d-e45c-431c-badb-d7975f550938
     }
     Block {
@@ -395,7 +395,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q5"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   5a188054-ee1d-4778-8dd1-c00e4d4e9bae
     }
     Block {
@@ -406,7 +406,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q6"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   1af5153a-8420-4ad4-b107-02886a7b0ebc
     }
     Block {
@@ -417,7 +417,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q1w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   2b78d410-3b5b-49d1-afb7-1c1600e43f74
     }
     Block {
@@ -428,7 +428,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q2w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   2610e62c-6fd7-4ead-bb90-d171fe454613
     }
     Block {
@@ -439,7 +439,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ1w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   0c72b29f-e149-489d-9e91-58a508dae446
     }
     Block {
@@ -450,7 +450,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ2w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   98f0d332-5aa3-4bef-8e00-e271f463ad61
     }
     Block {
@@ -461,7 +461,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ3w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   aed6205d-6891-44f2-a634-f96ac0e8e521
     }
     Block {
@@ -472,7 +472,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ4w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   1c160073-64c7-448f-bf25-803fd6c0ec90
     }
     Block {
@@ -483,7 +483,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__M2w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   72a60229-e417-48c4-9c62-32f5d019a063
     }
     Block {
@@ -494,7 +494,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AM2w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   1db9119d-47e7-43d1-bea6-6d7a99d327f6
     }
     Block {
@@ -505,7 +505,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AM1w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   81ae924b-ca53-49b0-b783-b557d0f7c09e
     }
     Block {
@@ -516,7 +516,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AQ8w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   b84bd804-3238-4f11-a51f-907ac29620ec
     }
     Block {
@@ -527,7 +527,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AM64w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   12757eb9-dc0e-4ab2-84cb-dddc7247b46a
     }
     Block {
@@ -538,7 +538,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__VW16w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   ef9d1202-326f-4944-85e0-7195fd3631c4
     }
     Block {
@@ -549,7 +549,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q3w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   a0fd24a3-925f-4571-8d1b-b5986bb7b6fd
     }
     Block {
@@ -560,7 +560,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__VD18w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   1c36d49c-aebc-469f-9a22-d5b3d0b9e776
     }
     Block {
@@ -571,7 +571,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q4w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   75de6b29-3177-4436-bda0-54047264c707
     }
     Block {
@@ -582,7 +582,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__M1w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   2b94e4e6-d462-42d9-ac02-bf1dd53ac4f2
     }
     Block {
@@ -593,7 +593,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q5w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   29f7e8f4-6244-4d54-a39c-b8ff7ba922d0
     }
     Block {
@@ -604,7 +604,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__M64w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   ced5620a-44e6-41e5-a0aa-a62352aa065c
     }
     Block {
@@ -615,7 +615,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q6w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   0884e584-93da-4b85-9cc5-fbbb76af7cd7
     }
     Block {
@@ -626,7 +626,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q7w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   5b70d629-2b4b-4a56-9407-ce18872d8aa1
     }
     Block {
@@ -637,7 +637,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q8w"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   0718a259-6839-4155-bc51-d62d1701ce8b
     }
     Block {
@@ -646,7 +646,7 @@ Model {
       Ports                   [0, 8, 0, 0, 0]
       Position                [50, 656, 80, 744]
       SourceBlock             "inoutlib/INOCT"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   4704ca75-4b93-4661-bb43-b3186f9f4048
     }
     Block {
@@ -655,7 +655,7 @@ Model {
       Ports                   [8, 0, 0, 0, 0]
       Position                [440, 656, 470, 744]
       SourceBlock             "inoutlib/OUTOCT"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   bdbb38f8-425c-4ab1-9345-cf13ffe049d7
     }
     Block {
@@ -664,7 +664,7 @@ Model {
       Ports                   [4, 0, 0, 0, 0]
       Position                [440, 767, 470, 813]
       SourceBlock             "inoutlib/OUTQUAD"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   c9428eae-eacc-430e-a72a-9f0b64083fba
     }
     Block {
@@ -673,7 +673,7 @@ Model {
       Ports                   [0, 4, 0, 0, 0]
       Position                [50, 767, 80, 813]
       SourceBlock             "inoutlib/INQUAD"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   5c89ed6b-757d-4442-afee-936be626ff8d
     }
     Annotation {

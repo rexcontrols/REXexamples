@@ -1,7 +1,7 @@
 Model {
   Name                    "logo_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -61,7 +61,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AI1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   ffd5f4d6-bf1c-480b-aced-eefee25edbfd
     }
     Block {
@@ -72,7 +72,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   9c40e7a8-cd86-4b6f-965e-204e4a16f168
     }
     Block {
@@ -83,7 +83,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q4"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   15bf0c15-99ca-4ac2-b381-98c347f27f90
     }
     Block {
@@ -94,7 +94,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__M16"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   d4af0c55-9b16-4594-b291-83af0c57122e
     }
     Block {
@@ -105,7 +105,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   673989f8-e225-4545-b29f-41d54c40c319
     }
     Block {
@@ -116,7 +116,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   5c12b921-1ba5-4c58-b3f6-74a9265c6aef
     }
     Block {
@@ -127,7 +127,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I3"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   87dcd3a0-e70e-451b-a826-1a8215c9c79a
     }
     Block {
@@ -138,7 +138,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I4"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   2168bb9a-5c4c-461f-8ae0-bfa6cb597b7e
     }
     Block {
@@ -149,7 +149,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I5"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   1a371ab4-0fa1-49a1-903a-5970ff692fcb
     }
     Block {
@@ -160,7 +160,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I6"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   93bf5ae5-20eb-4a83-97a0-7f46a3b1530c
     }
     Block {
@@ -171,7 +171,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AI2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   d425d5c0-ff3f-4b6b-8d21-cc009ddadfd7
     }
     Block {
@@ -182,7 +182,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I7"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   245800e0-2d4c-49aa-ab6f-dc17e904d3ba
     }
     Block {
@@ -193,7 +193,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I8"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   a946db89-ed78-43c3-9107-5c865cbd278b
     }
     Block {
@@ -204,7 +204,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__M1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   93c326dd-1aa5-42d9-8e3b-7841a8221de1
     }
     Block {
@@ -215,7 +215,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AM1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   0acebbb1-0e9e-4801-b597-ec326d02c496
     }
     Block {
@@ -226,7 +226,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__AM2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   e866d7c3-0b0a-4c09-8f49-9d99545cea85
     }
     Block {
@@ -237,7 +237,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q2"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   0cfe0d18-621e-4bcd-9d2f-95878c8da732
     }
     Block {
@@ -248,7 +248,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__Q3"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   fb8cde7e-2c4f-49f8-b2b7-637a54549f44
     }
     Block {
@@ -259,7 +259,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__VD0"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   4caa1dad-1b93-4439-ab19-95f5d135c1c3
     }
     Block {
@@ -385,13 +385,6 @@ Model {
       #GUID                   12b35d90-5e64-4ff0-9b5d-7faed38c0c0d
     }
     Annotation {
-      Position                [455, 350]
-      Text                    "Reading and recording analog signals"
-      FontWeight              "bold"
-      FontSize                14
-      #GUID                   9ff4409c-38c5-43c1-8de4-2db1b36f3874
-    }
-    Annotation {
       Position                [65, 155]
       Text                    "Digital inputs"
       FontWeight              "bold"
@@ -414,19 +407,19 @@ Model {
       #GUID                   67999b1e-e679-40eb-990e-301c963e8e7c
     }
     Annotation {
-      Position                [475, 480]
-      Text                    "Reading counter via Variable Memory table"
-      FontWeight              "bold"
-      FontSize                14
-      #GUID                   0904da65-9de6-4d3a-aa23-3232f7d64a5b
-    }
-    Annotation {
       Position                [275, 80]
       Text                    "This example illustrates monitoring of the Siem"
 "ens LOGO! device.\n\nThe REX Control System provides web-based HMI and/or gate"
 "way to other systems (ERP) or devices (PLCs).\n\nSee the S7Drv driver document"
 "ation for details.\n\nSiemens and LOGO! are trademarks of Siemens AG."
       #GUID                   314dadbe-c9c3-4bf3-9f54-f1181e8dab2c
+    }
+    Annotation {
+      Position                [390, 235]
+      Text                    "Analog memory flags"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   a2970a6d-796a-4602-beb6-509e1adc75ad
     }
     Annotation {
       Position                [365, 155]
@@ -436,11 +429,18 @@ Model {
       #GUID                   4e0615de-0489-4786-ba41-b55a573dbab7
     }
     Annotation {
-      Position                [390, 235]
-      Text                    "Analog memory flags"
+      Position                [475, 480]
+      Text                    "Reading counter via Variable Memory table"
       FontWeight              "bold"
       FontSize                14
-      #GUID                   a2970a6d-796a-4602-beb6-509e1adc75ad
+      #GUID                   0904da65-9de6-4d3a-aa23-3232f7d64a5b
+    }
+    Annotation {
+      Position                [455, 350]
+      Text                    "Reading and recording analog signals"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   9ff4409c-38c5-43c1-8de4-2db1b36f3874
     }
   }
 }

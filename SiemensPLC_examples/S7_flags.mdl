@@ -1,7 +1,7 @@
 Model {
   Name                    "S7_flags"
   Version                 3.00
-  #RexVersion             "2.11.0 rev. 5304, Date 2015-06-26"
+  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -44,7 +44,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I1_0"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   b39890c1-af1e-4f7a-978b-2d1706c8ff9f
     }
     Block {
@@ -55,7 +55,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__I1_1"
       ForegroundColor         "black"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   4d492275-f96f-4946-8d27-8fafd9be92a4
     }
     Block {
@@ -66,7 +66,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__O4_3"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   2b78d410-3b5b-49d1-afb7-1c1600e43f74
     }
     Block {
@@ -77,7 +77,7 @@ Model {
       ShowName                off
       GotoTag                 "S7C__O4_4"
       TagVisibility           "local"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   2610e62c-6fd7-4ead-bb90-d171fe454613
     }
     Block {
@@ -86,7 +86,7 @@ Model {
       Ports                   [0, 4, 0, 0, 0]
       Position                [45, 132, 75, 178]
       SourceBlock             "inoutlib/INQUAD"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   5c89ed6b-757d-4442-afee-936be626ff8d
     }
     Block {
@@ -95,7 +95,7 @@ Model {
       Ports                   [0, 8, 0, 0, 0]
       Position                [45, 226, 75, 314]
       SourceBlock             "inoutlib/INOCT"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   4704ca75-4b93-4661-bb43-b3186f9f4048
     }
     Block {
@@ -104,7 +104,7 @@ Model {
       Ports                   [8, 0, 0, 0, 0]
       Position                [385, 226, 415, 314]
       SourceBlock             "inoutlib/OUTOCT"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   bdbb38f8-425c-4ab1-9345-cf13ffe049d7
     }
     Block {
@@ -113,7 +113,7 @@ Model {
       Ports                   [16, 0, 0, 0, 0]
       Position                [385, 336, 415, 504]
       SourceBlock             "inoutlib/OUTHEXD"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   1c4e0c42-199e-4f35-98ca-400711ac82b2
     }
     Block {
@@ -122,7 +122,7 @@ Model {
       Ports                   [0, 16, 0, 0, 0]
       Position                [45, 341, 75, 509]
       SourceBlock             "inoutlib/INHEXD"
-      BackgroundColor         "lightBlue"
+      BackgroundColor         "yellow"
       #GUID                   a1d00283-01a7-4325-8489-690cb3bcf9e7
     }
     Block {
@@ -131,7 +131,7 @@ Model {
       Ports                   [4, 0, 0, 0, 0]
       Position                [385, 132, 415, 178]
       SourceBlock             "inoutlib/OUTQUAD"
-      BackgroundColor         "yellow"
+      BackgroundColor         "lightBlue"
       #GUID                   c9428eae-eacc-430e-a72a-9f0b64083fba
     }
     Annotation {
