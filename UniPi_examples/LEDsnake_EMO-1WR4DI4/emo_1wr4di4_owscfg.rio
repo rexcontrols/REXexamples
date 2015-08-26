@@ -1,0 +1,20 @@
+OwsDrv {
+  Version                 1.00
+  TargetName              "localhost:4304"
+  MaxRequests             1
+  MaxRetries              3
+  Timeout                 10
+  ItemCount               2
+  Item {
+    Name                    "extRLY"
+    Path                    "/29.B89115000000/PIO.BYTE"
+    IOType                  0x0022
+    InitValue               "0"
+  }
+  Item {
+    Name                    "extDI"
+    Path                    "/29.B89115000000/sensed.BYTE"
+    IOType                  0x0012
+    InitValue               "0"
+  }
+}
