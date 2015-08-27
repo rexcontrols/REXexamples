@@ -11,7 +11,7 @@ function block restricts the signal to the 0V..10V range. The LIN block converts
 the range 0V..10V to the 12-bit range 0..4096.  
 
 Channels 4..5 control the PWM outputs of the board. The range of the input 
-signal is not chacked.
+signal is not checked.
 
 The integer values are processed by the REXLANG function block and sent to the 
 EMO-AO4/12 board via the I2C bus. See the **.c* file for details. Also the 
@@ -22,7 +22,7 @@ Feel free to add as many channels as you want. You will need to modify both the
 
 You may connect the outputs of EMO-AO4/12 expansion board to the analog inputs 
 of the UniPi itself for verification. The measured values are recorded in the 
-TRND block which allow displaying of the trends (graphs) in the RexView 
+TRND block which allows displaying of the trends (graphs) in the RexView 
 diagnostic tool. 
 
 ## Timing of the project ##
@@ -31,7 +31,8 @@ The algorithm runs each 50 milliseconds (0.05 s). See the EXEC function block,
 tick x ntick0 = 0.05 x 1 = 0.05 
 
 ## Prerequisities ##
-- RexCore must be installed and running on the target device (Raspberry Pi).
+- RexCore and RPiDrv modules must be installed and running on the target device 
+(Raspberry Pi).
 - I2C bus must be enabled and available on the Raspberry Pi (/dev/i2c-1).
 - The EMO-AO4/12 expansion board must be connected.
 
