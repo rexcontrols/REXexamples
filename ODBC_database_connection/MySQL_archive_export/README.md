@@ -33,26 +33,26 @@ tick x factor = 0.05 x 200 = 10
 - MySQL database server must be available and the credentials correctly defined 
 in the **.rio* file.
 - Database tables called *alarms_archive* and *temperature_archive* are assumed.
-```sql
-CREATE TABLE `alarms_archive` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Time` datetime,
-  `AlarmID` int(11),
-  `Code` int(11),
-  `Level` int(11),
-  `Value` double,
-  PRIMARY KEY (`ID`)
-);
-```
-```sql
-CREATE TABLE `temperature_archive` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `GroupID` int(11),
-  `Time` datetime,
-  `temperature` double,
-  PRIMARY KEY (`ID`)
-);
-```
+  ```sql
+  CREATE TABLE `alarms_archive` (
+    `ID` int(11) NOT NULL AUTO_INCREMENT,
+    `Time` datetime,
+    `AlarmID` int(11),
+    `Code` int(11),
+    `Level` int(11),
+    `Value` double,
+    PRIMARY KEY (`ID`)
+  );
+  ```
+  ```sql
+  CREATE TABLE `temperature_archive` (
+    `ID` int(11) NOT NULL AUTO_INCREMENT,
+    `GroupID` int(11),
+    `Time` datetime,
+    `temperature` double,
+    PRIMARY KEY (`ID`)
+  );
+  ```
 
 ## Running the example ##
 - Edit manually the database access credentials in the **.rio* file.

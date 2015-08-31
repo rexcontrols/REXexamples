@@ -16,18 +16,17 @@ algorithm is running. The data is stored in the database each 5 seconds.
 - MySQL database server must be available and the credentials correctly defined 
 in the **.rio* file.
 - Database table called *sqltable* is assumed.
-
-```sql
-CREATE TABLE `sqltable` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
-  `Time` datetime,
-  `temperature` double,
-  `valvepos` double,
-  `power` double,
-  `manual_mode` INT(11),
-  PRIMARY KEY (`ID`)
-);
-```        
+  ```sql
+  CREATE TABLE `sqltable` (
+    `ID` int(11) NOT NULL AUTO_INCREMENT,
+    `Time` datetime,
+    `temperature` double,
+    `valvepos` double,
+    `power` double,
+    `manual_mode` INT(11),
+    PRIMARY KEY (`ID`)
+  );
+  ```        
  
 ## Running the example ##
 - Edit manually the database access credentials in the **.rio* file.
