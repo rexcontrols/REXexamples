@@ -15,16 +15,28 @@ algorithm is running. The data is stored in the database each 5 seconds.
 - ODBC connector for MySQL database is installed on the target device.
 - MySQL database server must be available and the credentials correctly defined 
 in the **.rio* file.
-- Database table called *sqltable* is assumed, as well as column names 
-*temperature*, *valvepos*, *power* and *manual_mode*.
+- Database table called *sqltable* is assumed.
 
+```sql
+CREATE TABLE `sqltable` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Time` datetime,
+  `temperature` double,
+  `valvepos` double,
+  `power` double,
+  `manual_mode` INT(11),
+  PRIMARY KEY (`ID`)
+);
+```        
+ 
 ## Running the example ##
 - Edit manually the database access credentials in the **.rio* file.
-- The *_exec.mdl* file is the project main file.
+- The **exec.mdl* file is the project main file.
 - Open it with RexDraw, compile and download it to the target device.
 
 ## Documentation ##
 
+- **Press F1 for help** on the selected function block in the *RexDraw* program.
 - [DbDrv - Database access driver](http://www.rexcontrols.com/media/DOC/ENGLISH/DbDrv_ENG.pdf)
 - [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
