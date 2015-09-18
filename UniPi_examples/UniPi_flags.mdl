@@ -467,11 +467,6 @@ Model {
       #GUID                   1b49f079-e6fe-4097-8540-d06c639294d9
     }
     Annotation {
-      Position                [435, 115]
-      Text                    "voltage, 0..100%"
-      #GUID                   7433a0c1-12ce-4504-b576-6dba130ab202
-    }
-    Annotation {
       Position                [165, 295]
       Text                    "input I01"
       #GUID                   ee554651-86c3-4a52-b0b7-ee3434858f49
@@ -567,6 +562,11 @@ Model {
       Position                [500, 335]
       Text                    "relay 3"
       #GUID                   afd8d9a4-a74d-4957-974e-a0472fad0f4d
+    }
+    Annotation {
+      Position                [435, 115]
+      Text                    "voltage, 0..10V"
+      #GUID                   7433a0c1-12ce-4504-b576-6dba130ab202
     }
   }
 }
