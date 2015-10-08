@@ -1,0 +1,575 @@
+Model {
+  Name                    "mcp3008_task"
+  Version                 3.00
+  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "mcp3008_task"
+    Location                [205, 34, 757, 600]
+    #GUID                   3157d45e-4e92-4cb7-bda7-1051db13651e
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [410, 228, 430, 242]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   6204dee5-9143-428a-925b-a3e03e7d5b0c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_nMax"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 93, 65, 107]
+      SourceBlock             "mathlib/CNI"
+      icn                     7
+      BackgroundColor         "magenta"
+      #GUID                   a9c2cd58-3c24-4ab0-b820-54c0dc729f6e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_Vref"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 338, 65, 352]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "3.3"
+      BackgroundColor         "magenta"
+      #GUID                   ee5ef49c-0ef4-4338-a221-8a0225875d08
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH0"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [255, 93, 280, 107]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1023
+      y2                      "3.3"
+      #GUID                   447b95ef-a4f0-4108-b46b-af91ecf3cdf0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [305, 113, 330, 127]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1023
+      y2                      "3.3"
+      #GUID                   88b5d34d-c1cc-4a4c-b62c-bda9905272d6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [255, 133, 280, 147]
+      SourceBlock             "mathlib/LIN"
+      u1                      1023
+      y1                      0
+      u2                      1048575
+      y2                      "3.3"
+      #GUID                   8af1f1eb-1fdb-4a19-b802-0aeebf7393d1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [305, 153, 330, 167]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1023
+      y2                      "3.3"
+      #GUID                   8c325bbc-4709-4cfe-9e60-0c49e210cecd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH4"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [255, 188, 280, 202]
+      SourceBlock             "mathlib/LIN"
+      u1                      1023
+      y1                      0
+      u2                      1048575
+      y2                      "3.3"
+      #GUID                   f39fb5bd-e702-4e20-a476-42c0888b1f31
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH5"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [305, 208, 330, 222]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1023
+      y2                      "3.3"
+      #GUID                   a3fba124-610f-4d0f-b3f9-d4462e27cc19
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH6"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [260, 228, 285, 242]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1023
+      y2                      "3.3"
+      #GUID                   0e6a79f5-9f68-4d1d-99e0-421113fc42be
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH7"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [310, 248, 335, 262]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1023
+      y2                      "3.3"
+      #GUID                   6c3ea46b-eb99-4139-80d5-26a9d7931df5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [17, 17, 0, 0, 0]
+      Position                [120, 81, 170, 259]
+      SourceBlock             "speclib/REXLANG"
+      SID                     4
+      LibraryVersion          "1.88"
+      SourceType              "REXLANG"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      tab_matlab              "BASIC"
+      srcname                 "mcp3008.c"
+      srctype                 "1: STL"
+      stack                   0
+      debug                   "1: No check"
+      p0                      0
+      p1                      0
+      p2                      0
+      p3                      0
+      p4                      0
+      p5                      0
+      p6                      0
+      p7                      0
+      p8                      0
+      p9                      0
+      p10                     0
+      p11                     0
+      p12                     0
+      p13                     0
+      p14                     0
+      p15                     0
+      fname                   "/dev/spidev0.0"
+      #GUID                   9a80c6f8-ff81-462a-a9b6-ad6b44eaa6bf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR_CH0"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [115, 338, 150, 362]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".LIN_CH0:y2"
+      SETF                    off
+      #GUID                   ed39650f-be34-4460-b5b5-e98bcd1f5aff
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR_CH1"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [185, 368, 220, 392]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".LIN_CH1:y2"
+      SETF                    off
+      #GUID                   14706897-ed05-408f-a390-d28315f5c3b4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR_CH2"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [115, 383, 150, 407]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".LIN_CH2:y2"
+      SETF                    off
+      #GUID                   84f8b65b-84be-434d-ab00-54fc315197eb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR_CH3"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [185, 413, 220, 437]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".LIN_CH3:y2"
+      SETF                    off
+      #GUID                   3c860150-a2d7-4ba8-b0ee-88eed7dff702
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR_CH4"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [115, 433, 150, 457]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".LIN_CH4:y2"
+      SETF                    off
+      #GUID                   3200aec8-262a-4f1e-856a-51fd939c162b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR_CH5"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [185, 463, 220, 487]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".LIN_CH5:y2"
+      SETF                    off
+      #GUID                   77336700-67ee-4c34-96b9-ff502e151aed
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR_CH6"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [115, 483, 150, 507]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".LIN_CH6:y2"
+      SETF                    off
+      #GUID                   c223017a-5e49-4bb4-a9fa-19bcfdb41507
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SETPR_CH7"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [185, 513, 220, 537]
+      SourceBlock             "paramlib/SETPR"
+      sc                      ".LIN_CH7:y2"
+      SETF                    off
+      #GUID                   ecfb1759-1d4d-437a-a66d-bc473cc76bfd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_CH0_3"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [460, 88, 505, 162]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Channels 0..3"
+      #GUID                   e03bccef-d548-4b98-a964-357d7074dbf2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_CH4_7"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [460, 183, 505, 257]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      2
+      Title                   "Channels 4..7"
+      #GUID                   9b9f9da5-3ae8-4536-af54-4b012fea7708
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      Points                  [5, 0]
+      #GUID                   86f17a5e-aa2a-4c3e-839b-4be72f229e14
+      Branch {
+        DstBlock                "TRND_CH4_7"
+        DstPort                 5
+        #GUID                   194022b4-64e6-4094-a5d1-1e8d08ce1e15
+      }
+      Branch {
+        Points                  [0, -95]
+        DstBlock                "TRND_CH0_3"
+        DstPort                 5
+        #GUID                   7482c0fc-7315-4992-bdbb-1ba0e4a650cf
+      }
+    }
+    Line {
+      SrcBlock                "CNI_nMax"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 2
+      #GUID                   836ad6ba-4b4d-4957-b4b3-9e9329ab8854
+    }
+    Line {
+      SrcBlock                "CNR_Vref"
+      SrcPort                 1
+      Points                  [15, 0]
+      #GUID                   2636ebc9-c52b-4192-8c69-3959ed9e42ab
+      Branch {
+        DstBlock                "SETPR_CH0"
+        DstPort                 1
+        #GUID                   6a5dab85-eca3-4f93-a69a-77e927178e23
+      }
+      Branch {
+        Points                  [0, 30]
+        #GUID                   2ef5b610-5ff4-475f-9e73-2b22e5b71af5
+        Branch {
+          DstBlock                "SETPR_CH1"
+          DstPort                 1
+          #GUID                   35a7e65c-c19b-4f01-aab2-6b15572fb3a0
+        }
+        Branch {
+          Points                  [0, 15]
+          #GUID                   b9f5a7b3-1aa3-44d2-bae8-d1af13b5b65d
+          Branch {
+            DstBlock                "SETPR_CH2"
+            DstPort                 1
+            #GUID                   7871ac20-d02f-4fbd-bbad-69ee1477a9e7
+          }
+          Branch {
+            Points                  [0, 30]
+            #GUID                   db5d8ac7-1304-439b-84cd-cc5e026d9876
+            Branch {
+              DstBlock                "SETPR_CH3"
+              DstPort                 1
+              #GUID                   406f981a-699e-4a81-aa71-8c5b490984e4
+            }
+            Branch {
+              Points                  [0, 20]
+              #GUID                   f48a2c86-17fe-4424-aba1-860de12d90ab
+              Branch {
+                DstBlock                "SETPR_CH4"
+                DstPort                 1
+                #GUID                   10258422-48a7-4ee6-b7eb-f43c450b1b82
+              }
+              Branch {
+                Points                  [0, 30]
+                #GUID                   ca3d5339-e5ab-46c5-89b9-6c4ac95004b8
+                Branch {
+                  DstBlock                "SETPR_CH5"
+                  DstPort                 1
+                  #GUID                   a08d6b69-61ab-46a7-9f28-89e88eb98384
+                }
+                Branch {
+                  Points                  [0, 20]
+                  #GUID                   9686acd0-1924-4120-bace-51d5d823f15b
+                  Branch {
+                    DstBlock                "SETPR_CH6"
+                    DstPort                 1
+                    #GUID                   "eb05c838-461a-47d1-a150-8aa53ffe6"
+#"71f"
+                  }
+                  Branch {
+                    Points                  [0, 30]
+                    DstBlock                "SETPR_CH7"
+                    DstPort                 1
+                    #GUID                   "c34f7fea-4437-44cf-ae89-418013d1e"
+#"c49"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    Line {
+      SrcBlock                "LIN_CH0"
+      SrcPort                 1
+      DstBlock                "TRND_CH0_3"
+      DstPort                 1
+      #GUID                   e7d5e791-a906-4ab1-bfe4-f53e7cb8ba68
+    }
+    Line {
+      SrcBlock                "LIN_CH1"
+      SrcPort                 1
+      Points                  [15, 0; 0, -10]
+      DstBlock                "TRND_CH0_3"
+      DstPort                 2
+      #GUID                   24f4b7f6-0c11-431f-8165-79616172116d
+    }
+    Line {
+      SrcBlock                "LIN_CH2"
+      SrcPort                 1
+      Points                  [75, 0; 0, -20]
+      DstBlock                "TRND_CH0_3"
+      DstPort                 3
+      #GUID                   01e00f38-90d8-4b68-bb97-e19921ce7d21
+    }
+    Line {
+      SrcBlock                "LIN_CH3"
+      SrcPort                 1
+      Points                  [35, 0; 0, -30]
+      DstBlock                "TRND_CH0_3"
+      DstPort                 4
+      #GUID                   033080d6-223f-449b-9fb5-472e9749b838
+    }
+    Line {
+      SrcBlock                "LIN_CH4"
+      SrcPort                 1
+      DstBlock                "TRND_CH4_7"
+      DstPort                 1
+      #GUID                   1440f7d8-f73b-40b7-8e40-8695a8494d83
+    }
+    Line {
+      SrcBlock                "LIN_CH5"
+      SrcPort                 1
+      Points                  [15, 0; 0, -10]
+      DstBlock                "TRND_CH4_7"
+      DstPort                 2
+      #GUID                   bf6ac442-b937-4fc9-8e23-dfd22721836c
+    }
+    Line {
+      SrcBlock                "LIN_CH6"
+      SrcPort                 1
+      Points                  [70, 0; 0, -20]
+      DstBlock                "TRND_CH4_7"
+      DstPort                 3
+      #GUID                   ad5c91ee-1e47-4b7a-b6f1-22688d445625
+    }
+    Line {
+      SrcBlock                "LIN_CH7"
+      SrcPort                 1
+      Points                  [30, 0; 0, -30]
+      DstBlock                "TRND_CH4_7"
+      DstPort                 4
+      #GUID                   1f2295ae-45d3-4d8a-8316-26a80e345629
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 2
+      DstBlock                "LIN_CH0"
+      DstPort                 1
+      #GUID                   2cf16e13-6b2b-48a1-a667-6870d4a2d49a
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 3
+      Points                  [55, 0; 0, 10]
+      DstBlock                "LIN_CH1"
+      DstPort                 1
+      #GUID                   33d0e96c-a288-4ff5-be6c-ffadde8fbb37
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 4
+      Points                  [50, 0; 0, 20]
+      DstBlock                "LIN_CH2"
+      DstPort                 1
+      #GUID                   8c65eea5-6d71-40cc-8c50-5e7e94a2899d
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 5
+      Points                  [45, 0; 0, 30]
+      DstBlock                "LIN_CH3"
+      DstPort                 1
+      #GUID                   24860283-7964-4ed9-b582-ae4e2ee583e8
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 6
+      Points                  [40, 0; 0, 55]
+      DstBlock                "LIN_CH4"
+      DstPort                 1
+      #GUID                   df911085-3db4-4101-8b6f-1bb969b0d2cb
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 7
+      Points                  [35, 0; 0, 65]
+      DstBlock                "LIN_CH5"
+      DstPort                 1
+      #GUID                   f8da0d6e-9136-432b-a3cf-97eca2d40eb6
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 8
+      Points                  [30, 0; 0, 75]
+      DstBlock                "LIN_CH6"
+      DstPort                 1
+      #GUID                   dc53bf40-84d1-4d32-8e55-176b9041ca06
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 9
+      Points                  [25, 0; 0, 85]
+      DstBlock                "LIN_CH7"
+      DstPort                 1
+      #GUID                   2446fbb6-7c7e-461e-acc8-d167efc74f3e
+    }
+    Annotation {
+      Position                [200, 35]
+      Text                    "Reading MCP3008 ADC via SPI"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   9890236f-17be-4741-997a-5ba9cd313be5
+    }
+    Annotation {
+      Position                [200, 55]
+      Text                    "See the mcp3008.c file for details."
+      #GUID                   93930d64-916d-4310-85f7-53fe28514322
+    }
+    Annotation {
+      Position                [210, 90]
+      Text                    "ADC data"
+      #GUID                   53bcde54-e586-4f4b-9b3e-df9527121ee7
+    }
+    Annotation {
+      Position                [395, 90]
+      Text                    "voltage readings"
+      #GUID                   565406d6-fa08-4b9e-8c7f-f5148ed5a98d
+    }
+    Annotation {
+      Position                [155, 310]
+      Text                    "Setting y2 parameters of all LIN_CHx function b"
+"locks\naccording to the voltage reference (3.3V is assumed\nby default)."
+      #GUID                   c24e10f4-7b16-4bf0-b31d-962ffc54b9f5
+    }
+  }
+}
