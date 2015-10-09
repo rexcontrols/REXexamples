@@ -1,7 +1,7 @@
 Model {
   Name                    "mcp3008_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5224, Date 2015-06-08"
+  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -94,9 +94,9 @@ Model {
       Ports                   [1, 1, 0, 0, 0]
       Position                [255, 133, 280, 147]
       SourceBlock             "mathlib/LIN"
-      u1                      1023
+      u1                      0
       y1                      0
-      u2                      1048575
+      u2                      1023
       y2                      "3.3"
       #GUID                   8af1f1eb-1fdb-4a19-b802-0aeebf7393d1
     }
@@ -118,9 +118,9 @@ Model {
       Ports                   [1, 1, 0, 0, 0]
       Position                [255, 188, 280, 202]
       SourceBlock             "mathlib/LIN"
-      u1                      1023
+      u1                      0
       y1                      0
-      u2                      1048575
+      u2                      1023
       y2                      "3.3"
       #GUID                   f39fb5bd-e702-4e20-a476-42c0888b1f31
     }
@@ -140,7 +140,7 @@ Model {
       BlockType               Reference
       Name                    "LIN_CH6"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [260, 228, 285, 242]
+      Position                [255, 228, 280, 242]
       SourceBlock             "mathlib/LIN"
       u1                      0
       y1                      0
@@ -327,15 +327,15 @@ Model {
       Points                  [5, 0]
       #GUID                   86f17a5e-aa2a-4c3e-839b-4be72f229e14
       Branch {
-        DstBlock                "TRND_CH4_7"
-        DstPort                 5
-        #GUID                   194022b4-64e6-4094-a5d1-1e8d08ce1e15
-      }
-      Branch {
         Points                  [0, -95]
         DstBlock                "TRND_CH0_3"
         DstPort                 5
         #GUID                   7482c0fc-7315-4992-bdbb-1ba0e4a650cf
+      }
+      Branch {
+        DstBlock                "TRND_CH4_7"
+        DstPort                 5
+        #GUID                   194022b4-64e6-4094-a5d1-1e8d08ce1e15
       }
     }
     Line {
@@ -467,7 +467,7 @@ Model {
     Line {
       SrcBlock                "LIN_CH6"
       SrcPort                 1
-      Points                  [70, 0; 0, -20]
+      Points                  [75, 0; 0, -20]
       DstBlock                "TRND_CH4_7"
       DstPort                 3
       #GUID                   ad5c91ee-1e47-4b7a-b6f1-22688d445625
