@@ -1,7 +1,7 @@
 Model {
   Name                    "thermostat_exec"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -42,10 +42,10 @@ Model {
       Position                [15, 13, 60, 302]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
-      tick                    1
-      ntick0                  1
-      ntick1                  4
-      ntick2                  4
+      tick                    "0.05"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
       ntick3                  1200
       pri0                    5
       pri1                    9

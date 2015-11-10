@@ -1,7 +1,7 @@
 Model {
   Name                    "thermostat_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -98,7 +98,7 @@ Model {
       ptype2                  "1: Store"
       ptype3                  "1: Store"
       ptype4                  "1: Store"
-      pfac                    10
+      pfac                    20
       afac                    0
       arc                     0
       id                      1
@@ -118,7 +118,7 @@ Model {
       ptype2                  "1: Store"
       ptype3                  "1: Store"
       ptype4                  "1: Store"
-      pfac                    1
+      pfac                    2
       afac                    0
       arc                     0
       id                      1
