@@ -551,11 +551,6 @@ Model {
       #GUID                   9890236f-17be-4741-997a-5ba9cd313be5
     }
     Annotation {
-      Position                [200, 55]
-      Text                    "See the mcp3008.c file for details."
-      #GUID                   93930d64-916d-4310-85f7-53fe28514322
-    }
-    Annotation {
       Position                [210, 90]
       Text                    "ADC data"
       #GUID                   53bcde54-e586-4f4b-9b3e-df9527121ee7
@@ -570,6 +565,12 @@ Model {
       Text                    "Setting y2 parameters of all LIN_CHx function b"
 "locks\naccording to the voltage reference (3.3V is assumed\nby default)."
       #GUID                   c24e10f4-7b16-4bf0-b31d-962ffc54b9f5
+    }
+    Annotation {
+      Position                [200, 55]
+      Text                    "See the README.md and mcp3008.c files for detai"
+"ls."
+      #GUID                   93930d64-916d-4310-85f7-53fe28514322
     }
   }
 }

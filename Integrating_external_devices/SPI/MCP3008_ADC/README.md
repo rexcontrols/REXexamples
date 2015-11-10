@@ -17,7 +17,7 @@ program.
 ## Timing of the project ##
 
 The algorithm runs each 100 milliseconds (0.1 s). See the EXEC function block,  
-tick x ntick0 = 0.01 x 10 = 0.5 
+tick x ntick0 = 0.01 x 10 = 0.1 
 
 ## Prerequisities ##
 - RexCore must be installed and running on the target device (Raspberry Pi).
