@@ -46,7 +46,7 @@ long main(void)
   i2c_write_count = 1;
   i2c_read_count = 2;
   //Sending data via I2C
-  i2c_ret_fun = I2C(i2c_port_handle, i2c_chip_address, i2c_bufTx, i2c_write_count, i2c_bufRx, i2c_read_count);
+  i2c_ret_fun = I2C(i2c_bus_handle, i2c_chip_address, i2c_bufTx, i2c_write_count, i2c_bufRx, i2c_read_count);
   adc_value = (i2c_bufRx[0]<<8) + i2c_bufRx[1];
   
   return 0;
