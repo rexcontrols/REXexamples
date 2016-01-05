@@ -1,0 +1,189 @@
+Model {
+  Name                    "mysql_task"
+  Version                 3.00
+  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "mysql_task"
+    Location                [206, 33, 847, 408]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [255, 168, 270, 182]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   f5e1b32d-92d1-4191-ba09-dcf950965e1a
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 128, 170, 142]
+      ShowName                off
+      GotoTag                 "DB__temperature"
+      BackgroundColor         "yellow"
+      #GUID                   4495b4c8-cb45-4e83-a3aa-729b44147752
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 178, 140, 192]
+      ShowName                off
+      GotoTag                 "DB__iyear"
+      BackgroundColor         "yellow"
+      #GUID                   0c6677c3-bb49-45e7-9457-be92586204e1
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 203, 140, 217]
+      ShowName                off
+      GotoTag                 "DB__imonth"
+      BackgroundColor         "yellow"
+      #GUID                   5e1f1440-42f6-43d5-b7dc-b25b90df24da
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 228, 140, 242]
+      ShowName                off
+      GotoTag                 "DB__iday"
+      BackgroundColor         "yellow"
+      #GUID                   fe99ce5f-93d1-4c6d-8b5e-2d88bd79202c
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 253, 140, 267]
+      ShowName                off
+      GotoTag                 "DB__ihour"
+      BackgroundColor         "yellow"
+      #GUID                   516f04c0-ed39-410b-9f1c-4fd9ec81ae43
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 278, 140, 292]
+      ShowName                off
+      GotoTag                 "DB__imin"
+      BackgroundColor         "yellow"
+      #GUID                   ed0da19e-7623-4883-a1b2-851d4597fec4
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 303, 140, 317]
+      ShowName                off
+      GotoTag                 "DB__isec"
+      BackgroundColor         "yellow"
+      #GUID                   3bb2fd1d-1291-40dd-b890-5df3d54d86f0
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 153, 140, 167]
+      ShowName                off
+      GotoTag                 "DB__fresh"
+      BackgroundColor         "yellow"
+      #GUID                   ba53474e-e4c7-4886-8c63-794ae6354fc9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [300, 122, 345, 198]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   4709c3c4-9ba1-4bfb-909c-c157df464da6
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   feb79241-792a-4ff3-a26c-75fb64a55998
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   096803b6-a60f-4a1d-8e09-dccaf36bdf8d
+    }
+    Line {
+      SrcBlock                "From7"
+      SrcPort                 1
+      Points                  [40, 0; 0, -15]
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   c3f2791c-1566-4ea1-bdcb-09709443142d
+    }
+    Annotation {
+      Position                [120, 20]
+      Text                    "Reading data from database"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   cd195015-2968-4888-888a-da5311a31c2c
+    }
+    Annotation {
+      Position                [210, 65]
+      Text                    "This example illustrates importing data from My"
+"SQL database to the algorithm.\nDatabase access credentials must be correctly "
+"configured and ODBC data \nconnector must be installed.\n\nSee the README.md f"
+"ile for additional information."
+      #GUID                   f58a54d9-0f97-4418-8775-0b946a8ef391
+    }
+  }
+}
