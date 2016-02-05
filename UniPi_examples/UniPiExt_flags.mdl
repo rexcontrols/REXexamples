@@ -1,7 +1,7 @@
 Model {
   Name                    "UniPiExt_flags"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +33,7 @@ Model {
   }
   System {
     Name                    "UniPiExt_flags"
-    Location                [12, 33, 469, 400]
+    Location                [12, 33, 512, 725]
     #GUID                   e6059b7f-76c1-441f-b9c4-fe18bf168aba
     Block {
       BlockType               Goto
@@ -45,6 +45,171 @@ Model {
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   ba842ef7-a8c1-4a81-a544-5917c30e35c3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto10"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 412, 460, 428]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH0_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   42f255d9-c08d-4692-9f7a-8d1ef8864e57
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto11"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 472, 460, 488]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH3_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3737c985-3208-4e77-9232-78a999cb47b5
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto12"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 527, 460, 543]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH0X_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a8a2a237-ffd8-4eb3-9854-256ac0df80c8
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto13"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 527, 290, 543]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH0X_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3932a0fe-13a6-47ad-94d7-b02efe9d3485
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto14"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 547, 460, 563]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH1X_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   989b5ede-203d-4a5a-a478-bc187c7a846f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto15"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 547, 290, 563]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH1X_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   44595edf-f017-4337-a2e4-92baf630fe76
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto16"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 567, 460, 583]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH2X_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   4d2a2e8d-e910-4a44-8915-dc18563e2ca8
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto17"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 567, 290, 583]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH2X_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   6f816fe8-aec4-4faa-bf1e-9f947a441077
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto18"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 587, 460, 603]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH3X_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   296afaa9-27b8-4d9b-a5a8-85f1d3222085
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto19"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 587, 290, 603]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH3X_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   ad66b403-ab0c-4ea4-a2c4-ed3c8480d6f8
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 432, 290, 448]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH1_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   16941030-1ffe-4947-9072-ac627e44d1f7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto20"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 607, 460, 623]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH4X_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   4e60cf08-c322-4974-8de4-2bbbe90b922a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto21"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 607, 290, 623]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH4X_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   e4e1b491-7080-4f72-9ac2-3c8136ac877c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto22"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 647, 460, 663]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH15X_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3dd74d81-71e5-4fba-9f5a-ad8b26737609
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto23"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 647, 290, 663]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH15X_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3bfe1eda-7f79-4acf-8b1b-6d7a6c2e95ba
     }
     Block {
       BlockType               Goto
@@ -78,6 +243,61 @@ Model {
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   e1b8bc7d-0eb3-49d4-8412-9e4cedda2cab
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 452, 290, 468]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH2_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   726ca94c-9b87-489b-a3ef-039fe6196266
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 412, 290, 428]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH0_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f1e5f0b0-70e2-458f-a528-6d565ed53604
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 472, 290, 488]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH3_A64"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c5ea4628-cd85-472e-a2cf-7893375a11a3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto8"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 432, 460, 448]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH1_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   07303d54-d618-4313-8d8e-d03c626670c3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto9"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 452, 460, 468]
+      ShowName                off
+      GotoTag                 "UNP__EAO4_CH2_A0x40"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   d9d7aff1-d1c3-4e9b-83b2-9f3077bcacf1
     }
     Block {
       BlockType               Reference
@@ -163,6 +383,86 @@ Model {
       Position                [150, 290]
       Text                    "..."
       #GUID                   f449f5f8-9d88-431d-be8a-f09d3181e654
+    }
+    Annotation {
+      Position                [165, 375]
+      Text                    "4x analog output board (EMO-AO4)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   c67501dd-dbf3-46ca-9084-310a6a002a4a
+    }
+    Annotation {
+      Position                [210, 400]
+      Text                    "I2C address 64 (=0x40), change it according to "
+"the A0-A2 jumper setting"
+      #GUID                   58b1654e-79c7-4d75-8505-1633af47c4a0
+    }
+    Annotation {
+      Position                [80, 420]
+      Text                    "channel 0 (0..10V)"
+      #GUID                   01c25425-f516-4125-b078-a8cdee061ccd
+    }
+    Annotation {
+      Position                [80, 440]
+      Text                    "channel 1 (0..10V)"
+      #GUID                   ab15a07e-0bb3-4713-87fe-14e32db659a6
+    }
+    Annotation {
+      Position                [80, 460]
+      Text                    "channel 2 (0..10V)"
+      #GUID                   df6ba934-b3ab-4ff6-bd16-f28905cfda68
+    }
+    Annotation {
+      Position                [80, 480]
+      Text                    "channel 3 (0..10V)"
+      #GUID                   fa9d4d93-fe47-4602-82ec-aefb57176f22
+    }
+    Annotation {
+      Position                [75, 535]
+      Text                    "channel 0 (raw, 0..4095)"
+      #GUID                   d7dc4257-3518-4921-9781-f590729544bb
+    }
+    Annotation {
+      Position                [75, 555]
+      Text                    "channel 1 (raw, 0..4095)"
+      #GUID                   88019e84-5536-4f7c-93af-8780a372ca08
+    }
+    Annotation {
+      Position                [75, 575]
+      Text                    "channel 2 (raw, 0..4095)"
+      #GUID                   0bfd5575-dfb1-4401-a5c5-32f6291967e1
+    }
+    Annotation {
+      Position                [75, 595]
+      Text                    "channel 3 (raw, 0..4095)"
+      #GUID                   0ae9bfd3-70c3-4ecb-a497-f81feb30dbf0
+    }
+    Annotation {
+      Position                [75, 615]
+      Text                    "channel 4 (raw, 0..4095)"
+      #GUID                   72225f7f-e5b8-4c85-948e-8e30992d91aa
+    }
+    Annotation {
+      Position                [195, 635]
+      Text                    "..."
+      #GUID                   6f3c3b6e-d6be-4a87-85d3-096a1ed4bd16
+    }
+    Annotation {
+      Position                [70, 655]
+      Text                    "channel 15 (raw, 0..4095)"
+      #GUID                   39dc6617-a04d-4ee4-a193-de2741352a7c
+    }
+    Annotation {
+      Position                [365, 635]
+      Text                    "..."
+      #GUID                   dc64e6bb-7c70-4384-978e-f969d908af02
+    }
+    Annotation {
+      Position                [55, 515]
+      Text                    "Raw DAC data:"
+      FontWeight              "bold"
+      FontSize                10
+      #GUID                   d3cc7abb-3115-4ce2-874f-1c43d1fb0c22
     }
   }
 }
