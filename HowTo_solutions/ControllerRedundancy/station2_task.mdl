@@ -1,0 +1,293 @@
+Model {
+  Name                    "station2_task"
+  Version                 3.00
+  #RexVersion             "2.10.8 rev. 5910, Date 2016-02-28"
+  rev.                    "3173,"
+  Date                    "2013-05-31"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "station2_task"
+    Location                [205, 34, 887, 408]
+    #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
+    Block {
+      BlockType               Reference
+      Name                    "CMP"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [235, 113, 265, 137]
+      SourceBlock             "analoglib/CMP"
+      hys                     0
+      #GUID                   2be83a2e-a2cf-432c-8d8e-b22f2bfe0272
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_TEST"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [240, 83, 260, 97]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   5f41c42e-6fb8-4cd8-97c3-dafd1813aee9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_timeout"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [185, 123, 205, 137]
+      SourceBlock             "mathlib/CNR"
+      ycn                     5
+      BackgroundColor         "magenta"
+      #GUID                   6b7c7e01-becc-4830-a2dc-eba5f71e34bd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_R"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [335, 148, 360, 162]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   e43c2f27-7699-4936-ad5c-ed1aae454c55
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [220, 305, 230, 315]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      #GUID                   ced34d66-e71d-4ac9-a199-457f53111c55
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [205, 320, 215, 330]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      #GUID                   51003927-fc77-42b8-8651-2f0012b061a9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_RESET"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [280, 148, 295, 162]
+      SourceBlock             "genlib/MP"
+      pwidth                  1
+      BSTATE                  off
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   030025b6-1d12-4fba-b781-89f37eab4515
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OR_"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [300, 108, 335, 132]
+      SourceBlock             "logiclib/OR_"
+      #GUID                   0408daa2-b1f8-4e75-a8e4-9a1b1fff50b6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PARR_S2_AO"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [475, 178, 510, 202]
+      SourceBlock             "paramlib/PARR"
+      par                     "3.7"
+      SATF                    off
+      hilim                   1
+      lolim                   -1
+      BackgroundColor         "magenta"
+      #GUID                   164b7de2-76df-48fe-a34d-91bb5ad6a42c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RDC_S2"
+      Ports                   [17, 18, 0, 0, 0]
+      Position                [75, 101, 130, 289]
+      SourceBlock             "speclib/RDC"
+      target                  "192.168.1.100"
+      rport                   1288
+      lport                   1288
+      id                      1
+      period                  "0.5"
+      #GUID                   dbded688-b26d-438a-acda-9d0429dac5f5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SR_FAILURE"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [395, 138, 430, 162]
+      SourceBlock             "logiclib/SR"
+      #GUID                   d7f6dd86-5d2a-487d-8da2-c40045f829b8
+    }
+    Line {
+      SrcBlock                "CMP"
+      SrcPort                 1
+      DstBlock                "OR_"
+      DstPort                 2
+      #GUID                   c731c9dd-9a37-4ae3-9e13-e87cdadc7a9e
+    }
+    Line {
+      SrcBlock                "CNB_TEST"
+      SrcPort                 1
+      Points                  [20, 0]
+      DstBlock                "OR_"
+      DstPort                 1
+      #GUID                   603ea61f-ae8c-4a52-b596-ae4d5155b074
+    }
+    Line {
+      SrcBlock                "CNR_timeout"
+      SrcPort                 1
+      DstBlock                "CMP"
+      DstPort                 2
+      #GUID                   177077ae-c115-49c8-b948-801f76def408
+    }
+    Line {
+      SrcBlock                "EDGE_R"
+      SrcPort                 1
+      DstBlock                "SR_FAILURE"
+      DstPort                 2
+      #GUID                   fc5f2aa8-eb5a-4390-b9ad-da2064959c87
+    }
+    Line {
+      SrcBlock                "LPBRK"
+      SrcPort                 1
+      Points                  [-165, 0; 0, -35]
+      DstBlock                "RDC_S2"
+      DstPort                 17
+      #GUID                   df341fd2-a45e-41a8-ab9e-72bb3d275e39
+    }
+    Line {
+      SrcBlock                "LPBRK1"
+      SrcPort                 1
+      Points                  [-160, 0; 0, -60]
+      DstBlock                "RDC_S2"
+      DstPort                 16
+      #GUID                   c1f90c3e-d5ce-4f58-8ae9-bf4ab5b24db3
+    }
+    Line {
+      SrcBlock                "MP_RESET"
+      SrcPort                 1
+      DstBlock                "EDGE_R"
+      DstPort                 1
+      #GUID                   20ffbc90-9ab8-4d5e-9a8c-3c070c4df787
+    }
+    Line {
+      SrcBlock                "OR_"
+      SrcPort                 1
+      Points                  [40, 0]
+      DstBlock                "SR_FAILURE"
+      DstPort                 1
+      #GUID                   0786a1d3-0a9a-49ac-8ed7-f72a27063d3a
+    }
+    Line {
+      SrcBlock                "PARR_S2_AO"
+      SrcPort                 1
+      Points                  [20, 0]
+      #GUID                   288115d2-1cdb-485e-b1e2-b825816d0d4f
+      Branch {
+        Points                  [60, 0]
+        #GUID                   52e3eaa6-49b7-4d3b-bcae-23d0f7d088f9
+      }
+      Branch {
+        Points                  [0, 135]
+        DstBlock                "LPBRK1"
+        DstPort                 1
+        #GUID                   ed5dfeee-b772-434b-af9e-985e6acd75d8
+      }
+    }
+    Line {
+      SrcBlock                "RDC_S2"
+      SrcPort                 2
+      DstBlock                "CMP"
+      DstPort                 1
+      #GUID                   e07d4988-d677-4724-973d-1479f7b0e9ca
+    }
+    Line {
+      SrcBlock                "RDC_S2"
+      SrcPort                 3
+      Points                  [15, 0; 0, 55]
+      DstBlock                "PARR_S2_AO"
+      DstPort                 1
+      #GUID                   f9575911-2b75-4481-8601-141d1f7e6e92
+    }
+    Line {
+      SrcBlock                "SR_FAILURE"
+      SrcPort                 1
+      Points                  [15, 0]
+      #GUID                   4b9db213-a945-4ee1-846a-c9e3fc9863e2
+      Branch {
+        Points                  [145, 0]
+        #GUID                   ae425316-7264-46b5-9f45-b9f242c335b4
+      }
+      Branch {
+        Points                  [0, 50]
+        #GUID                   8d5101ec-61c1-47d1-9fbb-8bbd8157da5c
+        Branch {
+          Points                  [0, 115]
+          DstBlock                "LPBRK"
+          DstPort                 1
+          #GUID                   4b494ab2-85b1-49b1-8b0c-64ce9d3a4c0b
+        }
+        Branch {
+          DstBlock                "PARR_S2_AO"
+          DstPort                 2
+          #GUID                   8818f018-cbb0-4dbd-aa39-6d05e914155a
+        }
+      }
+    }
+    Annotation {
+      Position                [150, 50]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   7ddebc8d-9636-4c09-98e9-0764877c8d35
+    }
+    Annotation {
+      Position                [225, 30]
+      Text                    "Controller redundancy, Station 2, IP 192.168.1."
+"200, port 1288"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   61953acf-a687-498a-abc5-f53f5ed73d6b
+    }
+    Annotation {
+      Position                [545, 135]
+      Text                    "Boolean signal indicating failure of Station 1"
+      #GUID                   6751208d-1f94-488a-aedb-4d559daf9783
+    }
+    Annotation {
+      Position                [555, 180]
+      Text                    "Analog output"
+      #GUID                   09ca5d3d-637e-4f0a-90a6-722ecce6f11f
+    }
+  }
+}
