@@ -33,6 +33,7 @@ tick x factor = 0.05 x 200 = 10
 - MySQL database server must be available and the credentials correctly defined 
 in the **.rio* file.
 - Database tables called *alarms_archive* and *temperature_archive* are assumed.
+
   ```sql
   CREATE TABLE `alarms_archive` (
     `ID` int(11) NOT NULL AUTO_INCREMENT,

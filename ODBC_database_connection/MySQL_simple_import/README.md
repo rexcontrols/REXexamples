@@ -27,6 +27,7 @@ tick x ntick0 = 0.05 x 10 = 0.5
 - MySQL database server must be available and the credentials correctly defined 
 in the **.rio* file.
 - Database table called *sqltable* is assumed.
+
   ```sql
   CREATE TABLE `sqltable` (
     `time` timestamp,
