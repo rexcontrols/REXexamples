@@ -14,7 +14,7 @@ emailText = 'This is to inform you that an event ocurred.'
 
 emailText = "" + emailText + ""
 
-headers = ["From: " + MAIL_USERNAME,
+headers = ["From: " + SMTP_USERNAME,
            "Subject: " + subject,
            "To: " + recipient,
            "MIME-Version: 1.0",
