@@ -1,0 +1,71 @@
+Modbus {
+  Name                    "Master"
+  Timeout                 1000
+  Flags                   8
+  Gap                     30000
+  #GUID                   82fb4c31-65e3-472b-bc72-0723010e47a8
+  Slave {
+    Name                    "Slave"
+    IPaddress               192.168.1.200
+    Subaddress              255
+    SlaveID                 0
+    MaxRequest              16
+    TCPport                 502
+  }
+  Item {
+    Name                    BinOut26_41
+    SlaveAdr                0
+    RegisterAdr             26
+    Type                    0x00080101
+    Count                   16
+  }
+  Item {
+    Name                    BinIn1
+    SlaveAdr                0
+    RegisterAdr             1
+    Type                    0x00000200
+    Count                   1
+  }
+  Item {
+    Name                    BinOut1
+    SlaveAdr                0
+    RegisterAdr             1
+    Type                    0x00000101
+    Count                   1
+  }
+  Item {
+    Name                    BinIn26_41
+    SlaveAdr                0
+    RegisterAdr             26
+    Type                    0x00080200
+    Count                   16
+  }
+  Item {
+    Name                    BinIn10_25
+    SlaveAdr                0
+    RegisterAdr             10
+    Type                    0x00080200
+    Count                   16
+  }
+  Item {
+    Name                    BinOut10_25
+    SlaveAdr                0
+    RegisterAdr             10
+    Type                    0x00080101
+    Count                   16
+  }
+  Item {
+    Name                    BinIn10_41
+    SlaveAdr                0
+    RegisterAdr             10
+    Type                    0x00000200
+    Count                   32
+  }
+  Item {
+    Name                    BinOut10_41
+    SlaveAdr                0
+    RegisterAdr             10
+    Type                    0x00000101
+    Count                   32
+  }
+}

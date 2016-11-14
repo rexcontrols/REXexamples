@@ -1,7 +1,8 @@
 Model {
   Name                    "LEDsnake_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +34,7 @@ Model {
   }
   System {
     Name                    "LEDsnake_task"
-    Location                [203, 33, 912, 610]
+    Location                [254, 32, 963, 609]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
@@ -426,12 +427,35 @@ Model {
       }
     }
     Line {
+      SrcBlock                "BIS_10ms"
+      SrcPort                 1
+      Points                  [60, 0; 0, -150]
+      DstBlock                "SELOCT"
+      DstPort                 7
+      #GUID                   cbf6f720-00eb-4252-b5ec-606d545f2460
+    }
+    Line {
+      SrcBlock                "BIS_160ms"
+      SrcPort                 1
+      Points                  [20, 0; 0, -30]
+      DstBlock                "SELOCT"
+      DstPort                 3
+      #GUID                   2a4f7096-7435-4bbe-ab74-b669d598f418
+    }
+    Line {
       SrcBlock                "BIS_20ms"
       SrcPort                 1
       Points                  [50, 0; 0, -120]
       DstBlock                "SELOCT"
       DstPort                 6
       #GUID                   f091ec7c-14c2-4c15-88db-fd292f78e722
+    }
+    Line {
+      SrcBlock                "BIS_320ms"
+      SrcPort                 1
+      DstBlock                "SELOCT"
+      DstPort                 2
+      #GUID                   b199c70a-9fed-4ef1-b29e-6f0e051af87d
     }
     Line {
       SrcBlock                "BIS_40ms"
@@ -448,29 +472,6 @@ Model {
       DstBlock                "SELOCT"
       DstPort                 4
       #GUID                   90912752-cef3-463d-bcc4-e242f7dcc355
-    }
-    Line {
-      SrcBlock                "BIS_160ms"
-      SrcPort                 1
-      Points                  [20, 0; 0, -30]
-      DstBlock                "SELOCT"
-      DstPort                 3
-      #GUID                   2a4f7096-7435-4bbe-ab74-b669d598f418
-    }
-    Line {
-      SrcBlock                "BIS_320ms"
-      SrcPort                 1
-      DstBlock                "SELOCT"
-      DstPort                 2
-      #GUID                   b199c70a-9fed-4ef1-b29e-6f0e051af87d
-    }
-    Line {
-      SrcBlock                "BIS_10ms"
-      SrcPort                 1
-      Points                  [60, 0; 0, -150]
-      DstBlock                "SELOCT"
-      DstPort                 7
-      #GUID                   cbf6f720-00eb-4252-b5ec-606d545f2460
     }
     Line {
       SrcBlock                "BITOP_OR"
@@ -658,14 +659,7 @@ Model {
       #GUID                   f8ed918e-0920-4036-a76f-b99ee1567666
     }
     Annotation {
-      Position                [95, 25]
-      Text                    "LED snake on UniPi"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513
-    }
-    Annotation {
-      Position                [110, 50]
+      Position                [100, 40]
       Text                    "See the README.md file for details."
       #GUID                   ac0c0a68-fa60-4f49-b7e8-0bfe4dc96383
     }
@@ -680,6 +674,13 @@ Model {
       Position                [600, 120]
       Text                    "values 0..6"
       #GUID                   d6a04f2a-5779-494e-819d-c6bdda75a9ae
+    }
+    Annotation {
+      Position                [105, 15]
+      Text                    "LED snake on UniPi - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513
     }
   }
 }

@@ -1,7 +1,8 @@
 Model {
   Name                    "test_master_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,22 +34,13 @@ Model {
   }
   System {
     Name                    "test_master_task"
-    Location                [270, 29, 825, 435]
+    Location                [296, 31, 851, 444]
     #GUID                   f4ddb680-563b-4fa7-9a5d-b4f1c1fa7573
-    Block {
-      BlockType               Reference
-      Name                    "CNB"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [150, 338, 170, 352]
-      SourceBlock             "mathlib/CNB"
-      YCN                     on
-      #GUID                   d5ef535a-e612-4d3e-9e67-ad812fc8c810
-    }
     Block {
       BlockType               Reference
       Name                    "CNB_RELAY1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [345, 108, 365, 122]
+      Position                [340, 108, 360, 122]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       #GUID                   5c2647b3-8513-476b-b669-cda1e1c288b3
@@ -57,7 +49,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [345, 138, 365, 152]
+      Position                [340, 138, 360, 152]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   249f5116-8d33-4e52-847b-fe5d5598b906
@@ -66,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [345, 168, 365, 182]
+      Position                [340, 168, 360, 182]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       #GUID                   b3aa8682-8dde-45fa-a57c-b505eb23d798
@@ -75,7 +67,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [345, 198, 365, 212]
+      Position                [340, 198, 360, 212]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   6707bcb3-5c57-4fdc-894c-bfc60ae7a0d4
@@ -84,7 +76,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [345, 228, 365, 242]
+      Position                [340, 228, 360, 242]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       #GUID                   c76f883a-9a19-4652-b0cb-115485e8be07
@@ -93,7 +85,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY6"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [345, 258, 365, 272]
+      Position                [340, 258, 360, 272]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   65857be9-c743-4ff4-8330-ae3167136dd1
@@ -102,7 +94,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY7"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [345, 288, 365, 302]
+      Position                [340, 288, 360, 302]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       #GUID                   5181eac2-218f-498c-92bd-f05fe452eccf
@@ -111,16 +103,25 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY8"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [345, 318, 365, 332]
+      Position                [340, 318, 360, 332]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   7062fa09-c419-436d-ba6d-6585e86eb8c8
     }
     Block {
       BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [145, 338, 165, 352]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   d5ef535a-e612-4d3e-9e67-ad812fc8c810
+    }
+    Block {
+      BlockType               Reference
       Name                    "CNI_PWM"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [335, 368, 365, 382]
+      Position                [330, 368, 360, 382]
       SourceBlock             "mathlib/CNI"
       icn                     512
       #GUID                   243c7b48-1436-4056-90b1-2249e24f8473
@@ -129,7 +130,7 @@ Model {
       BlockType               From
       Name                    "From_5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 298, 160, 312]
+      Position                [35, 298, 155, 312]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__AI1"
@@ -140,7 +141,7 @@ Model {
       BlockType               From
       Name                    "From_6"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 318, 160, 332]
+      Position                [35, 318, 155, 332]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__AI2"
@@ -151,7 +152,7 @@ Model {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [435, 368, 525, 382]
+      Position                [430, 368, 520, 382]
       ShowName                off
       GotoTag                 "MTM__PWM18"
       TagVisibility           "local"
@@ -162,7 +163,7 @@ Model {
       BlockType               Reference
       Name                    "MTM__DIGITAL_INPUTS"
       Ports                   [0, 16, 0, 0, 0]
-      Position                [80, 101, 110, 269]
+      Position                [75, 101, 105, 269]
       SourceBlock             "inoutlib/INHEXD"
       BackgroundColor         "yellow"
       #GUID                   0c76c75d-ffef-4e58-a7ec-8df6efdfccca
@@ -171,7 +172,7 @@ Model {
       BlockType               Reference
       Name                    "MTM__RELAYS"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [470, 102, 500, 338]
+      Position                [465, 102, 495, 338]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
       #GUID                   29ec979c-caf4-4ad1-aebb-580f9d379ab7
@@ -180,7 +181,7 @@ Model {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [210, 293, 255, 367]
+      Position                [205, 293, 250, 367]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       1000
@@ -195,13 +196,7 @@ Model {
       id                      1
       Title                   "Trend Title"
       #GUID                   c1e6ad08-d932-4f21-8bdc-f7c394e3d687
-    }
-    Line {
-      SrcBlock                "CNB"
-      SrcPort                 1
-      DstBlock                "TRND"
-      DstPort                 5
-      #GUID                   dcd3fed7-2046-46ca-9eba-ede4471d9e9e
+        timesrc       1
     }
     Line {
       SrcBlock                "CNB_RELAY1"
@@ -260,6 +255,13 @@ Model {
       #GUID                   98218214-dd33-4ed2-af79-5a28decf3f0f
     }
     Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   dcd3fed7-2046-46ca-9eba-ede4471d9e9e
+    }
+    Line {
       SrcBlock                "CNI_PWM"
       SrcPort                 1
       DstBlock                "Goto"
@@ -282,14 +284,7 @@ Model {
       #GUID                   0ad17629-ad26-4faa-ba16-f86c0993e59d
     }
     Annotation {
-      Position                [275, 30]
-      Text                    "Modbus TCP master for testing"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   14540df3-2e2e-4434-8c43-cd5e0bc3b811
-    }
-    Annotation {
-      Position                [280, 55]
+      Position                [245, 35]
       Text                    "IP address 192.168.1.100 is expected in the Mod"
 "bus TCP slave"
       FontWeight              "bold"
@@ -297,10 +292,17 @@ Model {
       #GUID                   092f7128-7e90-4a70-88a3-6a6d7d8c5f9e
     }
     Annotation {
-      Position                [280, 70]
-      Text                    "Go to MTM driver configuration and press \"Spec"
-"ial edit\" for Modbus configuration"
+      Position                [235, 65]
+      Text                    "Go to MTM driver configuration and press \"Conf"
+"igure\" for Modbus configuration.\n\nSee the README.md file for details."
       #GUID                   76481fbf-226e-4d26-8db4-68186ec96f08
+    }
+    Annotation {
+      Position                [155, 15]
+      Text                    "Modbus TCP master for testing - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   14540df3-2e2e-4434-8c43-cd5e0bc3b811
     }
   }
 }

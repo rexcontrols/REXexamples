@@ -1,7 +1,7 @@
 Model {
   Name                    "readvalue_exec"
   Version                 3.00
-  #RexVersion             "2.11.0 rev. 5577, Date 2015-11-10"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,13 +34,13 @@ Model {
   }
   System {
     Name                    "readvalue_exec"
-    Location                [10, 33, 190, 365]
+    Location                [10, 32, 281, 413]
     #GUID                   39cb8861-5961-447a-bf17-61959d76aae1
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [20, 18, 65, 307]
+      Position                [65, 68, 110, 357]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.05"
@@ -58,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "readvalue_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 173, 155, 187]
+      Position                [150, 223, 200, 237]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -74,6 +74,19 @@ Model {
       DstBlock                "readvalue_task"
       DstPort                 1
       #GUID                   78ff6767-ed7e-4761-9eee-99c47d45a19e
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8d937f16-3d5d-4e57-b990-92aee4486d81
+    }
+    Annotation {
+      Position                [120, 20]
+      Text                    "Reading value from a text file"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   e146dc81-1f2e-4002-8265-2dcb450c44bf
     }
   }
 }

@@ -1,7 +1,8 @@
 Model {
   Name                    "pool_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "pool_task"
-    Location                [268, 33, 1213, 923]
+    Location                [302, 31, 1273, 917]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "AND_1"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [500, 168, 535, 192]
+      Position                [515, 168, 550, 192]
       SourceBlock             "logiclib/AND_"
       #GUID                   573c6e32-473e-414e-ba70-3b5e86993818
     }
@@ -47,7 +48,7 @@ Model {
       BlockType               Reference
       Name                    "AND_2"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [275, 288, 310, 312]
+      Position                [290, 288, 325, 312]
       SourceBlock             "logiclib/AND_"
       #GUID                   bc19285c-e517-43ff-816d-5bf9efa36566
     }
@@ -55,7 +56,7 @@ Model {
       BlockType               Reference
       Name                    "AND_3"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [275, 378, 310, 402]
+      Position                [290, 378, 325, 402]
       SourceBlock             "logiclib/AND_"
       #GUID                   ea5adf0d-87b4-4931-8ed5-ed6d97c58ccc
     }
@@ -63,7 +64,7 @@ Model {
       BlockType               Reference
       Name                    "AND_5"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [510, 523, 545, 547]
+      Position                [525, 523, 560, 547]
       SourceBlock             "logiclib/AND_"
       #GUID                   3ddd4992-7ff4-421b-9d21-72398e772f94
     }
@@ -71,7 +72,7 @@ Model {
       BlockType               Reference
       Name                    "AND_7"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [500, 348, 535, 372]
+      Position                [515, 348, 550, 372]
       SourceBlock             "logiclib/AND_"
       #GUID                   eeaf8db7-400a-43b6-bdbf-18f0b91bc3f9
     }
@@ -79,7 +80,7 @@ Model {
       BlockType               Reference
       Name                    "AND_DAYLIGHT"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [275, 463, 310, 487]
+      Position                [290, 463, 325, 487]
       SourceBlock             "logiclib/AND_"
       #GUID                   21f7e08a-9e2e-4db5-96c0-8ebc1dc466ec
     }
@@ -87,7 +88,7 @@ Model {
       BlockType               SubSystem
       Name                    "Button_processing"
       Ports                   [1, 4, 0, 0, 0]
-      Position                [170, 665, 275, 715]
+      Position                [185, 665, 290, 715]
       ShowPortLabels          on
       MaskType                "REX sequence"
       MaskIconFrame           on
@@ -189,6 +190,7 @@ Model {
           Position                [645, 103, 690, 137]
           SourceBlock             "analoglib/DEL"
           n                       1
+          nmax                    100
           #GUID                   fee1517d-0e6b-4155-afc6-05b702db00a0
         }
         Block {
@@ -591,7 +593,7 @@ Model {
       BlockType               Reference
       Name                    "CMP"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [285, 798, 315, 822]
+      Position                [300, 798, 330, 822]
       SourceBlock             "analoglib/CMP"
       hys                     "0.5"
       #GUID                   50495373-91e8-4224-8572-646e31d6cbbc
@@ -600,7 +602,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_RUN"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [695, 823, 715, 837]
+      Position                [710, 823, 730, 837]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   7dc51e6d-91a0-4bba-a235-09731dd7f3bc
@@ -609,7 +611,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_AFTERNOON_OFF"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 423, 120, 437]
+      Position                [115, 423, 135, 437]
       SourceBlock             "mathlib/CNI"
       icn                     14
       BackgroundColor         "magenta"
@@ -619,7 +621,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_AFTERNOON_ON"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 383, 120, 397]
+      Position                [115, 383, 135, 397]
       SourceBlock             "mathlib/CNI"
       icn                     13
       BackgroundColor         "magenta"
@@ -629,7 +631,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_LIGHTS_OFF"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 193, 120, 207]
+      Position                [115, 193, 135, 207]
       SourceBlock             "mathlib/CNI"
       icn                     1
       BackgroundColor         "magenta"
@@ -639,7 +641,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_LIGHTS_ON"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 153, 120, 167]
+      Position                [115, 153, 135, 167]
       SourceBlock             "mathlib/CNI"
       icn                     21
       BackgroundColor         "magenta"
@@ -649,7 +651,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_MORNING_OFF"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 333, 120, 347]
+      Position                [115, 333, 135, 347]
       SourceBlock             "mathlib/CNI"
       icn                     4
       BackgroundColor         "magenta"
@@ -659,7 +661,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_MORNING_ON"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 293, 120, 307]
+      Position                [115, 293, 135, 307]
       SourceBlock             "mathlib/CNI"
       icn                     2
       BackgroundColor         "magenta"
@@ -669,7 +671,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_SUNRISE"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 468, 120, 482]
+      Position                [115, 468, 135, 482]
       SourceBlock             "mathlib/CNI"
       icn                     5
       BackgroundColor         "magenta"
@@ -679,7 +681,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_SUNSET"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 508, 120, 522]
+      Position                [115, 508, 135, 522]
       SourceBlock             "mathlib/CNI"
       icn                     21
       BackgroundColor         "magenta"
@@ -689,7 +691,7 @@ Model {
       BlockType               Reference
       Name                    "CNR_water_sp"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [185, 796, 215, 814]
+      Position                [200, 796, 230, 814]
       SourceBlock             "mathlib/CNR"
       ycn                     "26.5"
       FontSize                10
@@ -700,7 +702,7 @@ Model {
       BlockType               Reference
       Name                    "EDGE_"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [240, 543, 265, 557]
+      Position                [255, 543, 280, 557]
       SourceBlock             "logiclib/EDGE_"
       iedge                   "1: Rising edge"
       #GUID                   ca46c21b-da7d-4db8-b1e7-668c2f071fdf
@@ -709,7 +711,7 @@ Model {
       BlockType               Reference
       Name                    "EDGE_1"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [240, 583, 265, 597]
+      Position                [255, 583, 280, 597]
       SourceBlock             "logiclib/EDGE_"
       iedge                   "1: Rising edge"
       #GUID                   0f2d19ab-be27-43c8-b648-33784146e791
@@ -718,7 +720,7 @@ Model {
       BlockType               Reference
       Name                    "EDGE_2"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [375, 738, 400, 752]
+      Position                [390, 738, 415, 752]
       SourceBlock             "logiclib/EDGE_"
       iedge                   "1: Rising edge"
       #GUID                   d29eb14b-6946-4a71-989a-6ba0c3e21f18
@@ -727,7 +729,7 @@ Model {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [10, 683, 100, 697]
+      Position                [25, 683, 115, 697]
       ShowName                off
       GotoTag                 "UNP__I01"
       BackgroundColor         "yellow"
@@ -737,17 +739,17 @@ Model {
       BlockType               From
       Name                    "From1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [745, 563, 835, 577]
+      Position                [760, 563, 850, 577]
       ShowName                off
       GotoTag                 "THERMOSTAT"
-      BackgroundColor         "cyan"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
       #GUID                   45df99a1-2c8d-470f-8b44-cff42903f23c
     }
     Block {
       BlockType               From
       Name                    "From2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [10, 828, 160, 842]
+      Position                [25, 828, 175, 842]
       ShowName                off
       GotoTag                 "OWS__temperature"
       BackgroundColor         "yellow"
@@ -757,18 +759,18 @@ Model {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [395, 803, 485, 817]
+      Position                [410, 803, 500, 817]
       ShowName                off
       GotoTag                 "THERMOSTAT"
       TagVisibility           "local"
-      BackgroundColor         "cyan"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
       #GUID                   d7583528-e48f-416f-8ed1-bca6cd107bc0
     }
     Block {
       BlockType               Reference
       Name                    "ISSW_LIGHTS_ACT"
       Ports                   [3, 1, 0, 0, 0]
-      Position                [590, 108, 620, 142]
+      Position                [605, 108, 635, 142]
       SourceBlock             "logiclib/ISSW"
       #GUID                   17d51908-c665-46b4-b0a3-c31cf11ac7b1
     }
@@ -776,7 +778,7 @@ Model {
       BlockType               Reference
       Name                    "ISSW_LIGHTS_DEACT"
       Ports                   [3, 1, 0, 0, 0]
-      Position                [590, 158, 620, 192]
+      Position                [605, 158, 635, 192]
       SourceBlock             "logiclib/ISSW"
       #GUID                   fce7d68f-7ec8-4665-8e23-74a55d847839
     }
@@ -784,7 +786,7 @@ Model {
       BlockType               Reference
       Name                    "ISSW_PUMP_ACT"
       Ports                   [3, 1, 0, 0, 0]
-      Position                [590, 288, 620, 322]
+      Position                [605, 288, 635, 322]
       SourceBlock             "logiclib/ISSW"
       #GUID                   a16866cd-d8ef-4b30-91f0-9e0b3e1215f6
     }
@@ -792,7 +794,7 @@ Model {
       BlockType               Reference
       Name                    "ISSW_PUMP_DEACT"
       Ports                   [3, 1, 0, 0, 0]
-      Position                [590, 338, 620, 372]
+      Position                [605, 338, 635, 372]
       SourceBlock             "logiclib/ISSW"
       #GUID                   8d0c7062-1e8f-412a-9899-f7418e529551
     }
@@ -800,7 +802,7 @@ Model {
       BlockType               Reference
       Name                    "LPBRK1"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [600, 215, 610, 225]
+      Position                [615, 215, 625, 225]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
@@ -810,7 +812,7 @@ Model {
       BlockType               Reference
       Name                    "LPBRK3"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [560, 570, 570, 580]
+      Position                [575, 570, 585, 580]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
@@ -820,7 +822,7 @@ Model {
       BlockType               Reference
       Name                    "LPBRK5"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [600, 395, 610, 405]
+      Position                [615, 395, 625, 405]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
@@ -830,7 +832,7 @@ Model {
       BlockType               Reference
       Name                    "MP_LIGHTS"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [180, 543, 195, 557]
+      Position                [195, 543, 210, 557]
       SourceBlock             "genlib/MP"
       pwidth                  "0.05"
       BSTATE                  off
@@ -842,7 +844,7 @@ Model {
       BlockType               Reference
       Name                    "MP_MODESWITCH"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [295, 738, 310, 752]
+      Position                [310, 738, 325, 752]
       SourceBlock             "genlib/MP"
       pwidth                  "0.05"
       BSTATE                  on
@@ -854,7 +856,7 @@ Model {
       BlockType               Reference
       Name                    "MP_PUMP"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [180, 583, 195, 597]
+      Position                [195, 583, 210, 597]
       SourceBlock             "genlib/MP"
       pwidth                  "0.05"
       BSTATE                  off
@@ -866,7 +868,7 @@ Model {
       BlockType               Reference
       Name                    "OR_"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [315, 543, 350, 567]
+      Position                [330, 543, 365, 567]
       SourceBlock             "logiclib/OR_"
       #GUID                   0d01bf51-a727-4063-957d-136697b16a7d
     }
@@ -874,7 +876,7 @@ Model {
       BlockType               Reference
       Name                    "OR_1"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [315, 583, 350, 607]
+      Position                [330, 583, 365, 607]
       SourceBlock             "logiclib/OR_"
       #GUID                   5adb57a6-4811-46e6-aca9-158b4a7157f1
     }
@@ -882,7 +884,7 @@ Model {
       BlockType               Reference
       Name                    "OR_2"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [425, 698, 460, 722]
+      Position                [440, 698, 475, 722]
       SourceBlock             "logiclib/OR_"
       #GUID                   2dc63ccd-93d0-489d-b5bb-42ba8deae781
     }
@@ -890,7 +892,7 @@ Model {
       BlockType               Reference
       Name                    "OR_FILTER"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [345, 288, 380, 312]
+      Position                [360, 288, 395, 312]
       SourceBlock             "logiclib/OR_"
       #GUID                   39afee28-0aaa-4259-a8f6-67198595be21
     }
@@ -898,7 +900,7 @@ Model {
       BlockType               Reference
       Name                    "OR_LIGHTS"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [345, 148, 380, 172]
+      Position                [360, 148, 395, 172]
       SourceBlock             "logiclib/OR_"
       #GUID                   a32d4e05-d714-4565-af2b-dda6114f9565
     }
@@ -906,7 +908,7 @@ Model {
       BlockType               Reference
       Name                    "REL_GEQ"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [200, 283, 225, 307]
+      Position                [215, 283, 240, 307]
       SourceBlock             "mathlib/REL"
       irel                    "6: greater or equal (>=)"
       #GUID                   b674fc3d-cc59-4490-b92a-eab2fa791a59
@@ -915,7 +917,7 @@ Model {
       BlockType               Reference
       Name                    "REL_GEQ1"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [200, 373, 225, 397]
+      Position                [215, 373, 240, 397]
       SourceBlock             "mathlib/REL"
       irel                    "6: greater or equal (>=)"
       #GUID                   d40a47ee-aa91-4758-9f0b-aef387b74412
@@ -924,7 +926,7 @@ Model {
       BlockType               Reference
       Name                    "REL_GEQ2"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [200, 143, 225, 167]
+      Position                [215, 143, 240, 167]
       SourceBlock             "mathlib/REL"
       irel                    "6: greater or equal (>=)"
       #GUID                   2ceaf5c3-8e28-4a74-af71-143bc1d3f634
@@ -933,7 +935,7 @@ Model {
       BlockType               Reference
       Name                    "REL_GEQ3"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [200, 458, 225, 482]
+      Position                [215, 458, 240, 482]
       SourceBlock             "mathlib/REL"
       irel                    "6: greater or equal (>=)"
       #GUID                   3c87b769-7c23-4acb-a0e6-c3ac6b6b3cf8
@@ -942,7 +944,7 @@ Model {
       BlockType               Reference
       Name                    "REL_LT"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [200, 323, 225, 347]
+      Position                [215, 323, 240, 347]
       SourceBlock             "mathlib/REL"
       irel                    "3: less than (<)"
       #GUID                   e15dd3d2-5055-47a9-8b3e-b9354e3b727a
@@ -951,7 +953,7 @@ Model {
       BlockType               Reference
       Name                    "REL_LT1"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [200, 413, 225, 437]
+      Position                [215, 413, 240, 437]
       SourceBlock             "mathlib/REL"
       irel                    "3: less than (<)"
       #GUID                   81a88420-9df5-41e2-9699-e15c4a0873e2
@@ -960,7 +962,7 @@ Model {
       BlockType               Reference
       Name                    "REL_LT2"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [200, 183, 225, 207]
+      Position                [215, 183, 240, 207]
       SourceBlock             "mathlib/REL"
       irel                    "3: less than (<)"
       #GUID                   2bb6ae14-be26-473f-bad1-607169dfd05c
@@ -969,7 +971,7 @@ Model {
       BlockType               Reference
       Name                    "REL_LT3"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [200, 498, 225, 522]
+      Position                [215, 498, 240, 522]
       SourceBlock             "mathlib/REL"
       irel                    "3: less than (<)"
       #GUID                   e0009eae-1892-4567-9051-afa4e300ecdc
@@ -978,7 +980,7 @@ Model {
       BlockType               Reference
       Name                    "RS_LIGHTS"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [685, 118, 720, 142]
+      Position                [700, 118, 735, 142]
       SourceBlock             "logiclib/RS"
       #GUID                   e16365e3-7cfb-4d1a-a180-c63c7230a0b4
     }
@@ -986,7 +988,7 @@ Model {
       BlockType               Reference
       Name                    "RS_MANMODE"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [575, 513, 610, 537]
+      Position                [590, 513, 625, 537]
       SourceBlock             "logiclib/RS"
       #GUID                   ddb8d5ea-f919-43bb-b063-cd495194bece
     }
@@ -994,7 +996,7 @@ Model {
       BlockType               Reference
       Name                    "RS_PUMP"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [685, 298, 720, 322]
+      Position                [700, 298, 735, 322]
       SourceBlock             "logiclib/RS"
       #GUID                   0b9280b2-8b96-46ab-8787-bddfd8e23f23
     }
@@ -1002,8 +1004,8 @@ Model {
       BlockType               Reference
       Name                    "TIME"
       Ports                   [0, 3, 0, 0, 0]
-      Position                [15, 283, 55, 317]
-      SourceBlock             "genlib/TIME"
+      Position                [30, 283, 70, 317]
+      SourceBlock             "timelib/TIME"
       tz                      "1: Local time"
       #GUID                   86e80bec-1433-4a2d-80cb-7b74b4404def
     }
@@ -1011,7 +1013,7 @@ Model {
       BlockType               Reference
       Name                    "TRND_10days"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [760, 778, 805, 852]
+      Position                [775, 778, 820, 852]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       86400
@@ -1026,12 +1028,13 @@ Model {
       id                      1
       Title                   "Thermostat actions (10 days)"
       #GUID                   f9fb0218-a080-4d34-a170-59c9d6531f1c
+        timesrc       1
     }
     Block {
       BlockType               Reference
       Name                    "TRND_3hours"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [760, 683, 805, 757]
+      Position                [775, 683, 820, 757]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       10800
@@ -1046,12 +1049,13 @@ Model {
       id                      1
       Title                   "Thermostat actions (3 hours)"
       #GUID                   e7a16078-d8f9-49b6-96cd-30e6c07a134f
+        timesrc       1
     }
     Block {
       BlockType               Reference
       Name                    "UNP__RLY"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [890, 226, 920, 314]
+      Position                [905, 226, 935, 314]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
       #GUID                   9dbacadb-f2e7-40f5-b8f3-ee049728d3f6
@@ -1680,38 +1684,38 @@ Model {
       }
     }
     Annotation {
-      Position                [770, 110]
+      Position                [785, 110]
       Text                    "Pool lights"
       #GUID                   5ff68ddd-5f5a-4590-9bd4-cf91c838f0a4
     }
     Annotation {
-      Position                [620, 455]
+      Position                [635, 455]
       Text                    "Engage manual mode"
       #GUID                   b14780ab-0ec4-4b3b-aab4-48b4036da6d0
     }
     Annotation {
-      Position                [780, 290]
+      Position                [795, 290]
       Text                    "Filtration pump"
       #GUID                   1d7198ef-d71b-4240-b13c-034093d421a0
     }
     Annotation {
-      Position                [775, 515]
+      Position                [790, 515]
       Text                    "Manual mode indication"
       #GUID                   abe58d4f-d5ac-44f0-b602-58cee33fc1de
     }
     Annotation {
-      Position                [120, 25]
-      Text                    "Pool automation with UniPi"
+      Position                [240, 50]
+      Text                    "Go to OWS driver configuration and press \"Conf"
+"igure\" to configure the 1-Wire sensor (64-bit ID).\n\nRead the README.md file"
+" for detailed information."
+      #GUID                   b2c31e5a-97a2-4f9d-80f3-b8b19c88b867
+    }
+    Annotation {
+      Position                [135, 15]
+      Text                    "Pool automation with UniPi - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   2ae8677e-4c83-46bd-9341-2f8e9f338465
-    }
-    Annotation {
-      Position                [250, 60]
-      Text                    "Go to OWS driver configuration and press \"Spec"
-"ial edit\" to configure the 1-Wire sensor (64-bit ID).\n\nRead the README.md f"
-"ile for detailed information."
-      #GUID                   b2c31e5a-97a2-4f9d-80f3-b8b19c88b867
     }
   }
 }

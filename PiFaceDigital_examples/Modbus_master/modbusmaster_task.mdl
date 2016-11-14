@@ -1,7 +1,8 @@
 Model {
   Name                    "modbusmaster_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "modbusmaster_task"
-    Location                [278, 33, 886, 267]
+    Location                [302, 31, 910, 265]
     #GUID                   0ca2549b-4607-4cc3-86e5-3bb11353a870
     Block {
       BlockType               Reference
       Name                    "MTM__ControlSignals"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [270, 116, 300, 204]
+      Position                [350, 116, 380, 204]
       SourceBlock             "inoutlib/OUTOCT"
       #GUID                   0db641c1-d91f-47a8-8185-6b225fba0587
     }
@@ -47,7 +48,7 @@ Model {
       BlockType               Reference
       Name                    "RPI__PFIU"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [95, 116, 125, 204]
+      Position                [175, 116, 205, 204]
       SourceBlock             "inoutlib/INOCT"
       BackgroundColor         "yellow"
       #GUID                   e945d7f5-8f16-4c2f-a303-0d42a87b6a2c
@@ -122,14 +123,14 @@ Model {
       #GUID                   eb53e712-0afb-4850-9a46-930eb3ec660c
     }
     Annotation {
-      Position                [290, 95]
+      Position                [370, 95]
       Text                    "Modbus coils"
       FontWeight              "bold"
       FontSize                14
       #GUID                   815a3e79-7dfc-4554-9080-bf7d0b4bf505
     }
     Annotation {
-      Position                [105, 95]
+      Position                [185, 95]
       Text                    "PiFace Digital inputs"
       FontWeight              "bold"
       FontSize                14

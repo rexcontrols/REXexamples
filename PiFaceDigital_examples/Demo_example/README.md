@@ -1,4 +1,4 @@
-Demonstration algorithm for PiFace Digital on Raspberry Pi 
+﻿Demonstration algorithm for PiFace Digital on Raspberry Pi 
 ==========================================================
 
 This folder contains the source files for the demonstration project on using the 
@@ -25,7 +25,7 @@ block).
 The remaining outputs of PiFace Digital are controlled directly by user-defined 
 Boolean constants. 
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore and RPiDrv modules must be installed and running on the Raspberry Pi.
 - SPI bus must be enabled on the Raspberry Pi.
@@ -42,8 +42,8 @@ the Raspberry Pi using the RexView diagnostic tool.
 
 ## Documentation ##
 
-- [Getting started with REX and Raspberry Pi](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX and Raspberry Pi](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

@@ -1,4 +1,4 @@
-Minimal example for the REXLANG function block 
+﻿Minimal example for the REXLANG function block 
 ==============================================
 
 This folder contains the source files demonstrating the use of the REXLANG 
@@ -12,7 +12,7 @@ Feel free to modify the algorithm to perform your special calculations, there
 are 16 inputs, 16 parameters and 16 outputs available. 
 
 Read the
-[complete description of the REXLANG function block](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/REXLANG.html)
+[complete description of the REXLANG function block](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/REXLANG.html)
 for more details. 
 
 ## Timing of the project ##
@@ -26,12 +26,15 @@ tick x ntick0 = 0.05 x 2 = 0.1
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
 - Open it with *RexDraw*, compile and download it to the target device.
+- Switch to online mode and watch the algorithm.
+- Select the TRND block and enable online monitoring (Target->Monitor selection).
+- Observe the results.
 
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [REXLANG function block documentation](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/REXLANG.html)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [REXLANG function block documentation](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/REXLANG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

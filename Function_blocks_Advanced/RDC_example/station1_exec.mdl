@@ -1,7 +1,9 @@
 Model {
   Name                    "station1_exec"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +35,13 @@ Model {
   }
   System {
     Name                    "station1_exec"
-    Location                [13, 33, 185, 369]
+    Location                [13, 32, 276, 411]
     #GUID                   06eb7513-3603-4d98-8e52-a52eb191a7dc
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [20, 18, 65, 307]
+      Position                [60, 68, 105, 357]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.01"
@@ -57,7 +59,7 @@ Model {
       BlockType               Reference
       Name                    "station1_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 173, 150, 187]
+      Position                [140, 223, 190, 237]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -73,6 +75,19 @@ Model {
       DstBlock                "station1_task"
       DstPort                 1
       #GUID                   8e279f57-1ace-4f8b-8073-9376ebc755bd
+    }
+    Annotation {
+      Position                [135, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   f59849c7-a7c7-4075-bce6-38ee28d17f76
+    }
+    Annotation {
+      Position                [90, 20]
+      Text                    "RDC example, Station 1"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   93364ae6-e68e-4d63-a8b2-2001191cacd9
     }
   }
 }

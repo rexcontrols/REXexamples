@@ -6,9 +6,8 @@
 *                                                      *
 *******************************************************/
 
-#define CON_UDP      64         //internal constant for UDP communication
-#define RECEIVER_IP  0xC0A801C8 //192.168.1.200
-#define SENDER_IP    0xC0A80164 //192.168.1.100
+#define SENDER_IP    "192.168.1.100"
+#define RECEIVER_IP  "192.168.1.200"
 #define senderPort   4000
 #define receiverPort 4001
 #define BUFFER_SIZE  50    //maximum number of bytes to receive
@@ -65,10 +64,9 @@ long init(void)
 // the main procedure is executed once in each sampling period
 long main(void)
 {
-  long i;
   if (hRecvLoc<0)
   {
-    hRecvLoc = Open(CON_UDP,RECEIVER_IP,receiverPort,SENDER_IP,senderPort);  //opening UDP socket
+   hRecvLoc = OpenUDP(RECEIVER_IP,receiverPort,SENDER_IP,senderPort);  //opening UDP
   }
   else 
   {

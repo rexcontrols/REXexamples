@@ -94,7 +94,102 @@ Model {
   LastModifiedDate        "Fri Sep 17 13:32:16 2010"
   ModelVersionFormat      "1.%<AutoIncrement:53>"
   ConfigurationManager    "None"
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Wed May 20 15:02:02 2009"
+  Creator                 "ojezek"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "jsobota"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Fri Sep 17 13:32:16 2010"
+  ModelVersionFormat      "1.%<AutoIncrement:53>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,7 +221,7 @@ Model {
   }
   System {
     Name                    "minimal_exec"
-    Location                [11, 34, 171, 361]
+    Location                [11, 34, 311, 383]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -135,7 +230,6 @@ Model {
     PaperPositionMode       "auto"
     PaperType               "A4"
     PaperUnits              "centimeters"
-    ZoomFactor              100
     AutoZoom                on
     ReportName              "simulink-default.rpt"
     #GUID                   72f844ab-c62d-422e-aed8-628bd030e673
@@ -143,7 +237,7 @@ Model {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 25, 60, 285]
+      Position                [85, 65, 130, 325]
       SourceBlock             "execlib/EXEC"
       SourceType              "EXEC"
       target                  "PC - Windows"
@@ -162,7 +256,7 @@ Model {
       BlockType               Reference
       Name                    "minimal_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [90, 162, 140, 178]
+      Position                [160, 202, 210, 218]
       SourceBlock             "execlib/TASK"
       SourceType              "TASK"
       factor                  1
@@ -179,6 +273,20 @@ Model {
       DstBlock                "minimal_task"
       DstPort                 1
       #GUID                   cf4297e0-e718-46f8-a478-be5d586c6766
+    }
+    Annotation {
+      Position                [150, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      FontSize                12
+      #GUID                   9476b2a2-f3e5-4968-975e-ea7986d69889
+    }
+    Annotation {
+      Position                [120, 20]
+      Text                    "REXLANG - Minimal example"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   9086cfed-861e-4cf5-a73a-4888c286d8ef
     }
   }
 }

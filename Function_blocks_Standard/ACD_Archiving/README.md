@@ -1,4 +1,4 @@
-Archiving analog signals in the REX Control System
+﻿Archiving analog signals in the REX Control System
 ==================================================
 
 This folder contains the source files for the demonstration project on archiving
@@ -30,12 +30,13 @@ tick x ntick0 = 0.05 x 1 = 0.05
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
 - Open it with *RexDraw*, compile and download it to the target device.
+- Run *RexView*, connect to the target device, watch analog_archive.
 
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [ACD function block documentation](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/ACD.html)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [ACD function block documentation](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/ACD.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

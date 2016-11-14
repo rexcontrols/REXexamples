@@ -1,7 +1,8 @@
 Model {
   Name                    "export_archive_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "export_archive_exec"
-    Location                [10, 33, 190, 365]
+    Location                [9, 32, 310, 418]
     #GUID                   39cb8861-5961-447a-bf17-61959d76aae1
     Block {
       BlockType               Reference
       Name                    "DB"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 68, 155, 82]
+      Position                [155, 118, 205, 132]
       SourceBlock             "execlib/IODRV"
       module                  "DbDrv"
       classname               "DbDrv"
@@ -54,7 +55,7 @@ Model {
       BlockType               Reference
       Name                    "DbDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 33, 155, 47]
+      Position                [155, 83, 205, 97]
       SourceBlock             "execlib/MODULE"
       #GUID                   b057ad44-178b-48f3-81e2-91365ea9c34f
     }
@@ -62,7 +63,7 @@ Model {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [20, 18, 65, 307]
+      Position                [70, 68, 115, 357]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.05"
@@ -80,7 +81,7 @@ Model {
       BlockType               Reference
       Name                    "export_archive_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 173, 155, 187]
+      Position                [155, 223, 205, 237]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -94,13 +95,14 @@ Model {
       BlockType               Reference
       Name                    "temperature_archive"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 103, 155, 117]
+      Position                [155, 153, 205, 167]
       SourceBlock             "execlib/ARC"
       atype                   "1: RAM memory"
       asize                   102400
       nmarks                  720
       ldaymax                 1048576
       period                  60
+      timesrc                 "1: CORETIMER"
       #GUID                   d9b2c0a2-45b1-4e05-9645-3fd834de9c77
     }
     Line {
@@ -130,6 +132,19 @@ Model {
       DstBlock                "export_archive_task"
       DstPort                 1
       #GUID                   78ff6767-ed7e-4761-9eee-99c47d45a19e
+    }
+    Annotation {
+      Position                [135, 35]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   a2c1f53a-ac50-4d93-ac70-c501a3004ac0
+    }
+    Annotation {
+      Position                [150, 15]
+      Text                    "Exporting archive signals to database"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   2087536b-f59e-45b7-b386-48af5b2f84e4
     }
   }
 }

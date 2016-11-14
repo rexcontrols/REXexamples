@@ -1,7 +1,8 @@
 Model {
   Name                    "blink_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,17 +34,17 @@ Model {
   }
   System {
     Name                    "blink_task"
-    Location                [205, 34, 768, 361]
+    Location                [294, 31, 838, 198]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "BIS_HEARTBEAT"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [115, 118, 130, 142]
+      Position                [155, 103, 170, 127]
       SourceBlock             "genlib/BIS"
       NamePlacement           ""
       SourceType              "BIS"
-      Y0                      off
+      Y0                      0
       t1                      "0.7"
       t2                      "0.8"
       t3                      "0.9"
@@ -60,7 +61,7 @@ Model {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [280, 118, 370, 132]
+      Position                [280, 103, 370, 117]
       ShowName                off
       GotoTag                 "RPI__GPIO16"
       TagVisibility           "local"
@@ -71,9 +72,8 @@ Model {
       BlockType               Reference
       Name                    "NOT_"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [230, 118, 255, 132]
+      Position                [230, 103, 255, 117]
       SourceBlock             "logiclib/NOT_"
-      BackgroundColor         "lightBlue"
       #GUID                   656e0501-d35f-4793-8bb2-d68cd73dd666
     }
     Line {
@@ -91,17 +91,18 @@ Model {
       #GUID                   88abf8b6-9843-4dea-8911-307314023a57
     }
     Annotation {
-      Position                [110, 55]
-      Text                    "See the README.md file for details."
-      #GUID                   c2443fcf-1bb5-4ce3-a3d7-9318ebdc7466
-    }
-    Annotation {
-      Position                [280, 30]
+      Position                [270, 15]
       Text                    "Blinking ACT LED on Raspberry Pi B rev.1 and re"
 "v.2 (vintage models)"
       FontWeight              "bold"
       FontSize                16
       #GUID                   4f3c89ae-6192-44f6-a180-fe9d2f7e1234
+    }
+    Annotation {
+      Position                [135, 35]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   c8f81dab-8763-44ae-9857-c19b5912370a
     }
   }
 }

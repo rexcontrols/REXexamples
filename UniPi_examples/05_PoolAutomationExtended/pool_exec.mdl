@@ -1,7 +1,8 @@
 Model {
   Name                    "pool_exec"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "pool_exec"
-    Location                [12, 33, 246, 359]
+    Location                [9, 31, 281, 418]
     #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 13, 60, 302]
+      Position                [35, 68, 80, 357]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.005"
@@ -55,9 +56,24 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [105, 328, 155, 342]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        on
+      GenerateRexHMI          on
+      RedirectToHMI           off
+      Compression             off
+      #GUID                   ff5d52fd-c5a2-4f21-87a0-d20a3a5388d6
+    }
+    Block {
+      BlockType               Reference
       Name                    "OWS"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [160, 63, 210, 77]
+      Position                [180, 118, 230, 132]
       SourceBlock             "execlib/IODRV"
       module                  "OwsDrv"
       classname               "OwsDrv"
@@ -72,7 +88,7 @@ Model {
       BlockType               Reference
       Name                    "OwsDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [160, 28, 210, 42]
+      Position                [180, 83, 230, 97]
       SourceBlock             "execlib/MODULE"
       #GUID                   97d76ff7-5b84-49d1-ba4e-2995a9ac7a4a
     }
@@ -80,7 +96,7 @@ Model {
       BlockType               Reference
       Name                    "RPiDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [85, 28, 135, 42]
+      Position                [105, 83, 155, 97]
       SourceBlock             "execlib/MODULE"
       #GUID                   6737d998-c4e4-4e93-91f2-f13b90ca242c
     }
@@ -88,7 +104,7 @@ Model {
       BlockType               Reference
       Name                    "UNP"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [85, 63, 135, 77]
+      Position                [105, 118, 155, 132]
       SourceBlock             "execlib/IODRV"
       module                  "RPiDrv"
       classname               "UnpDrv"
@@ -103,7 +119,7 @@ Model {
       BlockType               Reference
       Name                    "pool_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [85, 168, 135, 182]
+      Position                [105, 223, 155, 237]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -147,6 +163,19 @@ Model {
       DstBlock                "OWS"
       DstPort                 1
       #GUID                   a3aedb27-431e-4a1f-a31a-277d8929e85a
+    }
+    Annotation {
+      Position                [110, 15]
+      Text                    "Pool automation with UniPi"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   2716aed3-c1ac-4788-bf13-d8cabb7cb443
+    }
+    Annotation {
+      Position                [140, 35]
+      Text                    "Read the README.md file for detailed informatio"
+"n."
+      #GUID                   399e0aaa-29e5-48d4-b0bf-731103a593c0
     }
   }
 }

@@ -8,9 +8,8 @@
 *                                                      *
 *******************************************************/
 
-#define CON_UDP      64
-#define RECEIVER_IP  0xC0A801C8 //192.168.1.200
-#define SENDER_IP    0xC0A80164 //192.168.1.100
+#define SENDER_IP    "192.168.1.100"
+#define RECEIVER_IP  "192.168.1.200"
 #define senderPort   4000
 #define receiverPort 4001
 #define BUFFER_SIZE  50    //maximum number of bytes to send
@@ -93,7 +92,7 @@ long main(void)
 {
   if (hSendLoc<0)
   {
-    hSendLoc = Open(CON_UDP,SENDER_IP,senderPort,RECEIVER_IP,receiverPort);  //opening UDP socket
+    hSendLoc = OpenUDP(SENDER_IP,senderPort,RECEIVER_IP,receiverPort);  //opening UDP socket
   }
   else 
   {

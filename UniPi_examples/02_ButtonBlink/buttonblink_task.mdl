@@ -1,7 +1,8 @@
 Model {
   Name                    "buttonblink_task"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "buttonblink_task"
-    Location                [204, 33, 633, 359]
+    Location                [291, 31, 718, 413]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "BIS_BLINK_RELAY2"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [60, 118, 75, 142]
+      Position                [60, 128, 75, 152]
       SourceBlock             "genlib/BIS"
       NamePlacement           ""
       SourceType              "BIS"
@@ -60,7 +61,7 @@ Model {
       BlockType               Reference
       Name                    "BIS_BLINK_RELAY3"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [60, 183, 75, 207]
+      Position                [60, 223, 75, 247]
       SourceBlock             "genlib/BIS"
       NamePlacement           ""
       SourceType              "BIS"
@@ -81,25 +82,27 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [60, 73, 80, 87]
+      Position                [60, 83, 80, 97]
       SourceBlock             "mathlib/CNB"
       YCN                     on
+      BackgroundColor         "magenta"
       #GUID                   d8a7ec68-9d1a-4123-b264-a798eef063b7
     }
     Block {
       BlockType               Reference
       Name                    "CNB_RLY3_DEFAULT"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [155, 158, 175, 172]
+      Position                [60, 193, 80, 207]
       SourceBlock             "mathlib/CNB"
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   9b9e3e06-6013-4475-95bd-84adf60a51c2
     }
     Block {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [25, 233, 115, 247]
+      Position                [25, 273, 115, 287]
       ShowName                off
       GotoTag                 "UNP__I01"
       BackgroundColor         "yellow"
@@ -109,7 +112,7 @@ Model {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [305, 73, 395, 87]
+      Position                [305, 83, 395, 97]
       ShowName                off
       GotoTag                 "UNP__RLY1"
       TagVisibility           "local"
@@ -120,7 +123,7 @@ Model {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [305, 118, 395, 132]
+      Position                [305, 128, 395, 142]
       ShowName                off
       GotoTag                 "UNP__RLY2"
       TagVisibility           "local"
@@ -131,7 +134,7 @@ Model {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [305, 183, 395, 197]
+      Position                [305, 223, 395, 237]
       ShowName                off
       GotoTag                 "UNP__RLY3"
       TagVisibility           "local"
@@ -142,7 +145,7 @@ Model {
       BlockType               Reference
       Name                    "ISSW"
       Ports                   [3, 1, 0, 0, 0]
-      Position                [245, 173, 275, 207]
+      Position                [245, 213, 275, 247]
       SourceBlock             "logiclib/ISSW"
       #GUID                   43ecde54-4d19-4f36-a9fd-9fb58e12570f
     }
@@ -170,7 +173,7 @@ Model {
     Line {
       SrcBlock                "CNB_RLY3_DEFAULT"
       SrcPort                 1
-      Points                  [50, 0]
+      Points                  [145, 0]
       DstBlock                "ISSW"
       DstPort                 1
       #GUID                   54f57188-4f3b-4171-a24f-7019fa9b556a
@@ -189,6 +192,19 @@ Model {
       DstBlock                "Goto2"
       DstPort                 1
       #GUID                   01db43e6-0929-4e53-954a-85ba043c4777
+    }
+    Annotation {
+      Position                [135, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   d2100ae4-5110-418c-a57c-fa68d1b35987
+    }
+    Annotation {
+      Position                [185, 15]
+      Text                    "The button and blinking outputs of UniPi - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   698e2678-29aa-4841-8bba-6bf496564638
     }
   }
 }

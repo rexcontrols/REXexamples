@@ -1,0 +1,1263 @@
+Model {
+  Name                    "flags_task"
+  Version                 3.00
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Thu Jan 06 15:26:11 2005"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "mertlj"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Apr 29 09:25:44 2008"
+  ModelVersionFormat      "1.%<AutoIncrement:195>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.50.1 rev. 7537, Date 2016-11-04"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "flags_task"
+    Location                [213, 35, 1148, 768]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "A4"
+    PaperUnits              "centimeters"
+    AutoZoom                on
+    ReportName              "simulink-default.rpt"
+    #GUID                   92200e26-7821-416b-a2d2-6b94ab9f00ec
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [90, 198, 180, 212]
+      ShowName                off
+      GotoTag                 "MNR__DIN2"
+      BackgroundColor         "yellow"
+      #GUID                   d565a065-7a86-4395-8578-56ed271b7f41
+    }
+    Block {
+      BlockType               From
+      Name                    "From10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 178, 640, 192]
+      ShowName                off
+      GotoTag                 "MNR__CNT1Q"
+      BackgroundColor         "yellow"
+      #GUID                   4f7c9fda-a774-4cb3-8193-74413bd70241
+    }
+    Block {
+      BlockType               From
+      Name                    "From11"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 228, 665, 242]
+      ShowName                off
+      GotoTag                 "MNR__CNT1PUR"
+      BackgroundColor         "yellow"
+      #GUID                   b9513fcc-f547-49b8-8624-5bf4a77c8834
+    }
+    Block {
+      BlockType               From
+      Name                    "From12"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [680, 403, 825, 417]
+      ShowName                off
+      GotoTag                 "MNR__CNT1_ResetDone"
+      BackgroundColor         "yellow"
+      #GUID                   e4b8791d-f34e-47ef-9043-ba188dba7250
+    }
+    Block {
+      BlockType               From
+      Name                    "From13"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [680, 423, 825, 437]
+      ShowName                off
+      GotoTag                 "MNR__CNT2_ResetDone"
+      BackgroundColor         "yellow"
+      #GUID                   e930f995-dd19-42c6-847e-c7ccaf840b74
+    }
+    Block {
+      BlockType               From
+      Name                    "From14"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 1013, 170, 1027]
+      ShowName                off
+      GotoTag                 "MNR__ErrorCnt"
+      BackgroundColor         "yellow"
+      #GUID                   9c2ac2af-e799-4ef1-a3ef-061efc0870d9
+    }
+    Block {
+      BlockType               From
+      Name                    "From15"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 913, 725, 927]
+      ShowName                off
+      GotoTag                 "MNR__SDCW0x024_Status"
+      BackgroundColor         "yellow"
+      #GUID                   19ddb753-bf76-4c4e-9aca-f9c9eaf4a1b1
+    }
+    Block {
+      BlockType               From
+      Name                    "From16"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [90, 178, 180, 192]
+      ShowName                off
+      GotoTag                 "MNR__DIN1"
+      BackgroundColor         "yellow"
+      #GUID                   5591359b-dc7a-43c1-a1fb-23739ae7052a
+    }
+    Block {
+      BlockType               From
+      Name                    "From17"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [205, 198, 295, 212]
+      ShowName                off
+      GotoTag                 "MNR__DI2"
+      BackgroundColor         "yellow"
+      #GUID                   758bc5cd-702a-48ab-920e-53e05146ac72
+    }
+    Block {
+      BlockType               From
+      Name                    "From18"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [205, 178, 295, 192]
+      ShowName                off
+      GotoTag                 "MNR__DI1"
+      BackgroundColor         "yellow"
+      #GUID                   9a59742e-03d3-4265-bfb0-cb073f42272f
+    }
+    Block {
+      BlockType               From
+      Name                    "From19"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [205, 218, 295, 232]
+      ShowName                off
+      GotoTag                 "MNR__DI3"
+      BackgroundColor         "yellow"
+      #GUID                   bebdf3f6-7e70-41e1-bd3e-cf3244950eaa
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [90, 218, 180, 232]
+      ShowName                off
+      GotoTag                 "MNR__DIN3"
+      BackgroundColor         "yellow"
+      #GUID                   5b6cda06-05e3-4887-b449-a2d91014b46b
+    }
+    Block {
+      BlockType               From
+      Name                    "From20"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [205, 238, 295, 252]
+      ShowName                off
+      GotoTag                 "MNR__DI4"
+      BackgroundColor         "yellow"
+      #GUID                   212e99f0-f4c9-4096-a337-6b6ca4175b5a
+    }
+    Block {
+      BlockType               From
+      Name                    "From21"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 178, 770, 192]
+      ShowName                off
+      GotoTag                 "MNR__CNT2Q"
+      BackgroundColor         "yellow"
+      #GUID                   2cd2c50b-847c-4e4f-848d-0b695ccdc7a1
+    }
+    Block {
+      BlockType               From
+      Name                    "From22"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 248, 665, 262]
+      ShowName                off
+      GotoTag                 "MNR__CNT1PUF"
+      BackgroundColor         "yellow"
+      #GUID                   ce83501e-3a90-44d0-97b6-539cca178703
+    }
+    Block {
+      BlockType               From
+      Name                    "From23"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 268, 665, 282]
+      ShowName                off
+      GotoTag                 "MNR__CNT1PUB"
+      BackgroundColor         "yellow"
+      #GUID                   f973a64d-931f-4f22-9cd2-28b70b390b5a
+    }
+    Block {
+      BlockType               From
+      Name                    "From24"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [680, 228, 820, 242]
+      ShowName                off
+      GotoTag                 "MNR__CNT2PUR"
+      BackgroundColor         "yellow"
+      #GUID                   8e0a87db-1baa-40cd-8165-049fa2c20468
+    }
+    Block {
+      BlockType               From
+      Name                    "From25"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [680, 248, 820, 262]
+      ShowName                off
+      GotoTag                 "MNR__CNT2PUF"
+      BackgroundColor         "yellow"
+      #GUID                   5ec3b1b9-ae43-4b49-86a1-26aef35b6214
+    }
+    Block {
+      BlockType               From
+      Name                    "From26"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [680, 268, 820, 282]
+      ShowName                off
+      GotoTag                 "MNR__CNT2PUB"
+      BackgroundColor         "yellow"
+      #GUID                   7df13a35-e2de-4295-9e5b-185c7d5434f5
+    }
+    Block {
+      BlockType               From
+      Name                    "From27"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 318, 665, 332]
+      ShowName                off
+      GotoTag                 "MNR__CNT1PER"
+      BackgroundColor         "yellow"
+      #GUID                   01f9fec8-6f50-491f-be8c-afd13327bcaa
+    }
+    Block {
+      BlockType               From
+      Name                    "From28"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 338, 665, 352]
+      ShowName                off
+      GotoTag                 "MNR__CNT1PEF"
+      BackgroundColor         "yellow"
+      #GUID                   488f1470-e2bd-409c-bda9-c86c53f2e924
+    }
+    Block {
+      BlockType               From
+      Name                    "From29"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 358, 665, 372]
+      ShowName                off
+      GotoTag                 "MNR__CNT1PEB"
+      BackgroundColor         "yellow"
+      #GUID                   0fe44d55-619d-4f60-bbb6-43b91085c6ed
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [90, 238, 180, 252]
+      ShowName                off
+      GotoTag                 "MNR__DIN4"
+      BackgroundColor         "yellow"
+      #GUID                   490c7829-4300-480f-93d3-fd0ea19861b5
+    }
+    Block {
+      BlockType               From
+      Name                    "From30"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [680, 318, 820, 332]
+      ShowName                off
+      GotoTag                 "MNR__CNT2PER"
+      BackgroundColor         "yellow"
+      #GUID                   abcdac69-9bb9-44e2-917d-7a125477a556
+    }
+    Block {
+      BlockType               From
+      Name                    "From31"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [680, 338, 820, 352]
+      ShowName                off
+      GotoTag                 "MNR__CNT2PEF"
+      BackgroundColor         "yellow"
+      #GUID                   5ab4c2d4-7f9b-4537-ab9c-eddb4d76bc8d
+    }
+    Block {
+      BlockType               From
+      Name                    "From32"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [680, 358, 820, 372]
+      ShowName                off
+      GotoTag                 "MNR__CNT2PEB"
+      BackgroundColor         "yellow"
+      #GUID                   3e49a12a-127a-4967-bf1c-99f30cfb2f34
+    }
+    Block {
+      BlockType               From
+      Name                    "From33"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 518, 615, 532]
+      ShowName                off
+      GotoTag                 "MNR__AI1"
+      BackgroundColor         "yellow"
+      #GUID                   bc702c25-80d1-44f7-a488-0e082b01fca9
+    }
+    Block {
+      BlockType               From
+      Name                    "From34"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 538, 615, 552]
+      ShowName                off
+      GotoTag                 "MNR__AI2"
+      BackgroundColor         "yellow"
+      #GUID                   b0b4d22b-5bcf-4aa6-abc1-086265cbf516
+    }
+    Block {
+      BlockType               From
+      Name                    "From35"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [640, 538, 730, 552]
+      ShowName                off
+      GotoTag                 "MNR__AIN2"
+      BackgroundColor         "yellow"
+      #GUID                   ffd3c819-35a5-4689-97f6-c47fea98be62
+    }
+    Block {
+      BlockType               From
+      Name                    "From36"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 618, 615, 632]
+      ShowName                off
+      GotoTag                 "MNR__AI1C"
+      BackgroundColor         "yellow"
+      #GUID                   7ba8ca2c-4048-4731-8b4f-c3a4ee191d0c
+    }
+    Block {
+      BlockType               From
+      Name                    "From37"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 638, 615, 652]
+      ShowName                off
+      GotoTag                 "MNR__AI2C"
+      BackgroundColor         "yellow"
+      #GUID                   7001c309-f042-4ced-a79f-de6278b32d86
+    }
+    Block {
+      BlockType               From
+      Name                    "From38"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [640, 638, 730, 652]
+      ShowName                off
+      GotoTag                 "MNR__AIN2C"
+      BackgroundColor         "yellow"
+      #GUID                   c8cc5fc6-7d26-40b9-9413-1d0b4780735a
+    }
+    Block {
+      BlockType               From
+      Name                    "From39"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [640, 618, 730, 632]
+      ShowName                off
+      GotoTag                 "MNR__AIN1C"
+      BackgroundColor         "yellow"
+      #GUID                   e84ad489-5ee9-4d30-9648-16fcdc82efd2
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [640, 518, 730, 532]
+      ShowName                off
+      GotoTag                 "MNR__AIN1"
+      BackgroundColor         "yellow"
+      #GUID                   6389fabc-9ebf-4a61-8ad3-10c9d867ee56
+    }
+    Block {
+      BlockType               From
+      Name                    "From43"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 933, 730, 947]
+      ShowName                off
+      GotoTag                 "MNR__SDCW0x024_Fresh"
+      BackgroundColor         "yellow"
+      #GUID                   0e17824e-d473-4740-96da-ec4aed76f622
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 808, 660, 822]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x000"
+      BackgroundColor         "yellow"
+      #GUID                   ab7b4c83-b8a7-4ef5-81e7-39ad36a6458c
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 828, 725, 842]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x000_Status"
+      BackgroundColor         "yellow"
+      #GUID                   0a3d6cae-0dd6-4579-aa1b-4e40041f4f59
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [525, 848, 730, 862]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x000_Fresh"
+      BackgroundColor         "yellow"
+      #GUID                   3078116f-0dbf-405e-8808-d8197e99b639
+    }
+    Block {
+      BlockType               From
+      Name                    "From9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 988, 170, 1002]
+      ShowName                off
+      GotoTag                 "MNR__Status"
+      BackgroundColor         "yellow"
+      #GUID                   aad6b39b-b8e4-4a3f-a033-a2c85f544fca
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [210, 323, 300, 337]
+      ShowName                off
+      GotoTag                 "MNR__DOUT1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   185a86ce-b237-4056-99b7-13fb6a2d4cef
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [210, 343, 300, 357]
+      ShowName                off
+      GotoTag                 "MNR__DOUT2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   2c45c725-fb96-449f-be27-0cda1107e159
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto10"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [645, 718, 735, 732]
+      ShowName                off
+      GotoTag                 "MNR__AOUT1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   e4cbc10a-4231-4a47-b2ca-c8bfdf8e59e6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto11"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [645, 738, 735, 752]
+      ShowName                off
+      GotoTag                 "MNR__AOUT2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   99e084af-5452-4fa7-855a-eeefbde4518a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto12"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [530, 893, 665, 907]
+      ShowName                off
+      GotoTag                 "MNR__SDCW0x024"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   19a79cdd-4b9d-4c2b-8646-1223aecc386b
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto13"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [530, 718, 620, 732]
+      ShowName                off
+      GotoTag                 "MNR__AO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   e5975b6b-6b2c-49ce-af70-16889b083f3c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto14"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [530, 738, 620, 752]
+      ShowName                off
+      GotoTag                 "MNR__AO2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   ff6f47c6-c61f-4e47-b7bf-f66695bca652
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto15"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [525, 403, 665, 417]
+      ShowName                off
+      GotoTag                 "MNR__CNT1_Reset"
+      TagVisibility           "local"
+      FontSize                10
+      BackgroundColor         "lightBlue"
+      #GUID                   96738b91-b61e-44bd-bd94-60733822467a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto16"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [525, 423, 665, 437]
+      ShowName                off
+      GotoTag                 "MNR__CNT2_Reset"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   5ca2f703-a748-4e08-a611-be50c2fcc7b7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto17"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [35, 908, 135, 922]
+      ShowName                off
+      GotoTag                 "MNR__LEDS"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c69557a5-49e8-4f92-8532-09a0a5c9b272
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto18"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [35, 928, 165, 942]
+      ShowName                off
+      GotoTag                 "MNR__LEDS_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   d96cf383-ce6c-4807-9e97-0d02426eb584
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto19"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [35, 673, 145, 687]
+      ShowName                off
+      GotoTag                 "MNR__LED0"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   d405f9e1-3669-44ab-8225-3a52d95328a2
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [210, 363, 300, 377]
+      ShowName                off
+      GotoTag                 "MNR__DOUT3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   527a9523-371d-4318-8026-7a2f634c864c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto20"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 673, 335, 687]
+      ShowName                off
+      GotoTag                 "MNR__LED0_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f83b8d6e-7e04-4446-8976-2f5bfefce6d2
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto21"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 793, 305, 807]
+      ShowName                off
+      GotoTag                 "MNR__LED2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   654a1b77-33ce-4e26-be3f-ccab41ae833f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto22"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 793, 460, 807]
+      ShowName                off
+      GotoTag                 "MNR__LED2_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   8c9bfe77-2bd7-44ff-af1f-4ea2309c10ee
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto23"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [95, 323, 185, 337]
+      ShowName                off
+      GotoTag                 "MNR__DO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   9a2903bb-42fc-4eec-a6af-929e9c750707
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto24"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [95, 343, 185, 357]
+      ShowName                off
+      GotoTag                 "MNR__DO2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   8208e4d6-7c6b-47c9-b5c0-b037b986c5c6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto25"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [95, 363, 185, 377]
+      ShowName                off
+      GotoTag                 "MNR__DO3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   de1aa153-1ca7-4fae-b6ac-33a33d1803ad
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto26"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [95, 383, 185, 397]
+      ShowName                off
+      GotoTag                 "MNR__DO4"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c4ddbb76-e9fb-4729-af4a-2c9e2d7d9dfd
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto27"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [35, 498, 170, 512]
+      ShowName                off
+      GotoTag                 "MNR__PWM2_Freq"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   21d668a8-a524-45fb-9156-1f5b45617e26
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto28"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 498, 350, 512]
+      ShowName                off
+      GotoTag                 "MNR__PWM2_Frequency"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   67020692-84fd-4396-8581-c473a5b83226
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto29"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 773, 305, 787]
+      ShowName                off
+      GotoTag                 "MNR__LED1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   1ce9f7bf-aeeb-4a97-8a75-cff968d9d397
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [210, 383, 300, 397]
+      ShowName                off
+      GotoTag                 "MNR__DOUT4"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   205b45cc-2184-402e-90df-3a6c5ff63c18
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto30"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 773, 460, 787]
+      ShowName                off
+      GotoTag                 "MNR__LED1_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b7459343-68b7-438c-8079-884441a55f84
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto31"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 813, 305, 827]
+      ShowName                off
+      GotoTag                 "MNR__LED3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f4a19c14-5927-4125-9e55-5c06dd7da472
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto32"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 813, 460, 827]
+      ShowName                off
+      GotoTag                 "MNR__LED3_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   40975b99-a585-45a8-bf5e-c6277ac870b3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto33"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 833, 305, 847]
+      ShowName                off
+      GotoTag                 "MNR__LED4"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   0a01c9d3-e80b-4927-b71c-a68ddf815c7b
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto34"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 833, 460, 847]
+      ShowName                off
+      GotoTag                 "MNR__LED4_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   fa8e3264-45d8-4316-bafc-59e1b85caa8d
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto35"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 853, 305, 867]
+      ShowName                off
+      GotoTag                 "MNR__LED5"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   056da04b-0826-47f4-809a-783d3c1d874a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto36"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 853, 460, 867]
+      ShowName                off
+      GotoTag                 "MNR__LED5_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   77d56d81-5016-4d7d-996f-ca073a094a73
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto37"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 873, 305, 887]
+      ShowName                off
+      GotoTag                 "MNR__LED6"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   9533b161-f90a-491d-b4b1-641dcab65411
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto38"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 873, 460, 887]
+      ShowName                off
+      GotoTag                 "MNR__LED6_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   ceb673bc-a452-44bc-9b50-fa763cfe36e3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto39"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 893, 305, 907]
+      ShowName                off
+      GotoTag                 "MNR__LED7"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   eefc7be4-8f9f-445f-a841-329bfe86be07
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [35, 478, 170, 492]
+      ShowName                off
+      GotoTag                 "MNR__PWM1_Freq"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3b617675-9f19-4eaf-b022-3968098f52e1
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto40"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 893, 460, 907]
+      ShowName                off
+      GotoTag                 "MNR__LED7_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   589c78e3-195a-4d59-b902-1472d936eaca
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto41"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 913, 305, 927]
+      ShowName                off
+      GotoTag                 "MNR__LED8"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   0fe3be51-a34f-4ea6-b605-12b28a8598f4
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto42"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [315, 913, 460, 927]
+      ShowName                off
+      GotoTag                 "MNR__LED8_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   77baea0b-46aa-4075-8a6e-eb684afff41e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 478, 350, 492]
+      ShowName                off
+      GotoTag                 "MNR__PWM1_Frequency"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   6f417903-9ff5-4915-bba7-4deafedcfbc3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [35, 563, 125, 577]
+      ShowName                off
+      GotoTag                 "MNR__PWM1A"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   0623d44f-41c0-4fe7-ad0c-c28efe911986
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [150, 563, 240, 577]
+      ShowName                off
+      GotoTag                 "MNR__PWM1B"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   10505fa9-948c-42e8-a962-7872fa601009
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto8"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [265, 563, 355, 577]
+      ShowName                off
+      GotoTag                 "MNR__PWM1C"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   99fc11e3-151b-47a1-bdb5-ae3e0af04665
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto9"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [35, 588, 125, 602]
+      ShowName                off
+      GotoTag                 "MNR__PWM2A"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a30267af-7933-489c-9524-b8705b8acf6e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR__DI1"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [30, 177, 60, 223]
+      SourceBlock             "inoutlib/INQUAD"
+      BackgroundColor         "yellow"
+      #GUID                   48013c3e-64c5-426d-8a5d-8db62f7792e8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR__DO1"
+      Ports                   [4, 0, 0, 0, 0]
+      Position                [35, 322, 65, 368]
+      SourceBlock             "inoutlib/OUTQUAD"
+      BackgroundColor         "lightBlue"
+      #GUID                   ac6fc1a6-c64a-4a2d-a4b6-32e2eaf9bf8c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR__LED1"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [35, 771, 65, 859]
+      SourceBlock             "inoutlib/OUTOCT"
+      FontSize                10
+      BackgroundColor         "lightBlue"
+      #GUID                   64b8bece-74a6-40f3-8bc2-7cc4e0af4d19
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR__LED1_Mask"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [120, 771, 150, 859]
+      SourceBlock             "inoutlib/OUTOCT"
+      FontSize                10
+      BackgroundColor         "lightBlue"
+      #GUID                   4e17f8f0-ae69-4878-8ca5-799b935afcba
+    }
+    Annotation {
+      Position                [445, 45]
+      Text                    "This example serves as a library. It won't comp"
+"ile because it contains ALL input and output \nflags and there are conflicts."
+"\nPick only the input and output flags which you need and copy&paste them into"
+" your project."
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      ForegroundColor         "red"
+      #GUID                   1f6008b6-78d0-471b-a1a7-f29d616305bf
+    }
+    Annotation {
+      Position                [75, 140]
+      Text                    "Digital Inputs:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   fbf4a6ea-ffcb-4de7-9a2f-1ec94704189f
+    }
+    Annotation {
+      Position                [85, 160]
+      Text                    "Works both DIx and DINx"
+      #GUID                   ea73ee22-d2ef-49d4-9276-89129786c963
+    }
+    Annotation {
+      Position                [80, 285]
+      Text                    "Digital Outputs:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   2845edc8-bf17-4ca8-afa9-f28002f9dd8c
+    }
+    Annotation {
+      Position                [90, 305]
+      Text                    "Works both DOx and DOUTx"
+      #GUID                   1aa813fe-3ea8-48a4-b0d4-57f0b15e1fe9
+    }
+    Annotation {
+      Position                [195, 540]
+      Text                    "PWM1A / PWM1B / PWM1C - Duty cycle of PWM, real"
+" number 0.0 .. 1.0\nIf 0, PWM is disabled and DOUTx state is driven by its nat"
+"ive flag"
+      #GUID                   0c2ac623-d26f-45ea-8e00-f020ae359cde
+    }
+    Annotation {
+      Position                [245, 430]
+      Text                    "PWM Channel 1 (A..C = DOUT1..DOUT3), Channel 2 "
+"(A = DOUT4):"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   90bf2c70-fc71-42ef-954f-92c8e7bd31ac
+    }
+    Annotation {
+      Position                [570, 140]
+      Text                    "Counter 1 / 2:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   9fc96876-e8a9-4fad-9b3f-115806467f40
+    }
+    Annotation {
+      Position                [590, 160]
+      Text                    "Quadrature Encoder Mode:"
+      FontName                "Helvetica"
+      FontWeight              "bold"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   9d667279-7f2e-4b2d-afa4-f378abe31421
+    }
+    Annotation {
+      Position                [680, 210]
+      Text                    "Pulse Counting Mode, Up Direction, Rising / Fal"
+"ling / Both Edge:"
+      FontName                "Helvetica"
+      FontWeight              "bold"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   edd6d328-5a05-44de-af0c-28cef325942f
+    }
+    Annotation {
+      Position                [725, 300]
+      Text                    "Pulse Counting Mode, Externally Controlled Dire"
+"ction, Rising / Falling / Both Edge:"
+      FontName                "Helvetica"
+      FontWeight              "bold"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   a26ab8cb-3acc-4b3a-a0af-0be49566a8cc
+    }
+    Annotation {
+      Position                [645, 390]
+      Text                    "Value Reset Request and Completion Indication:"
+      FontName                "Helvetica"
+      FontWeight              "bold"
+      FontAngle               "normal"
+      FontSize                10
+      #GUID                   6599ae34-cba6-4122-98f9-bfb456459117
+    }
+    Annotation {
+      Position                [95, 635]
+      Text                    "LED0 (System LED):"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   95dc3612-ffd6-44d5-a53f-f3b2106fc934
+    }
+    Annotation {
+      Position                [110, 715]
+      Text                    "LED1..LED8 (User LEDs):"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   fcbd5735-38b5-41ea-af1d-f9f8b6c9dbf8
+    }
+    Annotation {
+      Position                [60, 755]
+      Text                    "As OUTOCT:"
+      #GUID                   72850b7c-2723-4838-9355-1fee7b42fc4c
+    }
+    Annotation {
+      Position                [255, 755]
+      Text                    "As one bool signal:"
+      #GUID                   4bf146a6-9716-400f-a442-0fcd6418b4df
+    }
+    Annotation {
+      Position                [595, 475]
+      Text                    "Analog Inputs 0-10V:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   9476d1c9-ab73-4f27-b0e0-3ab60e6a0ca6
+    }
+    Annotation {
+      Position                [600, 575]
+      Text                    "Analog Inputs 4-20mA:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   69a54686-cb6a-4c82-84ed-382bed51dec6
+    }
+    Annotation {
+      Position                [580, 675]
+      Text                    "Analog Outputs:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   8bac1d10-c578-40db-a611-28ecb7647e1c
+    }
+    Annotation {
+      Position                [625, 795]
+      Text                    "Service Data Channel - Read:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   920110fd-5820-4514-a486-1af5bac94301
+    }
+    Annotation {
+      Position                [625, 880]
+      Text                    "Service Data Channel - Write:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   f7ba1898-63de-4b4c-8000-577af77c007f
+    }
+    Annotation {
+      Position                [105, 455]
+      Text                    "Works both _Freq and _Frequency\nReal number, u"
+"nit is Hz"
+      #GUID                   b5de4d36-df9d-4ed9-8f63-6deda8b591d2
+    }
+    Annotation {
+      Position                [580, 500]
+      Text                    "Works both AIx and AINx\nReal number, unit is V"
+      #GUID                   430851d7-4be2-4dd6-95df-0f7bcec8e587
+    }
+    Annotation {
+      Position                [590, 700]
+      Text                    "Works both AOx and AOUTx\nReal number, unit is "
+"V"
+      #GUID                   4116af87-e22f-4c0a-944c-851d2b20a689
+    }
+    Annotation {
+      Position                [580, 600]
+      Text                    "Works both AIx and AINx\nReal number, unit is m"
+"A"
+      #GUID                   b435dbc1-02b2-4a7f-8874-1d432970bc6f
+    }
+    Annotation {
+      Position                [280, 995]
+      Text                    "actual state (1..OK, 0..INIT, <0 ERROR)"
+      #GUID                   235b992f-ef99-4214-b7ec-2d567d76dc21
+    }
+    Annotation {
+      Position                [255, 1015]
+      Text                    "cummulative error counter"
+      #GUID                   4c246e3e-4b22-4fba-93f2-eda3ab558695
+    }
+    Annotation {
+      Position                [90, 970]
+      Text                    "Status and Debug:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   1abbb8d7-2dd7-4f87-90f7-040324c7b6f5
+    }
+    Annotation {
+      Position                [90, 105]
+      Text                    "Monarco HAT"
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      #GUID                   f477a25e-4743-490c-b6c2-721724733305
+    }
+    Annotation {
+      Position                [155, 735]
+      Text                    "LEDx is driven by REX only if _Mask bit for LED"
+"x is ON"
+      #GUID                   a8913543-cc54-4847-9436-b1f51c7f3da5
+    }
+    Annotation {
+      Position                [95, 890]
+      Text                    "As one 8-bit integer (byte):"
+      #GUID                   cb586411-6918-4af1-a393-1539a4504f69
+    }
+    Annotation {
+      Position                [125, 655]
+      Text                    "LED is driven by REX only if _Mask is ON"
+      #GUID                   b065425c-b210-4aa3-b350-b1fa50063ff9
+    }
+  }
+}

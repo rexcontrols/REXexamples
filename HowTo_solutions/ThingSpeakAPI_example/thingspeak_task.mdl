@@ -1,0 +1,196 @@
+Model {
+  Name                    "thingspeak_task"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "thingspeak_task"
+    Location                [292, 33, 925, 400]
+    #GUID                   5908a457-6bb4-450e-a235-6e94f1d87163
+    Block {
+      BlockType               Reference
+      Name                    "CNB_TRIGGER_POST"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [260, 203, 280, 217]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   97847c78-d790-424a-8350-ba6c7884bfb8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_pressure"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 137, 70, 153]
+      SourceBlock             "mathlib/CNR"
+      ycn                     105
+      #GUID                   04b4275a-1d11-462e-ae7b-1d70c492b9ef
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_temperature"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 92, 70, 108]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "9.81"
+      #GUID                   98ac68e0-0d39-4319-84bb-c87e8461ca3f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_APIkey"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [260, 148, 280, 162]
+      SourceBlock             "stringlib/CNS"
+      scv                     "YourThingspeakAPIkey"
+      nmax                    0
+      FontSize                10
+      BackgroundColor         "magenta"
+      #GUID                   476f6794-e2f6-4073-a74e-53b28ee3c9de
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CONCAT"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [170, 90, 230, 180]
+      SourceBlock             "stringlib/CONCAT"
+      ptrn                    "{ \"field1\": %1, \"field2\": %2 }"
+      nmax                    0
+      #GUID                   35a1e763-d270-43b3-bb51-e9f9d7afb68a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HTTP"
+      Ports                   [3, 6, 0, 0, 0]
+      Position                [320, 122, 400, 188]
+      SourceBlock             "speclib/HTTP"
+      url                     "https://api.thingspeak.com/update.json?api_key="
+      method                  2
+      user                    ""
+      password                ""
+      certificate             ""
+      VERIFY                  off
+      postmime                "application/json"
+      acceptmime              "application/json"
+      timeout                 5
+      BLOCKING                off
+      nmax                    0
+      postmax                 256
+      datamax                 1024
+      FontSize                10
+      BackgroundColor         "cyan"
+      #GUID                   a82dff57-b51f-43ba-93f2-1953bef90ec5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 86, 150, 114]
+      SourceBlock             "stringlib/RTOS"
+      prec                    3
+      mode                    2
+      #GUID                   38524e32-2e7e-4bd8-8567-66861339b1f3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOS1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 131, 150, 159]
+      SourceBlock             "stringlib/RTOS"
+      prec                    0
+      mode                    2
+      #GUID                   e33b3544-153d-49ab-844f-e0443f6280c6
+    }
+    Line {
+      SrcBlock                "CNB_TRIGGER_POST"
+      SrcPort                 1
+      Points                  [15, 0; 0, -35]
+      DstBlock                "HTTP"
+      DstPort                 3
+      #GUID                   28a783a5-d21b-432a-be6d-1722b021e877
+    }
+    Line {
+      SrcBlock                "CNR_pressure"
+      SrcPort                 1
+      DstBlock                "RTOS1"
+      DstPort                 1
+      #GUID                   d5b8456a-5964-4bff-8872-efa2d98f184e
+    }
+    Line {
+      SrcBlock                "CNR_temperature"
+      SrcPort                 1
+      DstBlock                "RTOS"
+      DstPort                 1
+      #GUID                   d89eaf72-755e-4514-852c-e9e056d16533
+    }
+    Line {
+      SrcBlock                "CNS_APIkey"
+      SrcPort                 1
+      DstBlock                "HTTP"
+      DstPort                 2
+      #GUID                   157f692b-6802-41c2-a289-3ab5af1efeec
+    }
+    Line {
+      SrcBlock                "CONCAT"
+      SrcPort                 1
+      DstBlock                "HTTP"
+      DstPort                 1
+      #GUID                   c6e6b540-78ef-4eee-8322-7bea2ad07f5a
+    }
+    Line {
+      SrcBlock                "RTOS"
+      SrcPort                 1
+      DstBlock                "CONCAT"
+      DstPort                 1
+      #GUID                   113805d7-89eb-4326-a75c-bafe28594a4e
+    }
+    Line {
+      SrcBlock                "RTOS1"
+      SrcPort                 1
+      DstBlock                "CONCAT"
+      DstPort                 2
+      #GUID                   eb28c2ed-ad96-4c50-b0c1-398041c7f4cf
+    }
+    Annotation {
+      Position                [130, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8feb317c-34be-445c-9c14-f35789312c76
+    }
+    Annotation {
+      Position                [95, 15]
+      Text                    "ThingSpeak API example"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   d52f859a-11a7-4c8e-849d-abd0a5b60b67
+    }
+  }
+}

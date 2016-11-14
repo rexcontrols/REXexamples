@@ -1,7 +1,8 @@
 Model {
   Name                    "buttonblink_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "buttonblink_task"
-    Location                [205, 33, 634, 359]
+    Location                [303, 31, 760, 415]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "BIS_BLINK_OUT2"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [60, 118, 75, 142]
+      Position                [75, 188, 90, 212]
       SourceBlock             "genlib/BIS"
       NamePlacement           ""
       SourceType              "BIS"
@@ -60,7 +61,7 @@ Model {
       BlockType               Reference
       Name                    "BIS_BLINK_OUT3"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [60, 163, 75, 187]
+      Position                [75, 233, 90, 257]
       SourceBlock             "genlib/BIS"
       NamePlacement           ""
       SourceType              "BIS"
@@ -81,7 +82,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_OUT3_DEFAULT"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [160, 188, 180, 202]
+      Position                [175, 258, 195, 272]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
@@ -91,7 +92,7 @@ Model {
       BlockType               Reference
       Name                    "CNB_RELAY1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [60, 73, 80, 87]
+      Position                [75, 143, 95, 157]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       BackgroundColor         "magenta"
@@ -101,7 +102,7 @@ Model {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [25, 223, 115, 237]
+      Position                [40, 293, 130, 307]
       ShowName                off
       GotoTag                 "RPI__PFI0U"
       BackgroundColor         "yellow"
@@ -111,7 +112,7 @@ Model {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [305, 73, 395, 87]
+      Position                [320, 143, 410, 157]
       ShowName                off
       GotoTag                 "RPI__PFO1"
       TagVisibility           "local"
@@ -122,7 +123,7 @@ Model {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [305, 118, 395, 132]
+      Position                [320, 188, 410, 202]
       ShowName                off
       GotoTag                 "RPI__PFO2"
       TagVisibility           "local"
@@ -133,7 +134,7 @@ Model {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [305, 173, 395, 187]
+      Position                [320, 243, 410, 257]
       ShowName                off
       GotoTag                 "RPI__PFO3"
       TagVisibility           "local"
@@ -144,16 +145,9 @@ Model {
       BlockType               Reference
       Name                    "ISSW"
       Ports                   [3, 1, 0, 0, 0]
-      Position                [245, 163, 275, 197]
+      Position                [260, 233, 290, 267]
       SourceBlock             "logiclib/ISSW"
       #GUID                   43ecde54-4d19-4f36-a9fd-9fb58e12570f
-    }
-    Line {
-      SrcBlock                "BIS_BLINK_OUT3"
-      SrcPort                 1
-      DstBlock                "ISSW"
-      DstPort                 1
-      #GUID                   5e07017d-597b-42e0-ab91-5a7aa8cecae0
     }
     Line {
       SrcBlock                "BIS_BLINK_OUT2"
@@ -161,6 +155,13 @@ Model {
       DstBlock                "Goto1"
       DstPort                 1
       #GUID                   9a862708-2d5e-4cf4-aead-1ec16279eedf
+    }
+    Line {
+      SrcBlock                "BIS_BLINK_OUT3"
+      SrcPort                 1
+      DstBlock                "ISSW"
+      DstPort                 1
+      #GUID                   5e07017d-597b-42e0-ab91-5a7aa8cecae0
     }
     Line {
       SrcBlock                "CNB_OUT3_DEFAULT"
@@ -193,13 +194,14 @@ Model {
       #GUID                   01db43e6-0929-4e53-954a-85ba043c4777
     }
     Annotation {
-      Position                [105, 50]
+      Position                [105, 45]
       Text                    "See the README.md file for details."
       #GUID                   b3c0ccd1-cbd5-4d1f-9b51-11a1a7dfb36b
     }
     Annotation {
-      Position                [140, 20]
-      Text                    "Blinking outputs of PiFace Digital"
+      Position                [215, 20]
+      Text                    "The button and blinking outputs of PiFace Digit"
+"al - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   ffbef862-00f9-4116-a297-0a085439997c

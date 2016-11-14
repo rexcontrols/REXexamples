@@ -93,7 +93,101 @@ Model {
   LastModifiedDate        "Mon Jan 07 09:53:31 2008"
   ModelVersionFormat      "1.%<AutoIncrement:49>"
   ConfigurationManager    "none"
-  #RexVersion             "2.10.3 rev. 4257, Date 2014-06-16"
+  #RexVersion             "2.50.1 rev. 7312, Date 2016-10-10"
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "Auto"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  Created                 "Mon Dec 20 17:00:37 1999"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "mertlj"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon Jan 07 09:53:31 2008"
+  ModelVersionFormat      "1.%<AutoIncrement:49>"
+  ConfigurationManager    "none"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -125,7 +219,7 @@ Model {
   }
   System {
     Name                    "epc_exec"
-    Location                [10, 31, 198, 505]
+    Location                [10, 31, 315, 414]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -134,7 +228,6 @@ Model {
     PaperPositionMode       "auto"
     PaperType               "usletter"
     PaperUnits              "inches"
-    ZoomFactor              100
     AutoZoom                on
     ReportName              "simulink-default.rpt"
     #GUID                   43a3d973-85be-4588-9964-ada8622debed
@@ -142,7 +235,7 @@ Model {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [25, 47, 75, 353]
+      Position                [80, 67, 125, 358]
       SourceBlock             "execlib/EXEC"
       SourceType              "EXEC"
       target                  "PC - Linux"
@@ -161,7 +254,7 @@ Model {
       BlockType               Reference
       Name                    "epc_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [110, 211, 160, 229]
+      Position                [165, 223, 215, 237]
       SourceBlock             "execlib/TASK"
       SourceType              "TASK"
       factor                  1
@@ -178,6 +271,19 @@ Model {
       DstBlock                "epc_task"
       DstPort                 1
       #GUID                   ebfc39c0-738d-4899-97a8-85f975cdb991
+    }
+    Annotation {
+      Position                [150, 20]
+      Text                    "EPC - calling external programs in Linux"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   7e1546c6-cdf7-43be-b4d4-ad1406d37ff8
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   7b7cad88-4b84-4358-9a22-edb2ec0b0839
     }
   }
 }

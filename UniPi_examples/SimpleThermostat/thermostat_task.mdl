@@ -1,7 +1,8 @@
 Model {
   Name                    "thermostat_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,31 +34,40 @@ Model {
   }
   System {
     Name                    "thermostat_task"
-    Location                [266, 33, 784, 438]
+    Location                [299, 31, 817, 419]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "CMP_THERMOSTAT"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [295, 103, 325, 127]
+      Position                [295, 138, 325, 162]
       SourceBlock             "analoglib/CMP"
       hys                     "0.5"
       #GUID                   50495373-91e8-4224-8572-646e31d6cbbc
     }
     Block {
       BlockType               Reference
-      Name                    "CNB_RUN"
+      Name                    "CNB_RUN_3D"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [375, 343, 395, 357]
+      Position                [370, 313, 390, 327]
       SourceBlock             "mathlib/CNB"
       YCN                     on
-      #GUID                   efd701ee-a1b2-45d2-b90b-6f9c2bc0b68a
+      #GUID                   3880246b-17de-43de-983e-02eec2c5a07c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN_3H"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [125, 318, 145, 332]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   8d395c35-f0b1-422f-b5c8-191746851297
     }
     Block {
       BlockType               Reference
       Name                    "CNR_temperature_sp"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [80, 101, 110, 119]
+      Position                [80, 136, 110, 154]
       SourceBlock             "mathlib/CNR"
       ycn                     "21.8"
       FontSize                10
@@ -66,19 +76,90 @@ Model {
     }
     Block {
       BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [320, 273, 360, 287]
+      ShowName                off
+      GotoTag                 "sp"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   4bc4eb73-9fc8-4f6e-a217-ef627215a284
+    }
+    Block {
+      BlockType               From
       Name                    "From2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [20, 138, 170, 152]
+      Position                [20, 173, 170, 187]
       ShowName                off
       GotoTag                 "OWS__temperature"
       BackgroundColor         "yellow"
       #GUID                   f4ff8e62-d911-429d-9e96-488db25a503a
     }
     Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [75, 278, 115, 292]
+      ShowName                off
+      GotoTag                 "sp"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   89e52e19-8dd9-4d86-b80a-10986d66cfc4
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [120, 288, 160, 302]
+      ShowName                off
+      GotoTag                 "pv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   96ff63c2-9bae-4493-8dbb-5ddda943a85a
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [365, 283, 405, 297]
+      ShowName                off
+      GotoTag                 "pv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   35833d92-a3ac-4bf6-a039-c42291dd33f7
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 298, 115, 312]
+      ShowName                off
+      GotoTag                 "thermostat_mv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   8c351198-ebc9-4af6-a701-cbc90898adff
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 293, 360, 307]
+      ShowName                off
+      GotoTag                 "thermostat_mv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   2c3e602a-8b5f-4862-b7cb-1f475ae563f2
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [205, 173, 245, 187]
+      ShowName                off
+      GotoTag                 "pv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   ea0b4fc2-587b-45ab-a96d-9315f6016632
+    }
+    Block {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 108, 495, 122]
+      Position                [405, 143, 495, 157]
       ShowName                off
       GotoTag                 "UNP__RLY1"
       TagVisibility           "local"
@@ -86,10 +167,32 @@ Model {
       #GUID                   d7583528-e48f-416f-8ed1-bca6cd107bc0
     }
     Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [205, 118, 245, 132]
+      ShowName                off
+      GotoTag                 "sp"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   d99062f7-14fd-4b62-829c-74fc0f3ed920
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [405, 178, 495, 192]
+      ShowName                off
+      GotoTag                 "thermostat_mv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   52e94c12-1e70-4546-8f13-fe4ef9e56560
+    }
+    Block {
       BlockType               Reference
       Name                    "TRND_10days"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [430, 298, 475, 372]
+      Position                [430, 268, 475, 342]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       86400
@@ -104,12 +207,13 @@ Model {
       id                      1
       Title                   "Thermostat actions (10 days)"
       #GUID                   2f7bce1f-64ca-4f84-8a31-b5ec136389d9
+        timesrc       1
     }
     Block {
       BlockType               Reference
       Name                    "TRND_3hours"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [430, 203, 475, 277]
+      Position                [185, 273, 230, 347]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       10800
@@ -124,6 +228,7 @@ Model {
       id                      1
       Title                   "Thermostat actions (3 hours)"
       #GUID                   5602bd33-cccc-45eb-98ab-65b5d32eaeb6
+        timesrc       1
     }
     Line {
       SrcBlock                "CMP_THERMOSTAT"
@@ -133,104 +238,118 @@ Model {
       Branch {
         DstBlock                "Goto1"
         DstPort                 1
-        #GUID                   a7e0d710-8030-4fa6-944a-4b2c3d58fc07
+        #GUID                   bfe468ea-b049-40ec-832d-44461352f64e
       }
       Branch {
-        Points                  [0, 120]
-        #GUID                   e72f0ea4-19a1-4b0a-9e2f-4a66673da20b
-        Branch {
-          Points                  [0, 95]
-          DstBlock                "TRND_10days"
-          DstPort                 3
-          #GUID                   d0c55da8-02ac-4c6d-8521-ed8d8302c3fb
-        }
-        Branch {
-          DstBlock                "TRND_3hours"
-          DstPort                 3
-          #GUID                   e4bd4676-c0be-46ef-800c-53af91b3c16b
-        }
+        Points                  [0, 35]
+        DstBlock                "Goto3"
+        DstPort                 1
+        #GUID                   36e42c0b-a19b-4ea1-8dde-822291c7edb4
       }
     }
     Line {
-      SrcBlock                "CNB_RUN"
+      SrcBlock                "CNB_RUN_3D"
       SrcPort                 1
-      Points                  [15, 0]
-      #GUID                   6eea4585-550c-4fd9-8bbb-ea50fd8d59b0
-      Branch {
-        DstBlock                "TRND_10days"
-        DstPort                 5
-        #GUID                   69f3e1f3-efcb-4f60-ac93-4e212c7ecf59
-      }
-      Branch {
-        DstBlock                "TRND_3hours"
-        DstPort                 5
-        #GUID                   240a9025-bed7-4338-93e1-2ae13c4780ef
-      }
+      DstBlock                "TRND_10days"
+      DstPort                 5
+      #GUID                   8dd1a905-4426-4bf8-8d43-4fe5a1479009
+    }
+    Line {
+      SrcBlock                "CNB_RUN_3H"
+      SrcPort                 1
+      DstBlock                "TRND_3hours"
+      DstPort                 5
+      #GUID                   b348e0ab-306d-4ed5-b8a5-1e4ac6ee64fc
     }
     Line {
       SrcBlock                "CNR_temperature_sp"
       SrcPort                 1
-      Points                  [135, 0]
+      Points                  [65, 0]
       #GUID                   151412d4-684c-45e7-bc47-883277fa08ea
       Branch {
         DstBlock                "CMP_THERMOSTAT"
         DstPort                 1
-        #GUID                   662c053c-76ea-481d-8820-e13addf603bc
+        #GUID                   27b08bee-d3fe-4f13-8d84-0b8050e43d89
       }
       Branch {
-        Points                  [0, 105]
-        #GUID                   a7b669e6-505e-43b8-beea-256304eb3b03
-        Branch {
-          Points                  [0, 95]
-          DstBlock                "TRND_10days"
-          DstPort                 1
-          #GUID                   8a60f4f5-4033-413b-a9fa-1d5400780da6
-        }
-        Branch {
-          DstBlock                "TRND_3hours"
-          DstPort                 1
-          #GUID                   d701cc12-2daa-48a2-af97-106b238036dc
-        }
+        Points                  [0, -20]
+        DstBlock                "Goto2"
+        DstPort                 1
+        #GUID                   49c1c62e-e5dc-4de2-a387-154192e8eb91
       }
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "TRND_10days"
+      DstPort                 1
+      #GUID                   a3aadf2e-e2f1-42d0-94c2-a45cf23a2df9
     }
     Line {
       SrcBlock                "From2"
       SrcPort                 1
-      Points                  [20, 0; 0, -25; 45, 0]
+      Points                  [5, 0]
       #GUID                   441aba47-e48e-4031-9ec4-0445f5a054f8
       Branch {
+        Points                  [0, -25]
         DstBlock                "CMP_THERMOSTAT"
         DstPort                 2
-        #GUID                   03986cef-8416-43df-ac5c-fb905498a062
+        #GUID                   3679c28c-4273-4c78-9025-15323e8e8aec
       }
       Branch {
-        Points                  [0, 105]
-        #GUID                   55f390f2-4794-4c7e-bce1-bf6a0e7a7229
-        Branch {
-          Points                  [0, 95]
-          DstBlock                "TRND_10days"
-          DstPort                 2
-          #GUID                   dd8641da-9870-40b2-8d01-3472fcac936e
-        }
-        Branch {
-          DstBlock                "TRND_3hours"
-          DstPort                 2
-          #GUID                   9c2eeee0-8574-48a2-88c6-d2b070cb05e0
-        }
+        DstBlock                "Goto"
+        DstPort                 1
+        #GUID                   ae9ea829-db09-48ff-969d-7ba2dcd8331a
       }
     }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "TRND_3hours"
+      DstPort                 1
+      #GUID                   28c13253-de86-485a-879e-508627da6265
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      DstBlock                "TRND_3hours"
+      DstPort                 2
+      #GUID                   a2a44a4c-264c-4e52-a490-1fb862ecc68d
+    }
+    Line {
+      SrcBlock                "From5"
+      SrcPort                 1
+      DstBlock                "TRND_10days"
+      DstPort                 2
+      #GUID                   0f55cc5b-68ee-4cae-b945-25b8cfbd424c
+    }
+    Line {
+      SrcBlock                "From6"
+      SrcPort                 1
+      DstBlock                "TRND_3hours"
+      DstPort                 3
+      #GUID                   47f1540b-95e2-4fbc-a31a-feb96c821b8c
+    }
+    Line {
+      SrcBlock                "From7"
+      SrcPort                 1
+      DstBlock                "TRND_10days"
+      DstPort                 3
+      #GUID                   0d1c87de-2f3f-4207-94fd-7cc01ff6fce5
+    }
     Annotation {
-      Position                [255, 25]
-      Text                    "UniPi as a simple thermostat"
+      Position                [250, 50]
+      Text                    "Go to OWS driver configuration and press \"Conf"
+"igure\" to configure the 1-Wire sensor (64-bit ID).\n\nRead the README.md file"
+" for detailed information."
+      #GUID                   ac0c0a68-fa60-4f49-b7e8-0bfe4dc96383
+    }
+    Annotation {
+      Position                [145, 15]
+      Text                    "UniPi as a simple thermostat - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513
-    }
-    Annotation {
-      Position                [255, 50]
-      Text                    "Go to OWS driver configuration and press \"Spec"
-"ial edit\" to configure the 1-Wire sensor (64-bit ID)"
-      #GUID                   ac0c0a68-fa60-4f49-b7e8-0bfe4dc96383
     }
   }
 }

@@ -2,7 +2,6 @@ Model {
   Name                    "slave_task"
   Version                 7.1
   MdlSubVersion           0
-  SavedCharacterEncoding  "windows-1250"
   SaveDefaultBlockParams  on
   SampleTimeColors        off
   LibraryLinkDisplay      "none"
@@ -85,7 +84,8 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -118,7 +118,7 @@ Model {
   }
   System {
     Name                    "slave_task"
-    Location                [294, 34, 907, 834]
+    Location                [294, 31, 907, 831]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -130,7 +130,6 @@ Model {
     TiledPaperMargins       [0.196850, 0.196850, 0.196850, 0.196850]
     TiledPageScale          1
     ShowPageBoundaries      off
-    ZoomFactor              100
     ReportName              "simulink-default.rpt"
     #GUID                   b1efc608-f54c-482f-8d84-a902872a8bc8
     Block {
@@ -622,19 +621,6 @@ Model {
       #GUID                   99651124-b3bc-4d93-96f1-f471a4020360
     }
     Annotation {
-      Position                [310, 55]
-      Text                    "Go to MTS driver configuration and press \"Spec"
-"ial edit\" for Modbus registers configuration"
-      #GUID                   116b0411-60b8-4faa-8f1e-59a56e54ba88
-    }
-    Annotation {
-      Position                [300, 35]
-      Text                    "UniPi as Modbus TCP slave"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   2ad812a2-f44b-41a3-bbc3-d30db12419e0
-    }
-    Annotation {
       Position                [150, 140]
       Text                    "register 2048, value 0..255"
       #GUID                   53d5cf80-c8a1-49ca-bf59-b0458fcd9d67
@@ -658,6 +644,20 @@ Model {
       Position                [455, 740]
       Text                    "register 2, value 0..65535"
       #GUID                   badf0444-90d9-44bf-86c8-5df421b257a8
+    }
+    Annotation {
+      Position                [230, 50]
+      Text                    "Go to MTS driver configuration and press \"Conf"
+"igure\" for Modbus registers configuration.\n\nSee the README.md file for deta"
+"ils."
+      #GUID                   116b0411-60b8-4faa-8f1e-59a56e54ba88
+    }
+    Annotation {
+      Position                [140, 15]
+      Text                    "UniPi as Modbus TCP slave - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   2ad812a2-f44b-41a3-bbc3-d30db12419e0
     }
   }
 }

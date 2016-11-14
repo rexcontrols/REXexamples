@@ -1,0 +1,96 @@
+Model {
+  Name                    "weather_exec"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "weather_exec"
+    Location                [9, 33, 285, 402]
+    #GUID                   f5ffee10-7913-470f-b666-c0336984f207
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [60, 61, 110, 344]
+      SourceBlock             "execlib/EXEC"
+      ShowName                on
+      NamePlacement           ""
+      target                  "PC - Windows"
+      tick                    "0.1"
+      ntick0                  5
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   80ecde70-6db6-4e25-9dc2-328f3241afee
+    }
+    Block {
+      BlockType               Reference
+      Name                    "weather_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [145, 212, 195, 228]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   85bc7725-5b9a-49db-bdb2-cceb7477a788
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "weather_task"
+      DstPort                 1
+      #GUID                   b3d4b2b0-4bf1-4406-aa87-32b3c40d619a
+    }
+    Annotation {
+      Position                [135, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   b257c5cc-15ac-4b56-9469-dcbdebea595d
+    }
+    Annotation {
+      Position                [120, 15]
+      Text                    "OpenWeatherMap API example"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   2a8cdb84-9aa4-415f-a7f4-e436ea8650c7
+    }
+  }
+}

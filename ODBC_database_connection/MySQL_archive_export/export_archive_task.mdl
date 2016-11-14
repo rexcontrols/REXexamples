@@ -1,7 +1,8 @@
 Model {
   Name                    "export_archive_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "export_archive_task"
-    Location                [211, 33, 606, 365]
+    Location                [330, 32, 725, 418]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
       Name                    "ACD_TRoff"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [295, 138, 330, 162]
+      Position                [295, 158, 330, 182]
       SourceBlock             "arclib/ACD"
       acls                    "8: Double"
       arc                     1
@@ -54,7 +55,7 @@ Model {
       BlockType               Reference
       Name                    "ACD_TRon"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [295, 88, 330, 112]
+      Position                [295, 108, 330, 132]
       SourceBlock             "arclib/ACD"
       acls                    "8: Double"
       arc                     1
@@ -69,59 +70,55 @@ Model {
       BlockType               Reference
       Name                    "ADD"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [105, 83, 130, 107]
+      Position                [105, 103, 130, 127]
       SourceBlock             "mathlib/ADD"
       #GUID                   0495ebbc-eec4-4418-b70b-76c04d65b836
     }
     Block {
       BlockType               Reference
-      Name                    "ALB_high"
+      Name                    "ALN_high"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [295, 208, 330, 222]
-      SourceBlock             "arclib/ALB"
-      men                     "2: High-alarm enabled"
+      Position                [295, 243, 330, 257]
+      SourceBlock             "arclib/ALN"
+      hys                     "0.5"
+      hh                      "5e10"
+      h                       11
+      l                       0
+      ll                      "-5e10"
+      acls                    "8: Double"
       arc                     1
-      id                      50
-      lvl                     33
+      id                      52
+      lvl1                    33
+      lvl2                    43
       Desc                    "Value too high!"
-      #GUID                   c037430e-56cc-44ac-94e2-9b4548876491
+      iACK                    4
+      #GUID                   4338631c-dc5a-48c1-bfa4-ff643141e954
     }
     Block {
       BlockType               Reference
-      Name                    "ALB_low"
+      Name                    "ALN_low"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [295, 268, 330, 282]
-      SourceBlock             "arclib/ALB"
-      men                     "2: High-alarm enabled"
+      Position                [295, 288, 330, 302]
+      SourceBlock             "arclib/ALN"
+      hys                     "0.5"
+      hh                      "5e10"
+      h                       0
+      l                       "-7.5"
+      ll                      "-5e10"
+      acls                    "8: Double"
       arc                     1
-      id                      51
-      lvl                     32
+      id                      53
+      lvl1                    32
+      lvl2                    42
       Desc                    "Value too low!"
-      #GUID                   eb7da522-d278-4faf-a852-4f564ef68d8f
-    }
-    Block {
-      BlockType               Reference
-      Name                    "CMP_high"
-      Ports                   [2, 1, 0, 0, 0]
-      Position                [235, 203, 265, 227]
-      SourceBlock             "analoglib/CMP"
-      hys                     "0.5"
-      #GUID                   29fcec9b-8467-4114-b672-b09d1db740e1
-    }
-    Block {
-      BlockType               Reference
-      Name                    "CMP_low"
-      Ports                   [2, 1, 0, 0, 0]
-      Position                [235, 263, 265, 287]
-      SourceBlock             "analoglib/CMP"
-      hys                     "0.5"
-      #GUID                   f6200866-a021-4446-9999-d443ba624e05
+      iACK                    2
+      #GUID                   6a1b4e5f-c290-4fcb-b168-ccbe2de9560d
     }
     Block {
       BlockType               Reference
       Name                    "CNR_delta"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [205, 98, 225, 112]
+      Position                [205, 118, 225, 132]
       SourceBlock             "mathlib/CNR"
       ycn                     "0.2"
       BackgroundColor         "magenta"
@@ -129,29 +126,9 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "CNR_highlimit"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [120, 213, 150, 227]
-      SourceBlock             "mathlib/CNR"
-      ycn                     "11.0"
-      BackgroundColor         "magenta"
-      #GUID                   eddf836d-b51f-4253-8b8c-97fca693d4cd
-    }
-    Block {
-      BlockType               Reference
-      Name                    "CNR_lowlimit"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [120, 263, 150, 277]
-      SourceBlock             "mathlib/CNR"
-      ycn                     "-7.8"
-      BackgroundColor         "magenta"
-      #GUID                   ebd2e306-75d2-4ed3-ae2c-9fec0b8f132f
-    }
-    Block {
-      BlockType               Reference
       Name                    "SG_sine_fast"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 133, 60, 147]
+      Position                [35, 153, 60, 167]
       SourceBlock             "genlib/SG"
       isig                    "1: SINE"
       amp                     3
@@ -159,13 +136,14 @@ Model {
       phase                   0
       ifrunit                 "1: Hz"
       iphunit                 "1: degrees"
+      offset                  0
       #GUID                   261095e4-a807-421c-94b1-db60720b0352
     }
     Block {
       BlockType               Reference
       Name                    "SG_sine_slow"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 83, 60, 97]
+      Position                [35, 103, 60, 117]
       SourceBlock             "genlib/SG"
       isig                    "1: SINE"
       amp                     10
@@ -173,6 +151,7 @@ Model {
       phase                   0
       ifrunit                 "1: Hz"
       iphunit                 "1: degrees"
+      offset                  0
       #GUID                   f712d529-1164-4523-b5d5-692ba640f258
     }
     Line {
@@ -191,38 +170,24 @@ Model {
         Branch {
           DstBlock                "ACD_TRoff"
           DstPort                 1
-          #GUID                   107cdf43-fc03-44dc-a53c-01bfbb323e14
+          #GUID                   ab27fbba-dc64-4d5f-b973-d4ae199f4e86
         }
         Branch {
-          Points                  [0, 65]
-          #GUID                   bfaa3bdf-e508-4331-a3c2-2969b4f344b7
+          Points                  [0, 85]
+          #GUID                   a6cdde40-0450-4f73-b15f-3bc809c60ecd
           Branch {
-            DstBlock                "CMP_high"
+            DstBlock                "ALN_high"
             DstPort                 1
-            #GUID                   8bed7f86-3fbf-43e2-b28a-152b75ca4c27
+            #GUID                   db5761b0-541d-4302-aaa4-ffd10ecf90c1
           }
           Branch {
-            Points                  [0, 70]
-            DstBlock                "CMP_low"
-            DstPort                 2
-            #GUID                   0fa59b46-c94d-4eb0-b3b6-373a8795226b
+            Points                  [0, 45]
+            DstBlock                "ALN_low"
+            DstPort                 1
+            #GUID                   0911d22e-90bb-4a28-b1f9-ab9038529f37
           }
         }
       }
-    }
-    Line {
-      SrcBlock                "CMP_high"
-      SrcPort                 1
-      DstBlock                "ALB_high"
-      DstPort                 1
-      #GUID                   ee22b8c0-a823-4fb9-a2f8-6b3427ef1daf
-    }
-    Line {
-      SrcBlock                "CMP_low"
-      SrcPort                 1
-      DstBlock                "ALB_low"
-      DstPort                 1
-      #GUID                   06634924-c1fa-4d3f-a612-f42ddbf8d676
     }
     Line {
       SrcBlock                "CNR_delta"
@@ -242,20 +207,6 @@ Model {
       }
     }
     Line {
-      SrcBlock                "CNR_highlimit"
-      SrcPort                 1
-      DstBlock                "CMP_high"
-      DstPort                 2
-      #GUID                   9d8d6ca5-cf6e-4b08-9741-2f1aa6c4ec0b
-    }
-    Line {
-      SrcBlock                "CNR_lowlimit"
-      SrcPort                 1
-      DstBlock                "CMP_low"
-      DstPort                 1
-      #GUID                   fd96b593-3550-4024-8e01-610e8de0ba41
-    }
-    Line {
       SrcBlock                "SG_sine_fast"
       SrcPort                 1
       Points                  [25, 0]
@@ -271,20 +222,20 @@ Model {
       #GUID                   ea256fd2-0103-4c13-a042-72745e0fb1aa
     }
     Annotation {
-      Position                [145, 50]
+      Position                [135, 35]
       Text                    "See the README.md file for detailed information"
 "."
       #GUID                   8f79b992-fa0e-490d-82e8-f15ef7d4ddd7
     }
     Annotation {
-      Position                [165, 25]
+      Position                [155, 15]
       Text                    "Exporting archive signals to database"
       FontWeight              "bold"
       FontSize                16
       #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
     }
     Annotation {
-      Position                [210, 85]
+      Position                [210, 105]
       Text                    "Simulated temperature signal"
       #GUID                   4e4fef62-428b-4260-a0fe-79b62f3584b6
     }

@@ -1,4 +1,4 @@
-Modbus RTU data exchange (via serial line) 
+﻿Modbus RTU data exchange (via serial line) 
 ==========================================
 
 This folder contains the source files for the demonstration project on data
@@ -8,7 +8,7 @@ Both the master and slave stations are implemented in the REX Control System
 but any of them can be replaced by another device supporting the Modbus RTU 
 protocol (serial line connection, e.g. RS485/422 or RS232). 
 
-## Prerequisities ##
+## Prerequisites ##
 - RexCore and MbDrv modules must be installed and running on the individual 
 devices to run the examples.
 
@@ -40,13 +40,13 @@ devices to run the examples.
 
 ### Adding signals and changing Modbus register mapping ###
 Go to Modbus driver configuration (MBM block in the master, MBS block in the 
-slave) and press "Special edit" for Modbus registers configuration. Make sure 
+slave) and press "Configure" for Modbus registers configuration. Make sure 
 to read the Modbus driver documentation (see below).
 
 ## Documentation ##
 
-- [MbDrv - Modbus driver](http://www.rexcontrols.com/media/DOC/ENGLISH/MbDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

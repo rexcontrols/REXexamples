@@ -1,0 +1,83 @@
+Model {
+  Name                    "mc_buffered_mode_exec"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "mc_buffered_mode_exec"
+    Location                [8, 32, 200, 434]
+    #GUID                   59b037e7-7be6-4c32-a834-705997ed25be
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [30, 28, 75, 317]
+      SourceBlock             "execlib/EXEC"
+      ShowName                on
+      NamePlacement           ""
+      target                  "PC - Windows"
+      tick                    "0.005"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   fc4ffd0d-20b9-49d9-967a-afce1a03b8f5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "mc_buffered_mode"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [105, 183, 155, 197]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   f2ee620d-c1c7-4445-ac49-7b8742e42752
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "mc_buffered_mode"
+      DstPort                 1
+      #GUID                   80c5fc6d-82b9-4ad3-bef2-b57615443dac
+    }
+  }
+}

@@ -1,7 +1,8 @@
 Model {
   Name                    "emo_1wr4di4_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "emo_1wr4di4_exec"
-    Location                [12, 33, 245, 359]
+    Location                [12, 33, 245, 423]
     #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 13, 60, 302]
+      Position                [15, 73, 60, 362]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.02"
@@ -57,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "OWS"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [160, 63, 210, 77]
+      Position                [160, 123, 210, 137]
       SourceBlock             "execlib/IODRV"
       module                  "OwsDrv"
       classname               "OwsDrv"
@@ -72,7 +73,7 @@ Model {
       BlockType               Reference
       Name                    "OwsDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [160, 28, 210, 42]
+      Position                [160, 88, 210, 102]
       SourceBlock             "execlib/MODULE"
       #GUID                   97d76ff7-5b84-49d1-ba4e-2995a9ac7a4a
     }
@@ -80,7 +81,7 @@ Model {
       BlockType               Reference
       Name                    "RPiDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [85, 28, 135, 42]
+      Position                [85, 88, 135, 102]
       SourceBlock             "execlib/MODULE"
       #GUID                   2e2514c4-8812-4cf5-9715-f31383baea86
     }
@@ -88,7 +89,7 @@ Model {
       BlockType               Reference
       Name                    "UNP"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [85, 63, 135, 77]
+      Position                [85, 123, 135, 137]
       SourceBlock             "execlib/IODRV"
       module                  "RPiDrv"
       classname               "UnpDrv"
@@ -103,7 +104,7 @@ Model {
       BlockType               Reference
       Name                    "emo_1wr4di4_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [120, 168, 170, 182]
+      Position                [120, 228, 170, 242]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -147,6 +148,18 @@ Model {
       DstBlock                "OWS"
       DstPort                 1
       #GUID                   e126c233-d0e9-441b-ad49-128c5826166c
+    }
+    Annotation {
+      Position                [105, 15]
+      Text                    "UniPi and EMO-1WR4DI4"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   415c3067-3bb6-4edf-8d2b-a59333a23bd4
+    }
+    Annotation {
+      Position                [105, 35]
+      Text                    "See the README.md file for details."
+      #GUID                   c1d8c201-07c2-4e65-9e42-f863d86d68a5
     }
   }
 }

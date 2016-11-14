@@ -1,7 +1,8 @@
 Model {
   Name                    "receiver_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "receiver_exec"
-    Location                [11, 33, 191, 365]
+    Location                [11, 33, 284, 403]
     #GUID                   39cb8861-5961-447a-bf17-61959d76aae1
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [20, 18, 65, 307]
+      Position                [40, 53, 85, 342]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.05"
@@ -57,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "receiver_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 173, 155, 187]
+      Position                [125, 208, 175, 222]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -73,6 +74,19 @@ Model {
       DstBlock                "receiver_task"
       DstPort                 1
       #GUID                   78ff6767-ed7e-4761-9eee-99c47d45a19e
+    }
+    Annotation {
+      Position                [100, 20]
+      Text                    "UDP - Receiver station"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   ae5a037b-263b-4344-b0a8-7867b25cd42e
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+".\n"
+      #GUID                   37cb4baf-efe2-4aef-b464-9caf0e0605dc
     }
   }
 }

@@ -1,0 +1,500 @@
+Model {
+  Name                    "logo_IO_task"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "logo_IO_task"
+    Location                [321, 31, 791, 537]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [225, 443, 245, 457]
+      SourceBlock             "lib/CNB"
+      YCN                     on
+      #GUID                   a3024711-0061-4d9a-b30f-fe360a4d7810
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_Q1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 88, 295, 102]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   76a2530f-2b3b-4ec3-b1de-a0c85430372e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_Q2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 118, 295, 132]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   6dec37a0-d11f-457c-9b6d-5fc32ffd65b2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_Q3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 148, 295, 162]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   833b9c7d-0999-4f0b-99e9-1a27d13bdb3b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_Q4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 178, 295, 192]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   36c8e431-6a78-4f92-9327-c2116340f5be
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RED"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 283, 295, 297]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   6f9709a8-f4df-464d-9287-4d07e3babb32
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_WHITE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 248, 295, 262]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   4c7a64f3-1adf-4159-a5f4-3a356be0abeb
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 403, 120, 417]
+      ShowName                off
+      GotoTag                 "S7C__AI1"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   ffd5f4d6-bf1c-480b-aced-eefee25edbfd
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 278, 120, 292]
+      ShowName                off
+      GotoTag                 "S7C__Q1"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   9c40e7a8-cd86-4b6f-965e-204e4a16f168
+    }
+    Block {
+      BlockType               From
+      Name                    "From12"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 338, 120, 352]
+      ShowName                off
+      GotoTag                 "S7C__Q4"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   15bf0c15-99ca-4ac2-b381-98c347f27f90
+    }
+    Block {
+      BlockType               From
+      Name                    "From14"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 88, 120, 102]
+      ShowName                off
+      GotoTag                 "S7C__I1"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   673989f8-e225-4545-b29f-41d54c40c319
+    }
+    Block {
+      BlockType               From
+      Name                    "From15"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 108, 120, 122]
+      ShowName                off
+      GotoTag                 "S7C__I2"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   5c12b921-1ba5-4c58-b3f6-74a9265c6aef
+    }
+    Block {
+      BlockType               From
+      Name                    "From16"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 128, 120, 142]
+      ShowName                off
+      GotoTag                 "S7C__I3"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   87dcd3a0-e70e-451b-a826-1a8215c9c79a
+    }
+    Block {
+      BlockType               From
+      Name                    "From17"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 148, 120, 162]
+      ShowName                off
+      GotoTag                 "S7C__I4"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   2168bb9a-5c4c-461f-8ae0-bfa6cb597b7e
+    }
+    Block {
+      BlockType               From
+      Name                    "From18"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 168, 120, 182]
+      ShowName                off
+      GotoTag                 "S7C__I5"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   1a371ab4-0fa1-49a1-903a-5970ff692fcb
+    }
+    Block {
+      BlockType               From
+      Name                    "From19"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 188, 120, 202]
+      ShowName                off
+      GotoTag                 "S7C__I6"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   93bf5ae5-20eb-4a83-97a0-7f46a3b1530c
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 423, 120, 437]
+      ShowName                off
+      GotoTag                 "S7C__AI2"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   d425d5c0-ff3f-4b6b-8d21-cc009ddadfd7
+    }
+    Block {
+      BlockType               From
+      Name                    "From20"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 208, 120, 222]
+      ShowName                off
+      GotoTag                 "S7C__I7"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   245800e0-2d4c-49aa-ab6f-dc17e904d3ba
+    }
+    Block {
+      BlockType               From
+      Name                    "From21"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 228, 120, 242]
+      ShowName                off
+      GotoTag                 "S7C__I8"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   a946db89-ed78-43c3-9107-5c865cbd278b
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 298, 120, 312]
+      ShowName                off
+      GotoTag                 "S7C__Q2"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   0cfe0d18-621e-4bcd-9d2f-95878c8da732
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 318, 120, 332]
+      ShowName                off
+      GotoTag                 "S7C__Q3"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   fb8cde7e-2c4f-49f8-b2b7-637a54549f44
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [345, 88, 435, 102]
+      ShowName                off
+      GotoTag                 "S7C__Q1w"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   82877209-be46-4d7b-b31a-d4eb5370123d
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [345, 118, 435, 132]
+      ShowName                off
+      GotoTag                 "S7C__Q2w"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   5cb09ab8-86bd-47ec-bd32-70c79437403f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [345, 148, 435, 162]
+      ShowName                off
+      GotoTag                 "S7C__Q3w"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   fa381085-5cde-458d-a093-a005b9efbb50
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [345, 178, 435, 192]
+      ShowName                off
+      GotoTag                 "S7C__Q4w"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   02987e13-7535-4d24-9093-45dba9ae942a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [350, 248, 440, 262]
+      ShowName                off
+      GotoTag                 "S7C__M25"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a51eee0b-800a-4230-a871-ef27ff180a95
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [350, 283, 440, 297]
+      ShowName                off
+      GotoTag                 "S7C__M29"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   447a9ee6-2b4a-4bd6-afe1-2ab2e5549960
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_AI1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [200, 403, 225, 417]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1000
+      y2                      10
+      #GUID                   f826765d-5255-461a-95cb-f8c718484cea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_AI2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [150, 423, 175, 437]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1000
+      y2                      10
+      #GUID                   7958c498-771a-4c2f-ae2f-6ad26f31333c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_Analog"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [270, 398, 315, 472]
+      SourceBlock             "lib/TRND"
+      n                       2
+      l                       9000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      2
+      Title                   "Analog signals"
+      #GUID                   c96b6efd-a513-4d3f-a815-702172c58f0c
+        timesrc       1
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND_Analog"
+      DstPort                 5
+      #GUID                   c0bd14c0-f8f8-4005-b29c-dfd76208119e
+    }
+    Line {
+      SrcBlock                "CNB_Q1"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   40bcc987-b434-4d8c-91d4-eda3ac351897
+    }
+    Line {
+      SrcBlock                "CNB_Q2"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   4699cfde-457f-447f-b53a-492c48189fa1
+    }
+    Line {
+      SrcBlock                "CNB_Q3"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   4631b89d-2756-4694-9d48-dfd52e7084f8
+    }
+    Line {
+      SrcBlock                "CNB_Q4"
+      SrcPort                 1
+      DstBlock                "Goto3"
+      DstPort                 1
+      #GUID                   efefd0dd-b55d-4383-bb90-a5b820146289
+    }
+    Line {
+      SrcBlock                "CNB_RED"
+      SrcPort                 1
+      DstBlock                "Goto6"
+      DstPort                 1
+      #GUID                   ffa75774-5cd2-47db-a68c-dae5b3956413
+    }
+    Line {
+      SrcBlock                "CNB_WHITE"
+      SrcPort                 1
+      DstBlock                "Goto4"
+      DstPort                 1
+      #GUID                   485cb050-f942-4dc4-985d-2ed8b7c8d2d4
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "LIN_AI1"
+      DstPort                 1
+      #GUID                   95c2598c-ad8f-44c4-a080-738b61277788
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "LIN_AI2"
+      DstPort                 1
+      #GUID                   d566e2ab-e324-46bf-8eb6-8f8c6a559493
+    }
+    Line {
+      SrcBlock                "LIN_AI1"
+      SrcPort                 1
+      DstBlock                "TRND_Analog"
+      DstPort                 1
+      #GUID                   777d731d-9ce5-497a-a9d7-8d334e026376
+    }
+    Line {
+      SrcBlock                "LIN_AI2"
+      SrcPort                 1
+      Points                  [75, 0]
+      DstBlock                "TRND_Analog"
+      DstPort                 2
+      #GUID                   12b35d90-5e64-4ff0-9b5d-7faed38c0c0d
+    }
+    Annotation {
+      Position                [155, 385]
+      Text                    "Reading and recording analog signals"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   9ff4409c-38c5-43c1-8de4-2db1b36f3874
+    }
+    Annotation {
+      Position                [70, 75]
+      Text                    "Digital inputs"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   0e67b8b6-bd71-4370-a257-b4dc4aec7945
+    }
+    Annotation {
+      Position                [90, 265]
+      Text                    "Status of the relays"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   e06d3680-c2f6-443e-85c3-c690c2ae14fb
+    }
+    Annotation {
+      Position                [290, 75]
+      Text                    "Relays"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   c39a424d-1ba6-4f41-8e27-f60b453498a4
+    }
+    Annotation {
+      Position                [300, 230]
+      Text                    "Backlight"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   5064103d-4992-46f6-9dbf-16c4692ec98d
+    }
+    Annotation {
+      Position                [145, 15]
+      Text                    "Using Siemens LOGO! as remote I/O"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   67999b1e-e679-40eb-990e-301c963e8e7c
+    }
+    Annotation {
+      Position                [140, 35]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   6f76e34b-ba3a-4e98-b8b6-f9a575efe1d3
+    }
+  }
+}

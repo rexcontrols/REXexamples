@@ -1,4 +1,4 @@
-How to determine frequency of Boolean input signal? 
+﻿How to determine frequency of Boolean input signal? 
 ===================================================
 
 This folder contains the source files demonstrating the evaluation of Boolean 
@@ -21,6 +21,9 @@ The quick task must contain only the very minimum of function blocks necessary
 for collecting the data. Processing of the data can run less frequently to lower
 the computational load. 
 
+%Note that the input signal is set as a pull-down resistor. If you want to use it
+%as a pull-up resistor, change the flag from RPI__GPIO25D to RPI__GPIO25U.
+
 ## Timing of the project ##
 
 The quick task runs each 2 milliseconds. See the EXEC function block, 
@@ -28,7 +31,7 @@ tick = 0.002 s. Therefore the maximum frequency of the pulses is 250 Hz and the
 pulses (or gaps between them) must have a width of at least 2 milliseconds. The 
 other task runs each 100 milliseconds (0.1 s), tick x ntick0 = 0.002 x 50 = 0.1 
 
-## Prerequisities ##
+## Prerequisites ##
 - RexCore and RPiDrv modules must be installed and running on the target device
   (Raspberry Pi).
 
@@ -39,9 +42,9 @@ other task runs each 100 milliseconds (0.1 s), tick x ntick0 = 0.002 x 50 = 0.1
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX on the Raspberry Pi minicomputer](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
-- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX on the Raspberry Pi minicomputer](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

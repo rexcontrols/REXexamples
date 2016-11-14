@@ -1,0 +1,283 @@
+Model {
+  Name                    "flags_ext_task"
+  Version                 3.00
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Thu Jan 06 15:26:11 2005"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "mertlj"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Apr 29 09:25:44 2008"
+  ModelVersionFormat      "1.%<AutoIncrement:195>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.50.1 rev. 7390, Date 2016-10-24"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "flags_ext_task"
+    Location                [1219, 36, 2114, 496]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "A4"
+    PaperUnits              "centimeters"
+    AutoZoom                on
+    ReportName              "simulink-default.rpt"
+    #GUID                   92200e26-7821-416b-a2d2-6b94ab9f00ec
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [110, 222, 255, 238]
+      ShowName                off
+      GotoTag                 "UNP__RLY2_A0x21"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   67fbbb6a-184e-4389-b724-389a7512f7af
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [110, 242, 255, 258]
+      ShowName                off
+      GotoTag                 "UNP__RLY3_A33"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a1c42ee3-cc8e-4fbc-9fda-f5563acfe2b8
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto34"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [110, 202, 255, 218]
+      ShowName                off
+      GotoTag                 "UNP__RLY1_A33"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   182bc231-b797-4b8b-8bc6-27fe94254085
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [110, 277, 255, 293]
+      ShowName                off
+      GotoTag                 "UNP__RLY8_A0x21"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c005688e-7086-4c2b-ad8f-4d22302fb022
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP__RLY_A0x21"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [170, 331, 200, 419]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   d6347e4f-ee64-47da-9922-8d3930cc5b09
+    }
+    Annotation {
+      Position                [445, 45]
+      Text                    "This example serves as a library. It won't comp"
+"ile because it contains ALL input and output \nflags and there are conflicts."
+"\nPick only the input and output flags which you need and copy&paste them into"
+" your project."
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      ForegroundColor         "red"
+      #GUID                   1f6008b6-78d0-471b-a1a7-f29d616305bf
+    }
+    Annotation {
+      Position                [75, 210]
+      Text                    "relay 1"
+      #GUID                   4a5b3d59-7914-48b1-9769-0d88ee7a2d4a
+    }
+    Annotation {
+      Position                [75, 230]
+      Text                    "relay 2"
+      #GUID                   59952784-1f40-4869-942b-c07d59c76d76
+    }
+    Annotation {
+      Position                [75, 250]
+      Text                    "relay 3"
+      #GUID                   6e1c94a2-5bf9-4fb3-95d7-136d9c9a9790
+    }
+    Annotation {
+      Position                [160, 265]
+      Text                    "..."
+      #GUID                   e7ac4216-56ba-493f-801d-71a64106e702
+    }
+    Annotation {
+      Position                [75, 285]
+      Text                    "relay 8"
+      #GUID                   5d572656-df3c-48dd-b31e-59dc42817d55
+    }
+    Annotation {
+      Position                [225, 125]
+      Text                    "UniPi expansion boards input/output flags"
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      #GUID                   c1ef051b-c408-4d2b-8d78-0517a0181121
+    }
+    Annotation {
+      Position                [125, 165]
+      Text                    "8x relay board (EMO-R-8)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   2440b24b-673b-455c-be1f-5515af294267
+    }
+    Annotation {
+      Position                [145, 340]
+      Text                    "relay 1"
+      #GUID                   841e0987-5ce1-45b3-b2fd-e517a871ac52
+    }
+    Annotation {
+      Position                [145, 350]
+      Text                    "relay 2"
+      #GUID                   7bd332c6-cedb-41a1-a382-4d55ad04c837
+    }
+    Annotation {
+      Position                [145, 410]
+      Text                    "relay 8"
+      #GUID                   9569b312-0feb-4a03-9384-c0e46404b379
+    }
+    Annotation {
+      Position                [145, 360]
+      Text                    "relay 3"
+      #GUID                   0e4c267f-677c-42e6-b15d-5840d781e9f9
+    }
+    Annotation {
+      Position                [205, 190]
+      Text                    "I2C address 33 (=0x21), change it according to "
+"the A0-A2 jumper setting"
+      #GUID                   d8c5b799-d9ff-4a09-90bd-4ca16812e32c
+    }
+    Annotation {
+      Position                [80, 320]
+      Text                    "Multi-flag:"
+      #GUID                   a92f6238-6f58-40cc-a244-baf92d592e72
+    }
+    Annotation {
+      Position                [145, 385]
+      Text                    "..."
+      #GUID                   5d7aae7c-3a40-40eb-b276-f020b47d4fb1
+    }
+  }
+}

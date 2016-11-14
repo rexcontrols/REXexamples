@@ -93,7 +93,8 @@ Model {
   LastModifiedDate        "Mon Jan 07 09:53:31 2008"
   ModelVersionFormat      "1.%<AutoIncrement:49>"
   ConfigurationManager    "none"
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -125,7 +126,7 @@ Model {
   }
   System {
     Name                    "email_notification_exec"
-    Location                [10, 31, 227, 384]
+    Location                [10, 31, 352, 430]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -134,7 +135,6 @@ Model {
     PaperPositionMode       "auto"
     PaperType               "usletter"
     PaperUnits              "inches"
-    ZoomFactor              100
     AutoZoom                on
     ReportName              "simulink-default.rpt"
     #GUID                   43a3d973-85be-4588-9964-ada8622debed
@@ -142,7 +142,7 @@ Model {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 17, 65, 323]
+      Position                [75, 67, 125, 373]
       SourceBlock             "execlib/EXEC"
       SourceType              "EXEC"
       target                  "PC - Linux"
@@ -161,7 +161,7 @@ Model {
       BlockType               Reference
       Name                    "email_notification_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [115, 181, 165, 199]
+      Position                [175, 231, 225, 249]
       SourceBlock             "execlib/TASK"
       SourceType              "TASK"
       factor                  1
@@ -178,6 +178,19 @@ Model {
       DstBlock                "email_notification_task"
       DstPort                 1
       #GUID                   ebfc39c0-738d-4899-97a8-85f975cdb991
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   6a8e76b6-0dcc-40c1-8e87-37697fff8c09
+    }
+    Annotation {
+      Position                [170, 20]
+      Text                    "EPC - sending e-mail notifications from Linux"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   e83a45dd-0f89-48df-92a7-00e8e0417e0c
     }
   }
 }

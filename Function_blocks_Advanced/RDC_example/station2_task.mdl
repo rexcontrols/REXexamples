@@ -1,9 +1,13 @@
 Model {
   Name                    "station2_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
   rev.                    "3173,"
   Date                    "2013-05-31"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  rev.                    "3173,"
+  Date                    "2013-05-31"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -35,13 +39,13 @@ Model {
   }
   System {
     Name                    "station2_task"
-    Location                [205, 34, 577, 408]
+    Location                [294, 33, 666, 404]
     #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
     Block {
       BlockType               Reference
       Name                    "ADD"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [150, 278, 175, 302]
+      Position                [150, 268, 175, 292]
       SourceBlock             "mathlib/ADD"
       #GUID                   73994b1d-829d-46d8-bbd8-b188bc668321
     }
@@ -49,9 +53,10 @@ Model {
       BlockType               Reference
       Name                    "CNR"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [90, 288, 110, 302]
+      Position                [90, 278, 110, 292]
       SourceBlock             "mathlib/CNR"
       ycn                     3
+      BackgroundColor         "magenta"
       #GUID                   1a163510-195c-4553-8efd-763cd9163033
     }
     Block {
@@ -68,13 +73,14 @@ Model {
       BlockType               Reference
       Name                    "RDC_S2"
       Ports                   [17, 18, 0, 0, 0]
-      Position                [200, 166, 255, 354]
+      Position                [200, 158, 255, 342]
       SourceBlock             "speclib/RDC"
       target                  "192.168.1.100"
       rport                   1288
       lport                   1288
       id                      1
       period                  1
+      BackgroundColor         "cyan"
       #GUID                   dbded688-b26d-438a-acda-9d0429dac5f5
     }
     Line {
@@ -94,7 +100,7 @@ Model {
     Line {
       SrcBlock                "LPBRK"
       SrcPort                 1
-      Points                  [-115, 0; 0, 75; 90, 0]
+      Points                  [-115, 0; 0, 65; 90, 0]
       #GUID                   18143e10-40e3-42ac-ad69-8466551b5c38
       Branch {
         Points                  [0, 75]
@@ -111,13 +117,13 @@ Model {
     Line {
       SrcBlock                "RDC_S2"
       SrcPort                 3
-      Points                  [35, 0; 0, -60]
+      Points                  [35, 0; 0, -50]
       DstBlock                "LPBRK"
       DstPort                 1
       #GUID                   43d8006c-152a-4e14-b419-054078699a45
     }
     Annotation {
-      Position                [185, 20]
+      Position                [185, 15]
       Text                    "RDC example, Station 2, IP 192.168.1.200, port "
 "1288"
       FontWeight              "bold"
@@ -125,12 +131,12 @@ Model {
       #GUID                   61953acf-a687-498a-abc5-f53f5ed73d6b
     }
     Annotation {
-      Position                [305, 205]
+      Position                [305, 195]
       Text                    "incoming data"
       #GUID                   cc44b9fc-ba65-447f-9c07-37ff0bcdce84
     }
     Annotation {
-      Position                [180, 75]
+      Position                [180, 70]
       Text                    "Data exchange between 2 target devices of the R"
 "EX Control System\nvia the RDC function block.\n\nThe incoming data is looped "
 "back in raw form and also with an offset.\n\nSee the README.md file for detail"

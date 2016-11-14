@@ -1,4 +1,4 @@
-LED snake on UniPi relays 
+﻿LED snake on UniPi relays 
 =========================
  
 This folder contains the source files for the demonstration project on pool 
@@ -21,7 +21,7 @@ it significantly reduces the lifetime of the relays!**.
 The algorithm runs each 5 milliseconds (0.005 s). See the EXEC function block,  
 tick x ntick0 = 0.005 x 1 = 0.005 
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore and RPiDrv modules must be installed and running on the Raspberry Pi.
 - I2C bus must be enabled on the Raspberry Pi.
@@ -35,9 +35,9 @@ tick x ntick0 = 0.005 x 1 = 0.005
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX and UniPi board (Raspberry Pi)](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
-- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX and UniPi board (Raspberry Pi)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_UniPi_ENG.html)
+- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 
 ## Additional information ##
 

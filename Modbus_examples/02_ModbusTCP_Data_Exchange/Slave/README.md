@@ -1,4 +1,4 @@
-Modbus TCP slave 
+﻿Modbus TCP slave 
 =================
  
 This folder contains the source files for the slave part of the demonstration

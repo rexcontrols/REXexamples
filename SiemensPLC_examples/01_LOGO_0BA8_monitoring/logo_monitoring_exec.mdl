@@ -1,0 +1,144 @@
+Model {
+  Name                    "logo_monitoring_exec"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "logo_monitoring_exec"
+    Location                [9, 31, 272, 415]
+    #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [60, 63, 105, 352]
+      SourceBlock             "execlib/EXEC"
+      target                  "PC - Linux"
+      tick                    "0.01"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   aab705bb-5bdf-40f0-a57c-ea974ad6b083
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [130, 323, 180, 337]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        on
+      GenerateRexHMI          on
+      RedirectToHMI           off
+      Compression             off
+      #GUID                   fcb541ce-550a-4a7a-b223-284361e7d916
+    }
+    Block {
+      BlockType               Reference
+      Name                    "S7C"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [135, 113, 185, 127]
+      SourceBlock             "execlib/IODRV"
+      module                  "S7Drv"
+      classname               "S7cDrv"
+      cfgname                 "logo_iocfg.rio"
+      factor                  5
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   911677f2-7935-47fe-9dab-d359d876695b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "S7Drv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [135, 78, 185, 92]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   6737d998-c4e4-4e93-91f2-f13b90ca242c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "logo_monitoring_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [135, 218, 185, 232]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   4c72d09d-0994-4751-b75d-6f45b1b9519b
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "S7Drv"
+      DstPort                 1
+      #GUID                   e397ad8a-934d-4164-83d1-df734616eafa
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "S7C"
+      DstPort                 1
+      #GUID                   fd4e4d2f-f83f-421e-bf21-c96e5cec9199
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "logo_monitoring_task"
+      DstPort                 1
+      #GUID                   67e753af-d839-4275-b988-39e56cae8519
+    }
+    Annotation {
+      Position                [110, 20]
+      Text                    "Monitoring Siemens LOGO!"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   15b1e4b5-9c7e-4d36-8fe8-fa90defe6c6d
+    }
+    Annotation {
+      Position                [135, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   166b21ab-8120-45d5-8748-3e08a52a3efe
+    }
+  }
+}

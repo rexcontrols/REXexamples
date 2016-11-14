@@ -1,7 +1,8 @@
 Model {
   Name                    "blink_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +34,7 @@ Model {
   }
   System {
     Name                    "blink_task"
-    Location                [204, 33, 633, 359]
+    Location                [295, 32, 724, 410]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
@@ -142,13 +143,13 @@ Model {
       #GUID                   a397a92e-de42-4fd4-924d-a7a335f79a01
     }
     Annotation {
-      Position                [105, 60]
+      Position                [110, 45]
       Text                    "See the README.md file for details."
       #GUID                   9352fb9a-af4f-49d9-ad03-2a66deb61ab0
     }
     Annotation {
-      Position                [140, 30]
-      Text                    "Blinking outputs of PiFace Digital"
+      Position                [160, 20]
+      Text                    "Blinking outputs of PiFace Digital - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   2d3a76f0-8b43-4549-ad39-d16adb51a74d

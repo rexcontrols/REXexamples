@@ -1,7 +1,7 @@
 Model {
   Name                    "readvalue_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "readvalue_task"
-    Location                [211, 33, 615, 365]
+    Location                [304, 32, 672, 301]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
@@ -43,13 +43,14 @@ Model {
       Position                [50, 128, 70, 142]
       SourceBlock             "mathlib/CNB"
       YCN                     on
+      BackgroundColor         "magenta"
       #GUID                   f91de3ae-05d4-489f-9ce8-7fdf8eb60b5c
     }
     Block {
       BlockType               Reference
       Name                    "CNB_RUN"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [270, 148, 290, 162]
+      Position                [245, 148, 265, 162]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   b3f11ff7-e9f0-4596-a414-631eae82ccb4
@@ -63,6 +64,7 @@ Model {
       pwidth                  1
       BSTATE                  off
       RPTF                    off
+      BackgroundColor         "magenta"
       #GUID                   49c4671b-11fb-4ba2-b42e-d41eafc67475
     }
     Block {
@@ -95,7 +97,7 @@ Model {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [320, 103, 365, 177]
+      Position                [295, 103, 340, 177]
       SourceBlock             "arclib/TRND"
       n                       2
       l                       1200
@@ -110,6 +112,7 @@ Model {
       id                      1
       Title                   "Values read from a text file"
       #GUID                   c503a9f6-17a8-48ab-848d-fb7599e52cca
+        timesrc       1
     }
     Line {
       SrcBlock                "CNB_ENABLE"
@@ -142,20 +145,20 @@ Model {
     Line {
       SrcBlock                "SILO_triggered"
       SrcPort                 1
-      Points                  [50, 0; 0, -70]
+      Points                  [30, 0; 0, -70]
       DstBlock                "TRND"
       DstPort                 2
       #GUID                   19069a12-0058-4625-bd70-d05bf548f01e
     }
     Annotation {
-      Position                [145, 50]
+      Position                [140, 45]
       Text                    "See the README.md file for detailed information"
 "."
       #GUID                   8f79b992-fa0e-490d-82e8-f15ef7d4ddd7
     }
     Annotation {
-      Position                [130, 25]
-      Text                    "Reading value from a text file"
+      Position                [140, 20]
+      Text                    "Reading value from a text file - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   b440336e-823a-4429-9c52-33cb562e60b8

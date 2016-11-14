@@ -1,0 +1,205 @@
+Model {
+  Name                    "stepping_process"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "stepping_process"
+    Location                [810, 32, 1114, 264]
+    #GUID                   9b324781-a67f-458e-a817-38dc519b169b
+    Block {
+      BlockType               Inport
+      Name                    "up"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [10, 83, 40, 97]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   ffafaaad-712a-44a3-ad30-8a7e1241bf42
+    }
+    Block {
+      BlockType               Inport
+      Name                    "dn"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [10, 118, 40, 132]
+      Port                    2
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   d9576235-b12a-4e05-8eb6-e04485b41901
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MDL"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 88, 215, 102]
+      SourceBlock             "modellib/MDL"
+      ShowName                on
+      NamePlacement           ""
+      k0                      1
+      del                     1
+      tau1                    20
+      tau2                    10
+      nmax                    100
+      #GUID                   0f67590d-4c77-463a-bef1-1b64597306bb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MVD"
+      Position                [70, 88, 105, 122]
+      SourceBlock             "modellib/MVD"
+      SourceType              "MVD"
+      y0                      0
+      tv                      10
+      hilim                   1
+      lolim                   0
+      NamePlacement           ""
+      ShowName                on
+      #GUID                   61e63e9b-a213-4d33-89c4-7274483adff3
+           Ports             [2, 3, 0, 0, 0]
+    }
+    Block {
+      BlockType               Outport
+      Name                    "pv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [245, 88, 275, 102]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   174e4652-97e3-42ca-a545-41c73c5e9878
+    }
+    Block {
+      BlockType               Outport
+      Name                    "mv_valve"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [245, 123, 275, 137]
+      Port                    2
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   d71fdab5-fcff-42ee-9d1d-9c60850f94fa
+    }
+    Block {
+      BlockType               Outport
+      Name                    "hs"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [245, 158, 275, 172]
+      Port                    3
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   9dec7232-6a78-47a6-a6f0-24777d94c8b9
+    }
+    Block {
+      BlockType               Outport
+      Name                    "ls"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [245, 188, 275, 202]
+      Port                    4
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   02500874-3b67-45ac-b636-07320a96824e
+    }
+    Line {
+      SrcBlock                "MDL"
+      SrcPort                 1
+      DstBlock                "pv"
+      DstPort                 1
+      #GUID                   8854cc6a-b107-4d86-adbc-b515ee8c485a
+    }
+    Line {
+      SrcBlock                "MVD"
+      SrcPort                 1
+      Points                  [50, 0]
+      #GUID                   79162bc9-9465-493a-8457-91f00b9a5dd8
+      Branch {
+        DstBlock                "MDL"
+        DstPort                 1
+        #GUID                   5f97f797-c34f-4296-bfc0-5f0a3c113490
+      }
+      Branch {
+        Points                  [0, 35]
+        DstBlock                "mv_valve"
+        DstPort                 1
+        #GUID                   5bf772e1-c7c0-4f8e-b6bc-02fc1fcdd4f3
+      }
+    }
+    Line {
+      SrcBlock                "MVD"
+      SrcPort                 2
+      Points                  [30, 0; 0, 60]
+      DstBlock                "hs"
+      DstPort                 1
+      #GUID                   13a91eaf-2c75-477c-9f29-6d9e5a995797
+    }
+    Line {
+      SrcBlock                "MVD"
+      SrcPort                 3
+      Points                  [15, 0; 0, 80]
+      DstBlock                "ls"
+      DstPort                 1
+      #GUID                   39f2f6e8-e9a0-4155-b7b2-66cd4fc1f759
+    }
+    Line {
+      SrcBlock                "dn"
+      SrcPort                 1
+      Points                  [5, 0; 0, -10]
+      DstBlock                "MVD"
+      DstPort                 2
+      #GUID                   d043d089-23e6-45ee-bb83-f81bea660d4d
+    }
+    Line {
+      SrcBlock                "up"
+      SrcPort                 1
+      Points                  [5, 0; 0, 10]
+      DstBlock                "MVD"
+      DstPort                 1
+      #GUID                   8a1c21b1-b1a0-4bee-a350-57c4d6388f4e
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   2bb2b8e3-fbe6-46eb-85fa-38ec1aa52f3f
+    }
+    Annotation {
+      Position                [145, 20]
+      Text                    "Stepping controller - process model"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   51c25932-1268-4c8c-a4d1-65eb37003656
+    }
+  }
+}

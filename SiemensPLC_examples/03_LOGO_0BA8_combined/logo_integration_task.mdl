@@ -1,0 +1,897 @@
+Model {
+  Name                    "logo_integration_task"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7350, Date 2016-10-16"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "logo_integration_task"
+    Location                [298, 31, 1072, 799]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "BIS_WATCHDOG"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [455, 258, 470, 282]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      off
+      t1                      "0.1"
+      t2                      "0.2"
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      bEdit                   off
+      #GUID                   20ea4e88-70bc-4737-8b5e-1f94eadecc4d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [635, 463, 655, 477]
+      SourceBlock             "lib/CNB"
+      YCN                     on
+      #GUID                   a3024711-0061-4d9a-b30f-fe360a4d7810
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [260, 668, 280, 682]
+      SourceBlock             "lib/CNB"
+      YCN                     on
+      #GUID                   9fd7a7dd-1a67-41d1-aa6d-4f4edcfa2c7e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [260, 343, 280, 357]
+      SourceBlock             "lib/CNB"
+      YCN                     on
+      #GUID                   af9b7553-2534-41d7-b01f-8bf056ff714f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [260, 553, 280, 567]
+      SourceBlock             "lib/CNB"
+      YCN                     on
+      #GUID                   cec80c8d-74f1-43dd-bdbd-8eefeb5054e7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_BL_AMBER"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [455, 633, 475, 647]
+      SourceBlock             "lib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   b796b2d8-3d83-4263-bab7-8b9e4c9511b6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_BL_WHITE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [455, 598, 475, 612]
+      SourceBlock             "lib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   c58e43ab-4f3c-4670-957f-eb7bab0d43b7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [495, 128, 515, 142]
+      SourceBlock             "mathlib/CNI"
+      icn                     1
+      #GUID                   db73376d-5d0d-4327-8f54-2a4d843bea9b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_delayQ1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 117, 195, 133]
+      SourceBlock             "mathlib/CNI"
+      icn                     100
+      BackgroundColor         "magenta"
+      #GUID                   8928b302-b9ca-4416-97ab-9c65bd5e0419
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_delayQ2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 147, 195, 163]
+      SourceBlock             "mathlib/CNI"
+      icn                     200
+      BackgroundColor         "magenta"
+      #GUID                   af7fd87b-d5d8-42af-bae9-7faac7cb41de
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV_cycle_ms"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [670, 128, 695, 152]
+      SourceBlock             "mathlib/DIV"
+      yerr                    0
+      #GUID                   f23d5bce-dc05-40f2-b469-a25a08e7b4fe
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [565, 303, 590, 317]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "3: Both edges"
+      #GUID                   b395046f-f1c4-48b8-a603-17f758af6da5
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [440, 423, 530, 437]
+      ShowName                off
+      GotoTag                 "S7C__AI1"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   ffd5f4d6-bf1c-480b-aced-eefee25edbfd
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 358, 120, 372]
+      ShowName                off
+      GotoTag                 "S7C__Q1"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   9c40e7a8-cd86-4b6f-965e-204e4a16f168
+    }
+    Block {
+      BlockType               From
+      Name                    "From10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 668, 120, 682]
+      ShowName                off
+      GotoTag                 "S7C__I5"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   174a7e7b-d80b-4edd-aec8-d2dd28edd968
+    }
+    Block {
+      BlockType               From
+      Name                    "From11"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 688, 120, 702]
+      ShowName                off
+      GotoTag                 "S7C__I6"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   df1f9d3a-ba6f-4ba4-83ab-e5a3678a20a6
+    }
+    Block {
+      BlockType               From
+      Name                    "From12"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 418, 120, 432]
+      ShowName                off
+      GotoTag                 "S7C__Q4"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   15bf0c15-99ca-4ac2-b381-98c347f27f90
+    }
+    Block {
+      BlockType               From
+      Name                    "From13"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [440, 303, 530, 317]
+      ShowName                off
+      GotoTag                 "S7C__M6"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   d4af0c55-9b16-4594-b291-83af0c57122e
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [440, 443, 530, 457]
+      ShowName                off
+      GotoTag                 "S7C__AI2"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   d425d5c0-ff3f-4b6b-8d21-cc009ddadfd7
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 208, 120, 222]
+      ShowName                off
+      GotoTag                 "S7C__M4"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   93c326dd-1aa5-42d9-8e3b-7841a8221de1
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [440, 158, 530, 172]
+      ShowName                off
+      GotoTag                 "S7C__VW0"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   beeaeb18-fd41-4957-9639-18283d1e6bf5
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 303, 120, 317]
+      ShowName                off
+      GotoTag                 "S7C__VD6"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   07d03e0b-5ac8-4bdb-b0bc-fe30556201b8
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 378, 120, 392]
+      ShowName                off
+      GotoTag                 "S7C__Q2"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   0cfe0d18-621e-4bcd-9d2f-95878c8da732
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 398, 120, 412]
+      ShowName                off
+      GotoTag                 "S7C__Q3"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   fb8cde7e-2c4f-49f8-b2b7-637a54549f44
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 628, 120, 642]
+      ShowName                off
+      GotoTag                 "S7C__I3"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   1d4dbf3c-511d-4fdf-8fc0-0210ed30b635
+    }
+    Block {
+      BlockType               From
+      Name                    "From9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 648, 120, 662]
+      ShowName                off
+      GotoTag                 "S7C__I4"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   7fcb0d51-403c-4a22-bbfe-645b723a83e8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [605, 138, 630, 152]
+      SourceBlock             "mathlib/GAIN"
+      k                       "0.002"
+      #GUID                   9718d31a-aaa3-4dde-a9c6-76cd53eb3921
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [520, 633, 610, 647]
+      ShowName                off
+      GotoTag                 "S7C__M28"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   e42ab05f-9b2f-4e41-be8d-8c1fc21348ed
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 228, 360, 242]
+      ShowName                off
+      GotoTag                 "S7C__Q3w"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c1f9862c-7f37-4f02-9097-b9cd2a45b59f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 208, 360, 222]
+      ShowName                off
+      GotoTag                 "S7C__M3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   e65c2cd7-eca4-45be-ae94-277cb3f21c62
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 118, 360, 132]
+      ShowName                off
+      GotoTag                 "S7C__VW2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   703b3885-81fc-472e-b861-2828cf247629
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 258, 600, 272]
+      ShowName                off
+      GotoTag                 "S7C__M6w"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   66c5a989-6e9a-49bc-9035-64428847583c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 148, 360, 162]
+      ShowName                off
+      GotoTag                 "S7C__VW4"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   2724658f-2076-4355-a9e6-758e10020d88
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 483, 360, 497]
+      ShowName                off
+      GotoTag                 "S7C__AM1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   91477b14-9145-4c83-ad5b-832c27d33569
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto8"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [520, 598, 610, 612]
+      ShowName                off
+      GotoTag                 "S7C__M25"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   1b9b0576-3e73-40b4-b954-0f038f2adc41
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_AI1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [610, 423, 635, 437]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1000
+      y2                      10
+      #GUID                   f826765d-5255-461a-95cb-f8c718484cea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_AI2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [560, 443, 585, 457]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      1000
+      y2                      10
+      #GUID                   7958c498-771a-4c2f-ae2f-6ad26f31333c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [200, 483, 225, 497]
+      SourceBlock             "lib/RTOI"
+      #GUID                   77693c8c-357c-4532-9b64-bc9d92c14453
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [130, 483, 155, 497]
+      SourceBlock             "lib/SG"
+      isig                    "1: SINE"
+      amp                     500
+      freq                    "0.1"
+      phase                   "0.0000000E+000"
+      offset                  0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      #GUID                   b86e8673-4ac6-49f8-b254-8dd40b777a0b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TIMER_LOGO_ALIVE"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [640, 303, 680, 327]
+      SourceBlock             "logiclib/TIMER_"
+      mode                    "3: Delayed OFF"
+      pt                      "0.5"
+      #GUID                   298c98e5-eed9-4933-b8ad-cfa9ac11bd59
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TIMER_Q3"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [160, 208, 200, 232]
+      SourceBlock             "logiclib/TIMER_"
+      mode                    "1: Pulse generator"
+      pt                      3
+      #GUID                   b99296d7-eb16-40d2-859e-8828d1d3c442
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_Analog"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [680, 418, 725, 492]
+      SourceBlock             "lib/TRND"
+      n                       2
+      l                       9000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      2
+      Title                   "Analog signals"
+      timesrc                 1
+      #GUID                   c96b6efd-a513-4d3f-a815-702172c58f0c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_Counter"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [300, 298, 345, 372]
+      SourceBlock             "lib/TRND"
+      n                       4
+      l                       9000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Counter"
+      timesrc                 1
+      #GUID                   6ecc83e5-c581-4f87-a41f-4345eb205c53
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_External"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [300, 508, 345, 582]
+      SourceBlock             "lib/TRND"
+      n                       1
+      l                       9000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "External analog signal"
+      timesrc                 "1: CORETIMER"
+      #GUID                   702669a6-9060-4fed-a007-a3a4f72a1420
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_Inputs"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [300, 623, 345, 697]
+      SourceBlock             "lib/TRND"
+      n                       4
+      l                       9000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      3
+      Title                   "Digital inputs I3, I4, I5, I6"
+      timesrc                 1
+      #GUID                   fe6b2ef4-cea5-4289-92b6-baefc548dbc4
+    }
+    Line {
+      SrcBlock                "BIS_WATCHDOG"
+      SrcPort                 1
+      DstBlock                "Goto5"
+      DstPort                 1
+      #GUID                   7578499f-7db0-435a-aa24-f18e4c9abab1
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND_Analog"
+      DstPort                 5
+      #GUID                   c0bd14c0-f8f8-4005-b29c-dfd76208119e
+    }
+    Line {
+      SrcBlock                "CNB1"
+      SrcPort                 1
+      DstBlock                "TRND_Inputs"
+      DstPort                 5
+      #GUID                   324767cd-7793-48c9-972b-995becf15851
+    }
+    Line {
+      SrcBlock                "CNB2"
+      SrcPort                 1
+      DstBlock                "TRND_Counter"
+      DstPort                 5
+      #GUID                   0b45e45d-890c-4f5d-abe1-1f9d6601e367
+    }
+    Line {
+      SrcBlock                "CNB3"
+      SrcPort                 1
+      DstBlock                "TRND_External"
+      DstPort                 5
+      #GUID                   e2a8dbc5-0133-4bd7-9e6a-563a2e3b1668
+    }
+    Line {
+      SrcBlock                "CNB_BL_AMBER"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   e229e223-d6f3-4091-985c-41ee2cfd4c27
+    }
+    Line {
+      SrcBlock                "CNB_BL_WHITE"
+      SrcPort                 1
+      DstBlock                "Goto8"
+      DstPort                 1
+      #GUID                   3bd5523e-bdce-4eed-b8ab-c94e3bd71632
+    }
+    Line {
+      SrcBlock                "CNI2"
+      SrcPort                 1
+      DstBlock                "DIV_cycle_ms"
+      DstPort                 1
+      #GUID                   dd55f9c2-da24-4b59-9d31-ba1f627a5d99
+    }
+    Line {
+      SrcBlock                "CNI_delayQ1"
+      SrcPort                 1
+      DstBlock                "Goto4"
+      DstPort                 1
+      #GUID                   8af78f5a-187c-4204-ab35-b145ac3fcd1b
+    }
+    Line {
+      SrcBlock                "CNI_delayQ2"
+      SrcPort                 1
+      DstBlock                "Goto6"
+      DstPort                 1
+      #GUID                   cc6f3a9e-fa18-4865-9dfd-349df1e8947d
+    }
+    Line {
+      SrcBlock                "EDGE_"
+      SrcPort                 1
+      DstBlock                "TIMER_LOGO_ALIVE"
+      DstPort                 1
+      #GUID                   f1569161-76fd-46bb-b9f1-998855d25e14
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "LIN_AI1"
+      DstPort                 1
+      #GUID                   95c2598c-ad8f-44c4-a080-738b61277788
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      Points                  [105, 0; 0, -45]
+      DstBlock                "TRND_Counter"
+      DstPort                 2
+      #GUID                   73136bdf-3e1c-4061-a9c7-5c16e1374b16
+    }
+    Line {
+      SrcBlock                "From10"
+      SrcPort                 1
+      Points                  [95, 0; 0, -20]
+      DstBlock                "TRND_Inputs"
+      DstPort                 3
+      #GUID                   d8ead037-0579-4b1f-97d3-7e41b208ece7
+    }
+    Line {
+      SrcBlock                "From11"
+      SrcPort                 1
+      Points                  [105, 0; 0, -30]
+      DstBlock                "TRND_Inputs"
+      DstPort                 4
+      #GUID                   3c209e1b-e6b1-41ca-a96c-d43bb0a4ebcc
+    }
+    Line {
+      SrcBlock                "From13"
+      SrcPort                 1
+      DstBlock                "EDGE_"
+      DstPort                 1
+      #GUID                   67ea12b7-0ddd-4c37-964d-39011dea7d2c
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "LIN_AI2"
+      DstPort                 1
+      #GUID                   d566e2ab-e324-46bf-8eb6-8f8c6a559493
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "TIMER_Q3"
+      DstPort                 1
+      #GUID                   621e359c-2da9-4943-ad18-00d8960c8031
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      Points                  [55, 0]
+      DstBlock                "GAIN"
+      DstPort                 1
+      #GUID                   943ba935-6428-4f5e-a971-5038f160c4a1
+    }
+    Line {
+      SrcBlock                "From5"
+      SrcPort                 1
+      DstBlock                "TRND_Counter"
+      DstPort                 1
+      #GUID                   3c82ff62-f51a-45d1-9e07-50e1c339f35c
+    }
+    Line {
+      SrcBlock                "From6"
+      SrcPort                 1
+      Points                  [115, 0; 0, -55]
+      DstBlock                "TRND_Counter"
+      DstPort                 3
+      #GUID                   1428b2fb-e79a-4161-8761-6dd6da169b6d
+    }
+    Line {
+      SrcBlock                "From7"
+      SrcPort                 1
+      Points                  [125, 0; 0, -65]
+      DstBlock                "TRND_Counter"
+      DstPort                 4
+      #GUID                   e125c82b-bfba-49f5-94db-118ab867925b
+    }
+    Line {
+      SrcBlock                "From8"
+      SrcPort                 1
+      DstBlock                "TRND_Inputs"
+      DstPort                 1
+      #GUID                   8f1b2090-5dd6-4285-ac86-161a130c0c6f
+    }
+    Line {
+      SrcBlock                "From9"
+      SrcPort                 1
+      Points                  [85, 0; 0, -10]
+      DstBlock                "TRND_Inputs"
+      DstPort                 2
+      #GUID                   08f632a0-4924-44ee-a55a-e28c06d686ad
+    }
+    Line {
+      SrcBlock                "GAIN"
+      SrcPort                 1
+      DstBlock                "DIV_cycle_ms"
+      DstPort                 2
+      #GUID                   a8dc7728-dcbd-4757-9456-0ef8ecba71b5
+    }
+    Line {
+      SrcBlock                "LIN_AI1"
+      SrcPort                 1
+      DstBlock                "TRND_Analog"
+      DstPort                 1
+      #GUID                   777d731d-9ce5-497a-a9d7-8d334e026376
+    }
+    Line {
+      SrcBlock                "LIN_AI2"
+      SrcPort                 1
+      Points                  [75, 0]
+      DstBlock                "TRND_Analog"
+      DstPort                 2
+      #GUID                   12b35d90-5e64-4ff0-9b5d-7faed38c0c0d
+    }
+    Line {
+      SrcBlock                "RTOI"
+      SrcPort                 1
+      DstBlock                "Goto7"
+      DstPort                 1
+      #GUID                   ff7f5934-f54a-444d-bfb3-f3e064ad0a16
+    }
+    Line {
+      SrcBlock                "SG"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   d6e14105-5aeb-4260-a28a-7f04881317c5
+      Branch {
+        DstBlock                "RTOI"
+        DstPort                 1
+        #GUID                   6a66774b-3422-4eec-ad0d-b503083af7de
+      }
+      Branch {
+        Points                  [0, 30]
+        DstBlock                "TRND_External"
+        DstPort                 1
+        #GUID                   c6e58461-e7c3-4357-955b-2268af75bbfb
+      }
+    }
+    Line {
+      SrcBlock                "TIMER_Q3"
+      SrcPort                 1
+      Points                  [35, 0]
+      #GUID                   4efec680-3af6-4c2d-be77-a5e476559747
+      Branch {
+        Points                  [0, 20]
+        DstBlock                "Goto2"
+        DstPort                 1
+        #GUID                   971bf861-e22b-483c-9be9-4175137f7fc2
+      }
+      Branch {
+        DstBlock                "Goto3"
+        DstPort                 1
+        #GUID                   5f4d8d7c-e52e-467d-b9bc-5e934a87207a
+      }
+    }
+    Annotation {
+      Position                [155, 80]
+      Text                    "Delayed off on outputs Q1, Q2 and Q3"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   0e67b8b6-bd71-4370-a257-b4dc4aec7945
+    }
+    Annotation {
+      Position                [165, 100]
+      Text                    "Setting delays for Q1 and Q2 via Variable Memor"
+"y Table"
+      #GUID                   53cd5176-7ae6-4348-8ead-b6db94c8e48b
+    }
+    Annotation {
+      Position                [110, 190]
+      Text                    "Implementing delayed off for Q3"
+      #GUID                   02156eed-6557-4bf0-bd47-e7c45eed1ae8
+    }
+    Annotation {
+      Position                [540, 230]
+      Text                    "Toggling M6 for connection watchdog"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   4e0615de-0489-4786-ba41-b55a573dbab7
+    }
+    Annotation {
+      Position                [170, 460]
+      Text                    "Generating external analog signal via AM1"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   18b57585-05d3-439e-9dfb-80e848eb0789
+    }
+    Annotation {
+      Position                [570, 80]
+      Text                    "Reading internal cycle time of Siemens LOGO!"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   2da76f9b-f17f-45ae-a32b-6b89e4a5cd83
+    }
+    Annotation {
+      Position                [195, 280]
+      Text                    "Reading counter value via Variable Memory Table"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   97ffe01d-af38-4cac-a8d2-33194c131951
+    }
+    Annotation {
+      Position                [120, 345]
+      Text                    "Reading status of the relays"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   e06d3680-c2f6-443e-85c3-c690c2ae14fb
+    }
+    Annotation {
+      Position                [590, 105]
+      Text                    "The counter in Siemens LOGO! counts rising edge"
+"s per second. These\noccur every 2nd cycle."
+      #GUID                   67420166-4f52-4d37-be20-e5501d5a86ed
+    }
+    Annotation {
+      Position                [540, 405]
+      Text                    "Reading and recording analog signals"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   9ff4409c-38c5-43c1-8de4-2db1b36f3874
+    }
+    Annotation {
+      Position                [115, 615]
+      Text                    "Reading digital inputs I3..I6"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   2f49f93c-3ade-4006-8c99-106b17fd50b0
+    }
+    Annotation {
+      Position                [505, 570]
+      Text                    "Manual control of backlight"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   b7cbf31a-1564-4e06-8b9c-035923145535
+    }
+    Annotation {
+      Position                [125, 20]
+      Text                    "Integration of Siemens LOGO!"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   67999b1e-e679-40eb-990e-301c963e8e7c
+    }
+    Annotation {
+      Position                [140, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   0a9712eb-ef43-4361-9a94-564b2ebda7ed
+    }
+  }
+}

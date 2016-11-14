@@ -1,0 +1,10 @@
+ODBC { 
+  Connection "DRIVER=MySQL;SERVER=localhost;PORT=3306;DATABASE=dbname;UID=dbuser;PWD=dbpassword;" 
+  Group { 
+    Mode 3 
+    SQL "SELECT sand, cement, lime, water, description FROM `mortar` WHERE ID=?6"
+    Period 5 
+    Items "sand, cement, lime, water, description, ident" 
+    Type "ddddsi"
+  } 
+}

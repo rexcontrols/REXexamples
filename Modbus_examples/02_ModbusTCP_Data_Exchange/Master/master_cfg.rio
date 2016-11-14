@@ -1,15 +1,12 @@
 Modbus {
   Name                    ""
-  BaudRate                19200
-  Parity                  0
-  SpaceTime               2
   Timeout                 10000
   Flags                   8
   Gap                     30000
-  #GUID                   a493e262-70ff-4266-8360-f28671e7935d
+  #GUID                   e44b2469-19b0-4743-a29e-52697f506067
   Slave {
     Name                    "slaveMB"
-    IPaddress               192.168.1.200
+    IPaddress               147.228.125.152
     Subaddress              255
     SlaveID                 0
     MaxRequest              16

@@ -1,7 +1,8 @@
 Model {
   Name                    "test_master_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "test_master_task"
-    Location                [204, 35, 810, 553]
+    Location                [307, 31, 913, 549]
     #GUID                   f4ddb680-563b-4fa7-9a5d-b4f1c1fa7573
     Block {
       BlockType               Reference
       Name                    "BMOCT"
       Ports                   [8, 1, 0, 0, 0]
-      Position                [245, 176, 280, 264]
+      Position                [260, 176, 295, 264]
       SourceBlock             "logiclib/BMOCT"
       shift                   0
       #GUID                   d53ba6c3-1684-4789-af43-8b9249a01495
@@ -48,95 +49,103 @@ Model {
       BlockType               Reference
       Name                    "CNB_DO2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [355, 263, 380, 277]
+      Position                [370, 263, 395, 277]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   6da3f5e8-327b-4f72-a381-91c15024d99c
     }
     Block {
       BlockType               Reference
       Name                    "CNB_DO3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [355, 303, 380, 317]
+      Position                [370, 303, 395, 317]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   c6280e76-7724-4553-906c-f4c13e4e91c1
     }
     Block {
       BlockType               Reference
       Name                    "CNB_DO4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [355, 353, 380, 367]
+      Position                [370, 353, 395, 367]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   09886cbd-a7a9-4354-a555-c7c4c4097ebc
     }
     Block {
       BlockType               Reference
       Name                    "CNB_DO5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [355, 388, 380, 402]
+      Position                [370, 388, 395, 402]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   1246ff50-e599-419c-b922-0793f3ebbdea
     }
     Block {
       BlockType               Reference
       Name                    "CNB_DO6"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [355, 428, 380, 442]
+      Position                [370, 428, 395, 442]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   21604b7f-af0d-48ba-ad69-2789580c45b1
     }
     Block {
       BlockType               Reference
       Name                    "CNB_DO7"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [355, 468, 380, 482]
+      Position                [370, 468, 395, 482]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   6226c5af-5f00-4243-8d64-9dcedd58ab7e
     }
     Block {
       BlockType               Reference
       Name                    "CNB_relay0"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [355, 183, 380, 197]
+      Position                [370, 183, 395, 197]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   aea75916-4744-4901-b435-7bc8baa75380
     }
     Block {
       BlockType               Reference
       Name                    "CNB_relay1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [355, 223, 380, 237]
+      Position                [370, 223, 395, 237]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   c36af375-60b0-4c38-86c5-bc517966880b
     }
     Block {
       BlockType               From
       Name                    "From_1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 178, 155, 192]
+      Position                [50, 178, 170, 192]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDI0"
@@ -147,7 +156,7 @@ Model {
       BlockType               From
       Name                    "From_2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 198, 155, 212]
+      Position                [50, 198, 170, 212]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDI1"
@@ -158,7 +167,7 @@ Model {
       BlockType               From
       Name                    "From_3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 218, 155, 232]
+      Position                [50, 218, 170, 232]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDI2"
@@ -169,7 +178,7 @@ Model {
       BlockType               From
       Name                    "From_4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 238, 155, 252]
+      Position                [50, 238, 170, 252]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDI3"
@@ -180,7 +189,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [420, 183, 540, 197]
+      Position                [435, 183, 555, 197]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDO0"
@@ -192,7 +201,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [420, 223, 540, 237]
+      Position                [435, 223, 555, 237]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDO1"
@@ -204,7 +213,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [420, 263, 540, 277]
+      Position                [435, 263, 555, 277]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDO2"
@@ -216,7 +225,7 @@ Model {
       BlockType               Goto
       Name                    "Goto_4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [420, 303, 540, 317]
+      Position                [435, 303, 555, 317]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTM__PiFaceDO3"
@@ -228,7 +237,7 @@ Model {
       BlockType               Reference
       Name                    "MTM__PiFaceDI4_7"
       Ports                   [0, 4, 0, 0, 0]
-      Position                [65, 272, 95, 318]
+      Position                [80, 272, 110, 318]
       SourceBlock             "inoutlib/INQUAD"
       BackgroundColor         "yellow"
       #GUID                   3dcefe7b-8148-4cd5-beee-d064cde91fca
@@ -237,7 +246,7 @@ Model {
       BlockType               Reference
       Name                    "MTM__PiFaceDO4_7"
       Ports                   [4, 0, 0, 0, 0]
-      Position                [470, 352, 500, 398]
+      Position                [485, 352, 515, 398]
       SourceBlock             "inoutlib/OUTQUAD"
       BackgroundColor         "lightBlue"
       #GUID                   9c4400f5-7db1-4f94-b9ab-14b029db3527
@@ -365,14 +374,7 @@ Model {
       #GUID                   113a32aa-fb7d-4e41-a7d4-ad3b375eb6f2
     }
     Annotation {
-      Position                [135, 20]
-      Text                    "Modbus TCP master for testing"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   6896f4c8-9c52-41a4-aa3e-161191ac6c79
-    }
-    Annotation {
-      Position                [230, 55]
+      Position                [250, 50]
       Text                    "IP address 192.168.1.100 is expected in the Mod"
 "bus TCP slave"
       FontWeight              "bold"
@@ -380,24 +382,31 @@ Model {
       #GUID                   2b861473-7d6a-4565-bdbf-195ed7060964
     }
     Annotation {
-      Position                [230, 85]
-      Text                    "Go to MTM driver configuration and press \"Spec"
-"ial edit\" for Modbus configuration.\n\nRead the README.md file for details."
-      #GUID                   d10311f2-3ce1-41db-bccd-2590a03c7fb1
-    }
-    Annotation {
-      Position                [90, 160]
+      Position                [105, 160]
       Text                    "Modbus input contacts"
       FontWeight              "bold"
       FontSize                14
       #GUID                   caf350da-683c-43cb-a9cf-80086f28363c
     }
     Annotation {
-      Position                [485, 165]
+      Position                [500, 165]
       Text                    "Modbus coils"
       FontWeight              "bold"
       FontSize                14
       #GUID                   de6703dd-c59a-4dfc-a8d5-2f83312efc00
+    }
+    Annotation {
+      Position                [250, 95]
+      Text                    "Go to MTM driver configuration and press \"Conf"
+"igure\" for Modbus configuration.\n\nRead the README.md file for details."
+      #GUID                   d10311f2-3ce1-41db-bccd-2590a03c7fb1
+    }
+    Annotation {
+      Position                [170, 20]
+      Text                    "Modbus TCP master on PiFace for testing"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6896f4c8-9c52-41a4-aa3e-161191ac6c79
     }
   }
 }

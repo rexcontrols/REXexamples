@@ -1,4 +1,4 @@
-UniPi as Modbus TCP slave 
+﻿UniPi as Modbus TCP slave 
 =========================
  
 This folder contains the source files for the demonstration project on using
@@ -8,7 +8,7 @@ board.
 In this example the UniPi is used as a Modbus TCP slave to allow integration
 in complex or hierarchical control systems.
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore, RPiDrv and MbDrv modules must be installed and running on the Raspberry Pi.
 
@@ -36,15 +36,15 @@ Multiple Registers command (FC=16) to manipulate the outputs.
 |         2049 | Analog output (PWM on pin 18) | 0..1023    |
 
 ### Adding signals and changing Modbus register mapping ###
-Go to Modbus TCP Slave driver (MTS block) configuration and press "Special edit" for Modbus registers configuration. Make sure to read the Modbus driver documentation (see below).
+Go to Modbus TCP Slave driver (MTS block) configuration and press "Configure" for Modbus registers configuration. Make sure to read the Modbus driver documentation (see below).
 
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX and UniPi board (Raspberry Pi)](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
-- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
-- [MbDrv - Modbus driver](http://www.rexcontrols.com/media/DOC/ENGLISH/MbDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX and UniPi board (Raspberry Pi)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_UniPi_ENG.html)
+- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
+- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

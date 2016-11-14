@@ -1,4 +1,4 @@
-Data exchange via the RDC function block 
+﻿Data exchange via the RDC function block 
 ========================================
  
 This folder contains the source files for the demonstration project on data
@@ -22,19 +22,24 @@ The signals are recorded in the TRND block which allows displaying of the trends
 The algorithm runs each 100 milliseconds (0.1 s). See the EXEC function block,  
 tick x ntick0 = 0.01 x 10 = 0.1
 
-## Prerequisities ##
+## Prerequisites ##
 - RexCore and AdvBlk modules must be installed and running on the target device.
 - A valid licence for advanced function blocks is required.
 
 ## Running the example ##
-- The **exec.mdl* file is the project main file.
-- Open it with *RexDraw*, compile and download it to the target device.
+- The **exec.mdl* files are the project main files.
+- Open them with *RexDraw*, compile and download them to the target devices.
+- Open *RexView* and connect to target device.
+- Select the TRND in task for station 1.
+- Observe the transmitted data.
+- Change parameters of SG_SINE block in Station 1 or CNR block in Station2 and observe
+the data again.
 
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [RDC function block documentation](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/RDC.html)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [RDC function block documentation](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/RDC.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

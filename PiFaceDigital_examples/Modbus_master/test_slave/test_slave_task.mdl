@@ -1,7 +1,8 @@
 Model {
   Name                    "test_slave_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "test_slave_task"
-    Location                [210, 35, 673, 358]
+    Location                [296, 32, 759, 374]
     #GUID                   f4ddb680-563b-4fa7-9a5d-b4f1c1fa7573
     Block {
       BlockType               Reference
       Name                    "BMOCT"
       Ports                   [8, 1, 0, 0, 0]
-      Position                [260, 131, 295, 219]
+      Position                [320, 146, 355, 234]
       SourceBlock             "logiclib/BMOCT"
       shift                   0
       #GUID                   35ffb76b-350a-4565-bcec-89e0a6f50269
@@ -48,7 +49,7 @@ Model {
       BlockType               From
       Name                    "From_1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 133, 165, 147]
+      Position                [105, 148, 225, 162]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil0"
@@ -59,7 +60,7 @@ Model {
       BlockType               From
       Name                    "From_2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 153, 165, 167]
+      Position                [105, 168, 225, 182]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil1"
@@ -70,7 +71,7 @@ Model {
       BlockType               From
       Name                    "From_3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 173, 165, 187]
+      Position                [105, 188, 225, 202]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil2"
@@ -81,7 +82,7 @@ Model {
       BlockType               From
       Name                    "From_4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 193, 165, 207]
+      Position                [105, 208, 225, 222]
       ShowName                off
       NamePlacement           ""
       GotoTag                 "MTS__coil3"
@@ -92,7 +93,7 @@ Model {
       BlockType               Reference
       Name                    "MTS__coil4_7"
       Ports                   [0, 4, 0, 0, 0]
-      Position                [75, 217, 105, 263]
+      Position                [135, 232, 165, 278]
       SourceBlock             "inoutlib/INQUAD"
       BackgroundColor         "yellow"
       #GUID                   3dcefe7b-8148-4cd5-beee-d064cde91fca
@@ -174,7 +175,7 @@ Model {
       #GUID                   4fd9c02e-a5f3-49ae-b9b4-9a3aa33470ac
     }
     Annotation {
-      Position                [85, 115]
+      Position                [145, 130]
       Text                    "Modbus coils"
       FontWeight              "bold"
       FontSize                14

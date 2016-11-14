@@ -123,7 +123,8 @@ Model {
   BlockReductionOpt       on
   RTWExpressionDepthLimit 5
   BooleanDataType         off
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -155,7 +156,7 @@ Model {
   }
   System {
     Name                    "slave_exec"
-    Location                [10, 33, 191, 376]
+    Location                [10, 31, 228, 421]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -164,14 +165,13 @@ Model {
     PaperPositionMode       "auto"
     PaperType               "usletter"
     PaperUnits              "inches"
-    ZoomFactor              100
     ReportName              "simulink-default.rpt"
     #GUID                   b4e40837-8840-4f7f-b13c-2c26f47d165d
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [25, 23, 70, 312]
+      Position                [40, 73, 85, 362]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Windows"
       tick                    "0.05"
@@ -189,7 +189,7 @@ Model {
       BlockType               Reference
       Name                    "MBS"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 73, 155, 87]
+      Position                [120, 123, 170, 137]
       SourceBlock             "execlib/IODRV"
       module                  "MbDrv"
       classname               "MbsDrv"
@@ -204,7 +204,7 @@ Model {
       BlockType               Reference
       Name                    "MbDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 38, 155, 52]
+      Position                [120, 88, 170, 102]
       SourceBlock             "execlib/MODULE"
       #GUID                   5b4face7-2e46-4264-9f49-84b4e7aba30e
     }
@@ -212,7 +212,7 @@ Model {
       BlockType               Reference
       Name                    "slave_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 178, 155, 192]
+      Position                [120, 228, 170, 242]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -242,6 +242,18 @@ Model {
       DstBlock                "slave_task"
       DstPort                 1
       #GUID                   55122b7b-34ef-47a5-ba19-e0279c12de0d
+    }
+    Annotation {
+      Position                [110, 40]
+      Text                    "See the README.md file for details."
+      #GUID                   d408eba1-921d-477f-b422-6f45a173add1
+    }
+    Annotation {
+      Position                [85, 20]
+      Text                    "Modbus RTU slave"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   46ae2e55-8586-4cb5-bbb9-8fef48d6f6f4
     }
   }
 }

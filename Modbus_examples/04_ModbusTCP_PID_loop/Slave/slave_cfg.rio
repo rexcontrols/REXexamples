@@ -1,0 +1,24 @@
+Modbus {
+  Name                    ""
+  BaudRate                19200
+  Parity                  0
+  SpaceTime               2
+  Timeout                 1000
+  Flags                   12
+  Gap                     30000
+  #GUID                   6f926e59-ad98-4947-bcc3-8a9d70101684
+  Item {
+    Name                    temperature
+    SlaveAdr                -1
+    RegisterAdr             0
+    Type                    0x00200104
+    Count                   4
+  }
+  Item {
+    Name                    power
+    SlaveAdr                -1
+    RegisterAdr             2048
+    Type                    0x00200204
+    Count                   4
+  }
+}

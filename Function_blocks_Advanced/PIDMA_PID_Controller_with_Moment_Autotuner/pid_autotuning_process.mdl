@@ -1,0 +1,127 @@
+Model {
+  Name                    "pid_autotuning_process"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "pid_autotuning_process"
+    Location                [890, 32, 1376, 188]
+    #GUID                   c95ca937-792d-41f1-a42d-fcfa22ee3d21
+    Block {
+      BlockType               Inport
+      Name                    "mv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 93, 100, 107]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   56578e0e-5024-4bfe-bad9-4e17cede059b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNDR"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [125, 88, 155, 112]
+      SourceBlock             "analoglib/CNDR"
+      ShowName                on
+      NamePlacement           ""
+      n                       2
+      SATF                    off
+      up                      [-2.0 2.0]
+      yp                      [-2.0 2.0]
+      #GUID                   560dca02-6147-4421-91fd-44e586ef57e8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MDL_process"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [185, 88, 210, 102]
+      SourceBlock             "modellib/MDL"
+      ShowName                on
+      NamePlacement           ""
+      k0                      10
+      del                     0
+      tau1                    3
+      tau2                    5
+      nmax                    100
+      #GUID                   b9ac396d-7c82-4793-8923-0d85475c1e6d
+    }
+    Block {
+      BlockType               Outport
+      Name                    "pv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [245, 88, 275, 102]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   303b26ee-e62d-4d9f-a3e6-0995b62ef761
+    }
+    Line {
+      SrcBlock                "CNDR"
+      SrcPort                 1
+      DstBlock                "MDL_process"
+      DstPort                 1
+      #GUID                   53d69cc3-ab3f-4ce0-bd91-2c013fe01766
+    }
+    Line {
+      SrcBlock                "MDL_process"
+      SrcPort                 1
+      DstBlock                "pv"
+      DstPort                 1
+      #GUID                   df76b173-9ef7-4a52-a37b-f1001912d32a
+    }
+    Line {
+      SrcBlock                "mv"
+      SrcPort                 1
+      DstBlock                "CNDR"
+      DstPort                 1
+      #GUID                   807311d9-40af-46f0-887f-20d43b365e86
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   095a0f08-c7ff-4c5f-ae8d-8e54fbaffebb
+    }
+    Annotation {
+      Position                [240, 20]
+      Text                    "PIDMA - PID controller with Moment Autotuner - "
+"processl task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   68efbbf8-ca4a-4f60-a5df-061b6982d8b9
+    }
+  }
+}

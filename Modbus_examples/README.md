@@ -1,4 +1,4 @@
-Modbus protocol in the REX Control System 
+﻿Modbus protocol in the REX Control System 
 =========================================
 
 The examples contained in this folder demonstrate the use of the Modbus protocol
@@ -6,8 +6,8 @@ in the REX Control System.
 
 ## Documentation ##
 
-- [MbDrv - Modbus driver](http://www.rexcontrols.com/media/DOC/ENGLISH/MbDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

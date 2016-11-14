@@ -1,4 +1,4 @@
-Controlling relay outputs and reading digital inputs of the EMO-1WR4DI4 
+﻿Controlling relay outputs and reading digital inputs of the EMO-1WR4DI4 
 =======================================================================
  
 This folder contains the source files for the demonstration project on using
@@ -25,7 +25,7 @@ digital inputs. This can be used for verification.
 The algorithm runs each 20 milliseconds (0.02 s). See the EXEC function block,  
 tick x ntick0 = 0.02 x 1 = 0.02 
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore and RPiDrv modules must be installed and running on the Raspberry Pi.
 - Owserver (part of the OWFS package) must be installed, correctly configured and running on the Raspberry Pi.
@@ -41,10 +41,10 @@ tick x ntick0 = 0.02 x 1 = 0.02
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX and UniPi board (Raspberry Pi)](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
-- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
-- [OwsDrv - 1-Wire driver](http://www.rexcontrols.com/media/DOC/ENGLISH/OwsDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX and UniPi board (Raspberry Pi)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_UniPi_ENG.html)
+- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
+- [OwsDrv - 1-Wire driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/OwsDrv/OwsDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 
 ## Additional information ##
 

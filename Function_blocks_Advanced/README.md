@@ -1,4 +1,4 @@
-Advanced function blocks - example projects
+﻿Advanced function blocks - example projects
 ===========================================
 
 The examples contained in this folder demonstrate the use of advanced 
@@ -6,8 +6,8 @@ function blocks of the REX Control System.
 
 ## Documentation ##
 
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
-- [Licensing of individual function blocks](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/licensing.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [Licensing of individual function blocks](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENGap1.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

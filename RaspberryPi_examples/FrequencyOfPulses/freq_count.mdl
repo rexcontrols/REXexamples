@@ -1,7 +1,7 @@
 Model {
   Name                    "freq_count"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "freq_count"
-    Location                [208, 38, 644, 218]
+    Location                [289, 31, 725, 211]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
@@ -79,13 +79,13 @@ Model {
       #GUID                   2013aac1-efe9-45f7-a274-9a77e02b2bb9
     }
     Annotation {
-      Position                [210, 45]
+      Position                [205, 35]
       Text                    "This example illustrates using QUICK TASK. See "
 "the README.md file for details."
       #GUID                   314dadbe-c9c3-4bf3-9f54-f1181e8dab2c
     }
     Annotation {
-      Position                [180, 25]
+      Position                [175, 15]
       Text                    "Counting pulses on GPIO#25 (Raspberry Pi)"
       FontWeight              "bold"
       FontSize                16

@@ -1,0 +1,646 @@
+Model {
+  Name                    "center_seeking_control"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "center_seeking_control"
+    Location                [332, 32, 1021, 451]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Inport
+      Name                    "pv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 143, 60, 157]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   193eb7d2-2da7-4174-9ef6-f34866ceb8bb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "AND__1"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [365, 225, 400, 260]
+      SourceBlock             "logiclib/AND_"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   86a5a0f8-6817-49d6-96fc-d4bb7c67bbf5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_MAN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 213, 55, 227]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   de07ef6e-f06b-4193-9ffb-91a2825dc92d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [195, 358, 215, 372]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   bd1941b7-9f46-4e0a-bd73-a620d95acbdc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_C"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [375, 188, 395, 202]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           "alternate"
+      ycn                     "0.5"
+      BackgroundColor         "magenta"
+      #GUID                   ff5e7a2f-105e-42bc-85bf-32837664af51
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_hv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 183, 55, 197]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     "0.1"
+      BackgroundColor         "magenta"
+      #GUID                   feff9b40-0640-4f55-ba3c-878d9b0686ea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_sp"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 103, 55, 117]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   021454e3-4160-4d35-a849-91d477ec4353
+    }
+    Block {
+      BlockType               Goto
+      Name                    "FINE_VALVE"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [560, 93, 640, 107]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "fine_valve"
+      TagVisibility           "local"
+      FontSize                10
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   fcc9f579-08f1-4dd7-8465-45c950df98b1
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [295, 328, 335, 342]
+      ShowName                off
+      GotoTag                 "pv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   69186ecf-71d4-436e-9c2f-d8d56db63b1b
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [195, 318, 235, 332]
+      ShowName                off
+      GotoTag                 "sp"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   c5cc1017-18b5-44ff-a192-65fc13eee8a8
+    }
+    Block {
+      BlockType               From
+      Name                    "From_1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [195, 338, 275, 352]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "fine_valve"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   558f03d0-8d22-4b52-b90c-3410f1ea4f0e
+    }
+    Block {
+      BlockType               From
+      Name                    "From_2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [295, 348, 375, 362]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "coarse_valve"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   8f6774cc-023e-4381-996f-4a5c3894d004
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN_CV"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [510, 178, 535, 192]
+      SourceBlock             "mathlib/GAIN"
+      ShowName                on
+      NamePlacement           ""
+      k                       "0.8"
+      BackgroundColor         "white"
+      #GUID                   32c12656-5e97-4522-a37a-23464b82f20e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "GAIN_FV"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [510, 123, 535, 137]
+      SourceBlock             "mathlib/GAIN"
+      ShowName                on
+      NamePlacement           ""
+      k                       "0.2"
+      BackgroundColor         "white"
+      #GUID                   cb4ee542-5f1d-4465-8201-670fdc7bbd47
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 163, 140, 177]
+      ShowName                off
+      GotoTag                 "pv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   9b4264f7-7bd4-4093-a72c-ddb942115034
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 103, 140, 117]
+      ShowName                off
+      GotoTag                 "sp"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   f5cca0aa-19c2-4d7a-96ec-9f15564e2e60
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto_2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [560, 213, 640, 227]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "coarse_valve"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   3b2b4f6b-6674-4bb0-b915-3b23d084bced
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [205, 100, 215, 110]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      NamePlacement           ""
+      FontSize                10
+      #GUID                   a6f698dc-594b-4f7f-ac9c-90d215b5cdaa
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK_3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [440, 155, 450, 165]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      NamePlacement           ""
+      FontSize                10
+      #GUID                   80d1491b-d658-462e-9205-29e8ef5ceb83
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PIDU_I"
+      Ports                   [7, 4, 0, 0, 0]
+      Position                [430, 176, 475, 254]
+      SourceBlock             "reglib/PIDU"
+      ShowName                on
+      NamePlacement           ""
+      irtype                  "2: I"
+      RACT                    on
+      k                       "1.0"
+      ti                      50
+      td                      1
+      nd                      10
+      b                       1
+      c                       0
+      tt                      1
+      hilim                   1
+      lolim                   0
+      dz                      0
+      icotype                 "1: Analog"
+      BackgroundColor         "cyan"
+      #GUID                   5fdffeb4-5b89-436c-aac8-1aff9c8ea37e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PIDU_PV"
+      Ports                   [7, 4, 0, 0, 0]
+      Position                [190, 121, 235, 199]
+      SourceBlock             "reglib/PIDU"
+      ShowName                on
+      NamePlacement           ""
+      irtype                  "7: PID"
+      RACT                    off
+      k                       "0.6"
+      ti                      4
+      td                      1
+      nd                      10
+      b                       1
+      c                       0
+      tt                      1
+      hilim                   1
+      lolim                   0
+      dz                      0
+      icotype                 "1: Analog"
+      BackgroundColor         "cyan"
+      #GUID                   eff15adb-50cd-49fc-8e97-83b1ed3bb1d0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RLY_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [270, 218, 295, 232]
+      SourceBlock             "reglib/RLY"
+      ShowName                on
+      NamePlacement           ""
+      ep                      "0.45"
+      en                      "0.25"
+      ap                      1
+      an                      0
+      y0                      0
+      #GUID                   db71d1e5-eead-40a4-ab45-a5d1b6c66001
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RLY_2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [270, 253, 295, 267]
+      SourceBlock             "reglib/RLY"
+      ShowName                on
+      NamePlacement           ""
+      ep                      "0.75"
+      en                      "0.55"
+      ap                      0
+      an                      1
+      y0                      0
+      #GUID                   9994bfbf-102b-401c-a87e-956673cb52f8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [315, 218, 340, 232]
+      SourceBlock             "mathlib/RTOI"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   2722e88a-c225-45e0-bb1d-b36e12a2e03e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI_2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [315, 253, 340, 267]
+      SourceBlock             "mathlib/RTOI"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   63fc5316-58b2-4c1b-a17d-53cb45bfe1a9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_Center_Seeking"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [405, 313, 450, 387]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   a8364346-edcc-4c3d-ab33-7a27c925030a
+        timesrc       1
+    }
+    Block {
+      BlockType               Outport
+      Name                    "mv_fine_valve"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [610, 123, 640, 137]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   0cab2561-fa47-4bd4-91a4-bcb97108a42b
+    }
+    Block {
+      BlockType               Outport
+      Name                    "mv_coarse_valve"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [610, 178, 640, 192]
+      Port                    2
+      BackgroundColor         "green"
+      #GUID                   d8c8c5d4-f4d8-434e-b977-eeef551dbc27
+    }
+    Line {
+      SrcBlock                "AND__1"
+      SrcPort                 1
+      DstBlock                "PIDU_I"
+      DstPort                 6
+      #GUID                   bf6a94ca-c7db-4e1f-a2fc-e31c67a4a625
+    }
+    Line {
+      SrcBlock                "CNB_MAN"
+      SrcPort                 1
+      Points                  [115, 0]
+      DstBlock                "PIDU_PV"
+      DstPort                 6
+      #GUID                   84fa533e-702c-430b-a590-3ff5510e4708
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND_Center_Seeking"
+      DstPort                 5
+      #GUID                   a23b661a-b270-4f89-87af-26e52c1adfa6
+    }
+    Line {
+      SrcBlock                "CNR_C"
+      SrcPort                 1
+      DstBlock                "PIDU_I"
+      DstPort                 2
+      #GUID                   34854656-92f8-475d-b185-f97b772ecf35
+    }
+    Line {
+      SrcBlock                "CNR_hv"
+      SrcPort                 1
+      Points                  [100, 0; 0, -20]
+      DstBlock                "PIDU_PV"
+      DstPort                 5
+      #GUID                   b80f3748-48ae-48a6-9ac1-33c06131c435
+    }
+    Line {
+      SrcBlock                "CNR_sp"
+      SrcPort                 1
+      Points                  [25, 0]
+      #GUID                   48ade848-9337-43a4-9d5c-22efb65b773a
+      Branch {
+        DstBlock                "Goto2"
+        DstPort                 1
+        #GUID                   4ef5bbb8-2a9c-4726-a7b1-987800de4b11
+      }
+      Branch {
+        Points                  [0, 30]
+        DstBlock                "PIDU_PV"
+        DstPort                 2
+        #GUID                   2887cb68-d642-466d-938b-1dd91be4cc39
+      }
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "TRND_Center_Seeking"
+      DstPort                 2
+      #GUID                   6a4789a6-4e28-4fcd-8a6e-e60e5aab43ad
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "TRND_Center_Seeking"
+      DstPort                 1
+      #GUID                   59df2598-e8ac-4df8-9acb-8cdeb4993a01
+    }
+    Line {
+      SrcBlock                "From_1"
+      SrcPort                 1
+      DstBlock                "TRND_Center_Seeking"
+      DstPort                 3
+      #GUID                   ce1e50b4-faa3-484e-a33b-3cc23f5e62b9
+    }
+    Line {
+      SrcBlock                "From_2"
+      SrcPort                 1
+      DstBlock                "TRND_Center_Seeking"
+      DstPort                 4
+      #GUID                   6e43ceab-bc0a-47b3-b74a-eaf94a3dee7a
+    }
+    Line {
+      SrcBlock                "GAIN_CV"
+      SrcPort                 1
+      DstBlock                "mv_coarse_valve"
+      DstPort                 1
+      #GUID                   bf1e6b82-2706-4345-9bc0-3b2731511780
+    }
+    Line {
+      SrcBlock                "GAIN_FV"
+      SrcPort                 1
+      DstBlock                "mv_fine_valve"
+      DstPort                 1
+      #GUID                   64919349-0bdc-4e37-b901-b05f37ffd2ca
+    }
+    Line {
+      SrcBlock                "LPBRK_1"
+      SrcPort                 1
+      Points                  [-30, 0; 0, 55]
+      DstBlock                "PIDU_PV"
+      DstPort                 4
+      #GUID                   9a6d7c50-0b87-4430-825a-15e9d0100662
+    }
+    Line {
+      SrcBlock                "LPBRK_3"
+      SrcPort                 1
+      Points                  [-25, 0; 0, 55]
+      #GUID                   e5dd49f2-3c1b-4987-95e6-1816f275c314
+      Branch {
+        Points                  [0, 10]
+        DstBlock                "PIDU_I"
+        DstPort                 5
+        #GUID                   a777f99b-2e4a-4a5b-aaf5-fb9f3c30c840
+      }
+      Branch {
+        DstBlock                "PIDU_I"
+        DstPort                 4
+        #GUID                   607ea58d-dbce-464d-a3f7-bbea727c276f
+      }
+    }
+    Line {
+      SrcBlock                "PIDU_I"
+      SrcPort                 1
+      Points                  [5, 0]
+      #GUID                   9ddef1f9-437e-4df0-b75c-fc35d73b8ccd
+      Branch {
+        DstBlock                "GAIN_CV"
+        DstPort                 1
+        #GUID                   2c673cc6-0ce8-48a4-888a-5ef64a1353c3
+      }
+      Branch {
+        Points                  [0, 35]
+        DstBlock                "Goto_2"
+        DstPort                 1
+        #GUID                   d96e1795-ec70-4110-91f7-3b52963a1521
+      }
+      Branch {
+        Points                  [0, -25]
+        DstBlock                "LPBRK_3"
+        DstPort                 1
+        #GUID                   cea29086-ef14-400a-a18d-37156b08f0e8
+      }
+    }
+    Line {
+      SrcBlock                "PIDU_PV"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   ba0611c5-a731-40b5-8ed4-c6625645c545
+      Branch {
+        Points                  [0, -25]
+        DstBlock                "LPBRK_1"
+        DstPort                 1
+        #GUID                   15529090-1983-4bd8-ba72-4e78bf30e2b7
+      }
+      Branch {
+        Points                  [225, 0]
+        #GUID                   ab6b23cc-87c2-41b2-b7e9-d3198a45c2ac
+        Branch {
+          Points                  [0, -30]
+          DstBlock                "FINE_VALVE"
+          DstPort                 1
+          #GUID                   f5422f28-01e1-4131-9475-d17e2eb56660
+        }
+        Branch {
+          DstBlock                "GAIN_FV"
+          DstPort                 1
+          #GUID                   f0ee9e5d-7749-465c-a442-9c60d396e5ac
+        }
+      }
+      Branch {
+        Points                  [0, 75]
+        #GUID                   1f90f510-d834-4a58-a6aa-b528f7de856d
+        Branch {
+          DstBlock                "PIDU_I"
+          DstPort                 3
+          #GUID                   8110c5fe-4c40-4b34-a263-402264ba5bcf
+        }
+        Branch {
+          Points                  [0, 20]
+          #GUID                   647acd6b-b07b-4f94-a555-d36aabe2bab7
+          Branch {
+            DstBlock                "RLY_1"
+            DstPort                 1
+            #GUID                   ae4e1314-9dc7-4f84-9e09-a34433764e56
+          }
+          Branch {
+            Points                  [0, 35]
+            DstBlock                "RLY_2"
+            DstPort                 1
+            #GUID                   6da60b91-1a54-4c00-b580-0dd7b6aeddce
+          }
+        }
+      }
+    }
+    Line {
+      SrcBlock                "RLY_1"
+      SrcPort                 1
+      DstBlock                "RTOI_1"
+      DstPort                 1
+      #GUID                   4bfc9371-0a1e-4d23-a52f-606c79606021
+    }
+    Line {
+      SrcBlock                "RLY_2"
+      SrcPort                 1
+      DstBlock                "RTOI_2"
+      DstPort                 1
+      #GUID                   a1e41b40-98b9-4d03-b79d-bcee08d1a688
+    }
+    Line {
+      SrcBlock                "RTOI_1"
+      SrcPort                 1
+      Points                  [5, 0]
+      DstBlock                "AND__1"
+      DstPort                 1
+      #GUID                   ff5f3b35-5803-430f-803d-5d7b2e5f64c4
+    }
+    Line {
+      SrcBlock                "RTOI_2"
+      SrcPort                 1
+      Points                  [5, 0]
+      DstBlock                "AND__1"
+      DstPort                 2
+      #GUID                   81a64ce4-088d-4d50-8627-68e632d72f61
+    }
+    Line {
+      SrcBlock                "pv"
+      SrcPort                 1
+      Points                  [20, 0]
+      #GUID                   4683e155-5a12-4edb-89ee-689ae5715dc2
+      Branch {
+        DstBlock                "Goto"
+        DstPort                 1
+        #GUID                   e2a21817-254f-4f69-90cc-9ed8811ced9a
+      }
+      Branch {
+        DstBlock                "PIDU_PV"
+        DstPort                 3
+        #GUID                   0444efef-7324-445d-aad3-0b4974ce78a2
+      }
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   af0908fc-736f-4bd5-86a8-bff7af1a398d
+    }
+    Annotation {
+      Position                [155, 20]
+      Text                    "Center Seeking Control - control task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   0e6f6312-1b25-4cc1-be2f-526c7840b726
+    }
+  }
+}

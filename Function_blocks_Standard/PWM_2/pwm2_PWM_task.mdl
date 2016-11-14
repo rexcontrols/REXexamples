@@ -1,0 +1,279 @@
+Model {
+  Name                    "pwm2_PWM_task"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "pwm2_PWM_task"
+    Location                [681, 31, 947, 393]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Inport
+      Name                    "mv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 128, 55, 142]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   b4cb9c72-d4f7-437d-b982-1b34809707b1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [115, 293, 130, 307]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   8ec03790-795b-4aa9-b4a1-f3597c3b17a8
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 273, 95, 287]
+      ShowName                off
+      GotoTag                 "mv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   8fa3d8c5-fb4b-4806-8c3f-abfb9f742433
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 263, 140, 277]
+      ShowName                off
+      GotoTag                 "mv_DN"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   60b0eea0-7028-42f3-9d43-12ca3f3a7e97
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 253, 95, 267]
+      ShowName                off
+      GotoTag                 "mv_UP"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   8356df47-2e81-4aad-8eb8-599e962c2fd2
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 168, 140, 182]
+      ShowName                off
+      GotoTag                 "mv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   f35ec4b9-df98-424e-ae07-e67bcf08a278
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 73, 225, 87]
+      ShowName                off
+      GotoTag                 "mv_UP"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   c4a30393-3d89-4e7c-beff-03e2786224e3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 188, 225, 202]
+      ShowName                off
+      GotoTag                 "mv_DN"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   d1ca06a1-ae9a-4ecf-b5c4-e6469b43effb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PWM"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [110, 123, 140, 147]
+      SourceBlock             "reglib/PWM"
+      ShowName                on
+      NamePlacement           ""
+      pertm                   2
+      dtime                   "0.1"
+      btime                   "0.1"
+      offtime                 "0.1"
+      asyfac                  1
+      SYNCH                   off
+      BackgroundColor         "cyan"
+      #GUID                   9c2107d3-b0d2-4ca9-8aa1-7469b7dfe51c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_PWM"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [160, 247, 205, 323]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       3
+      l                       100
+      btype                   8
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      2
+      Title                   "Trend Title"
+      #GUID                   e06270bb-b48b-42c1-9a9f-60db03461854
+        timesrc       1
+    }
+    Block {
+      BlockType               Outport
+      Name                    "mv_UP"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 108, 215, 122]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   58c30ae7-f11f-4744-9a94-e526c913ddba
+    }
+    Block {
+      BlockType               Outport
+      Name                    "mv_DN"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 143, 215, 157]
+      Port                    2
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   9dd28cf6-ece1-4211-be33-98c41af3138d
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND_PWM"
+      DstPort                 5
+      #GUID                   07dee6d7-8dee-428a-b191-88c1f4a0b57c
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "TRND_PWM"
+      DstPort                 3
+      #GUID                   496e4454-2962-476b-af9c-fd77db58e7ff
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      DstBlock                "TRND_PWM"
+      DstPort                 2
+      #GUID                   8f05a79a-6db9-4f5a-987c-e2f69507d70d
+    }
+    Line {
+      SrcBlock                "From5"
+      SrcPort                 1
+      DstBlock                "TRND_PWM"
+      DstPort                 1
+      #GUID                   9db19c93-4327-4b28-806a-a8be038b3404
+    }
+    Line {
+      SrcBlock                "PWM"
+      SrcPort                 1
+      Points                  [10, 0; 0, -15]
+      #GUID                   21edd170-f0c2-4e21-a8da-3ad3516683ca
+      Branch {
+        Points                  [0, -35]
+        DstBlock                "Goto3"
+        DstPort                 1
+        #GUID                   d1dbe6f8-c789-40e7-bd9d-8ed126ebb6cc
+      }
+      Branch {
+        DstBlock                "mv_UP"
+        DstPort                 1
+        #GUID                   d6c5ad75-a8a3-4700-9995-87d0bbd46a31
+      }
+    }
+    Line {
+      SrcBlock                "PWM"
+      SrcPort                 2
+      Points                  [10, 0; 0, 10]
+      #GUID                   6a8552b3-6029-4ca3-bc6c-c1afabc59fcf
+      Branch {
+        Points                  [0, 45]
+        DstBlock                "Goto4"
+        DstPort                 1
+        #GUID                   df6a6260-6687-41f5-aeeb-8b586a0e4fc3
+      }
+      Branch {
+        DstBlock                "mv_DN"
+        DstPort                 1
+        #GUID                   5098d4e4-2a14-4ac5-af7e-b548ede86dc2
+      }
+    }
+    Line {
+      SrcBlock                "mv"
+      SrcPort                 1
+      Points                  [15, 0]
+      #GUID                   82ef8bd8-1fe0-4ac2-9986-98a085cb291b
+      Branch {
+        Points                  [0, 40]
+        DstBlock                "Goto1"
+        DstPort                 1
+        #GUID                   a100d8a3-d7ed-4193-afcf-7a579eca3d7c
+      }
+      Branch {
+        DstBlock                "PWM"
+        DstPort                 1
+        #GUID                   cef4f38f-a6a7-4ac8-81c7-a09ab3998a09
+      }
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   eda5323d-6514-4f94-b423-021157507084
+    }
+    Annotation {
+      Position                [115, 20]
+      Text                    "PIDU with PWM - PWM task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   284976ce-efa5-4bfe-ac9a-22c9c03a3849
+    }
+  }
+}

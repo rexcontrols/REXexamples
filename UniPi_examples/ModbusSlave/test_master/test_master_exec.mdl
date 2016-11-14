@@ -1,7 +1,8 @@
 Model {
   Name                    "test_master_exec"
   Version                 3.00
-  #RexVersion             "2.10.5 rev. 4834, Date 2014-11-24"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "test_master_exec"
-    Location                [9, 30, 249, 353]
+    Location                [9, 31, 274, 397]
     #GUID                   bdf91a63-cbfb-40fc-8d65-44487be250d6
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [70, 23, 115, 292]
+      Position                [65, 68, 110, 337]
       SourceBlock             "execlib/EXEC"
       ShowName                on
       NamePlacement           ""
@@ -59,7 +60,7 @@ Model {
       BlockType               Reference
       Name                    "MTM"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [145, 62, 195, 78]
+      Position                [140, 107, 190, 123]
       SourceBlock             "execlib/IODRV"
       ShowName                on
       NamePlacement           ""
@@ -76,7 +77,7 @@ Model {
       BlockType               Reference
       Name                    "MbDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [145, 27, 195, 43]
+      Position                [140, 72, 190, 88]
       SourceBlock             "execlib/MODULE"
       ShowName                on
       NamePlacement           ""
@@ -86,7 +87,7 @@ Model {
       BlockType               Reference
       Name                    "test_master_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [145, 167, 195, 183]
+      Position                [140, 212, 190, 228]
       SourceBlock             "execlib/TASK"
       ShowName                on
       NamePlacement           ""
@@ -118,6 +119,18 @@ Model {
       DstBlock                "test_master_task"
       DstPort                 1
       #GUID                   fff434dd-4b99-46d1-8555-7062811c7d5f
+    }
+    Annotation {
+      Position                [130, 15]
+      Text                    "Modbus TCP master for testing"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   df075b56-8b7b-470f-873e-a48f769ab89f
+    }
+    Annotation {
+      Position                [110, 35]
+      Text                    "See the README.md file for details."
+      #GUID                   1d0f6f94-af4d-4474-88bc-88917fecf926
     }
   }
 }

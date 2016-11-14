@@ -8,7 +8,7 @@ extension board.
 In this example the PiFace Digital is used as a Modbus TCP slave to allow 
 integration in complex or hierarchical control systems.
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore, RPiDrv and MbDrv modules must be installed and running on the 
 Raspberry Pi.
@@ -27,16 +27,16 @@ multiple coils) to manipulate the outputs (coils) and FC02 (read discrete
 inputs) to read the inputs.  
 
 ### Adding signals and changing Modbus register mapping ###
-Go to Modbus TCP Slave driver (MTS block) configuration and press "Special edit" 
+Go to Modbus TCP Slave driver (MTS block) configuration and press "Configure" 
 for Modbus registers configuration. Make sure to read the Modbus driver 
 documentation (see below).
 
 ## Documentation ##
 
-- [Getting started with REX on Raspberry Pi](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
-- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
-- [MbDrv - Modbus driver](http://www.rexcontrols.com/media/DOC/ENGLISH/MbDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX on Raspberry Pi](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
+- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

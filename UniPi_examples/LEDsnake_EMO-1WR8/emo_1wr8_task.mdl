@@ -1,7 +1,8 @@
 Model {
   Name                    "emo_1wr8_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "emo_1wr8_task"
-    Location                [266, 33, 1162, 508]
+    Location                [266, 33, 1162, 493]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "ATMT"
       Ports                   [20, 19, 0, 0, 0]
-      Position                [45, 211, 100, 419]
+      Position                [45, 206, 100, 414]
       SourceBlock             "logiclib/ATMT"
       morestps                off
       ntr                     4
@@ -391,19 +392,12 @@ Model {
       }
     }
     Line {
-      SrcBlock                "BIS_slow"
+      SrcBlock                "BIS_extra"
       SrcPort                 1
+      Points                  [40, 0; 0, -90]
       DstBlock                "SELQUAD"
-      DstPort                 1
-      #GUID                   0e969eb2-ced5-45eb-a112-4f6cadfe3e6f
-    }
-    Line {
-      SrcBlock                "BIS_normal"
-      SrcPort                 1
-      Points                  [20, 0; 0, -30]
-      DstBlock                "SELQUAD"
-      DstPort                 2
-      #GUID                   affb1411-2cfc-4aef-8461-299d12fe4af7
+      DstPort                 4
+      #GUID                   e27ced5c-b80e-4b9e-b3f9-ce708be91f0b
     }
     Line {
       SrcBlock                "BIS_fast"
@@ -414,19 +408,19 @@ Model {
       #GUID                   9cfdc6e7-37ff-4cee-91d1-9ca216afda0a
     }
     Line {
-      SrcBlock                "BIS_extra"
+      SrcBlock                "BIS_normal"
       SrcPort                 1
-      Points                  [40, 0; 0, -90]
+      Points                  [20, 0; 0, -30]
       DstBlock                "SELQUAD"
-      DstPort                 4
-      #GUID                   e27ced5c-b80e-4b9e-b3f9-ce708be91f0b
+      DstPort                 2
+      #GUID                   affb1411-2cfc-4aef-8461-299d12fe4af7
     }
     Line {
-      SrcBlock                "BITOP_SHL"
+      SrcBlock                "BIS_slow"
       SrcPort                 1
-      DstBlock                "BITOP_OR"
-      DstPort                 2
-      #GUID                   b5dd0f16-381e-41cd-8c8d-e06f8d9d1a6b
+      DstBlock                "SELQUAD"
+      DstPort                 1
+      #GUID                   0e969eb2-ced5-45eb-a112-4f6cadfe3e6f
     }
     Line {
       SrcBlock                "BITOP_OR"
@@ -435,6 +429,13 @@ Model {
       DstBlock                "LPBRK"
       DstPort                 1
       #GUID                   a3375ebf-c404-4a43-96bc-c6536b88862c
+    }
+    Line {
+      SrcBlock                "BITOP_SHL"
+      SrcPort                 1
+      DstBlock                "BITOP_OR"
+      DstPort                 2
+      #GUID                   b5dd0f16-381e-41cd-8c8d-e06f8d9d1a6b
     }
     Line {
       SrcBlock                "BMOCT"
@@ -497,13 +498,6 @@ Model {
       #GUID                   3d1abd7e-6897-40cd-b652-3888efa8489f
     }
     Annotation {
-      Position                [165, 25]
-      Text                    "UniPi and EMO-1WR8 extension module"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513
-    }
-    Annotation {
       Position                [820, 65]
       Text                    "UniPi relays"
       FontWeight              "bold"
@@ -518,11 +512,18 @@ Model {
       #GUID                   6a13a31d-7113-4da9-9b73-b07a618e0ec8
     }
     Annotation {
-      Position                [295, 65]
-      Text                    "Go to OWS driver configuration and press \"Spec"
-"ial edit\" to configure the 1-Wire board (64-bit ID of the DS2408 chip).\n\nSe"
-"e the README.md file for details."
+      Position                [285, 55]
+      Text                    "Go to OWS driver configuration and press \"Conf"
+"igure\" to set the 1-Wire board (64-bit ID of the DS2408 chip).\n\nSee the REA"
+"DME.md file for details."
       #GUID                   ac0c0a68-fa60-4f49-b7e8-0bfe4dc96383
+    }
+    Annotation {
+      Position                [195, 15]
+      Text                    "UniPi and EMO-1WR8 extension module - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513
     }
   }
 }

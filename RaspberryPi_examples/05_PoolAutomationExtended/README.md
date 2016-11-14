@@ -1,4 +1,4 @@
-Pool automation with web-based graphical HMI 
+﻿Pool automation with web-based graphical HMI 
 ============================================
 
 This folder contains the source files for the demonstration project on pool 
@@ -14,7 +14,7 @@ predefined time of day. Long press of the button switches the control algorithm
 to manual mode. In manual mode the user can control the lights (single push) and 
 filtration pump (double push).
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore and RPiDrv modules must be installed and running on the Raspberry Pi.
 - The wiring must comply with the attached schematics. 
@@ -25,14 +25,14 @@ filtration pump (double push).
 - Compile and download the project to the target device.
 
 ## User interface (HMI) ##
-The example is accompanied by a graphical user interface generated from Inkscape 
-using the RexHMI extension. See the above mentioned tutorial for instructions on 
+The example is accompanied by a graphical user interface generated from RexHMI Designer. See the above mentioned tutorial for instructions on 
 deploying the HMI on the Raspberry Pi.
  
 ## Documentation ##
 
-- [Getting started with REX and Raspberry Pi](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- **Press F1 for help** on the selected function block in the *RexDraw* program.
+- [Getting started with REX and Raspberry Pi](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

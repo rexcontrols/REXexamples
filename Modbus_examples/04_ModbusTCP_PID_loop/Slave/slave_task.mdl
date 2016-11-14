@@ -1,0 +1,330 @@
+Model {
+  Name                    "slave_task"
+  Version                 7.1
+  MdlSubVersion           0
+  SaveDefaultBlockParams  on
+  SampleTimeColors        off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ShowTestPointIcons      on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons         on
+  SortedOrder             off
+  ExecutionContextIcon    off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime        "0.035000"
+  OverrideScopeRefreshTime on
+  DisableAllScopes        off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  Created                 "Thu Jan 14 14:46:32 2010"
+  Creator                 "jsobota"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "jsobota"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Jan 19 10:05:35 2010"
+  RTWModifiedTimeStamp    0
+  ModelVersionFormat      "1.%<AutoIncrement:20>"
+  ConfigurationManager    "none"
+  SimulationMode          "normal"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  CovReportOnPause        on
+  CovModelRefEnable       "Off"
+  ExtModeBatchMode        off
+  ExtModeEnableFloating   on
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    BlockRotation           0
+    BlockMirror             off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "slave_task"
+    Location                [255, 31, 723, 424]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    TiledPaperMargins       [0.196850, 0.196850, 0.196850, 0.196850]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ReportName              "simulink-default.rpt"
+    #GUID                   b1efc608-f54c-482f-8d84-a902872a8bc8
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [195, 328, 215, 342]
+      SourceBlock             "mathlib/CNB"
+      SourceType              "CNB"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      YCN                     on
+      #GUID                   56296688-846d-4369-a934-db09162a4ff6
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [180, 298, 220, 312]
+      ShowName                off
+      GotoTag                 "pv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   9eff5cc8-7bcd-4636-90ed-2096746a7f5e
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 288, 175, 302]
+      ShowName                off
+      GotoTag                 "mv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   0ff1eb17-d425-4385-8fe7-b6742fd0ed91
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [320, 138, 360, 152]
+      ShowName                off
+      GotoTag                 "pv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   33a98c28-7a42-465f-a974-3797be6ee2d0
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [195, 138, 235, 152]
+      ShowName                off
+      GotoTag                 "mv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   50a34777-631b-4c6c-853d-6109ed0350c3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MDL"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [245, 168, 270, 182]
+      SourceBlock             "modellib/MDL"
+      k0                      3
+      del                     5
+      tau1                    "6.2"
+      tau2                    "5.1"
+      nmax                    100
+      #GUID                   27bda287-673d-4de9-95ba-09ab1bd32426
+    }
+    Block {
+      BlockType               From
+      Name                    "MTS__power"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 168, 160, 182]
+      ShowName                off
+      GotoTag                 "MTS__power"
+      BackgroundColor         "yellow"
+      #GUID                   9ec66fff-6bf1-4c21-80da-8e5c007f1543
+    }
+    Block {
+      BlockType               Goto
+      Name                    "MTS__temperature"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [320, 168, 440, 182]
+      ShowName                off
+      GotoTag                 "MTS__temperature"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   90da1660-f83d-45f0-af7d-562a625b4f28
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [240, 282, 285, 358]
+      SourceBlock             "arclib/TRND"
+      SourceType              "TRND"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      n                       2
+      l                       7200
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      NamePlacement           ""
+      ShowName                on
+      #GUID                   20d68139-2f27-4c69-af65-6cc39da895a0
+        timesrc       1
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   d59db52c-273e-4e08-be8d-14cc5039ab3c
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   1a319b61-aa02-4395-a4f7-a5bc749cbcd3
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   cb405dc0-c510-4578-a35a-bbc4d9bc6851
+    }
+    Line {
+      SrcBlock                "MDL"
+      SrcPort                 1
+      Points                  [25, 0]
+      #GUID                   596907d5-c6f2-452c-b5ac-e6eeb19b4b1e
+      Branch {
+        Points                  [0, -30]
+        DstBlock                "Goto"
+        DstPort                 1
+        #GUID                   1d01e954-d28a-4c35-9bfc-e2ba530bcc83
+      }
+      Branch {
+        DstBlock                "MTS__temperature"
+        DstPort                 1
+        #GUID                   27154c85-ca3a-4cb5-af35-affae30a3fbe
+      }
+    }
+    Line {
+      SrcBlock                "MTS__power"
+      SrcPort                 1
+      Points                  [5, 0]
+      #GUID                   a309d5b1-4395-4ec8-991f-7ca550b10555
+      Branch {
+        Points                  [0, -30]
+        DstBlock                "Goto1"
+        DstPort                 1
+        #GUID                   b30a73fd-f4c0-41ac-9ffa-16caaa9f5693
+      }
+      Branch {
+        DstBlock                "MDL"
+        DstPort                 1
+        #GUID                   39a6de5b-0647-4c15-b818-c9a173f2eb25
+      }
+    }
+    Annotation {
+      Position                [110, 20]
+      Text                    "Modbus TCP slave station"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   bed5113e-3228-4cf6-b9d2-0ac14fa8453f
+    }
+    Annotation {
+      Position                [210, 55]
+      Text                    "Go to MTS driver configuration and press \"Conf"
+"igure\" for Modbus configuration.\n\nRead the README.md file for details."
+      #GUID                   d0074386-2f2d-48b1-84cd-809e10289fd7
+    }
+  }
+}

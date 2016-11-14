@@ -1,9 +1,13 @@
 Model {
   Name                    "station1_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
   rev.                    "3173,"
   Date                    "2013-05-31"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  rev.                    "3173,"
+  Date                    "2013-05-31"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -35,13 +39,13 @@ Model {
   }
   System {
     Name                    "station1_task"
-    Location                [206, 34, 600, 369]
+    Location                [298, 32, 692, 411]
     #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
     Block {
       BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [250, 198, 270, 212]
+      Position                [250, 223, 270, 237]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   d300e41b-a1c0-4bf2-a06b-3d57996e1b1b
@@ -50,20 +54,21 @@ Model {
       BlockType               Reference
       Name                    "RDC_S1"
       Ports                   [17, 18, 0, 0, 0]
-      Position                [150, 126, 205, 314]
+      Position                [150, 151, 205, 339]
       SourceBlock             "speclib/RDC"
       target                  "192.168.1.200"
       rport                   1288
       lport                   1288
       id                      1
       period                  1
+      BackgroundColor         "cyan"
       #GUID                   dbded688-b26d-438a-acda-9d0429dac5f5
     }
     Block {
       BlockType               Reference
       Name                    "SG_SINE"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 143, 70, 157]
+      Position                [45, 168, 70, 182]
       SourceBlock             "genlib/SG"
       isig                    "1: SINE"
       amp                     1
@@ -71,13 +76,14 @@ Model {
       phase                   "0.0000000E+000"
       ifrunit                 "1: Hz"
       iphunit                 "1: degrees"
+      offset                  0
       #GUID                   6a70d035-0bfa-4869-ae30-c4eedf1c480f
     }
     Block {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [295, 153, 340, 227]
+      Position                [295, 178, 340, 252]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       10800
@@ -92,6 +98,7 @@ Model {
       id                      1
       Title                   "Remote Data Connection"
       #GUID                   0a292914-ab0c-40b2-b961-4189c8f75af6
+        timesrc       1
     }
     Line {
       SrcBlock                "CNB"
@@ -133,14 +140,14 @@ Model {
       }
     }
     Annotation {
-      Position                [195, 70]
+      Position                [180, 65]
       Text                    "Data exchange between 2 target devices of the R"
 "EX Control System\nvia the RDC function block\n\nSee the README.md file for de"
 "tailed information."
       #GUID                   1fbb18a2-2efc-44e9-90ee-776dbc5ab7bb
     }
     Annotation {
-      Position                [195, 25]
+      Position                [185, 20]
       Text                    "RDC example, Station 1, IP 192.168.1.100, port "
 "1288"
       FontWeight              "bold"

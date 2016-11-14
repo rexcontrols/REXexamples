@@ -1,7 +1,8 @@
 Model {
   Name                    "archiving_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "archiving_task"
-    Location                [211, 33, 615, 365]
+    Location                [299, 32, 621, 284]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
       Name                    "ACD_TRoff"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [270, 138, 305, 162]
+      Position                [245, 143, 285, 167]
       SourceBlock             "arclib/ACD"
       acls                    "8: Double"
       arc                     1
@@ -48,13 +49,14 @@ Model {
       tmax                    5
       TR                      off
       Desc                    "Simulated analog signal, TR=off"
+      BackgroundColor         "cyan"
       #GUID                   5032b074-a8ee-4735-96f7-53056a9a285e
     }
     Block {
       BlockType               Reference
       Name                    "ACD_TRon"
       Ports                   [2, 2, 0, 0, 0]
-      Position                [270, 88, 305, 112]
+      Position                [245, 93, 285, 117]
       SourceBlock             "arclib/ACD"
       acls                    "8: Double"
       arc                     1
@@ -63,13 +65,14 @@ Model {
       tmax                    5
       TR                      on
       Desc                    "Simulated analog signal, TR=on"
+      BackgroundColor         "cyan"
       #GUID                   ee3c9a47-1a52-45ed-af3d-84fa66fd06ff
     }
     Block {
       BlockType               Reference
       Name                    "ADD"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [175, 83, 200, 107]
+      Position                [120, 88, 145, 112]
       SourceBlock             "mathlib/ADD"
       #GUID                   0495ebbc-eec4-4418-b70b-76c04d65b836
     }
@@ -77,7 +80,7 @@ Model {
       BlockType               Reference
       Name                    "AFLUSH"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [170, 193, 210, 207]
+      Position                [115, 198, 155, 212]
       SourceBlock             "arclib/AFLUSH"
       arc                     1
       #GUID                   13747a5f-eac1-48f4-aa7d-fdc11ee6b04f
@@ -86,34 +89,37 @@ Model {
       BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [100, 193, 120, 207]
+      Position                [45, 197, 65, 213]
       SourceBlock             "mathlib/CNB"
       YCN                     off
+      BackgroundColor         "magenta"
       #GUID                   8223ba38-bfea-438d-8199-3f2cde8a91fc
     }
     Block {
       BlockType               Reference
-      Name                    "CNR"
+      Name                    "CNR_TRoff"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [225, 98, 245, 112]
+      Position                [180, 153, 200, 167]
       SourceBlock             "mathlib/CNR"
       ycn                     "0.2"
-      #GUID                   137102d2-b662-4c39-b49b-653797149d9a
+      BackgroundColor         "magenta"
+      #GUID                   1bf022c7-126b-4dbf-8733-06cb64bb416a
     }
     Block {
       BlockType               Reference
-      Name                    "CNR1"
+      Name                    "CNR_TRon"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [225, 148, 245, 162]
+      Position                [180, 103, 200, 117]
       SourceBlock             "mathlib/CNR"
       ycn                     "0.2"
-      #GUID                   1bf022c7-126b-4dbf-8733-06cb64bb416a
+      BackgroundColor         "magenta"
+      #GUID                   137102d2-b662-4c39-b49b-653797149d9a
     }
     Block {
       BlockType               Reference
       Name                    "SG_sine_fast"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [95, 133, 120, 147]
+      Position                [40, 138, 65, 152]
       SourceBlock             "genlib/SG"
       isig                    "1: SINE"
       amp                     3
@@ -121,13 +127,14 @@ Model {
       phase                   0
       ifrunit                 "1: Hz"
       iphunit                 "1: degrees"
+      offset                  0
       #GUID                   261095e4-a807-421c-94b1-db60720b0352
     }
     Block {
       BlockType               Reference
       Name                    "SG_sine_slow"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [95, 83, 120, 97]
+      Position                [40, 88, 65, 102]
       SourceBlock             "genlib/SG"
       isig                    "1: SINE"
       amp                     10
@@ -135,6 +142,7 @@ Model {
       phase                   0
       ifrunit                 "1: Hz"
       iphunit                 "1: degrees"
+      offset                  0
       #GUID                   f712d529-1164-4523-b5d5-692ba640f258
     }
     Line {
@@ -162,18 +170,18 @@ Model {
       #GUID                   1c3581ee-3a51-492b-a1c7-7f5e2903871d
     }
     Line {
-      SrcBlock                "CNR"
-      SrcPort                 1
-      DstBlock                "ACD_TRon"
-      DstPort                 2
-      #GUID                   00138111-19bc-4c5e-9c43-999753826fc1
-    }
-    Line {
-      SrcBlock                "CNR1"
+      SrcBlock                "CNR_TRoff"
       SrcPort                 1
       DstBlock                "ACD_TRoff"
       DstPort                 2
       #GUID                   0faa6ec8-4859-4af3-b0d0-fce75cb4e8c4
+    }
+    Line {
+      SrcBlock                "CNR_TRon"
+      SrcPort                 1
+      DstBlock                "ACD_TRon"
+      DstPort                 2
+      #GUID                   00138111-19bc-4c5e-9c43-999753826fc1
     }
     Line {
       SrcBlock                "SG_sine_fast"
@@ -191,17 +199,17 @@ Model {
       #GUID                   ea256fd2-0103-4c13-a042-72745e0fb1aa
     }
     Annotation {
-      Position                [115, 25]
-      Text                    "Archiving analog signals"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
-    }
-    Annotation {
-      Position                [145, 50]
+      Position                [140, 45]
       Text                    "See the README.md file for detailed information"
 "."
       #GUID                   8f79b992-fa0e-490d-82e8-f15ef7d4ddd7
+    }
+    Annotation {
+      Position                [125, 20]
+      Text                    "Archiving analog signals - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
     }
   }
 }

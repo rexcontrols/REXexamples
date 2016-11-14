@@ -1,4 +1,4 @@
-Modbus TCP master 
+﻿Modbus TCP master 
 =================
  
 This folder contains the source files for the master part of the demonstration

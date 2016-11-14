@@ -1,7 +1,8 @@
 Model {
   Name                    "test_slave_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "test_slave_exec"
-    Location                [12, 35, 188, 358]
+    Location                [9, 32, 274, 374]
     #GUID                   bdf91a63-cbfb-40fc-8d65-44487be250d6
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [20, 23, 65, 292]
+      Position                [60, 48, 105, 317]
       SourceBlock             "execlib/EXEC"
       ShowName                on
       NamePlacement           ""
@@ -59,7 +60,7 @@ Model {
       BlockType               Reference
       Name                    "MTS"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [95, 62, 145, 78]
+      Position                [135, 87, 185, 103]
       SourceBlock             "execlib/IODRV"
       ShowName                on
       NamePlacement           ""
@@ -76,7 +77,7 @@ Model {
       BlockType               Reference
       Name                    "MbDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [95, 27, 145, 43]
+      Position                [135, 52, 185, 68]
       SourceBlock             "execlib/MODULE"
       ShowName                on
       NamePlacement           ""
@@ -86,7 +87,7 @@ Model {
       BlockType               Reference
       Name                    "test_slave_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [95, 167, 145, 183]
+      Position                [135, 192, 185, 208]
       SourceBlock             "execlib/TASK"
       ShowName                on
       NamePlacement           ""
@@ -118,6 +119,13 @@ Model {
       DstBlock                "test_slave_task"
       DstPort                 1
       #GUID                   fff434dd-4b99-46d1-8555-7062811c7d5f
+    }
+    Annotation {
+      Position                [130, 20]
+      Text                    "Modbus slave on PiFace Digital"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   dcbba9a9-02f5-4163-a6d0-03a258ca099c
     }
   }
 }

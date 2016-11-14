@@ -1,7 +1,7 @@
 Model {
   Name                    "LOGO_flags"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"

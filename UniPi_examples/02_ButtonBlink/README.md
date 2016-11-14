@@ -1,13 +1,14 @@
-REX Control System and the UniPi board
+﻿REX Control System and the UniPi board
 ======================================
 
 This example is a modification of the original example related to the [tutorial on using the REX Control System](http://www.rexcontrols.com/articles/getting-started-with-rex-on-raspberry-pi)
 on Raspberry Pi.
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore and RPiDrv module must be installed and running on the Raspberry Pi
 - I2C bus must be enabled on the Raspberry Pi
+- The wiring must comply with the attached schematics. 
 
 ## Running the example ##
 
@@ -23,8 +24,8 @@ for instructions on deploying the HMI on the Raspberry Pi.
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX and UniPi board](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX and UniPi board](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_UniPi_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

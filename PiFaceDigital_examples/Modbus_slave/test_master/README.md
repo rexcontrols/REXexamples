@@ -1,4 +1,4 @@
-Modbus master for testing PiFace Digital as Modbus TCP slave 
+﻿Modbus master for testing PiFace Digital as Modbus TCP slave 
 ============================================================
  
 This example is a Modbus TCP master for testing the PiFace Digital as Modbus 
@@ -15,14 +15,13 @@ inputs) to read the inputs.
 
 ### Adding signals, changing Modbus register mapping, changing IP address of the slave device ###
 
-Go to Modbus TCP Master driver (MTM block) configuration and press "Special 
-edit" for Modbus configuration. Make sure to read the Modbus driver 
-documentation (see below).
+Go to Modbus TCP Master driver (MTM block) configuration and press "Configure" 
+for Modbus configuration. Make sure to read the Modbus driver documentation (see below).
 
 ## Documentation ##
 
-- [MbDrv - Modbus driver](http://www.rexcontrols.com/media/DOC/ENGLISH/MbDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

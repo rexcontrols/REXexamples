@@ -93,7 +93,8 @@ Model {
   LastModifiedDate        "Mon Jan 07 09:53:40 2008"
   ModelVersionFormat      "1.%<AutoIncrement:43>"
   ConfigurationManager    "none"
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -125,7 +126,7 @@ Model {
   }
   System {
     Name                    "email_notification_task"
-    Location                [255, 34, 667, 384]
+    Location                [374, 31, 724, 430]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -134,7 +135,6 @@ Model {
     PaperPositionMode       "auto"
     PaperType               "usletter"
     PaperUnits              "inches"
-    ZoomFactor              100
     AutoZoom                on
     ReportName              "simulink-default.rpt"
     #GUID                   64a78286-c1c8-44ea-aaf5-d5afc6d5fdb3
@@ -152,7 +152,7 @@ Model {
       BlockType               Reference
       Name                    "EPC"
       Ports                   [12, 15, 0, 0, 0]
-      Position                [215, 126, 285, 314]
+      Position                [175, 126, 245, 314]
       SourceBlock             "speclib/EPC"
       cmd                     "python /rex/rexcore/email_notification.py"
       ifns                    "epc_datain.txt"
@@ -161,17 +161,19 @@ Model {
       ifm                     10000
       format                  "1: Space-delimited values"
       BackgroundColor         "cyan"
+      nmax                    100
       #GUID                   85c9b017-5456-44c2-a821-2b7a6eac4ffa
     }
     Block {
       BlockType               Reference
       Name                    "RTOV"
       Ports                   [9, 1, 0, 0, 0]
-      Position                [115, 91, 175, 189]
+      Position                [90, 92, 135, 188]
       SourceBlock             "matrixlib/RTOV"
-      capacity                8
+      nmax                8
       offset                  0
       n                       8
+      etype                   "8: Double"
       #GUID                   c09a52ae-63b4-45a5-953c-26ff44bd98e9
     }
     Line {
@@ -179,7 +181,7 @@ Model {
       SrcPort                 1
       DstBlock                "EPC"
       DstPort                 9
-      #GUID                   079636e0-98b8-448e-8fb7-02439873ad66
+      #GUID                   ba4b8a2b-1198-4fcf-8729-1f7551c76fb2
     }
     Line {
       SrcBlock                "RTOV"
@@ -189,13 +191,13 @@ Model {
       #GUID                   dbf0d1c0-7130-4d70-ad00-4f8084a4577f
     }
     Annotation {
-      Position                [135, 50]
+      Position                [135, 45]
       Text                    "See the README.md file for detailed information"
 "."
       #GUID                   b02b0f0b-e249-43de-829a-4e61b69e8c9d
     }
     Annotation {
-      Position                [170, 25]
+      Position                [170, 20]
       Text                    "EPC - sending e-mail notifications from Linux"
       FontSize                14
       FontWeight              "bold"

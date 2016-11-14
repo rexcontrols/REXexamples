@@ -1,0 +1,206 @@
+Model {
+  Name                    "PID_loop_exec"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "PID_loop_exec"
+    Location                [11, 31, 291, 422]
+    #GUID                   06eb7513-3603-4d98-8e52-a52eb191a7dc
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [25, 68, 70, 357]
+      SourceBlock             "execlib/EXEC"
+      target                  "PC - Linux"
+      tick                    "0.01"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   22deffa1-0394-494b-9120-8fa2cdda6361
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [140, 328, 190, 342]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        on
+      GenerateRexHMI          on
+      RedirectToHMI           off  
+      Compression             off
+      #GUID                   e3d1d33c-7373-4a2a-9c18-03c3f2c0f8ee
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OWS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 117, 240, 133]
+      SourceBlock             "execlib/IODRV"
+      ShowName                on
+      NamePlacement           ""
+      module                  "OwsDrv"
+      classname               "OwsDrv"
+      cfgname                 "pid_loop_owscfg.rio"
+      factor                  100
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   1a2f326c-a5e2-4d5e-bcf6-0626678cbebb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OwsDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 82, 240, 98]
+      SourceBlock             "execlib/MODULE"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   a2f0bb4b-ab96-4c28-aafd-2ea2acc083df
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PID_loop_control"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 223, 150, 237]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   bf3da571-18a5-4c7a-bf02-7d9f6bc4a892
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PID_loop_process"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 223, 240, 237]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   1
+      stop                    2
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   830d85cc-ff2f-4ab9-80ae-a9fcafbc22e0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 118, 150, 132]
+      SourceBlock             "execlib/IODRV"
+      module                  "RPiDrv"
+      classname               "RPiDrv"
+      cfgname                 ""
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   1dbaee9b-4763-47bd-9f0a-6d12c46e4148
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPiDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 83, 150, 97]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   d2ed1989-cb74-4671-848c-1be18226cbe2
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "RPiDrv"
+      DstPort                 1
+      #GUID                   80994ab4-b3f3-4d8f-b821-ed3c39373be0
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "RPI"
+      DstPort                 1
+      #GUID                   91308724-8beb-497a-89a3-d72e1ae81c0e
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "PID_loop_control"
+      DstPort                 1
+      #GUID                   cff4a95d-20ef-4f5c-bfea-6326f4863790
+    }
+    Line {
+      SrcBlock                "PID_loop_control"
+      SrcPort                 1
+      DstBlock                "PID_loop_process"
+      DstPort                 1
+      #GUID                   732f054d-885e-4e3e-98dc-71d0018425ec
+    }
+    Line {
+      SrcBlock                "RPI"
+      SrcPort                 1
+      DstBlock                "OWS"
+      DstPort                 1
+      #GUID                   6139e0a7-50d3-4e5e-a869-ac0c52596d5e
+    }
+    Line {
+      SrcBlock                "RPiDrv"
+      SrcPort                 1
+      DstBlock                "OwsDrv"
+      DstPort                 1
+      #GUID                   f46bf953-c817-40a2-a1b9-3c17e927ad75
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   dc459166-d25f-4210-8b41-6113d6c1cc89
+    }
+    Annotation {
+      Position                [70, 20]
+      Text                    "Simple PID loop"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   305f5282-d738-485e-a7ec-8f394d463065
+    }
+  }
+}

@@ -6,12 +6,12 @@ Modbus {
   Timeout                 10000
   Flags                   0
   Gap                     30000
-  #GUID                   4daaa78f-cce7-4eaa-871c-2c81752feee8
+  #GUID                   63638a84-4f0c-4754-8469-57be5fa58039
   Item {
     Name                    readReg0
     SlaveAdr                1
     RegisterAdr             0
-    Type                    0x00000204
+    Type                    0x00040204
     Count                   1
   }
   Item {

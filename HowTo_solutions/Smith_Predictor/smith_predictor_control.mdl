@@ -1,0 +1,825 @@
+Model {
+  Name                    "smith_predictor_control"
+  Version                 5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors        off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ExecutionOrder          off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  Created                 "Mon Dec 30 16:43:09 2002"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "david"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Mar 11 12:30:27 2003"
+  ModelVersionFormat      "1.%<AutoIncrement:39>"
+  ConfigurationManager    "none"
+  SimParamPage            "Solver"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  RTWExpressionDepthLimit 5
+  SimulationMode          "normal"
+  Solver                  "FixedStepDiscrete"
+  SolverMode              "Auto"
+  StartTime               "0.0"
+  StopTime                "500.0"
+  MaxOrder                5
+  MaxStep                 "auto"
+  MinStep                 "auto"
+  MaxNumMinSteps          -1
+  InitialStep             "auto"
+  FixedStep               "0.1"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  Refine                  1
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Array"
+  Decimation              1
+  LimitDataPoints         off
+  MaxDataPoints           1000
+  SignalLoggingName       "sigsOut"
+  ConsistencyChecking     "none"
+  ArrayBoundsChecking     "none"
+  AlgebraicLoopMsg        "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg          "warning"
+  InheritedTsInSrcMsg     "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg   "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg      "warning"
+  Int32ToFloatConvMsg     "warning"
+  ParameterDowncastMsg    "error"
+  ParameterOverflowMsg    "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg   "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters     off
+  BlockReductionOpt       on
+  BooleanDataType         off
+  ConditionallyExecuteInputs on
+  ParameterPooling        on
+  OptimizeBlockIOStorage  on
+  ZeroCross               on
+  AssertionControl        "UseLocalSettings"
+  ProdHWDeviceType        "Microprocessor"
+  ProdHWWordLengths       "8,16,32,32"
+  RTWSystemTargetFile     "grt.tlc"
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  RTWRetainRTWFile        off
+  TLCProfiler             off
+  TLCDebug                off
+  TLCCoverage             off
+  TLCAssertion            off
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "smith_predictor_control"
+    Location                [346, 32, 905, 448]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    ReportName              "simulink-default.rpt"
+    #GUID                   7c14bdec-e0b9-4010-be12-ded0f0a0a3b1
+    Block {
+      BlockType               Inport
+      Name                    "pv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 128, 75, 142]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   8db0ee02-f7cb-49a4-b1b7-9b03e018a9dd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_MAN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [345, 178, 365, 192]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   d33fdbf4-7f66-43c5-9bad-6a9941fe7e4f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [165, 358, 185, 372]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   3e0e9d9b-845a-4864-9aeb-9f5605bbb248
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_SMITH_ON"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 208, 70, 222]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   3187e669-775d-411b-bd7d-90eed0009866
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_TAFF"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [320, 238, 340, 252]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   2517811d-874b-4e45-a642-63f02181c7b1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_ips"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [365, 253, 385, 267]
+      SourceBlock             "mathlib/CNI"
+      icn                     3
+      BackgroundColor         "magenta"
+      #GUID                   c216a9a5-1334-42b3-a506-bd292a119056
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_hv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 163, 320, 177]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   374122ac-11a4-4516-abca-08c6a9bfe230
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_sp"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [280, 93, 300, 107]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   37a1f63b-57c8-4469-aef0-ac35d8eff3c0
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [215, 328, 255, 342]
+      ShowName                off
+      GotoTag                 "pv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   b56dd2b0-02fb-419b-9868-276cac11a87d
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 173, 90, 187]
+      ShowName                off
+      GotoTag                 "mv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   964bb6f2-9a6c-40dd-8535-5c5a8fcfbcc7
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [165, 318, 205, 332]
+      ShowName                off
+      GotoTag                 "sp"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   c6e8b3a7-4d29-4d77-85b8-b4c5bc93bfe0
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [165, 338, 205, 352]
+      ShowName                off
+      GotoTag                 "mv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   d8635af2-072c-462f-8023-8a5d60917022
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [110, 113, 150, 127]
+      ShowName                off
+      GotoTag                 "pv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   5056d740-cc5c-481f-87b0-a342b400bbdb
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [495, 143, 535, 157]
+      ShowName                off
+      GotoTag                 "mv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   b71da04c-e3b9-4dca-9d36-761485c9d4a4
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [330, 93, 370, 107]
+      ShowName                off
+      GotoTag                 "sp"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   ddbc02c3-5b69-4ab3-895f-249cf5332d43
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [425, 85, 435, 95]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      BackgroundColor         "lightBlue"
+      ShowName                off
+      SourceType              "LPBRK"
+      #GUID                   5e40aa99-7015-45b8-822d-a54a9c2ebfb7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK_2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 175, 120, 185]
+      SourceBlock             "execlib/LPBRK"
+      BackgroundColor         "lightBlue"
+      ShowName                off
+      SourceType              "LPBRK"
+      #GUID                   86be1bf2-191b-48e7-974e-f27b7291f698
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_TBRK"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [280, 223, 295, 237]
+      SourceBlock             "genlib/MP"
+      ShowName                on
+      NamePlacement           ""
+      pwidth                  1
+      BSTATE                  off
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   6324ca0b-b4cd-444f-84b3-5970f35c5619
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_TUNE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [240, 208, 255, 222]
+      SourceBlock             "genlib/MP"
+      ShowName                on
+      NamePlacement           ""
+      pwidth                  1
+      BSTATE                  off
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   887d5aa3-a72e-4f5e-976c-c7dac6b17d80
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PIDMA"
+      Ports                   [11, 14, 0, 0, 0]
+      Position                [405, 104, 460, 266]
+      SourceBlock             "reglib/PIDMA"
+      ShowName                on
+      NamePlacement           ""
+      irtype                  "6: PI"
+      RACT                    off
+      k                       1
+      ti                      "5.5"
+      td                      0
+      nd                      4
+      b                       1
+      c                       0
+      tt                      1
+      hilim                   1
+      lolim                   -1
+      dz                      0
+      icotype                 "1: Analog"
+      ittype                  "6: PI"
+      iainf                   "1: Static process"
+      DGC                     off
+      tdg                     1
+      tn                      2
+      amp                     "0.2"
+      dy                      "0.1"
+      ispeed                  "2: Normal (middle fast) CL"
+      ipid                    "1: Parallel form"
+      #GUID                   15839a37-200e-4002-99fd-1d39c3e8f507
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SUB_2"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [225, 128, 250, 152]
+      SourceBlock             "mathlib/SUB"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   a3c5d5c7-a5d6-4deb-a51e-9fbc7c7b141f
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "Smith_Predictor"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [150, 174, 190, 201]
+      BackgroundColor         "cyan"
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   855fb912-b783-4e6b-8d23-3010ebe17adc
+      System {
+        Name                    "Smith_Predictor"
+        Location                [344, 490, 686, 633]
+        #GUID                   855fb912-b783-4e6b-8d23-3010ebe17adc
+        Block {
+          BlockType               Inport
+          Name                    "mv"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [30, 23, 60, 37]
+          Port                    1
+          BackgroundColor         "green"
+          #GUID                   c1d4c946-b22f-4dde-bf0e-17094560c77b
+        }
+        Block {
+          BlockType               Inport
+          Name                    "ON"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [30, 93, 60, 107]
+          Port                    2
+          BackgroundColor         "green"
+          #GUID                   e5783ca8-e077-4f93-8cc4-a592d5c6dda2
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MDL_P0"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [105, 63, 130, 77]
+          SourceBlock             "modellib/MDL"
+          ShowName                on
+          NamePlacement           ""
+          k0                      "2.1"
+          del                     0
+          tau1                    "4.84"
+          tau2                    "4.84"
+          BackgroundColor         "white"
+          nmax                    100
+          #GUID                   234ea736-85bb-43ab-8676-8892d87454e9
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MDL_PDT"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [105, 23, 130, 37]
+          SourceBlock             "modellib/MDL"
+          ShowName                on
+          NamePlacement           ""
+          k0                      "2.1"
+          del                     "4.0"
+          tau1                    "4.84"
+          tau2                    "4.84"
+          BackgroundColor         "white"
+          nmax                    100
+          #GUID                   065e917f-a830-4f2c-b18d-38cc26bdf401
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SSW_1"
+          Ports                   [3, 1, 0, 0, 0]
+          Position                [220, 33, 250, 67]
+          SourceBlock             "analoglib/SSW"
+          ShowName                on
+          NamePlacement           ""
+          BackgroundColor         "white"
+          #GUID                   def162e3-febe-4042-83b7-693904a9c5fb
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SUB_1"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [165, 38, 190, 62]
+          SourceBlock             "mathlib/SUB"
+          ShowName                on
+          NamePlacement           ""
+          BackgroundColor         "white"
+          #GUID                   53096bb0-6c62-42fd-a043-19581252434f
+        }
+        Block {
+          BlockType               Outport
+          Name                    "pv"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [275, 43, 305, 57]
+          Port                    1
+          BackgroundColor         "green"
+          #GUID                   d2b1864b-8041-45da-8e28-413db4e30719
+        }
+        Line {
+          SrcBlock                "MDL_P0"
+          SrcPort                 1
+          Points                  [15, 0]
+          DstBlock                "SUB_1"
+          DstPort                 2
+          #GUID                   6f978f92-e453-49f7-af32-e50477019c24
+        }
+        Line {
+          SrcBlock                "MDL_PDT"
+          SrcPort                 1
+          Points                  [15, 0]
+          DstBlock                "SUB_1"
+          DstPort                 1
+          #GUID                   c93af360-05c1-4ff8-8ced-fd5ecbb7243a
+        }
+        Line {
+          SrcBlock                "ON"
+          SrcPort                 1
+          Points                  [140, 0]
+          DstBlock                "SSW_1"
+          DstPort                 3
+          #GUID                   b519a0fc-19c7-4d46-987d-5d28154fbe6f
+        }
+        Line {
+          SrcBlock                "SSW_1"
+          SrcPort                 1
+          DstBlock                "pv"
+          DstPort                 1
+          #GUID                   33969151-6ed7-4992-aff1-4eae3459fe92
+        }
+        Line {
+          SrcBlock                "SUB_1"
+          SrcPort                 1
+          DstBlock                "SSW_1"
+          DstPort                 2
+          #GUID                   0b2d55b6-3efa-49b4-bb40-9df4607e7cab
+        }
+        Line {
+          SrcBlock                "mv"
+          SrcPort                 1
+          Points                  [15, 0]
+          #GUID                   a326367b-49e6-4758-8bc7-2e3439085ef3
+          Branch {
+            Points                  [0, 40]
+            DstBlock                "MDL_P0"
+            DstPort                 1
+            #GUID                   97dbb9fb-3e00-43f0-bfdd-bf25b1934b7a
+          }
+          Branch {
+            DstBlock                "MDL_PDT"
+            DstPort                 1
+            #GUID                   70a96518-dd64-4605-9623-a9835b8911ba
+          }
+        }
+      }
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_SMITH"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [275, 312, 320, 388]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       3
+      l                       1000
+      btype                   8
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   77897f63-8623-4218-b9a8-605d135587f4
+        timesrc       1
+    }
+    Block {
+      BlockType               Outport
+      Name                    "mv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 113, 535, 127]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   5c4fa0a3-9a1d-46c1-b4a3-63b25fda387b
+    }
+    Line {
+      SrcBlock                "CNB_MAN"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 6
+      #GUID                   17754f53-ab6f-484b-a1aa-7ae0cc0f7aae
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND_SMITH"
+      DstPort                 5
+      #GUID                   62b2fe22-9e5f-401f-a0ed-36780a0f2c7d
+    }
+    Line {
+      SrcBlock                "CNB_SMITH_ON"
+      SrcPort                 1
+      Points                  [40, 0; 0, -20]
+      DstBlock                "Smith_Predictor"
+      DstPort                 2
+      #GUID                   6178bcdb-6f10-4011-b3cb-809f8477e75f
+    }
+    Line {
+      SrcBlock                "CNB_TAFF"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 10
+      #GUID                   3577623d-dce8-4369-ae68-24730e1b8636
+    }
+    Line {
+      SrcBlock                "CNI_ips"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 11
+      #GUID                   cd56f112-5b18-4414-b282-388ead857f4b
+    }
+    Line {
+      SrcBlock                "CNR_hv"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 5
+      #GUID                   410e2b16-116d-414a-941c-9d139d8651c1
+    }
+    Line {
+      SrcBlock                "CNR_sp"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   e80cc821-3e74-4b24-ab36-0a0380a5b679
+      Branch {
+        DstBlock                "Goto2"
+        DstPort                 1
+        #GUID                   8217e0e5-ffbf-4a2e-adab-c791861f395c
+      }
+      Branch {
+        Points                  [0, 25]
+        DstBlock                "PIDMA"
+        DstPort                 2
+        #GUID                   a737d8ef-abdd-4578-add4-8eb24ba8b5d8
+      }
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "TRND_SMITH"
+      DstPort                 2
+      #GUID                   d2545c2c-ba6a-41ba-9e0d-0ffdac8abd91
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "LPBRK_2"
+      DstPort                 1
+      #GUID                   9c5851d1-d7c5-481c-a5bb-e751c7110c63
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "TRND_SMITH"
+      DstPort                 1
+      #GUID                   5eed1c7b-5ed4-49c4-91dd-4113d6c296dd
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "TRND_SMITH"
+      DstPort                 3
+      #GUID                   ec563e9a-48b1-412b-9bd0-346a78b0539a
+    }
+    Line {
+      SrcBlock                "LPBRK"
+      SrcPort                 1
+      Points                  [-35, 0; 0, 65]
+      DstBlock                "PIDMA"
+      DstPort                 4
+      #GUID                   10969c04-f25f-46c9-8cb4-b2801098274c
+    }
+    Line {
+      SrcBlock                "LPBRK_2"
+      SrcPort                 1
+      DstBlock                "Smith_Predictor"
+      DstPort                 1
+      #GUID                   4213930e-f571-4dd2-a3ed-6fa17fbec433
+    }
+    Line {
+      SrcBlock                "MP_TBRK"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 9
+      #GUID                   42f29081-8339-470b-909e-77386d78e028
+    }
+    Line {
+      SrcBlock                "MP_TUNE"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 8
+      #GUID                   c2c1641f-72bd-4d03-b39d-ba2e257aa7e6
+    }
+    Line {
+      SrcBlock                "PIDMA"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   37b17f3a-4ded-43b0-932c-16e754ef39db
+      Branch {
+        Points                  [0, 30]
+        DstBlock                "Goto1"
+        DstPort                 1
+        #GUID                   7857086b-6696-4bb9-90fc-dbb2c22cc462
+      }
+      Branch {
+        Points                  [0, -30]
+        DstBlock                "LPBRK"
+        DstPort                 1
+        #GUID                   71a5f7ce-2f8d-48e2-bb51-b84f42542d00
+      }
+      Branch {
+        DstBlock                "mv"
+        DstPort                 1
+        #GUID                   31080ec4-f381-4f98-88b5-119d80385d04
+      }
+    }
+    Line {
+      SrcBlock                "SUB_2"
+      SrcPort                 1
+      DstBlock                "PIDMA"
+      DstPort                 3
+      #GUID                   43f2a1f5-f972-4577-8a7f-093e4af88dca
+    }
+    Line {
+      SrcBlock                "Smith_Predictor"
+      SrcPort                 1
+      Points                  [10, 0; 0, -45]
+      DstBlock                "SUB_2"
+      DstPort                 2
+      #GUID                   48800c18-5c18-414b-9302-8fa0295464f4
+    }
+    Line {
+      SrcBlock                "pv"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   33262423-e63d-40e8-b294-796509ca4549
+      Branch {
+        Points                  [0, -15]
+        DstBlock                "Goto"
+        DstPort                 1
+        #GUID                   18f70475-63f7-4cd2-bb98-97e1f59ba06d
+      }
+      Branch {
+        DstBlock                "SUB_2"
+        DstPort                 1
+        #GUID                   1a981537-a17a-40dc-9403-9a9c40f2b5ec
+      }
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   259a0113-d115-4df1-a2ea-707868ddb6fe
+    }
+    Annotation {
+      Position                [120, 20]
+      Text                    "Smith predictor - control task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   a289e857-912e-4659-8164-76e827aa55db
+    }
+  }
+}

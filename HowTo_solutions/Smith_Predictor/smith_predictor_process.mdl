@@ -1,0 +1,144 @@
+Model {
+  Name                    "smith_predictor_process"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "smith_predictor_process"
+    Location                [929, 31, 1211, 197]
+    #GUID                   6077f007-6fd7-4cc3-ad29-8ba1ee6b4a6e
+    Block {
+      BlockType               Inport
+      Name                    "mv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 118, 70, 132]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   39e12aa2-0c7c-4253-9057-7d4933db39df
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [110, 109, 135, 131]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "white"
+      #GUID                   687fa63c-372d-4e60-a551-6e83cb4e2d1e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_INP_DIST"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 83, 60, 97]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   cb999d8b-69f6-477b-8d22-2ec002d77a9d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MDL_PROC"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [160, 113, 185, 127]
+      SourceBlock             "modellib/MDL"
+      ShowName                on
+      NamePlacement           ""
+      k0                      2
+      del                     5
+      tau1                    3
+      tau2                    5
+      BackgroundColor         "white"
+      nmax                    100
+      #GUID                   be9c3ae0-8f7d-49c1-ae0d-f8b1c2f79c2c
+    }
+    Block {
+      BlockType               Outport
+      Name                    "pv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [215, 113, 245, 127]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      nmax                    100
+      #GUID                   5ca3b4bc-46bf-43d0-87e8-ceaa70a96288
+    }
+    Line {
+      SrcBlock                "ADD"
+      SrcPort                 1
+      DstBlock                "MDL_PROC"
+      DstPort                 1
+      #GUID                   d67e21dd-6203-410d-bc8e-7d2ad1e5aca7
+    }
+    Line {
+      SrcBlock                "CNR_INP_DIST"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "ADD"
+      DstPort                 1
+      #GUID                   e9fde64a-cf5e-4762-8ceb-63321bc9b37e
+    }
+    Line {
+      SrcBlock                "MDL_PROC"
+      SrcPort                 1
+      DstBlock                "pv"
+      DstPort                 1
+      #GUID                   64250647-7855-49af-875f-1dc25c9ba100
+    }
+    Line {
+      SrcBlock                "mv"
+      SrcPort                 1
+      DstBlock                "ADD"
+      DstPort                 2
+      #GUID                   d81a0973-e6a8-411c-8817-87b12ed06a1e
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   355e60b5-b37f-48ff-8f8c-d9c8f2b39541
+    }
+    Annotation {
+      Position                [130, 20]
+      Text                    "Smith predictor - process model"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   3514314f-ae8f-4d00-978d-c16528b6411b
+    }
+  }
+}

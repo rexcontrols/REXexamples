@@ -1,4 +1,4 @@
-Raspberry Pi as a simple thermostat 
+﻿Raspberry Pi as a simple thermostat 
 ===================================
  
 This folder contains the source files for the demonstration project on using
@@ -6,7 +6,7 @@ the REX Control System on the Raspberry Pi minicomputer.
 
 In this example the Raspberry Pi is configured to act as a simple thermostat. 
 The temperature is measured by the 1-Wire DS18B20 sensor and the GPIO pin 17 
-switches a relay on and off with a hysteresis of 0.5�C.
+switches a relay on and off with a hysteresis of 0.5°C.
 
 The measured temperature and status of the relay is recorded in the TRND blocks
 which allow displaying of the trends (graphs) in the RexView diagnostic tool. 
@@ -16,7 +16,7 @@ which allow displaying of the trends (graphs) in the RexView diagnostic tool.
 The algorithm runs each 500 milliseconds (0.5 s). See the EXEC function block,  
 tick x ntick0 = 0.05 x 10 = 0.5 
 
-## Prerequisities ##
+## Prerequisites ##
 - RexCore, RPiDrv and OwsDrv modules must be installed and running on the target 
   device (Raspberry Pi).
 - Owserver (part of the OWFS package) must be installed, correctly configured 
@@ -36,10 +36,10 @@ tick x ntick0 = 0.05 x 10 = 0.5
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX on the Raspberry Pi minicomputer](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
-- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
-- [OwsDrv - 1-Wire driver](http://www.rexcontrols.com/media/DOC/ENGLISH/OwsDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX on the Raspberry Pi minicomputer](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
+- [OwsDrv - 1-Wire driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/OwsDrv/OwsDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

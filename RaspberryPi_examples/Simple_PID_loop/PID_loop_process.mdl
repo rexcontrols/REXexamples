@@ -1,0 +1,127 @@
+Model {
+  Name                    "PID_loop_process"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "PID_loop_process"
+    Location                [644, 31, 997, 199]
+    #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
+    Block {
+      BlockType               Inport
+      Name                    "mv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 88, 70, 102]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   a848910b-e39d-44a7-9df8-2651a568f8e7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 88, 125, 102]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      100
+      y2                      1023
+      #GUID                   4457989e-3f0f-49b8-adbd-fbf11c31d159
+    }
+    Block {
+      BlockType               From
+      Name                    "OWS__temperature"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [150, 108, 270, 122]
+      BackgroundColor         "yellow"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "OWS__temperature"
+      #GUID                   b69ae2c5-26d0-4042-8738-699b56d5f0b7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "RPI__PWM18"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 88, 265, 102]
+      BackgroundColor         "lightBlue"
+      ShowName                off
+      GotoTag                 "RPI__PWM18"
+      TagVisibility           "local"
+      NamePlacement           ""
+      #GUID                   904eaf42-ac95-48fb-904e-78148e8b379c
+    }
+    Block {
+      BlockType               Outport
+      Name                    "pv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 108, 330, 122]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   2cce57ad-a50c-41f2-a7bd-27c4add0c590
+    }
+    Line {
+      SrcBlock                "LIN"
+      SrcPort                 1
+      DstBlock                "RPI__PWM18"
+      DstPort                 1
+      #GUID                   31b5e15f-0dee-499f-b56d-d34365b93d70
+    }
+    Line {
+      SrcBlock                "OWS__temperature"
+      SrcPort                 1
+      DstBlock                "pv"
+      DstPort                 1
+      #GUID                   da4af11b-402b-41fe-87e3-1b95c881c2a9
+    }
+    Line {
+      SrcBlock                "mv"
+      SrcPort                 1
+      DstBlock                "LIN"
+      DstPort                 1
+      #GUID                   8f63f185-3ab0-4141-aa85-4ddffbce5399
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8230062f-06c5-4171-a220-665fca4b36eb
+    }
+    Annotation {
+      Position                [130, 20]
+      Text                    "Simple PID loop - process task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   0f89bc49-e9f7-40a2-8b64-d725756bd51b
+    }
+  }
+}

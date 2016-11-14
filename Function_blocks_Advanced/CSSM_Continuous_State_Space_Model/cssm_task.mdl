@@ -1,0 +1,434 @@
+Model {
+  Name                    "cssm_task"
+  Version                 7.4
+  MdlSubVersion           0
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime        "0.035000"
+  OverrideScopeRefreshTime on
+  DisableAllScopes        off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength    120
+  Created                 "Sat Aug 08 22:34:30 2009"
+  Creator                 "pbalda"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "pbalda"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon Jun 18 16:41:43 2012"
+  RTWModifiedTimeStamp    261918837
+  ModelVersionFormat      "1.%<AutoIncrement:32>"
+  ConfigurationManager    "none"
+  SampleTimeColors        off
+  SampleTimeAnnotations   off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ShowTestPointIcons      on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons         on
+  SortedOrder             off
+  ExecutionContextIcon    off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  SimulationMode          "normal"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  CovReportOnPause        on
+  CovModelRefEnable       "Off"
+  CovExternalEMLEnable    off
+  ExtModeBatchMode        off
+  ExtModeEnableFloating   on
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    BlockRotation           0
+    BlockMirror             off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "cssm_task"
+    Location                [308, 32, 850, 551]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "A4"
+    PaperUnits              "centimeters"
+    TiledPaperMargins       [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ReportName              "simulink-default.rpt"
+    SIDHighWatermark        5
+    #GUID                   3d2c07f3-e078-4bea-8502-2c69d3c65b15
+    Block {
+      BlockType               Reference
+      Name                    "CDELSSM"
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [335, 90, 385, 365]
+      SourceBlock             "modellib/CDELSSM"
+      SID                     1
+      LibraryVersion          "1.4"
+      SourceType              "CDELSSM"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      UD                      off
+      del                     "1.5"
+      is                      2
+      eps                     "1.0e-15"
+      Ac                      [-0.36 -1.24 -0.18; 1 0 0; 0 1 0]
+      Bc                      [0.5; 0; 0]
+      Cc                      [0.12 0.48 0.36]
+      Dc                      [0]
+      x0                      [0; 0; 0]
+      NamePlacement           ""
+      ShowName                on
+      FontSize                10
+      BackgroundColor         "cyan"
+      #GUID                   978d8c1b-0b2d-4079-8589-291b0f881c65
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [415, 463, 430, 477]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   2b14d07f-19e0-4e09-af9c-6b085c5c60cf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_u"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 123, 40, 137]
+      SourceBlock             "mathlib/CNR"
+      SID                     2
+      LibraryVersion          "1.131"
+      SourceType              "CNR"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      ycn                     0
+      NamePlacement           ""
+      ShowName                on
+      BackgroundColor         "magenta"
+      #GUID                   e437971a-d4e3-4264-973b-d330ea477a0b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CSSM"
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [125, 90, 175, 365]
+      SourceBlock             "modellib/CSSM"
+      SID                     3
+      LibraryVersion          "1.4"
+      SourceType              "CSSM"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      UD                      off
+      is                      2
+      eps                     "1.0e-15"
+      Ac                      [-0.36  -1.24  -0.18; 1 0 0; 0 1  0]
+      Bc                      [0.5; 0; 0]
+      Cc                      [0.12 0.48 0.36]
+      Dc                      [0]
+      x0                      [0; 0; 0]
+      NamePlacement           ""
+      ShowName                on
+      BackgroundColor         "cyan"
+      #GUID                   c1ef290d-8d05-4887-a705-a9d5d0a916ff
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [65, 93, 105, 107]
+      ShowName                off
+      GotoTag                 "reset"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   0be4a5b9-42b4-4317-8d27-299f284382de
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [280, 93, 320, 107]
+      ShowName                off
+      GotoTag                 "reset"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   0a09e905-9cbf-448a-99a6-dc3cd3187dfe
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [270, 423, 335, 437]
+      ShowName                off
+      GotoTag                 "CSSM_y1"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   cf2c42d7-4a47-4705-9da0-d5d566cc2ff6
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [350, 433, 440, 447]
+      ShowName                off
+      GotoTag                 "CDELSSM_y1"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   dfccb43d-a37d-4e14-997e-619d9258ae3d
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [195, 118, 255, 132]
+      ShowName                off
+      GotoTag                 "CSSM_y1"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   ba2a6abc-6f7a-4a6f-8619-19f6de5cefe4
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [70, 423, 110, 437]
+      ShowName                off
+      GotoTag                 "reset"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   96078923-c741-4599-b864-3549252f92c9
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [420, 118, 510, 132]
+      ShowName                off
+      GotoTag                 "CDELSSM_y1"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   4e6ed632-2d81-4672-bb6e-17933d9b8e62
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_R1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 423, 40, 437]
+      SourceBlock             "genlib/MP"
+      ShowName                on
+      NamePlacement           ""
+      pwidth                  "0.001"
+      BSTATE                  off
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   f895bf35-3316-4ca4-be6e-09b673a8db03
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [455, 418, 500, 492]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       2
+      l                       200
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   35d5c17a-c1a1-4530-8da8-054206d63515
+        timesrc       1
+    }
+    Line {
+      SrcBlock                "CDELSSM"
+      SrcPort                 2
+      DstBlock                "Goto3"
+      DstPort                 1
+      #GUID                   c15a3360-cc9d-4801-89f3-93aae9cd4c7a
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   6bf3f9f8-660b-433a-98e9-5edc689d2408
+    }
+    Line {
+      SrcBlock                "CNR_u"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   3674c33a-14f0-4eef-aa23-5b1125eca08f
+      Branch {
+        Points                  [0, -60; 215, 0; 0, 60]
+        DstBlock                "CDELSSM"
+        DstPort                 3
+        #GUID                   46a88353-42e8-4171-bd2f-5a1369f2e640
+      }
+      Branch {
+        DstBlock                "CSSM"
+        DstPort                 3
+        #GUID                   1831728e-b9dc-4ab0-92ba-f39d1392da87
+      }
+    }
+    Line {
+      SrcBlock                "CSSM"
+      SrcPort                 2
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   62010606-e53c-4df0-a8a6-d41fbc0303b3
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "CSSM"
+      DstPort                 1
+      #GUID                   62593df6-cfc5-4bdc-939e-901172ff0410
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "CDELSSM"
+      DstPort                 1
+      #GUID                   ae7034c4-9a98-4a37-946b-ed8708eeb75a
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   d6d7b517-1c2a-4d70-8471-253772dedf01
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   5811680d-d794-48c8-8f6c-25ce61bb4c7c
+    }
+    Line {
+      SrcBlock                "MP_R1"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   75265c41-cf0f-4925-98e8-e5ce6f537b9b
+    }
+    Annotation {
+      Position                [140, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   f2352ae4-bde7-4abb-a96f-756458a541e9
+    }
+    Annotation {
+      Position                [225, 20]
+      Text                    "Simulation of discretized continuous state spac"
+"e models"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   c853c5b9-ba7a-4824-a768-566f5e8e7265
+    }
+  }
+}

@@ -1,0 +1,143 @@
+Model {
+  Name                    "MonarcoHATdemo_exec"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7501, Date 2016-11-02"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "MonarcoHATdemo_exec"
+    Location                [11, 35, 227, 449]
+    #GUID                   764087fb-0120-425a-b6c4-f0ad598d1aba
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [30, 38, 75, 327]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.01"
+      ntick0                  1
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   de17c7ee-dee3-4f61-8c92-00f8c48d94fd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [110, 313, 160, 327]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        off
+      GenerateRexHMI          on
+      RedirectToHMI           on
+      Compression             off
+      #GUID                   8499fda3-216f-46d4-81bc-66e79ca792d8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "INFO"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [110, 283, 160, 297]
+      SourceBlock             "execlib/INFO"
+      Title                   "Monarco HAT demo example"
+      Author                  "REX Controls s.r.o."
+      Description             "Monarco HAT demo example"
+      Customer                ""
+      #GUID                   9e57a0b9-2ba4-4dcf-9b83-ddcc9e0aec8c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 88, 160, 102]
+      SourceBlock             "execlib/IODRV"
+      module                  "MonarcoDrv"
+      classname               "MonarcoHatDrv"
+      cfgname                 "monarcohat.rio"
+      factor                  10
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   381e3fd3-c547-4098-8693-ba9b2f153906
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MonarcoDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 53, 160, 67]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   c8912fd7-5b56-4b58-ab75-aa2115780e6b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MonarcoHATdemo_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 193, 165, 207]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   d3816513-7d3d-4914-9ea4-6b2fe6fcae06
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "MonarcoDrv"
+      DstPort                 1
+      #GUID                   3f21ef3e-dc30-4d2f-a7ac-6fe419d15bdd
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "MNR"
+      DstPort                 1
+      #GUID                   ac774c94-3a9c-4354-8820-df0d20a37059
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "MonarcoHATdemo_task"
+      DstPort                 1
+      #GUID                   19318977-d14e-4bd5-a623-25d2d3fdd4ba
+    }
+  }
+}

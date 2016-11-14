@@ -1,7 +1,8 @@
 Model {
   Name                    "demo_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "demo_exec"
-    Location                [12, 34, 184, 382]
+    Location                [11, 31, 232, 475]
     #GUID                   06eb7513-3603-4d98-8e52-a52eb191a7dc
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [20, 18, 65, 307]
+      Position                [45, 103, 90, 392]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.01"
@@ -55,9 +56,24 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [125, 363, 175, 377]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        on
+      GenerateRexHMI          on
+      RedirectToHMI           off
+      Compression             off
+      #GUID                   d8a9f992-5186-4767-913b-96b69b10e1f0
+    }
+    Block {
+      BlockType               Reference
       Name                    "RPI"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 68, 150, 82]
+      Position                [125, 153, 175, 167]
       SourceBlock             "execlib/IODRV"
       module                  "RPiDrv"
       classname               "RPiDrv"
@@ -72,7 +88,7 @@ Model {
       BlockType               Reference
       Name                    "RPiDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 33, 150, 47]
+      Position                [125, 118, 175, 132]
       SourceBlock             "execlib/MODULE"
       #GUID                   d2ed1989-cb74-4671-848c-1be18226cbe2
     }
@@ -80,7 +96,7 @@ Model {
       BlockType               Reference
       Name                    "demo_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 173, 150, 187]
+      Position                [125, 258, 175, 272]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -110,6 +126,18 @@ Model {
       DstBlock                "demo_task"
       DstPort                 1
       #GUID                   cff4a95d-20ef-4f5c-bfea-6326f4863790
+    }
+    Annotation {
+      Position                [115, 45]
+      Text                    "See the README.md file for details."
+      #GUID                   9ba32ff1-a1c4-4f78-b136-67d35ecfdd44
+    }
+    Annotation {
+      Position                [105, 20]
+      Text                    "Demo for PiFace Digital"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   d0ced943-c3a6-4812-9d73-f3841c2642ff
     }
   }
 }

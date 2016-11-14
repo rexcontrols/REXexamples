@@ -1,4 +1,4 @@
-REX Control System on Raspberry Pi with the PiFace Digital expansion board
+﻿REX Control System on Raspberry Pi with the PiFace Digital expansion board
 ==========================================================================
 
 The examples contained in this folder demonstrate the use of the REX Control 
@@ -7,8 +7,8 @@ attached.
 
 ## Documentation ##
 
-- [Getting started with REX and Raspberry Pi](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX and Raspberry Pi](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

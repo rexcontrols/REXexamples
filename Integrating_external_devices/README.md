@@ -1,4 +1,4 @@
-Integrating external devices in the REX Control System 
+﻿Integrating external devices in the REX Control System 
 ======================================================
 
 Many devices are natively supported by the REX Control System (Modbus RTU 

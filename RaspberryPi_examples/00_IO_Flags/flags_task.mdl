@@ -1,0 +1,1732 @@
+Model {
+  Name                    "flags_task"
+  Version                 3.00
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Thu Jan 06 15:26:11 2005"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "mertlj"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Apr 29 09:25:44 2008"
+  ModelVersionFormat      "1.%<AutoIncrement:195>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.50.1 rev. 7390, Date 2016-10-24"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "flags_task"
+    Location                [215, 35, 1150, 1000]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "A4"
+    PaperUnits              "centimeters"
+    AutoZoom                on
+    ReportName              "simulink-default.rpt"
+    #GUID                   92200e26-7821-416b-a2d2-6b94ab9f00ec
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 163, 110, 177]
+      ShowName                off
+      GotoTag                 "RPI__GPIO4"
+      BackgroundColor         "yellow"
+      #GUID                   2e0c3567-cd34-44e0-9cc1-a6a0f51eb321
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 348, 110, 362]
+      ShowName                off
+      GotoTag                 "RPI__GPIO5"
+      BackgroundColor         "yellow"
+      #GUID                   8e9c0223-7e0e-4778-92d7-fdecdf0cb5d8
+    }
+    Block {
+      BlockType               From
+      Name                    "From10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 368, 110, 382]
+      ShowName                off
+      GotoTag                 "RPI__GPIO6"
+      BackgroundColor         "yellow"
+      #GUID                   5fd14b3f-08cf-4ff0-aefe-93ea7455918b
+    }
+    Block {
+      BlockType               From
+      Name                    "From11"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 183, 250, 197]
+      ShowName                off
+      GotoTag                 "RPI__GPIO17D"
+      BackgroundColor         "yellow"
+      #GUID                   b0d7f80c-e432-4cfc-b7de-70fefd25f42f
+    }
+    Block {
+      BlockType               From
+      Name                    "From12"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 203, 250, 217]
+      ShowName                off
+      GotoTag                 "RPI__GPIO18D"
+      BackgroundColor         "yellow"
+      #GUID                   1a8e2f30-b4f8-4974-aea4-4e8cd4a60912
+    }
+    Block {
+      BlockType               From
+      Name                    "From13"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 223, 250, 237]
+      ShowName                off
+      GotoTag                 "RPI__GPIO22D"
+      BackgroundColor         "yellow"
+      #GUID                   c9d78be7-bd6c-4533-8e8f-b1c1c42ff304
+    }
+    Block {
+      BlockType               From
+      Name                    "From14"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 243, 250, 257]
+      ShowName                off
+      GotoTag                 "RPI__GPIO23D"
+      BackgroundColor         "yellow"
+      #GUID                   007bb394-72a0-4df0-be01-e2197a91f1a1
+    }
+    Block {
+      BlockType               From
+      Name                    "From15"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 263, 250, 277]
+      ShowName                off
+      GotoTag                 "RPI__GPIO24D"
+      BackgroundColor         "yellow"
+      #GUID                   5fe6c8b0-f336-4274-8e79-94fceaf1eb9f
+    }
+    Block {
+      BlockType               From
+      Name                    "From16"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 283, 250, 297]
+      ShowName                off
+      GotoTag                 "RPI__GPIO25D"
+      BackgroundColor         "yellow"
+      #GUID                   64e0436d-5653-4d10-a2e1-bd8b25d0200c
+    }
+    Block {
+      BlockType               From
+      Name                    "From17"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 303, 250, 317]
+      ShowName                off
+      GotoTag                 "RPI__GPIO27D"
+      BackgroundColor         "yellow"
+      #GUID                   304cd3e8-aca5-46fa-9a76-174220366a97
+    }
+    Block {
+      BlockType               From
+      Name                    "From18"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 388, 110, 402]
+      ShowName                off
+      GotoTag                 "RPI__GPIO12"
+      BackgroundColor         "yellow"
+      #GUID                   fbe4674f-282d-49e4-a391-acefd86a612c
+    }
+    Block {
+      BlockType               From
+      Name                    "From19"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 183, 390, 197]
+      ShowName                off
+      GotoTag                 "RPI__GPIO17U"
+      BackgroundColor         "yellow"
+      #GUID                   89f35da7-ba95-4fc9-a3b9-78691498e90c
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 183, 110, 197]
+      ShowName                off
+      GotoTag                 "RPI__GPIO17"
+      BackgroundColor         "yellow"
+      #GUID                   31fd0e04-3fb7-46e3-b9dc-7d9ef31558fa
+    }
+    Block {
+      BlockType               From
+      Name                    "From20"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 203, 390, 217]
+      ShowName                off
+      GotoTag                 "RPI__GPIO18U"
+      BackgroundColor         "yellow"
+      #GUID                   f5a295f4-f2b6-4e82-8e3c-e07096aa8ac3
+    }
+    Block {
+      BlockType               From
+      Name                    "From21"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 223, 390, 237]
+      ShowName                off
+      GotoTag                 "RPI__GPIO22U"
+      BackgroundColor         "yellow"
+      #GUID                   0c04a757-db87-4f7d-94a2-8d2917d18112
+    }
+    Block {
+      BlockType               From
+      Name                    "From22"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 243, 390, 257]
+      ShowName                off
+      GotoTag                 "RPI__GPIO23U"
+      BackgroundColor         "yellow"
+      #GUID                   196ee8b4-c606-49d4-a0dc-715fe60b63df
+    }
+    Block {
+      BlockType               From
+      Name                    "From23"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 263, 390, 277]
+      ShowName                off
+      GotoTag                 "RPI__GPIO24U"
+      BackgroundColor         "yellow"
+      #GUID                   01c27c35-97fa-4d4c-8015-55249ad27be7
+    }
+    Block {
+      BlockType               From
+      Name                    "From24"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 283, 390, 297]
+      ShowName                off
+      GotoTag                 "RPI__GPIO25U"
+      BackgroundColor         "yellow"
+      #GUID                   7cbfcbd3-fa30-4ee1-9e10-5c5d59a10177
+    }
+    Block {
+      BlockType               From
+      Name                    "From25"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 303, 390, 317]
+      ShowName                off
+      GotoTag                 "RPI__GPIO27U"
+      BackgroundColor         "yellow"
+      #GUID                   50c2ac7e-b028-4bcf-91da-01ee612b2ade
+    }
+    Block {
+      BlockType               From
+      Name                    "From26"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 163, 390, 177]
+      ShowName                off
+      GotoTag                 "RPI__GPIO4U"
+      BackgroundColor         "yellow"
+      #GUID                   6ff4baa9-472d-4095-ad06-bd275cdf72c7
+    }
+    Block {
+      BlockType               From
+      Name                    "From27"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [505, 163, 595, 177]
+      ShowName                off
+      GotoTag                 "RPI__PFI0"
+      BackgroundColor         "yellow"
+      #GUID                   96cfb5a2-45d0-413c-9275-3ee916d51776
+    }
+    Block {
+      BlockType               From
+      Name                    "From28"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [505, 183, 595, 197]
+      ShowName                off
+      GotoTag                 "RPI__PFI1"
+      BackgroundColor         "yellow"
+      #GUID                   b880d668-ad9a-416b-b9a9-4897c9ce8b70
+    }
+    Block {
+      BlockType               From
+      Name                    "From29"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 163, 745, 177]
+      ShowName                off
+      GotoTag                 "RPI__PFI0U"
+      BackgroundColor         "yellow"
+      #GUID                   8c153429-5e5b-48b4-a848-d26d1240dc92
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 203, 110, 217]
+      ShowName                off
+      GotoTag                 "RPI__GPIO18"
+      BackgroundColor         "yellow"
+      #GUID                   a2503c18-a31b-40ac-adee-3bffcb4b45ba
+    }
+    Block {
+      BlockType               From
+      Name                    "From30"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 183, 745, 197]
+      ShowName                off
+      GotoTag                 "RPI__PFI1U"
+      BackgroundColor         "yellow"
+      #GUID                   923cde32-07d0-4c29-9ff8-774417db6e2c
+    }
+    Block {
+      BlockType               From
+      Name                    "From31"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 203, 745, 217]
+      ShowName                off
+      GotoTag                 "RPI__PFI2U"
+      BackgroundColor         "yellow"
+      #GUID                   253d3718-2577-4cac-8d35-42dcf036036c
+    }
+    Block {
+      BlockType               From
+      Name                    "From32"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 223, 745, 237]
+      ShowName                off
+      GotoTag                 "RPI__PFI3U"
+      BackgroundColor         "yellow"
+      #GUID                   163205ce-9e57-444f-aa01-cee02f185d39
+    }
+    Block {
+      BlockType               From
+      Name                    "From33"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 243, 745, 257]
+      ShowName                off
+      GotoTag                 "RPI__PFI4U"
+      BackgroundColor         "yellow"
+      #GUID                   bd637ac1-7e88-4daf-b3e1-486fe6ee102c
+    }
+    Block {
+      BlockType               From
+      Name                    "From34"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 263, 745, 277]
+      ShowName                off
+      GotoTag                 "RPI__PFI5U"
+      BackgroundColor         "yellow"
+      #GUID                   e4262310-4604-4877-ac19-91eed424e9de
+    }
+    Block {
+      BlockType               From
+      Name                    "From35"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 283, 745, 297]
+      ShowName                off
+      GotoTag                 "RPI__PFI6U"
+      BackgroundColor         "yellow"
+      #GUID                   72c34338-f1bf-4909-be5c-47853efa7199
+    }
+    Block {
+      BlockType               From
+      Name                    "From36"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [655, 303, 745, 317]
+      ShowName                off
+      GotoTag                 "RPI__PFI7U"
+      BackgroundColor         "yellow"
+      #GUID                   6f7a7be3-cf8a-4faf-ace0-7485e98f44ec
+    }
+    Block {
+      BlockType               From
+      Name                    "From37"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [630, 593, 720, 607]
+      ShowName                off
+      GotoTag                 "RPI__PFI5C1U"
+      BackgroundColor         "yellow"
+      #GUID                   9608f9c7-233b-4b99-952d-5a93f1adc769
+    }
+    Block {
+      BlockType               From
+      Name                    "From38"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 408, 110, 422]
+      ShowName                off
+      GotoTag                 "RPI__GPIO13"
+      BackgroundColor         "yellow"
+      #GUID                   109f4ba5-30c8-477c-ba59-61d521959269
+    }
+    Block {
+      BlockType               From
+      Name                    "From39"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [505, 203, 595, 217]
+      ShowName                off
+      GotoTag                 "RPI__PFI2"
+      BackgroundColor         "yellow"
+      #GUID                   3921ae75-4715-4f87-ab71-5f209a068a8d
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 223, 110, 237]
+      ShowName                off
+      GotoTag                 "RPI__GPIO22"
+      BackgroundColor         "yellow"
+      #GUID                   88288642-e889-4557-b844-a2c743c13335
+    }
+    Block {
+      BlockType               From
+      Name                    "From40"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 428, 110, 442]
+      ShowName                off
+      GotoTag                 "RPI__GPIO16"
+      BackgroundColor         "yellow"
+      #GUID                   a4242e31-0563-4897-8747-fb7ccdb6ee11
+    }
+    Block {
+      BlockType               From
+      Name                    "From41"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 448, 110, 462]
+      ShowName                off
+      GotoTag                 "RPI__GPIO19"
+      BackgroundColor         "yellow"
+      #GUID                   9800dd9e-050e-4509-abf9-16a9650356a2
+    }
+    Block {
+      BlockType               From
+      Name                    "From42"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 468, 110, 482]
+      ShowName                off
+      GotoTag                 "RPI__GPIO20"
+      BackgroundColor         "yellow"
+      #GUID                   71f4b11f-e68b-4a5d-9cb6-b4e738a07399
+    }
+    Block {
+      BlockType               From
+      Name                    "From43"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 488, 110, 502]
+      ShowName                off
+      GotoTag                 "RPI__GPIO21"
+      BackgroundColor         "yellow"
+      #GUID                   413c864b-1e84-41a7-b9af-642ce0f632d6
+    }
+    Block {
+      BlockType               From
+      Name                    "From44"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 508, 110, 522]
+      ShowName                off
+      GotoTag                 "RPI__GPIO26"
+      BackgroundColor         "yellow"
+      #GUID                   e68b8dbd-453a-490a-9e56-4d090bfc7361
+    }
+    Block {
+      BlockType               From
+      Name                    "From45"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 348, 250, 362]
+      ShowName                off
+      GotoTag                 "RPI__GPIO5D"
+      BackgroundColor         "yellow"
+      #GUID                   4b75d735-3a15-4be4-8301-7cddccc69feb
+    }
+    Block {
+      BlockType               From
+      Name                    "From46"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 368, 250, 382]
+      ShowName                off
+      GotoTag                 "RPI__GPIO6D"
+      BackgroundColor         "yellow"
+      #GUID                   09e015e6-292c-4b95-9370-5106f79d1f20
+    }
+    Block {
+      BlockType               From
+      Name                    "From47"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [505, 223, 595, 237]
+      ShowName                off
+      GotoTag                 "RPI__PFI3"
+      BackgroundColor         "yellow"
+      #GUID                   d4f25dc7-5bde-4be8-9747-543c35abdc0b
+    }
+    Block {
+      BlockType               From
+      Name                    "From48"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [505, 243, 595, 257]
+      ShowName                off
+      GotoTag                 "RPI__PFI4"
+      BackgroundColor         "yellow"
+      #GUID                   23674f24-6568-4a6a-aed9-e66e011d587a
+    }
+    Block {
+      BlockType               From
+      Name                    "From49"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [505, 263, 595, 277]
+      ShowName                off
+      GotoTag                 "RPI__PFI5"
+      BackgroundColor         "yellow"
+      #GUID                   c09f9a04-2fac-4670-9769-d50a062a6f89
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 243, 110, 257]
+      ShowName                off
+      GotoTag                 "RPI__GPIO23"
+      BackgroundColor         "yellow"
+      #GUID                   032ffe5b-3b02-413e-bdd8-77430c33eceb
+    }
+    Block {
+      BlockType               From
+      Name                    "From50"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [505, 283, 595, 297]
+      ShowName                off
+      GotoTag                 "RPI__PFI6"
+      BackgroundColor         "yellow"
+      #GUID                   ecf26188-31f9-44ff-a471-bb35849b8078
+    }
+    Block {
+      BlockType               From
+      Name                    "From51"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [505, 303, 595, 317]
+      ShowName                off
+      GotoTag                 "RPI__PFI7"
+      BackgroundColor         "yellow"
+      #GUID                   aa6f8217-ef77-43d4-8a8f-f943cd24bbf0
+    }
+    Block {
+      BlockType               From
+      Name                    "From52"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 388, 250, 402]
+      ShowName                off
+      GotoTag                 "RPI__GPIO12D"
+      BackgroundColor         "yellow"
+      #GUID                   f4de822f-fb6a-4fdb-8af3-d189507f6f37
+    }
+    Block {
+      BlockType               From
+      Name                    "From53"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 408, 250, 422]
+      ShowName                off
+      GotoTag                 "RPI__GPIO13D"
+      BackgroundColor         "yellow"
+      #GUID                   59f52f10-a500-4f4d-94fd-921992cdb0ee
+    }
+    Block {
+      BlockType               From
+      Name                    "From54"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 428, 250, 442]
+      ShowName                off
+      GotoTag                 "RPI__GPIO16D"
+      BackgroundColor         "yellow"
+      #GUID                   f900e030-9613-41f2-960d-54459368a573
+    }
+    Block {
+      BlockType               From
+      Name                    "From55"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 448, 250, 462]
+      ShowName                off
+      GotoTag                 "RPI__GPIO19D"
+      BackgroundColor         "yellow"
+      #GUID                   b30b30e4-27c6-4083-bc32-d8dd4dd0db60
+    }
+    Block {
+      BlockType               From
+      Name                    "From56"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 468, 250, 482]
+      ShowName                off
+      GotoTag                 "RPI__GPIO20D"
+      BackgroundColor         "yellow"
+      #GUID                   6b9e39e1-1ecc-4229-9ca1-b7c92c361fe9
+    }
+    Block {
+      BlockType               From
+      Name                    "From57"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 488, 250, 502]
+      ShowName                off
+      GotoTag                 "RPI__GPIO21D"
+      BackgroundColor         "yellow"
+      #GUID                   cf975285-1ef2-4299-93b8-65f9382647ed
+    }
+    Block {
+      BlockType               From
+      Name                    "From58"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 508, 250, 522]
+      ShowName                off
+      GotoTag                 "RPI__GPIO26D"
+      BackgroundColor         "yellow"
+      #GUID                   712bf517-94f6-4101-9323-df4fabc6cb44
+    }
+    Block {
+      BlockType               From
+      Name                    "From59"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 348, 390, 362]
+      ShowName                off
+      GotoTag                 "RPI__GPIO5U"
+      BackgroundColor         "yellow"
+      #GUID                   9a8cf664-9fb3-4fef-8497-348ddda7bcae
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 263, 110, 277]
+      ShowName                off
+      GotoTag                 "RPI__GPIO24"
+      BackgroundColor         "yellow"
+      #GUID                   5a3adec7-0865-410a-bdb9-b200d85d5808
+    }
+    Block {
+      BlockType               From
+      Name                    "From60"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 368, 390, 382]
+      ShowName                off
+      GotoTag                 "RPI__GPIO6U"
+      BackgroundColor         "yellow"
+      #GUID                   96bf9a3e-e5b2-4919-bdc5-c741f0194615
+    }
+    Block {
+      BlockType               From
+      Name                    "From61"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 388, 390, 402]
+      ShowName                off
+      GotoTag                 "RPI__GPIO12U"
+      BackgroundColor         "yellow"
+      #GUID                   ef0da11e-d920-4e73-b03a-87da9c2660a8
+    }
+    Block {
+      BlockType               From
+      Name                    "From62"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 408, 390, 422]
+      ShowName                off
+      GotoTag                 "RPI__GPIO13U"
+      BackgroundColor         "yellow"
+      #GUID                   9241f1e4-4829-4619-af2d-ca6a07ad65be
+    }
+    Block {
+      BlockType               From
+      Name                    "From63"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 428, 390, 442]
+      ShowName                off
+      GotoTag                 "RPI__GPIO16U"
+      BackgroundColor         "yellow"
+      #GUID                   797ce453-3527-4c0f-a38f-bd70222ee313
+    }
+    Block {
+      BlockType               From
+      Name                    "From64"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 448, 390, 462]
+      ShowName                off
+      GotoTag                 "RPI__GPIO19U"
+      BackgroundColor         "yellow"
+      #GUID                   612263c3-9bbf-46bd-91af-853931a14cff
+    }
+    Block {
+      BlockType               From
+      Name                    "From65"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 468, 390, 482]
+      ShowName                off
+      GotoTag                 "RPI__GPIO20U"
+      BackgroundColor         "yellow"
+      #GUID                   4e55997a-9c7c-4669-b58d-8cf2414f42e2
+    }
+    Block {
+      BlockType               From
+      Name                    "From66"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 488, 390, 502]
+      ShowName                off
+      GotoTag                 "RPI__GPIO21U"
+      BackgroundColor         "yellow"
+      #GUID                   8966a77f-fd6a-473f-92fb-21d61b6c7c21
+    }
+    Block {
+      BlockType               From
+      Name                    "From67"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [300, 508, 390, 522]
+      ShowName                off
+      GotoTag                 "RPI__GPIO26U"
+      BackgroundColor         "yellow"
+      #GUID                   458d3078-f8ec-4785-bfa7-d5a48f83c486
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 283, 110, 297]
+      ShowName                off
+      GotoTag                 "RPI__GPIO25"
+      BackgroundColor         "yellow"
+      #GUID                   b124eafe-c90f-4d43-a451-a59f78fe70a5
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 303, 110, 317]
+      ShowName                off
+      GotoTag                 "RPI__GPIO27"
+      BackgroundColor         "yellow"
+      #GUID                   05e2903d-bf4c-4605-a271-45f21aa9d39e
+    }
+    Block {
+      BlockType               From
+      Name                    "From9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [160, 163, 250, 177]
+      ShowName                off
+      GotoTag                 "RPI__GPIO4D"
+      BackgroundColor         "yellow"
+      #GUID                   8d846843-7850-4eee-81a5-27b086c3e65e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 568, 110, 582]
+      ShowName                off
+      GotoTag                 "RPI__GPIO4"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   4bf62b62-0543-419d-8255-26f1b62ca6c3
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 373, 595, 387]
+      ShowName                off
+      GotoTag                 "RPI__PFO0"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c2559f3f-f6ff-49b7-b9ea-de6ec328ca59
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto10"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 773, 110, 787]
+      ShowName                off
+      GotoTag                 "RPI__GPIO5"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   04aa0d6e-b5d3-40b7-9ee5-afa179d6808a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto11"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 588, 250, 602]
+      ShowName                off
+      GotoTag                 "RPI__GPIO17L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   db464a89-3c04-4ae1-a547-cf8a5d96cc6e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto12"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 608, 250, 622]
+      ShowName                off
+      GotoTag                 "RPI__GPIO18L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   9ff9b516-bb90-431a-a413-770c236b598c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto13"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 648, 250, 662]
+      ShowName                off
+      GotoTag                 "RPI__GPIO22L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   1e00a635-7319-4c1b-8d22-f66aa59a6b73
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto14"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 668, 250, 682]
+      ShowName                off
+      GotoTag                 "RPI__GPIO23L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   400ef0de-b47f-45d5-8989-99f459151ee1
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto15"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 688, 250, 702]
+      ShowName                off
+      GotoTag                 "RPI__GPIO24L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   58e81857-9943-490f-a831-c7139a41b8f5
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto16"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 708, 250, 722]
+      ShowName                off
+      GotoTag                 "RPI__GPIO25L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   8b4707b0-66e6-47ce-9f22-a1c02c869730
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto17"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 728, 250, 742]
+      ShowName                off
+      GotoTag                 "RPI__GPIO27L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   323b80a3-c60c-4f13-b961-cdd86a67af89
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto18"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 793, 110, 807]
+      ShowName                off
+      GotoTag                 "RPI__GPIO6"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   9757342f-9c03-48aa-ba5f-a4da22342b06
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto19"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 588, 390, 602]
+      ShowName                off
+      GotoTag                 "RPI__GPIO17H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a97cde99-50ee-4113-a46d-938a59ee97a2
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 393, 595, 407]
+      ShowName                off
+      GotoTag                 "RPI__PFO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   7f576649-67ea-4c0c-9c8c-94c8021d2930
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto20"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 608, 390, 622]
+      ShowName                off
+      GotoTag                 "RPI__GPIO18H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3f772e13-203b-4b35-8f76-ecfdcefce357
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto21"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 648, 390, 662]
+      ShowName                off
+      GotoTag                 "RPI__GPIO22H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a0c302f2-d7bf-4fb6-b147-20fa0479b0c8
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto22"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 668, 390, 682]
+      ShowName                off
+      GotoTag                 "RPI__GPIO23H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   7e5fb9f1-5bf9-47b0-84a6-21970fbfd9d9
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto23"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 688, 390, 702]
+      ShowName                off
+      GotoTag                 "RPI__GPIO24H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   1a123520-8b9e-4933-9bf6-541e4ae2b022
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto24"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 708, 390, 722]
+      ShowName                off
+      GotoTag                 "RPI__GPIO25H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   72a23d25-2335-4855-be14-e6840e8e9639
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto25"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 728, 390, 742]
+      ShowName                off
+      GotoTag                 "RPI__GPIO27H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a59c429e-533c-4d16-8951-062a69c7b152
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto26"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 568, 390, 582]
+      ShowName                off
+      GotoTag                 "RPI__GPIO4H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   80462e99-39c7-4520-8782-7d806f393f67
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto27"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [650, 373, 740, 387]
+      ShowName                off
+      GotoTag                 "RPI__PFO0H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   25e89891-8372-48a6-ac7b-47fd2bcbd33c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto28"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 813, 110, 827]
+      ShowName                off
+      GotoTag                 "RPI__GPIO12"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   a057d108-5051-4759-9413-51c004e4e672
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto29"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 588, 110, 602]
+      ShowName                off
+      GotoTag                 "RPI__GPIO17"
+      BackgroundColor         "lightBlue"
+      #GUID                   dbb53bee-82c1-4221-b403-4eb2648e3981
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 413, 595, 427]
+      ShowName                off
+      GotoTag                 "RPI__PFO2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b2e4016a-9da2-44c9-b05a-a3f09e7940a6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto30"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 608, 110, 622]
+      ShowName                off
+      GotoTag                 "RPI__GPIO18"
+      BackgroundColor         "lightBlue"
+      #GUID                   4c127580-a4e1-41f7-9d3b-ffad22e5eb46
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto31"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 648, 110, 662]
+      ShowName                off
+      GotoTag                 "RPI__GPIO22"
+      BackgroundColor         "lightBlue"
+      #GUID                   1367612f-89e0-43bb-b7ac-90976f71c51e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto32"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 668, 110, 682]
+      ShowName                off
+      GotoTag                 "RPI__GPIO23"
+      BackgroundColor         "lightBlue"
+      #GUID                   76640d78-c80d-4eca-8fc5-c95c233368db
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto33"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 688, 110, 702]
+      ShowName                off
+      GotoTag                 "RPI__GPIO24"
+      BackgroundColor         "lightBlue"
+      #GUID                   53dd3035-bac5-46db-af5d-a9270742d7aa
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto34"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 708, 110, 722]
+      ShowName                off
+      GotoTag                 "RPI__GPIO25"
+      BackgroundColor         "lightBlue"
+      #GUID                   cad8e662-11c8-407c-8741-cb8f2569d6aa
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto35"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 728, 110, 742]
+      ShowName                off
+      GotoTag                 "RPI__GPIO27"
+      BackgroundColor         "lightBlue"
+      #GUID                   a2e4a9ec-4585-4f71-98a8-d063b009d1f4
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto36"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 628, 110, 642]
+      ShowName                off
+      GotoTag                 "RPI__PWM18"
+      BackgroundColor         "lightBlue"
+      #GUID                   a7aa3e53-9795-4347-a443-5eff2a0c9b3a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto37"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [650, 393, 740, 407]
+      ShowName                off
+      GotoTag                 "RPI__PFO1H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   631a4661-30e8-4c8f-9109-6f0cf4b5941b
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto38"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [650, 413, 740, 427]
+      ShowName                off
+      GotoTag                 "RPI__PFO2H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   6ec3f55a-7ec2-4c3c-b3ff-9f1da88ec0e5
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto39"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [650, 433, 740, 447]
+      ShowName                off
+      GotoTag                 "RPI__PFO3H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   28e31814-435b-48e2-abef-21ebddc749ee
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 433, 595, 447]
+      ShowName                off
+      GotoTag                 "RPI__PFO3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c05b6f30-5ba9-466a-aa1c-781d87109bc7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto40"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [650, 453, 740, 467]
+      ShowName                off
+      GotoTag                 "RPI__PFO4H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   7abbe3bb-2bd2-4e1d-8d87-0da220f50716
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto41"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [650, 473, 740, 487]
+      ShowName                off
+      GotoTag                 "RPI__PFO5H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b885bc3d-3265-44ea-aa45-0e4614baee95
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto42"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [650, 493, 740, 507]
+      ShowName                off
+      GotoTag                 "RPI__PFO6H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   10a57f8e-f719-4e13-b717-7dd1a4f8d56f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto43"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [650, 513, 740, 527]
+      ShowName                off
+      GotoTag                 "RPI__PFO7H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3c69eaf0-9414-43d8-8bb8-4d1964db85df
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto44"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [515, 593, 605, 607]
+      ShowName                off
+      GotoTag                 "RPI__PFO3C2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   78195f5c-bdc2-4927-a4b7-0f6fa04437c9
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto45"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 853, 110, 867]
+      ShowName                off
+      GotoTag                 "RPI__GPIO16"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   328775b9-3747-4833-abb2-c4d2a8d488a6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto46"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 873, 110, 887]
+      ShowName                off
+      GotoTag                 "RPI__GPIO19"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   a732ee6d-c5f9-43e1-94f7-7da6a03756dd
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto47"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 893, 110, 907]
+      ShowName                off
+      GotoTag                 "RPI__PWM19"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   0ac559cd-1bb7-4c2b-8359-522be42350d4
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto48"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 913, 110, 927]
+      ShowName                off
+      GotoTag                 "RPI__GPIO20"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   b3f49caf-f01b-431c-88dc-eba1bdae36b6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto49"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 933, 110, 947]
+      ShowName                off
+      GotoTag                 "RPI__GPIO21"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   28f4102c-77f0-4270-9456-8f6256a6c9c2
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 453, 595, 467]
+      ShowName                off
+      GotoTag                 "RPI__PFO4"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a89ee132-26a7-4315-addf-14d8d1057ffb
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto50"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 833, 110, 847]
+      ShowName                off
+      GotoTag                 "RPI__GPIO13"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   2a764905-de6d-44f5-80f1-bcef29241642
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto51"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [20, 953, 110, 967]
+      ShowName                off
+      GotoTag                 "RPI__GPIO26"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   52ee1267-2153-456f-bf35-bae7518d86e1
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto52"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 773, 250, 787]
+      ShowName                off
+      GotoTag                 "RPI__GPIO5L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b0398c99-e25e-49c1-9b46-867e6944cc18
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto53"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 793, 250, 807]
+      ShowName                off
+      GotoTag                 "RPI__GPIO6L"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   de7dabf2-375e-4759-a001-8b4952726774
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto54"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 813, 250, 827]
+      ShowName                off
+      GotoTag                 "RPI__GPIO12L"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   9b7452aa-f710-4537-a079-b17a7e53d2a1
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto55"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 853, 250, 867]
+      ShowName                off
+      GotoTag                 "RPI__GPIO16L"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   2aeee10e-41e0-4111-ab43-3a6e4250937c
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto56"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 873, 250, 887]
+      ShowName                off
+      GotoTag                 "RPI__GPIO19L"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   4b10fb12-ae28-448a-a048-e5f2d42b8502
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto57"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 773, 390, 787]
+      ShowName                off
+      GotoTag                 "RPI__GPIO5H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   d2cbcefc-d43f-43ea-b97b-3c994d7a8b39
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto58"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 913, 250, 927]
+      ShowName                off
+      GotoTag                 "RPI__GPIO20L"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   657e7168-37e1-4dac-9be5-d1a5c470e12b
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto59"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 933, 250, 947]
+      ShowName                off
+      GotoTag                 "RPI__GPIO21L"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   d2bb7bc2-9455-4556-b1a5-d6d35ad9ab27
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 473, 595, 487]
+      ShowName                off
+      GotoTag                 "RPI__PFO5"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b9d7b7e7-cba9-455b-a71d-7282d35cd499
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto60"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 833, 250, 847]
+      ShowName                off
+      GotoTag                 "RPI__GPIO13L"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   e2d0d20f-b301-40c8-8150-17a0c6c85835
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto61"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 953, 250, 967]
+      ShowName                off
+      GotoTag                 "RPI__GPIO26L"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   11566399-1f27-482a-8d8c-b0fa5f924a80
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto62"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 793, 390, 807]
+      ShowName                off
+      GotoTag                 "RPI__GPIO6H"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   beade212-4ab0-47be-9517-4bb761f1037e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto63"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 813, 390, 827]
+      ShowName                off
+      GotoTag                 "RPI__GPIO12H"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   56e9ad33-27dd-44dc-b79f-f530cb488502
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto64"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 853, 390, 867]
+      ShowName                off
+      GotoTag                 "RPI__GPIO16H"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   c5c33b87-2834-47a9-9d8b-6e9096cb82bf
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto65"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 873, 390, 887]
+      ShowName                off
+      GotoTag                 "RPI__GPIO19H"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   1c983030-a8ad-4090-9a24-2417908f0774
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto66"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 913, 390, 927]
+      ShowName                off
+      GotoTag                 "RPI__GPIO20H"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   e73beb93-512b-4318-ba13-12743dfa5a1f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto67"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 933, 390, 947]
+      ShowName                off
+      GotoTag                 "RPI__GPIO21H"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   f121ca87-6892-42e7-84d8-98fc03581878
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto68"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 833, 390, 847]
+      ShowName                off
+      GotoTag                 "RPI__GPIO13H"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   57ea982a-55fa-432d-930c-4c1e7442eeaa
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto69"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [300, 953, 390, 967]
+      ShowName                off
+      GotoTag                 "RPI__GPIO26H"
+      BackgroundColor         "lightBlue"
+      TagVisibility           "local"
+      #GUID                   2c98ccdb-7d3b-4363-8604-a1b8063701eb
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 493, 595, 507]
+      ShowName                off
+      GotoTag                 "RPI__PFO6"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   4924ae52-d917-472e-b9d6-cd9854e68f88
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto8"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [505, 513, 595, 527]
+      ShowName                off
+      GotoTag                 "RPI__PFO7"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   1577b512-a746-4057-8472-9c4a082fbb02
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto9"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [160, 568, 250, 582]
+      ShowName                off
+      GotoTag                 "RPI__GPIO4L"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c1cae6b2-e938-4a0b-9b04-719b86c38fad
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFI"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [815, 196, 845, 284]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   f562730d-ea28-4248-84b7-32a0c4aa4c1b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFIC1"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [655, 621, 685, 709]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   049fde8c-c961-4cdc-aa8e-6db2613f4ccb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFO"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [820, 391, 850, 479]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   0d68c762-35af-45a7-bc63-a3bc483b9a56
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFOC2"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [550, 621, 580, 709]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   62f4ad7f-3ce9-47ab-ae09-65ab9b37d1cb
+    }
+    Annotation {
+      Position                [445, 45]
+      Text                    "This example serves as a library. It won't comp"
+"ile because it contains ALL input and output \nflags and there are conflicts."
+"\nPick only the input and output flags which you need and copy&paste them into"
+" your project."
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      ForegroundColor         "red"
+      #GUID                   1f6008b6-78d0-471b-a1a7-f29d616305bf
+    }
+    Annotation {
+      Position                [65, 145]
+      Text                    "Input flags"
+      FontName                "Arial"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   29433e76-4282-4df9-aceb-48fe44ae7aae
+    }
+    Annotation {
+      Position                [60, 550]
+      Text                    "Output flags"
+      FontName                "Arial"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   679ec46d-93a7-465f-9214-20b03003b8b1
+    }
+    Annotation {
+      Position                [115, 115]
+      Text                    "Raspberry Pi GPIO"
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      #GUID                   f477a25e-4743-490c-b6c2-721724733305
+    }
+    Annotation {
+      Position                [550, 145]
+      Text                    "Input flags"
+      FontName                "Arial"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   7a11038d-0d48-4d95-9cb5-22807e44b510
+    }
+    Annotation {
+      Position                [545, 355]
+      Text                    "Output flags"
+      FontName                "Arial"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   14d643d6-17cf-435a-8e34-ffe19b1903f6
+    }
+    Annotation {
+      Position                [570, 115]
+      Text                    "PiFace Digital"
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      #GUID                   e5211111-5426-41be-8c25-5b9aa9efa9b3
+    }
+    Annotation {
+      Position                [570, 570]
+      Text                    "For addresses > 0"
+      FontName                "Arial"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   1d00f765-a4b8-45ad-adb5-30d9a01bbaf7
+    }
+    Annotation {
+      Position                [60, 335]
+      Text                    "Model B+ only"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   607ce53a-cece-4989-a5d0-6b05b7f63c3c
+    }
+    Annotation {
+      Position                [55, 760]
+      Text                    "Model B+ only"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   de5dbcc8-d849-4537-9837-abf58397ec89
+    }
+    Annotation {
+      Position                [205, 150]
+      Text                    "Pull-down resistor"
+      #GUID                   ffe91f80-7fbd-4331-afcf-136344ee8a53
+    }
+    Annotation {
+      Position                [335, 150]
+      Text                    "Pull-up resistor"
+      #GUID                   5fb51810-e175-408f-8466-bde738e3d95b
+    }
+    Annotation {
+      Position                [200, 555]
+      Text                    "Initial value LOW"
+      #GUID                   547529a1-6f9a-4d94-984c-7962a108a06a
+    }
+    Annotation {
+      Position                [340, 555]
+      Text                    "Initial value HIGH"
+      #GUID                   8062b5cc-af40-496e-a9b3-aff8c01fd0e7
+    }
+    Annotation {
+      Position                [695, 150]
+      Text                    "Pull-up resistor"
+      #GUID                   678c8ba3-341a-4642-9ffc-61db98a43aba
+    }
+    Annotation {
+      Position                [700, 360]
+      Text                    "Initial value HIGH"
+      #GUID                   60676b48-275e-4162-afee-fc6aef55c9a7
+    }
+  }
+}

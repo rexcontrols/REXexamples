@@ -1,4 +1,4 @@
-PiFace Digital as Modbus TCP master 
+﻿PiFace Digital as Modbus TCP master 
 ===================================
  
 This folder contains the source files for the demonstration project on using
@@ -8,7 +8,7 @@ expansion board.
 This example implements a Modbus TCP master for controlling a Modbus TCP slave
 device.
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore, RPiDrv and MbDrv modules must be installed and running on the Raspberry Pi.
 - SPI bus must be enabled on the Raspberry Pi
@@ -28,16 +28,15 @@ multiple coils) to manipulate the outputs (coils).
 
 ### Adding signals, changing Modbus register mapping, changing IP address of the slave device ###
 
-Go to Modbus TCP Master driver (MTM block) configuration and press "Special 
-edit" for Modbus configuration. Make sure to read the Modbus driver 
-documentation (see below).
+Go to Modbus TCP Master driver (MTM block) configuration and press "Configure" 
+for Modbus configuration. Make sure to read the Modbus driver documentation (see below).
 
 ## Documentation ##
 
-- [Getting started with REX and Raspberry Pi](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
-- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](http://www.rexcontrols.com/media/DOC/ENGLISH/RPiDrv_ENG.pdf)
-- [MbDrv - Modbus driver](http://www.rexcontrols.com/media/DOC/ENGLISH/MbDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [Getting started with REX and Raspberry Pi](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
+- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

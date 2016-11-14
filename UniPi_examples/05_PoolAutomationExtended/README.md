@@ -1,4 +1,4 @@
-Pool automation with web-based graphical HMI 
+﻿Pool automation with web-based graphical HMI 
 ============================================
 
 This folder contains the source files for the demonstration project on pool 
@@ -22,7 +22,7 @@ the onboard relay 5 is switched on and off with a hysteresis of 0.5°C.
 The measured temperature and status of the relay is recorded in the TRND blocks
 which allow displaying of the trends (graphs) in the RexView diagnostic tool. 
 
-## Prerequisities ##
+## Prerequisites ##
 
 - RexCore and RPiDrv modules must be installed and running on the Raspberry Pi.
 - Owserver (part of the OWFS package) must be installed, correctly configured and running on the Raspberry Pi.
@@ -38,16 +38,15 @@ which allow displaying of the trends (graphs) in the RexView diagnostic tool.
 
 ## User interface (HMI) ##
 
-The example is accompanied by a graphical user interface generated from Inkscape 
-using the RexHMI extension. See the above mentioned tutorial for instructions on 
+The example is accompanied by a graphical user interface generated from RexHMI Designer. See the above mentioned tutorial for instructions on 
 deploying the HMI on the Raspberry Pi.
 
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX and UniPi board](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_UniPi_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
-- [OwsDrv - 1-Wire driver](http://www.rexcontrols.com/media/DOC/ENGLISH/OwsDrv_ENG.pdf)
+- [Getting started with REX and UniPi board](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_UniPi_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [OwsDrv - 1-Wire driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/OwsDrv/OwsDrv_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

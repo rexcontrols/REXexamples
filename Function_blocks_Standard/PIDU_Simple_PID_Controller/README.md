@@ -1,4 +1,4 @@
-PIDU - Simple PID controller
+﻿PIDU - Simple PID Controller
 ============================
 
 The source files illustrating the use of a simple PID controller in the REX 
@@ -26,6 +26,12 @@ tick x ntick0 = 0.05 x 2 = 0.1
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
 - Open it with *RexDraw*, compile and download it to the target device.
+- Switch to online mode and watch the algorithm.
+- Open *RexView* and connect to target device.
+- Select the TRND_PIDU.
+- Change the set-point (CNR_sp) in automathic or hand-value (CNR_hv) in manual 
+mode to 3.
+- Observe the controller action (PIDU:mv) and the process reaction (MDL_PROCESS:y) in trend.
 
 ## User interface (HMI) ##
 The example is accompanied by a HTML5-based user interface built on the WebBuDi 
@@ -36,8 +42,8 @@ to the target device.
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [PIDU function block documentation](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/PIDU.html)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [PIDU function block documentation](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/PIDU.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

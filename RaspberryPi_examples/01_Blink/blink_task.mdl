@@ -1,7 +1,8 @@
 Model {
   Name                    "blink_task"
   Version                 3.00
-  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,7 +34,7 @@ Model {
   }
   System {
     Name                    "blink_task"
-    Location                [195, 27, 624, 353]
+    Location                [290, 31, 719, 413]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
@@ -84,6 +85,7 @@ Model {
       Position                [75, 98, 95, 112]
       SourceBlock             "mathlib/CNB"
       YCN                     on
+      BackgroundColor         "magenta"
       #GUID                   d8a7ec68-9d1a-4123-b264-a798eef063b7
     }
     Block {
@@ -139,6 +141,19 @@ Model {
       DstBlock                "Goto"
       DstPort                 1
       #GUID                   a397a92e-de42-4fd4-924d-a7a335f79a01
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   cc74e9ae-8c48-4189-804c-60237c36efd8
+    }
+    Annotation {
+      Position                [100, 20]
+      Text                    "The blinking LEDs - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   5be42bdb-eb45-4f32-b981-1b89f55a3852
     }
   }
 }

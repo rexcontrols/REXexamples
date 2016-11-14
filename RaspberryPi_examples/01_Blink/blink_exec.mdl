@@ -1,7 +1,8 @@
 Model {
   Name                    "blink_exec"
   Version                 3.00
-  #RexVersion             "2.10.2 rev. 3873, Date 2014-03-21"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "blink_exec"
-    Location                [8, 27, 181, 353]
+    Location                [8, 31, 268, 413]
     #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 13, 60, 302]
+      Position                [55, 68, 100, 357]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.02"
@@ -55,9 +56,24 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [140, 328, 190, 342]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        on
+      GenerateRexHMI          on
+      RedirectToHMI           off
+      Compression             off
+      #GUID                   615662fd-c61d-4693-ae35-4d76515aa84b
+    }
+    Block {
+      BlockType               Reference
       Name                    "RPI"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 63, 150, 77]
+      Position                [140, 118, 190, 132]
       SourceBlock             "execlib/IODRV"
       module                  "RPiDrv"
       classname               "RPiDrv"
@@ -72,7 +88,7 @@ Model {
       BlockType               Reference
       Name                    "RPiDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 28, 150, 42]
+      Position                [140, 83, 190, 97]
       SourceBlock             "execlib/MODULE"
       #GUID                   6737d998-c4e4-4e93-91f2-f13b90ca242c
     }
@@ -80,7 +96,7 @@ Model {
       BlockType               Reference
       Name                    "blink_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 168, 150, 182]
+      Position                [140, 223, 190, 237]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -110,6 +126,19 @@ Model {
       DstBlock                "blink_task"
       DstPort                 1
       #GUID                   d2df86f6-6a26-41a9-939c-a699323b24b1
+    }
+    Annotation {
+      Position                [130, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   b6ec3e86-f445-47dc-9613-a281b96a7f03
+    }
+    Annotation {
+      Position                [75, 20]
+      Text                    "The blinking LEDs"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   2f73d86f-4838-4a7a-8523-16ff7748aacb
     }
   }
 }

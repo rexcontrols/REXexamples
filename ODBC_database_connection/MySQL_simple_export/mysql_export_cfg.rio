@@ -1,0 +1,9 @@
+ODBC {
+  Connection "DRIVER=MySQL;SERVER=localhost;PORT=3306;DATABASE=dbname;UID=dbuser;PWD=dbpassword;"
+  Group { 
+    Mode 130 
+    SQL "sqltable" 
+    Period 5 
+    Items "temperature,valvepos,power,manual_mode" 
+  } 
+}

@@ -1,7 +1,8 @@
 Model {
   Name                    "test_master_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "test_master_exec"
-    Location                [12, 35, 182, 358]
+    Location                [12, 32, 284, 398]
     #GUID                   bdf91a63-cbfb-40fc-8d65-44487be250d6
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 23, 60, 292]
+      Position                [65, 68, 110, 337]
       SourceBlock             "execlib/EXEC"
       ShowName                on
       NamePlacement           ""
@@ -59,7 +60,7 @@ Model {
       BlockType               Reference
       Name                    "MTM"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [90, 62, 140, 78]
+      Position                [140, 107, 190, 123]
       SourceBlock             "execlib/IODRV"
       ShowName                on
       NamePlacement           ""
@@ -70,13 +71,14 @@ Model {
       stack                   10240
       pri                     3
       timer                   off
+      FontSize                10
       #GUID                   08baae3f-851c-48da-8a32-5b7c3004de0a
     }
     Block {
       BlockType               Reference
       Name                    "MbDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [90, 27, 140, 43]
+      Position                [140, 72, 190, 88]
       SourceBlock             "execlib/MODULE"
       ShowName                on
       NamePlacement           ""
@@ -86,7 +88,7 @@ Model {
       BlockType               Reference
       Name                    "test_master_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [90, 167, 140, 183]
+      Position                [140, 212, 190, 228]
       SourceBlock             "execlib/TASK"
       ShowName                on
       NamePlacement           ""
@@ -118,6 +120,18 @@ Model {
       DstBlock                "test_master_task"
       DstPort                 1
       #GUID                   fff434dd-4b99-46d1-8555-7062811c7d5f
+    }
+    Annotation {
+      Position                [110, 40]
+      Text                    "See the README.md file for details."
+      #GUID                   be3a6f03-b763-4ff2-a491-472fae46b8ca
+    }
+    Annotation {
+      Position                [135, 20]
+      Text                    "Modbus master on PiFace Digital"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   a89b34a5-c1fc-4868-bff1-23031758a5a2
     }
   }
 }

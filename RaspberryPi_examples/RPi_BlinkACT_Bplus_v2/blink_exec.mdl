@@ -1,7 +1,8 @@
 Model {
   Name                    "blink_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "blink_exec"
-    Location                [11, 34, 184, 360]
+    Location                [9, 31, 267, 402]
     #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 13, 60, 302]
+      Position                [50, 58, 95, 347]
       SourceBlock             "execlib/EXEC"
       target                  "PC - Linux"
       tick                    "0.05"
@@ -57,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "RPI"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 63, 150, 77]
+      Position                [135, 108, 185, 122]
       SourceBlock             "execlib/IODRV"
       module                  "RPiDrv"
       classname               "RPiDrv"
@@ -72,7 +73,7 @@ Model {
       BlockType               Reference
       Name                    "RPiDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 28, 150, 42]
+      Position                [135, 73, 185, 87]
       SourceBlock             "execlib/MODULE"
       #GUID                   6737d998-c4e4-4e93-91f2-f13b90ca242c
     }
@@ -80,7 +81,7 @@ Model {
       BlockType               Reference
       Name                    "blink_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [100, 168, 150, 182]
+      Position                [135, 213, 185, 227]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -110,6 +111,19 @@ Model {
       DstBlock                "blink_task"
       DstPort                 1
       #GUID                   d2df86f6-6a26-41a9-939c-a699323b24b1
+    }
+    Annotation {
+      Position                [130, 35]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   d6272260-9f20-4d06-92eb-d80b2499caa1
+    }
+    Annotation {
+      Position                [75, 15]
+      Text                    "Blinking ACT LED"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   4ad0c32c-24b5-4fd7-9546-13174210177c
     }
   }
 }

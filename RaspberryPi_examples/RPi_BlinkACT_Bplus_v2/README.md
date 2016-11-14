@@ -1,9 +1,9 @@
-Blinking ACT LED on Raspberry Pi B+ or Raspberry Pi 2
+﻿Blinking ACT LED on Raspberry Pi B+ or Raspberry Pi 2
 =====================================================
 
 This example shows how to blink the ACT LED using the REX Control System.
 
-## Prerequisities ##
+## Prerequisites ##
 - RexCore and RPiDrv module must be installed and running on the Raspberry Pi
 
 ## Running the example ##
@@ -12,8 +12,9 @@ This example shows how to blink the ACT LED using the REX Control System.
 
 ## Documentation ##
 
-- [Getting started with REX and Raspberry Pi](http://www.rexcontrols.com/media/DOC/ENGLISH/REX_Getting_Started_RasPi_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- **Press F1 for help** on the selected function block in the *RexDraw* program.
+- [Getting started with REX and Raspberry Pi](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

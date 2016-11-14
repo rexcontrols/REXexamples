@@ -1,0 +1,349 @@
+Model {
+  Name                    "pidcontrol_control"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "pidcontrol_control"
+    Location                [311, 31, 652, 406]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Inport
+      Name                    "pv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 123, 75, 137]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   4353dde4-56c0-4336-b4db-ebd8c789a4ee
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_MAN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 193, 70, 207]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   de07ef6e-f06b-4193-9ffb-91a2825dc92d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [155, 303, 175, 317]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   bd1941b7-9f46-4e0a-bd73-a620d95acbdc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_hv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 163, 70, 177]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   feff9b40-0640-4f55-ba3c-878d9b0686ea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_sp"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 83, 70, 97]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   021454e3-4160-4d35-a849-91d477ec4353
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [95, 263, 135, 277]
+      ShowName                off
+      GotoTag                 "pv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   a4c89510-2720-4ae1-8de5-5ed52284aec0
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [145, 273, 185, 287]
+      ShowName                off
+      GotoTag                 "mv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   27d3d317-cd79-42db-bcad-9fa8d84da70c
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [95, 283, 135, 297]
+      ShowName                off
+      GotoTag                 "sp"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   11476e0e-bd03-4903-b92d-dc04a349062e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [115, 138, 155, 152]
+      ShowName                off
+      GotoTag                 "pv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   f97839b4-c811-4254-93ae-2de8085ac695
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [270, 103, 310, 117]
+      ShowName                off
+      GotoTag                 "mv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   bf880048-4c4d-4694-96c8-4f9b1d8acbd6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [115, 83, 155, 97]
+      ShowName                off
+      GotoTag                 "sp"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   1f844d56-30bb-4681-a7aa-4cd0537907f9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [215, 85, 225, 95]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      NamePlacement           ""
+      FontSize                10
+      #GUID                   a6f698dc-594b-4f7f-ac9c-90d215b5cdaa
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PIDU"
+      Ports                   [7, 4, 0, 0, 0]
+      Position                [195, 102, 240, 178]
+      SourceBlock             "reglib/PIDU"
+      ShowName                on
+      NamePlacement           ""
+      irtype                  "7: PID"
+      RACT                    off
+      k                       "0.75"
+      ti                      "4.3"
+      td                      "1.07"
+      nd                      10
+      b                       "0.5"
+      c                       0
+      tt                      "2.1"
+      hilim                   1
+      lolim                   -1
+      dz                      0
+      icotype                 "1: Analog"
+      BackgroundColor         "cyan"
+      #GUID                   eff15adb-50cd-49fc-8e97-83b1ed3bb1d0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_PIDU"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [205, 258, 250, 332]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       3
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   1ab2533d-94df-4e7f-8baa-84a7c4427c36
+        timesrc       1
+    }
+    Block {
+      BlockType               Outport
+      Name                    "mv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [275, 133, 305, 147]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   53d070c7-47c7-4571-aed2-584071fd5da0
+    }
+    Line {
+      SrcBlock                "CNB_MAN"
+      SrcPort                 1
+      Points                  [105, 0]
+      DstBlock                "PIDU"
+      DstPort                 6
+      #GUID                   44de48b8-afc6-41fa-983c-f17b52978590
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND_PIDU"
+      DstPort                 5
+      #GUID                   0e8512cd-760e-4cc5-a688-fd9c666d3dfb
+    }
+    Line {
+      SrcBlock                "CNR_hv"
+      SrcPort                 1
+      Points                  [95, 0; 0, -20]
+      DstBlock                "PIDU"
+      DstPort                 5
+      #GUID                   cb5a24a8-58af-4d8c-8542-1fa353d3f6ee
+    }
+    Line {
+      SrcBlock                "CNR_sp"
+      SrcPort                 1
+      Points                  [20, 0]
+      #GUID                   aef8ee4d-d854-4369-8abe-21b2501be23d
+      Branch {
+        DstBlock                "Goto2"
+        DstPort                 1
+        #GUID                   d8b2e724-a0cc-43d8-8674-d660e602684b
+      }
+      Branch {
+        Points                  [0, 30]
+        DstBlock                "PIDU"
+        DstPort                 2
+        #GUID                   80b46f32-e89d-445a-97d6-ade2ef8b0981
+      }
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "TRND_PIDU"
+      DstPort                 1
+      #GUID                   2881b0ec-9d95-4ee4-a6ea-7fdc31c39e51
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "TRND_PIDU"
+      DstPort                 2
+      #GUID                   f7b3364b-aa27-4821-9a93-e59e5344051d
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "TRND_PIDU"
+      DstPort                 3
+      #GUID                   f9950ca5-a08c-4aae-93f7-07e1124dcb34
+    }
+    Line {
+      SrcBlock                "LPBRK_1"
+      SrcPort                 1
+      Points                  [-35, 0; 0, 50]
+      DstBlock                "PIDU"
+      DstPort                 4
+      #GUID                   3b662c17-9ed4-4a78-a49e-a9f4dba5d537
+    }
+    Line {
+      SrcBlock                "PIDU"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   f33431e0-c779-415c-8eec-dd5d310a6045
+      Branch {
+        DstBlock                "Goto1"
+        DstPort                 1
+        #GUID                   4911bdd6-7304-436d-8a01-0190e978af16
+      }
+      Branch {
+        Points                  [0, -20]
+        DstBlock                "LPBRK_1"
+        DstPort                 1
+        #GUID                   7517e7ba-7f84-488e-9c0b-99baa3cbf662
+      }
+      Branch {
+        Points                  [0, 30]
+        DstBlock                "mv"
+        DstPort                 1
+        #GUID                   692adde0-5a3a-4160-bbb7-45d9c28600e6
+      }
+    }
+    Line {
+      SrcBlock                "pv"
+      SrcPort                 1
+      Points                  [15, 0]
+      #GUID                   77fdeb7d-973c-48f0-acf3-50bed31190f3
+      Branch {
+        Points                  [0, 15]
+        DstBlock                "Goto"
+        DstPort                 1
+        #GUID                   0ebd2c6a-66c5-4346-a60a-259545189e5b
+      }
+      Branch {
+        DstBlock                "PIDU"
+        DstPort                 3
+        #GUID                   856c135a-d938-4b30-895d-e7140f222db7
+      }
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   693ee5bc-de59-4cfd-8764-c2fdb5b9c02f
+    }
+    Annotation {
+      Position                [170, 20]
+      Text                    "PIDU - Simple PID controller - control task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   e3601f30-0093-42de-8c87-47483416558a
+    }
+  }
+}

@@ -1,4 +1,4 @@
-Modbus RTU master 
+﻿Modbus RTU master 
 =================
  
 This folder contains the source files for the master part of the demonstration

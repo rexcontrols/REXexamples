@@ -1,12 +1,9 @@
 Modbus {
   Name                    ""
-  BaudRate                19200
-  Parity                  0
-  SpaceTime               2
   Timeout                 1000
   Flags                   8
   Gap                     30000
-  #GUID                   4b39f3f5-29ea-4198-9757-3441b2696af1
+  #GUID                   371cfed3-b163-4e02-a918-4ecdadae29fb
   Slave {
     Name                    "RPi_UniPi"
     IPaddress               192.168.1.100

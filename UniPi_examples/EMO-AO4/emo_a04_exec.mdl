@@ -94,7 +94,8 @@ Model {
   LastModifiedDate        "Fri Sep 17 13:32:16 2010"
   ModelVersionFormat      "1.%<AutoIncrement:53>"
   ConfigurationManager    "None"
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,7 +127,7 @@ Model {
   }
   System {
     Name                    "emo_a04_exec"
-    Location                [12, 34, 182, 361]
+    Location                [9, 31, 284, 390]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -135,7 +136,6 @@ Model {
     PaperPositionMode       "auto"
     PaperType               "A4"
     PaperUnits              "centimeters"
-    ZoomFactor              100
     AutoZoom                on
     ReportName              "simulink-default.rpt"
     #GUID                   a214d02f-ef4f-41e8-85ef-012aeee364df
@@ -143,7 +143,7 @@ Model {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 20, 60, 280]
+      Position                [65, 70, 110, 330]
       SourceBlock             "execlib/EXEC"
       SourceType              "EXEC"
       target                  "PC - Linux"
@@ -162,7 +162,7 @@ Model {
       BlockType               Reference
       Name                    "RPiDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [95, 38, 145, 52]
+      Position                [145, 88, 195, 102]
       SourceBlock             "execlib/MODULE"
       #GUID                   3e899f69-d34f-46b0-b322-72c925c85922
     }
@@ -170,7 +170,7 @@ Model {
       BlockType               Reference
       Name                    "UNP"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [95, 68, 145, 82]
+      Position                [145, 118, 195, 132]
       SourceBlock             "execlib/IODRV"
       module                  "RPiDrv"
       classname               "UnpDrv"
@@ -185,7 +185,7 @@ Model {
       BlockType               Reference
       Name                    "emo_a04_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [95, 157, 145, 173]
+      Position                [145, 207, 195, 223]
       SourceBlock             "execlib/TASK"
       SourceType              "TASK"
       factor                  1
@@ -216,6 +216,19 @@ Model {
       DstBlock                "emo_a04_task"
       DstPort                 1
       #GUID                   6d87b972-cc9e-49b8-952a-f05f70a9f6d0
+    }
+    Annotation {
+      Position                [140, 35]
+      Text                    "See the README.md and emo_a04.c file for detail"
+"s."
+      #GUID                   065a12ca-0563-4ca9-8e12-3499042071e2
+    }
+    Annotation {
+      Position                [95, 15]
+      Text                    "UniPi and EMO-AO4/12"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   77fdbfcc-397b-4317-b780-054b6fde440c
     }
   }
 }

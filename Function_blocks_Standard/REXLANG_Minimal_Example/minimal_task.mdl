@@ -2,7 +2,6 @@ Model {
   Name                    "minimal_task"
   Version                 7.5
   MdlSubVersion           0
-  SavedCharacterEncoding  "windows-1250"
   SaveDefaultBlockParams  on
   ScopeRefreshTime        "0.035000"
   OverrideScopeRefreshTime on
@@ -89,7 +88,96 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  MdlSubVersion           0
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime        "0.035000"
+  OverrideScopeRefreshTime on
+  DisableAllScopes        off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength    120
+  Created                 "Fri Sep 17 13:31:26 2010"
+  Creator                 "jsobota"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "jsobota"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon May 16 10:26:28 2011"
+  RTWModifiedTimeStamp    227442227
+  ModelVersionFormat      "1.%<AutoIncrement:7>"
+  ConfigurationManager    "none"
+  SampleTimeColors        off
+  SampleTimeAnnotations   off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ShowTestPointIcons      on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons         on
+  SortedOrder             off
+  ExecutionContextIcon    off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  SimulationMode          "normal"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  CovReportOnPause        on
+  CovModelRefEnable       "Off"
+  CovExternalEMLEnable    off
+  ExtModeBatchMode        off
+  ExtModeEnableFloating   on
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -122,7 +210,7 @@ Model {
   }
   System {
     Name                    "minimal_task"
-    Location                [193, 35, 762, 361]
+    Location                [334, 34, 903, 360]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -134,15 +222,25 @@ Model {
     TiledPaperMargins       [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale          1
     ShowPageBoundaries      off
-    ZoomFactor              100
     ReportName              "simulink-default.rpt"
     SIDHighWatermark        7
     #GUID                   dc18c976-d294-4afb-97eb-1e2c7ffcc8a8
     Block {
       BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 163, 320, 177]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   c573ee14-6851-4f07-91d2-9609c606fba1
+    }
+    Block {
+      BlockType               Reference
       Name                    "CNR1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [70, 102, 100, 118]
+      Position                [80, 108, 100, 122]
       SourceBlock             "mathlib/CNR"
       SID                     5
       LibraryVersion          "1.130"
@@ -156,13 +254,14 @@ Model {
       RTWMemSecDataInternal   "Inherit from model"
       RTWMemSecDataParameters "Inherit from model"
       ycn                     "3.7"
+      BackgroundColor         "magenta"
       #GUID                   903f5ee8-b01c-4be2-a441-a0010ea453dd
     }
     Block {
       BlockType               Reference
       Name                    "CNR2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [70, 132, 100, 148]
+      Position                [80, 138, 100, 152]
       SourceBlock             "mathlib/CNR"
       SID                     6
       LibraryVersion          "1.130"
@@ -176,14 +275,16 @@ Model {
       RTWMemSecDataInternal   "Inherit from model"
       RTWMemSecDataParameters "Inherit from model"
       ycn                     "4.3"
+      BackgroundColor         "magenta"
       #GUID                   4375e422-343b-46e4-93c7-ce3c607c8f56
     }
     Block {
       BlockType               Reference
       Name                    "REXLANG"
-      Ports                   [17, 17, 0, 0, 0]
-      Position                [170, 91, 220, 269]
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [170, 88, 220, 272]
       SourceBlock             "speclib/REXLANG"
+      strs                    0
       SID                     4
       LibraryVersion          "1.88"
       SourceType              "REXLANG"
@@ -197,7 +298,7 @@ Model {
       RTWMemSecDataParameters "Inherit from model"
       tab_matlab              "BASIC"
       srcname                 "minimal_rexlang.c"
-      srctype                 "1: STL"
+      srctype                 "1: C-like"
       stack                   0
       debug                   "1: No check"
       p0                      "2.6"
@@ -217,46 +318,80 @@ Model {
       p14                     0
       p15                     0
       fname                   ""
+      BackgroundColor         "cyan"
       #GUID                   bf1ba61a-13b6-41a1-a2c7-104b76363ee0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [345, 117, 390, 193]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       2
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   b4a51372-9e86-435c-8aed-543a7f173f1b
+        timesrc       1
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   67479a58-f122-48da-8fba-721cef28a24c
     }
     Line {
       SrcBlock                "CNR1"
       SrcPort                 1
       DstBlock                "REXLANG"
-      DstPort                 2
+      DstPort                 3
       #GUID                   295d2476-c4b4-427a-aa48-8ea6c3a0ef78
     }
     Line {
       SrcBlock                "CNR2"
       SrcPort                 1
       DstBlock                "REXLANG"
-      DstPort                 5
+      DstPort                 6
       #GUID                   eb912fc0-55a9-41dd-83cf-a3f538c2e822
     }
     Line {
       SrcBlock                "REXLANG"
       SrcPort                 4
-      Points                  [45, 0]
+      DstBlock                "TRND"
+      DstPort                 1
       #GUID                   f71460d4-2c29-44c5-8369-a93cd1fbc895
     }
     Line {
       SrcBlock                "REXLANG"
       SrcPort                 12
-      Points                  [45, 0]
+      Points                  [45, 0; 0, -70]
+      DstBlock                "TRND"
+      DstPort                 2
       #GUID                   62aabf89-277a-4759-8c3a-667c0b41925c
     }
     Annotation {
-      Position                [275, 140]
+      Position                [275, 115]
       Text                    "sum of inputs"
       #GUID                   1c1973b2-1a87-4194-b1fc-3049d0de1587
     }
     Annotation {
-      Position                [285, 220]
+      Position                [275, 220]
       Text                    "sum of parameters"
       #GUID                   67cc487c-161f-45a9-bc3e-eb371b91ec05
     }
     Annotation {
-      Position                [275, 25]
+      Position                [270, 20]
       Text                    "REXLANG - Minimal example on using the user pro"
 "grammable block"
       FontWeight              "bold"
@@ -264,7 +399,7 @@ Model {
       #GUID                   6be559b1-1863-4fae-babd-2a1f8aeb0ce5
     }
     Annotation {
-      Position                [160, 50]
+      Position                [155, 45]
       Text                    "See the README.md file for detailed information"
 "."
       FontSize                12

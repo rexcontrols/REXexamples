@@ -1,9 +1,0 @@
-ODBC { 
-  Connection "DRIVER=MySQL;SERVER=192.168.1.200;PORT=3306;DATABASE=dbname;UID=dbuser;PWD=dbpassword;" 
-  Group { 
-    Mode 3 
-    SQL "SELECT value, NOW()-time, DATE_FORMAT(time,'%Y'), DATE_FORMAT(time,'%c'), DATE_FORMAT(time,'%e'), DATE_FORMAT(time,'%k'), DATE_FORMAT(time,'%i'), DATE_FORMAT(time,'%s') FROM `sqltable` ORDER BY `time` DESC LIMIT 1" 
-    Period 5 
-    Items "temperature,fresh,iyear,imonth,iday,ihour,imin,isec" 
-  } 
-}

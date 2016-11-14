@@ -93,7 +93,101 @@ Model {
   LastModifiedDate        "Mon Jan 07 09:53:40 2008"
   ModelVersionFormat      "1.%<AutoIncrement:43>"
   ConfigurationManager    "none"
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7312, Date 2016-10-10"
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "Auto"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  Created                 "Tue Aug 28 12:33:33 2001"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "mertlj"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon Jan 07 09:53:40 2008"
+  ModelVersionFormat      "1.%<AutoIncrement:43>"
+  ConfigurationManager    "none"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -125,7 +219,7 @@ Model {
   }
   System {
     Name                    "epc_task"
-    Location                [222, 33, 808, 506]
+    Location                [337, 31, 812, 414]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -134,7 +228,6 @@ Model {
     PaperPositionMode       "auto"
     PaperType               "usletter"
     PaperUnits              "inches"
-    ZoomFactor              100
     AutoZoom                on
     ReportName              "simulink-default.rpt"
     #GUID                   64a78286-c1c8-44ea-aaf5-d5afc6d5fdb3
@@ -142,7 +235,7 @@ Model {
       BlockType               Reference
       Name                    "BIS"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [75, 163, 90, 187]
+      Position                [45, 158, 60, 182]
       SourceBlock             "genlib/BIS"
       Y0                      off
       t1                      1
@@ -160,22 +253,23 @@ Model {
       BlockType               Reference
       Name                    "EPC"
       Ports                   [12, 15, 0, 0, 0]
-      Position                [280, 126, 350, 314]
+      Position                [225, 121, 295, 309]
       SourceBlock             "speclib/EPC"
-      cmd                     "/bin/bash /rex/rexcore/epc_script.sh"
+      cmd                     "/bin/bash /rex/data/epc_script.sh"
       ifns                    "epc_uVec1;epc_uVec2"
       ofns                    "epc_yVec1;epc_yVec2"
       sl                      1
       ifm                     10000
       format                  "1: Space-delimited values"
       BackgroundColor         "cyan"
+      nmax                    100
       #GUID                   85c9b017-5456-44c2-a821-2b7a6eac4ffa
     }
     Block {
       BlockType               Reference
       Name                    "MP_EXECUTE"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [80, 333, 95, 347]
+      Position                [45, 328, 60, 342]
       SourceBlock             "genlib/MP"
       pwidth                  1
       BSTATE                  on
@@ -187,29 +281,31 @@ Model {
       BlockType               Reference
       Name                    "RTOV_data"
       Ports                   [9, 1, 0, 0, 0]
-      Position                [125, 91, 185, 189]
+      Position                [120, 87, 165, 183]
       SourceBlock             "matrixlib/RTOV"
-      capacity                3
+      nmax                    3
       offset                  0
       n                       3
+      etype                   "8: Double"
       #GUID                   c09a52ae-63b4-45a5-953c-26ff44bd98e9
     }
     Block {
       BlockType               Reference
       Name                    "RTOV_time"
       Ports                   [9, 1, 0, 0, 0]
-      Position                [125, 206, 185, 304]
+      Position                [120, 202, 165, 298]
       SourceBlock             "matrixlib/RTOV"
-      capacity                3
+      nmax                    3
       offset                  0
       n                       3
+      etype                   "8: Double"
       #GUID                   b9b2db64-ee3f-4020-ae66-64e17a38d42e
     }
     Block {
       BlockType               Reference
       Name                    "SG_saw"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [65, 133, 90, 147]
+      Position                [45, 128, 70, 142]
       SourceBlock             "genlib/SG"
       SourceType              "SG"
       isig                    "3: SAWTOOTH"
@@ -220,13 +316,14 @@ Model {
       iphunit                 "1: DEGREE"
       NamePlacement           ""
       ShowName                on
+      offset                  0
       #GUID                   468c34af-cebe-4044-bd7f-0fd71d76b6a9
     }
     Block {
       BlockType               Reference
       Name                    "SG_sine"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [65, 103, 90, 117]
+      Position                [45, 98, 70, 112]
       SourceBlock             "genlib/SG"
       SourceType              "SG"
       isig                    "1: SINE"
@@ -237,14 +334,15 @@ Model {
       iphunit                 "1: DEGREE"
       NamePlacement           ""
       ShowName                on
+      offset                  0
       #GUID                   ed045053-97b3-47b6-84d7-478ae3ec4990
     }
     Block {
       BlockType               Reference
       Name                    "TIME"
       Ports                   [0, 3, 0, 0, 0]
-      Position                [50, 218, 90, 252]
-      SourceBlock             "genlib/TIME"
+      Position                [45, 213, 85, 247]
+      SourceBlock             "timelib/TIME"
       tz                      "1: Local time"
       #GUID                   085c4ee8-e594-4f0d-836e-02f2e33f7e7f
     }
@@ -252,26 +350,28 @@ Model {
       BlockType               Reference
       Name                    "VTOR"
       Ports                   [1, 8, 0, 0, 0]
-      Position                [435, 91, 495, 179]
+      Position                [380, 102, 425, 188]
       SourceBlock             "matrixlib/VTOR"
       n                       5
       offset                  0
+      etype                   "8: Double"
       #GUID                   182c2eaa-ef96-4259-9061-c881ed59733e
     }
     Block {
       BlockType               Reference
       Name                    "VTOR1"
       Ports                   [1, 8, 0, 0, 0]
-      Position                [435, 196, 495, 284]
+      Position                [380, 207, 425, 293]
       SourceBlock             "matrixlib/VTOR"
       n                       3
       offset                  0
+      etype                   "8: Double"
       #GUID                   c133687a-5977-47d9-b5ff-e6f508a5279d
     }
     Line {
       SrcBlock                "BIS"
       SrcPort                 1
-      Points                  [15, 0]
+      Points                  [40, 0]
       DstBlock                "RTOV_data"
       DstPort                 4
       #GUID                   ac7e3abe-d3ab-433d-b3a7-a2bfde036095
@@ -279,7 +379,6 @@ Model {
     Line {
       SrcBlock                "EPC"
       SrcPort                 1
-      Points                  [65, 0]
       DstBlock                "VTOR"
       DstPort                 1
       #GUID                   54c2ad3a-3d90-4a23-a284-b1febed74f59
@@ -295,7 +394,7 @@ Model {
     Line {
       SrcBlock                "MP_EXECUTE"
       SrcPort                 1
-      Points                  [120, 0; 0, -80]
+      Points                  [145, 0]
       DstBlock                "EPC"
       DstPort                 9
       #GUID                   9b71c273-e031-4a54-8baa-90b4b86c7abb
@@ -310,7 +409,7 @@ Model {
     Line {
       SrcBlock                "RTOV_time"
       SrcPort                 1
-      Points                  [10, 0; 0, -100]
+      Points                  [25, 0; 0, -100]
       DstBlock                "EPC"
       DstPort                 2
       #GUID                   ba07c17a-1108-4d1c-a077-1bd53755f47b
@@ -352,14 +451,14 @@ Model {
       #GUID                   ce12bf3a-fd32-4a1c-ae1a-9563ff9b4ea4
     }
     Annotation {
-      Position                [150, 25]
+      Position                [150, 20]
       Text                    "EPC - calling external programs in Linux"
       FontSize                14
       FontWeight              "bold"
       #GUID                   0769b06e-86b9-4d92-9928-3a27d37b47a8
     }
     Annotation {
-      Position                [135, 50]
+      Position                [135, 45]
       Text                    "See the README.md file for detailed information"
 "."
       #GUID                   b02b0f0b-e249-43de-829a-4e61b69e8c9d

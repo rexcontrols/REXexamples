@@ -10,5 +10,5 @@ S7comm {
 #" 16=swap bytes, 32=single item query, 256=read info, 512=server configuration"
   #Comment2               "Area: 129=Input, 130=Output, 131=Memory, 132=DataBl"
 #"ock, 28=Counter, 29=Timer"
-  #GUID                   387a9029-abdb-4e8b-bc5c-8a4079462e93
+  #GUID                   b82ff889-ec00-4a36-ac11-b3c9e36cf7d5
 }

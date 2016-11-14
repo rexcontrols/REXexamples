@@ -1,0 +1,100 @@
+Model {
+  Name                    "pidcontrol_process"
+  Version                 3.00
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "pidcontrol_process"
+    Location                [675, 31, 1028, 183]
+    #GUID                   90491cd9-b52d-44ff-ab29-603cdabca4ce
+    Block {
+      BlockType               Inport
+      Name                    "mv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 73, 80, 87]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   e141fc5f-af34-4ee8-b9cf-69bfa98e2bf6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MDL_PROCESS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 73, 140, 87]
+      SourceBlock             "modellib/MDL"
+      ShowName                on
+      NamePlacement           ""
+      k0                      10
+      del                     0
+      tau1                    3
+      tau2                    5
+      nmax                    100
+      #GUID                   41aaafcf-8331-4f1e-83f6-b26d56024dbc
+    }
+    Block {
+      BlockType               Outport
+      Name                    "pv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [180, 73, 210, 87]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   cb0bbf9b-3a56-4765-a1fd-578c6eb8f79a
+    }
+    Line {
+      SrcBlock                "MDL_PROCESS"
+      SrcPort                 1
+      DstBlock                "pv"
+      DstPort                 1
+      #GUID                   44e66f93-e6a1-4cb1-8fa8-7d70554cd6da
+    }
+    Line {
+      SrcBlock                "mv"
+      SrcPort                 1
+      DstBlock                "MDL_PROCESS"
+      DstPort                 1
+      #GUID                   6eb44f17-687a-417c-b90b-aa371910e524
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   f140860b-0c7d-4e96-8eef-9cdb49c059ac
+    }
+    Annotation {
+      Position                [170, 20]
+      Text                    "PIDU - Simple PID controller - process task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   cbcc336c-96ea-4f06-9639-bf7e14352aff
+    }
+  }
+}

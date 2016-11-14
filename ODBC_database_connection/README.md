@@ -1,4 +1,4 @@
-Database access (via ODBC) 
+﻿Database access (via ODBC) 
 ==========================
 
 The examples contained in this folder demonstrate data exchange between the 
@@ -6,8 +6,8 @@ REX Control System and database systems using ODBC connector.
 
 ## Documentation ##
 
-- [DbDrv - Database access driver](http://www.rexcontrols.com/media/DOC/ENGLISH/DbDrv_ENG.pdf)
-- [Function blocks of the REX Control System](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
+- [DbDrv - Database access driver](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/DbDrv/DbDrv_ENG.html)
+- [Function blocks of the REX Control System](https://www.rexcontrols.com/media/2.50.1/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of the REX Control System](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

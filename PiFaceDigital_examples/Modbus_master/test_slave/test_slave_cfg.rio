@@ -1,12 +1,9 @@
 Modbus {
   Name                    ""
-  BaudRate                19200
-  Parity                  0
-  SpaceTime               2
   Timeout                 1000
   Flags                   12
   Gap                     30000
-  #GUID                   abde078f-8519-4658-9449-a5b5ad1c02d1
+  #GUID                   db0dd3a5-8862-497e-94f7-c8ba3e2c811f
   Item {
     Name                    coil0
     SlaveAdr                -1

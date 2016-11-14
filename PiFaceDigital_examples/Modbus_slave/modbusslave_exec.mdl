@@ -1,7 +1,8 @@
 Model {
   Name                    "modbusslave_exec"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5340, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "modbusslave_exec"
-    Location                [12, 34, 257, 361]
+    Location                [9, 31, 273, 411]
     #GUID                   bdf91a63-cbfb-40fc-8d65-44487be250d6
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [15, 23, 60, 292]
+      Position                [25, 78, 70, 347]
       SourceBlock             "execlib/EXEC"
       ShowName                on
       NamePlacement           ""
@@ -59,7 +60,7 @@ Model {
       BlockType               Reference
       Name                    "MTS"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [90, 62, 140, 78]
+      Position                [100, 117, 150, 133]
       SourceBlock             "execlib/IODRV"
       ShowName                on
       NamePlacement           ""
@@ -76,7 +77,7 @@ Model {
       BlockType               Reference
       Name                    "MbDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [90, 27, 140, 43]
+      Position                [100, 82, 150, 98]
       SourceBlock             "execlib/MODULE"
       ShowName                on
       NamePlacement           ""
@@ -86,7 +87,7 @@ Model {
       BlockType               Reference
       Name                    "RPI"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [170, 63, 220, 77]
+      Position                [180, 118, 230, 132]
       SourceBlock             "execlib/IODRV"
       module                  "RPiDrv"
       classname               "RPiDrv"
@@ -101,7 +102,7 @@ Model {
       BlockType               Reference
       Name                    "RPiDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [170, 28, 220, 42]
+      Position                [180, 83, 230, 97]
       SourceBlock             "execlib/MODULE"
       #GUID                   319d853a-ae45-45d0-b5f1-ce923a5d0f92
     }
@@ -109,7 +110,7 @@ Model {
       BlockType               Reference
       Name                    "modbusslave_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [90, 167, 140, 183]
+      Position                [100, 222, 150, 238]
       SourceBlock             "execlib/TASK"
       ShowName                on
       NamePlacement           ""
@@ -155,6 +156,18 @@ Model {
       DstBlock                "RPiDrv"
       DstPort                 1
       #GUID                   2f0a9b2e-96a6-436f-a970-cfb86b7c305a
+    }
+    Annotation {
+      Position                [105, 40]
+      Text                    "See the README.md file for details."
+      #GUID                   82b277a1-f8ec-4d02-bdd0-d60ed701774b
+    }
+    Annotation {
+      Position                [130, 20]
+      Text                    "Modbus slave on PiFace Digital"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   f3c41a65-0941-4f42-a871-2339df68deb1
     }
   }
 }

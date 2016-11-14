@@ -1,0 +1,38 @@
+OwsDrv {
+  Version                 1.00
+  TargetName              "127.0.0.1:4304"
+  MaxConsAlarms           5
+  MaxRetries              1
+  Timeout                 20
+  ItemCount               5
+  Item {
+    Name                    "lightIntensity"
+    Path                    "/uncached/26.0CBEEA010000/vis"
+    IOType                  0x0118
+    InitValue               "0"
+  }
+  Item {
+    Name                    "temperature"
+    Path                    "/uncached/26.0CBEEA010000/temperature"
+    IOType                  0x0118
+    InitValue               "0"
+  }
+  Item {
+    Name                    "humidity"
+    Path                    "/uncached/26.0CBEEA010000/humidity"
+    IOType                  0x0118
+    InitValue               "0"
+  }
+  Item {
+    Name                    "VDD"
+    Path                    "/uncached/26.0CBEEA010000/VDD"
+    IOType                  0x0118
+    InitValue               "0"
+  }
+  Item {
+    Name                    "VAD"
+    Path                    "/uncached/26.0CBEEA010000/VAD"
+    IOType                  0x0118
+    InitValue               "0"
+  }
+}

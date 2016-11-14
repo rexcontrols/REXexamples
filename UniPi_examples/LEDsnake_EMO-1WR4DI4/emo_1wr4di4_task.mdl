@@ -1,7 +1,8 @@
 Model {
   Name                    "emo_1wr4di4_task"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,13 +34,13 @@ Model {
   }
   System {
     Name                    "emo_1wr4di4_task"
-    Location                [266, 33, 1172, 804]
+    Location                [266, 33, 1172, 770]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "ATMT"
       Ports                   [20, 19, 0, 0, 0]
-      Position                [45, 211, 100, 419]
+      Position                [45, 176, 100, 384]
       SourceBlock             "logiclib/ATMT"
       morestps                off
       ntr                     4
@@ -51,7 +52,7 @@ Model {
       BlockType               Reference
       Name                    "BDOCT"
       Ports                   [1, 8, 0, 0, 0]
-      Position                [535, 176, 570, 264]
+      Position                [535, 141, 570, 229]
       SourceBlock             "logiclib/BDOCT"
       shift                   0
       #GUID                   f6ee8d75-5a88-405b-b535-b993634a2289
@@ -60,7 +61,7 @@ Model {
       BlockType               Reference
       Name                    "BDOCT_DI"
       Ports                   [1, 8, 0, 0, 0]
-      Position                [225, 466, 260, 554]
+      Position                [225, 431, 260, 519]
       SourceBlock             "logiclib/BDOCT"
       shift                   0
       #GUID                   47e6b44d-0a2c-4df3-918f-5959174646da
@@ -69,7 +70,7 @@ Model {
       BlockType               Reference
       Name                    "BIS_extra"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [150, 303, 165, 327]
+      Position                [150, 268, 165, 292]
       SourceBlock             "genlib/BIS"
       Y0                      off
       t1                      "0.05"
@@ -87,7 +88,7 @@ Model {
       BlockType               Reference
       Name                    "BIS_fast"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [150, 263, 165, 287]
+      Position                [150, 228, 165, 252]
       SourceBlock             "genlib/BIS"
       Y0                      off
       t1                      "0.1"
@@ -105,7 +106,7 @@ Model {
       BlockType               Reference
       Name                    "BIS_normal"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [150, 223, 165, 247]
+      Position                [150, 188, 165, 212]
       SourceBlock             "genlib/BIS"
       Y0                      off
       t1                      "0.2"
@@ -123,7 +124,7 @@ Model {
       BlockType               Reference
       Name                    "BIS_slow"
       Ports                   [0, 2, 0, 0, 0]
-      Position                [150, 183, 165, 207]
+      Position                [150, 148, 165, 172]
       SourceBlock             "genlib/BIS"
       Y0                      off
       t1                      "0.4"
@@ -141,7 +142,7 @@ Model {
       BlockType               Reference
       Name                    "BITOP_NOT"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [145, 498, 170, 522]
+      Position                [145, 463, 170, 487]
       SourceBlock             "logiclib/BITOP"
       iop                     "1: Bit NOT"
       BackgroundColor         "yellow"
@@ -151,7 +152,7 @@ Model {
       BlockType               Reference
       Name                    "BITOP_OR"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [615, 268, 640, 292]
+      Position                [615, 233, 640, 257]
       SourceBlock             "logiclib/BITOP"
       iop                     "2: Bit OR"
       #GUID                   a3ad9d14-c04b-499e-9057-206d6c703280
@@ -160,7 +161,7 @@ Model {
       BlockType               Reference
       Name                    "BITOP_SHL"
       Ports                   [2, 1, 0, 0, 0]
-      Position                [500, 273, 525, 297]
+      Position                [500, 238, 525, 262]
       SourceBlock             "logiclib/BITOP"
       iop                     "5: Shift Left"
       #GUID                   97fabae2-a60a-491b-aeef-4901063956e2
@@ -169,7 +170,7 @@ Model {
       BlockType               Reference
       Name                    "BMOCT"
       Ports                   [8, 1, 0, 0, 0]
-      Position                [710, 176, 745, 264]
+      Position                [710, 141, 745, 229]
       SourceBlock             "logiclib/BMOCT"
       shift                   0
       #GUID                   ea63bd63-4bd8-48c0-b87a-1a7620fb4abb
@@ -178,7 +179,7 @@ Model {
       BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [510, 548, 530, 562]
+      Position                [510, 513, 530, 527]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   821d7ceb-3198-41e0-9c6c-ac881816db43
@@ -187,7 +188,7 @@ Model {
       BlockType               Reference
       Name                    "CNI"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [450, 283, 470, 297]
+      Position                [450, 248, 470, 262]
       SourceBlock             "mathlib/CNI"
       icn                     1
       #GUID                   622fe321-b6c6-490c-973b-cc611ef72397
@@ -196,7 +197,7 @@ Model {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [30, 498, 120, 512]
+      Position                [30, 463, 120, 477]
       ShowName                off
       GotoTag                 "OWS__extDI"
       BackgroundColor         "yellow"
@@ -206,7 +207,7 @@ Model {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [770, 213, 860, 227]
+      Position                [770, 178, 860, 192]
       ShowName                off
       GotoTag                 "OWS__extRLY"
       TagVisibility           "local"
@@ -217,7 +218,7 @@ Model {
       BlockType               Reference
       Name                    "LPBRK"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [510, 325, 520, 335]
+      Position                [510, 290, 520, 300]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
@@ -227,7 +228,7 @@ Model {
       BlockType               Reference
       Name                    "RTOI"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [440, 213, 465, 227]
+      Position                [440, 178, 465, 192]
       SourceBlock             "mathlib/RTOI"
       #GUID                   b38ea7bd-db70-417f-98a0-b19eab222710
     }
@@ -235,7 +236,7 @@ Model {
       BlockType               Reference
       Name                    "RTOI1"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [300, 213, 325, 227]
+      Position                [300, 178, 325, 192]
       SourceBlock             "mathlib/RTOI"
       #GUID                   77c25d47-9732-4285-b42e-d882a9e723a3
     }
@@ -243,7 +244,7 @@ Model {
       BlockType               Reference
       Name                    "SELQUAD"
       Ports                   [7, 1, 0, 0, 0]
-      Position                [235, 182, 270, 258]
+      Position                [235, 147, 270, 223]
       SourceBlock             "analoglib/SELQUAD"
       BINF                    off
       #GUID                   896a7db1-78f2-4f9c-8365-8f9ca8705400
@@ -252,7 +253,7 @@ Model {
       BlockType               Reference
       Name                    "SHLD"
       Ports                   [3, 1, 0, 0, 0]
-      Position                [375, 203, 415, 237]
+      Position                [375, 168, 415, 202]
       SourceBlock             "analoglib/SHLD"
       y0                      1
       mode                    "1: Triggered sampling"
@@ -262,7 +263,7 @@ Model {
       BlockType               Reference
       Name                    "TRND_INPUTS"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [580, 503, 625, 577]
+      Position                [580, 468, 625, 542]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       1000
@@ -277,12 +278,13 @@ Model {
       id                      1
       Title                   "Status of the digital inputs"
       #GUID                   007f9373-2647-4bc0-a378-9ce1f96df98b
+        timesrc       1
     }
     Block {
       BlockType               Reference
       Name                    "TRND_RELAYS"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [580, 663, 625, 737]
+      Position                [580, 628, 625, 702]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       1000
@@ -297,12 +299,13 @@ Model {
       id                      1
       Title                   "Status of the relays"
       #GUID                   a465dbd9-632a-449e-8200-6994c4080730
+        timesrc       1
     }
     Block {
       BlockType               Reference
       Name                    "UNP__RLY"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [805, 76, 835, 164]
+      Position                [805, 41, 835, 129]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
       #GUID                   b772c99c-f2fb-40de-b177-ae1d1eb9bae9
@@ -329,15 +332,15 @@ Model {
       Points                  [30, 0]
       #GUID                   16fcbb5e-c1b5-47a9-b295-73229758559f
       Branch {
+        DstBlock                "BMOCT"
+        DstPort                 1
+        #GUID                   9ce06ca5-23d1-45c2-9a02-23d888a22cf0
+      }
+      Branch {
         Points                  [0, -100]
         DstBlock                "UNP__RLY"
         DstPort                 1
         #GUID                   80527688-ac01-4040-9815-b6fce563e058
-      }
-      Branch {
-        DstBlock                "BMOCT"
-        DstPort                 1
-        #GUID                   9ce06ca5-23d1-45c2-9a02-23d888a22cf0
       }
     }
     Line {
@@ -346,15 +349,15 @@ Model {
       Points                  [40, 0]
       #GUID                   9fa699ea-4abf-4ec2-a69a-4db6f098e506
       Branch {
+        DstBlock                "BMOCT"
+        DstPort                 2
+        #GUID                   12bc152a-96d3-4dc8-a9e1-a0eea402bf4f
+      }
+      Branch {
         Points                  [0, -100]
         DstBlock                "UNP__RLY"
         DstPort                 2
         #GUID                   c7d51258-421e-4a6a-8e59-1e3ee0612855
-      }
-      Branch {
-        DstBlock                "BMOCT"
-        DstPort                 2
-        #GUID                   12bc152a-96d3-4dc8-a9e1-a0eea402bf4f
       }
     }
     Line {
@@ -599,46 +602,46 @@ Model {
       #GUID                   3d1abd7e-6897-40cd-b652-3888efa8489f
     }
     Annotation {
-      Position                [820, 65]
+      Position                [820, 30]
       Text                    "UniPi relays"
       FontWeight              "bold"
       FontSize                10
       #GUID                   f8ed918e-0920-4036-a76f-b99ee1567666
     }
     Annotation {
-      Position                [295, 65]
-      Text                    "Go to OWS driver configuration and press \"Spec"
-"ial edit\" to configure the 1-Wire board (64-bit ID of the DS2408 chip).\n\nSe"
-"e the README.md file for details."
-      #GUID                   ac0c0a68-fa60-4f49-b7e8-0bfe4dc96383
-    }
-    Annotation {
-      Position                [180, 25]
-      Text                    "UniPi and EMO-1WR4DI4 extension module"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513
-    }
-    Annotation {
-      Position                [820, 200]
+      Position                [820, 165]
       Text                    "EMO-1WR4DI4 relays"
       FontWeight              "bold"
       FontSize                10
       #GUID                   6a13a31d-7113-4da9-9b73-b07a618e0ec8
     }
     Annotation {
-      Position                [435, 660]
+      Position                [435, 625]
       Text                    "Status of EMO-1WR4DI4 relays (loopback)"
       FontWeight              "bold"
       FontSize                10
       #GUID                   ce0c53f3-2333-46a5-8bf8-c5c4faede0cb
     }
     Annotation {
-      Position                [460, 505]
+      Position                [460, 470]
       Text                    "Digital inputs of EMO-1WR4DI4"
       FontWeight              "bold"
       FontSize                10
       #GUID                   5c048bb4-43cf-410f-9b54-63b5167ed972
+    }
+    Annotation {
+      Position                [270, 50]
+      Text                    "Go to OWS driver configuration and press \"Conf"
+"igure\" to set the 1-Wire board (64-bit ID of the DS2408 chip).\n\nSee the REA"
+"DME.md file for details."
+      #GUID                   ac0c0a68-fa60-4f49-b7e8-0bfe4dc96383
+    }
+    Annotation {
+      Position                [200, 15]
+      Text                    "UniPi and EMO-1WR4DI4 extension module - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513
     }
   }
 }

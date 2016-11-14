@@ -1,7 +1,7 @@
 Model {
   Name                    "freq_eval"
   Version                 3.00
-  #RexVersion             "2.10.7 rev. 5386, Date 2015-07-28"
+  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "freq_eval"
-    Location                [208, 261, 765, 588]
+    Location                [288, 252, 845, 579]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Inport
@@ -221,6 +221,7 @@ Model {
       id                      1
       Title                   "Frequency of the pulses"
       #GUID                   cf4b3c17-b7a1-49e1-8000-12318c814380
+        timesrc       1
     }
     Block {
       BlockType               Reference
@@ -229,6 +230,7 @@ Model {
       Position                [125, 88, 155, 112]
       SourceBlock             "analoglib/VDEL"
       y0                      0
+      nmax                    100
       #GUID                   3ecdab63-c433-46e9-ae7b-8ce72ca83730
     }
     Block {
@@ -238,6 +240,7 @@ Model {
       Position                [125, 143, 155, 167]
       SourceBlock             "analoglib/VDEL"
       y0                      0
+      nmax                    100
       #GUID                   9320d3cc-01be-4c86-9c0a-3e714f3ac715
     }
     Block {
@@ -247,6 +250,7 @@ Model {
       Position                [125, 203, 155, 227]
       SourceBlock             "analoglib/VDEL"
       y0                      0
+      nmax                    100
       #GUID                   336d6db7-7b10-4abd-93b2-dbbdaffba827
     }
     Block {
@@ -256,6 +260,7 @@ Model {
       Position                [125, 258, 155, 282]
       SourceBlock             "analoglib/VDEL"
       y0                      0
+      nmax                    100
       #GUID                   0ea1497e-9201-4cf9-92f0-8514b326f882
     }
     Line {
@@ -395,7 +400,7 @@ Model {
     Line {
       SrcBlock                "RTOI"
       SrcPort                 1
-      Points                  [5, 0; 0, -10]
+      Points                  [0, -10]
       DstBlock                "ISUB"
       DstPort                 2
       #GUID                   4b5d5f3c-997f-4d31-bb42-d5d68e025dec
@@ -522,14 +527,14 @@ Model {
       }
     }
     Annotation {
-      Position                [150, 25]
+      Position                [145, 15]
       Text                    "Evaluating data to obtain frequency"
       FontWeight              "bold"
       FontSize                16
       #GUID                   67999b1e-e679-40eb-990e-301c963e8e7c
     }
     Annotation {
-      Position                [170, 45]
+      Position                [165, 35]
       Text                    "This is a standard TASK. See the README.md file"
 " for details."
       #GUID                   314dadbe-c9c3-4bf3-9f54-f1181e8dab2c
