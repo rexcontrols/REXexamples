@@ -1,7 +1,7 @@
 Model {
   Name                    "MonarcoHATdemo_exec"
   Version                 3.00
-  #RexVersion             "2.50.1 rev. 7501, Date 2016-11-02"
+  #RexVersion             "2.50.1 rev. 7567, Date 2016-11-07"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -90,7 +90,7 @@ Model {
       module                  "MonarcoDrv"
       classname               "MonarcoHatDrv"
       cfgname                 "monarcohat.rio"
-      factor                  10
+      factor                  1
       stack                   10240
       pri                     3
       timer                   off
