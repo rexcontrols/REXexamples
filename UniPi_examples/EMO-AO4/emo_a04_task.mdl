@@ -88,7 +88,7 @@ Model {
   BufferReuse             on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.1 rev. 7305 - REXCONV, Date 2016-10-10"
+  #RexVersion             "2.50.1 rev. 7567, Date 2016-11-07"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -484,8 +484,8 @@ Model {
       arc                     0
       id                      1
       Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
       #GUID                   613c4e2b-e29e-4021-93e9-591aa6057e18
-        timesrc       1
     }
     Line {
       SrcBlock                "ADD"

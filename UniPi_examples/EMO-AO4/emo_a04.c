@@ -6,7 +6,7 @@
 
 #define PWM_FREQUENCY 400 // 24 Hz .. 1526 Hz
 
-string parameter(0) p0; // I2C device is defined by the fname parameter of the REXLANG block (e.g. set it to /dev/i2c-1 on the Raspberry Pi minicomputer)
+string parameter(0) p0; // I2C device is defined by the p0 parameter of the REXLANG block (e.g. set it to /dev/i2c-1 on the Raspberry Pi minicomputer)
 
 //assigning inputs to variables, these variables are READ-ONLY
 long input(0) ch0; //the signal controlling channel 0 (range 0-4095) is connected to input u0 of the REXLANG block
