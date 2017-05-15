@@ -17,7 +17,7 @@ Pick only the input and output flags which you need and copy&paste them into you
 
 ## Additional information ##
 
-- [Pigeon PLC website] (http://pigeoncomputers.com/)
+- [Pigeon PLC website](http://pigeoncomputers.com/)
 - Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
 automation and control solutions using REX.

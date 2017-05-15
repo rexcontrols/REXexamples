@@ -12,6 +12,7 @@ System and the Monarco HAT board for the Raspberry Pi minicomputer.
 
 ## Additional information ##
 
+- Visit the [Monarco HAT website](http://www.monarco.io).
 - Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
 - Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 

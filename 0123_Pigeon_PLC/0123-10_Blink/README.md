@@ -30,7 +30,7 @@ for instructions on deploying the HMI on the Raspberry Pi.
 
 ## Additional information ##
 
-- [Pigeon PLC website] (http://pigeoncomputers.com/)
+- [Pigeon PLC website](http://pigeoncomputers.com/)
 - Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
 automation and control solutions using REX.

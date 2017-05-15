@@ -24,7 +24,7 @@ tick x ntick0 = 0.01 x 1 = 0.01 s
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##
-- Visit the [Monarco HAT website](http://www.monarco.io)
+- Visit the [Monarco HAT website](http://www.monarco.io).
 - Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
 automation and control solutions using REX.

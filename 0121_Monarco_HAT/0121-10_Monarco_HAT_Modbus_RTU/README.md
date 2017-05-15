@@ -1,4 +1,4 @@
-﻿Monarco HAT - Modbus RTU example (via serial line) 
+Monarco HAT - Modbus RTU example (via serial line) 
 ==================================================
 
 This folder contains the source files for the demonstration project on data
@@ -7,7 +7,7 @@ exchange between two devices over the Modbus RTU protocol using Monarco HAT.
 The example is meant to communicate with Advantech ADAM 4024 4-channel Analog
 Output Module, which serves as a slave station. Therefore the master station
 is implemented in REX. For testing purposes there is also Advantech
-ADAM 4024 simulator available in the separate folder.
+ADAM 4024 simulator available in a separate folder.
 
 ## Prerequisites ##
 - RexCore, MbDrv and MonarcoDrv modules must be installed and running on the
@@ -35,6 +35,7 @@ to read the Modbus driver documentation (see below).
 Go to Monarco driver configuration (MNR block in project main file) and press
 "Configure" to Modbus RTU configuration. Make sure to read the Monarco HAT driver 
 documentation (see below).
+
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
@@ -48,6 +49,7 @@ documentation (see below).
 
 ## Additional information ##
 
+- Visit the [Monarco HAT website](http://www.monarco.io)
 - Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
 automation and control solutions using REX.

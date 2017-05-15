@@ -29,7 +29,7 @@ tick x ntick0 = 0.05 x 2 = 0.1 s
 
 ## Additional information ##
 
-- Visit the [Monarco HAT website](http://www.monarco.io)
+- Visit the [Monarco HAT website](http://www.monarco.io).
 - Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
 - Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
 for more information about the example projects and developing advanced 
