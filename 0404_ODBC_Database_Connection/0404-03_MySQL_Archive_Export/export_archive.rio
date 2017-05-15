@@ -1,5 +1,5 @@
 ODBC {
-  Connection "DRIVER=MySQL;SERVER=127.0.0.1;PORT=3306;DATABASE=dbname;UID=dbuser;PWD=dbpassword;"
+  Connection "DRIVER=MySQL;SERVER=localhost;PORT=3306;DATABASE=dbname;UID=dbuser;PWD=dbpassword;"
   Archive {
     Mode 1
     SQL "alarms"
