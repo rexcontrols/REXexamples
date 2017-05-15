@@ -1,0 +1,459 @@
+Model {
+  Name                    "mcp23s17_task"
+  Version                 7.5
+  MdlSubVersion           0
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime        "0.035000"
+  OverrideScopeRefreshTime on
+  DisableAllScopes        off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength    120
+  Created                 "Fri Sep 17 13:31:26 2010"
+  Creator                 "jsobota"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "jsobota"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon May 16 10:26:28 2011"
+  RTWModifiedTimeStamp    227442227
+  ModelVersionFormat      "1.%<AutoIncrement:7>"
+  ConfigurationManager    "none"
+  SampleTimeColors        off
+  SampleTimeAnnotations   off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ShowTestPointIcons      on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons         on
+  SortedOrder             off
+  ExecutionContextIcon    off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  SimulationMode          "normal"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  CovReportOnPause        on
+  CovModelRefEnable       "Off"
+  CovExternalEMLEnable    off
+  ExtModeBatchMode        off
+  ExtModeEnableFloating   on
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  MdlSubVersion           0
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime        "0.035000"
+  OverrideScopeRefreshTime on
+  DisableAllScopes        off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength    120
+  Created                 "Fri Sep 17 13:31:26 2010"
+  Creator                 "jsobota"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "jsobota"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Mon May 16 10:26:28 2011"
+  RTWModifiedTimeStamp    227442227
+  ModelVersionFormat      "1.%<AutoIncrement:7>"
+  ConfigurationManager    "none"
+  SampleTimeColors        off
+  SampleTimeAnnotations   off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ShowTestPointIcons      on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons         on
+  SortedOrder             off
+  ExecutionContextIcon    off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  SimulationMode          "normal"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  CovReportOnPause        on
+  CovModelRefEnable       "Off"
+  CovExternalEMLEnable    off
+  ExtModeBatchMode        off
+  ExtModeEnableFloating   on
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    BlockRotation           0
+    BlockMirror             off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "mcp23s17_task"
+    Location                [309, 34, 787, 361]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    TiledPaperMargins       [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ReportName              "simulink-default.rpt"
+    SIDHighWatermark        7
+    #GUID                   cd908f7d-f779-4842-a494-f67a48808ff5
+    Block {
+      BlockType               Reference
+      Name                    "BDOCT_GPIOB"
+      Ports                   [1, 8, 0, 0, 0]
+      Position                [400, 161, 435, 249]
+      SourceBlock             "logiclib/BDOCT"
+      shift                   0
+      #GUID                   d96bb11c-36da-44a9-a6bd-f003991623ce
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BMOCT_GPIOA"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [200, 96, 235, 184]
+      SourceBlock             "logiclib/BMOCT"
+      shift                   0
+      #GUID                   d83bd95f-75e5-49c7-b362-5a5a86b22ba0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GPA0"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 98, 60, 112]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   88076768-1b39-4fe2-a690-8e4a497a2513
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GPA1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [95, 108, 115, 122]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   5a811739-e304-41b5-942a-4417c3332c58
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GPA2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 138, 60, 152]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   5c8ef43c-da6f-4ae4-ba05-931dec3005f4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GPA3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [95, 153, 115, 167]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   8b6a9b13-996f-4d8e-9013-28d6564506be
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GPA4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 178, 60, 192]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   7a2c51cb-7137-468f-8e91-dd6e2bc2b91e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GPA5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [95, 193, 115, 207]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   ce0d8103-659f-4474-b9ac-d2adbbca1ea4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GPA6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 218, 60, 232]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   dbd843d8-9fc7-4f93-b3a5-02c9642de155
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GPA7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [95, 233, 115, 247]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   0ee2e1e5-85dd-4112-af56-ed6b8171363a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [280, 86, 330, 264]
+      SourceBlock             "speclib/REXLANG"
+      strs                    0
+      #RTFlags                1025
+      SID                     4
+      LibraryVersion          "1.88"
+      SourceType              "REXLANG"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      tab_matlab              "BASIC"
+      srcname                 "mcp23s17.c"
+      srctype                 "1: C-like"
+      stack                   0
+      debug                   "1: No check"
+      p0                      "/dev/spidev0.0"
+      p1                      0
+      p2                      0
+      p3                      0
+      p4                      0
+      p5                      0
+      p6                      0
+      p7                      0
+      p8                      0
+      p9                      0
+      p10                     0
+      p11                     0
+      p12                     0
+      p13                     0
+      p14                     0
+      p15                     0
+      fname                   "/dev/spidev0.0"
+      #GUID                   76852e46-e48f-4267-b434-b0cf27f1b52e
+    }
+    Line {
+      SrcBlock                "BMOCT_GPIOA"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 6
+      #GUID                   b1d76481-5796-4082-83e5-371f51e30c4f
+    }
+    Line {
+      SrcBlock                "CNB_GPA0"
+      SrcPort                 1
+      DstBlock                "BMOCT_GPIOA"
+      DstPort                 1
+      #GUID                   970d642f-f35f-4c76-9e04-69d08ab07b55
+    }
+    Line {
+      SrcBlock                "CNB_GPA1"
+      SrcPort                 1
+      DstBlock                "BMOCT_GPIOA"
+      DstPort                 2
+      #GUID                   1dfcc210-2bf7-4d21-bed4-094622d84ca4
+    }
+    Line {
+      SrcBlock                "CNB_GPA2"
+      SrcPort                 1
+      Points                  [80, 0; 0, -20]
+      DstBlock                "BMOCT_GPIOA"
+      DstPort                 3
+      #GUID                   bd97fa1f-885d-41c7-b7c5-152247826253
+    }
+    Line {
+      SrcBlock                "CNB_GPA3"
+      SrcPort                 1
+      Points                  [30, 0; 0, -25]
+      DstBlock                "BMOCT_GPIOA"
+      DstPort                 4
+      #GUID                   7267a21e-c589-4f10-881b-c45485c3b703
+    }
+    Line {
+      SrcBlock                "CNB_GPA4"
+      SrcPort                 1
+      Points                  [90, 0; 0, -40]
+      DstBlock                "BMOCT_GPIOA"
+      DstPort                 5
+      #GUID                   3bdf35af-e5c2-4ef6-a4e9-e32f43373f7e
+    }
+    Line {
+      SrcBlock                "CNB_GPA5"
+      SrcPort                 1
+      Points                  [40, 0; 0, -45]
+      DstBlock                "BMOCT_GPIOA"
+      DstPort                 6
+      #GUID                   46d6b1fd-2102-407b-a876-19aea8e2a3dc
+    }
+    Line {
+      SrcBlock                "CNB_GPA6"
+      SrcPort                 1
+      Points                  [100, 0; 0, -60]
+      DstBlock                "BMOCT_GPIOA"
+      DstPort                 7
+      #GUID                   2bb2d0b2-837b-4c8f-85b7-0aa367b89502
+    }
+    Line {
+      SrcBlock                "CNB_GPA7"
+      SrcPort                 1
+      Points                  [50, 0; 0, -65]
+      DstBlock                "BMOCT_GPIOA"
+      DstPort                 8
+      #GUID                   095426d6-f811-4d51-ab1e-ea43a35b94a5
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 12
+      DstBlock                "BDOCT_GPIOB"
+      DstPort                 1
+      #GUID                   5df99652-5ebf-4afb-8d65-52535f8824a7
+    }
+    Annotation {
+      Position                [145, 40]
+      Text                    "See the README.md and mcp23s17.c file for detai"
+"ls."
+      #GUID                   b36b9014-7212-4d27-9d7e-74633f0c9c99
+    }
+    Annotation {
+      Position                [135, 20]
+      Text                    "MCP23S17 I/O expander via SPI"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   84b1a1d6-b73f-4847-9a61-26916343f28b
+    }
+  }
+}

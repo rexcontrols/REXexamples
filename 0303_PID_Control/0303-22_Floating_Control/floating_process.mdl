@@ -1,0 +1,137 @@
+Model {
+  Name                    "floating_process"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "floating_process"
+    Location                [908, 31, 1240, 196]
+    #GUID                   6bb32eba-fbd3-4586-8c2e-ae170a0ec84f
+    Block {
+      BlockType               Inport
+      Name                    "mv_fine_valve"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 83, 80, 97]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   91f21623-7d7d-49a8-a221-6539fe6ab27d
+    }
+    Block {
+      BlockType               Inport
+      Name                    "mv_coarse_valve"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 118, 80, 132]
+      Port                    2
+      BackgroundColor         "green"
+      #GUID                   f68b2b57-c916-42ae-a773-8d10763eca3a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD_1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [125, 94, 150, 116]
+      SourceBlock             "mathlib/ADD"
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "white"
+      #GUID                   b0c97520-b0f4-407f-8376-ac832dc7e9ac
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MDL_PROCESS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [185, 98, 210, 112]
+      SourceBlock             "modellib/MDL"
+      ShowName                on
+      NamePlacement           ""
+      k0                      10
+      del                     0
+      tau1                    3
+      tau2                    5
+      BackgroundColor         "white"
+      nmax                    100
+      #GUID                   130bbf47-5e49-4e54-9fab-165f363289d5
+    }
+    Block {
+      BlockType               Outport
+      Name                    "pv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [250, 98, 280, 112]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   8a31a8a9-62cd-4528-875a-80503ddfbc4e
+    }
+    Line {
+      SrcBlock                "ADD_1"
+      SrcPort                 1
+      DstBlock                "MDL_PROCESS"
+      DstPort                 1
+      #GUID                   5b482223-8c52-41b7-88d0-aba1526d98b2
+    }
+    Line {
+      SrcBlock                "MDL_PROCESS"
+      SrcPort                 1
+      DstBlock                "pv"
+      DstPort                 1
+      #GUID                   abbfad06-a2f0-4322-91e8-94fb210a7de0
+    }
+    Line {
+      SrcBlock                "mv_coarse_valve"
+      SrcPort                 1
+      Points                  [25, 0]
+      DstBlock                "ADD_1"
+      DstPort                 2
+      #GUID                   826cc6dd-b835-4272-91a4-c6af16b91c8e
+    }
+    Line {
+      SrcBlock                "mv_fine_valve"
+      SrcPort                 1
+      Points                  [25, 0]
+      DstBlock                "ADD_1"
+      DstPort                 1
+      #GUID                   115547f4-2a72-45a7-9e4e-ba0b9ba5b064
+    }
+    Annotation {
+      Position                [150, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   4ac60146-a3af-466f-b9af-43c3c0d3e48a
+    }
+    Annotation {
+      Position                [135, 20]
+      Text                    "Floating Control - process model"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   14d23dad-9b89-4411-b118-b9a84eb170ea
+    }
+  }
+}

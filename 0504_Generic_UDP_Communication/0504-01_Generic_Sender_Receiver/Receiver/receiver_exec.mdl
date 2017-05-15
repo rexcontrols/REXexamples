@@ -1,0 +1,92 @@
+Model {
+  Name                    "receiver_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "receiver_exec"
+    Location                [11, 33, 284, 403]
+    #GUID                   39cb8861-5961-447a-bf17-61959d76aae1
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [40, 53, 85, 342]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   0b2d71c6-c300-46d9-935a-fd2fc96683d9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "receiver_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [125, 208, 175, 222]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   86a91f34-8f6c-4d78-9c40-ed194e3c0d59
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "receiver_task"
+      DstPort                 1
+      #GUID                   78ff6767-ed7e-4761-9eee-99c47d45a19e
+    }
+    Annotation {
+      Position                [100, 20]
+      Text                    "UDP - Receiver station"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   ae5a037b-263b-4344-b0a8-7867b25cd42e
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+".\n"
+      #GUID                   37cb4baf-efe2-4aef-b464-9caf0e0605dc
+    }
+  }
+}

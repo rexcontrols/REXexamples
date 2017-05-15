@@ -1,0 +1,647 @@
+Model {
+  Name                    "emo_1wr4di4_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "emo_1wr4di4_task"
+    Location                [266, 33, 1172, 770]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "ATMT"
+      Ports                   [20, 19, 0, 0, 0]
+      Position                [45, 176, 100, 384]
+      SourceBlock             "logiclib/ATMT"
+      morestps                off
+      ntr                     4
+      STT                     [0 15 1; 1 15 2; 2 15 3; 3 15 0]
+      touts                   [5.6 2.4 2.4 2.4 5 6 7 8 9 10 11 12 13 14 15 16]
+      #GUID                   2455db76-4f63-48bd-b57d-b1b92256d9bd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BDOCT"
+      Ports                   [1, 8, 0, 0, 0]
+      Position                [535, 141, 570, 229]
+      SourceBlock             "logiclib/BDOCT"
+      shift                   0
+      #GUID                   f6ee8d75-5a88-405b-b535-b993634a2289
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BDOCT_DI"
+      Ports                   [1, 8, 0, 0, 0]
+      Position                [225, 431, 260, 519]
+      SourceBlock             "logiclib/BDOCT"
+      shift                   0
+      #GUID                   47e6b44d-0a2c-4df3-918f-5959174646da
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_extra"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [150, 268, 165, 292]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      "0.05"
+      t2                      "0.1"
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   3fb45492-2ff8-46ab-b6fb-f5c647148819
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_fast"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [150, 228, 165, 252]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      "0.1"
+      t2                      "0.2"
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   0149bf73-95e0-47f7-aa82-8aa6693dc885
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_normal"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [150, 188, 165, 212]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      "0.2"
+      t2                      "0.4"
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   3e247f46-cd26-4bef-a6e5-3afe3303bb11
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_slow"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [150, 148, 165, 172]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      "0.4"
+      t2                      "0.8"
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   60f5dd7f-9d53-414c-89eb-81f10f186fbb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BITOP_NOT"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [145, 463, 170, 487]
+      SourceBlock             "logiclib/BITOP"
+      iop                     "1: Bit NOT"
+      BackgroundColor         "yellow"
+      #GUID                   f2af199e-416e-48cf-a62d-1d7d3a8aa369
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BITOP_OR"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [615, 233, 640, 257]
+      SourceBlock             "logiclib/BITOP"
+      iop                     "2: Bit OR"
+      #GUID                   a3ad9d14-c04b-499e-9057-206d6c703280
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BITOP_SHL"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [500, 238, 525, 262]
+      SourceBlock             "logiclib/BITOP"
+      iop                     "5: Shift Left"
+      #GUID                   97fabae2-a60a-491b-aeef-4901063956e2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BMOCT"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [710, 141, 745, 229]
+      SourceBlock             "logiclib/BMOCT"
+      shift                   0
+      #GUID                   ea63bd63-4bd8-48c0-b87a-1a7620fb4abb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [510, 513, 530, 527]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   821d7ceb-3198-41e0-9c6c-ac881816db43
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [450, 248, 470, 262]
+      SourceBlock             "mathlib/CNI"
+      icn                     1
+      #GUID                   622fe321-b6c6-490c-973b-cc611ef72397
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 463, 120, 477]
+      ShowName                off
+      GotoTag                 "OWS__extDI"
+      BackgroundColor         "yellow"
+      #GUID                   a84f4a46-e518-4eeb-bb4c-08e72e1e9dc5
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [770, 178, 860, 192]
+      ShowName                off
+      GotoTag                 "OWS__extRLY"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   94f71315-4180-4bbc-a4a4-c28d8f78d88b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [510, 290, 520, 300]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      #GUID                   682ccb33-370f-40ad-b6f8-d94c23c40967
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [440, 178, 465, 192]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   b38ea7bd-db70-417f-98a0-b19eab222710
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [300, 178, 325, 192]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   77c25d47-9732-4285-b42e-d882a9e723a3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SELQUAD"
+      Ports                   [7, 1, 0, 0, 0]
+      Position                [235, 147, 270, 223]
+      SourceBlock             "analoglib/SELQUAD"
+      BINF                    off
+      #GUID                   896a7db1-78f2-4f9c-8365-8f9ca8705400
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SHLD"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [375, 168, 415, 202]
+      SourceBlock             "analoglib/SHLD"
+      y0                      1
+      mode                    "1: Triggered sampling"
+      #GUID                   087016d6-0d53-4111-80b0-2d23614ddf45
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_INPUTS"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [580, 468, 625, 542]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Status of the digital inputs"
+      #GUID                   007f9373-2647-4bc0-a378-9ce1f96df98b
+        timesrc       1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_RELAYS"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [580, 628, 625, 702]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Status of the relays"
+      #GUID                   a465dbd9-632a-449e-8200-6994c4080730
+        timesrc       1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP__RLY"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [805, 41, 835, 129]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   b772c99c-f2fb-40de-b177-ae1d1eb9bae9
+    }
+    Line {
+      SrcBlock                "ATMT"
+      SrcPort                 17
+      Points                  [115, 0]
+      DstBlock                "SELQUAD"
+      DstPort                 5
+      #GUID                   88f51a15-caf9-40e8-8ec4-c269b03c4999
+    }
+    Line {
+      SrcBlock                "ATMT"
+      SrcPort                 19
+      Points                  [5, 0; 0, 35; -80, 0]
+      DstBlock                "ATMT"
+      DstPort                 20
+      #GUID                   845a143f-3f5f-4e7e-99e1-4ac37ca799ef
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 1
+      Points                  [30, 0]
+      #GUID                   16fcbb5e-c1b5-47a9-b295-73229758559f
+      Branch {
+        DstBlock                "BMOCT"
+        DstPort                 1
+        #GUID                   9ce06ca5-23d1-45c2-9a02-23d888a22cf0
+      }
+      Branch {
+        Points                  [0, -100]
+        DstBlock                "UNP__RLY"
+        DstPort                 1
+        #GUID                   80527688-ac01-4040-9815-b6fce563e058
+      }
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 2
+      Points                  [40, 0]
+      #GUID                   9fa699ea-4abf-4ec2-a69a-4db6f098e506
+      Branch {
+        DstBlock                "BMOCT"
+        DstPort                 2
+        #GUID                   12bc152a-96d3-4dc8-a9e1-a0eea402bf4f
+      }
+      Branch {
+        Points                  [0, -100]
+        DstBlock                "UNP__RLY"
+        DstPort                 2
+        #GUID                   c7d51258-421e-4a6a-8e59-1e3ee0612855
+      }
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 3
+      Points                  [50, 0]
+      #GUID                   69ac4d18-df67-4da8-9882-baea06d915f1
+      Branch {
+        DstBlock                "BMOCT"
+        DstPort                 3
+        #GUID                   29d533f3-15d3-41a5-a1da-a1fc0639ac6a
+      }
+      Branch {
+        Points                  [0, -100]
+        DstBlock                "UNP__RLY"
+        DstPort                 3
+        #GUID                   08711212-328b-4b46-a1af-b74d4ece37d4
+      }
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 4
+      Points                  [15, 0]
+      #GUID                   c057ca8e-0bca-4569-8bca-b4982624c801
+      Branch {
+        Points                  [0, 60]
+        DstBlock                "BITOP_OR"
+        DstPort                 1
+        #GUID                   f3dbda25-0044-40c9-b14c-dd66436ba7ec
+      }
+      Branch {
+        Points                  [45, 0]
+        #GUID                   924c0769-f255-4d47-8d87-c67e6bac10d7
+        Branch {
+          DstBlock                "BMOCT"
+          DstPort                 4
+          #GUID                   c045f2a4-a038-47a7-baca-30ec23c3c960
+        }
+        Branch {
+          Points                  [0, -100]
+          DstBlock                "UNP__RLY"
+          DstPort                 4
+          #GUID                   e25602bc-9a9d-4db1-9daf-aec44327c6e0
+        }
+      }
+    }
+    Line {
+      SrcBlock                "BDOCT_DI"
+      SrcPort                 1
+      Points                  [25, 0; 0, 200]
+      DstBlock                "TRND_RELAYS"
+      DstPort                 1
+      #GUID                   0125cdae-9d05-40ff-a502-a6b9d7a8637a
+    }
+    Line {
+      SrcBlock                "BDOCT_DI"
+      SrcPort                 2
+      Points                  [35, 0; 0, 200]
+      DstBlock                "TRND_RELAYS"
+      DstPort                 2
+      #GUID                   19a1bd5f-9d40-4c63-97e8-135ecdba0e86
+    }
+    Line {
+      SrcBlock                "BDOCT_DI"
+      SrcPort                 3
+      Points                  [45, 0; 0, 200]
+      DstBlock                "TRND_RELAYS"
+      DstPort                 3
+      #GUID                   8c158ead-c365-414e-8356-45846ea4f470
+    }
+    Line {
+      SrcBlock                "BDOCT_DI"
+      SrcPort                 4
+      Points                  [55, 0; 0, 200]
+      DstBlock                "TRND_RELAYS"
+      DstPort                 4
+      #GUID                   66a3cb71-38e7-46f2-8031-7072b05ce2c1
+    }
+    Line {
+      SrcBlock                "BDOCT_DI"
+      SrcPort                 5
+      DstBlock                "TRND_INPUTS"
+      DstPort                 1
+      #GUID                   36642103-2739-44f8-9f65-111b741e109a
+    }
+    Line {
+      SrcBlock                "BDOCT_DI"
+      SrcPort                 6
+      DstBlock                "TRND_INPUTS"
+      DstPort                 2
+      #GUID                   e62d6fec-8111-4f32-b749-d04c4bd9ca5a
+    }
+    Line {
+      SrcBlock                "BDOCT_DI"
+      SrcPort                 7
+      DstBlock                "TRND_INPUTS"
+      DstPort                 3
+      #GUID                   df357fe4-9567-4a8f-8b8b-de9eb55c1e2a
+    }
+    Line {
+      SrcBlock                "BDOCT_DI"
+      SrcPort                 8
+      DstBlock                "TRND_INPUTS"
+      DstPort                 4
+      #GUID                   aa4e450d-39e6-45bb-ad94-cae2f48ba9cd
+    }
+    Line {
+      SrcBlock                "BIS_extra"
+      SrcPort                 1
+      Points                  [40, 0; 0, -90]
+      DstBlock                "SELQUAD"
+      DstPort                 4
+      #GUID                   e27ced5c-b80e-4b9e-b3f9-ce708be91f0b
+    }
+    Line {
+      SrcBlock                "BIS_fast"
+      SrcPort                 1
+      Points                  [30, 0; 0, -60]
+      DstBlock                "SELQUAD"
+      DstPort                 3
+      #GUID                   9cfdc6e7-37ff-4cee-91d1-9ca216afda0a
+    }
+    Line {
+      SrcBlock                "BIS_normal"
+      SrcPort                 1
+      Points                  [20, 0; 0, -30]
+      DstBlock                "SELQUAD"
+      DstPort                 2
+      #GUID                   affb1411-2cfc-4aef-8461-299d12fe4af7
+    }
+    Line {
+      SrcBlock                "BIS_slow"
+      SrcPort                 1
+      DstBlock                "SELQUAD"
+      DstPort                 1
+      #GUID                   0e969eb2-ced5-45eb-a112-4f6cadfe3e6f
+    }
+    Line {
+      SrcBlock                "BITOP_NOT"
+      SrcPort                 1
+      DstBlock                "BDOCT_DI"
+      DstPort                 1
+      #GUID                   0074efbc-5627-44bd-a79c-ff23b8362d02
+    }
+    Line {
+      SrcBlock                "BITOP_OR"
+      SrcPort                 1
+      Points                  [25, 0; 0, 50]
+      DstBlock                "LPBRK"
+      DstPort                 1
+      #GUID                   a3375ebf-c404-4a43-96bc-c6536b88862c
+    }
+    Line {
+      SrcBlock                "BITOP_SHL"
+      SrcPort                 1
+      DstBlock                "BITOP_OR"
+      DstPort                 2
+      #GUID                   b5dd0f16-381e-41cd-8c8d-e06f8d9d1a6b
+    }
+    Line {
+      SrcBlock                "BMOCT"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   986bebaf-db08-4404-a3cb-9231b7e577b3
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      Points                  [15, 0]
+      #GUID                   6cc95af2-6a76-4eb3-b577-711babf59703
+      Branch {
+        DstBlock                "TRND_INPUTS"
+        DstPort                 5
+        #GUID                   55136ddb-8c3d-45aa-b5be-f5034538120a
+      }
+      Branch {
+        Points                  [0, 160]
+        DstBlock                "TRND_RELAYS"
+        DstPort                 5
+        #GUID                   f5098a7b-0711-42df-8213-8d94153ac808
+      }
+    }
+    Line {
+      SrcBlock                "CNI"
+      SrcPort                 1
+      DstBlock                "BITOP_SHL"
+      DstPort                 2
+      #GUID                   75e1ba1a-7a9d-4f67-9d4f-ca307e8a9d9d
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "BITOP_NOT"
+      DstPort                 1
+      #GUID                   c83326e9-a599-4fd5-a82f-325405e799c3
+    }
+    Line {
+      SrcBlock                "LPBRK"
+      SrcPort                 1
+      Points                  [-155, 0; 0, -120]
+      DstBlock                "SHLD"
+      DstPort                 1
+      #GUID                   8765a2fc-c12e-41e2-b5f1-92bbb2793d0c
+    }
+    Line {
+      SrcBlock                "RTOI"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   cfe6d63f-f792-4ad7-a460-30b6f7a92982
+      Branch {
+        DstBlock                "BDOCT"
+        DstPort                 1
+        #GUID                   339dc824-9545-4d29-b36c-4609140bca64
+      }
+      Branch {
+        Points                  [0, 60]
+        DstBlock                "BITOP_SHL"
+        DstPort                 1
+        #GUID                   e412bf58-0cca-4cd6-8178-ee57c4e7b3bf
+      }
+    }
+    Line {
+      SrcBlock                "RTOI1"
+      SrcPort                 1
+      DstBlock                "SHLD"
+      DstPort                 2
+      #GUID                   af1cbd41-f0c5-4a77-8001-0429cfe8ec21
+    }
+    Line {
+      SrcBlock                "SELQUAD"
+      SrcPort                 1
+      DstBlock                "RTOI1"
+      DstPort                 1
+      #GUID                   16b1552e-a341-4ce9-bb65-db0f8c6efaf1
+    }
+    Line {
+      SrcBlock                "SHLD"
+      SrcPort                 1
+      DstBlock                "RTOI"
+      DstPort                 1
+      #GUID                   3d1abd7e-6897-40cd-b652-3888efa8489f
+    }
+    Annotation {
+      Position                [820, 30]
+      Text                    "UniPi relays"
+      FontWeight              "bold"
+      FontSize                10
+      #GUID                   f8ed918e-0920-4036-a76f-b99ee1567666
+    }
+    Annotation {
+      Position                [820, 165]
+      Text                    "EMO-1WR4DI4 relays"
+      FontWeight              "bold"
+      FontSize                10
+      #GUID                   6a13a31d-7113-4da9-9b73-b07a618e0ec8
+    }
+    Annotation {
+      Position                [435, 625]
+      Text                    "Status of EMO-1WR4DI4 relays (loopback)"
+      FontWeight              "bold"
+      FontSize                10
+      #GUID                   ce0c53f3-2333-46a5-8bf8-c5c4faede0cb
+    }
+    Annotation {
+      Position                [460, 470]
+      Text                    "Digital inputs of EMO-1WR4DI4"
+      FontWeight              "bold"
+      FontSize                10
+      #GUID                   5c048bb4-43cf-410f-9b54-63b5167ed972
+    }
+    Annotation {
+      Position                [270, 50]
+      Text                    "Go to OWS driver configuration and press \"Conf"
+"igure\" to set the 1-Wire board (64-bit ID of the DS2408 chip).\n\nSee the REA"
+"DME.md file for details."
+      #GUID                   ac0c0a68-fa60-4f49-b7e8-0bfe4dc96383
+    }
+    Annotation {
+      Position                [200, 15]
+      Text                    "UniPi and EMO-1WR4DI4 extension module - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513
+    }
+  }
+}

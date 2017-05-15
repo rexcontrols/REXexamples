@@ -1,0 +1,236 @@
+Model {
+  Name                    "smtp_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "smtp_task"
+    Location                [292, 33, 895, 400]
+    #GUID                   5908a457-6bb4-450e-a235-6e94f1d87163
+    Block {
+      BlockType               Reference
+      Name                    "CNB_SMOKE_ALARM"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 293, 105, 307]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   20e99abe-ae04-4693-b3b0-c4f226ea65ce
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_TRIGGER_EMAIL"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [435, 133, 455, 147]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   97847c78-d790-424a-8350-ba6c7884bfb8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_temperature"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [110, 128, 140, 142]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "21.7"
+      BackgroundColor         "magenta"
+      #GUID                   db7ac04d-03cf-4b41-9df4-83e4b8f85847
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 203, 120, 217]
+      SourceBlock             "stringlib/CNS"
+      scv                     "inactive"
+      nmax                    0
+      #GUID                   b75158c5-74b4-47e8-a4f2-4f3f61168089
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 233, 120, 247]
+      SourceBlock             "stringlib/CNS"
+      scv                     "active"
+      nmax                    0
+      #GUID                   36370565-da44-468a-823a-e02a396dd28d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_Subject"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [230, 83, 415, 97]
+      SourceBlock             "stringlib/CNS"
+      scv                     "Message from REX"
+      nmax                    0
+      FontSize                10
+      BackgroundColor         "magenta"
+      #GUID                   e71a95f3-e4a4-4473-a10a-495a14884466
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CONCAT"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [305, 125, 365, 215]
+      SourceBlock             "stringlib/CONCAT"
+      ptrn                    "Hi there,\\nthis is a message from REX. Tempera"
+"ture is %1 and the smoke sensor is %2.\\nHave a nice day!"
+      nmax                    0
+      #GUID                   8611b9ea-b851-4143-9be5-26b6ececa579
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [185, 121, 225, 149]
+      SourceBlock             "stringlib/RTOS"
+      prec                    5
+      mode                    "1: best fit"
+      #GUID                   250f1efb-c890-4711-9a2b-8b7cac389d47
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SELSOCT"
+      Ports                   [12, 1, 0, 0, 0]
+      Position                [185, 200, 225, 330]
+      SourceBlock             "stringlib/SELSOCT"
+      BINF                    on
+      nmax                    0
+      #GUID                   d7509dd7-ea46-47bd-a335-c76d9135ed47
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SMTP"
+      Ports                   [3, 4, 0, 0, 0]
+      Position                [495, 82, 565, 128]
+      SourceBlock             "speclib/SMTP"
+      server                  "smtp.gmail.com"
+      to                      "recipient@domain.com"
+      from                    "youraccount@gmail.com"
+      tls                     "3: TLS"
+      user                    "youraccount"
+      password                "yourpassword"
+      domain                  "My-REX-Device"
+      auth                    "1: Login"
+      certificate             " "
+      VERIFY                  off
+      timeout                 20
+      BLOCKING                off
+      nmax                    256
+      datamax                 1024
+      BackgroundColor         "cyan"
+      #GUID                   87117c18-7a6e-4745-b483-579f56ded465
+    }
+    Line {
+      SrcBlock                "CNB_SMOKE_ALARM"
+      SrcPort                 1
+      DstBlock                "SELSOCT"
+      DstPort                 10
+      #GUID                   40cd5cee-5ea0-4828-a78c-14c83919cb53
+    }
+    Line {
+      SrcBlock                "CNB_TRIGGER_EMAIL"
+      SrcPort                 1
+      Points                  [15, 0; 0, -20]
+      DstBlock                "SMTP"
+      DstPort                 3
+      #GUID                   28a783a5-d21b-432a-be6d-1722b021e877
+    }
+    Line {
+      SrcBlock                "CNR_temperature"
+      SrcPort                 1
+      DstBlock                "RTOS"
+      DstPort                 1
+      #GUID                   2cdda990-9733-4534-a1be-902a99e585fe
+    }
+    Line {
+      SrcBlock                "CNS"
+      SrcPort                 1
+      DstBlock                "SELSOCT"
+      DstPort                 1
+      #GUID                   a8b208d5-12d6-48d6-88ea-b5244fb46f04
+    }
+    Line {
+      SrcBlock                "CNS1"
+      SrcPort                 1
+      Points                  [45, 0]
+      DstBlock                "SELSOCT"
+      DstPort                 2
+      #GUID                   80190f39-5243-4464-bd7a-2c35a1ded98e
+    }
+    Line {
+      SrcBlock                "CNS_Subject"
+      SrcPort                 1
+      DstBlock                "SMTP"
+      DstPort                 1
+      #GUID                   1cb45e4f-e786-4ed8-9b62-6dcd0e6cda31
+    }
+    Line {
+      SrcBlock                "CONCAT"
+      SrcPort                 1
+      Points                  [10, 0; 0, -65]
+      DstBlock                "SMTP"
+      DstPort                 2
+      #GUID                   5e21ef67-c052-4177-9efa-79d8670177a1
+    }
+    Line {
+      SrcBlock                "RTOS"
+      SrcPort                 1
+      DstBlock                "CONCAT"
+      DstPort                 1
+      #GUID                   c4fefdc4-7a9e-44dd-bffe-34874d00898d
+    }
+    Line {
+      SrcBlock                "SELSOCT"
+      SrcPort                 1
+      Points                  [45, 0; 0, -120]
+      DstBlock                "CONCAT"
+      DstPort                 2
+      #GUID                   0f53c9bd-a071-419c-92f9-fc017297fbc7
+    }
+    Annotation {
+      Position                [130, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8feb317c-34be-445c-9c14-f35789312c76
+    }
+    Annotation {
+      Position                [110, 15]
+      Text                    "Send email - SMTP example"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   d52f859a-11a7-4c8e-849d-abd0a5b60b67
+    }
+  }
+}

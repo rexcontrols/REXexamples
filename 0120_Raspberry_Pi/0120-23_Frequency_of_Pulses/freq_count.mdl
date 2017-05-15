@@ -1,0 +1,95 @@
+Model {
+  Name                    "freq_count"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "freq_count"
+    Location                [289, 31, 725, 211]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "COUNT"
+      Ports                   [7, 4, 0, 0, 0]
+      Position                [220, 77, 275, 153]
+      SourceBlock             "logiclib/COUNT"
+      #GUID                   1140ce1c-27c7-471e-aca9-517399044ded
+    }
+    Block {
+      BlockType               From
+      Name                    "From15"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 108, 170, 122]
+      ShowName                off
+      GotoTag                 "RPI__GPIO25D"
+      ForegroundColor         "black"
+      BackgroundColor         "yellow"
+      #GUID                   5c12b921-1ba5-4c58-b3f6-74a9265c6aef
+    }
+    Block {
+      BlockType               Outport
+      Name                    "count"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [330, 78, 360, 92]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   963bff3b-5333-4cfe-9582-c1fac212fbd7
+    }
+    Line {
+      SrcBlock                "COUNT"
+      SrcPort                 1
+      DstBlock                "count"
+      DstPort                 1
+      #GUID                   e304370f-4718-4a48-b557-3d4b1ef72604
+    }
+    Line {
+      SrcBlock                "From15"
+      SrcPort                 1
+      DstBlock                "COUNT"
+      DstPort                 4
+      #GUID                   2013aac1-efe9-45f7-a274-9a77e02b2bb9
+    }
+    Annotation {
+      Position                [205, 35]
+      Text                    "This example illustrates using QUICK TASK. See "
+"the README.md file for details."
+      #GUID                   314dadbe-c9c3-4bf3-9f54-f1181e8dab2c
+    }
+    Annotation {
+      Position                [175, 15]
+      Text                    "Counting pulses on GPIO#25 (Raspberry Pi)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   67999b1e-e679-40eb-990e-301c963e8e7c
+    }
+  }
+}

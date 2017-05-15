@@ -1,0 +1,408 @@
+Model {
+  Name                    "logging_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "logging_task"
+    Location                [345, 35, 871, 449]
+    #GUID                   cbed34ea-42c8-4233-9232-c394002de1f8
+    Block {
+      BlockType               Reference
+      Name                    "ADD"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [165, 203, 190, 227]
+      SourceBlock             "mathlib/ADD"
+      #GUID                   e0f23d89-770e-4366-a186-dbaa400a9dc9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_AUTO_TRIGGER"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [55, 273, 70, 297]
+      SourceBlock             "genlib/BIS"
+      Y0                      on
+      t1                      30
+      t2                      60
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   120bcc6b-ad16-49d6-a6ff-129ef9aeb509
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_MANUAL_TRIGGERING"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 358, 120, 372]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   baebbe5d-54b8-42dd-8ff1-bbcca0ebcd19
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DATE_"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [180, 78, 220, 122]
+      SourceBlock             "timelib/DATE_"
+      tz                      "1: Local time"
+      #GUID                   acdfba24-d71e-4ff4-8b0e-16f38ec5fdfd
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [370, 248, 485, 272]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  " chars"
+      DispValue               ""
+      #GUID                   5f05cc3e-593e-437f-9b16-21eece6f650d
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [370, 88, 485, 112]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a5dc615f-c62a-4a8c-b51a-3e74bc21be2b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [370, 322, 485, 348]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  " °C"
+      DispValue               ""
+      #GUID                   3483dd09-ce97-4782-a71f-5a1a0f05cd2d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [210, 258, 235, 272]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   1f82ec5f-7685-45c3-be4e-3ee5ebe3252b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISSW"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [155, 273, 185, 307]
+      SourceBlock             "logiclib/ISSW"
+      #GUID                   bcaef24f-de81-4f9f-8150-ce79a189a052
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_MAN_TRIGGER"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 323, 70, 337]
+      SourceBlock             "genlib/MP"
+      BSTATE                  on
+      pwidth                  1
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   51b6b028-9794-41b4-82e4-beecb7fd14c4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [280, 88, 330, 272]
+      SourceBlock             "speclib/REXLANG"
+      strs                    0
+      SID                     4
+      LibraryVersion          "1.88"
+      SourceType              "REXLANG"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      tab_matlab              "BASIC"
+      srcname                 "logging_rexlang.c"
+      srctype                 "1: C-like"
+      stack                   0
+      debug                   "3: Full check"
+      p0                      0
+      p1                      0
+      p2                      0
+      p3                      0
+      p4                      0
+      p5                      0
+      p6                      0
+      p7                      0
+      p8                      0
+      p9                      0
+      p10                     0
+      p11                     0
+      p12                     0
+      p13                     0
+      p14                     0
+      p15                     0
+      fname                   ""
+      BackgroundColor         "cyan"
+      #RTFlags                1025
+      #GUID                   c05780be-fa78-48ec-af6e-3d28a802ff9c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_sine_fast"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 233, 110, 247]
+      SourceBlock             "genlib/SG"
+      isig                    "1: SINE"
+      amp                     3
+      freq                    "0.09"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      offset                  0
+      #GUID                   24829127-7c0d-48ba-b586-c1b048eb8da1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_sine_slow"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 203, 110, 217]
+      SourceBlock             "genlib/SG"
+      isig                    "1: SINE"
+      amp                     10
+      freq                    "0.025"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      offset                  5
+      #GUID                   2ab8053b-9bec-403f-8385-76f516bcf498
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SHLD"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [290, 318, 330, 352]
+      SourceBlock             "analoglib/SHLD"
+      y0                      0
+      mode                    "1: Triggered sampling"
+      #GUID                   d1fe4dd0-3804-4b86-8afa-16804bab942f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TIME"
+      Ports                   [0, 3, 0, 0, 0]
+      Position                [180, 138, 220, 172]
+      SourceBlock             "timelib/TIME"
+      tz                      "1: Local time"
+      #GUID                   64610488-86c2-41bc-90d6-d0b692d6fd61
+    }
+    Line {
+      SrcBlock                "ADD"
+      SrcPort                 1
+      Points                  [65, 0]
+      #GUID                   469e4533-6f56-49d4-b1c3-c18936eff73c
+      Branch {
+        DstBlock                "REXLANG"
+        DstPort                 13
+        #GUID                   7dff5f87-3d1e-4304-9374-ed84f6e44b19
+      }
+      Branch {
+        Points                  [0, 110]
+        DstBlock                "SHLD"
+        DstPort                 1
+        #GUID                   8160348c-080a-45b4-a7e4-dec161a745bc
+      }
+    }
+    Line {
+      SrcBlock                "BIS_AUTO_TRIGGER"
+      SrcPort                 1
+      DstBlock                "ISSW"
+      DstPort                 1
+      #GUID                   b79d4a8a-e643-42c4-8ed7-5f4942319b0a
+    }
+    Line {
+      SrcBlock                "CNB_MANUAL_TRIGGERING"
+      SrcPort                 1
+      Points                  [10, 0; 0, -65]
+      DstBlock                "ISSW"
+      DstPort                 3
+      #GUID                   0ad08608-33d2-4c93-824e-cdf39463795f
+    }
+    Line {
+      SrcBlock                "DATE_"
+      SrcPort                 1
+      Points                  [30, 0; 0, 30]
+      DstBlock                "REXLANG"
+      DstPort                 3
+      #GUID                   92c09388-6bec-4a04-88ca-8f2ca0dee44c
+    }
+    Line {
+      SrcBlock                "DATE_"
+      SrcPort                 2
+      Points                  [25, 0; 0, 30]
+      DstBlock                "REXLANG"
+      DstPort                 4
+      #GUID                   4a364dfa-0745-4179-97cf-f5580d55b73b
+    }
+    Line {
+      SrcBlock                "DATE_"
+      SrcPort                 3
+      Points                  [20, 0; 0, 30]
+      DstBlock                "REXLANG"
+      DstPort                 5
+      #GUID                   be6d04a2-7a68-43be-b825-6e38675419a5
+    }
+    Line {
+      SrcBlock                "EDGE_"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   cd56e9c2-f325-4bdf-bc83-72b03aecddf8
+      Branch {
+        DstBlock                "REXLANG"
+        DstPort                 18
+        #GUID                   dc8582c5-1900-4ca7-bc1d-61cc1ff873c8
+      }
+      Branch {
+        Points                  [0, 70]
+        DstBlock                "SHLD"
+        DstPort                 2
+        #GUID                   cabafd4d-8903-408f-8489-e032aff70c84
+      }
+    }
+    Line {
+      SrcBlock                "ISSW"
+      SrcPort                 1
+      Points                  [5, 0]
+      DstBlock                "EDGE_"
+      DstPort                 1
+      #GUID                   40f335e3-da01-4160-888a-4ed909a51e72
+    }
+    Line {
+      SrcBlock                "MP_MAN_TRIGGER"
+      SrcPort                 1
+      Points                  [45, 0; 0, -40]
+      DstBlock                "ISSW"
+      DstPort                 2
+      #GUID                   ec1c5c24-ce14-4971-bec7-bcc11c49d79c
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 1
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   34385e00-7b83-45b2-bf23-5c892f1ca747
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 17
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   1d9be165-91c6-4fad-a1dd-1caf7ab65249
+    }
+    Line {
+      SrcBlock                "SG_sine_fast"
+      SrcPort                 1
+      Points                  [35, 0]
+      DstBlock                "ADD"
+      DstPort                 2
+      #GUID                   7d071f05-b008-490e-9e7e-bd2808720df3
+    }
+    Line {
+      SrcBlock                "SG_sine_slow"
+      SrcPort                 1
+      DstBlock                "ADD"
+      DstPort                 1
+      #GUID                   f5b89206-696e-4071-b0ac-6687ef9947fd
+    }
+    Line {
+      SrcBlock                "SHLD"
+      SrcPort                 1
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   aaa7a5be-9dcd-49c8-9932-7cf2754f6918
+    }
+    Line {
+      SrcBlock                "TIME"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 6
+      #GUID                   766d3fc8-f53c-4966-be1f-12d44ac9a1e1
+    }
+    Line {
+      SrcBlock                "TIME"
+      SrcPort                 2
+      DstBlock                "REXLANG"
+      DstPort                 7
+      #GUID                   f7e40f54-ac56-4628-9ef9-49693d568028
+    }
+    Line {
+      SrcBlock                "TIME"
+      SrcPort                 3
+      DstBlock                "REXLANG"
+      DstPort                 8
+      #GUID                   53af930b-9b43-463e-b445-b5014911aaae
+    }
+    Annotation {
+      Position                [155, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      FontSize                12
+      #GUID                   fb909bf0-e432-4a73-a7aa-a2cfbe16311d
+    }
+    Annotation {
+      Position                [130, 20]
+      Text                    "REXLANG - Logging to text file"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   99e7b14e-5477-4f5f-a023-5ce95b12445b
+    }
+    Annotation {
+      Position                [225, 215]
+      Text                    "simulated\ntemperature"
+      #GUID                   1ae55998-025f-4cb2-b44f-c22a440f5eb9
+    }
+  }
+}

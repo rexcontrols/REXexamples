@@ -1,0 +1,143 @@
+Model {
+  Name                    "pwm2_process"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "pwm2_process"
+    Location                [967, 32, 1241, 223]
+    #GUID                   8e5cb666-0c19-4e3c-a909-4fba0cc84c06
+    Block {
+      BlockType               Inport
+      Name                    "mv_UP"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 108, 50, 122]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   810e86c4-7a29-4de4-aaaa-d0f88882de1e
+    }
+    Block {
+      BlockType               Inport
+      Name                    "mv_DN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 143, 50, 157]
+      Port                    2
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   fdb3c4b3-edf4-40c8-8565-bd277b263460
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MDL_PROCESS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [160, 128, 185, 142]
+      SourceBlock             "modellib/MDL"
+      ShowName                on
+      NamePlacement           ""
+      k0                      10
+      del                     0
+      tau1                    8
+      tau2                    5
+      BackgroundColor         "white"
+      nmax                    100
+      #GUID                   67548053-0e17-4e6f-9586-ce55713b381d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SUB"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [100, 118, 125, 147]
+      SourceBlock             "mathlib/SUB"
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "white"
+      #GUID                   d7899f17-5f46-4f23-a6a7-b412234720c6
+    }
+    Block {
+      BlockType               Outport
+      Name                    "pv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [220, 128, 250, 142]
+      Port                    1
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "green"
+      #GUID                   a6e92315-79a7-40b2-a8f9-78e0bc076900
+    }
+    Line {
+      SrcBlock                "MDL_PROCESS"
+      SrcPort                 1
+      DstBlock                "pv"
+      DstPort                 1
+      #GUID                   d30f2e72-2686-4c44-8fa4-52886e6b5b3e
+    }
+    Line {
+      SrcBlock                "SUB"
+      SrcPort                 1
+      DstBlock                "MDL_PROCESS"
+      DstPort                 1
+      #GUID                   acf08e1f-7a27-4404-81cf-8bedecd5de9c
+    }
+    Line {
+      SrcBlock                "mv_DN"
+      SrcPort                 1
+      Points                  [20, 0; 0, -10]
+      DstBlock                "SUB"
+      DstPort                 2
+      #GUID                   45049fa3-6e41-423c-bb25-8f186f3e8d30
+    }
+    Line {
+      SrcBlock                "mv_UP"
+      SrcPort                 1
+      Points                  [20, 0; 0, 10]
+      DstBlock                "SUB"
+      DstPort                 1
+      #GUID                   c7c98f3e-a5a9-470a-80bc-6f9c7a2193ec
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   6278442a-d13c-41e9-ac21-1c2ac4488c58
+    }
+    Annotation {
+      Position                [135, 20]
+      Text                    "PIDU with PWM - process model"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6871a9ea-cff8-4e24-9564-264f37194093
+    }
+  }
+}

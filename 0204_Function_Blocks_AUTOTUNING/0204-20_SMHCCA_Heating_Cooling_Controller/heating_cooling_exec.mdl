@@ -1,0 +1,119 @@
+Model {
+  Name                    "heating_cooling_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "heating_cooling_exec"
+    Location                [8, 31, 339, 427]
+    #GUID                   e855abf0-3c83-4a6c-875d-b52b0ddf17dc
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [20, 83, 65, 372]
+      SourceBlock             "execlib/EXEC"
+      ShowName                on
+      NamePlacement           ""
+      target                  "Generic target device"
+      tick                    "0.005"
+      ntick0                  2
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   6364086d-c39c-49b4-8501-25f4487088a3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "heating_cooling_control"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [105, 238, 155, 252]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   3632afb3-0cca-46d0-9508-c11461d643cf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "heating_cooling_process"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [230, 238, 280, 252]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   1
+      stop                    2
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   21a67261-c640-4b80-ba0d-534129cf05ed
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "heating_cooling_control"
+      DstPort                 1
+      #GUID                   041c5839-d6de-4c0d-bc62-db7df636d9a3
+    }
+    Line {
+      SrcBlock                "heating_cooling_control"
+      SrcPort                 1
+      DstBlock                "heating_cooling_process"
+      DstPort                 1
+      #GUID                   35dcf75a-a74a-489d-8a04-8c20375652ea
+    }
+    Annotation {
+      Position                [145, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   a6f2f1f1-cdf5-445c-a13b-1a86be749314
+    }
+    Annotation {
+      Position                [145, 20]
+      Text                    "SMHCCA - Heating/Cooling control"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   904fe3fe-6618-475e-8fd2-655560bf1142
+    }
+  }
+}

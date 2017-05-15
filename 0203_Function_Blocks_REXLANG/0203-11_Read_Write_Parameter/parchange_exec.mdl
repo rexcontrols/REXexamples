@@ -1,0 +1,92 @@
+Model {
+  Name                    "parchange_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "parchange_exec"
+    Location                [10, 32, 321, 418]
+    #GUID                   144460d5-1cb0-472e-89da-ccaee9790b29
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [80, 73, 125, 362]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  2
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   18de03a9-7162-410c-939a-8f4d9cf910d4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "parchange_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [160, 228, 210, 242]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   6985128c-297f-496c-9445-b4f75cf5d009
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "parchange_task"
+      DstPort                 1
+      #GUID                   5b5d0ea2-51a1-4540-86fc-f037ac16c461
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8bcc4368-a7c1-4b6d-b9de-76b6fbed2668
+    }
+    Annotation {
+      Position                [155, 20]
+      Text                    "REXLANG read / write parameter example"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   a6243c52-ae1e-4fe7-9b3f-ba7d6365eca6
+    }
+  }
+}

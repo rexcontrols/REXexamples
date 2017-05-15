@@ -1,0 +1,119 @@
+Model {
+  Name                    "smith_predictor_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "smith_predictor_exec"
+    Location                [10, 32, 324, 405]
+    #GUID                   c31a37f8-02df-4086-a499-c0944982fadc
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [15, 78, 60, 347]
+      SourceBlock             "execlib/EXEC"
+      ShowName                on
+      NamePlacement           ""
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  2
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   1a7cc4d0-3ae5-4979-8804-d352b2c8edf7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "smith_predictor_control"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 222, 150, 238]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   05c98252-d52b-47f4-b133-39e90f5a29f4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "smith_predictor_process"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 222, 275, 238]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   1
+      stop                    2
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   99b31aab-b6b0-43c7-835f-8870da706dd1
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "smith_predictor_control"
+      DstPort                 1
+      #GUID                   72b708b5-388e-4138-89dc-8809d72fc5cc
+    }
+    Line {
+      SrcBlock                "smith_predictor_control"
+      SrcPort                 1
+      DstBlock                "smith_predictor_process"
+      DstPort                 1
+      #GUID                   5d2e0145-a05c-4a06-a459-4adde8bb76c0
+    }
+    Annotation {
+      Position                [130, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   6756a713-e45b-4953-893e-a6aa2f49ceb2
+    }
+    Annotation {
+      Position                [65, 20]
+      Text                    "Smith predictor"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   e7b372e8-0bfd-4734-bdbc-82605c2a0980
+    }
+  }
+}

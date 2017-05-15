@@ -1,0 +1,227 @@
+Model {
+  Name                    "modbusslave_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "modbusslave_task"
+    Location                [294, 31, 759, 411]
+    #GUID                   0ca2549b-4607-4cc3-86e5-3bb11353a870
+    Block {
+      BlockType               Reference
+      Name                    "MTS__PiFaceDI"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [305, 106, 335, 194]
+      SourceBlock             "inoutlib/OUTOCT"
+      #GUID                   b4b07774-467c-4be1-b4b2-1467617de233
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTS__PiFaceDO"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [110, 251, 140, 339]
+      SourceBlock             "inoutlib/INOCT"
+      #GUID                   91c21406-a215-4543-bca7-b3e454b31cd5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFIU"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [110, 106, 140, 194]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   bbc60b98-0f0e-412e-9e5c-1e0344edf825
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFO"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [305, 251, 335, 339]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   63a9e915-ad3a-4c3c-bb41-07c207dac5b3
+    }
+    Line {
+      SrcBlock                "MTS__PiFaceDO"
+      SrcPort                 1
+      DstBlock                "RPI__PFO"
+      DstPort                 1
+      #GUID                   a1af019e-76aa-4192-8ac6-1af8e07fef46
+    }
+    Line {
+      SrcBlock                "MTS__PiFaceDO"
+      SrcPort                 2
+      DstBlock                "RPI__PFO"
+      DstPort                 2
+      #GUID                   1a666f1a-52f9-43fe-bd38-a00679d908e7
+    }
+    Line {
+      SrcBlock                "MTS__PiFaceDO"
+      SrcPort                 3
+      DstBlock                "RPI__PFO"
+      DstPort                 3
+      #GUID                   1e580d48-beef-4af8-88f0-31c78a496c7d
+    }
+    Line {
+      SrcBlock                "MTS__PiFaceDO"
+      SrcPort                 4
+      DstBlock                "RPI__PFO"
+      DstPort                 4
+      #GUID                   f8492671-ff4d-4b0e-94ab-6d8547d311d0
+    }
+    Line {
+      SrcBlock                "MTS__PiFaceDO"
+      SrcPort                 5
+      DstBlock                "RPI__PFO"
+      DstPort                 5
+      #GUID                   2d04c8a6-939c-418e-bb65-778d743b82c9
+    }
+    Line {
+      SrcBlock                "MTS__PiFaceDO"
+      SrcPort                 6
+      DstBlock                "RPI__PFO"
+      DstPort                 6
+      #GUID                   3c15bc79-bf55-4263-9aca-ecaf541d3913
+    }
+    Line {
+      SrcBlock                "MTS__PiFaceDO"
+      SrcPort                 7
+      DstBlock                "RPI__PFO"
+      DstPort                 7
+      #GUID                   b828d834-01da-42e2-a6e8-0a29d81b0d76
+    }
+    Line {
+      SrcBlock                "MTS__PiFaceDO"
+      SrcPort                 8
+      DstBlock                "RPI__PFO"
+      DstPort                 8
+      #GUID                   d8084f0f-fa4c-4974-a9f0-636df2b94538
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 1
+      DstBlock                "MTS__PiFaceDI"
+      DstPort                 1
+      #GUID                   c85dc892-764a-497c-9460-3f19736e699a
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 2
+      DstBlock                "MTS__PiFaceDI"
+      DstPort                 2
+      #GUID                   f3bc9487-9fa4-4995-b907-b6d841b6970c
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 3
+      DstBlock                "MTS__PiFaceDI"
+      DstPort                 3
+      #GUID                   e33d791b-c86c-48e9-a459-4917bbee6fe8
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 4
+      DstBlock                "MTS__PiFaceDI"
+      DstPort                 4
+      #GUID                   ce02f039-4961-4917-b7f1-5952395bcafa
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 5
+      DstBlock                "MTS__PiFaceDI"
+      DstPort                 5
+      #GUID                   076727e4-cfeb-4cbe-9f99-0616399b0d55
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 6
+      DstBlock                "MTS__PiFaceDI"
+      DstPort                 6
+      #GUID                   ad01916b-92ad-4278-b1d2-70c94c5204c0
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 7
+      DstBlock                "MTS__PiFaceDI"
+      DstPort                 7
+      #GUID                   91019692-963d-4892-86eb-8028ef2821cd
+    }
+    Line {
+      SrcBlock                "RPI__PFIU"
+      SrcPort                 8
+      DstBlock                "MTS__PiFaceDI"
+      DstPort                 8
+      #GUID                   383a70fc-7216-4f7f-85d7-a6dba223d9fe
+    }
+    Annotation {
+      Position                [105, 40]
+      Text                    "See the README.md file for details."
+      #GUID                   70a74f53-247e-49c4-8e63-64a64c8047b7
+    }
+    Annotation {
+      Position                [215, 20]
+      Text                    "Raspberry Pi with PiFace Digital as Modbus TCP "
+"slave"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   0616a74e-8fbc-4efc-baab-a740ad6238b2
+    }
+    Annotation {
+      Position                [325, 235]
+      Text                    "PiFace Digital outputs"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   7d987d63-02d7-4ad4-871a-63b50385e73b
+    }
+    Annotation {
+      Position                [125, 235]
+      Text                    "Modbus coils"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   5609ae06-3bea-4b54-bd86-0ce0da649221
+    }
+    Annotation {
+      Position                [120, 85]
+      Text                    "PiFace Digital inputs"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   21919a5c-fa84-4390-8740-4c86ad70a6de
+    }
+    Annotation {
+      Position                [315, 85]
+      Text                    "Modbus input contacts"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   1e422c55-1754-419a-a54c-20ae12a9c1cd
+    }
+  }
+}

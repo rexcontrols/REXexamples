@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" /> 
+
+        <title>REST API example</title>
+    </head>
+    <body>
+        <h1>Simple HMI example using REST API and plain Javascript</h1>        
+        <p>
+        <span class="desc">Write value to CNR block:</span>
+        <input id="write-value" type="text" name="value" value="0.0" />
+        <input id="btn-set" type="button" value="Set" />
+        </p>
+        <p>
+        <span class="desc">Read value from RLIM block:</span> 
+        <input id="read-value" type="text" name="value" value="N/A" readonly />        
+        </p>
+
+		<script>        
+        (function() {           
+           // the DOM will be available here
+           
+           // CONSTANTS
+           var DONE = 4; // readyState 4 means the AJAX request is done.
+           var OK = 200; // status 200 is a successful return code for HTTP request.
+           
+           // Authorization
+           var username = "admin"; // REX login
+           var password = ""; // REX password
+           
+           // Target information
+           var baseURL = ""; // do not modify this line unless you know what you are doing
+           var refreshPeriod = 500; // in milliseconds
+           
+           //Connection strings
+           var CNR_read = "/api/tasks/myproject_task/RLIM:y?data&mime=application/json"
+           var CNR_write = "/api/tasks/myproject_task/CNR:ycn?data&mime=application/json"
+           
+           // Load DOM elements
+           var readValue = document.getElementById("read-value");
+           var writeValue = document.getElementById("write-value");
+           var btnSet = document.getElementById("btn-set");
+           
+           // Periodic reading
+           function readValues(){
+            var xhr = new XMLHttpRequest();
+            xhr.withCredentials=true;
+            xhr.open('GET', baseURL+CNR_read);
+            xhr.setRequestHeader("Authorization", "Basic " + btoa(username+':'+password));
+            
+            xhr.send(null);
+            xhr.onreadystatechange = function () {              
+              if (xhr.readyState === DONE) {
+                if (xhr.status === OK) {
+                  console.log(xhr.responseText); // 'This is the returned text.'
+                  var json = JSON.parse(xhr.responseText); // Parse JSON
+                  readValue.value = ""+json['v']; // Get the value from 'v' object
+                  setTimeout(readValues,refreshPeriod);
+                } else {
+                  readValue.value = "Error reading!";
+                  console.log('Error: ' + xhr.status); // An error occurred during the request.
+                }
+              }
+            }
+           }; // END readValues
+            
+           // Start reading
+           readValues();
+
+           // Write values function
+           function writeValues(){
+                var value = parseFloat(writeValue.value);
+                if(!value){ // value is not NaN
+                    console.log('Error: Value is not a number. Cannot write!');
+                    writeValue.value = 'Writing failed!';
+                    return                    
+                }
+                // Convert value to value object
+                var postData = {'v':value};
+                
+                // Send POST HTTP request over AJAX
+                var xhr = new XMLHttpRequest();
+                xhr.withCredentials=true;
+                xhr.open('POST', baseURL+CNR_write);                    
+                xhr.setRequestHeader("Authorization", "Basic " + btoa(username+':'+password));
+                xhr.setRequestHeader('Content-Type', 'application/json');
+                xhr.send(JSON.stringify(postData));
+                
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === DONE && xhr.status === OK) {
+                      console.log('Value '+value +' written to target.');
+                    }
+                }
+           }
+           
+           // Write value when button Set is pressed
+           btnSet.addEventListener("click", writeValues);
+           
+        })();
+        </script>
+    </body>
+</html>

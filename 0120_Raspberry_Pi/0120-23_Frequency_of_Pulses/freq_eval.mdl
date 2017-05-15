@@ -1,0 +1,543 @@
+Model {
+  Name                    "freq_eval"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "freq_eval"
+    Location                [288, 252, 845, 579]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Inport
+      Name                    "count"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [15, 73, 45, 87]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   737a6151-aac3-4183-bdf7-d08eb77b71aa
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [425, 113, 445, 127]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   8107122b-c35e-44ce-89d3-50509432da01
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 98, 90, 112]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "0.5"
+      BackgroundColor         "magenta"
+      #GUID                   595dec12-7a48-47c1-a5cd-45f0bf0b8f46
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 153, 90, 167]
+      SourceBlock             "mathlib/CNR"
+      ycn                     1
+      BackgroundColor         "magenta"
+      #GUID                   e8f13dbb-0136-43c1-a461-1b6d8b924b57
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 213, 90, 227]
+      SourceBlock             "mathlib/CNR"
+      ycn                     2
+      BackgroundColor         "magenta"
+      #GUID                   da92507c-ad8c-4ea0-9326-71940a5b0651
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [70, 268, 90, 282]
+      SourceBlock             "mathlib/CNR"
+      ycn                     5
+      BackgroundColor         "magenta"
+      #GUID                   df369f4d-4835-4984-9794-64b2188c67b2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [340, 73, 365, 97]
+      SourceBlock             "mathlib/DIV"
+      yerr                    -1
+      #GUID                   66db16ca-1111-4223-be7a-2d7440b168a3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV1"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [340, 138, 365, 162]
+      SourceBlock             "mathlib/DIV"
+      yerr                    -1
+      #GUID                   d159b12b-ce05-45d5-a896-abb693ca9e8f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV2"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [340, 198, 365, 222]
+      SourceBlock             "mathlib/DIV"
+      yerr                    -1
+      #GUID                   c5b0d9e5-998a-482c-a967-12c47ec9021d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIV3"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [340, 253, 365, 277]
+      SourceBlock             "mathlib/DIV"
+      yerr                    -1
+      #GUID                   fc429728-2578-42f8-b6d2-fa452fedf245
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISUB"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [255, 73, 280, 97]
+      SourceBlock             "mathlib/ISUB"
+      vtype                   "4: Long"
+      SAT                     off
+      #GUID                   0f1650f2-dfd6-480f-a582-821d947caf75
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISUB1"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [255, 138, 280, 162]
+      SourceBlock             "mathlib/ISUB"
+      vtype                   "4: Long"
+      SAT                     off
+      #GUID                   e1ed0776-fb0b-4912-90af-c133d6ec8c62
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISUB2"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [255, 198, 280, 222]
+      SourceBlock             "mathlib/ISUB"
+      vtype                   "4: Long"
+      SAT                     off
+      #GUID                   8ea25697-2751-4150-babf-17e3474e6b1c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISUB3"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [255, 253, 280, 277]
+      SourceBlock             "mathlib/ISUB"
+      vtype                   "4: Long"
+      SAT                     off
+      #GUID                   805e81f1-fa6e-4a94-973d-6bbae004b6ed
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [180, 93, 205, 107]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   230c20c3-8416-49f4-98cd-b0b92b1a6506
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [180, 148, 205, 162]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   1a8e0ab6-0863-442f-95d9-2eda4405fbb1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [180, 208, 205, 222]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   40ba9daa-f029-4a07-a7ca-58304172b35b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [180, 263, 205, 277]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   68784cea-cb07-41d8-b462-2b5fda925f5d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [480, 68, 525, 142]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       10000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Frequency of the pulses"
+      #GUID                   cf4b3c17-b7a1-49e1-8000-12318c814380
+        timesrc       1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "VDEL"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [125, 88, 155, 112]
+      SourceBlock             "analoglib/VDEL"
+      y0                      0
+      nmax                    100
+      #GUID                   3ecdab63-c433-46e9-ae7b-8ce72ca83730
+    }
+    Block {
+      BlockType               Reference
+      Name                    "VDEL1"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [125, 143, 155, 167]
+      SourceBlock             "analoglib/VDEL"
+      y0                      0
+      nmax                    100
+      #GUID                   9320d3cc-01be-4c86-9c0a-3e714f3ac715
+    }
+    Block {
+      BlockType               Reference
+      Name                    "VDEL2"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [125, 203, 155, 227]
+      SourceBlock             "analoglib/VDEL"
+      y0                      0
+      nmax                    100
+      #GUID                   336d6db7-7b10-4abd-93b2-dbbdaffba827
+    }
+    Block {
+      BlockType               Reference
+      Name                    "VDEL3"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [125, 258, 155, 282]
+      SourceBlock             "analoglib/VDEL"
+      y0                      0
+      nmax                    100
+      #GUID                   0ea1497e-9201-4cf9-92f0-8514b326f882
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   62b784e6-bb79-477b-9551-736fa90a24ff
+    }
+    Line {
+      SrcBlock                "CNR"
+      SrcPort                 1
+      Points                  [5, 0]
+      #GUID                   3e2322a4-8fa1-44f1-967e-d8bc3cde42cb
+      Branch {
+        Points                  [0, 20; 225, 0]
+        DstBlock                "DIV"
+        DstPort                 2
+        #GUID                   64f602ba-50ac-40c1-95bf-be4261a81ae7
+      }
+      Branch {
+        DstBlock                "VDEL"
+        DstPort                 2
+        #GUID                   08f8b54f-5643-47e3-9495-4e6f3f073cb4
+      }
+    }
+    Line {
+      SrcBlock                "CNR1"
+      SrcPort                 1
+      Points                  [5, 0]
+      #GUID                   580b7831-d95b-4857-b274-209b4d65eabc
+      Branch {
+        Points                  [0, 20; 225, 0]
+        DstBlock                "DIV1"
+        DstPort                 2
+        #GUID                   a7de5e17-5bc9-4743-ac54-ea7ed9d5801a
+      }
+      Branch {
+        DstBlock                "VDEL1"
+        DstPort                 2
+        #GUID                   05acefa1-a387-49a8-9c34-48384bbd6d01
+      }
+    }
+    Line {
+      SrcBlock                "CNR2"
+      SrcPort                 1
+      Points                  [5, 0]
+      #GUID                   70440007-bf3d-4c72-8242-4e1fa0cdc78c
+      Branch {
+        Points                  [0, 20; 225, 0]
+        DstBlock                "DIV2"
+        DstPort                 2
+        #GUID                   7a381813-6646-49ad-9e96-e0f05cd7d09d
+      }
+      Branch {
+        DstBlock                "VDEL2"
+        DstPort                 2
+        #GUID                   492db85b-fd09-4f65-b478-4354d19f59bb
+      }
+    }
+    Line {
+      SrcBlock                "CNR3"
+      SrcPort                 1
+      Points                  [5, 0]
+      #GUID                   de6208bd-38fc-4a3b-933e-f98cb4efea6e
+      Branch {
+        Points                  [0, 20; 225, 0]
+        DstBlock                "DIV3"
+        DstPort                 2
+        #GUID                   331cd85d-d32f-4a0d-a6ea-ded71ac32ce7
+      }
+      Branch {
+        DstBlock                "VDEL3"
+        DstPort                 2
+        #GUID                   d7719ef2-ce2a-4e72-9c41-64633dbea209
+      }
+    }
+    Line {
+      SrcBlock                "DIV"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   188448e5-ded3-4064-b398-aa238dcf01ea
+    }
+    Line {
+      SrcBlock                "DIV1"
+      SrcPort                 1
+      Points                  [20, 0; 0, -55]
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   552d0466-322f-4d90-9fb7-b45f666b509c
+    }
+    Line {
+      SrcBlock                "DIV2"
+      SrcPort                 1
+      Points                  [30, 0; 0, -105]
+      DstBlock                "TRND"
+      DstPort                 3
+      #GUID                   6e8fecfe-e5e7-4c68-b13c-c78421dc3be1
+    }
+    Line {
+      SrcBlock                "DIV3"
+      SrcPort                 1
+      Points                  [40, 0; 0, -150]
+      DstBlock                "TRND"
+      DstPort                 4
+      #GUID                   b712efc3-cd31-449b-99b2-a23f0cb68baa
+    }
+    Line {
+      SrcBlock                "ISUB"
+      SrcPort                 1
+      DstBlock                "DIV"
+      DstPort                 1
+      #GUID                   ec078338-4408-43f0-808c-e7ad41f47a22
+    }
+    Line {
+      SrcBlock                "ISUB1"
+      SrcPort                 1
+      DstBlock                "DIV1"
+      DstPort                 1
+      #GUID                   b1630e41-380a-4440-be48-a496f7df9337
+    }
+    Line {
+      SrcBlock                "ISUB2"
+      SrcPort                 1
+      DstBlock                "DIV2"
+      DstPort                 1
+      #GUID                   bea935c9-8912-4609-b2ee-05d1b7224e8a
+    }
+    Line {
+      SrcBlock                "ISUB3"
+      SrcPort                 1
+      DstBlock                "DIV3"
+      DstPort                 1
+      #GUID                   42cb939f-0f9b-4fe0-babf-098ebaa17265
+    }
+    Line {
+      SrcBlock                "RTOI"
+      SrcPort                 1
+      Points                  [0, -10]
+      DstBlock                "ISUB"
+      DstPort                 2
+      #GUID                   4b5d5f3c-997f-4d31-bb42-d5d68e025dec
+    }
+    Line {
+      SrcBlock                "RTOI1"
+      SrcPort                 1
+      DstBlock                "ISUB1"
+      DstPort                 2
+      #GUID                   37dc051d-a0f8-4fd6-9f9e-516de9161e91
+    }
+    Line {
+      SrcBlock                "RTOI2"
+      SrcPort                 1
+      DstBlock                "ISUB2"
+      DstPort                 2
+      #GUID                   b3e02d56-feb5-4731-9982-f61a4cf24649
+    }
+    Line {
+      SrcBlock                "RTOI3"
+      SrcPort                 1
+      DstBlock                "ISUB3"
+      DstPort                 2
+      #GUID                   da2ff8fb-557e-4ce9-959d-eee55812efca
+    }
+    Line {
+      SrcBlock                "VDEL"
+      SrcPort                 1
+      DstBlock                "RTOI"
+      DstPort                 1
+      #GUID                   9b8f8f5d-1bf6-444d-8879-bb8c21d70776
+    }
+    Line {
+      SrcBlock                "VDEL1"
+      SrcPort                 1
+      DstBlock                "RTOI1"
+      DstPort                 1
+      #GUID                   983a5e8c-d120-4505-bed7-3a9fb9f92d73
+    }
+    Line {
+      SrcBlock                "VDEL2"
+      SrcPort                 1
+      DstBlock                "RTOI2"
+      DstPort                 1
+      #GUID                   9ddb3e5a-3b9e-4c57-a754-bf3625ce05d3
+    }
+    Line {
+      SrcBlock                "VDEL3"
+      SrcPort                 1
+      DstBlock                "RTOI3"
+      DstPort                 1
+      #GUID                   e1614392-d1c5-4cd2-baf5-6973719715f0
+    }
+    Line {
+      SrcBlock                "count"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   0c520d85-6485-49b3-841e-6fef16ad573c
+      Branch {
+        Points                  [175, 0]
+        #GUID                   121c5c8d-d5bb-4eee-bc1d-2695b83cd280
+        Branch {
+          Points                  [0, 65]
+          #GUID                   1042da7b-81cd-4924-8ac6-1df276c64c79
+          Branch {
+            DstBlock                "ISUB1"
+            DstPort                 1
+            #GUID                   998379e5-b579-43e9-adcf-d7146fe91bb0
+          }
+          Branch {
+            Points                  [0, 60]
+            #GUID                   bb05f5e7-9fcd-4394-ad22-24b5df015ef6
+            Branch {
+              DstBlock                "ISUB2"
+              DstPort                 1
+              #GUID                   eb1ec880-a93a-490d-b88f-41e938b44a90
+            }
+            Branch {
+              Points                  [0, 55]
+              DstBlock                "ISUB3"
+              DstPort                 1
+              #GUID                   c7b4c418-51c5-4a1e-ac3e-701d5aeb2a38
+            }
+          }
+        }
+        Branch {
+          DstBlock                "ISUB"
+          DstPort                 1
+          #GUID                   3471ec9b-559a-44cf-83c2-4b8aa7a2fc3f
+        }
+      }
+      Branch {
+        Points                  [0, 15]
+        #GUID                   5d34b538-df00-4d89-8be3-0819cbc426a0
+        Branch {
+          DstBlock                "VDEL"
+          DstPort                 1
+          #GUID                   61cc5d63-4f99-4ba5-a2c1-ba119c0c9209
+        }
+        Branch {
+          Points                  [0, 55]
+          #GUID                   dd751e9e-66bb-4e9c-8d47-e2a924a75608
+          Branch {
+            DstBlock                "VDEL1"
+            DstPort                 1
+            #GUID                   6ea40b29-411e-4993-a7f4-c3558763878d
+          }
+          Branch {
+            Points                  [0, 60]
+            #GUID                   44841bd5-4a96-41bb-8cbf-90124db595ba
+            Branch {
+              DstBlock                "VDEL2"
+              DstPort                 1
+              #GUID                   490bc885-2a4d-4939-98e7-2bb8e36224dd
+            }
+            Branch {
+              Points                  [0, 55]
+              DstBlock                "VDEL3"
+              DstPort                 1
+              #GUID                   90e79a3f-72d1-4f15-8dfd-4edc77850b1e
+            }
+          }
+        }
+      }
+    }
+    Annotation {
+      Position                [145, 15]
+      Text                    "Evaluating data to obtain frequency"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   67999b1e-e679-40eb-990e-301c963e8e7c
+    }
+    Annotation {
+      Position                [165, 35]
+      Text                    "This is a standard TASK. See the README.md file"
+" for details."
+      #GUID                   314dadbe-c9c3-4bf3-9f54-f1181e8dab2c
+    }
+  }
+}

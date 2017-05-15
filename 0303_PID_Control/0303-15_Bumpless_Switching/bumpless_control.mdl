@@ -1,0 +1,589 @@
+Model {
+  Name                    "bumpless_control"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "bumpless_control"
+    Location                [311, 34, 852, 486]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Inport
+      Name                    "pv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [30, 183, 60, 197]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   bab4ad83-2bec-4768-8c39-f49e4f8528f0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_MAN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 213, 50, 227]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   ad65ffa0-f5ee-4a82-818c-e234a3275da0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [255, 393, 270, 407]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   dc57e683-58bb-4232-ae02-d3e5d910599f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_hv_DN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 258, 105, 272]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   b7b14937-03c2-4761-8a06-979e166c0393
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_hv_LOC"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [185, 278, 205, 292]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   0bbce08d-b835-423a-8f07-98e473a82741
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_hv_UP"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 248, 55, 262]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   da6ec090-4408-40d6-8b6d-e71d19e63aec
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_sp_DN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 113, 105, 127]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   d12b6b22-88f1-4522-a48d-a140382a0e07
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_sp_LOC"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [185, 133, 205, 147]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   7e2de247-fbff-4511-a33e-619095571483
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_sp_UP"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 103, 55, 117]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   801c1512-7ace-4eaf-aa64-2dc1dcab6bc8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_hv_rv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 268, 155, 282]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   580758ba-2ba7-4b6f-8087-650bc63b95dd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_sp_rv"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [135, 123, 155, 137]
+      SourceBlock             "mathlib/CNR"
+      ShowName                on
+      NamePlacement           ""
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   5feab312-be33-4a3e-ba6f-f0916928e611
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [190, 353, 230, 367]
+      ShowName                off
+      GotoTag                 "pv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   eee5c2df-43a2-4c03-9895-019328386ab3
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [240, 363, 280, 377]
+      ShowName                off
+      GotoTag                 "mv"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   271b8eae-3334-41c8-901d-920562b9b61a
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [190, 373, 230, 387]
+      ShowName                off
+      GotoTag                 "sp"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   9879ff48-402f-4244-9a80-1e3afc7beb5e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [475, 193, 515, 207]
+      ShowName                off
+      GotoTag                 "mv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   b2760617-29c1-407c-ab6a-1197799bcba5
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [475, 123, 515, 137]
+      ShowName                off
+      GotoTag                 "sp"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.352941]
+      #GUID                   b7f334cc-b34a-41fe-aae2-9cad9ec8a829
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [95, 168, 135, 182]
+      ShowName                off
+      GotoTag                 "pv"
+      TagVisibility           "local"
+      BackgroundColor         [1.000000, 1.000000, 0.349020]
+      #GUID                   b0c14979-2462-47df-acf0-49a34d19af85
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK_1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [415, 145, 425, 155]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      NamePlacement           ""
+      FontSize                10
+      BackgroundColor         "cyan"
+      #GUID                   1209a03b-b1fb-405e-bfdf-5ad9380b426b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LPBRK_5"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [240, 70, 250, 80]
+      Orientation             "left"
+      SourceBlock             "execlib/LPBRK"
+      ShowName                off
+      NamePlacement           ""
+      FontSize                10
+      #GUID                   a502eb9c-9230-4ac9-b3fe-d440e02696e1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MCU_hv"
+      Ports                   [5, 1, 0, 0, 0]
+      Position                [325, 238, 355, 292]
+      SourceBlock             "reglib/MCU"
+      ShowName                on
+      NamePlacement           ""
+      tt                      1
+      tm                      100
+      y0                      0
+      q                       5
+      ta                      4
+      tf                      8
+      SATF                    on
+      hilim                   1
+      lolim                   -1
+      BackgroundColor         "cyan"
+      #GUID                   54e96025-16d3-4ff9-9938-21b765f3dcbd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MCU_sp"
+      Ports                   [5, 1, 0, 0, 0]
+      Position                [240, 93, 270, 147]
+      SourceBlock             "reglib/MCU"
+      ShowName                on
+      NamePlacement           ""
+      tt                      1
+      tm                      100
+      y0                      0
+      q                       5
+      ta                      4
+      tf                      8
+      SATF                    on
+      hilim                   1
+      lolim                   -1
+      BackgroundColor         "cyan"
+      #GUID                   3818d9d0-46d5-4570-80ce-ff44fe89457e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PIDU"
+      Ports                   [7, 4, 0, 0, 0]
+      Position                [395, 161, 440, 239]
+      SourceBlock             "reglib/PIDU"
+      ShowName                on
+      NamePlacement           ""
+      irtype                  "7: PID"
+      RACT                    off
+      k                       "0.6"
+      ti                      4
+      td                      1
+      nd                      10
+      b                       1
+      c                       0
+      tt                      1
+      hilim                   1
+      lolim                   -1
+      dz                      0
+      icotype                 "1: Analog"
+      BackgroundColor         "cyan"
+      #GUID                   88b5f423-6457-4aad-811d-9aa9649f24bb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SSW_1"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [300, 113, 330, 147]
+      SourceBlock             "analoglib/SSW"
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "cyan"
+      #GUID                   d8b4263d-735b-4970-bb40-7e3f7ab3718c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_Bumpless"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [300, 347, 345, 423]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       3
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   acd926c8-b277-4d1d-b100-0cdc0e939dc2
+        timesrc       1
+    }
+    Block {
+      BlockType               Outport
+      Name                    "mv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [485, 163, 515, 177]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   dc9c87a8-5a23-436b-86f3-e5f693e8c0d6
+    }
+    Line {
+      SrcBlock                "CNB_MAN"
+      SrcPort                 1
+      Points                  [230, 0]
+      #GUID                   843d2fd5-bc1c-4bfc-af2e-aed9a20eaebb
+      Branch {
+        DstBlock                "PIDU"
+        DstPort                 6
+        #GUID                   4320a631-813a-4225-9bde-52831b0116be
+      }
+      Branch {
+        DstBlock                "SSW_1"
+        DstPort                 3
+        #GUID                   22eae97d-9437-43fe-b5da-ae24972fff5f
+      }
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND_Bumpless"
+      DstPort                 5
+      #GUID                   677517c7-25eb-426c-9e14-54997c64a63c
+    }
+    Line {
+      SrcBlock                "CNB_hv_DN"
+      SrcPort                 1
+      DstBlock                "MCU_hv"
+      DstPort                 3
+      #GUID                   1a1cb5e5-65d3-4a4b-bd8b-5a748fee17d0
+    }
+    Line {
+      SrcBlock                "CNB_hv_LOC"
+      SrcPort                 1
+      DstBlock                "MCU_hv"
+      DstPort                 5
+      #GUID                   adb5f838-e951-42b7-abba-aea8d4bd16a2
+    }
+    Line {
+      SrcBlock                "CNB_hv_UP"
+      SrcPort                 1
+      DstBlock                "MCU_hv"
+      DstPort                 2
+      #GUID                   167408ba-064f-4b21-8f0c-7fe62230c9a7
+    }
+    Line {
+      SrcBlock                "CNB_sp_DN"
+      SrcPort                 1
+      DstBlock                "MCU_sp"
+      DstPort                 3
+      #GUID                   c5376a39-1797-4e62-8fb1-ef06e640f9f4
+    }
+    Line {
+      SrcBlock                "CNB_sp_LOC"
+      SrcPort                 1
+      DstBlock                "MCU_sp"
+      DstPort                 5
+      #GUID                   d095e8b2-b840-4fb9-b1c8-b93faae51319
+    }
+    Line {
+      SrcBlock                "CNB_sp_UP"
+      SrcPort                 1
+      DstBlock                "MCU_sp"
+      DstPort                 2
+      #GUID                   f2eac42c-03bc-43ff-93f6-826124b3d89c
+    }
+    Line {
+      SrcBlock                "CNR_hv_rv"
+      SrcPort                 1
+      DstBlock                "MCU_hv"
+      DstPort                 4
+      #GUID                   3f3e33b7-3110-4362-8e57-3ac409f3d961
+    }
+    Line {
+      SrcBlock                "CNR_sp_rv"
+      SrcPort                 1
+      DstBlock                "MCU_sp"
+      DstPort                 4
+      #GUID                   b810febb-427a-4d76-b580-ba6ecb405510
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "TRND_Bumpless"
+      DstPort                 1
+      #GUID                   1c83a8c3-9bbc-4246-82d5-c700e8a83148
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "TRND_Bumpless"
+      DstPort                 2
+      #GUID                   f1101132-c4cf-4d96-9cb3-905676214e12
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "TRND_Bumpless"
+      DstPort                 3
+      #GUID                   6167a8cb-fb42-4a56-869a-b27635d15daf
+    }
+    Line {
+      SrcBlock                "LPBRK_1"
+      SrcPort                 1
+      Points                  [-45, 0; 0, 50]
+      #GUID                   ba056c8f-139f-4e00-b4ab-c517a9bef3a6
+      Branch {
+        Points                  [-55, 0]
+        DstBlock                "MCU_hv"
+        DstPort                 1
+        #GUID                   ab7cf754-1248-43b5-b868-9797aa53f79e
+      }
+      Branch {
+        DstBlock                "PIDU"
+        DstPort                 4
+        #GUID                   3a114b6c-5544-4bd6-b7dd-49f65efdbd0d
+      }
+    }
+    Line {
+      SrcBlock                "LPBRK_5"
+      SrcPort                 1
+      Points                  [-10, 0]
+      DstBlock                "MCU_sp"
+      DstPort                 1
+      #GUID                   10863017-563f-4814-a85a-83f1db287ef8
+    }
+    Line {
+      SrcBlock                "MCU_hv"
+      SrcPort                 1
+      Points                  [5, 0; 0, -55]
+      DstBlock                "PIDU"
+      DstPort                 5
+      #GUID                   37ea358d-b4fb-4090-bcd0-95d1fd5d5588
+    }
+    Line {
+      SrcBlock                "MCU_sp"
+      SrcPort                 1
+      DstBlock                "SSW_1"
+      DstPort                 1
+      #GUID                   320e3d8a-3a5d-4746-8891-bec68ba375a7
+    }
+    Line {
+      SrcBlock                "PIDU"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   2dd563aa-119d-4756-86e2-73eb9b6904e7
+      Branch {
+        Points                  [0, 30]
+        DstBlock                "Goto1"
+        DstPort                 1
+        #GUID                   491d21c6-d1e7-4e37-a7c5-4f7ebbd0d949
+      }
+      Branch {
+        Points                  [0, -20]
+        DstBlock                "LPBRK_1"
+        DstPort                 1
+        #GUID                   825debb7-8ef4-4daf-93f9-1ae2a4cd71ae
+      }
+      Branch {
+        DstBlock                "mv"
+        DstPort                 1
+        #GUID                   4fcc3103-e64e-495a-b808-71d31ff478ec
+      }
+    }
+    Line {
+      SrcBlock                "SSW_1"
+      SrcPort                 1
+      Points                  [5, 0]
+      #GUID                   01e018c4-d186-496d-a756-c9d89c068863
+      Branch {
+        DstBlock                "Goto2"
+        DstPort                 1
+        #GUID                   c82d3bff-6f00-4854-a5de-c248d9b0744c
+      }
+      Branch {
+        Points                  [0, -55]
+        DstBlock                "LPBRK_5"
+        DstPort                 1
+        #GUID                   3e3e45f9-935e-4564-9f4e-d4c570214738
+      }
+      Branch {
+        Points                  [0, 50]
+        DstBlock                "PIDU"
+        DstPort                 2
+        #GUID                   0294006c-05d4-4535-9765-1a0619ad5c91
+      }
+    }
+    Line {
+      SrcBlock                "pv"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   54192396-d1f8-43fb-aeb7-f304d6a3b29a
+      Branch {
+        Points                  [205, 0]
+        #GUID                   39308837-57c8-47f8-a364-98dadf8eee70
+        Branch {
+          DstBlock                "PIDU"
+          DstPort                 3
+          #GUID                   7f2d9f27-bfc5-4506-8ffd-5a9fbf0f77d1
+        }
+        Branch {
+          Points                  [0, -60]
+          DstBlock                "SSW_1"
+          DstPort                 2
+          #GUID                   16754ec0-0ff9-4ab0-ac2e-eab08f45b5dc
+        }
+      }
+      Branch {
+        Points                  [0, -15]
+        DstBlock                "Goto3"
+        DstPort                 1
+        #GUID                   a32a9958-5d95-49e4-8e72-52d172843d49
+      }
+    }
+    Annotation {
+      Position                [145, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   bf2825c3-98d4-4e33-8347-eb6abff7946c
+    }
+    Annotation {
+      Position                [145, 20]
+      Text                    "Bumpless switching - control task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   658489e6-46b1-45d8-bc47-20d92b3a2ce1
+    }
+  }
+}

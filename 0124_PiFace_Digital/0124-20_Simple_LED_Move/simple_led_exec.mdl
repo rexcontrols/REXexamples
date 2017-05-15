@@ -1,0 +1,128 @@
+Model {
+  Name                    "simple_led_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "simple_led_exec"
+    Location                [10, 31, 323, 416]
+    #GUID                   06eb7513-3603-4d98-8e52-a52eb191a7dc
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [85, 73, 130, 362]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.01"
+      ntick0                  1
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   22deffa1-0394-494b-9120-8fa2cdda6361
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [170, 123, 220, 137]
+      SourceBlock             "execlib/IODRV"
+      module                  "RPiDrv"
+      classname               "RPiDrv"
+      cfgname                 ""
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   1dbaee9b-4763-47bd-9f0a-6d12c46e4148
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPiDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [170, 88, 220, 102]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   d2ed1989-cb74-4671-848c-1be18226cbe2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "simple_led_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [170, 228, 220, 242]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   bf3da571-18a5-4c7a-bf02-7d9f6bc4a892
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "RPiDrv"
+      DstPort                 1
+      #GUID                   80994ab4-b3f3-4d8f-b821-ed3c39373be0
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "RPI"
+      DstPort                 1
+      #GUID                   91308724-8beb-497a-89a3-d72e1ae81c0e
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "simple_led_task"
+      DstPort                 1
+      #GUID                   cff4a95d-20ef-4f5c-bfea-6326f4863790
+    }
+    Annotation {
+      Position                [110, 45]
+      Text                    "See the README.md file for details."
+      #GUID                   50cf0afc-ab03-4e5d-830b-f3330609da46
+    }
+    Annotation {
+      Position                [155, 20]
+      Text                    "Simple LEDs control on PiFace Digital"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   8a95fb3d-b3d5-47a7-9a84-9660e5379921
+    }
+  }
+}

@@ -1,0 +1,159 @@
+Model {
+  Name                    "blink_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "blink_task"
+    Location                [290, 31, 719, 413]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "BIS_BLINK_RED"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [75, 188, 90, 212]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      off
+      t1                      0
+      t2                      "0.2"
+      t3                      "0.4"
+      t4                      "0.6"
+      t5                      "0.8"
+      t6                      "1.0"
+      t7                      "2.0"
+      t8                      0
+      RPT                     on
+      bEdit                   off
+      #GUID                   5fc085dc-ded8-40f8-80e5-ccd5e50adb11
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_BLINK_YELLOW"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [75, 143, 90, 167]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      off
+      t1                      1
+      t2                      2
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      bEdit                   off
+      #GUID                   e9a4c92f-65f2-4252-9631-a6ac1b50b173
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GREEN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [75, 98, 95, 112]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   d8a7ec68-9d1a-4123-b264-a798eef063b7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [295, 98, 385, 112]
+      ShowName                off
+      GotoTag                 "RPI__GPIO23"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a2a215a5-e794-41d6-a744-4df1e11998d9
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [295, 143, 385, 157]
+      ShowName                off
+      GotoTag                 "RPI__GPIO24"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a3ec5caf-9a91-4452-b817-979224995e3e
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [295, 188, 385, 202]
+      ShowName                off
+      GotoTag                 "RPI__GPIO25"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   054af83e-51f7-4c99-b899-3336e2f2985f
+    }
+    Line {
+      SrcBlock                "BIS_BLINK_RED"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   b90a051b-5aec-49a0-add8-3cd76868b41b
+    }
+    Line {
+      SrcBlock                "BIS_BLINK_YELLOW"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   9a862708-2d5e-4cf4-aead-1ec16279eedf
+    }
+    Line {
+      SrcBlock                "CNB_GREEN"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   a397a92e-de42-4fd4-924d-a7a335f79a01
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   cc74e9ae-8c48-4189-804c-60237c36efd8
+    }
+    Annotation {
+      Position                [100, 20]
+      Text                    "The blinking LEDs - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   5be42bdb-eb45-4f32-b981-1b89f55a3852
+    }
+  }
+}

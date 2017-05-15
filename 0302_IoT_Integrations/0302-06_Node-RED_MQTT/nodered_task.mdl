@@ -1,0 +1,120 @@
+Model {
+  Name                    "nodered_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "nodered_task"
+    Location                [293, 33, 670, 453]
+    #GUID                   860f4c92-52f0-4f8a-b007-b1d82e9de1c8
+    Block {
+      BlockType               Reference
+      Name                    "CNR_IN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 258, 80, 272]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      #GUID                   0cf4f740-0bb6-4217-a8b6-6e1dbe76de60
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_OUT"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 148, 100, 162]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "-1.23"
+      BackgroundColor         "magenta"
+      #GUID                   0c777b23-d1b4-49ff-87ef-90878012cab4
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 143, 250, 167]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   11e5a5c7-d225-49e0-96f8-d6eb25ddab6c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 253, 250, 277]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   419ca898-b636-4ccb-bf86-2f84b3daa6d8
+    }
+    Line {
+      SrcBlock                "CNR_IN"
+      SrcPort                 1
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   6cf0160a-5147-4b5f-b35e-fb9e0ecd2289
+    }
+    Line {
+      SrcBlock                "CNR_OUT"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   aec74bd2-b58c-43f4-b048-0a5ffc53108c
+    }
+    Annotation {
+      Position                [105, 130]
+      Text                    "This value will be read\nby Node-RED"
+      #GUID                   fd67e101-04d9-4558-ac90-ffb03c21d3ee
+    }
+    Annotation {
+      Position                [125, 240]
+      Text                    "This value will be overwritten\nfrom Node-RED"
+      #GUID                   c72d8973-374d-434d-9eb1-ba0506171622
+    }
+    Annotation {
+      Position                [100, 20]
+      Text                    "NodeRED MQTT example"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   bad20522-b73b-4132-a11d-f4757c8b659c
+    }
+    Annotation {
+      Position                [145, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   73633d61-f767-41a5-8cb3-43e1a6deec48
+    }
+  }
+}

@@ -1,0 +1,166 @@
+Model {
+  Name                    "thermostat_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "thermostat_exec"
+    Location                [10, 32, 304, 419]
+    #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [45, 68, 90, 357]
+      SourceBlock             "execlib/EXEC"
+      target                  "PC - Linux"
+      tick                    "0.05"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   aab705bb-5bdf-40f0-a57c-ea974ad6b083
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OWS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 118, 240, 132]
+      SourceBlock             "execlib/IODRV"
+      module                  "OwsDrv"
+      classname               "OwsDrv"
+      cfgname                 "thermostat_owscfg.rio"
+      factor                  20
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   a3bdb925-8066-4b56-9920-4af114cd3016
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OwsDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 83, 240, 97]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   97d76ff7-5b84-49d1-ba4e-2995a9ac7a4a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 118, 165, 132]
+      SourceBlock             "execlib/IODRV"
+      module                  "RPiDrv"
+      classname               "RPiDrv"
+      cfgname                 ""
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   96aca34a-efb5-42dd-ae80-220c92f2cc87
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPiDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 83, 165, 97]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   6737d998-c4e4-4e93-91f2-f13b90ca242c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "thermostat_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [150, 223, 200, 237]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   4545c098-8243-4409-8448-0e313526bad2
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "RPiDrv"
+      DstPort                 1
+      #GUID                   e397ad8a-934d-4164-83d1-df734616eafa
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "RPI"
+      DstPort                 1
+      #GUID                   ed1bf082-a226-4439-8313-d6774e61c312
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "thermostat_task"
+      DstPort                 1
+      #GUID                   d2df86f6-6a26-41a9-939c-a699323b24b1
+    }
+    Line {
+      SrcBlock                "RPI"
+      SrcPort                 1
+      DstBlock                "OWS"
+      DstPort                 1
+      #GUID                   a3aedb27-431e-4a1f-a31a-277d8929e85a
+    }
+    Line {
+      SrcBlock                "RPiDrv"
+      SrcPort                 1
+      DstBlock                "OwsDrv"
+      DstPort                 1
+      #GUID                   0b340a44-0445-49f2-8196-a461cb35b4ec
+    }
+    Annotation {
+      Position                [145, 15]
+      Text                    "Raspberry Pi as a simple thermostat"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   a7d40025-7dfa-464f-8144-d9dfa14e148e
+    }
+    Annotation {
+      Position                [140, 35]
+      Text                    "Read the README.md file for detailed informatio"
+"n."
+      #GUID                   ff4f9846-7081-4e60-b4b0-904ea3bd0716
+    }
+  }
+}

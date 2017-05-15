@@ -1,0 +1,342 @@
+Model {
+  Name                    "heating_cooling_process"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "heating_cooling_process"
+    Location                [935, 31, 1329, 162]
+    #GUID                   1a93a218-d0e8-4394-b814-b2854c70fae7
+    Block {
+      BlockType               Inport
+      Name                    "up"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [65, 63, 95, 77]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   f7cad292-2a61-41a7-8736-48a3cef15fb3
+    }
+    Block {
+      BlockType               Inport
+      Name                    "dn"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [65, 93, 95, 107]
+      Port                    2
+      BackgroundColor         "green"
+      #GUID                   af4f5af3-19fc-4775-9832-3bb12e94c868
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "SUBSYSTEM_PLANT"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [120, 66, 260, 104]
+      ShowPortLabels          on
+      NamePlacement           ""
+      ShowName                on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   2a6b860b-5c9a-4ad0-a3f6-1589f00de30a
+      System {
+        Name                    "SUBSYSTEM_PLANT"
+        Location                [934, 204, 1338, 378]
+        #GUID                   2a6b860b-5c9a-4ad0-a3f6-1589f00de30a
+        Block {
+          BlockType               Inport
+          Name                    "HEATING"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [15, 18, 45, 32]
+          Port                    1
+          ShowName                on
+          NamePlacement           ""
+          BackgroundColor         "green"
+          #GUID                   7a364268-d29f-4566-8e09-b394c7728915
+        }
+        Block {
+          BlockType               Inport
+          Name                    "COOLING"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [15, 68, 45, 82]
+          Port                    2
+          ShowName                on
+          NamePlacement           ""
+          BackgroundColor         "green"
+          #GUID                   66edc984-1476-4912-8fff-72546bcc0f44
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ADD"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [145, 38, 170, 62]
+          SourceBlock             "mathlib/ADD"
+          ShowName                on
+          NamePlacement           ""
+          BackgroundColor         "white"
+          #GUID                   3fe9cf96-dfca-41a7-b3fe-5a3561a521af
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ADD_1"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [145, 108, 170, 132]
+          SourceBlock             "mathlib/ADD"
+          ShowName                on
+          NamePlacement           ""
+          BackgroundColor         "white"
+          #GUID                   c8307ce3-5a90-4b01-b994-45b477265b4d
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ADD_2"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [255, 43, 280, 67]
+          SourceBlock             "mathlib/ADD"
+          ShowName                on
+          NamePlacement           ""
+          BackgroundColor         "white"
+          #GUID                   589bc0d1-d761-4f6e-8950-9e07e8883ccf
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR_T0"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [20, 108, 40, 122]
+          SourceBlock             "mathlib/CNR"
+          ShowName                on
+          NamePlacement           ""
+          ycn                     20
+          BackgroundColor         "magenta"
+          #GUID                   1eeb2ab8-4b33-4169-b3b0-a9f935ebd9e0
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MDL_C"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [90, 68, 115, 82]
+          SourceBlock             "modellib/MDL"
+          ShowName                on
+          NamePlacement           ""
+          k0                      -1
+          del                     0
+          tau1                    10
+          tau2                    10
+          BackgroundColor         "white"
+          nmax                    100
+          #GUID                   e8775a9a-f6c3-486c-82c0-888bdcecbe03
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MDL_H"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [90, 18, 115, 32]
+          SourceBlock             "modellib/MDL"
+          ShowName                on
+          NamePlacement           ""
+          k0                      1
+          del                     0
+          tau1                    10
+          tau2                    10
+          BackgroundColor         "white"
+          nmax                    100
+          #GUID                   c8ad3551-d427-4eef-a3b4-59a11daacf71
+        }
+        Block {
+          BlockType               Reference
+          Name                    "MDL_M"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [195, 43, 220, 57]
+          SourceBlock             "modellib/MDL"
+          ShowName                on
+          NamePlacement           ""
+          k0                      500
+          del                     0
+          tau1                    100
+          tau2                    1
+          BackgroundColor         "white"
+          nmax                    100
+          #GUID                   19fcc4d0-604b-4214-9d5d-52ef28a9b047
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SG_DIS"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [20, 138, 45, 152]
+          SourceBlock             "genlib/SG"
+          ShowName                on
+          NamePlacement           ""
+          isig                    "1: SINE"
+          amp                     0
+          freq                    1
+          phase                   0
+          ifrunit                 "1: Hz"
+          iphunit                 "1: degrees"
+          BackgroundColor         "white"
+          offset                  0
+          #GUID                   0d574d36-fcb4-4141-b707-1541abdc30c0
+        }
+        Block {
+          BlockType               Outport
+          Name                    "TEMPERATURE"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [340, 48, 370, 62]
+          Port                    1
+          ShowName                on
+          NamePlacement           ""
+          BackgroundColor         "green"
+          #GUID                   d67314aa-d9af-492c-983f-5128ae442a38
+        }
+        Line {
+          SrcBlock                "ADD"
+          SrcPort                 1
+          DstBlock                "MDL_M"
+          DstPort                 1
+          #GUID                   b3958ae6-bbbd-449c-9af8-b346c35890ab
+        }
+        Line {
+          SrcBlock                "ADD_1"
+          SrcPort                 1
+          Points                  [65, 0]
+          DstBlock                "ADD_2"
+          DstPort                 2
+          #GUID                   80d3589b-82cc-401f-91aa-991f7871c070
+        }
+        Line {
+          SrcBlock                "ADD_2"
+          SrcPort                 1
+          DstBlock                "TEMPERATURE"
+          DstPort                 1
+          #GUID                   9a1bf391-2f5e-4eab-b889-b25db7d4f9e6
+        }
+        Line {
+          SrcBlock                "CNR_T0"
+          SrcPort                 1
+          DstBlock                "ADD_1"
+          DstPort                 1
+          #GUID                   a1bf2872-0797-431d-89ef-390da41c54fc
+        }
+        Line {
+          SrcBlock                "COOLING"
+          SrcPort                 1
+          DstBlock                "MDL_C"
+          DstPort                 1
+          #GUID                   abf86b29-5d0a-41bc-8b0f-8c1249ee8d3e
+        }
+        Line {
+          SrcBlock                "HEATING"
+          SrcPort                 1
+          DstBlock                "MDL_H"
+          DstPort                 1
+          #GUID                   e7c37113-ca39-4599-a67f-386d6ce0d750
+        }
+        Line {
+          SrcBlock                "MDL_C"
+          SrcPort                 1
+          Points                  [10, 0]
+          DstBlock                "ADD"
+          DstPort                 2
+          #GUID                   3ac7f3cf-d97a-4040-83e6-d6b3da8ad936
+        }
+        Line {
+          SrcBlock                "MDL_H"
+          SrcPort                 1
+          Points                  [10, 0]
+          DstBlock                "ADD"
+          DstPort                 1
+          #GUID                   ebd6d1a5-9c7c-4b73-b554-ed3aff51571b
+        }
+        Line {
+          SrcBlock                "MDL_M"
+          SrcPort                 1
+          DstBlock                "ADD_2"
+          DstPort                 1
+          #GUID                   af0125b1-d3a4-4edd-85ce-140550d88e44
+        }
+        Line {
+          SrcBlock                "SG_DIS"
+          SrcPort                 1
+          Points                  [80, 0]
+          DstBlock                "ADD_1"
+          DstPort                 2
+          #GUID                   c813a65d-d89e-463e-80f9-7e98062653d7
+        }
+      }
+    }
+    Block {
+      BlockType               Outport
+      Name                    "pv"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [290, 78, 320, 92]
+      Port                    1
+      BackgroundColor         "green"
+      #GUID                   6136b73a-2c4f-48a2-bea4-9b2812ff7b9b
+    }
+    Line {
+      SrcBlock                "SUBSYSTEM_PLANT"
+      SrcPort                 1
+      DstBlock                "pv"
+      DstPort                 1
+      #GUID                   9c86734f-b37d-4ad2-a846-90247c8be22a
+    }
+    Line {
+      SrcBlock                "dn"
+      SrcPort                 1
+      Points                  [0, -5]
+      DstBlock                "SUBSYSTEM_PLANT"
+      DstPort                 2
+      #GUID                   d51ef03f-57b1-4e90-bef9-fcba4254e952
+    }
+    Line {
+      SrcBlock                "up"
+      SrcPort                 1
+      Points                  [0, 5]
+      DstBlock                "SUBSYSTEM_PLANT"
+      DstPort                 1
+      #GUID                   63cde9fa-ff42-4bbb-910d-97c64f14bafa
+    }
+    Annotation {
+      Position                [145, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   722a2d20-e57e-425e-96e6-57e5b8d95a49
+    }
+    Annotation {
+      Position                [195, 20]
+      Text                    "SMHCCA - Heating/Cooling control - control task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   ccf90ee8-fd2d-4fb1-92e3-b376dd4f2f4a
+    }
+  }
+}

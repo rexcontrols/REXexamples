@@ -1,0 +1,93 @@
+Model {
+  Name                    "station1_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "station1_exec"
+    Location                [13, 32, 276, 411]
+    #GUID                   06eb7513-3603-4d98-8e52-a52eb191a7dc
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [60, 68, 105, 357]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.01"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   22deffa1-0394-494b-9120-8fa2cdda6361
+    }
+    Block {
+      BlockType               Reference
+      Name                    "station1_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [140, 223, 190, 237]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   b2249b6c-2879-4c25-a4d5-df6bef4d8d56
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "station1_task"
+      DstPort                 1
+      #GUID                   8e279f57-1ace-4f8b-8073-9376ebc755bd
+    }
+    Annotation {
+      Position                [135, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   f59849c7-a7c7-4075-bce6-38ee28d17f76
+    }
+    Annotation {
+      Position                [90, 20]
+      Text                    "RDC example, Station 1"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   93364ae6-e68e-4d63-a8b2-2001191cacd9
+    }
+  }
+}

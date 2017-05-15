@@ -1,0 +1,135 @@
+Model {
+  Name                    "slave_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "slave_exec"
+    Location                [10, 31, 245, 411]
+    #GUID                   bdf91a63-cbfb-40fc-8d65-44487be250d6
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [50, 68, 95, 357]
+      SourceBlock             "execlib/EXEC"
+      ShowName                on
+      NamePlacement           ""
+      target                  "PC - Windows"
+      tick                    "0.05"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   c625f321-647d-415e-bd8d-a44391aaec3b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [125, 117, 175, 133]
+      SourceBlock             "execlib/IODRV"
+      ShowName                on
+      NamePlacement           ""
+      module                  "MbDrv"
+      classname               "MtsDrv"
+      cfgname                 "MtsDrv.rio"
+      factor                  10
+      stack                   10240
+      pri                     3
+      #GUID                   08baae3f-851c-48da-8a32-5b7c3004de0a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MbDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [125, 82, 175, 98]
+      SourceBlock             "execlib/MODULE"
+      ShowName                on
+      NamePlacement           ""
+      #GUID                   01771832-5dcb-4458-b3df-756ddfe2b1c9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "slave_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [125, 222, 175, 238]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   1
+      stop                    2
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   5460a77c-cb1b-4fd3-851b-e2619fb2e1b8
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "MbDrv"
+      DstPort                 1
+      #GUID                   180aab4c-1e95-4c9a-b5c5-a1806514c32b
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "MTS"
+      DstPort                 1
+      #GUID                   1ba76c53-99c6-43e6-8510-c764e03ba481
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "slave_task"
+      DstPort                 1
+      #GUID                   2504ffed-10f8-4dd9-9645-e8dd68c79080
+    }
+    Annotation {
+      Position                [115, 45]
+      Text                    "Read the README.md file for details."
+      #GUID                   4e65d18e-08c1-478f-9b82-a516f7eca3b6
+    }
+    Annotation {
+      Position                [115, 20]
+      Text                    "Modbus TCP slave station"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6f7f5aa9-4259-460a-b737-927b907ac2eb
+    }
+  }
+}

@@ -1,0 +1,613 @@
+Model {
+  Name                    "flags_task"
+  Version                 3.00
+  SimParamPage            "Solver"
+  SampleTimeColors        off
+  InvariantConstants      off
+  WideVectorLines         off
+  ShowLineWidths          off
+  ShowPortDataTypes       off
+  StartTime               "0.0"
+  StopTime                "10.0"
+  SolverMode              "SingleTasking"
+  Solver                  "ode45"
+  RelTol                  "1e-3"
+  AbsTol                  "auto"
+  Refine                  1
+  MaxStep                 "auto"
+  InitialStep             "auto"
+  FixedStep               "auto"
+  MaxOrder                5
+  OutputOption            "RefineOutputTimes"
+  OutputTimes             []
+  LoadExternalInput       off
+  ExternalInput           [t, u]
+  SaveTime                on
+  TimeSaveName            "tout"
+  SaveState               off
+  StateSaveName           "xout"
+  SaveOutput              on
+  OutputSaveName          "yout"
+  LoadInitialState        off
+  InitialState            "xInitial"
+  SaveFinalState          off
+  FinalStateName          "xFinal"
+  SaveFormat              "Matrix"
+  LimitMaxRows            off
+  MaxRows                 1000
+  Decimation              1
+  AlgebraicLoopMsg        "warning"
+  MinStepSizeMsg          "warning"
+  UnconnectedInputMsg     "warning"
+  UnconnectedOutputMsg    "warning"
+  UnconnectedLineMsg      "warning"
+  InheritedTsInSrcMsg     "warning"
+  IntegerOverflowMsg      "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg     "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking     off
+  ZeroCross               on
+  SimulationMode          "normal"
+  BlockDataTips           on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip off
+  BlockMaskParametersDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  OptimizeBlockIOStorage  on
+  BufferReuse             on
+  BooleanDataType         off
+  RTWSystemTargetFile     "grt.tlc"
+  RTWInlineParameters     off
+  RTWRetainRTWFile        off
+  RTWTemplateMakefile     "grt_default_tmf"
+  RTWMakeCommand          "make_rtw"
+  RTWGenerateCodeOnly     off
+  ExtModeMexFile          "ext_comm"
+  ExtModeBatchMode        off
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "normal"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   on
+  Created                 "Thu Jan 06 15:26:11 2005"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "mertlj"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Apr 29 09:25:44 2008"
+  ModelVersionFormat      "1.%<AutoIncrement:195>"
+  ConfigurationManager    "None"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "flags_task"
+    Location                [215, 35, 1123, 796]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "A4"
+    PaperUnits              "centimeters"
+    AutoZoom                on
+    ReportName              "simulink-default.rpt"
+    #GUID                   92200e26-7821-416b-a2d2-6b94ab9f00ec
+    Block {
+      BlockType               From
+      Name                    "From27"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 173, 115, 187]
+      ShowName                off
+      GotoTag                 "RPI__PFI0"
+      BackgroundColor         "yellow"
+      #GUID                   0f16b373-f4e4-4b72-98f2-d985b2624282
+    }
+    Block {
+      BlockType               From
+      Name                    "From28"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 193, 115, 207]
+      ShowName                off
+      GotoTag                 "RPI__PFI1"
+      BackgroundColor         "yellow"
+      #GUID                   58b7428a-e80b-4d5d-b4f7-f8086b2cd522
+    }
+    Block {
+      BlockType               From
+      Name                    "From29"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [175, 173, 265, 187]
+      ShowName                off
+      GotoTag                 "RPI__PFI0U"
+      BackgroundColor         "yellow"
+      #GUID                   0143e64f-116c-4599-9499-281c4602b20f
+    }
+    Block {
+      BlockType               From
+      Name                    "From30"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [175, 193, 265, 207]
+      ShowName                off
+      GotoTag                 "RPI__PFI1U"
+      BackgroundColor         "yellow"
+      #GUID                   9050f838-525c-4fbf-909b-90bc03b17012
+    }
+    Block {
+      BlockType               From
+      Name                    "From31"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [175, 213, 265, 227]
+      ShowName                off
+      GotoTag                 "RPI__PFI2U"
+      BackgroundColor         "yellow"
+      #GUID                   9f3ef20b-a299-428f-b426-76b21853d8b9
+    }
+    Block {
+      BlockType               From
+      Name                    "From32"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [175, 233, 265, 247]
+      ShowName                off
+      GotoTag                 "RPI__PFI3U"
+      BackgroundColor         "yellow"
+      #GUID                   f788f341-8fac-408d-bb36-49f148151338
+    }
+    Block {
+      BlockType               From
+      Name                    "From33"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [175, 253, 265, 267]
+      ShowName                off
+      GotoTag                 "RPI__PFI4U"
+      BackgroundColor         "yellow"
+      #GUID                   29a1aa08-e2e0-4bc5-b7ee-5013e8500bbd
+    }
+    Block {
+      BlockType               From
+      Name                    "From34"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [175, 273, 265, 287]
+      ShowName                off
+      GotoTag                 "RPI__PFI5U"
+      BackgroundColor         "yellow"
+      #GUID                   47ebc603-6fe1-450f-9f42-796884672e48
+    }
+    Block {
+      BlockType               From
+      Name                    "From35"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [175, 293, 265, 307]
+      ShowName                off
+      GotoTag                 "RPI__PFI6U"
+      BackgroundColor         "yellow"
+      #GUID                   a8d2c0c8-8707-4cf1-b6d1-c7a6cb9be94a
+    }
+    Block {
+      BlockType               From
+      Name                    "From36"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [175, 313, 265, 327]
+      ShowName                off
+      GotoTag                 "RPI__PFI7U"
+      BackgroundColor         "yellow"
+      #GUID                   44a5fffc-a51d-4247-a739-3fde5af1fe61
+    }
+    Block {
+      BlockType               From
+      Name                    "From37"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [150, 608, 240, 622]
+      ShowName                off
+      GotoTag                 "RPI__PFI5C1U"
+      BackgroundColor         "yellow"
+      #GUID                   4706a08d-cd8e-439d-9c83-8e3a1c16b9ce
+    }
+    Block {
+      BlockType               From
+      Name                    "From39"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 213, 115, 227]
+      ShowName                off
+      GotoTag                 "RPI__PFI2"
+      BackgroundColor         "yellow"
+      #GUID                   434593b9-d7f4-4a00-a1c9-0d5fb7917664
+    }
+    Block {
+      BlockType               From
+      Name                    "From47"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 233, 115, 247]
+      ShowName                off
+      GotoTag                 "RPI__PFI3"
+      BackgroundColor         "yellow"
+      #GUID                   2b58b6d4-9704-43e9-9055-0882045842aa
+    }
+    Block {
+      BlockType               From
+      Name                    "From48"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 253, 115, 267]
+      ShowName                off
+      GotoTag                 "RPI__PFI4"
+      BackgroundColor         "yellow"
+      #GUID                   bce2d695-91ac-4cba-8199-da9cd7eeb376
+    }
+    Block {
+      BlockType               From
+      Name                    "From49"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 273, 115, 287]
+      ShowName                off
+      GotoTag                 "RPI__PFI5"
+      BackgroundColor         "yellow"
+      #GUID                   e9a3f713-2642-405c-bf66-c558cbed0253
+    }
+    Block {
+      BlockType               From
+      Name                    "From50"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 293, 115, 307]
+      ShowName                off
+      GotoTag                 "RPI__PFI6"
+      BackgroundColor         "yellow"
+      #GUID                   cb6c2f75-5657-4106-b28a-5a8b57f8c189
+    }
+    Block {
+      BlockType               From
+      Name                    "From51"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [25, 313, 115, 327]
+      ShowName                off
+      GotoTag                 "RPI__PFI7"
+      BackgroundColor         "yellow"
+      #GUID                   34c81119-207b-4af6-865a-6768237b8672
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [25, 388, 115, 402]
+      ShowName                off
+      GotoTag                 "RPI__PFO0"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f43342b2-c881-4e02-883f-4edfc8d87ac2
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [25, 408, 115, 422]
+      ShowName                off
+      GotoTag                 "RPI__PFO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c482f787-0e58-49dd-ae64-df6a11193ca4
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto27"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 388, 260, 402]
+      ShowName                off
+      GotoTag                 "RPI__PFO0H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   d3bb5a81-85c1-41c8-915d-7bc60b754e8d
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [25, 428, 115, 442]
+      ShowName                off
+      GotoTag                 "RPI__PFO2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   6a49732e-bc50-4f89-9380-ca476ea26237
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto37"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 408, 260, 422]
+      ShowName                off
+      GotoTag                 "RPI__PFO1H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3e123c0d-15c5-43c2-a63d-9c290d085f19
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto38"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 428, 260, 442]
+      ShowName                off
+      GotoTag                 "RPI__PFO2H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   8f132cf4-8a7c-4381-b7cf-e3b7626a3f30
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto39"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 448, 260, 462]
+      ShowName                off
+      GotoTag                 "RPI__PFO3H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   5d56ac87-05e3-4a1e-85c2-a2154ac46f94
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [25, 448, 115, 462]
+      ShowName                off
+      GotoTag                 "RPI__PFO3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   a96fb2b3-3613-4316-af4a-4d910a1274a7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto40"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 468, 260, 482]
+      ShowName                off
+      GotoTag                 "RPI__PFO4H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f06c2ecb-2eab-4fad-a29c-245ce0c1bee2
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto41"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 488, 260, 502]
+      ShowName                off
+      GotoTag                 "RPI__PFO5H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   83c34125-a03c-49f2-a05c-1ee017213e48
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto42"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 508, 260, 522]
+      ShowName                off
+      GotoTag                 "RPI__PFO6H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f53badb8-7d25-454c-9a91-027cfd65c9e1
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto43"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [170, 528, 260, 542]
+      ShowName                off
+      GotoTag                 "RPI__PFO7H"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   2b9819b9-54ef-4c10-b1a8-25a3024f2bca
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto44"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [35, 608, 125, 622]
+      ShowName                off
+      GotoTag                 "RPI__PFO3C2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b2f6b609-d5bd-4027-a02c-38f54f3a93c7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [25, 468, 115, 482]
+      ShowName                off
+      GotoTag                 "RPI__PFO4"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   af63a43b-8a80-4c1a-bf54-f53d4c7e3a3d
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [25, 488, 115, 502]
+      ShowName                off
+      GotoTag                 "RPI__PFO5"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   bb181035-5fc5-44b8-9bab-dc143798f744
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [25, 508, 115, 522]
+      ShowName                off
+      GotoTag                 "RPI__PFO6"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   057165dc-c59f-4903-ac06-2abb3ebb6db1
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto8"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [25, 528, 115, 542]
+      ShowName                off
+      GotoTag                 "RPI__PFO7"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   945e25d1-27d8-4b45-9abf-8fd4f012ae3b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFI"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [325, 171, 355, 259]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   1d28ebc4-451b-41af-a9fd-72b1e2f0a1e0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFIC1"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [175, 636, 205, 724]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   57d5f319-62dc-4ea9-b2ef-0c290651e802
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFIU"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [410, 171, 440, 259]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   4dd6108d-7430-4211-9f8a-55cc01cbee01
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFO"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [325, 386, 355, 474]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   24a6432a-c358-48f8-86f4-f7cdc51a791e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPI__PFOC2"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [70, 636, 100, 724]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   34e2ab88-3c39-4ad9-8d6c-ab5d14bcb009
+    }
+    Annotation {
+      Position                [445, 45]
+      Text                    "This example serves as a library. It won't comp"
+"ile because it contains ALL input and output \nflags and there are conflicts."
+"\nPick only the input and output flags which you need and copy&paste them into"
+" your project."
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      ForegroundColor         "red"
+      #GUID                   1f6008b6-78d0-471b-a1a7-f29d616305bf
+    }
+    Annotation {
+      Position                [70, 145]
+      Text                    "Input flags"
+      FontName                "Arial"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   4622edfe-e624-4754-96ac-700496d5451c
+    }
+    Annotation {
+      Position                [65, 355]
+      Text                    "Output flags"
+      FontName                "Arial"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   2de2c3c1-3d97-4441-949f-1a395cb92559
+    }
+    Annotation {
+      Position                [90, 585]
+      Text                    "For addresses > 0"
+      FontName                "Arial"
+      FontSize                16
+      FontWeight              "bold"
+      #GUID                   3798ada2-2a79-47e0-a569-a374fca4c111
+    }
+    Annotation {
+      Position                [220, 375]
+      Text                    "Initial value HIGH"
+      #GUID                   b6cc79c0-ceb3-4dc7-b852-64f366c79dea
+    }
+    Annotation {
+      Position                [340, 160]
+      Text                    "Multi-flag"
+      #GUID                   8277699c-502e-476d-b2f7-3da21c8c76d6
+    }
+    Annotation {
+      Position                [230, 160]
+      Text                    "Pull-up resistor enabled"
+      #GUID                   e51504db-d2ac-49db-a045-adb93401ac34
+    }
+    Annotation {
+      Position                [495, 160]
+      Text                    "Multi-flag with pull-up resistors enabled"
+      #GUID                   80c7efac-b658-4248-a373-670448c6921d
+    }
+    Annotation {
+      Position                [340, 375]
+      Text                    "Multi-flag"
+      #GUID                   4ba730ad-b3bc-4f5e-9f54-e7c62ec44434
+    }
+    Annotation {
+      Position                [125, 110]
+      Text                    "PiFace Digital I/O flags"
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      #GUID                   ff6a35bb-bb5e-40dd-9b82-8137bc6514e3
+    }
+  }
+}

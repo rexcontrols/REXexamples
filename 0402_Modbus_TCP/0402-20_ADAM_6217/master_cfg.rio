@@ -1,0 +1,36 @@
+Modbus {
+  Name                    ""
+  Timeout                 100
+  Flags                   8
+  Gap                     10000
+  #GUID                   86c9cf1b-b37f-4231-b9c3-5fd0a9422ea6
+  Slave {
+    Name                    "ADAM6217"
+    IPaddress               "192.168.1.200"
+    Subaddress              255
+    SlaveID                 0
+    MaxRequest              16
+    TCPport                 502
+  }
+  Item {
+    Name                    "analog"
+    SlaveAdr                0
+    RegisterAdr             0
+    Type                    0x00000204
+    Count                   8
+  }
+  Item {
+    Name                    "max"
+    SlaveAdr                0
+    RegisterAdr             10
+    Type                    0x00000204
+    Count                   8
+  }
+  Item {
+    Name                    "min"
+    SlaveAdr                0
+    RegisterAdr             20
+    Type                    0x00000204
+    Count                   8
+  }
+}

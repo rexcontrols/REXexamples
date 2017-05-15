@@ -1,0 +1,165 @@
+Model {
+  Name                    "emo_1wr4di4_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "emo_1wr4di4_exec"
+    Location                [12, 33, 245, 423]
+    #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [15, 73, 60, 362]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.02"
+      ntick0                  1
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   aab705bb-5bdf-40f0-a57c-ea974ad6b083
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OWS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [160, 123, 210, 137]
+      SourceBlock             "execlib/IODRV"
+      module                  "OwsDrv"
+      classname               "OwsDrv"
+      cfgname                 "emo_1wr4di4_owscfg.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   a3bdb925-8066-4b56-9920-4af114cd3016
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OwsDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [160, 88, 210, 102]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   97d76ff7-5b84-49d1-ba4e-2995a9ac7a4a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPiDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [85, 88, 135, 102]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   2e2514c4-8812-4cf5-9715-f31383baea86
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [85, 123, 135, 137]
+      SourceBlock             "execlib/IODRV"
+      module                  "RPiDrv"
+      classname               "UnpDrv"
+      cfgname                 ""
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   e0993d9e-68b5-4519-9dd8-cb96efff8acf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "emo_1wr4di4_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 228, 170, 242]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   4545c098-8243-4409-8448-0e313526bad2
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "RPiDrv"
+      DstPort                 1
+      #GUID                   62c87962-12a4-4d45-9c5f-d56edb57daa5
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "UNP"
+      DstPort                 1
+      #GUID                   adff7f75-7753-410b-acb7-d371a8ed110e
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "emo_1wr4di4_task"
+      DstPort                 1
+      #GUID                   d2df86f6-6a26-41a9-939c-a699323b24b1
+    }
+    Line {
+      SrcBlock                "RPiDrv"
+      SrcPort                 1
+      DstBlock                "OwsDrv"
+      DstPort                 1
+      #GUID                   17546975-bed4-4b6f-9633-7084f44a7ff3
+    }
+    Line {
+      SrcBlock                "UNP"
+      SrcPort                 1
+      DstBlock                "OWS"
+      DstPort                 1
+      #GUID                   e126c233-d0e9-441b-ad49-128c5826166c
+    }
+    Annotation {
+      Position                [105, 15]
+      Text                    "UniPi and EMO-1WR4DI4"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   415c3067-3bb6-4edf-8d2b-a59333a23bd4
+    }
+    Annotation {
+      Position                [105, 35]
+      Text                    "See the README.md file for details."
+      #GUID                   c1d8c201-07c2-4e65-9e42-f863d86d68a5
+    }
+  }
+}

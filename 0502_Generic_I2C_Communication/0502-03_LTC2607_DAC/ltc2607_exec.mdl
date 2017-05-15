@@ -1,0 +1,92 @@
+Model {
+  Name                    "ltc2607_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "ltc2607_exec"
+    Location                [9, 34, 289, 407]
+    #GUID                   3511e771-d54f-4db4-a329-911130732965
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [15, 58, 60, 347]
+      SourceBlock             "execlib/EXEC"
+      target                  "PC - Linux"
+      tick                    "0.01"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   bc6d0001-a30e-4728-b93d-1c82eba2b711
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ltc2607_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [95, 213, 145, 227]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   23b80fc6-b446-4908-9d15-aec53bc3aaaf
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "ltc2607_task"
+      DstPort                 1
+      #GUID                   49dfc8a6-50b3-434e-a9bc-f3c76d54b0be
+    }
+    Annotation {
+      Position                [130, 40]
+      Text                    "See the README.md and ltc2607.c file for detail"
+"s."
+      #GUID                   e8b7075c-4237-429a-b0ab-2e1481b61528
+    }
+    Annotation {
+      Position                [90, 20]
+      Text                    "LTC2607 DAC via I2C"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   7fcede41-10b8-48ae-89e1-285c03cdc18b
+    }
+  }
+}

@@ -1,0 +1,202 @@
+Model {
+  Name                    "mysql_recipes_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "mysql_recipes_task"
+    Location                [300, 31, 689, 422]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [260, 243, 280, 257]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      #GUID                   f8b7bbae-b338-4e9d-af3b-15821f259e6a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_ID"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 148, 60, 162]
+      SourceBlock             "mathlib/CNI"
+      icn                     1
+      #GUID                   18eab312-0f4c-4966-a513-c025f09afa3b
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 203, 150, 217]
+      ShowName                off
+      GotoTag                 "DB__sand"
+      BackgroundColor         "yellow"
+      #GUID                   3601deb4-d17a-4f81-8401-f132fbe06317
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 308, 150, 322]
+      ShowName                off
+      GotoTag                 "DB__description"
+      BackgroundColor         "yellow"
+      #GUID                   b8a5e1fb-7486-4a9f-8f34-3766f679f155
+    }
+    Block {
+      BlockType               From
+      Name                    "From10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 278, 150, 292]
+      ShowName                off
+      GotoTag                 "DB__water"
+      BackgroundColor         "yellow"
+      #GUID                   f46c3d25-12c1-414a-9b60-95e345f3d500
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 228, 150, 242]
+      ShowName                off
+      GotoTag                 "DB__cement"
+      BackgroundColor         "yellow"
+      #GUID                   6eed14c6-d776-49af-a816-3d097ef9ad0e
+    }
+    Block {
+      BlockType               From
+      Name                    "From9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 253, 150, 267]
+      ShowName                off
+      GotoTag                 "DB__lime"
+      BackgroundColor         "yellow"
+      #GUID                   0078699d-6453-4a4d-972e-226613123914
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [235, 147, 355, 163]
+      ShowName                off
+      GotoTag                 "DB__ident"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   d19e9645-07a7-4934-8631-7871323b5b39
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [310, 197, 355, 273]
+      SourceBlock             "arclib/TRND"
+      ShowName                on
+      NamePlacement           ""
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      #GUID                   2a55979a-6023-4f7b-baae-5029087881ea
+        timesrc       1
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   374ce7ea-37b9-4f9d-a3f5-835666b4863a
+    }
+    Line {
+      SrcBlock                "CNI_ID"
+      SrcPort                 1
+      DstBlock                "Goto3"
+      DstPort                 1
+      #GUID                   c728f544-63cb-4ca2-9819-ffe04fda129e
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   8ef3cf30-972f-401e-a6f0-dcc6a45a1d3c
+    }
+    Line {
+      SrcBlock                "From10"
+      SrcPort                 1
+      Points                  [30, 0; 0, -45]
+      DstBlock                "TRND"
+      DstPort                 4
+      #GUID                   1daaaaaf-3dcf-4ebb-be7c-16d942321b89
+    }
+    Line {
+      SrcBlock                "From8"
+      SrcPort                 1
+      Points                  [10, 0; 0, -15]
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   700274df-c16c-4f5a-8485-6353c6e87885
+    }
+    Line {
+      SrcBlock                "From9"
+      SrcPort                 1
+      Points                  [20, 0; 0, -30]
+      DstBlock                "TRND"
+      DstPort                 3
+      #GUID                   132ba845-21ae-4d83-9e62-0b76a855ee6d
+    }
+    Annotation {
+      Position                [145, 35]
+      Text                    "See the README.md file for additional informati"
+"on."
+      #GUID                   f58a54d9-0f97-4418-8775-0b946a8ef391
+    }
+    Annotation {
+      Position                [120, 20]
+      Text                    "Reading recipes for mortar"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   cd195015-2968-4888-888a-da5311a31c2c
+    }
+  }
+}

@@ -1,0 +1,301 @@
+Model {
+  Name                    "restapi_master_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "restapi_master_task"
+    Location                [292, 33, 788, 494]
+    #GUID                   5908a457-6bb4-450e-a235-6e94f1d87163
+    Block {
+      BlockType               Reference
+      Name                    "BIS"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [85, 398, 100, 422]
+      SourceBlock             "genlib/BIS"
+      Y0                      on
+      t1                      "0.1"
+      t2                      5
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   8f1dc825-6f7a-4481-9560-e88b8a543383
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GATE_S1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 113, 105, 127]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   8c69bf60-b97b-4a98-8994-37edd5679c98
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [185, 208, 205, 222]
+      SourceBlock             "mathlib/CNI"
+      icn                     0
+      #GUID                   be842bf8-5ed8-4736-b848-aefa6b7ee2c8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CONCAT"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [220, 110, 280, 200]
+      SourceBlock             "stringlib/CONCAT"
+      ptrn                    "{ \"v\": %1}"
+      nmax                    0
+      #GUID                   86d459b9-67f1-4bf3-9fb5-7a53c376c36e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DIF_"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [185, 238, 210, 252]
+      SourceBlock             "mathlib/DIF_"
+      ISSF                    off
+      #GUID                   f3b40735-43ae-4173-ae50-6cb1633079aa
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [380, 328, 460, 352]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   5460582b-7e4a-4824-a29a-49bdba3abc71
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HTTP_get_status"
+      Ports                   [4, 6, 0, 0, 0]
+      Position                [135, 347, 215, 413]
+      SourceBlock             "speclib/HTTP2"
+      url                     "http://192.168.1.101:8008/api/tasks/restapi_sla"
+"ve_task/Gate:OPENED"
+      method                  "1: GET"
+      user                    "admin"
+      password                ""
+      certificate             ""
+      VERIFY                  off
+      postmime                "application/json"
+      acceptmime              "application/json"
+      timeout                 5
+      BLOCKING                off
+      nmax                    0
+      postmax                 256
+      datamax                 1024
+      #GUID                   1008908c-1845-4a94-a4dd-1b41149d7580
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HTTP_post"
+      Ports                   [4, 6, 0, 0, 0]
+      Position                [340, 142, 420, 208]
+      SourceBlock             "speclib/HTTP2"
+      url                     "http://192.168.1.101:8008/api/tasks/restapi_sla"
+"ve_task/CNB_GATE:YCN"
+      method                  "2: POST"
+      user                    "admin"
+      password                ""
+      certificate             ""
+      VERIFY                  off
+      postmime                "application/json"
+      acceptmime              "application/json"
+      timeout                 5
+      BLOCKING                off
+      nmax                    0
+      postmax                 256
+      datamax                 1024
+      #GUID                   c031c62d-f40d-459b-aa60-d675c8417b8b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PJROCT"
+      Ports                   [2, 9, 0, 0, 0]
+      Position                [255, 332, 295, 428]
+      SourceBlock             "stringlib/PJROCT"
+      name1                   "v"
+      name2                   ""
+      name3                   ""
+      name4                   ""
+      name5                   ""
+      name6                   ""
+      name7                   ""
+      name8                   ""
+      nmax                    0
+      yerr                    0
+      #GUID                   7ef7c47c-305c-4906-832d-4d44ab93fd53
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REL"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [230, 228, 255, 252]
+      SourceBlock             "mathlib/REL"
+      irel                    "2: inequality (!=)"
+      #GUID                   a61308eb-cbee-4211-83d4-5f42b771d70d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOI"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [325, 333, 350, 347]
+      SourceBlock             "mathlib/RTOI"
+      #GUID                   b4aa1a65-81fb-4959-8c2e-86fcdb562882
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [165, 113, 195, 127]
+      SourceBlock             "stringlib/RTOS"
+      prec                    0
+      mode                    "1: best fit"
+      #GUID                   e547e202-190f-4237-b2c2-03a9f1401991
+    }
+    Line {
+      SrcBlock                "BIS"
+      SrcPort                 1
+      DstBlock                "HTTP_get_status"
+      DstPort                 4
+      #GUID                   bfb67ff4-569d-49e0-8732-72db25679cf6
+    }
+    Line {
+      SrcBlock                "CNB_GATE_S1"
+      SrcPort                 1
+      Points                  [30, 0]
+      #GUID                   d07e8cf2-1bac-4848-9508-c0e98d1fa0a8
+      Branch {
+        Points                  [0, 125]
+        DstBlock                "DIF_"
+        DstPort                 1
+        #GUID                   a252a5d9-4856-4884-ba16-1abc4116f26c
+      }
+      Branch {
+        DstBlock                "RTOS"
+        DstPort                 1
+        #GUID                   dd53d22b-9f2d-4800-84a5-0f2ac6521c80
+      }
+    }
+    Line {
+      SrcBlock                "CNI"
+      SrcPort                 1
+      Points                  [5, 0]
+      DstBlock                "REL"
+      DstPort                 1
+      #GUID                   0ee08257-1002-41a8-9cba-ebf87a26409b
+    }
+    Line {
+      SrcBlock                "CONCAT"
+      SrcPort                 1
+      DstBlock                "HTTP_post"
+      DstPort                 1
+      #GUID                   10f03922-d0ff-4deb-8817-52a7b4f24519
+    }
+    Line {
+      SrcBlock                "DIF_"
+      SrcPort                 1
+      DstBlock                "REL"
+      DstPort                 2
+      #GUID                   08419f6e-5d09-4c5b-923b-0b7688aa34a8
+    }
+    Line {
+      SrcBlock                "HTTP_get_status"
+      SrcPort                 1
+      DstBlock                "PJROCT"
+      DstPort                 1
+      #GUID                   c609051a-c53b-4eb1-9093-6b30cf7068bb
+    }
+    Line {
+      SrcBlock                "HTTP_get_status"
+      SrcPort                 3
+      Points                  [20, 0]
+      DstBlock                "PJROCT"
+      DstPort                 2
+      #GUID                   e9d40596-dcb3-417d-9535-1e2002dd33f6
+    }
+    Line {
+      SrcBlock                "PJROCT"
+      SrcPort                 1
+      DstBlock                "RTOI"
+      DstPort                 1
+      #GUID                   e9126f8d-34dd-4882-8954-028a0da0e335
+    }
+    Line {
+      SrcBlock                "REL"
+      SrcPort                 1
+      Points                  [35, 0; 0, -40]
+      DstBlock                "HTTP_post"
+      DstPort                 4
+      #GUID                   f376fab7-8022-42fc-ad80-a710ba056703
+    }
+    Line {
+      SrcBlock                "RTOI"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   1d671dda-5fa4-415a-9f6b-b4f0a38ca478
+    }
+    Line {
+      SrcBlock                "RTOS"
+      SrcPort                 1
+      DstBlock                "CONCAT"
+      DstPort                 1
+      #GUID                   76ad7b1b-75d5-4ee9-aba1-b1f527bd1f2d
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8feb317c-34be-445c-9c14-f35789312c76
+    }
+    Annotation {
+      Position                [200, 20]
+      Text                    "Remote gate opener - Master Station, IP 192.168"
+".1.xxx"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   d52f859a-11a7-4c8e-849d-abd0a5b60b67
+    }
+  }
+}

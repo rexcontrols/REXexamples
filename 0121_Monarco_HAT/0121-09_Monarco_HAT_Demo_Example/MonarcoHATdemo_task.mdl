@@ -1,0 +1,552 @@
+Model {
+  Name                    "MonarcoHATdemo_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "MonarcoHATdemo_task"
+    Location                [233, 35, 784, 756]
+    #GUID                   55e50adb-48b8-42ff-a0e8-0bf151040f8b
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [360, 258, 380, 272]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   04b0021e-4e0f-47b3-b032-0e0f9d70c209
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [360, 138, 380, 152]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   7557934d-c486-457f-9f89-00211a164869
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 103, 80, 117]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   1ebb7a65-5b12-4162-a283-77f88556d829
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 133, 80, 147]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   83e2478f-8f11-4fd2-a697-ec59331b5f70
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 163, 80, 177]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   33bbf092-bca5-4375-8838-30ab1d7395e9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_DO4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [60, 193, 80, 207]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   374e1ebd-3be0-4a08-8f04-6d6812de2920
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_LED1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 383, 75, 397]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   27e04dff-fbdb-46d0-98d5-94b5d8286aaf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_LED2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 413, 75, 427]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   7f57e4e3-ba09-4af4-82a6-edcc5a236f58
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_LED3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 443, 75, 457]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   1153e332-61de-4dbb-b334-e022b458d416
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_LED4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 473, 75, 487]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   6d981ccc-b9f2-430f-8394-b76795c5f946
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_LED5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 503, 75, 517]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   9dc4ca13-d7cf-4f85-b5a6-796b65e291cb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_LED6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 533, 75, 547]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   9c1ce18f-7578-47d3-8cf1-42b9f2749d5c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_LED7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 563, 75, 577]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   3b56e469-c2c6-414f-bc5b-bcc1dbed1d11
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_LED8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 593, 75, 607]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   e58e32c1-ec79-45ab-8c1b-b45d232da533
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 642, 85, 658]
+      SourceBlock             "mathlib/CNI"
+      icn                     0x00
+      #GUID                   4de29a02-c748-401b-a73b-3ab2da5c0e21
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_AO1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 263, 75, 277]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   fd21e77c-d09a-4d10-9f50-887a8434a748
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_AO2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 288, 75, 302]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   a12a3e36-b38c-4f0b-8ceb-3b22664d9dd6
+    }
+    Block {
+      BlockType               From
+      Name                    "From33"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 218, 365, 232]
+      ShowName                off
+      GotoTag                 "MNR__AI1"
+      BackgroundColor         "yellow"
+      #GUID                   004b7590-1c81-4081-b52b-56f6cb46a00e
+    }
+    Block {
+      BlockType               From
+      Name                    "From34"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [275, 233, 365, 247]
+      ShowName                off
+      GotoTag                 "MNR__AI2"
+      BackgroundColor         "yellow"
+      #GUID                   eaf139a0-535c-43c1-8ebb-17b3691fb640
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto13"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [135, 263, 225, 277]
+      ShowName                off
+      GotoTag                 "MNR__AO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3a7380b9-26ee-40f0-85d6-bc4530cc3491
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto14"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [135, 288, 225, 302]
+      ShowName                off
+      GotoTag                 "MNR__AO2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c8e6e0cc-e31e-4921-9d6f-c939df97b0b6
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto18"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [125, 643, 255, 657]
+      ShowName                off
+      GotoTag                 "MNR__LEDS_Mask"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   05fb5109-ca4b-4768-b843-81186c703350
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR__DI1"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [300, 97, 330, 143]
+      SourceBlock             "inoutlib/INQUAD"
+      BackgroundColor         "yellow"
+      #GUID                   67d297eb-d722-4140-80c7-cd2491e5d6b4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR__DO1"
+      Ports                   [4, 0, 0, 0, 0]
+      Position                [170, 102, 200, 148]
+      SourceBlock             "inoutlib/OUTQUAD"
+      BackgroundColor         "lightBlue"
+      #GUID                   2f22396f-7dd3-4883-a405-4a1350cbbf43
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR__LED1"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [165, 381, 195, 469]
+      SourceBlock             "inoutlib/OUTOCT"
+      FontSize                10
+      BackgroundColor         "lightBlue"
+      #GUID                   6649e1ca-b15f-4d3f-9666-1d71e8971e37
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_AIN"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [400, 213, 445, 287]
+      SourceBlock             "arclib/TRND"
+      n                       2
+      l                       10000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
+      User                    ""
+      #GUID                   f755c276-fe02-4960-97c8-204afb9550c8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_DIN"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [400, 93, 445, 167]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       10000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
+      User                    ""
+      #GUID                   e25a788b-c237-4d22-bc56-fe4dd9ae12c0
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND_AIN"
+      DstPort                 5
+      #GUID                   bd9ce60d-4860-4ba2-96e9-4143aaf65908
+    }
+    Line {
+      SrcBlock                "CNB1"
+      SrcPort                 1
+      DstBlock                "TRND_DIN"
+      DstPort                 5
+      #GUID                   e912a3e6-edc3-4cb8-ab31-14f465b60ebb
+    }
+    Line {
+      SrcBlock                "CNB_DO1"
+      SrcPort                 1
+      DstBlock                "MNR__DO1"
+      DstPort                 1
+      #GUID                   2eb2ce29-e05f-46aa-8e24-058d87121bf4
+    }
+    Line {
+      SrcBlock                "CNB_DO2"
+      SrcPort                 1
+      Points                  [20, 0; 0, -20]
+      DstBlock                "MNR__DO1"
+      DstPort                 2
+      #GUID                   0123c116-d696-4adc-8d52-9914cdd488b2
+    }
+    Line {
+      SrcBlock                "CNB_DO3"
+      SrcPort                 1
+      Points                  [30, 0; 0, -40]
+      DstBlock                "MNR__DO1"
+      DstPort                 3
+      #GUID                   9b688226-9d42-4cf4-af3c-d48c7fe7e350
+    }
+    Line {
+      SrcBlock                "CNB_DO4"
+      SrcPort                 1
+      Points                  [40, 0; 0, -60]
+      DstBlock                "MNR__DO1"
+      DstPort                 4
+      #GUID                   a21b7f69-57fc-47e8-a47f-b74e8d2cc438
+    }
+    Line {
+      SrcBlock                "CNB_LED1"
+      SrcPort                 1
+      DstBlock                "MNR__LED1"
+      DstPort                 1
+      #GUID                   d683582f-4697-484d-b295-b78bb276daae
+    }
+    Line {
+      SrcBlock                "CNB_LED2"
+      SrcPort                 1
+      Points                  [15, 0; 0, -20]
+      DstBlock                "MNR__LED1"
+      DstPort                 2
+      #GUID                   56373f8a-bdd3-4942-b849-4cb8ca837361
+    }
+    Line {
+      SrcBlock                "CNB_LED3"
+      SrcPort                 1
+      Points                  [20, 0; 0, -40]
+      DstBlock                "MNR__LED1"
+      DstPort                 3
+      #GUID                   d2a9f8ab-0463-4b96-a208-fe93ac8754d1
+    }
+    Line {
+      SrcBlock                "CNB_LED4"
+      SrcPort                 1
+      Points                  [25, 0; 0, -60]
+      DstBlock                "MNR__LED1"
+      DstPort                 4
+      #GUID                   b939eba7-e12b-4ddc-a203-1dac66f9f917
+    }
+    Line {
+      SrcBlock                "CNB_LED5"
+      SrcPort                 1
+      Points                  [30, 0; 0, -80]
+      DstBlock                "MNR__LED1"
+      DstPort                 5
+      #GUID                   7acac1e6-c9cb-4e3d-9648-f610f1c6e140
+    }
+    Line {
+      SrcBlock                "CNB_LED6"
+      SrcPort                 1
+      Points                  [35, 0; 0, -100]
+      DstBlock                "MNR__LED1"
+      DstPort                 6
+      #GUID                   2b053662-47b3-4b26-9b9b-4d2327435e29
+    }
+    Line {
+      SrcBlock                "CNB_LED7"
+      SrcPort                 1
+      Points                  [40, 0; 0, -120]
+      DstBlock                "MNR__LED1"
+      DstPort                 7
+      #GUID                   04fe363b-852e-464e-889d-82801ae8d52f
+    }
+    Line {
+      SrcBlock                "CNB_LED8"
+      SrcPort                 1
+      Points                  [45, 0; 0, -140]
+      DstBlock                "MNR__LED1"
+      DstPort                 8
+      #GUID                   14cb612e-eb91-4ce7-a445-d7a028eaa56f
+    }
+    Line {
+      SrcBlock                "CNI"
+      SrcPort                 1
+      DstBlock                "Goto18"
+      DstPort                 1
+      #GUID                   ef90c36a-06a7-486c-95bb-15a0d745fcf7
+    }
+    Line {
+      SrcBlock                "CNR_AO1"
+      SrcPort                 1
+      DstBlock                "Goto13"
+      DstPort                 1
+      #GUID                   10aa3578-4557-4dcc-8e42-39f148c55ce2
+    }
+    Line {
+      SrcBlock                "CNR_AO2"
+      SrcPort                 1
+      DstBlock                "Goto14"
+      DstPort                 1
+      #GUID                   a34fdbd2-f7cf-4bde-9c62-39a4954c91ea
+    }
+    Line {
+      SrcBlock                "From33"
+      SrcPort                 1
+      DstBlock                "TRND_AIN"
+      DstPort                 1
+      #GUID                   d2c983a2-5f22-44e9-af07-69a88185d127
+    }
+    Line {
+      SrcBlock                "From34"
+      SrcPort                 1
+      Points                  [0, -5]
+      DstBlock                "TRND_AIN"
+      DstPort                 2
+      #GUID                   0c7e2bc9-cf4c-4d72-baf3-5cde7f21a47d
+    }
+    Line {
+      SrcBlock                "MNR__DI1"
+      SrcPort                 1
+      DstBlock                "TRND_DIN"
+      DstPort                 1
+      #GUID                   1452f047-5d08-4fac-abb8-27797fa52faa
+    }
+    Line {
+      SrcBlock                "MNR__DI1"
+      SrcPort                 2
+      DstBlock                "TRND_DIN"
+      DstPort                 2
+      #GUID                   c32d0f67-0e4a-4c84-bc9e-b1d9dea43d25
+    }
+    Line {
+      SrcBlock                "MNR__DI1"
+      SrcPort                 3
+      DstBlock                "TRND_DIN"
+      DstPort                 3
+      #GUID                   f2b8d5e6-f562-4b81-ad53-7a26eaff1881
+    }
+    Line {
+      SrcBlock                "MNR__DI1"
+      SrcPort                 4
+      DstBlock                "TRND_DIN"
+      DstPort                 4
+      #GUID                   226d8a1c-0c3d-4384-9c02-6f40a9b8e359
+    }
+    Annotation {
+      Position                [340, 205]
+      Text                    "Analog Inputs 0-10V:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   ef77bcfd-92cc-48c2-a7a6-3b594fc9e80a
+    }
+    Annotation {
+      Position                [325, 85]
+      Text                    "Digital Inputs:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   0278b156-ca7c-448c-88b9-ebe38419b925
+    }
+    Annotation {
+      Position                [110, 80]
+      Text                    "Digital Outputs:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   9125c8b5-214c-40a7-a259-5151c264726f
+    }
+    Annotation {
+      Position                [105, 245]
+      Text                    "Analog Outputs:"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   cf09a331-64c5-47e9-96cb-ab62e9bb2b84
+    }
+    Annotation {
+      Position                [130, 365]
+      Text                    "LED1..LED8 (User LEDs):"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   f417436e-5772-48ef-ad4e-f6334e8afbd1
+    }
+    Annotation {
+      Position                [90, 20]
+      Text                    "Monarco HAT demo"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   13475089-8be9-4930-a5eb-ca39eb669a44
+    }
+    Annotation {
+      Position                [175, 40]
+      Text                    "See the README.md file in project folder for de"
+"tailed information."
+      #GUID                   e687708f-d4ae-4b0f-b685-f9b7c865f5ed
+    }
+  }
+}

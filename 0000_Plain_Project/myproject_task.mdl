@@ -1,0 +1,71 @@
+Model {
+  Name                    "myproject_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "myproject_task"
+    Location                [244, 34, 585, 436]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Reference
+      Name                    "CNR"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 78, 75, 92]
+      SourceBlock             "mathlib/CNR"
+      ycn                     1
+      #GUID                   e28ba087-ea59-4c7b-8ea3-f5b1e1336872
+    }
+    Annotation {
+      Position                [85, 20]
+      Text                    "Plain project - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   e3601f30-0093-42de-8c87-47483416558a
+    }
+    Annotation {
+      Position                [155, 190]
+      Text                    "Drag&drop function blocks here...\n\n(Ctrl+L to"
+" open the library)"
+      FontSize                12
+      ForegroundColor         "red"
+      FontAngle               "italic"
+      #GUID                   582961b2-7e94-42ad-82d0-f5d0ecf185c3
+    }
+    Annotation {
+      Position                [170, 45]
+      Text                    "See the README.md file in project folder for de"
+"tailed information."
+      #GUID                   693ee5bc-de59-4cfd-8764-c2fdb5b9c02f
+    }
+  }
+}

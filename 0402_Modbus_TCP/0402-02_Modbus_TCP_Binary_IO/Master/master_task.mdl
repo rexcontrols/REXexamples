@@ -1,0 +1,218 @@
+Model {
+  Name                    "master_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "master_task"
+    Location                [270, 31, 905, 415]
+    #GUID                   f4ddb680-563b-4fa7-9a5d-b4f1c1fa7573
+    Block {
+      BlockType               Reference
+      Name                    "CNB_BinOut1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [415, 143, 435, 157]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   aea75916-4744-4901-b435-7bc8baa75380
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_BinOut12"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [360, 208, 380, 222]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   414272d0-c5ef-4342-99a2-1265e4b0eda9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_BinOut22"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [360, 308, 380, 322]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   e0cd1329-dafd-4e02-a5f4-a2b13f634a24
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_BinOut31"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [475, 238, 495, 252]
+      SourceBlock             "mathlib/CNB"
+      ShowName                on
+      NamePlacement           ""
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   3267f983-24ab-466a-a868-7603891c27a6
+    }
+    Block {
+      BlockType               From
+      Name                    "MTM__BinIn1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [90, 143, 180, 157]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__BinIn1"
+      BackgroundColor         "yellow"
+      #GUID                   007f7eee-129b-4cb7-85a7-1415c71aaa30
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__BinIn10_25"
+      Ports                   [0, 16, 0, 0, 0]
+      Position                [75, 186, 105, 354]
+      SourceBlock             "inoutlib/INHEXD"
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "yellow"
+      #GUID                   15f44532-0c1f-4823-b872-a5389f6cfa37
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__BinIn26_41"
+      Ports                   [0, 16, 0, 0, 0]
+      Position                [180, 186, 210, 354]
+      SourceBlock             "inoutlib/INHEXD"
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "yellow"
+      #GUID                   61bdc37d-9663-45d7-9072-58266d696a43
+    }
+    Block {
+      BlockType               Goto
+      Name                    "MTM__BinOut1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [455, 143, 555, 157]
+      ShowName                off
+      NamePlacement           ""
+      GotoTag                 "MTM__BinOut1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   94138cc4-5b19-426d-984e-64118a2867a6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__BinOut10_25"
+      Ports                   [16, 0, 0, 0, 0]
+      Position                [415, 186, 445, 354]
+      SourceBlock             "inoutlib/OUTHEXD"
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "lightBlue"
+      #GUID                   5e0ba8f9-5af6-4f2a-8d7c-bec1114ae82e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__BinOut26_41"
+      Ports                   [16, 0, 0, 0, 0]
+      Position                [530, 186, 560, 354]
+      SourceBlock             "inoutlib/OUTHEXD"
+      ShowName                on
+      NamePlacement           ""
+      BackgroundColor         "lightBlue"
+      #GUID                   b4192d89-ed84-4575-972d-78d96bc76f37
+    }
+    Line {
+      SrcBlock                "CNB_BinOut1"
+      SrcPort                 1
+      DstBlock                "MTM__BinOut1"
+      DstPort                 1
+      #GUID                   f8aababc-4097-4c65-8968-410ea67fe766
+    }
+    Line {
+      SrcBlock                "CNB_BinOut12"
+      SrcPort                 1
+      DstBlock                "MTM__BinOut10_25"
+      DstPort                 3
+      #GUID                   56410a2f-e474-4b4c-ba0b-38de2fd07eb1
+    }
+    Line {
+      SrcBlock                "CNB_BinOut22"
+      SrcPort                 1
+      DstBlock                "MTM__BinOut10_25"
+      DstPort                 13
+      #GUID                   c01bcffe-84e8-4505-8901-ed60afe915cb
+    }
+    Line {
+      SrcBlock                "CNB_BinOut31"
+      SrcPort                 1
+      DstBlock                "MTM__BinOut26_41"
+      DstPort                 6
+      #GUID                   5c6ff47d-2f61-4530-b949-139b92fe6d88
+    }
+    Annotation {
+      Position                [140, 120]
+      Text                    "Binary inputs of Master"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   5561ffa0-11c6-4f7c-8da9-7f0ed3665f2b
+    }
+    Annotation {
+      Position                [480, 120]
+      Text                    "Binary outputs of Master"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   20de6fc2-7eea-4e86-9512-e3fcf583b003
+    }
+    Annotation {
+      Position                [120, 20]
+      Text                    "Modbus TCP master station"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   0308fb5f-b947-4a24-a711-8c7bf4ad0837
+    }
+    Annotation {
+      Position                [255, 45]
+      Text                    "IP address 192.168.1.200 is expected in the Mod"
+"bus TCP slave"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   4c7ba54e-5176-47d8-a833-cfc003455f44
+    }
+    Annotation {
+      Position                [255, 80]
+      Text                    "Go to MTM driver configuration and press \"Conf"
+"igure\" for Modbus configuration.\n\nRead the README.md file for details."
+      #GUID                   ebd5949e-63d6-4b92-b6f6-2dc9bc909a1e
+    }
+  }
+}

@@ -1,0 +1,158 @@
+Model {
+  Name                    "station1_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  rev.                    "3173,"
+  Date                    "2013-05-31"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  rev.                    "3173,"
+  Date                    "2013-05-31"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "station1_task"
+    Location                [298, 32, 692, 411]
+    #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [250, 223, 270, 237]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   d300e41b-a1c0-4bf2-a06b-3d57996e1b1b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RDC_S1"
+      Ports                   [17, 18, 0, 0, 0]
+      Position                [150, 151, 205, 339]
+      SourceBlock             "speclib/RDC"
+      target                  "192.168.1.200"
+      rport                   1288
+      lport                   1288
+      id                      1
+      period                  1
+      BackgroundColor         "cyan"
+      #GUID                   dbded688-b26d-438a-acda-9d0429dac5f5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_SINE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 168, 70, 182]
+      SourceBlock             "genlib/SG"
+      isig                    "1: SINE"
+      amp                     1
+      freq                    "0.05"
+      phase                   "0.0000000E+000"
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      offset                  0
+      #GUID                   6a70d035-0bfa-4869-ae30-c4eedf1c480f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [295, 178, 340, 252]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       10800
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Remote Data Connection"
+      #GUID                   0a292914-ab0c-40b2-b961-4189c8f75af6
+        timesrc       1
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   5eb65ca4-c5a4-4b84-b90a-c59066da9445
+    }
+    Line {
+      SrcBlock                "RDC_S1"
+      SrcPort                 5
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   0aaa9965-8672-4c8b-ac1c-faf90128aafc
+    }
+    Line {
+      SrcBlock                "RDC_S1"
+      SrcPort                 13
+      Points                  [20, 0; 0, -70]
+      DstBlock                "TRND"
+      DstPort                 3
+      #GUID                   c9a62a20-2ab6-4dab-a7d2-b3ec6a733d8d
+    }
+    Line {
+      SrcBlock                "SG_SINE"
+      SrcPort                 1
+      Points                  [50, 0]
+      #GUID                   555dbcac-2f27-4593-9e6e-bd057e1fbbd2
+      Branch {
+        DstBlock                "RDC_S1"
+        DstPort                 2
+        #GUID                   96f14035-6e52-455f-a89a-8dd93cb6694e
+      }
+      Branch {
+        Points                  [0, -40; 155, 0]
+        DstBlock                "TRND"
+        DstPort                 1
+        #GUID                   52e7ca34-53c1-4ffb-b1e3-218b14347bb5
+      }
+    }
+    Annotation {
+      Position                [180, 65]
+      Text                    "Data exchange between 2 target devices of the R"
+"EX Control System\nvia the RDC function block\n\nSee the README.md file for de"
+"tailed information."
+      #GUID                   1fbb18a2-2efc-44e9-90ee-776dbc5ab7bb
+    }
+    Annotation {
+      Position                [185, 20]
+      Text                    "RDC example, Station 1, IP 192.168.1.100, port "
+"1288"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   328187ad-2d15-463f-b0ee-8649d3965e16
+    }
+  }
+}

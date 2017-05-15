@@ -1,0 +1,149 @@
+Model {
+  Name                    "logo_IO_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "logo_IO_exec"
+    Location                [9, 31, 299, 413]
+    #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [80, 58, 125, 347]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.01"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   aab705bb-5bdf-40f0-a57c-ea974ad6b083
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [150, 318, 200, 332]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        on
+      GenerateRexHMI          on
+      RedirectToHMI           off
+      Compression             off
+      #GUID                   3667baf5-641e-46ec-b9cb-41d5093fd825
+        Compression "off"
+        Compression "off"
+        Compression "off"
+        Compression "off"
+        Compression "off"
+    }
+    Block {
+      BlockType               Reference
+      Name                    "S7C"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [150, 108, 200, 122]
+      SourceBlock             "execlib/IODRV"
+      module                  "S7Drv"
+      classname               "S7cDrv"
+      cfgname                 "logo_iocfg.rio"
+      factor                  5
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   911677f2-7935-47fe-9dab-d359d876695b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "S7Drv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [150, 73, 200, 87]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   6737d998-c4e4-4e93-91f2-f13b90ca242c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "logo_IO_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [150, 213, 200, 227]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   4c72d09d-0994-4751-b75d-6f45b1b9519b
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "S7Drv"
+      DstPort                 1
+      #GUID                   e397ad8a-934d-4164-83d1-df734616eafa
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "S7C"
+      DstPort                 1
+      #GUID                   fd4e4d2f-f83f-421e-bf21-c96e5cec9199
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "logo_IO_task"
+      DstPort                 1
+      #GUID                   67e753af-d839-4275-b988-39e56cae8519
+    }
+    Annotation {
+      Position                [145, 15]
+      Text                    "Using Siemens LOGO! as remote I/O"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6e0b166b-6ac0-4c44-9902-71ffe5a95d5c
+    }
+    Annotation {
+      Position                [140, 35]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   7c1f8dbe-a957-4375-b34b-7cdfc1dcaaeb
+    }
+  }
+}

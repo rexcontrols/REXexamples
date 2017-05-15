@@ -1,0 +1,97 @@
+Model {
+  Name                    "cssm_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "cssm_exec"
+    Location                [9, 32, 288, 439]
+    #GUID                   e397ac74-5a7a-4779-b199-be14eac73dd0
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [75, 88, 120, 377]
+      SourceBlock             "execlib/EXEC"
+      ShowName                on
+      NamePlacement           ""
+      target                  "Generic target device"
+      tick                    "0.1"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   e9cc7955-492b-4061-bd53-6a60101aa2d5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "cssm_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [150, 243, 200, 257]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   387ffc3b-2174-4149-a7ad-2a190d30f8be
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "cssm_task"
+      DstPort                 1
+      #GUID                   2b77f18b-a1b1-4886-b6b5-4048fcc18c2a
+    }
+    Annotation {
+      Position                [140, 55]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8fd05077-ad43-4ad4-9361-c987ec2ef77a
+    }
+    Annotation {
+      Position                [130, 30]
+      Text                    "Simulation of discretized conti-\nnuous state s"
+"pace models"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   c0cb4ad1-2b2b-4d31-bfb0-e4e39854d022
+    }
+  }
+}

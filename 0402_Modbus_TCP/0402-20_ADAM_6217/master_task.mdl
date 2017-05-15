@@ -1,0 +1,622 @@
+Model {
+  Name                    "master_task"
+  Version                 7.1
+  MdlSubVersion           0
+  SaveDefaultBlockParams  on
+  SampleTimeColors        off
+  LibraryLinkDisplay      "none"
+  WideLines               off
+  ShowLineDimensions      off
+  ShowPortDataTypes       off
+  ShowLoopsOnError        on
+  IgnoreBidirectionalLines off
+  ShowStorageClass        off
+  ShowTestPointIcons      on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons         on
+  SortedOrder             off
+  ExecutionContextIcon    off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime        "0.035000"
+  OverrideScopeRefreshTime on
+  DisableAllScopes        off
+  DataTypeOverride        "UseLocalSettings"
+  MinMaxOverflowLogging   "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip        off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip off
+  ToolBar                 on
+  StatusBar               on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks   off
+  Created                 "Thu Jan 14 14:46:32 2010"
+  Creator                 "jsobota"
+  UpdateHistory           "UpdateHistoryNever"
+  ModifiedByFormat        "%<Auto>"
+  LastModifiedBy          "jsobota"
+  ModifiedDateFormat      "%<Auto>"
+  LastModifiedDate        "Tue Jan 19 10:05:35 2010"
+  RTWModifiedTimeStamp    0
+  ModelVersionFormat      "1.%<AutoIncrement:20>"
+  ConfigurationManager    "none"
+  SimulationMode          "normal"
+  LinearizationMsg        "none"
+  Profile                 off
+  ParamWorkspaceSource    "MATLABWorkspace"
+  AccelSystemTargetFile   "accel.tlc"
+  AccelTemplateMakefile   "accel_default_tmf"
+  AccelMakeCommand        "make_rtw"
+  TryForcingSFcnDF        off
+  RecordCoverage          off
+  CovPath                 "/"
+  CovSaveName             "covdata"
+  CovMetricSettings       "dw"
+  CovNameIncrementing     off
+  CovHtmlReporting        on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName    "covCumulativeData"
+  CovCumulativeReport     off
+  CovReportOnPause        on
+  CovModelRefEnable       "Off"
+  ExtModeBatchMode        off
+  ExtModeEnableFloating   on
+  ExtModeTrigType         "manual"
+  ExtModeTrigMode         "oneshot"
+  ExtModeTrigPort         1
+  ExtModeTrigElement      "any"
+  ExtModeTrigDuration     1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff      0
+  ExtModeTrigDelay        0
+  ExtModeTrigDirection    "rising"
+  ExtModeTrigLevel        0
+  ExtModeArchiveMode      off
+  ExtModeAutoIncOneShot   off
+  ExtModeIncDirWhenArm    off
+  ExtModeAddSuffixToVar   off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect   off
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll           on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse             on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    BlockRotation           0
+    BlockMirror             off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "master_task"
+    Location                [236, 33, 724, 531]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    TiledPaperMargins       [0.196850, 0.196850, 0.196850, 0.196850]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ReportName              "simulink-default.rpt"
+    #GUID                   b1efc608-f54c-482f-8d84-a902872a8bc8
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 138, 420, 162]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   bc5ec889-767b-4c2e-823b-5ff211cd2cde
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 168, 420, 192]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   117bf996-ad9b-4f79-a270-b2592e41bb29
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 208, 420, 232]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   21a8dca0-651b-4923-a042-287188bf56c0
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 253, 420, 277]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   7c37b79b-20f6-4f96-8a8a-e5b70b1d11f1
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 283, 420, 307]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   9d511851-0619-441b-a42a-cf5c2fee82f8
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 323, 420, 347]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a9fd7c03-3e9d-4e45-ad89-272bee672732
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 368, 420, 392]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   ba70cec9-dd1a-4dd3-bf30-5f65015f830a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 398, 420, 422]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   761747e6-7ab3-486b-a66b-548109e6dba1
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display8"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [340, 438, 420, 462]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   9b6b73ab-c49a-4ca0-b65c-bf32a5705764
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH0"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 143, 250, 157]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   e22d25ba-7a28-48a1-8f35-ceedeb4c89fd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 173, 250, 187]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   273ad2aa-cc39-4bb2-8e64-2403b927d6cc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_CH7"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 213, 250, 227]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   98b7257b-7fc3-4345-9b51-0c3111b01a26
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_maxCH0"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 258, 250, 272]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   d8c22ba9-d9f0-4650-963c-acdb33e1053d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_maxCH1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 373, 250, 387]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   4a7302a8-8537-4cf0-96d9-e2f81b98f033
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_maxCH2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 403, 250, 417]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   ee1d2791-e7eb-4807-b4f5-7a5c4729088d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_maxCH3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 288, 250, 302]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   1d3e2f3e-d47d-4fa0-8ebf-6cc4c1e6d605
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_maxCH4"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 443, 250, 457]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   5362a1ab-3bf7-4210-a93c-20d4857a4291
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_maxCH7"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [225, 328, 250, 342]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      65535
+      y2                      20
+      #GUID                   f123f956-47ce-455c-a660-68341c25ba7b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__analog"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [105, 141, 135, 229]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   1191cc5f-9b89-4487-954c-2c423c647847
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__max"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [105, 256, 135, 344]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   c38b375c-f7ad-4ba5-a2cf-7874a64b2cf0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTM__min"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [105, 371, 135, 459]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   f3829820-ff7e-4c11-8336-6409ec598b07
+    }
+    Line {
+      SrcBlock                "LIN_CH0"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   21e67174-fc98-4672-b8c8-8b30f6592b2d
+    }
+    Line {
+      SrcBlock                "LIN_CH3"
+      SrcPort                 1
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   ca4a1210-70a1-4cbb-ac85-1d8e6702c7b7
+    }
+    Line {
+      SrcBlock                "LIN_CH7"
+      SrcPort                 1
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   7d27ffeb-a6e7-4a87-a105-5502ec61ad35
+    }
+    Line {
+      SrcBlock                "LIN_maxCH0"
+      SrcPort                 1
+      DstBlock                "Display3"
+      DstPort                 1
+      #GUID                   b2a5d483-89b3-43c3-b01f-4b7464834be3
+    }
+    Line {
+      SrcBlock                "LIN_maxCH1"
+      SrcPort                 1
+      DstBlock                "Display6"
+      DstPort                 1
+      #GUID                   9a729dd0-8d05-4f00-a3a8-e24f3b64e6e1
+    }
+    Line {
+      SrcBlock                "LIN_maxCH2"
+      SrcPort                 1
+      DstBlock                "Display7"
+      DstPort                 1
+      #GUID                   4c25c5e7-b248-4920-8ad0-c500cd447d6d
+    }
+    Line {
+      SrcBlock                "LIN_maxCH3"
+      SrcPort                 1
+      DstBlock                "Display4"
+      DstPort                 1
+      #GUID                   c3950f5a-f9c3-4536-82f5-2e366834f732
+    }
+    Line {
+      SrcBlock                "LIN_maxCH4"
+      SrcPort                 1
+      DstBlock                "Display8"
+      DstPort                 1
+      #GUID                   b32be40d-f8a1-4606-a447-781f30ad6552
+    }
+    Line {
+      SrcBlock                "LIN_maxCH7"
+      SrcPort                 1
+      DstBlock                "Display5"
+      DstPort                 1
+      #GUID                   561ddb96-63f7-4cc0-8438-e1e4de1b556e
+    }
+    Line {
+      SrcBlock                "MTM__analog"
+      SrcPort                 1
+      DstBlock                "LIN_CH0"
+      DstPort                 1
+      #GUID                   53af5230-9da7-4a9a-b9ea-5fae536d02dc
+    }
+    Line {
+      SrcBlock                "MTM__analog"
+      SrcPort                 4
+      DstBlock                "LIN_CH3"
+      DstPort                 1
+      #GUID                   a53ec25b-4911-43e8-8612-ccd5d292b2de
+    }
+    Line {
+      SrcBlock                "MTM__analog"
+      SrcPort                 8
+      DstBlock                "LIN_CH7"
+      DstPort                 1
+      #GUID                   0b3a8297-002b-415f-a306-003adf1eeb54
+    }
+    Line {
+      SrcBlock                "MTM__max"
+      SrcPort                 1
+      DstBlock                "LIN_maxCH0"
+      DstPort                 1
+      #GUID                   68d1da50-1800-417b-8275-e55c979197b4
+    }
+    Line {
+      SrcBlock                "MTM__max"
+      SrcPort                 4
+      DstBlock                "LIN_maxCH3"
+      DstPort                 1
+      #GUID                   dbcd2d85-addc-4e86-aff7-148810bf4107
+    }
+    Line {
+      SrcBlock                "MTM__max"
+      SrcPort                 8
+      DstBlock                "LIN_maxCH7"
+      DstPort                 1
+      #GUID                   76bb2cb7-de09-4b8f-98a5-9cbffcdfaa17
+    }
+    Line {
+      SrcBlock                "MTM__min"
+      SrcPort                 1
+      DstBlock                "LIN_maxCH1"
+      DstPort                 1
+      #GUID                   512c4d5d-ba9c-4de4-b1a7-a8bcd6e59177
+    }
+    Line {
+      SrcBlock                "MTM__min"
+      SrcPort                 4
+      DstBlock                "LIN_maxCH2"
+      DstPort                 1
+      #GUID                   ce3f4e04-f9ad-4510-8396-1342d89f9356
+    }
+    Line {
+      SrcBlock                "MTM__min"
+      SrcPort                 8
+      DstBlock                "LIN_maxCH4"
+      DstPort                 1
+      #GUID                   ef56d02c-35a3-46d1-a1bb-d461c4bb1fd7
+    }
+    Annotation {
+      Position                [210, 80]
+      Text                    "Change the connection settings in the Modbus dr"
+"iver configuration\nif necessary (click \"Special edit\" in the MTM block para"
+"meter dialog)"
+      #GUID                   8b9a2bcc-89bd-4853-975c-50913d9b6d59
+    }
+    Annotation {
+      Position                [130, 125]
+      Text                    "Modbus Holding Registers"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   41a83159-5e34-470f-99ae-24068f4b3736
+    }
+    Annotation {
+      Position                [220, 50]
+      Text                    "IP address of the Advantech ADAM 6217 (Modbus T"
+"CP slave): 192.168.1.200"
+      #GUID                   70be94bb-e638-4275-9277-1b8a8ee2e082
+    }
+    Annotation {
+      Position                [175, 155]
+      Text                    "16-bit value"
+      #GUID                   e405ae40-6ee7-4555-b434-6ca27f6911d0
+    }
+    Annotation {
+      Position                [290, 155]
+      Text                    "0..20mA"
+      #GUID                   9a5d9c28-b614-40f3-9ed9-da1ac4b087e7
+    }
+    Annotation {
+      Position                [175, 185]
+      Text                    "16-bit value"
+      #GUID                   9b993b4f-729f-490b-9f43-32f4299f03f6
+    }
+    Annotation {
+      Position                [290, 185]
+      Text                    "0..20mA"
+      #GUID                   d309a1e3-4acf-4775-80a5-531a544d75ec
+    }
+    Annotation {
+      Position                [175, 225]
+      Text                    "16-bit value"
+      #GUID                   b2ff48c1-41f9-4b52-a9df-068268251d7b
+    }
+    Annotation {
+      Position                [290, 225]
+      Text                    "0..20mA"
+      #GUID                   471a3230-018a-4d7d-9561-edc818229f39
+    }
+    Annotation {
+      Position                [175, 270]
+      Text                    "16-bit value"
+      #GUID                   981f17f6-7eed-4927-88d9-b108aa15e161
+    }
+    Annotation {
+      Position                [290, 270]
+      Text                    "0..20mA"
+      #GUID                   d02da95d-83e9-4f77-8064-eee345d3f21d
+    }
+    Annotation {
+      Position                [175, 300]
+      Text                    "16-bit value"
+      #GUID                   acfa18d8-4f59-4c2d-a0bb-392cad55b6a5
+    }
+    Annotation {
+      Position                [290, 300]
+      Text                    "0..20mA"
+      #GUID                   68ee2d8d-44f2-44a5-8023-4b44ce67f4c6
+    }
+    Annotation {
+      Position                [175, 340]
+      Text                    "16-bit value"
+      #GUID                   3cfb07ca-c9b7-4725-9faa-e13f1e7e276e
+    }
+    Annotation {
+      Position                [290, 340]
+      Text                    "0..20mA"
+      #GUID                   788f6004-cd57-4670-b8ca-6deb4af70dcf
+    }
+    Annotation {
+      Position                [175, 385]
+      Text                    "16-bit value"
+      #GUID                   0d11b502-c6db-4d80-8aaa-1c13f62c3d8c
+    }
+    Annotation {
+      Position                [290, 385]
+      Text                    "0..20mA"
+      #GUID                   b1e2a8ae-5a8f-4553-88ab-9d336d67f4c4
+    }
+    Annotation {
+      Position                [175, 415]
+      Text                    "16-bit value"
+      #GUID                   5e0c00b7-74f3-4bea-8996-3eae1ca66a4a
+    }
+    Annotation {
+      Position                [290, 415]
+      Text                    "0..20mA"
+      #GUID                   8ba955a2-828f-4940-9cf4-28b5ba2a9720
+    }
+    Annotation {
+      Position                [175, 455]
+      Text                    "16-bit value"
+      #GUID                   5deefe12-7267-45ce-a4c5-6706b3c359e1
+    }
+    Annotation {
+      Position                [290, 455]
+      Text                    "0..20mA"
+      #GUID                   9e040a61-55d5-4e96-9029-4c949a09bdc4
+    }
+    Annotation {
+      Position                [215, 30]
+      Text                    "Reading analog inputs from Advantech ADAM 6217"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   30d98409-46ee-49e2-a817-39a3a8d14549
+    }
+  }
+}

@@ -1,0 +1,128 @@
+Model {
+  Name                    "LEDsnake_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "LEDsnake_exec"
+    Location                [10, 32, 234, 416]
+    #GUID                   930c9e94-43d7-40c8-ac7b-d64a222e8a1f
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [45, 68, 90, 357]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.005"
+      ntick0                  1
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   aab705bb-5bdf-40f0-a57c-ea974ad6b083
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LEDsnake_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 223, 170, 237]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   4545c098-8243-4409-8448-0e313526bad2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RPiDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 83, 170, 97]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   2e2514c4-8812-4cf5-9715-f31383baea86
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 118, 170, 132]
+      SourceBlock             "execlib/IODRV"
+      module                  "RPiDrv"
+      classname               "UnpDrv"
+      cfgname                 ""
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   e0993d9e-68b5-4519-9dd8-cb96efff8acf
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "RPiDrv"
+      DstPort                 1
+      #GUID                   62c87962-12a4-4d45-9c5f-d56edb57daa5
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "UNP"
+      DstPort                 1
+      #GUID                   adff7f75-7753-410b-acb7-d371a8ed110e
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "LEDsnake_task"
+      DstPort                 1
+      #GUID                   d2df86f6-6a26-41a9-939c-a699323b24b1
+    }
+    Annotation {
+      Position                [85, 15]
+      Text                    "LED snake on UniPi"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   7699481d-65bc-4b24-a893-ca1611ba942f
+    }
+    Annotation {
+      Position                [100, 40]
+      Text                    "See the README.md file for details."
+      #GUID                   73916baa-98fb-4e0d-b16a-eb07a7970191
+    }
+  }
+}

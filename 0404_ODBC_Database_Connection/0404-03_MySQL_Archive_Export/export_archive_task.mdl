@@ -1,0 +1,243 @@
+Model {
+  Name                    "export_archive_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "export_archive_task"
+    Location                [330, 32, 725, 418]
+    #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
+    Block {
+      BlockType               Reference
+      Name                    "ACD_TRoff"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [295, 158, 330, 182]
+      SourceBlock             "arclib/ACD"
+      acls                    "8: Double"
+      arc                     1
+      id                      2
+      tmin                    "0.1"
+      tmax                    5
+      TR                      off
+      Desc                    "Simulated temperature signal, TR=off"
+      #GUID                   5032b074-a8ee-4735-96f7-53056a9a285e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ACD_TRon"
+      Ports                   [2, 2, 0, 0, 0]
+      Position                [295, 108, 330, 132]
+      SourceBlock             "arclib/ACD"
+      acls                    "8: Double"
+      arc                     1
+      id                      1
+      tmin                    "0.1"
+      tmax                    5
+      TR                      on
+      Desc                    "Simulated temperature signal, TR=on"
+      #GUID                   ee3c9a47-1a52-45ed-af3d-84fa66fd06ff
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ADD"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [105, 103, 130, 127]
+      SourceBlock             "mathlib/ADD"
+      #GUID                   0495ebbc-eec4-4418-b70b-76c04d65b836
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ALN_high"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [295, 243, 330, 257]
+      SourceBlock             "arclib/ALN"
+      hys                     "0.5"
+      hh                      "5e10"
+      h                       11
+      l                       0
+      ll                      "-5e10"
+      acls                    "8: Double"
+      arc                     1
+      id                      52
+      lvl1                    33
+      lvl2                    43
+      Desc                    "Value too high!"
+      iACK                    4
+      #GUID                   4338631c-dc5a-48c1-bfa4-ff643141e954
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ALN_low"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [295, 288, 330, 302]
+      SourceBlock             "arclib/ALN"
+      hys                     "0.5"
+      hh                      "5e10"
+      h                       0
+      l                       "-7.5"
+      ll                      "-5e10"
+      acls                    "8: Double"
+      arc                     1
+      id                      53
+      lvl1                    32
+      lvl2                    42
+      Desc                    "Value too low!"
+      iACK                    2
+      #GUID                   6a1b4e5f-c290-4fcb-b168-ccbe2de9560d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_delta"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [205, 118, 225, 132]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "0.2"
+      BackgroundColor         "magenta"
+      #GUID                   137102d2-b662-4c39-b49b-653797149d9a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_sine_fast"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 153, 60, 167]
+      SourceBlock             "genlib/SG"
+      isig                    "1: SINE"
+      amp                     3
+      freq                    "0.09"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      offset                  0
+      #GUID                   261095e4-a807-421c-94b1-db60720b0352
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG_sine_slow"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 103, 60, 117]
+      SourceBlock             "genlib/SG"
+      isig                    "1: SINE"
+      amp                     10
+      freq                    "0.025"
+      phase                   0
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      offset                  0
+      #GUID                   f712d529-1164-4523-b5d5-692ba640f258
+    }
+    Line {
+      SrcBlock                "ADD"
+      SrcPort                 1
+      Points                  [50, 0]
+      #GUID                   c3896285-4624-4785-8052-a29f9d5e2daf
+      Branch {
+        DstBlock                "ACD_TRon"
+        DstPort                 1
+        #GUID                   c701d035-8727-412d-aeed-3eba1146cc08
+      }
+      Branch {
+        Points                  [0, 50]
+        #GUID                   d908a58e-e205-4689-8400-9faa4a27446d
+        Branch {
+          DstBlock                "ACD_TRoff"
+          DstPort                 1
+          #GUID                   ab27fbba-dc64-4d5f-b973-d4ae199f4e86
+        }
+        Branch {
+          Points                  [0, 85]
+          #GUID                   a6cdde40-0450-4f73-b15f-3bc809c60ecd
+          Branch {
+            DstBlock                "ALN_high"
+            DstPort                 1
+            #GUID                   db5761b0-541d-4302-aaa4-ffd10ecf90c1
+          }
+          Branch {
+            Points                  [0, 45]
+            DstBlock                "ALN_low"
+            DstPort                 1
+            #GUID                   0911d22e-90bb-4a28-b1f9-ab9038529f37
+          }
+        }
+      }
+    }
+    Line {
+      SrcBlock                "CNR_delta"
+      SrcPort                 1
+      Points                  [15, 0]
+      #GUID                   a8960af0-4926-467b-a68c-c9e4a4e26396
+      Branch {
+        Points                  [0, 50]
+        DstBlock                "ACD_TRoff"
+        DstPort                 2
+        #GUID                   6e3bb4b2-aad6-430f-994a-81633077c70e
+      }
+      Branch {
+        DstBlock                "ACD_TRon"
+        DstPort                 2
+        #GUID                   a79cf38e-a183-42fa-b332-acd9bb2f58ef
+      }
+    }
+    Line {
+      SrcBlock                "SG_sine_fast"
+      SrcPort                 1
+      Points                  [25, 0]
+      DstBlock                "ADD"
+      DstPort                 2
+      #GUID                   5653a9e8-cb7b-4582-98be-5159b1c4fbf5
+    }
+    Line {
+      SrcBlock                "SG_sine_slow"
+      SrcPort                 1
+      DstBlock                "ADD"
+      DstPort                 1
+      #GUID                   ea256fd2-0103-4c13-a042-72745e0fb1aa
+    }
+    Annotation {
+      Position                [135, 35]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8f79b992-fa0e-490d-82e8-f15ef7d4ddd7
+    }
+    Annotation {
+      Position                [155, 15]
+      Text                    "Exporting archive signals to database"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
+    }
+    Annotation {
+      Position                [210, 105]
+      Text                    "Simulated temperature signal"
+      #GUID                   4e4fef62-428b-4260-a0fe-79b62f3584b6
+    }
+  }
+}

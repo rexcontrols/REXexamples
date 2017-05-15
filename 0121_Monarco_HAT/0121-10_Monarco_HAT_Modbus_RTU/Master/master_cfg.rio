@@ -1,0 +1,33 @@
+Modbus {
+  Name                    "/dev/ttyAMA0"
+  BaudRate                115200
+  Parity                  0
+  SpaceTime               2
+  Timeout                 100
+  Flags                   0
+  Gap                     10000
+  #GUID                   c8f1a1ac-faf5-4dbf-bec7-76caf4b1042d
+  Item {
+    Name                    "AO"
+    SlaveAdr                1
+    RegisterAdr             0
+    Type                    0x00000504
+    Count                   4
+    Period                  10000
+    Value                   [ 0 0 0 0 ]
+  }
+  Item {
+    Name                    "moduleName1"
+    SlaveAdr                1
+    RegisterAdr             210
+    Type                    0x00000204
+    Count                   1
+  }
+  Item {
+    Name                    "moduleName2"
+    SlaveAdr                1
+    RegisterAdr             211
+    Type                    0x00000204
+    Count                   1
+  }
+}

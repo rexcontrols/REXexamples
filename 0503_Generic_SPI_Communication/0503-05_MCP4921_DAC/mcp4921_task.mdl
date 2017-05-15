@@ -1,0 +1,116 @@
+Model {
+  Name                    "mcp4921_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "mcp4921_task"
+    Location                [260, 32, 580, 398]
+    #GUID                   3157d45e-4e92-4cb7-bda7-1051db13651e
+    Block {
+      BlockType               Reference
+      Name                    "CNI_DAC"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [65, 128, 105, 142]
+      SourceBlock             "mathlib/CNI"
+      icn                     2047
+      BackgroundColor         "magenta"
+      #GUID                   e741d235-9775-4691-b140-17b63df14007
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [175, 108, 225, 292]
+      SourceBlock             "speclib/REXLANG"
+      strs                    0
+      #RTFlags                1025
+      srcname                 "mcp4921.c"
+      srctype                 "1: C-like"
+      stack                   0
+      debug                   "1: No check"
+      fname                   "/dev/spidev0.0"
+      p0                      "/dev/spidev0.0"
+      p1                      ""
+      p2                      ""
+      p3                      ""
+      p4                      ""
+      p5                      ""
+      p6                      ""
+      p7                      ""
+      p8                      ""
+      p9                      ""
+      p10                     ""
+      p11                     ""
+      p12                     ""
+      p13                     ""
+      p14                     ""
+      p15                     ""
+      #GUID                   6b6d90c2-c812-4f3f-ad63-62391fa66413
+    }
+    Line {
+      SrcBlock                "CNI_DAC"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 3
+      #GUID                   88bb7a90-cb3b-4ed0-8c2f-db6e359105f9
+    }
+    Annotation {
+      Position                [135, 35]
+      Text                    "See the README.md and mcp4921.c files for detai"
+"ls."
+      #GUID                   93930d64-916d-4310-85f7-53fe28514322
+    }
+    Annotation {
+      Position                [95, 100]
+      Text                    "DAC range 0..4095"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   7ce7dd2e-0f35-4fb5-a78f-cb1d208e00fb
+    }
+    Annotation {
+      Position                [115, 15]
+      Text                    "Using MCP4921 DAC via SPI"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   9890236f-17be-4741-997a-5ba9cd313be5
+    }
+    Annotation {
+      Position                [95, 115]
+      Text                    "50% output of DAC"
+      #GUID                   2beffd53-7df6-4d56-9bf2-53b1228ee76e
+    }
+  }
+}

@@ -1,0 +1,150 @@
+Model {
+  Name                    "receiver_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "receiver_task"
+    Location                [304, 33, 710, 403]
+    #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [210, 188, 230, 202]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   3fcaf061-5f4b-4357-ae12-ce0d51b6f4a4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [80, 133, 130, 317]
+      SourceBlock             "speclib/REXLANG"
+      srcname                 "receiver_rexlang.c"
+      srctype                 "1: C-like"
+      debug                   "3: Full check"
+      stack                   0
+      strs                    0
+      p0                      ""
+      p1                      ""
+      p2                      ""
+      p3                      ""
+      p4                      ""
+      p5                      ""
+      p6                      ""
+      p7                      ""
+      p8                      ""
+      p9                      ""
+      p10                     ""
+      p11                     ""
+      p12                     ""
+      p13                     ""
+      p14                     ""
+      p15                     ""
+      #RTFlags                1025
+      #GUID                   fdb668b8-52fc-476e-8161-f6e285dac526
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [260, 143, 305, 217]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Received data"
+      timesrc                 1
+      #GUID                   cb073413-3267-4d5c-918a-469221c3e955
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   aa01b78c-c57c-429d-a0ec-8cd3eb59d09f
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 2
+      DstBlock                "TRND"
+      DstPort                 1
+      #GUID                   76d1c53e-25b7-4d48-8a4c-5f6bb0aa5707
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 3
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   217e982b-e085-49ad-831d-8674642dcf93
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 4
+      DstBlock                "TRND"
+      DstPort                 3
+      #GUID                   89f91d19-ca70-4e51-9f12-d20edab874dc
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 5
+      DstBlock                "TRND"
+      DstPort                 4
+      #GUID                   15bc8b26-ccfb-4490-80fc-bab3c0665b6b
+    }
+    Annotation {
+      Position                [180, 60]
+      Text                    "Change the IP addresses in the receiver_rexlang"
+".c file if necessary.\n\nSee the README.md file for detailed information.\n"
+      #GUID                   c7854090-6d93-4fc6-8c77-ed2ef5476fa1
+    }
+    Annotation {
+      Position                [195, 20]
+      Text                    "UDP - Receiver station, IP address 192.168.1.20"
+"0"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
+    }
+  }
+}

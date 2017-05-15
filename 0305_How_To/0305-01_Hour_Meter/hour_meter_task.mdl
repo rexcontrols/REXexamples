@@ -1,0 +1,258 @@
+Model {
+  Name                    "hour_meter_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "hour_meter_task"
+    Location                [237, 33, 708, 260]
+    #GUID                   87078d92-a1cd-46ff-abd1-dccbda58318a
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 123, 75, 137]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   57737748-58c4-4bf2-b298-f282da32c112
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [320, 133, 400, 157]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   2dd178b0-151a-4b66-b8c6-523cd73a6a31
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_RESET"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [105, 153, 120, 167]
+      SourceBlock             "genlib/MP"
+      BSTATE                  off
+      pwidth                  1
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   37a0c413-f18b-42f8-ad4e-fdac990f2ae8
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "hour_meter"
+      Ports                   [2, 1, 0, 0, 0]
+      Position                [175, 113, 280, 177]
+      ShowPortLabels          on
+      BackgroundColor         "cyan"
+      MaskType                "REX sequence"
+      MaskPromptString        "|"
+      MaskStyleString         "popup(1: sec|60: min|3600: hour|86400: day)"
+      MaskTunableValueString  on
+      MaskEnableString        on
+      MaskVisibilityString    on
+      MaskVariables           "unit=&1"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskValueString         "3600: hour"
+      #GUID                   67be682f-01d8-48b0-a5ae-58a21abf703f
+      System {
+        Name                    "hour_meter"
+        Location                [239, 303, 707, 464]
+        #GUID                   67be682f-01d8-48b0-a5ae-58a21abf703f
+        Block {
+          BlockType               Inport
+          Name                    "Running"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [25, 63, 55, 77]
+          Port                    1
+          #GUID                   d7a18f18-f695-4208-b358-5de12fc1ae68
+        }
+        Block {
+          BlockType               Inport
+          Name                    "Reset"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [25, 108, 55, 122]
+          Port                    2
+          #GUID                   ff3def94-687d-4985-ba99-bf2c24744800
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_periodunit"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [265, 65, 295, 75]
+          SourceBlock             "mathlib/CNI"
+          icn                     "unit"
+          BackgroundColor         "white"
+          #GUID                   7b054ce2-a044-424a-897c-34a64404a46a
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [140, 54, 160, 66]
+          SourceBlock             "lib/CNR"
+          ycn                     1
+          ShowName                off
+          #GUID                   c5c3e51f-6d6d-4c76-8694-f2880b09abcf
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR2"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [140, 94, 160, 106]
+          SourceBlock             "lib/CNR"
+          ycn                     1
+          ShowName                off
+          #GUID                   0c387058-be89-4f88-920c-bfa614bf8160
+        }
+        Block {
+          BlockType               Reference
+          Name                    "DIV"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [330, 53, 355, 77]
+          SourceBlock             "mathlib/DIV"
+          yerr                    "1.0000000E+000"
+          #GUID                   514cae15-554b-437e-9977-a4c89fcf0ded
+        }
+        Block {
+          BlockType               Reference
+          Name                    "INTE"
+          Ports                   [5, 4, 0, 0, 0]
+          Position                [185, 48, 225, 112]
+          SourceBlock             "lib/INTE"
+          ymin                    -1000000000
+          ymax                    1000000000
+          FontSize                10
+          #GUID                   e60699cf-98d0-4ae9-9eab-d3759d9fe84d
+        }
+        Block {
+          BlockType               Outport
+          Name                    "Time"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [400, 53, 430, 67]
+          Port                    1
+          #GUID                   583973dd-54de-46dc-ba06-c98cfb0a983e
+        }
+        Line {
+          SrcBlock                "CNI_periodunit"
+          SrcPort                 1
+          DstBlock                "DIV"
+          DstPort                 2
+          #GUID                   36d6fec1-42f6-4ab4-83a6-99ba57f436af
+        }
+        Line {
+          SrcBlock                "CNR"
+          SrcPort                 1
+          DstBlock                "INTE"
+          DstPort                 1
+          #GUID                   016060a4-827a-43d0-adbc-0676965f7c3a
+        }
+        Line {
+          SrcBlock                "CNR2"
+          SrcPort                 1
+          DstBlock                "INTE"
+          DstPort                 5
+          #GUID                   ab0c5c5e-2359-4cb7-9118-821c18da92ba
+        }
+        Line {
+          SrcBlock                "DIV"
+          SrcPort                 1
+          DstBlock                "Time"
+          DstPort                 1
+          #GUID                   b4bec49a-8026-462d-ad8c-02c059dd1191
+        }
+        Line {
+          SrcBlock                "INTE"
+          SrcPort                 1
+          DstBlock                "DIV"
+          DstPort                 1
+          #GUID                   234043df-d6e3-4dfb-9150-9c4cc2e237d1
+        }
+        Line {
+          SrcBlock                "Reset"
+          SrcPort                 1
+          Points                  [20, 0; 0, -35]
+          DstBlock                "INTE"
+          DstPort                 3
+          #GUID                   d419db30-8c69-4075-a512-c0ae858f270f
+        }
+        Line {
+          SrcBlock                "Running"
+          SrcPort                 1
+          DstBlock                "INTE"
+          DstPort                 2
+          #GUID                   93e52de5-bd1b-4921-9f8a-e1acdfa56749
+        }
+      }
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      DstBlock                "hour_meter"
+      DstPort                 1
+      #GUID                   38f62bbc-99f1-4457-9394-94d7783cf44b
+    }
+    Line {
+      SrcBlock                "MP_RESET"
+      SrcPort                 1
+      DstBlock                "hour_meter"
+      DstPort                 2
+      #GUID                   69dcab4b-798c-42da-869d-f7667f3dd018
+    }
+    Line {
+      SrcBlock                "hour_meter"
+      SrcPort                 1
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   ccc4bc2d-1b5d-467b-874d-57341467d546
+    }
+    Annotation {
+      Position                [170, 50]
+      Text                    "See the README.md file in project folder for de"
+"tailed information."
+      #GUID                   74c9e6c7-2443-40d6-bbd4-5ef6fbcd24cf
+    }
+    Annotation {
+      Position                [110, 25]
+      Text                    "Hour meter example - task"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   2e2f00d5-fc64-412b-bdf9-97ed70635d15
+    }
+  }
+}

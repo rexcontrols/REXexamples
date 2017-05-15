@@ -1,0 +1,130 @@
+Model {
+  Name                    "restapi_slave_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "restapi_slave_task"
+    Location                [301, 32, 703, 407]
+    #GUID                   5908a457-6bb4-450e-a235-6e94f1d87163
+    Block {
+      BlockType               Reference
+      Name                    "CNB_GATE"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [95, 183, 115, 197]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   ba59b422-5e51-49ae-9748-16c93d1c50fe
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "Gate"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [170, 164, 275, 216]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   253581ce-0cc3-437f-8428-6f05ba694cfc
+      System {
+        Name                    "Gate"
+        Location                [223, 349, 695, 483]
+        #GUID                   253581ce-0cc3-437f-8428-6f05ba694cfc
+        Block {
+          BlockType               Inport
+          Name                    "GATE"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [75, 53, 105, 67]
+          Port                    1
+          #GUID                   82bfc532-112e-4d3b-8b9a-592078c9dd9b
+        }
+        Block {
+          BlockType               Reference
+          Name                    "DELM"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [215, 53, 240, 67]
+          SourceBlock             "analoglib/DELM"
+          del                     5
+          nmax                    100
+          #GUID                   238ff8e1-7e72-4985-918f-dcafd2ddb03e
+        }
+        Block {
+          BlockType               Outport
+          Name                    "OPENED"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [350, 53, 380, 67]
+          Port                    1
+          #GUID                   6e9fb6f4-be5c-4ccd-b940-684b3ac3dff9
+        }
+        Line {
+          SrcBlock                "DELM"
+          SrcPort                 1
+          DstBlock                "OPENED"
+          DstPort                 1
+          #GUID                   939b5ff0-4889-4474-8089-df8975eec464
+        }
+        Line {
+          SrcBlock                "GATE"
+          SrcPort                 1
+          DstBlock                "DELM"
+          DstPort                 1
+          #GUID                   16dc6bea-733f-40e4-9fff-a86cad738d32
+        }
+      }
+    }
+    Line {
+      SrcBlock                "CNB_GATE"
+      SrcPort                 1
+      DstBlock                "Gate"
+      DstPort                 1
+      #GUID                   ae6b45ce-58b2-4cd5-91ba-2ba39452dfed
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8feb317c-34be-445c-9c14-f35789312c76
+    }
+    Annotation {
+      Position                [195, 20]
+      Text                    "Remote gate opener - Slave Station, IP 192.168."
+"1.101"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   d52f859a-11a7-4c8e-849d-abd0a5b60b67
+    }
+  }
+}
