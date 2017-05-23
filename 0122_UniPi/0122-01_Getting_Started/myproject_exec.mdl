@@ -1,7 +1,7 @@
 Model {
   Name                    "myproject_exec"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8269, Date 2017-05-17"
   #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
@@ -69,26 +69,6 @@ Model {
       RedirectToHMI           on
       Compression             off
       #GUID                   a5a2ee77-65b8-40a7-b38e-2105cfc03dfd
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
-    }
-    Block {
-      BlockType               Reference
-      Name                    "RPI"
-      Ports                   [1, 1, 0, 0, 0]
-      Position                [120, 143, 170, 157]
-      SourceBlock             "execlib/IODRV"
-      module                  "RPiDrv"
-      classname               "RPiDrv"
-      cfgname                 "iodrv.rio"
-      factor                  1
-      stack                   10240
-      pri                     3
-      timer                   off
-      #GUID                   d03388f8-520e-4871-95c5-31f9760d1eae
     }
     Block {
       BlockType               Reference
@@ -97,6 +77,21 @@ Model {
       Position                [120, 108, 170, 122]
       SourceBlock             "execlib/MODULE"
       #GUID                   8d8889c4-5d0f-49fc-a8c5-0d350111bb8b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "UNP"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [120, 143, 170, 157]
+      SourceBlock             "execlib/IODRV"
+      module                  "RPiDrv"
+      classname               "UnpDrv"
+      cfgname                 "iodrv.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   d03388f8-520e-4871-95c5-31f9760d1eae
     }
     Block {
       BlockType               Reference
@@ -122,7 +117,7 @@ Model {
     Line {
       SrcBlock                "EXEC"
       SrcPort                 2
-      DstBlock                "RPI"
+      DstBlock                "UNP"
       DstPort                 1
       #GUID                   09ead232-c1b6-46e7-b2dd-51808cdb6b90
     }
