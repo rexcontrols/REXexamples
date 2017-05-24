@@ -1,7 +1,7 @@
 Model {
   Name                    "MonarcoHATdemo_task"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.4 rev. 8269, Date 2017-05-17"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "MonarcoHATdemo_task"
-    Location                [233, 35, 784, 756]
+    Location                [233, 35, 784, 683]
     #GUID                   55e50adb-48b8-42ff-a0e8-0bf151040f8b
     Block {
       BlockType               Reference
@@ -110,7 +110,7 @@ Model {
       Ports                   [0, 1, 0, 0, 0]
       Position                [55, 413, 75, 427]
       SourceBlock             "mathlib/CNB"
-      YCN                     off
+      YCN                     on
       BackgroundColor         "magenta"
       #GUID                   7f57e4e3-ba09-4af4-82a6-edcc5a236f58
     }
@@ -130,7 +130,7 @@ Model {
       Ports                   [0, 1, 0, 0, 0]
       Position                [55, 473, 75, 487]
       SourceBlock             "mathlib/CNB"
-      YCN                     off
+      YCN                     on
       BackgroundColor         "magenta"
       #GUID                   6d981ccc-b9f2-430f-8394-b76795c5f946
     }
@@ -150,7 +150,7 @@ Model {
       Ports                   [0, 1, 0, 0, 0]
       Position                [55, 533, 75, 547]
       SourceBlock             "mathlib/CNB"
-      YCN                     off
+      YCN                     on
       BackgroundColor         "magenta"
       #GUID                   9c1ce18f-7578-47d3-8cf1-42b9f2749d5c
     }
@@ -170,18 +170,37 @@ Model {
       Ports                   [0, 1, 0, 0, 0]
       Position                [55, 593, 75, 607]
       SourceBlock             "mathlib/CNB"
-      YCN                     off
+      YCN                     on
       BackgroundColor         "magenta"
       #GUID                   e58e32c1-ec79-45ab-8c1b-b45d232da533
     }
     Block {
       BlockType               Reference
-      Name                    "CNI"
+      Name                    "CNB_MANUAL_LED"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [50, 642, 85, 658]
+      Position                [225, 573, 245, 587]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   8527b7c3-9ee5-4c27-94fe-f79b65720030
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_SYSTEM"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [220, 507, 255, 523]
       SourceBlock             "mathlib/CNI"
       icn                     0x00
       #GUID                   4de29a02-c748-401b-a73b-3ab2da5c0e21
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI_USER"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [220, 537, 255, 553]
+      SourceBlock             "mathlib/CNI"
+      icn                     0xFF
+      #GUID                   7e99bbbc-813f-4c34-952b-473cf2df00c4
     }
     Block {
       BlockType               Reference
@@ -249,12 +268,20 @@ Model {
       BlockType               Goto
       Name                    "Goto18"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [125, 643, 255, 657]
+      Position                [385, 538, 515, 552]
       ShowName                off
       GotoTag                 "MNR__LEDS_Mask"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   05fb5109-ca4b-4768-b843-81186c703350
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISSW_LEDCONTROL"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [325, 528, 355, 562]
+      SourceBlock             "logiclib/ISSW"
+      #GUID                   2e79bf78-5509-4e17-a48a-b0b756111521
     }
     Block {
       BlockType               Reference
@@ -437,11 +464,27 @@ Model {
       #GUID                   14cb612e-eb91-4ce7-a445-d7a028eaa56f
     }
     Line {
-      SrcBlock                "CNI"
+      SrcBlock                "CNB_MANUAL_LED"
       SrcPort                 1
-      DstBlock                "Goto18"
+      Points                  [30, 0; 0, -25]
+      DstBlock                "ISSW_LEDCONTROL"
+      DstPort                 3
+      #GUID                   dabcc933-3ee1-443f-8ac7-0470e3ba15a0
+    }
+    Line {
+      SrcBlock                "CNI_SYSTEM"
+      SrcPort                 1
+      Points                  [20, 0; 0, 20]
+      DstBlock                "ISSW_LEDCONTROL"
       DstPort                 1
-      #GUID                   ef90c36a-06a7-486c-95bb-15a0d745fcf7
+      #GUID                   40dedc57-8fa0-4d84-9059-4efe0e500444
+    }
+    Line {
+      SrcBlock                "CNI_USER"
+      SrcPort                 1
+      DstBlock                "ISSW_LEDCONTROL"
+      DstPort                 2
+      #GUID                   71ebf662-bd29-4dc7-915e-c7abc50d1838
     }
     Line {
       SrcBlock                "CNR_AO1"
@@ -471,6 +514,13 @@ Model {
       DstBlock                "TRND_AIN"
       DstPort                 2
       #GUID                   0c7e2bc9-cf4c-4d72-baf3-5cde7f21a47d
+    }
+    Line {
+      SrcBlock                "ISSW_LEDCONTROL"
+      SrcPort                 1
+      DstBlock                "Goto18"
+      DstPort                 1
+      #GUID                   f8e2defc-2c7a-4140-a46f-e1b13b29b117
     }
     Line {
       SrcBlock                "MNR__DI1"
