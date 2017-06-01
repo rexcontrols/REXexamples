@@ -4,7 +4,7 @@
 *
 *************************************************************/
 
-string parameter(0) i2c_dev;
+string parameter(0) i2c_dev; // the I2C bus is defined by the p0 parameter
 
 //assigning inputs to variables, these variables are READ-ONLY
 long input(3) digital_out; //the signal controlling the outputs is connected to input u3 of the REXLANG block

@@ -4,7 +4,7 @@
 *
 *************************************************************/
 
-string parameter(0) i2c_dev;
+string parameter(0) i2c_dev; // the I2C bus is defined by the p0 parameter 
 
 //assigning inputs to variables, these variables are READ-ONLY
 long input(0) channelA; // input for controlling DAC channel A

@@ -4,7 +4,7 @@
 *
 *************************************************************/
 
-string parameter(0) i2c_dev;
+string parameter(0) i2c_dev; // the I2C bus is defined by the p0 parameter
 
 //assigning variables to outputs, these variables are WRITE-ONLY
 long output(0) adc_value;
