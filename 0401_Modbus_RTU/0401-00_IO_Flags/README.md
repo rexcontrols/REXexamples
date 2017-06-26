@@ -12,7 +12,7 @@ Pick only the input and output flags which you need and copy&paste them into you
 
 ## Documentation ##
 
-- [Modbus driver for REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/DbDrv/DbDrv_ENG.html)
+- [Modbus driver for REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
 - [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
