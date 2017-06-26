@@ -1,0 +1,22 @@
+Input/Output flags for database communication driver
+====================================================
+
+This example serves as a library. It won't compile because it contains only illustrative signals.
+
+Pick the input and output flags which you need and copy&paste them into your project.
+
+## Opening the example ##
+- The **exec.mdl* file is the project main file
+- Open it with RexDraw
+
+## Documentation ##
+
+- [Database driver for REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/DbDrv/DbDrv_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+
+## Additional information ##
+
+- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+for more information about the example projects and developing advanced 
+automation and control solutions using REX.

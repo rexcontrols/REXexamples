@@ -1,0 +1,202 @@
+Model {
+  Name                    "flags_task"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8269, Date 2017-05-17"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "flags_task"
+    Location                [213, 35, 1122, 545]
+    #GUID                   d37c2d37-48a8-4ae4-9944-45d8c8066705
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [225, 468, 245, 482]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   c910bdb9-21f1-4df0-9cb0-1d7486e119eb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DB__datain16"
+      Ports                   [0, 16, 0, 0, 0]
+      Position                [125, 206, 155, 374]
+      SourceBlock             "inoutlib/INHEXD"
+      BackgroundColor         "yellow"
+      #GUID                   e02738dd-ab1e-44fa-bfc9-8cea20ae5952
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DB__datain4"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [40, 207, 70, 253]
+      SourceBlock             "inoutlib/INQUAD"
+      BackgroundColor         "yellow"
+      #GUID                   71652695-30d6-4885-95e8-143421b6af1d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DB__datain8"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [40, 286, 70, 374]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   7a48d3d6-7664-452a-ba7c-90cee659696a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DB__dataout16"
+      Ports                   [16, 0, 0, 0, 0]
+      Position                [330, 206, 360, 374]
+      SourceBlock             "inoutlib/OUTHEXD"
+      BackgroundColor         "lightBlue"
+      #GUID                   48bf55de-6035-446a-9e1f-e4f35512e0cd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DB__dataout4"
+      Ports                   [4, 0, 0, 0, 0]
+      Position                [235, 207, 265, 253]
+      SourceBlock             "inoutlib/OUTQUAD"
+      BackgroundColor         "lightBlue"
+      #GUID                   67858b9f-a333-443c-ab04-999b65b9dacd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "DB__dataout8"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [235, 286, 265, 374]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   17f37d1e-0f19-4552-a8e1-ed1abb4deebb
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 173, 145, 187]
+      ShowName                off
+      GotoTag                 "DB__datain"
+      BackgroundColor         "yellow"
+      #GUID                   89696e9f-b88b-4e13-8cdb-3c626e5e5d38
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [35, 468, 125, 482]
+      ShowName                off
+      GotoTag                 "DB__Connected"
+      BackgroundColor         "yellow"
+      #GUID                   e07f3278-d84d-4776-b580-797c73b65261
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [255, 173, 345, 187]
+      ShowName                off
+      GotoTag                 "DB__dataout"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   30809f38-1e87-4819-8acd-03a0c456056b
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [275, 468, 365, 482]
+      ShowName                off
+      GotoTag                 "DB__Connect"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   1d460e38-b35d-40b3-b00a-df937f882ad7
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   f87cc19d-55ab-4f10-89b1-6f8f5fcb2e7a
+    }
+    Annotation {
+      Position                [190, 110]
+      Text                    "Database I/O flags"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   fcd6ca90-2921-469d-aadf-ae61b42a8aec
+    }
+    Annotation {
+      Position                [85, 150]
+      Text                    "From database"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   21e3cc13-aab9-4482-9ad2-26c8e4fd3265
+    }
+    Annotation {
+      Position                [295, 150]
+      Text                    "To database"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   e6e25ff1-4e28-4eac-bf56-d6f9eca81d88
+    }
+    Annotation {
+      Position                [65, 425]
+      Text                    "Special flags"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   8285385d-1f6d-4aa1-9661-ddde33234545
+    }
+    Annotation {
+      Position                [75, 455]
+      Text                    "Connection status"
+      #GUID                   8be30a98-8f1b-414b-9c84-4abca6169756
+    }
+    Annotation {
+      Position                [315, 455]
+      Text                    "Control of connection, force reconnect"
+      #GUID                   d512d549-f8ef-4865-b40d-75ffa0971ee5
+    }
+    Annotation {
+      Position                [455, 45]
+      Text                    "This example serves as a library. It won't comp"
+"ile because it contains only illustrative signals.\n\nPick the input and outpu"
+"t flags which you need and copy&paste them into your project."
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      ForegroundColor         "red"
+      #GUID                   e25ecde6-e64a-4721-bf95-74d54f2a108e
+    }
+  }
+}
