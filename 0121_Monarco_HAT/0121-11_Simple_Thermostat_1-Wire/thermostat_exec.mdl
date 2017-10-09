@@ -1,0 +1,178 @@
+Model {
+  Name                    "thermostat_exec"
+  Version                 3.00
+  #RexVersion             "2.50.4 rev. 8269, Date 2017-05-17"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "thermostat_exec"
+    Location                [11, 35, 310, 465]
+    #GUID                   764087fb-0120-425a-b6c4-f0ad598d1aba
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [20, 78, 65, 367]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   de17c7ee-dee3-4f61-8c92-00f8c48d94fd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "INFO"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [20, 388, 65, 407]
+      SourceBlock             "execlib/INFO"
+      Title                   "Monarco HAT as a simple thermostat"
+      Author                  "REX Controls s.r.o."
+      Description             "Monarco HAT as a simple thermostat"
+      Customer                ""
+      #GUID                   2fde1db9-6f4e-45c1-a1b5-7714dcb881db
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 128, 150, 142]
+      SourceBlock             "execlib/IODRV"
+      module                  "MonarcoDrv"
+      classname               "MonarcoHatDrv"
+      cfgname                 "monarcohat.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   381e3fd3-c547-4098-8693-ba9b2f153906
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MonarcoDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 93, 150, 107]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   c8912fd7-5b56-4b58-ab75-aa2115780e6b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OWS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [180, 128, 230, 142]
+      SourceBlock             "execlib/IODRV"
+      module                  "OwsDrv"
+      classname               "OwsDrv"
+      cfgname                 "thermostat_owscfg.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   7ab9288b-4813-47a0-abd5-0f78164e7db6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OwsDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [180, 93, 230, 107]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   53b6a677-a600-433d-bddd-8e05500b963c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "thermostat_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [105, 233, 155, 247]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   d3816513-7d3d-4914-9ea4-6b2fe6fcae06
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "MonarcoDrv"
+      DstPort                 1
+      #GUID                   3f21ef3e-dc30-4d2f-a7ac-6fe419d15bdd
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "MNR"
+      DstPort                 1
+      #GUID                   ac774c94-3a9c-4354-8820-df0d20a37059
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "thermostat_task"
+      DstPort                 1
+      #GUID                   19318977-d14e-4bd5-a623-25d2d3fdd4ba
+    }
+    Line {
+      SrcBlock                "MNR"
+      SrcPort                 1
+      DstBlock                "OWS"
+      DstPort                 1
+      #GUID                   bc904f1d-48c8-49c1-971f-f39d36146c2c
+    }
+    Line {
+      SrcBlock                "MonarcoDrv"
+      SrcPort                 1
+      DstBlock                "OwsDrv"
+      DstPort                 1
+      #GUID                   cbbc6c28-350d-4d1d-b486-e26a39cd0f78
+    }
+    Annotation {
+      Position                [100, 45]
+      Text                    "See the README.md file in project \nfolder for "
+"detailed information."
+      #GUID                   e9453421-a319-4652-ad55-47a29e9e823d
+    }
+    Annotation {
+      Position                [150, 20]
+      Text                    "Monarco HAT as a simple thermostat"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   9b57d252-1a29-4676-a03d-eee70c278a28
+    }
+  }
+}
