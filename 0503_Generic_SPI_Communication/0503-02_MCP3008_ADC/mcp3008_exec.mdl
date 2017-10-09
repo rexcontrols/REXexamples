@@ -94,7 +94,7 @@ Model {
   LastModifiedDate        "Fri Sep 17 13:32:16 2010"
   ModelVersionFormat      "1.%<AutoIncrement:53>"
   ConfigurationManager    "None"
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"

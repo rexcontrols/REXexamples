@@ -1,0 +1,325 @@
+Model {
+  Name                    "myproject_task"
+  Version                 3.00
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "myproject_task"
+    Location                [254, 33, 913, 483]
+    #GUID                   39f76f42-6e8d-4e59-a416-00b29e002066
+    Block {
+      BlockType               Reference
+      Name                    "CNR_myvalue1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [125, 88, 160, 102]
+      SourceBlock             "mathlib/CNR"
+      ycn                     2
+      BackgroundColor         "magenta"
+      #GUID                   8a77574d-a447-4f5d-a94c-5401d340b193
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_myvalue2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [125, 143, 160, 157]
+      SourceBlock             "mathlib/CNR"
+      ycn                     7
+      BackgroundColor         "magenta"
+      #GUID                   d4de8e4d-04cb-48dc-bb9b-5324afc878d6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [355, 83, 435, 107]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   c58e4670-ccde-4ca1-b2b6-026c4ce21cde
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [355, 138, 435, 162]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a3a8a671-cf6c-4a7a-a178-d89943130898
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "My_amplifier"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [255, 88, 280, 102]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   210fbc6f-6716-441b-8de7-b6d9eac85e73
+      System {
+        Name                    "My_amplifier"
+        Location                [275, 230, 543, 338]
+        #GUID                   210fbc6f-6716-441b-8de7-b6d9eac85e73
+        Block {
+          BlockType               Inport
+          Name                    "u"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [20, 23, 50, 37]
+          Port                    1
+          #GUID                   974c6276-2f7d-4add-8ec7-975eafecf86a
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ADD"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [165, 23, 190, 47]
+          SourceBlock             "mathlib/ADD"
+          #GUID                   ea57a997-f5d8-4230-8556-9c2c74bc8ea6
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [55, 57, 125, 73]
+          SourceBlock             "mathlib/CNR"
+          ycn                     5
+          BackgroundColor         [1.000000, 1.000000, 0.349020]
+          #GUID                   2870a4ab-b21b-470e-b915-e48dd8cbe4a9
+        }
+        Block {
+          BlockType               Reference
+          Name                    "GAIN"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [75, 23, 100, 37]
+          SourceBlock             "mathlib/GAIN"
+          k                       3
+          BackgroundColor         [1.000000, 1.000000, 0.349020]
+          #GUID                   59df835b-342e-4ce9-a1c0-e122a88214e3
+        }
+        Block {
+          BlockType               Outport
+          Name                    "y"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [215, 28, 245, 42]
+          Port                    1
+          #GUID                   ca5f71df-8db3-4f56-ba6d-b31932d98360
+        }
+        Line {
+          SrcBlock                "ADD"
+          SrcPort                 1
+          DstBlock                "y"
+          DstPort                 1
+          #GUID                   b0aabd38-c0f6-451a-bf6e-42e794fcebca
+        }
+        Line {
+          SrcBlock                "CNR"
+          SrcPort                 1
+          Points                  [20, 0]
+          DstBlock                "ADD"
+          DstPort                 2
+          #GUID                   dce8deaa-eae8-4fb1-a903-6f4a195d766f
+        }
+        Line {
+          SrcBlock                "GAIN"
+          SrcPort                 1
+          DstBlock                "ADD"
+          DstPort                 1
+          #GUID                   15bd4eb0-eae8-4271-9d1b-414d38e46612
+        }
+        Line {
+          SrcBlock                "u"
+          SrcPort                 1
+          DstBlock                "GAIN"
+          DstPort                 1
+          #GUID                   b71e328a-a6df-49b7-aba9-d85f0e0225e3
+        }
+      }
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "My_amplifier_with_mask"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [255, 143, 280, 157]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskPromptString        "Amplifier gain|Amplifier offset"
+      MaskStyleString         "edit,edit"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString        "on,on"
+      MaskVisibilityString    "on,on"
+      MaskVariables           "user_gain=@1;user_offset=@2"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      MaskValueString         "2|6"
+      #GUID                   d4a81020-a724-417a-9cac-a23959fa32b4
+      System {
+        Name                    "My_amplifier_with_mask"
+        Location                [506, 311, 774, 419]
+        #GUID                   d4a81020-a724-417a-9cac-a23959fa32b4
+        Block {
+          BlockType               Inport
+          Name                    "u"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [20, 23, 50, 37]
+          Port                    1
+          #GUID                   aebbd25b-3df4-489b-b257-002f33475069
+        }
+        Block {
+          BlockType               Reference
+          Name                    "ADD"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [165, 23, 190, 47]
+          SourceBlock             "mathlib/ADD"
+          #GUID                   b382b8eb-8b7e-47d5-8bcc-f016319d2c6c
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [55, 57, 125, 73]
+          SourceBlock             "mathlib/CNR"
+          ycn                     "user_offset"
+          BackgroundColor         [1.000000, 1.000000, 0.349020]
+          #GUID                   0bcc3f15-6902-4e3e-b38d-1042ab1312bc
+        }
+        Block {
+          BlockType               Reference
+          Name                    "GAIN"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [75, 23, 100, 37]
+          SourceBlock             "mathlib/GAIN"
+          k                       "user_gain"
+          BackgroundColor         [1.000000, 1.000000, 0.349020]
+          #GUID                   7f8203a5-941a-4be4-b89e-a4a2333f4776
+        }
+        Block {
+          BlockType               Outport
+          Name                    "y"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [215, 28, 245, 42]
+          Port                    1
+          #GUID                   4503301e-1767-4812-ac17-4098bd0744fe
+        }
+        Line {
+          SrcBlock                "ADD"
+          SrcPort                 1
+          DstBlock                "y"
+          DstPort                 1
+          #GUID                   4053b2ed-efdc-457e-ac70-5e11c4d3624e
+        }
+        Line {
+          SrcBlock                "CNR"
+          SrcPort                 1
+          Points                  [20, 0]
+          DstBlock                "ADD"
+          DstPort                 2
+          #GUID                   f7928bce-2d97-4a69-89f0-0ace3a73c574
+        }
+        Line {
+          SrcBlock                "GAIN"
+          SrcPort                 1
+          DstBlock                "ADD"
+          DstPort                 1
+          #GUID                   74c31eb8-d5da-4ef3-948a-51d125b25e99
+        }
+        Line {
+          SrcBlock                "u"
+          SrcPort                 1
+          DstBlock                "GAIN"
+          DstPort                 1
+          #GUID                   5c31d51b-3fe7-42f5-84aa-f7e78867d396
+        }
+      }
+    }
+    Line {
+      SrcBlock                "CNR_myvalue1"
+      SrcPort                 1
+      DstBlock                "My_amplifier"
+      DstPort                 1
+      #GUID                   517377e5-8975-4152-bcac-d53adff69494
+    }
+    Line {
+      SrcBlock                "CNR_myvalue2"
+      SrcPort                 1
+      DstBlock                "My_amplifier_with_mask"
+      DstPort                 1
+      #GUID                   fda1eb71-577f-4f17-bb42-a7bb64a5d320
+    }
+    Line {
+      SrcBlock                "My_amplifier"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   4baf80bf-a93a-4fd5-8183-5bd16276b13b
+    }
+    Line {
+      SrcBlock                "My_amplifier_with_mask"
+      SrcPort                 1
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   4f787394-02ee-40fa-b892-1e4350d6c0a6
+    }
+    Annotation {
+      Position                [140, 50]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   c01e68ae-056c-4532-a494-5267021aef7c
+    }
+    Annotation {
+      Position                [90, 25]
+      Text                    "Using subsystems"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   ccb8a548-03c7-4e01-a1ef-1328334cc4bf
+    }
+    Annotation {
+      Position                [515, 150]
+      Text                    "default: 7*2+6=20"
+      #GUID                   24466ca9-1b4b-430f-a73e-8ea4d408f3da
+    }
+    Annotation {
+      Position                [515, 95]
+      Text                    "default: 2*3+5=11"
+      #GUID                   39deb5d2-5ec2-4a63-a621-7e608c30ec70
+    }
+  }
+}

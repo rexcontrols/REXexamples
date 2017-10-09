@@ -93,7 +93,7 @@ Model {
   LastModifiedDate        "Tue Apr 29 09:25:44 2008"
   ModelVersionFormat      "1.%<AutoIncrement:195>"
   ConfigurationManager    "None"
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -126,7 +126,7 @@ Model {
   }
   System {
     Name                    "flags_task"
-    Location                [290, 35, 1187, 622]
+    Location                [290, 35, 1187, 740]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -210,6 +210,16 @@ Model {
     }
     Block {
       BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 453, 130, 467]
+      ShowName                off
+      GotoTag                 "PGN__AI1"
+      BackgroundColor         "yellow"
+      #GUID                   49c90623-15ea-4a0a-88c4-a20829afca98
+    }
+    Block {
+      BlockType               From
       Name                    "From5"
       Ports                   [0, 1, 0, 0, 0]
       Position                [40, 263, 130, 277]
@@ -220,9 +230,39 @@ Model {
     }
     Block {
       BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 473, 130, 487]
+      ShowName                off
+      GotoTag                 "PGN__AI2"
+      BackgroundColor         "yellow"
+      #GUID                   7719e87a-e5ff-4800-88c7-6496aeb92100
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 493, 130, 507]
+      ShowName                off
+      GotoTag                 "PGN__AI3"
+      BackgroundColor         "yellow"
+      #GUID                   48a0264b-4f49-451b-8e9d-9010d5b9e623
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 513, 130, 527]
+      ShowName                off
+      GotoTag                 "PGN__AI4"
+      BackgroundColor         "yellow"
+      #GUID                   344a0247-978a-4bb7-88c2-b9eb8ceac528
+    }
+    Block {
+      BlockType               From
       Name                    "From9"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 433, 130, 447]
+      Position                [40, 578, 130, 592]
       ShowName                off
       GotoTag                 "PGN__OK"
       BackgroundColor         "yellow"
@@ -241,6 +281,17 @@ Model {
     }
     Block {
       BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [405, 358, 495, 372]
+      ShowName                off
+      GotoTag                 "PGN__AO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   18e79241-b964-4f65-9bbe-240933216811
+    }
+    Block {
+      BlockType               Goto
       Name                    "Goto10"
       Ports                   [1, 0, 0, 0, 0]
       Position                [405, 293, 495, 307]
@@ -254,7 +305,7 @@ Model {
       BlockType               Goto
       Name                    "Goto11"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 443, 495, 457]
+      Position                [405, 513, 495, 527]
       ShowName                off
       GotoTag                 "PGN__WDEN"
       TagVisibility           "local"
@@ -265,7 +316,7 @@ Model {
       BlockType               Goto
       Name                    "Goto12"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 463, 495, 477]
+      Position                [405, 533, 495, 547]
       ShowName                off
       GotoTag                 "PGN__WDI"
       TagVisibility           "local"
@@ -276,7 +327,7 @@ Model {
       BlockType               Goto
       Name                    "Goto13"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [400, 528, 520, 542]
+      Position                [400, 598, 520, 612]
       ShowName                off
       GotoTag                 "PGN__DISABLE5V"
       TagVisibility           "local"
@@ -287,7 +338,7 @@ Model {
       BlockType               Goto
       Name                    "Goto14"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [400, 548, 520, 562]
+      Position                [400, 618, 520, 632]
       ShowName                off
       GotoTag                 "PGN__DISABLE3V3"
       TagVisibility           "local"
@@ -298,23 +349,23 @@ Model {
       BlockType               Goto
       Name                    "Goto18"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 358, 495, 372]
+      Position                [405, 433, 495, 447]
       ShowName                off
-      GotoTag                 "PGN__LED_ACT"
+      GotoTag                 "PGN__LED_USR"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   a2e79192-9eed-4a47-a44b-60ce30906584
     }
     Block {
       BlockType               Goto
-      Name                    "Goto19"
+      Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
       Position                [405, 378, 495, 392]
       ShowName                off
-      GotoTag                 "PGN__LED_USR"
+      GotoTag                 "PGN__AO2"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   7cd082b3-783a-4d4a-abe9-43562689618b
+      #GUID                   c0a5a410-cea2-4617-bf41-007bf0013df2
     }
     Block {
       BlockType               Goto
@@ -400,13 +451,6 @@ Model {
       #GUID                   a835caf3-dcad-4c57-baed-ad454545f4f4
     }
     Annotation {
-      Position                [120, 415]
-      Text                    "Pigeon PLC diagnostic"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   6bac598b-f673-499e-a82a-1ea275642c47
-    }
-    Annotation {
       Position                [445, 160]
       Text                    "Digital outputs"
       FontWeight              "bold"
@@ -439,36 +483,31 @@ Model {
       #GUID                   817123d5-f5d1-4e23-bc6f-d5173344d5d4
     }
     Annotation {
-      Position                [445, 340]
+      Position                [445, 415]
       Text                    "LED indicators"
       FontWeight              "bold"
       FontSize                16
       #GUID                   3bccc42a-1d92-429c-88fb-5cb5e02d1891
     }
     Annotation {
-      Position                [590, 365]
-      Text                    "Might interfere with OS indication!"
-      #GUID                   8fda6e8d-393f-4026-a1a6-f491c396fc78
-    }
-    Annotation {
-      Position                [425, 425]
+      Position                [425, 495]
       Text                    "Watchdog"
       FontWeight              "bold"
       FontSize                16
       #GUID                   57b76f1b-5c0e-49eb-8f63-81334015416f
     }
     Annotation {
-      Position                [550, 450]
+      Position                [550, 520]
       Text                    "Enable watchdog"
       #GUID                   008d49a4-39f6-4ad2-b603-0841cfa25efb
     }
     Annotation {
-      Position                [545, 470]
+      Position                [545, 540]
       Text                    "Watchdog input"
       #GUID                   bc4b0863-19ad-4d0a-b5be-e48467436b65
     }
     Annotation {
-      Position                [475, 510]
+      Position                [475, 580]
       Text                    "Internal power supplies"
       FontWeight              "bold"
       FontSize                16
@@ -487,6 +526,27 @@ Model {
       FontWeight              "bold"
       FontSize                16
       #GUID                   ea3cb5bf-dd0e-4dac-83e2-dbeea3ec2131
+    }
+    Annotation {
+      Position                [125, 430]
+      Text                    "Analog inputs (RB300 only)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   c1908d19-cd38-4ccb-86db-e0f8a7faf8e1
+    }
+    Annotation {
+      Position                [490, 340]
+      Text                    "Analog outputs (RB300 only)"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   474eb5a7-42cd-4734-b106-5cb889a90245
+    }
+    Annotation {
+      Position                [120, 560]
+      Text                    "Pigeon PLC diagnostics"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6bac598b-f673-499e-a82a-1ea275642c47
     }
   }
 }

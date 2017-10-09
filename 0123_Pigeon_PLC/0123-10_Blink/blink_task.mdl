@@ -1,7 +1,7 @@
 Model {
   Name                    "blink_task"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8200, Date 2017-05-04"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -80,7 +80,7 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "CNB_RELAY1"
+      Name                    "CNB_DO1"
       Ports                   [0, 1, 0, 0, 0]
       Position                [75, 98, 95, 112]
       SourceBlock             "mathlib/CNB"
@@ -136,7 +136,7 @@ Model {
       #GUID                   a144826c-96f5-4180-b14d-ab394655bcd3
     }
     Line {
-      SrcBlock                "CNB_RELAY1"
+      SrcBlock                "CNB_DO1"
       SrcPort                 1
       DstBlock                "Goto"
       DstPort                 1

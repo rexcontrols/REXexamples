@@ -1,7 +1,7 @@
 Model {
   Name                    "slave_exec"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8582, Date 2017-09-04"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -70,6 +70,7 @@ Model {
       factor                  10
       stack                   10240
       pri                     3
+      timer                   off
       #GUID                   08baae3f-851c-48da-8a32-5b7c3004de0a
     }
     Block {

@@ -9,8 +9,8 @@ supporting the 1-Wire bus (e.g. UniPi, see example 0122-26).
 
 ## Documentation ##
 
-- [OwsDrv - 1-Wire driver](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/OwsDrv/OwsDrv_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [OwsDrv - 1-Wire driver](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/OwsDrv/OwsDrv_ENG.html)
+- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

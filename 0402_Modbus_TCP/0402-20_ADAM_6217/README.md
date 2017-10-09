@@ -28,7 +28,7 @@ to read the Modbus driver documentation (see below).
 - [Datasheet ADAM-6200 Series] (http://www.bb-elec.com/Products/Manuals/ADAM-6200m-pdf.pdf)
 - [MbDrv - Modbus driver](http://www.rexcontrols.com/media/DOC/ENGLISH/MbDrv_ENG.pdf)
 - [Function blocks of REX](http://www.rexcontrols.com/media/HTML/DOC/ENGLISH/index.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

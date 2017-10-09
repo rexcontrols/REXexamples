@@ -1,7 +1,7 @@
 Model {
   Name                    "LEDsnake_EMO_R8_exec"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"

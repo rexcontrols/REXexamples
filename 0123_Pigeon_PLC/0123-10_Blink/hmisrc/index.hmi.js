@@ -53,18 +53,18 @@ REX.HMI.init = function(){
         column: 1,
         title: 'User controls',
         rows: [
-            {alias: 'rly1_write', desc: 'Relay 1', cstring: 'blink_task.CNB_RELAY1:YCN', type: 'DW'},
+            {alias: 'do1_write', desc: 'Output 1', cstring: 'blink_task.CNB_DO1:YCN', type: 'DW'},
             {type: 'ES'}
         ]
     };
     REX.WebBuDi.addSection(controls);
     var status = {
         column: 2,
-        title: 'Status of the relays',
+        title: 'Status of the outputs',
         rows: [
-            {alias: 'rly1', desc: 'Relay 1', cstring: 'blink_task.UNP__RLY1:value', type: 'DR'},
-            {alias: 'out2', desc: 'Output 2', cstring: 'blink_task.UNP__RLY2:value', type: 'DR'},
-            {alias: 'out3', desc: 'Output 3', cstring: 'blink_task.UNP__RLY3:value', type: 'DR'}
+            {alias: 'out1', desc: 'Output 1', cstring: 'blink_task.PGN__O1:value', type: 'DR'},
+            {alias: 'out2', desc: 'Output 2', cstring: 'blink_task.PGN__O2:value', type: 'DR'},
+            {alias: 'out3', desc: 'Output 3', cstring: 'blink_task.PGN__O3:value', type: 'DR'}
         ]
     };
     REX.WebBuDi.addSection(status);
@@ -101,7 +101,7 @@ REX.HMI.init = function(){
     REX.HMI.setRefreshRate(100);
     
     // Change title of the page
-    REX.HMI.setTitle('UniPi - blink example');
+    REX.HMI.setTitle('Pigeon PLC - blink example');
     
     // Show clock in upper right corner
     // REX.HMI.showHeartBeatClock()

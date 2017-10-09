@@ -1,7 +1,7 @@
 Model {
   Name                    "buttonblink_exec"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -68,11 +68,6 @@ Model {
       RedirectToHMI           off
       Compression             off
       #GUID                   96d33465-23c7-44b0-b56e-d5f588e6583b
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
     }
     Block {
       BlockType               Reference

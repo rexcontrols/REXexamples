@@ -12,8 +12,8 @@ Pick only the input and output flags which you need and copy&paste them into you
 
 ## Documentation ##
 
-- [RPiDrv - Raspberry Pi driver for REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [RPiDrv - Raspberry Pi driver for REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

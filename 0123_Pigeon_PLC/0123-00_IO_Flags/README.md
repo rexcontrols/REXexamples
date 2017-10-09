@@ -1,10 +1,11 @@
 Input/Output flags for Pigeon PLCs
 ==================================
 
-This example serves as a library. It won't compile because it contains ALL input and output 
-flags and there are conflicts.
+This example serves as a library. It won't compile because it contains ALL 
+input and output flags and there are conflicts.
 
-Pick only the input and output flags which you need and copy&paste them into your project.
+Pick only the input and output flags which you need and copy&paste them into 
+your project.
 
 ## Opening the example ##
 - The **exec.mdl* file is the project main file
@@ -12,7 +13,7 @@ Pick only the input and output flags which you need and copy&paste them into you
 
 ## Documentation ##
 
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

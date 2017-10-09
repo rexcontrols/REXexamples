@@ -39,12 +39,12 @@ documentation (see below).
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX and Monarco HAT](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_MonarcoHAT_RPi_ENG.html)
-- [MonarcoDrv - Monarco HAT driver](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/MonarcoDrv/MonarcoDrv_ENG.html)
-- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
+- [Getting started with REX and Monarco HAT](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_MonarcoHAT_RPi_ENG.html)
+- [MonarcoDrv - Monarco HAT driver](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/MonarcoDrv/MonarcoDrv_ENG.html)
+- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
 - [Advantech ADAM 4000 Series User Manual](http://advdownload.advantech.com/productfile/Downloadfile1/1-123YBOV/UM-ADAM-4000_SERIES-ED0-1-EN.PDF)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

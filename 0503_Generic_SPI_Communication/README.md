@@ -10,7 +10,7 @@ examples with 0203-xx ID.
 
 ## Documentation ##
 
-- [REXLANG function block](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/BRef/REXLANG.html)
+- [REXLANG function block](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/REXLANG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

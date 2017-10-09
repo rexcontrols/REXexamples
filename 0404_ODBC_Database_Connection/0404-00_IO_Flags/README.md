@@ -11,8 +11,8 @@ Pick the input and output flags which you need and copy&paste them into your pro
 
 ## Documentation ##
 
-- [Database driver for REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/DbDrv/DbDrv_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [Database driver for REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/DbDrv/DbDrv_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

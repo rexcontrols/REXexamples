@@ -1,7 +1,7 @@
 Model {
   Name                    "pidcontrol_exec"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -70,11 +70,6 @@ Model {
       RedirectToHMI           off
       Compression             off
       #GUID                   75b262fc-f0df-4cb4-82e6-7bf93509816c
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
     }
     Block {
       BlockType               Reference

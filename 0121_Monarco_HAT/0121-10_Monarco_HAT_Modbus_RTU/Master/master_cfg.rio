@@ -2,11 +2,12 @@ Modbus {
   Name                    "/dev/ttyAMA0"
   BaudRate                115200
   Parity                  0
+  SyncTime                0
   SpaceTime               2
   Timeout                 100
   Flags                   0
   Gap                     10000
-  #GUID                   c8f1a1ac-faf5-4dbf-bec7-76caf4b1042d
+  #GUID                   0363cc9a-c8f1-49f1-b4c9-adcf758df130
   Item {
     Name                    "AO"
     SlaveAdr                1

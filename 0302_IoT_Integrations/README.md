@@ -7,8 +7,8 @@ System or various APIs of 3rd party systems and services.
 
 ## Documentation ##
 
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [REST API of the REX Control System](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexRestApi/RexRestApi_ENG.html)
+- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [REST API of the REX Control System](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexRestApi/RexRestApi_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

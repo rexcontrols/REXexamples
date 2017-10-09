@@ -2,25 +2,25 @@ Modbus {
   Name                    ""
   Timeout                 1000
   Flags                   8
-  Gap                     30000
-  #GUID                   f93f56e8-1cc9-4cac-ac5e-9ba4e37d482c
+  Gap                     10000
+  #GUID                   ab4653d3-18d5-4f6d-b1db-a581746ce32a
   Slave {
     Name                    "slave"
-    IPaddress               192.168.1.200
+    IPaddress               "192.168.1.200"
     Subaddress              255
     SlaveID                 0
     MaxRequest              16
     TCPport                 502
   }
   Item {
-    Name                    temperature
+    Name                    "temperature"
     SlaveAdr                0
     RegisterAdr             0
     Type                    0x00200204
     Count                   4
   }
   Item {
-    Name                    power
+    Name                    "power"
     SlaveAdr                0
     RegisterAdr             2048
     Type                    0x00200104

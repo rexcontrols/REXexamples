@@ -6,9 +6,9 @@ System with Siemens PLCs (LOGO!, S7-300, S7-1200, etc.).
 
 ## Documentation ##
 
-- [S7Drv - Communication driver for Siemens PLCs](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/S7Drv/S7Drv_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [S7Drv - Communication driver for Siemens PLCs](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/S7Drv/S7Drv_ENG.html)
+- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

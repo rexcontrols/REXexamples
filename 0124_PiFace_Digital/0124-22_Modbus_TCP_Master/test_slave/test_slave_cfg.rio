@@ -1,39 +1,39 @@
 Modbus {
   Name                    ""
-  Timeout                 1000
+  Timeout                 0
   Flags                   12
-  Gap                     30000
-  #GUID                   db0dd3a5-8862-497e-94f7-c8ba3e2c811f
+  Gap                     0
+  #GUID                   2f4f141c-1861-485f-be87-a1c92375c8fd
   Item {
-    Name                    coil0
+    Name                    "coil0"
     SlaveAdr                -1
     RegisterAdr             0
     Type                    0x00000201
     Count                   1
   }
   Item {
-    Name                    coil1
+    Name                    "coil1"
     SlaveAdr                -1
     RegisterAdr             1
     Type                    0x00000201
     Count                   1
   }
   Item {
-    Name                    coil2
+    Name                    "coil2"
     SlaveAdr                -1
     RegisterAdr             2
     Type                    0x00000201
     Count                   1
   }
   Item {
-    Name                    coil3
+    Name                    "coil3"
     SlaveAdr                -1
     RegisterAdr             3
     Type                    0x00000201
     Count                   1
   }
   Item {
-    Name                    coil4_7
+    Name                    "coil4_7"
     SlaveAdr                -1
     RegisterAdr             4
     Type                    0x00000201

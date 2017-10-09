@@ -47,7 +47,7 @@ http://api.openweathermap.org/data/2.5/weather?q=Pilsen&units=metric&appid=your_
 - [Node.js documentation](https://nodejs.org/en/docs/)
 - [Node-RED documentation](http://nodered.org/docs/)
 - [OpenWeatherMap API documentation](http://openweathermap.org/api)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

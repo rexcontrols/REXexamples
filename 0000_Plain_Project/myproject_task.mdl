@@ -1,7 +1,7 @@
 Model {
   Name                    "myproject_task"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -36,15 +36,6 @@ Model {
     Name                    "myproject_task"
     Location                [244, 34, 585, 436]
     #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
-    Block {
-      BlockType               Reference
-      Name                    "CNR"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [55, 78, 75, 92]
-      SourceBlock             "mathlib/CNR"
-      ycn                     1
-      #GUID                   e28ba087-ea59-4c7b-8ea3-f5b1e1336872
-    }
     Annotation {
       Position                [85, 20]
       Text                    "Plain project - task"

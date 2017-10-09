@@ -1,8 +1,7 @@
 Model {
   Name                    "pool_inksc_exec"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -69,11 +68,6 @@ Model {
       RedirectToHMI           off
       Compression             off
       #GUID                   fc71ee2a-b974-4cc2-b48a-0403f1a5d8be
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
     }
     Block {
       BlockType               Reference

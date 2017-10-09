@@ -32,9 +32,9 @@ The example is accompanied by a graphical user interface generated from RexHMI D
 
 ## Documentation ##
 
-- [S7Drv - S7 communication driver](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/S7Drv/S7Drv_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [S7Drv - S7 communication driver](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/S7Drv/S7Drv_ENG.html)
+- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

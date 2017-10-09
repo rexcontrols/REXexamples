@@ -46,7 +46,7 @@ The component is finnaly loaded to the final SVG scheme using *Library Path* set
 
 ## Documentation ##
 
-- [RexHMI documentation](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexHMI/RexHMI_ENG.html)
+- [RexHMI documentation](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexHMI/RexHMI_ENG.html)
 - [SVG.JS](http://svgjs.com)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 

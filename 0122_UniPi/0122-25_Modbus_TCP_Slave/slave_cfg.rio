@@ -1,42 +1,39 @@
 Modbus {
   Name                    ""
-  BaudRate                19200
-  Parity                  0
-  SpaceTime               2
   Timeout                 10000
   Flags                   12
   Gap                     30000
-  #GUID                   4195d5e6-e76d-4b77-96e8-330259880ce1
+  #GUID                   db84ef1a-b8bd-43bb-af33-69e143d1e0c8
   Item {
-    Name                    DI
+    Name                    "DI"
     SlaveAdr                -1
     RegisterAdr             0
     Type                    0x00000104
     Count                   1
   }
   Item {
-    Name                    AI1
+    Name                    "AI1"
     SlaveAdr                -1
     RegisterAdr             1
     Type                    0x00000104
     Count                   1
   }
   Item {
-    Name                    AI2
+    Name                    "AI2"
     SlaveAdr                -1
     RegisterAdr             2
     Type                    0x00000104
     Count                   1
   }
   Item {
-    Name                    DO
+    Name                    "DO"
     SlaveAdr                -1
     RegisterAdr             2048
     Type                    0x00000204
     Count                   1
   }
   Item {
-    Name                    PWM18
+    Name                    "PWM18"
     SlaveAdr                -1
     RegisterAdr             2049
     Type                    0x00000204

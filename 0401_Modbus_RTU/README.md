@@ -6,8 +6,8 @@ in REX.
 
 ## Documentation ##
 
-- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
+- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

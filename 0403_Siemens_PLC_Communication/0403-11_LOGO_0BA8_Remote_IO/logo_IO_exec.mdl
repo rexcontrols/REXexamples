@@ -1,7 +1,7 @@
 Model {
   Name                    "logo_IO_exec"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -68,11 +68,6 @@ Model {
       RedirectToHMI           off
       Compression             off
       #GUID                   3667baf5-641e-46ec-b9cb-41d5093fd825
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
-        Compression "off"
     }
     Block {
       BlockType               Reference

@@ -1,21 +1,18 @@
 Modbus {
   Name                    "Slave"
-  BaudRate                19200
-  Parity                  -1
-  SpaceTime               2
   Timeout                 1000
   Flags                   12
   Gap                     30000
-  #GUID                   9607e522-026e-4041-b89d-9dc7d1aae950
+  #GUID                   b13f0e37-8feb-49ba-af99-d8de05aba968
   Item {
-    Name                    PiFaceDO
+    Name                    "PiFaceDO"
     SlaveAdr                -1
     RegisterAdr             0
     Type                    0x00000201
     Count                   8
   }
   Item {
-    Name                    PiFaceDI
+    Name                    "PiFaceDI"
     SlaveAdr                -1
     RegisterAdr             0
     Type                    0x00000100

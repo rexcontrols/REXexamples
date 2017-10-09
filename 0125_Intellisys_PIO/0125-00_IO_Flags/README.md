@@ -12,7 +12,7 @@ Pick only the input and output flags which you need and copy&paste them into you
 
 ## Documentation ##
 
-- [Getting started with REX on Raspberry Pi](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [Getting started with REX on Raspberry Pi](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

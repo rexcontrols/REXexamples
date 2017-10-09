@@ -1,0 +1,2180 @@
+Model {
+  Name                    "myproject_task"
+  Version                 3.00
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "myproject_task"
+    Location                [250, 34, 1103, 1057]
+    #GUID                   13a2f1bf-adc5-42ba-9f2b-f576939a6341
+    Block {
+      BlockType               Reference
+      Name                    "BDOCT"
+      Ports                   [1, 8, 0, 0, 0]
+      Position                [440, 426, 475, 514]
+      SourceBlock             "logiclib/BDOCT"
+      shift                   0
+      #GUID                   014b029f-c86c-4eac-b785-cc9481c7350a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BDOCT1"
+      Ports                   [1, 8, 0, 0, 0]
+      Position                [440, 541, 475, 629]
+      SourceBlock             "logiclib/BDOCT"
+      shift                   0
+      #GUID                   7706f94b-b63f-4b1d-bc0f-8471dec4f572
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [385, 248, 405, 262]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   0ca3a999-5b55-42eb-b85e-354a00027c03
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [380, 673, 400, 687]
+      SourceBlock             "mathlib/CNI"
+      icn                     0
+      BackgroundColor         "magenta"
+      #GUID                   e869e72e-b4d2-4fb1-9a54-b82b2daeafe3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [380, 703, 400, 717]
+      SourceBlock             "mathlib/CNI"
+      icn                     0
+      FontSize                10
+      BackgroundColor         "magenta"
+      #GUID                   c1aacb54-e114-4384-89c8-5acad5dfbeed
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [380, 733, 400, 747]
+      SourceBlock             "mathlib/CNI"
+      icn                     0
+      BackgroundColor         "magenta"
+      #GUID                   862951a8-52cf-477d-8e19-1dede0061098
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [455, 293, 475, 307]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   8004f63c-2cc4-4071-b76d-cb9473ec0442
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [495, 308, 515, 322]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   2e5e540e-006e-4e63-97a5-920e69ca2e04
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [455, 328, 475, 342]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   d0e44493-3074-4e34-9220-0d01d6d919c8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [495, 343, 515, 357]
+      SourceBlock             "mathlib/CNR"
+      ycn                     0
+      BackgroundColor         "magenta"
+      #GUID                   463321f7-03ef-4d3e-958f-c1adfd21d7e3
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 103, 265, 127]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   1a705ee8-2953-40a6-8a1b-aa59a162cc88
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display10"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 488, 180, 512]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a6f4b0e7-6497-4b27-b92d-59cec936c349
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display11"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 538, 180, 562]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   5798639a-fe90-4730-aefa-860359cbadd6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display12"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 513, 180, 537]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   86f4c63c-ee23-48ed-9b13-3d835ab6a57c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display13"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 563, 180, 587]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   682b1a84-a351-461c-af64-70bc256b7066
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display14"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 588, 180, 612]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   c483e053-c9fd-4de6-8ff0-b51602d6222b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display15"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 208, 265, 232]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   68507d24-085a-41d5-8460-c32d541aedf9
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display16"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [80, 228, 160, 252]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   3742d9d2-574a-4509-969f-ba89d820d5a3
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display17"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 248, 265, 272]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a9273ad8-77be-418c-8597-6251ba586373
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display18"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 318, 265, 342]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   acd72b48-6a68-4b5c-b8d8-c595b1a828f7
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display19"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [80, 338, 160, 362]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a25f84f8-67f2-4348-8d6d-4d39d59b732e
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [80, 123, 160, 147]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   f3f1d6dc-14b3-4f4d-914d-449a19389364
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display20"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 358, 265, 382]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   8b3e0f0b-2085-4959-8105-f1a20f052f90
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display21"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [80, 298, 160, 322]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   4809cdea-36e6-4678-852a-1f8d1b047b58
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display22"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [80, 83, 160, 107]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   2fdb916a-aebd-42eb-8ea8-238214bf4889
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display23"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 718, 180, 742]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   380c774e-b297-48b3-81e6-0088ac798e5d
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display24"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 768, 180, 792]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   d147308d-07dd-47c0-8c2b-a9d31ba2b301
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display25"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 743, 180, 767]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   d3894048-a392-40e9-8b5b-8645dfa3948f
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display26"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 793, 180, 817]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   7ec5643f-0de7-4120-92b1-feaa6a97920d
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display27"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 818, 180, 842]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   8764335e-1a31-4cd9-b525-fe852137bd5b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display28"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 643, 180, 667]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   be4a14ba-4b0b-4d26-b192-1e08fcde9e59
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display29"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 693, 180, 717]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   4db06d09-e1a5-4006-8a91-db5618ea9391
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [185, 143, 265, 167]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   96a1186c-00dc-4482-a1da-40fb800b61e3
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display30"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 668, 180, 692]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   d207220f-904e-412f-abe1-13fadb46e1a7
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display31"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 938, 180, 962]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   ad356b2e-b83d-4bfc-8af4-469d06866c56
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display32"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 988, 180, 1012]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   56704790-6f32-4233-9248-7c3d00db4c6b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display33"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 963, 180, 987]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   19e50f76-704a-4f23-8b95-219833e39ac2
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display34"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 1013, 180, 1037]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   cf79e96f-706b-4f6c-bac2-208e76fae969
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display35"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 1038, 180, 1062]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   14ebca1f-3851-4afe-836c-673d7f38e997
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display36"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 863, 180, 887]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   63346148-0d4d-4008-8f9d-021a13cced62
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display37"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 913, 180, 937]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   9ba2bd9d-ba92-4dfc-b210-9c1b9c61c709
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display38"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 888, 180, 912]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   6dea3e50-ac91-4cf4-8998-e988187a9638
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display39"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [465, 783, 545, 807]
+      Format                  "bin"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   b7d07ed6-38bc-45aa-b8f1-a7f89acf3677
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [520, 123, 600, 147]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   5df4b3a4-b05a-457e-a681-aff0da26b510
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display40"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [520, 198, 600, 222]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   3d0b87f2-5f99-438d-b639-6c2360c5795a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display41"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 838, 540, 862]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   2595d9c0-9570-4378-8247-44b33a9a97b6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display42"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 863, 540, 887]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   bc43c4bb-e27d-4b40-b1eb-5c2ddebfc359
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display43"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 888, 540, 912]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   6cd6a906-5480-4cdf-b8eb-f8e9fdd228d2
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display44"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 913, 540, 937]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   8c988f9c-a10b-45ae-9a1c-bae0c86b0600
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display45"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 938, 540, 962]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   3e637942-db5f-4123-9532-d4a38e52cd8c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display46"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 963, 540, 987]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   98219da7-9a70-4c33-a6a5-98911854c11e
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display47"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 988, 540, 1012]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   2226ff30-de5d-4b55-bee2-547acbfd0a1a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display48"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 1013, 540, 1037]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   edf759d2-0e6c-4987-a1bf-9e98fd9fff4b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display49"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [460, 1038, 540, 1062]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   2888f5ce-5638-483a-9687-1619c2bdd3d1
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [520, 158, 600, 182]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   3f082aa3-e268-4735-b609-a11cfe2c59ba
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display50"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [520, 88, 600, 112]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   d4c83fc6-82c3-46e8-900a-172893353680
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 413, 180, 437]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a8855096-8b66-45c7-ab08-b049d990dd40
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 463, 180, 487]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   eef4e790-9773-465f-b1ae-18333f18e816
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display8"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [80, 188, 160, 212]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   165fed05-81ad-4745-8171-4f152deaea45
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display9"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [100, 438, 180, 462]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a891b481-f892-4f96-8e22-da67f3e8cc03
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [375, 128, 485, 142]
+      ShowName                off
+      GotoTag                 "WG__KbusOK"
+      BackgroundColor         "yellow"
+      #GUID                   100a29d5-1e1d-4f39-ab70-d8528a39f86f
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [375, 163, 485, 177]
+      ShowName                off
+      GotoTag                 "WG__KbusStatus"
+      BackgroundColor         "yellow"
+      #GUID                   541acfa0-d1b9-4b5d-a621-013b6631ec41
+    }
+    Block {
+      BlockType               From
+      Name                    "From10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 993, 415, 1007]
+      ShowName                off
+      GotoTag                 "WG__S7M430OK"
+      BackgroundColor         "yellow"
+      #GUID                   37519962-ef69-4895-8c38-ac54b71e6d0b
+    }
+    Block {
+      BlockType               From
+      Name                    "From11"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 1018, 415, 1032]
+      ShowName                off
+      GotoTag                 "WG__S8M530OK"
+      BackgroundColor         "yellow"
+      #GUID                   4530152c-1241-4225-b7e6-eac1fc96d083
+    }
+    Block {
+      BlockType               From
+      Name                    "From12"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 1043, 415, 1057]
+      ShowName                off
+      GotoTag                 "WG__S9M530OK"
+      BackgroundColor         "yellow"
+      #GUID                   ad528391-b372-47ca-a95d-db48b59492da
+    }
+    Block {
+      BlockType               From
+      Name                    "From13"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [375, 93, 485, 107]
+      ShowName                off
+      GotoTag                 "WG__CycleCount"
+      BackgroundColor         "yellow"
+      #GUID                   7d333b1f-db70-434c-b224-6a071d4486c6
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 788, 415, 802]
+      ShowName                off
+      GotoTag                 "WG__S1M455W0"
+      BackgroundColor         "yellow"
+      #GUID                   d223e59a-4bef-4f39-b7e2-c174c1b8989b
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [375, 203, 485, 217]
+      ShowName                off
+      GotoTag                 "WG__ModulesOK"
+      BackgroundColor         "yellow"
+      #GUID                   87e21de5-4053-4b74-b22b-1fb6227d8b6d
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 843, 415, 857]
+      ShowName                off
+      GotoTag                 "WG__S1M455OK"
+      BackgroundColor         "yellow"
+      #GUID                   ac9583ce-94f6-405f-8cd8-5cbb6868bb2b
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 868, 415, 882]
+      ShowName                off
+      GotoTag                 "WG__S2M455OK"
+      BackgroundColor         "yellow"
+      #GUID                   65166077-ec1a-427a-82ad-d0f7560d6477
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 893, 415, 907]
+      ShowName                off
+      GotoTag                 "WG__S3M455OK"
+      BackgroundColor         "yellow"
+      #GUID                   c07e2ba5-e7e2-4541-80aa-8a6e157c2347
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 918, 415, 932]
+      ShowName                off
+      GotoTag                 "WG__S4M555OK"
+      BackgroundColor         "yellow"
+      #GUID                   da11184e-efdb-4013-a03c-5540bcbd4da7
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 943, 415, 957]
+      ShowName                off
+      GotoTag                 "WG__S5M430OK"
+      BackgroundColor         "yellow"
+      #GUID                   c48f02e5-b021-4e98-92bc-33e8782e793d
+    }
+    Block {
+      BlockType               From
+      Name                    "From9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [305, 968, 415, 982]
+      ShowName                off
+      GotoTag                 "WG__S6M430OK"
+      BackgroundColor         "yellow"
+      #GUID                   06a0f3b6-bbd7-49b6-b4bd-fa232149ff36
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [470, 247, 665, 263]
+      ShowName                off
+      GotoTag                 "WG__KbusAllowControlMode"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   c150ad33-8070-46a9-abf8-5b0b7d6098ce
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [480, 673, 610, 687]
+      ShowName                off
+      GotoTag                 "WG__LedUSR"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   0244c181-77ce-486a-9cdf-206425022a1f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [480, 703, 610, 717]
+      ShowName                off
+      GotoTag                 "WG__LedMS"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b4c711b6-d8c2-462d-a983-48c1af3e37dc
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [480, 733, 610, 747]
+      ShowName                off
+      GotoTag                 "WG__LedNS"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   810c0f47-4a7b-4864-80f9-57f41c7eb53a
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "LED_snake"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [335, 463, 390, 477]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   c62eec15-ea45-4c61-8494-31210afe2107
+      System {
+        Name                    "LED_snake"
+        Location                [640, 269, 1369, 759]
+        #GUID                   c62eec15-ea45-4c61-8494-31210afe2107
+        Block {
+          BlockType               Reference
+          Name                    "AND_"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [205, 153, 240, 177]
+          SourceBlock             "logiclib/AND_"
+          #GUID                   f2113d7f-d6ed-4f36-b0d9-2ae83b76913f
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AND_1"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [205, 203, 240, 227]
+          SourceBlock             "logiclib/AND_"
+          #GUID                   b0faf3dc-e43c-498d-8f3a-92bd5b84abdd
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BITOP_SHIFT_LEFT3"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [445, 33, 470, 57]
+          SourceBlock             "logiclib/BITOP"
+          iop                     "5: Shift Left"
+          #GUID                   698b80ff-3d35-4ae8-be94-680f27fb3542
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_BASE_VALUE1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [265, 33, 300, 47]
+          SourceBlock             "mathlib/CNI"
+          icn                     1
+          #GUID                   2fabc4cd-9b92-46c2-bcdb-d1f5b7e4b87f
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_RESET_BIT1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [265, 83, 300, 97]
+          SourceBlock             "mathlib/CNI"
+          icn                     7
+          #GUID                   22a1bf73-6524-41dd-a644-f72f543e98ba
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_RESET_BIT2"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [265, 113, 300, 127]
+          SourceBlock             "mathlib/CNI"
+          icn                     0
+          #GUID                   71017001-ea68-4a11-ab10-d106863d915e
+        }
+        Block {
+          BlockType               Reference
+          Name                    "COUNT1"
+          Ports                   [7, 4, 0, 0, 0]
+          Position                [310, 152, 375, 228]
+          SourceBlock             "logiclib/COUNT"
+          #GUID                   7604e9ff-fb44-48e3-9423-a468d8d80d6a
+        }
+        Block {
+          BlockType               Reference
+          Name                    "EDGE_"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [130, 153, 155, 167]
+          SourceBlock             "logiclib/EDGE_"
+          iedge                   "1: Rising edge"
+          #GUID                   31093b90-bda4-42c6-b6c5-d371d556103a
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [375, 260, 385, 270]
+          Orientation             "left"
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          #GUID                   63a20088-d4c3-44e3-a0cd-56cd5f8be9eb
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK2"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [375, 280, 385, 290]
+          Orientation             "left"
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          #GUID                   50abc579-6eb7-4408-948f-0f8b80b27391
+        }
+        Block {
+          BlockType               Reference
+          Name                    "REL_EQ1"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [435, 143, 460, 167]
+          SourceBlock             "mathlib/REL"
+          irel                    "1: equality (==)"
+          #GUID                   10ac987b-6a57-4c52-884d-6473d15ef76b
+        }
+        Block {
+          BlockType               Reference
+          Name                    "REL_EQ2"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [435, 188, 460, 212]
+          SourceBlock             "mathlib/REL"
+          irel                    "1: equality (==)"
+          #GUID                   112427b0-acc3-4e81-bdf2-9f6b03e0521e
+        }
+        Block {
+          BlockType               Reference
+          Name                    "REL_GT_ZERO1"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [65, 148, 90, 172]
+          SourceBlock             "mathlib/REL"
+          irel                    "4: greater than (>)"
+          #GUID                   1c525702-eb98-4493-8267-e57009f750f3
+        }
+        Block {
+          BlockType               Reference
+          Name                    "RS"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [115, 218, 150, 242]
+          SourceBlock             "logiclib/RS"
+          #GUID                   ed224a5e-def2-40d7-8eb6-d59139c4963d
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SG1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [5, 148, 30, 162]
+          SourceBlock             "genlib/SG"
+          isig                    "2: SQUARE"
+          amp                     "1.0000000E+000"
+          freq                    10
+          phase                   "0.0000000E+000"
+          ifrunit                 "1: Hz"
+          iphunit                 "1: degrees"
+          offset                  0
+          #GUID                   05729f8b-ef9e-4018-9341-ce3819709519
+        }
+        Block {
+          BlockType               Outport
+          Name                    "Outport1"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [590, 38, 620, 52]
+          Port                    1
+          offset                  0
+          #GUID                   eb037f84-47e3-49a4-bbbe-ecd9e335f03b
+        }
+        Line {
+          SrcBlock                "AND_"
+          SrcPort                 1
+          Points                  [15, 0; 0, 30]
+          DstBlock                "COUNT1"
+          DstPort                 4
+          #GUID                   707bf7d5-7321-4b02-9f0a-c24d832072d9
+        }
+        Line {
+          SrcBlock                "AND_1"
+          SrcPort                 1
+          Points                  [15, 0; 0, -10]
+          DstBlock                "COUNT1"
+          DstPort                 5
+          #GUID                   985181f2-cabf-485e-bf01-9f7eb8744004
+        }
+        Line {
+          SrcBlock                "BITOP_SHIFT_LEFT3"
+          SrcPort                 1
+          DstBlock                "Outport1"
+          DstPort                 1
+          #GUID                   4cad9034-243a-4306-a4a8-20a8fee6bcad
+        }
+        Line {
+          SrcBlock                "CNI_BASE_VALUE1"
+          SrcPort                 1
+          DstBlock                "BITOP_SHIFT_LEFT3"
+          DstPort                 1
+          #GUID                   faabd9d1-aa82-42b0-8984-49b8d497a184
+        }
+        Line {
+          SrcBlock                "CNI_RESET_BIT1"
+          SrcPort                 1
+          Points                  [115, 0]
+          DstBlock                "REL_EQ1"
+          DstPort                 1
+          #GUID                   de56c5c3-43c1-476e-8e73-7daf4976af14
+        }
+        Line {
+          SrcBlock                "CNI_RESET_BIT2"
+          SrcPort                 1
+          Points                  [105, 0; 0, 85]
+          DstBlock                "REL_EQ2"
+          DstPort                 2
+          #GUID                   d3a5ddd8-21c8-4dc8-9bfc-671e6f86812c
+        }
+        Line {
+          SrcBlock                "COUNT1"
+          SrcPort                 1
+          Points                  [15, 0]
+          #GUID                   f07e0ee6-4557-46fe-ba7c-6eaae1a528e0
+          Branch {
+            Points                  [0, -110]
+            DstBlock                "BITOP_SHIFT_LEFT3"
+            DstPort                 2
+            #GUID                   165fbfe8-c2dc-487f-9de8-e74b7621d78d
+          }
+          Branch {
+            DstBlock                "REL_EQ1"
+            DstPort                 2
+            #GUID                   50f9694f-c841-4f1d-9e9b-a6854a95c101
+          }
+          Branch {
+            Points                  [0, 35]
+            DstBlock                "REL_EQ2"
+            DstPort                 1
+            #GUID                   eb7ca823-30c9-4e55-9b07-61d100310003
+          }
+        }
+        Line {
+          SrcBlock                "EDGE_"
+          SrcPort                 1
+          Points                  [20, 0]
+          #GUID                   415e86fe-9d64-4d6a-93e5-1bd1f4d4958d
+          Branch {
+            DstBlock                "AND_"
+            DstPort                 1
+            #GUID                   5f00fd65-9d37-4ecb-86b8-3d0c9e2dc657
+          }
+          Branch {
+            Points                  [0, 50]
+            DstBlock                "AND_1"
+            DstPort                 1
+            #GUID                   9a60ebf0-a60c-468a-8607-51105db5e66c
+          }
+        }
+        Line {
+          SrcBlock                "LPBRK1"
+          SrcPort                 1
+          Points                  [-270, 0]
+          DstBlock                "RS"
+          DstPort                 1
+          #GUID                   b8ba8e21-477d-4b38-8e44-5c42167e9bcc
+        }
+        Line {
+          SrcBlock                "LPBRK2"
+          SrcPort                 1
+          Points                  [-285, 0; 0, -50]
+          DstBlock                "RS"
+          DstPort                 2
+          #GUID                   de25bfa7-6c45-4d02-8022-a077dc472344
+        }
+        Line {
+          SrcBlock                "REL_EQ1"
+          SrcPort                 1
+          Points                  [20, 0; 0, 110]
+          DstBlock                "LPBRK1"
+          DstPort                 1
+          #GUID                   a3cea24f-0ec6-44fe-b5e7-bf5789a9590f
+        }
+        Line {
+          SrcBlock                "REL_EQ2"
+          SrcPort                 1
+          Points                  [45, 0; 0, 85]
+          DstBlock                "LPBRK2"
+          DstPort                 1
+          #GUID                   2f47743a-8dd5-48f0-ae9c-0ecdfc5307e0
+        }
+        Line {
+          SrcBlock                "REL_GT_ZERO1"
+          SrcPort                 1
+          DstBlock                "EDGE_"
+          DstPort                 1
+          #GUID                   a944e219-029d-42ff-8bd3-179be6e19feb
+        }
+        Line {
+          SrcBlock                "RS"
+          SrcPort                 1
+          Points                  [0, -5]
+          DstBlock                "AND_1"
+          DstPort                 2
+          #GUID                   ad65c1a9-7c15-497c-a4eb-b2ba31f14ec1
+        }
+        Line {
+          SrcBlock                "RS"
+          SrcPort                 2
+          Points                  [15, 0; 0, -65]
+          DstBlock                "AND_"
+          DstPort                 2
+          #GUID                   df8eb5bd-e806-4375-8734-de13bf0729e6
+        }
+        Line {
+          SrcBlock                "SG1"
+          SrcPort                 1
+          DstBlock                "REL_GT_ZERO1"
+          DstPort                 1
+          #GUID                   af31f704-6200-4270-a9ad-a6c3df9b414c
+        }
+      }
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "LED_snake1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [335, 578, 390, 592]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   f973a5b2-9112-4fa9-b201-a68fb7c4f4c3
+      System {
+        Name                    "LED_snake1"
+        Location                [640, 269, 1369, 759]
+        #GUID                   f973a5b2-9112-4fa9-b201-a68fb7c4f4c3
+        Block {
+          BlockType               Reference
+          Name                    "AND_"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [205, 153, 240, 177]
+          SourceBlock             "logiclib/AND_"
+          #GUID                   f7d3ec9e-4434-4dd8-9e95-247947470449
+        }
+        Block {
+          BlockType               Reference
+          Name                    "AND_1"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [205, 203, 240, 227]
+          SourceBlock             "logiclib/AND_"
+          #GUID                   cf25ab69-e249-4806-b8eb-614e7624079e
+        }
+        Block {
+          BlockType               Reference
+          Name                    "BITOP_SHIFT_LEFT3"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [445, 33, 470, 57]
+          SourceBlock             "logiclib/BITOP"
+          iop                     "5: Shift Left"
+          #GUID                   b110e544-3647-419e-8798-37a1185d33e1
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_BASE_VALUE1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [265, 33, 300, 47]
+          SourceBlock             "mathlib/CNI"
+          icn                     1
+          #GUID                   4eebf5d9-b246-48d7-88ae-a415fd6e233b
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_RESET_BIT1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [265, 83, 300, 97]
+          SourceBlock             "mathlib/CNI"
+          icn                     7
+          #GUID                   93fc2d99-5678-47c9-8c71-01112f5ee3f6
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI_RESET_BIT2"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [265, 113, 300, 127]
+          SourceBlock             "mathlib/CNI"
+          icn                     0
+          #GUID                   ec199c10-b91b-4eb2-b7d3-3ebca3fad72a
+        }
+        Block {
+          BlockType               Reference
+          Name                    "COUNT1"
+          Ports                   [7, 4, 0, 0, 0]
+          Position                [310, 152, 375, 228]
+          SourceBlock             "logiclib/COUNT"
+          #GUID                   e559e582-8f2c-4399-a842-8ac8911ccebf
+        }
+        Block {
+          BlockType               Reference
+          Name                    "EDGE_"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [130, 153, 155, 167]
+          SourceBlock             "logiclib/EDGE_"
+          iedge                   "1: Rising edge"
+          #GUID                   48452250-0f62-4a42-97bb-88b783d870f8
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [375, 260, 385, 270]
+          Orientation             "left"
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          #GUID                   5b1b8f7a-b964-468b-8cf2-6384583dd231
+        }
+        Block {
+          BlockType               Reference
+          Name                    "LPBRK2"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [375, 280, 385, 290]
+          Orientation             "left"
+          SourceBlock             "execlib/LPBRK"
+          ShowName                off
+          #GUID                   c641ceed-83ed-4106-aa0a-cf18255cc118
+        }
+        Block {
+          BlockType               Reference
+          Name                    "REL_EQ1"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [435, 143, 460, 167]
+          SourceBlock             "mathlib/REL"
+          irel                    "1: equality (==)"
+          #GUID                   af62d873-665d-45da-88a6-5c4821aa7871
+        }
+        Block {
+          BlockType               Reference
+          Name                    "REL_EQ2"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [435, 188, 460, 212]
+          SourceBlock             "mathlib/REL"
+          irel                    "1: equality (==)"
+          #GUID                   92b820b9-0b3b-4f4c-9fc5-6cdf571bc5da
+        }
+        Block {
+          BlockType               Reference
+          Name                    "REL_GT_ZERO1"
+          Ports                   [2, 1, 0, 0, 0]
+          Position                [65, 148, 90, 172]
+          SourceBlock             "mathlib/REL"
+          irel                    "4: greater than (>)"
+          #GUID                   3a4c89a0-d0f5-4dff-9d7d-1e524f37911f
+        }
+        Block {
+          BlockType               Reference
+          Name                    "RS"
+          Ports                   [2, 2, 0, 0, 0]
+          Position                [115, 218, 150, 242]
+          SourceBlock             "logiclib/RS"
+          #GUID                   ac856676-3f4f-4a2e-bac2-aac3ad28aa76
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SG1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [5, 148, 30, 162]
+          SourceBlock             "genlib/SG"
+          isig                    "2: SQUARE"
+          amp                     "1.0000000E+000"
+          freq                    10
+          phase                   "0.0000000E+000"
+          ifrunit                 "1: Hz"
+          iphunit                 "1: degrees"
+          offset                  0
+          #GUID                   92ffab06-e2e0-4195-8fae-c82ace8f1ba3
+        }
+        Block {
+          BlockType               Outport
+          Name                    "Outport1"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [590, 38, 620, 52]
+          Port                    1
+          offset                  0
+          #GUID                   f6af5dd1-775b-4997-8f15-1f70a854acab
+        }
+        Line {
+          SrcBlock                "AND_"
+          SrcPort                 1
+          Points                  [15, 0; 0, 30]
+          DstBlock                "COUNT1"
+          DstPort                 4
+          #GUID                   8776d6e3-9c96-468f-98c3-55e90ac80716
+        }
+        Line {
+          SrcBlock                "AND_1"
+          SrcPort                 1
+          Points                  [15, 0; 0, -10]
+          DstBlock                "COUNT1"
+          DstPort                 5
+          #GUID                   dcb7cb64-1b5d-41ab-baf5-698d24d34ac4
+        }
+        Line {
+          SrcBlock                "BITOP_SHIFT_LEFT3"
+          SrcPort                 1
+          DstBlock                "Outport1"
+          DstPort                 1
+          #GUID                   0ebd1ed2-d2f9-4e9c-b038-c0706666236b
+        }
+        Line {
+          SrcBlock                "CNI_BASE_VALUE1"
+          SrcPort                 1
+          DstBlock                "BITOP_SHIFT_LEFT3"
+          DstPort                 1
+          #GUID                   6f20cd71-e69a-4b48-b4f3-f8c29f2b25e8
+        }
+        Line {
+          SrcBlock                "CNI_RESET_BIT1"
+          SrcPort                 1
+          Points                  [115, 0]
+          DstBlock                "REL_EQ1"
+          DstPort                 1
+          #GUID                   e54cb10b-44b5-4ab6-a61a-0183feaa3c45
+        }
+        Line {
+          SrcBlock                "CNI_RESET_BIT2"
+          SrcPort                 1
+          Points                  [105, 0; 0, 85]
+          DstBlock                "REL_EQ2"
+          DstPort                 2
+          #GUID                   0bc7dfc2-6df7-4064-bd59-161b806dd173
+        }
+        Line {
+          SrcBlock                "COUNT1"
+          SrcPort                 1
+          Points                  [15, 0]
+          #GUID                   c593ec5a-4f2b-499c-b476-b9a1da6e602d
+          Branch {
+            Points                  [0, -110]
+            DstBlock                "BITOP_SHIFT_LEFT3"
+            DstPort                 2
+            #GUID                   5ed69c55-f345-4454-bc09-a2691e63a736
+          }
+          Branch {
+            DstBlock                "REL_EQ1"
+            DstPort                 2
+            #GUID                   cb8222f1-db30-47a6-9896-1ee11b5e34e1
+          }
+          Branch {
+            Points                  [0, 35]
+            DstBlock                "REL_EQ2"
+            DstPort                 1
+            #GUID                   8670eabf-c30b-4fed-b726-839f700bc54b
+          }
+        }
+        Line {
+          SrcBlock                "EDGE_"
+          SrcPort                 1
+          Points                  [20, 0]
+          #GUID                   a37b91e5-b545-4b18-bc97-2911ded76610
+          Branch {
+            DstBlock                "AND_"
+            DstPort                 1
+            #GUID                   4cafdcc1-ea26-4964-a4a7-76da23b3b6dd
+          }
+          Branch {
+            Points                  [0, 50]
+            DstBlock                "AND_1"
+            DstPort                 1
+            #GUID                   6a4f7733-d395-4751-86a6-8b0b6ef4736f
+          }
+        }
+        Line {
+          SrcBlock                "LPBRK1"
+          SrcPort                 1
+          Points                  [-270, 0]
+          DstBlock                "RS"
+          DstPort                 1
+          #GUID                   a3010623-5259-4e43-8ace-fbc79c43289e
+        }
+        Line {
+          SrcBlock                "LPBRK2"
+          SrcPort                 1
+          Points                  [-285, 0; 0, -50]
+          DstBlock                "RS"
+          DstPort                 2
+          #GUID                   d9be94ea-0a75-4da9-b5e5-fe0c28337351
+        }
+        Line {
+          SrcBlock                "REL_EQ1"
+          SrcPort                 1
+          Points                  [20, 0; 0, 110]
+          DstBlock                "LPBRK1"
+          DstPort                 1
+          #GUID                   c5ea0863-b61f-4a8b-92ef-94aef3db5751
+        }
+        Line {
+          SrcBlock                "REL_EQ2"
+          SrcPort                 1
+          Points                  [45, 0; 0, 85]
+          DstBlock                "LPBRK2"
+          DstPort                 1
+          #GUID                   33f81b8f-811a-425d-bf6c-df0303fcecb8
+        }
+        Line {
+          SrcBlock                "REL_GT_ZERO1"
+          SrcPort                 1
+          DstBlock                "EDGE_"
+          DstPort                 1
+          #GUID                   e619cc7d-77bd-4ad1-8c67-8d28bd97cd2b
+        }
+        Line {
+          SrcBlock                "RS"
+          SrcPort                 1
+          Points                  [0, -5]
+          DstBlock                "AND_1"
+          DstPort                 2
+          #GUID                   bf8d4598-86bd-43b1-9de5-4d4b785f8d3b
+        }
+        Line {
+          SrcBlock                "RS"
+          SrcPort                 2
+          Points                  [15, 0; 0, -65]
+          DstBlock                "AND_"
+          DstPort                 2
+          #GUID                   d405a38e-dd78-4753-aa81-466a4dfa9080
+        }
+        Line {
+          SrcBlock                "SG1"
+          SrcPort                 1
+          DstBlock                "REL_GT_ZERO1"
+          DstPort                 1
+          #GUID                   4d61227f-60e3-4f82-92a5-1ee516f47d5a
+        }
+      }
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S1M455"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [25, 83, 55, 167]
+      SourceBlock             "inoutlib/INQUAD"
+      BackgroundColor         "yellow"
+      #GUID                   ba43e5e9-7c58-4963-9b5b-bd174e1aadef
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S2M455"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [25, 188, 55, 272]
+      SourceBlock             "inoutlib/INQUAD"
+      BackgroundColor         "yellow"
+      #GUID                   516a7a68-3f1c-43af-a9bc-39cfb72ef48a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S3M455"
+      Ports                   [0, 4, 0, 0, 0]
+      Position                [25, 298, 55, 382]
+      SourceBlock             "inoutlib/INQUAD"
+      BackgroundColor         "yellow"
+      #GUID                   8856bf43-8e18-41af-8f75-5db5900b6dda
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S4M555"
+      Ports                   [4, 0, 0, 0, 0]
+      Position                [580, 292, 610, 338]
+      SourceBlock             "inoutlib/OUTQUAD"
+      BackgroundColor         "lightBlue"
+      #GUID                   0ba77717-664c-4d0d-a87c-f2655116b066
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S5M430"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [25, 409, 55, 616]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   db594aae-03ed-4694-860c-3c3296ce3188
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S6M430"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [25, 639, 55, 846]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   a22c7482-34a5-4522-abbf-217564466f33
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S7M430"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [25, 859, 55, 1066]
+      SourceBlock             "inoutlib/INOCT"
+      BackgroundColor         "yellow"
+      #GUID                   d12c6b5e-dcbc-4a8a-b321-bb90fa72f4d7
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S8M530"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [580, 426, 610, 514]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   f25090ce-5a21-4809-a85b-e16cd4247dd0
+    }
+    Block {
+      BlockType               Reference
+      Name                    "WG__S9M530"
+      Ports                   [8, 0, 0, 0, 0]
+      Position                [580, 541, 610, 629]
+      SourceBlock             "inoutlib/OUTOCT"
+      BackgroundColor         "lightBlue"
+      #GUID                   bb98eaab-e4f7-4a29-8cea-87b9fcd71a67
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 1
+      DstBlock                "WG__S8M530"
+      DstPort                 1
+      #GUID                   86d72761-4886-4c22-8289-cf0fef088e96
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 2
+      DstBlock                "WG__S8M530"
+      DstPort                 2
+      #GUID                   d33068b1-1223-4544-b254-3085ab290cd3
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 3
+      DstBlock                "WG__S8M530"
+      DstPort                 3
+      #GUID                   ed6ffc37-0ce8-4709-bfdc-8ddee8281a15
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 4
+      DstBlock                "WG__S8M530"
+      DstPort                 4
+      #GUID                   4f8f7121-1695-4aad-ad26-c4e8299ceb32
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 5
+      DstBlock                "WG__S8M530"
+      DstPort                 5
+      #GUID                   b2fe0d11-1f73-49d6-ae9c-1df12caf94ac
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 6
+      DstBlock                "WG__S8M530"
+      DstPort                 6
+      #GUID                   2fa74e17-a164-46cf-876f-119394e91efd
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 7
+      DstBlock                "WG__S8M530"
+      DstPort                 7
+      #GUID                   0f7f19ac-f162-49a6-8f0f-5b03a2a7cced
+    }
+    Line {
+      SrcBlock                "BDOCT"
+      SrcPort                 8
+      DstBlock                "WG__S8M530"
+      DstPort                 8
+      #GUID                   6a167347-514c-4bcc-8ddd-c84d30ce3cf6
+    }
+    Line {
+      SrcBlock                "BDOCT1"
+      SrcPort                 1
+      DstBlock                "WG__S9M530"
+      DstPort                 1
+      #GUID                   9e57f71e-c35b-478d-9731-5c80c0d60eaa
+    }
+    Line {
+      SrcBlock                "BDOCT1"
+      SrcPort                 2
+      DstBlock                "WG__S9M530"
+      DstPort                 2
+      #GUID                   5bf90aa9-4cb5-4e25-a97d-8427b83e04a5
+    }
+    Line {
+      SrcBlock                "BDOCT1"
+      SrcPort                 3
+      DstBlock                "WG__S9M530"
+      DstPort                 3
+      #GUID                   91d28fe4-e9a9-454b-9eff-7baca52f4845
+    }
+    Line {
+      SrcBlock                "BDOCT1"
+      SrcPort                 4
+      DstBlock                "WG__S9M530"
+      DstPort                 4
+      #GUID                   b05756d1-4580-4335-be08-b4fd3e00c358
+    }
+    Line {
+      SrcBlock                "BDOCT1"
+      SrcPort                 5
+      DstBlock                "WG__S9M530"
+      DstPort                 5
+      #GUID                   47d1ba1b-be6d-47f6-99ee-8376b0d57aa0
+    }
+    Line {
+      SrcBlock                "BDOCT1"
+      SrcPort                 6
+      DstBlock                "WG__S9M530"
+      DstPort                 6
+      #GUID                   39752553-ef27-4c2a-9c69-f859e84899f2
+    }
+    Line {
+      SrcBlock                "BDOCT1"
+      SrcPort                 7
+      DstBlock                "WG__S9M530"
+      DstPort                 7
+      #GUID                   fadecd1a-b845-4348-b37d-867ef327c259
+    }
+    Line {
+      SrcBlock                "BDOCT1"
+      SrcPort                 8
+      DstBlock                "WG__S9M530"
+      DstPort                 8
+      #GUID                   03a16547-2c20-479a-a2af-599b30e6bb72
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   f1e946eb-4810-4653-98bc-ccda675f75e5
+    }
+    Line {
+      SrcBlock                "CNI"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   36c20b18-2b05-4017-9e9e-21150c9b219b
+    }
+    Line {
+      SrcBlock                "CNI1"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   77598a5a-4b1e-4343-9136-abdd4bb0b687
+    }
+    Line {
+      SrcBlock                "CNI2"
+      SrcPort                 1
+      DstBlock                "Goto3"
+      DstPort                 1
+      #GUID                   c0c61f78-31f9-4f3f-b46b-72329956d2ec
+    }
+    Line {
+      SrcBlock                "CNR1"
+      SrcPort                 1
+      DstBlock                "WG__S4M555"
+      DstPort                 1
+      #GUID                   357a3978-6104-41ae-8dfc-e9053f5f2aff
+    }
+    Line {
+      SrcBlock                "CNR2"
+      SrcPort                 1
+      Points                  [15, 0; 0, -5]
+      DstBlock                "WG__S4M555"
+      DstPort                 2
+      #GUID                   e987b491-f0f7-4be5-a2d4-8ff9dec348a1
+    }
+    Line {
+      SrcBlock                "CNR3"
+      SrcPort                 1
+      Points                  [65, 0; 0, -15]
+      DstBlock                "WG__S4M555"
+      DstPort                 3
+      #GUID                   7443a65b-3521-4595-9062-d00a2d06d7b0
+    }
+    Line {
+      SrcBlock                "CNR4"
+      SrcPort                 1
+      Points                  [35, 0; 0, -20]
+      DstBlock                "WG__S4M555"
+      DstPort                 4
+      #GUID                   a4c68e8b-a8e9-4619-8a66-4ada1953af23
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "Display4"
+      DstPort                 1
+      #GUID                   cb8bab97-b136-4e92-b69a-caa482a4b334
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "Display5"
+      DstPort                 1
+      #GUID                   7a58f920-c3d2-4e4a-baef-0dc7ea6e01c6
+    }
+    Line {
+      SrcBlock                "From10"
+      SrcPort                 1
+      DstBlock                "Display47"
+      DstPort                 1
+      #GUID                   3fde1eed-2466-4a0d-b3c1-4f53b06da4c5
+    }
+    Line {
+      SrcBlock                "From11"
+      SrcPort                 1
+      DstBlock                "Display48"
+      DstPort                 1
+      #GUID                   a6e29555-e063-430b-a779-1e0ae5f51f3d
+    }
+    Line {
+      SrcBlock                "From12"
+      SrcPort                 1
+      DstBlock                "Display49"
+      DstPort                 1
+      #GUID                   0073bc80-053b-42eb-8ce5-d4748194e709
+    }
+    Line {
+      SrcBlock                "From13"
+      SrcPort                 1
+      DstBlock                "Display50"
+      DstPort                 1
+      #GUID                   ea07548b-8e46-495c-80f3-cab31a3254e0
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "Display39"
+      DstPort                 1
+      #GUID                   c5afca8b-fe9d-4d0d-820f-c7e3f319e4fb
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "Display40"
+      DstPort                 1
+      #GUID                   e1763e29-fe6f-467d-93f5-a70072d4b938
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      DstBlock                "Display41"
+      DstPort                 1
+      #GUID                   08ded1fd-f142-47ba-a921-497fe2ed8718
+    }
+    Line {
+      SrcBlock                "From5"
+      SrcPort                 1
+      DstBlock                "Display42"
+      DstPort                 1
+      #GUID                   2d35747d-fd83-40d3-b1de-cdf76194fbf1
+    }
+    Line {
+      SrcBlock                "From6"
+      SrcPort                 1
+      DstBlock                "Display43"
+      DstPort                 1
+      #GUID                   4ab134a1-61bf-414a-bf29-151e2411ecd5
+    }
+    Line {
+      SrcBlock                "From7"
+      SrcPort                 1
+      DstBlock                "Display44"
+      DstPort                 1
+      #GUID                   d90141cd-19e3-4b67-acba-663277396f35
+    }
+    Line {
+      SrcBlock                "From8"
+      SrcPort                 1
+      DstBlock                "Display45"
+      DstPort                 1
+      #GUID                   8f15f3cb-8551-4544-bef3-8d701145bf29
+    }
+    Line {
+      SrcBlock                "From9"
+      SrcPort                 1
+      DstBlock                "Display46"
+      DstPort                 1
+      #GUID                   3d91ef21-ec76-4b3b-9aa2-41cbebc83eef
+    }
+    Line {
+      SrcBlock                "LED_snake"
+      SrcPort                 1
+      DstBlock                "BDOCT"
+      DstPort                 1
+      #GUID                   02cab770-0d4e-43fd-98e7-93057a5d9c86
+    }
+    Line {
+      SrcBlock                "LED_snake1"
+      SrcPort                 1
+      DstBlock                "BDOCT1"
+      DstPort                 1
+      #GUID                   94eae426-c4ae-4ba9-8d54-24d7b3bb47d8
+    }
+    Line {
+      SrcBlock                "WG__S1M455"
+      SrcPort                 1
+      DstBlock                "Display22"
+      DstPort                 1
+      #GUID                   11f87e3e-e383-4154-92ba-cc85e937b8ee
+    }
+    Line {
+      SrcBlock                "WG__S1M455"
+      SrcPort                 2
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   de504728-a27d-4793-bdfa-13c133d84fdf
+    }
+    Line {
+      SrcBlock                "WG__S1M455"
+      SrcPort                 3
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   210c3b68-c801-43bf-b96a-a0f00e70c8f4
+    }
+    Line {
+      SrcBlock                "WG__S1M455"
+      SrcPort                 4
+      DstBlock                "Display3"
+      DstPort                 1
+      #GUID                   67657466-11a2-46bc-ac27-5773f7a0cc70
+    }
+    Line {
+      SrcBlock                "WG__S2M455"
+      SrcPort                 1
+      DstBlock                "Display8"
+      DstPort                 1
+      #GUID                   9ec1aa03-5d62-4829-a981-ee9a3b5836ff
+    }
+    Line {
+      SrcBlock                "WG__S2M455"
+      SrcPort                 2
+      DstBlock                "Display15"
+      DstPort                 1
+      #GUID                   238e8777-14b7-40c8-b65e-26ee1b11801a
+    }
+    Line {
+      SrcBlock                "WG__S2M455"
+      SrcPort                 3
+      DstBlock                "Display16"
+      DstPort                 1
+      #GUID                   bfa67fe0-2310-4c37-b71b-f5f549285711
+    }
+    Line {
+      SrcBlock                "WG__S2M455"
+      SrcPort                 4
+      DstBlock                "Display17"
+      DstPort                 1
+      #GUID                   77001b8f-8fc6-42f3-9a31-e65052a074ac
+    }
+    Line {
+      SrcBlock                "WG__S3M455"
+      SrcPort                 1
+      DstBlock                "Display21"
+      DstPort                 1
+      #GUID                   8ec31400-8ac0-48ec-91b8-42c41eb5415c
+    }
+    Line {
+      SrcBlock                "WG__S3M455"
+      SrcPort                 2
+      DstBlock                "Display18"
+      DstPort                 1
+      #GUID                   29108919-0a01-4bf6-bd84-a243bd7997de
+    }
+    Line {
+      SrcBlock                "WG__S3M455"
+      SrcPort                 3
+      DstBlock                "Display19"
+      DstPort                 1
+      #GUID                   1b1fcee3-ad28-4d97-9ed5-4714dd1a661e
+    }
+    Line {
+      SrcBlock                "WG__S3M455"
+      SrcPort                 4
+      DstBlock                "Display20"
+      DstPort                 1
+      #GUID                   50f7a2ae-552a-409e-b1f6-adb3ff00adac
+    }
+    Line {
+      SrcBlock                "WG__S5M430"
+      SrcPort                 1
+      DstBlock                "Display6"
+      DstPort                 1
+      #GUID                   b6f04514-604e-4596-a41f-53f410f5852d
+    }
+    Line {
+      SrcBlock                "WG__S5M430"
+      SrcPort                 2
+      DstBlock                "Display9"
+      DstPort                 1
+      #GUID                   b72030b4-0e27-46d5-be86-a8f74ef18ace
+    }
+    Line {
+      SrcBlock                "WG__S5M430"
+      SrcPort                 3
+      DstBlock                "Display7"
+      DstPort                 1
+      #GUID                   67d1b660-58d5-4b12-88cf-53866d5ccf96
+    }
+    Line {
+      SrcBlock                "WG__S5M430"
+      SrcPort                 4
+      DstBlock                "Display10"
+      DstPort                 1
+      #GUID                   7b40d0cf-f6e9-4b5c-b0c4-d4e02b04c1c9
+    }
+    Line {
+      SrcBlock                "WG__S5M430"
+      SrcPort                 5
+      DstBlock                "Display12"
+      DstPort                 1
+      #GUID                   79f71aa7-8aaa-4565-84bc-302b510e483e
+    }
+    Line {
+      SrcBlock                "WG__S5M430"
+      SrcPort                 6
+      DstBlock                "Display11"
+      DstPort                 1
+      #GUID                   215fd76a-8a7c-4ea1-a48a-0846a9b5a343
+    }
+    Line {
+      SrcBlock                "WG__S5M430"
+      SrcPort                 7
+      DstBlock                "Display13"
+      DstPort                 1
+      #GUID                   35cb4087-f093-486c-80f8-795c0113df4f
+    }
+    Line {
+      SrcBlock                "WG__S5M430"
+      SrcPort                 8
+      DstBlock                "Display14"
+      DstPort                 1
+      #GUID                   ec890dab-d9fd-4232-ac22-d7b83179d540
+    }
+    Line {
+      SrcBlock                "WG__S6M430"
+      SrcPort                 1
+      DstBlock                "Display28"
+      DstPort                 1
+      #GUID                   da89f773-ab8d-46dc-84bb-f882db54c0d7
+    }
+    Line {
+      SrcBlock                "WG__S6M430"
+      SrcPort                 2
+      DstBlock                "Display30"
+      DstPort                 1
+      #GUID                   130c7ed0-3198-4f27-8cac-99022399d9d4
+    }
+    Line {
+      SrcBlock                "WG__S6M430"
+      SrcPort                 3
+      DstBlock                "Display29"
+      DstPort                 1
+      #GUID                   609238ea-7609-4fc8-a298-179a1c21a311
+    }
+    Line {
+      SrcBlock                "WG__S6M430"
+      SrcPort                 4
+      DstBlock                "Display23"
+      DstPort                 1
+      #GUID                   bad85ec0-9b33-4c0a-8f43-d0645439b224
+    }
+    Line {
+      SrcBlock                "WG__S6M430"
+      SrcPort                 5
+      DstBlock                "Display25"
+      DstPort                 1
+      #GUID                   0b74cdc4-8460-4ff5-85a5-27a5d1f5af7b
+    }
+    Line {
+      SrcBlock                "WG__S6M430"
+      SrcPort                 6
+      DstBlock                "Display24"
+      DstPort                 1
+      #GUID                   c8443bce-7991-4af3-aff2-90547316ecd6
+    }
+    Line {
+      SrcBlock                "WG__S6M430"
+      SrcPort                 7
+      DstBlock                "Display26"
+      DstPort                 1
+      #GUID                   e40e9f28-8bb4-4f47-9985-7970f25dbe3c
+    }
+    Line {
+      SrcBlock                "WG__S6M430"
+      SrcPort                 8
+      DstBlock                "Display27"
+      DstPort                 1
+      #GUID                   c41a0e7a-8f80-401e-b678-b694e7b35d13
+    }
+    Line {
+      SrcBlock                "WG__S7M430"
+      SrcPort                 1
+      DstBlock                "Display36"
+      DstPort                 1
+      #GUID                   a2f2b81c-fa73-4179-9ff3-641065af2ad5
+    }
+    Line {
+      SrcBlock                "WG__S7M430"
+      SrcPort                 2
+      DstBlock                "Display38"
+      DstPort                 1
+      #GUID                   ad4b9a17-5fed-4891-9d4a-a09c8cd0405e
+    }
+    Line {
+      SrcBlock                "WG__S7M430"
+      SrcPort                 3
+      DstBlock                "Display37"
+      DstPort                 1
+      #GUID                   8b80dde7-2113-461e-9e85-690416df9128
+    }
+    Line {
+      SrcBlock                "WG__S7M430"
+      SrcPort                 4
+      DstBlock                "Display31"
+      DstPort                 1
+      #GUID                   cf18347a-91ce-4e31-ab9c-de1497b0ba0a
+    }
+    Line {
+      SrcBlock                "WG__S7M430"
+      SrcPort                 5
+      DstBlock                "Display33"
+      DstPort                 1
+      #GUID                   65961d38-e10d-49f4-8c0d-40df7ec19f0b
+    }
+    Line {
+      SrcBlock                "WG__S7M430"
+      SrcPort                 6
+      DstBlock                "Display32"
+      DstPort                 1
+      #GUID                   0af35a5c-fbeb-4488-b320-6a99de676983
+    }
+    Line {
+      SrcBlock                "WG__S7M430"
+      SrcPort                 7
+      DstBlock                "Display34"
+      DstPort                 1
+      #GUID                   5ba0347e-633c-494d-a720-baf668da7ffb
+    }
+    Line {
+      SrcBlock                "WG__S7M430"
+      SrcPort                 8
+      DstBlock                "Display35"
+      DstPort                 1
+      #GUID                   5a666155-4d19-4ffe-9540-dcb16ce1d201
+    }
+    Annotation {
+      Position                [175, 40]
+      Text                    "See the README.md file in project folder for de"
+"tailed information."
+      #GUID                   fbc90371-a705-40a9-b6fc-01183268d212
+    }
+    Annotation {
+      Position                [130, 20]
+      Text                    "Wago PFC100/PFC200 example"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   97f6ed3c-afb5-4c31-956c-3af2ea4818a9
+    }
+  }
+}

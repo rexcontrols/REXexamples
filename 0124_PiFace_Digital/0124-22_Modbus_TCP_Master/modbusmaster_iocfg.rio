@@ -3,17 +3,17 @@ Modbus {
   Timeout                 1000
   Flags                   8
   Gap                     30000
-  #GUID                   e36567e0-e253-444e-92ca-609cabea31ac
+  #GUID                   61f8a55c-910b-4d37-b761-7b97d4592cda
   Slave {
     Name                    "MBslave"
-    IPaddress               192.168.1.111
+    IPaddress               "192.168.1.111"
     Subaddress              255
     SlaveID                 0
     MaxRequest              16
     TCPport                 502
   }
   Item {
-    Name                    ControlSignals
+    Name                    "ControlSignals"
     SlaveAdr                0
     RegisterAdr             0
     Type                    0x00000101

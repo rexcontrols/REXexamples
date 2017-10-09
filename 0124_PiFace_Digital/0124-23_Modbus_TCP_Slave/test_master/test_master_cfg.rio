@@ -3,80 +3,80 @@ Modbus {
   Timeout                 1000
   Flags                   8
   Gap                     30000
-  #GUID                   92392e7e-d2ca-4cf9-b7a9-136f72c7dfce
+  #GUID                   2868e934-66d7-4147-a613-4793dce224d3
   Slave {
     Name                    "RPi_PiFace"
-    IPaddress               192.168.1.100
+    IPaddress               "192.168.1.100"
     Subaddress              255
     SlaveID                 0
     MaxRequest              16
     TCPport                 502
   }
   Item {
-    Name                    PiFaceDO0
+    Name                    "PiFaceDO0"
     SlaveAdr                0
     RegisterAdr             0
     Type                    0x00000101
     Count                   1
   }
   Item {
-    Name                    PiFaceDO1
+    Name                    "PiFaceDO1"
     SlaveAdr                0
     RegisterAdr             1
     Type                    0x00000101
     Count                   1
   }
   Item {
-    Name                    PiFaceDO2
+    Name                    "PiFaceDO2"
     SlaveAdr                0
     RegisterAdr             2
     Type                    0x00000101
     Count                   1
   }
   Item {
-    Name                    PiFaceDO3
+    Name                    "PiFaceDO3"
     SlaveAdr                0
     RegisterAdr             3
     Type                    0x00000101
     Count                   1
   }
   Item {
-    Name                    PiFaceDO4_7
+    Name                    "PiFaceDO4_7"
     SlaveAdr                0
     RegisterAdr             4
     Type                    0x00000101
     Count                   4
   }
   Item {
-    Name                    PiFaceDI0
+    Name                    "PiFaceDI0"
     SlaveAdr                0
     RegisterAdr             0
     Type                    0x00000200
     Count                   1
   }
   Item {
-    Name                    PiFaceDI1
+    Name                    "PiFaceDI1"
     SlaveAdr                0
     RegisterAdr             1
     Type                    0x00000200
     Count                   1
   }
   Item {
-    Name                    PiFaceDI2
+    Name                    "PiFaceDI2"
     SlaveAdr                0
     RegisterAdr             2
     Type                    0x00000200
     Count                   1
   }
   Item {
-    Name                    PiFaceDI3
+    Name                    "PiFaceDI3"
     SlaveAdr                0
     RegisterAdr             3
     Type                    0x00000200
     Count                   1
   }
   Item {
-    Name                    PiFaceDI4_7
+    Name                    "PiFaceDI4_7"
     SlaveAdr                0
     RegisterAdr             4
     Type                    0x00000200

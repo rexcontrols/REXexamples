@@ -1,0 +1,385 @@
+Model {
+  Name                    "pigeon_rb300_task"
+  Version                 3.00
+  #RexVersion             "2.50.5 rev. 8392, Date 2017-07-03"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "pigeon_rb300_task"
+    Location                [317, 34, 934, 741]
+    #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
+    Block {
+      BlockType               Reference
+      Name                    "BIS_BLINK_RELAY2"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [80, 443, 95, 467]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      Off
+      t1                      1
+      t2                      2
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      bEdit                   off
+      #GUID                   3dfd1971-78a4-4e9f-bc15-a455c38ac295
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_BLINK_RELAY3"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [80, 488, 95, 512]
+      SourceBlock             "genlib/BIS"
+      NamePlacement           ""
+      SourceType              "BIS"
+      Y0                      Off
+      t1                      0
+      t2                      "0.2"
+      t3                      "0.4"
+      t4                      "0.6"
+      t5                      "0.8"
+      t6                      "1.0"
+      t7                      "2.0"
+      t8                      0
+      RPT                     on
+      bEdit                   off
+      #GUID                   4bea0f83-f6de-428e-ba2c-5168c2fd64dd
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [295, 348, 315, 362]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   f93e34f7-1e46-4c2f-a05b-39ac9231be65
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RELAY1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [80, 398, 100, 412]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   6a03790b-f032-493d-a160-4a916cb4b533
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_AO1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [65, 143, 85, 157]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "7.5"
+      BackgroundColor         "magenta"
+      #GUID                   c2737c80-fb97-43b3-b95a-f783ef3e591a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [180, 588, 260, 612]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   75df3dd7-a24f-4882-ba2e-f8a05dc9df82
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [180, 623, 260, 647]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   1e1ec28d-da19-4e9f-af6d-b861d3f8b093
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [180, 658, 260, 682]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   daf3c94f-23e3-4bf5-8352-41cdeb6a1451
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 593, 140, 607]
+      ShowName                off
+      GotoTag                 "PGN__ID1"
+      #GUID                   abc726c0-e3a4-4bac-8a03-bb36e9e625db
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 628, 140, 642]
+      ShowName                off
+      GotoTag                 "PGN__ID4"
+      #GUID                   b7e87599-627d-4e20-ae63-ed68e9c49801
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 663, 140, 677]
+      ShowName                off
+      GotoTag                 "PGN__I5"
+      #GUID                   222f2197-0058-4fb2-90d9-b03728c9f486
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [230, 318, 320, 332]
+      ShowName                off
+      GotoTag                 "PGN__AI3"
+      BackgroundColor         "yellow"
+      #GUID                   84efe735-3cb9-4298-bed0-f5ed3a375768
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [130, 328, 220, 342]
+      ShowName                off
+      GotoTag                 "PGN__AI1"
+      BackgroundColor         "yellow"
+      #GUID                   17b47963-ce92-4ea0-90f8-e2e855e49f8f
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [295, 398, 385, 412]
+      ShowName                off
+      GotoTag                 "PGN__O1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   1b055120-a0bd-4277-b70d-7580a70a6c38
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [295, 443, 385, 457]
+      ShowName                off
+      GotoTag                 "PGN__O3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b76bbaf4-1021-4b18-9b96-609d5a1a9ad7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [295, 488, 385, 502]
+      ShowName                off
+      GotoTag                 "PGN__O8"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   3963c475-fd15-43e9-b578-0ca2d0d49d98
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 188, 255, 202]
+      ShowName                off
+      GotoTag                 "PGN__AO2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   8df9de72-e150-4f10-b6c5-bd789041cbb4
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 143, 255, 157]
+      ShowName                off
+      GotoTag                 "PGN__AO1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   879d6ad1-0ebb-451d-b6d5-31e8027cecd4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SG"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [55, 188, 80, 202]
+      SourceBlock             "genlib/SG"
+      isig                    "1: SINE"
+      amp                     5
+      freq                    1
+      phase                   0
+      offset                  5
+      ifrunit                 "1: Hz"
+      iphunit                 "1: degrees"
+      #GUID                   405fb67f-813c-433d-ba78-cbbc2a68af0d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [405, 303, 450, 377]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
+      User                    ""
+      #GUID                   f89c29f5-a4af-445d-965b-7cf9f156daa0
+    }
+    Line {
+      SrcBlock                "BIS_BLINK_RELAY2"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   110e28e5-b9b5-4834-ac75-7eb2d3ea0d84
+    }
+    Line {
+      SrcBlock                "BIS_BLINK_RELAY3"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   366cac7e-b611-4550-97db-b51ea303b4c7
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   91ba70a8-64c8-4b32-919a-cfc49f9bf4f0
+    }
+    Line {
+      SrcBlock                "CNB_RELAY1"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   cb8599a8-b796-436b-a2b8-86b08c37aeab
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   a5b4567d-f5a0-4ec9-ab40-8e407bc63c6e
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   fe2a1779-061a-4d13-889a-efb97b5eed77
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   36ada915-31de-4d4c-ade4-384eadbf7dc3
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 2
+      #GUID                   2691dc3d-ef5e-4a36-9612-bd4c8728684a
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 3
+      #GUID                   d9d9678d-6c3b-4d3f-aad2-978afa9421eb
+    }
+    Line {
+      SrcBlock                "SG"
+      SrcPort                 1
+      Points                  [40, 0]
+      #GUID                   373967d8-1fdf-4859-91c7-f3e096f1c7dd
+      Branch {
+        DstBlock                "Goto3"
+        DstPort                 1
+        #GUID                   e9ba55e9-8176-4fcc-9e7d-afde8b10d5e4
+      }
+      Branch {
+        Points                  [0, -45]
+        DstBlock                "Goto4"
+        DstPort                 1
+        #GUID                   52ff38f4-fa58-4f26-b379-58b952cb1ea5
+      }
+      Branch {
+        Points                  [0, 120]
+        DstBlock                "TRND"
+        DstPort                 1
+        #GUID                   892f949c-7efd-42d3-a007-2d93fc84dbb8
+      }
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   11fb3215-9583-467e-a7df-02fe53928e7e
+    }
+    Annotation {
+      Position                [140, 20]
+      Text                    "Pigeon RB300 test"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   5726bda1-c682-413a-b149-4bccae8621ed
+    }
+  }
+}

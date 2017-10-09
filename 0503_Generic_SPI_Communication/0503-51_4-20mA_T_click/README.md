@@ -24,12 +24,12 @@ in "4_20mA_R_click_task" (receiver).
 
 ## Documentation ##
 - **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX on the Raspberry Pi minicomputer](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- [Getting started with REX on the Raspberry Pi minicomputer](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
+- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
 - [4-20 mA R click board] (http://www.mikroe.com/click/4-20ma-r/)
 - [4-20 mA T click board] (http://www.mikroe.com/click/4-20ma-t/)
 - MCP24921 datasheet, MCP3201 datasheet (attached in transmitter and receiver folders)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
+- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##

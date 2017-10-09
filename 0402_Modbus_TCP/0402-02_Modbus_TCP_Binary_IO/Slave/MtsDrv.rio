@@ -1,48 +1,46 @@
 Modbus {
   Name                    "Slave"
-  BaudRate                19200
-  Parity                  -1
-  SpaceTime               2
   Timeout                 1000
   Flags                   12
   Gap                     30000
+  #GUID                   91882a29-2340-40d1-a167-9f9ae3e2658b
   Item {
-    Name                    BinIn26_41
+    Name                    "BinIn26_41"
     SlaveAdr                -1
     RegisterAdr             26
     Type                    0x00000100
     Count                   16
   }
   Item {
-    Name                    BinOut26_41
+    Name                    "BinOut26_41"
     SlaveAdr                -1
     RegisterAdr             26
     Type                    0x00000201
     Count                   16
   }
   Item {
-    Name                    BinIn1
+    Name                    "BinIn1"
     SlaveAdr                -1
     RegisterAdr             1
     Type                    0x00000100
     Count                   1
   }
   Item {
-    Name                    BinOut1
+    Name                    "BinOut1"
     SlaveAdr                -1
     RegisterAdr             1
     Type                    0x00000201
     Count                   1
   }
   Item {
-    Name                    BinIn10_25
+    Name                    "BinIn10_25"
     SlaveAdr                -1
     RegisterAdr             10
     Type                    0x00000100
     Count                   16
   }
   Item {
-    Name                    BinOut10_25
+    Name                    "BinOut10_25"
     SlaveAdr                -1
     RegisterAdr             10
     Type                    0x00000201

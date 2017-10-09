@@ -1,12 +1,7 @@
 Model {
   Name                    "station1_task"
   Version                 3.00
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
-  rev.                    "3173,"
-  Date                    "2013-05-31"
-  #RexVersion             "2.50.4 rev. 8177 - REXCONV, Date 2017-4-28"
-  rev.                    "3173,"
-  Date                    "2013-05-31"
+  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"

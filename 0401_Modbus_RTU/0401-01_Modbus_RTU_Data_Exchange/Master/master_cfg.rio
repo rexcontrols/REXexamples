@@ -2,90 +2,91 @@ Modbus {
   Name                    "COM1"
   BaudRate                19200
   Parity                  0
+  SyncTime                0
   SpaceTime               2
-  Timeout                 10000
+  Timeout                 100
   Flags                   0
-  Gap                     30000
-  #GUID                   63638a84-4f0c-4754-8469-57be5fa58039
+  Gap                     10000
+  #GUID                   d3d7ec60-25c1-437f-9ccb-92e956b2ce2a
   Item {
-    Name                    readReg0
+    Name                    "readReg0"
     SlaveAdr                1
     RegisterAdr             0
-    Type                    0x00040204
+    Type                    0x00000204
     Count                   1
   }
   Item {
-    Name                    readReg1
+    Name                    "readReg1"
     SlaveAdr                1
     RegisterAdr             1
     Type                    0x00000284
     Count                   1
   }
   Item {
-    Name                    readReg2
+    Name                    "readReg2"
     SlaveAdr                1
     RegisterAdr             2
     Type                    0x00000204
     Count                   1
   }
   Item {
-    Name                    readReg3
+    Name                    "readReg3"
     SlaveAdr                1
     RegisterAdr             3
     Type                    0x00000284
     Count                   1
   }
   Item {
-    Name                    readFloat
+    Name                    "readFloat"
     SlaveAdr                1
     RegisterAdr             4
     Type                    0x00000244
     Count                   2
   }
   Item {
-    Name                    readDouble
+    Name                    "readDouble"
     SlaveAdr                1
     RegisterAdr             6
     Type                    0x00200204
     Count                   4
   }
   Item {
-    Name                    writeReg0
+    Name                    "writeReg0"
     SlaveAdr                1
     RegisterAdr             2048
     Type                    0x00000104
     Count                   1
   }
   Item {
-    Name                    writeReg1
+    Name                    "writeReg1"
     SlaveAdr                1
     RegisterAdr             2049
     Type                    0x00000184
     Count                   1
   }
   Item {
-    Name                    writeReg2
+    Name                    "writeReg2"
     SlaveAdr                1
     RegisterAdr             2050
     Type                    0x00000104
     Count                   1
   }
   Item {
-    Name                    writeReg3
+    Name                    "writeReg3"
     SlaveAdr                1
     RegisterAdr             2051
     Type                    0x00000184
     Count                   1
   }
   Item {
-    Name                    writeFloat
+    Name                    "writeFloat"
     SlaveAdr                1
     RegisterAdr             2052
     Type                    0x00000144
     Count                   2
   }
   Item {
-    Name                    writeDouble
+    Name                    "writeDouble"
     SlaveAdr                1
     RegisterAdr             2054
     Type                    0x00200104

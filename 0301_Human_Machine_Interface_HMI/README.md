@@ -9,8 +9,8 @@ included in this repository.
 
 ## Documentation ##
 
-- [HMI in REX Control System](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexHMI/RexHMI_ENG.html)
-- [REST API of the REX Control System](https://www.rexcontrols.com/media/2.50.4/doc/ENGLISH/MANUALS/RexRestApi/RexRestApi_ENG.html)
+- [HMI in REX Control System](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexHMI/RexHMI_ENG.html)
+- [REST API of the REX Control System](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexRestApi/RexRestApi_ENG.html)
 - [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
 
 ## Additional information ##
