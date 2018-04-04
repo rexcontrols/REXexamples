@@ -9,16 +9,17 @@ your project.
 
 ## Opening the example ##
 - The **exec.mdl* file is the project main file
-- Open it with RexDraw
+- Open it with *REXYGEN Studio*
 
 ## Documentation ##
 
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [Getting started with REXYGEN and Pigeon PLC](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_Pigeon_PLC_ENG.pdf)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
 - [Pigeon PLC website](http://pigeoncomputers.com/)
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

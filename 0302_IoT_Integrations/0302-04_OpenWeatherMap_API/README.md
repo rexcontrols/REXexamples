@@ -1,4 +1,4 @@
-﻿OpenWeatherMap API example
+OpenWeatherMap API example
 ==========================
 
 The source files located in this folder illustrate the use of a HTTP function block
@@ -19,12 +19,12 @@ The algorithm runs each 500 milliseconds (0.5 s). See the EXEC function block,
 tick x ntick0 = 0.1 x 5 = 0.5 s
 
 ## Prerequisites ##
-- RexCore must be installed and running on the target device.
+- *REXYGEN Runtime Core* must be installed and running on the target device.
 - Registration (free) at OpenWeatherMap in order to get unique API ID.
 
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
-- Open it with *RexDraw*.
+- Open it with *REXYGEN Studio*.
 - Specify your unique OpenWeatherMap API ID into CNS_API:ID:scv. It will concatenate together with 
   parameter "url" of "HTTP" block whole GET request: http://api.openweathermap.org/data/2.5/weather?q=Pilsen&units=metric&appid=your_API_ID
 - Compile and download it to the target device.
@@ -32,12 +32,12 @@ tick x ntick0 = 0.1 x 5 = 0.5 s
 and parsed data.
 
 ## Documentation ##
-- **Press F1 for help** on the selected function block in the *RexDraw* program.
+- **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
 - [OpenWeatherMap API documentation](http://openweathermap.org/api)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

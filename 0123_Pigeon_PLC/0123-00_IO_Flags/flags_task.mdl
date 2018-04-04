@@ -1,99 +1,7 @@
 Model {
   Name                    "flags_task"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Thu Jan 06 15:26:11 2005"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "mertlj"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Tue Apr 29 09:25:44 2008"
-  ModelVersionFormat      "1.%<AutoIncrement:195>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -108,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,427 +34,417 @@ Model {
   }
   System {
     Name                    "flags_task"
-    Location                [290, 35, 1187, 740]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "A4"
-    PaperUnits              "centimeters"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   92200e26-7821-416b-a2d2-6b94ab9f00ec
+    Location                [291, 36, 1188, 738]
+    #GUID                   4bb754f1-3526-449e-9b5d-8456d8230db0
     Block {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 183, 130, 197]
+      Position                [45, 183, 135, 197]
       ShowName                off
       GotoTag                 "PGN__I1"
       BackgroundColor         "yellow"
-      #GUID                   989805ca-8af6-4381-90c8-7ea92f033ac4
+      #GUID                   938dc38b-0cfa-4041-85c4-83044f2f5d63
     }
     Block {
       BlockType               From
       Name                    "From1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 318, 130, 332]
+      Position                [45, 318, 135, 332]
       ShowName                off
       GotoTag                 "PGN__ID1"
       BackgroundColor         "yellow"
-      #GUID                   0c09f6ce-ce8b-448f-a42c-399f783342e6
+      #GUID                   ee1f2823-ad98-4b8e-89cf-5a937443377a
     }
     Block {
       BlockType               From
       Name                    "From10"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 338, 130, 352]
+      Position                [45, 338, 135, 352]
       ShowName                off
       GotoTag                 "PGN__ID2"
       BackgroundColor         "yellow"
-      #GUID                   3a388273-980d-4bfa-af71-c28829b49c31
+      #GUID                   7a6970e1-90f8-43ce-9981-5dd9deb1c236
     }
     Block {
       BlockType               From
       Name                    "From11"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 358, 130, 372]
+      Position                [45, 358, 135, 372]
       ShowName                off
       GotoTag                 "PGN__ID3"
       BackgroundColor         "yellow"
-      #GUID                   eb71e456-b5ce-4300-89fb-4ece83ae6556
+      #GUID                   93018c9f-a70b-477e-b5a2-2eca5abdda82
     }
     Block {
       BlockType               From
       Name                    "From12"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 378, 130, 392]
+      Position                [45, 378, 135, 392]
       ShowName                off
       GotoTag                 "PGN__ID4"
       BackgroundColor         "yellow"
-      #GUID                   24142c78-54d4-412c-9200-252e6824f6bb
+      #GUID                   b1d85d70-be11-4535-bed0-4982a6015ccd
     }
     Block {
       BlockType               From
       Name                    "From2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 203, 130, 217]
+      Position                [45, 203, 135, 217]
       ShowName                off
       GotoTag                 "PGN__I2"
       BackgroundColor         "yellow"
-      #GUID                   9b12006e-009a-44c1-b685-35d9d85ca5c1
+      #GUID                   01a5be28-b627-4fb9-8e6f-9b47e144731a
     }
     Block {
       BlockType               From
       Name                    "From3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 223, 130, 237]
+      Position                [45, 223, 135, 237]
       ShowName                off
       GotoTag                 "PGN__I3"
       BackgroundColor         "yellow"
-      #GUID                   d41ea16b-9f45-4f38-b87f-9d7e8465a3fe
+      #GUID                   23476ed9-4b1e-4f32-b525-3680ad9234e3
     }
     Block {
       BlockType               From
       Name                    "From4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 453, 130, 467]
+      Position                [45, 453, 135, 467]
       ShowName                off
       GotoTag                 "PGN__AI1"
       BackgroundColor         "yellow"
-      #GUID                   49c90623-15ea-4a0a-88c4-a20829afca98
+      #GUID                   2aa7dee8-8624-4af3-b759-aaf9056b36fe
     }
     Block {
       BlockType               From
       Name                    "From5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 263, 130, 277]
+      Position                [45, 263, 135, 277]
       ShowName                off
       GotoTag                 "PGN__I8"
       BackgroundColor         "yellow"
-      #GUID                   246cc720-33fa-49b5-8c1a-335274f73e6d
+      #GUID                   aca98973-9d4a-4f20-8268-9d329036a97f
     }
     Block {
       BlockType               From
       Name                    "From6"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 473, 130, 487]
+      Position                [45, 473, 135, 487]
       ShowName                off
       GotoTag                 "PGN__AI2"
       BackgroundColor         "yellow"
-      #GUID                   7719e87a-e5ff-4800-88c7-6496aeb92100
+      #GUID                   f8040b4b-4208-4fe6-80c9-1eefd3b3bc26
     }
     Block {
       BlockType               From
       Name                    "From7"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 493, 130, 507]
+      Position                [45, 493, 135, 507]
       ShowName                off
       GotoTag                 "PGN__AI3"
       BackgroundColor         "yellow"
-      #GUID                   48a0264b-4f49-451b-8e9d-9010d5b9e623
+      #GUID                   b101cad4-f543-4c1e-9273-bbc3a7cb58ee
     }
     Block {
       BlockType               From
       Name                    "From8"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 513, 130, 527]
+      Position                [45, 513, 135, 527]
       ShowName                off
       GotoTag                 "PGN__AI4"
       BackgroundColor         "yellow"
-      #GUID                   344a0247-978a-4bb7-88c2-b9eb8ceac528
+      #GUID                   0a94a247-0bcf-4b07-8856-76ddbee59447
     }
     Block {
       BlockType               From
       Name                    "From9"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 578, 130, 592]
+      Position                [45, 578, 135, 592]
       ShowName                off
       GotoTag                 "PGN__OK"
       BackgroundColor         "yellow"
-      #GUID                   e3af85b1-f756-4da8-8765-4b8351622ca4
+      #GUID                   dce9a8b9-3697-4a50-a70f-3822e3837d60
     }
     Block {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 183, 495, 197]
+      Position                [410, 183, 500, 197]
       ShowName                off
       GotoTag                 "PGN__O1"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   ca4e9f18-7655-4c31-ab7e-fa6fa75f733b
+      #GUID                   9cc26144-1738-44ae-86da-094c12356f8b
     }
     Block {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 358, 495, 372]
+      Position                [410, 358, 500, 372]
       ShowName                off
       GotoTag                 "PGN__AO1"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   18e79241-b964-4f65-9bbe-240933216811
+      #GUID                   8f6bbf86-2262-4bf5-81da-34e7728e8463
     }
     Block {
       BlockType               Goto
       Name                    "Goto10"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 293, 495, 307]
+      Position                [410, 293, 500, 307]
       ShowName                off
       GotoTag                 "PGN__DISABLE"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   9318f293-b04b-4c33-b4b0-3e32ac5aa3db
+      #GUID                   0524a5ed-90ea-48a9-82cb-8aaebd5b41e0
     }
     Block {
       BlockType               Goto
       Name                    "Goto11"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 513, 495, 527]
+      Position                [410, 513, 500, 527]
       ShowName                off
       GotoTag                 "PGN__WDEN"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   41241af1-9535-44b6-818b-ca0a9c030933
+      #GUID                   9a91a41a-2ea6-49d3-8d83-9e0b76a67fa2
     }
     Block {
       BlockType               Goto
       Name                    "Goto12"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 533, 495, 547]
+      Position                [410, 533, 500, 547]
       ShowName                off
       GotoTag                 "PGN__WDI"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   41427621-f2e1-4dec-b86f-9abda6424bd9
+      #GUID                   b048b159-689b-4a0f-8a3b-196da208d9f6
     }
     Block {
       BlockType               Goto
       Name                    "Goto13"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [400, 598, 520, 612]
+      Position                [405, 598, 525, 612]
       ShowName                off
       GotoTag                 "PGN__DISABLE5V"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   f6ab805d-4b9e-4681-a7bf-96f21a24fa2c
+      #GUID                   746da31f-f443-47b2-bd26-d12f18a58dc1
     }
     Block {
       BlockType               Goto
       Name                    "Goto14"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [400, 618, 520, 632]
+      Position                [405, 618, 525, 632]
       ShowName                off
       GotoTag                 "PGN__DISABLE3V3"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   79322dce-4660-44ba-b518-0596666e8926
+      #GUID                   dba18d7e-ecd9-48ff-ba58-656f005bafc6
     }
     Block {
       BlockType               Goto
       Name                    "Goto18"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 433, 495, 447]
+      Position                [410, 433, 500, 447]
       ShowName                off
       GotoTag                 "PGN__LED_USR"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   a2e79192-9eed-4a47-a44b-60ce30906584
+      #GUID                   148cd80d-a08f-4061-890b-72cc054a9f1e
     }
     Block {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 378, 495, 392]
+      Position                [410, 378, 500, 392]
       ShowName                off
       GotoTag                 "PGN__AO2"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   c0a5a410-cea2-4617-bf41-007bf0013df2
+      #GUID                   fc842d6a-9032-44ad-af2d-962577f525be
     }
     Block {
       BlockType               Goto
       Name                    "Goto6"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 203, 495, 217]
+      Position                [410, 203, 500, 217]
       ShowName                off
       GotoTag                 "PGN__O2"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   533d309f-e10f-4fe7-b55a-6d6f97a14d7d
+      #GUID                   7d50f21b-7edd-4441-b833-14b9fce7e17d
     }
     Block {
       BlockType               Goto
       Name                    "Goto7"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 223, 495, 237]
+      Position                [410, 223, 500, 237]
       ShowName                off
       GotoTag                 "PGN__O3"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   fe8fc731-b251-40c3-a6e8-a54711c9cfc1
+      #GUID                   20654f3f-b85d-4b39-aefe-8f26d371f1ba
     }
     Block {
       BlockType               Goto
       Name                    "Goto9"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [405, 263, 495, 277]
+      Position                [410, 263, 500, 277]
       ShowName                off
       GotoTag                 "PGN__O8"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   97dad726-3f4a-43cf-a3eb-1225fa66df0a
+      #GUID                   b2dcaba7-5920-4350-a65f-a46cf99b6ccd
     }
     Annotation {
-      Position                [445, 45]
+      Position                [450, 45]
       Text                    "This example serves as a library. It won't comp"
-"ile because it contains ALL input and output \nflags and there are conflicts."
-"\nPick only the input and output flags which you need and copy&paste them into"
-" your project."
+"ile because it contains ALL input and output \nflags and there are conflicts.\n"
+"Pick only the input and output flags which you need and copy&paste them into y"
+"our project."
       FontName                "Arial"
       FontSize                20
       FontWeight              "bold"
       ForegroundColor         "red"
-      #GUID                   1f6008b6-78d0-471b-a1a7-f29d616305bf
+      #GUID                   c88aeeb4-950c-4938-a157-dfaa89241874
     }
     Annotation {
-      Position                [460, 250]
+      Position                [465, 250]
       Text                    "..."
-      #GUID                   c644f21c-52c8-41b9-94d2-bded0130072e
+      #GUID                   fdfe696e-4990-4e9f-9cb9-c12fe2fe867c
     }
     Annotation {
-      Position                [155, 120]
+      Position                [160, 120]
       Text                    "Pigeon PLC input/output flags"
       FontName                "Arial"
       FontSize                20
       FontWeight              "bold"
-      #GUID                   71730ece-9cd7-446c-843f-47446105a937
+      #GUID                   4a327d48-5cc2-4fdf-a67e-0f9f7d7c2284
     }
     Annotation {
-      Position                [165, 190]
+      Position                [170, 190]
       Text                    "input I1"
-      #GUID                   a1bed673-b5e1-4317-8dbd-ca15fe503a2e
+      #GUID                   70f5de0d-a045-470d-9c5d-0b4e43d84bc8
     }
     Annotation {
-      Position                [165, 210]
+      Position                [170, 210]
       Text                    "input I2"
-      #GUID                   a2b13ede-72ab-41c0-8a31-069cc009acfe
+      #GUID                   ccb6c0fb-c1a9-4c68-a215-8d297ae63cc5
     }
     Annotation {
-      Position                [165, 230]
+      Position                [170, 230]
       Text                    "input I3"
-      #GUID                   14d61ce1-9272-420c-9d52-ab6349db6230
+      #GUID                   38090db6-ccfa-4882-96ed-b6449d606d33
     }
     Annotation {
-      Position                [165, 270]
+      Position                [170, 270]
       Text                    "input I8"
-      #GUID                   c6334328-be7e-4daf-b88d-63513900c9a2
+      #GUID                   d4c69853-33d0-4d8b-8ac1-6a988cedda01
     }
     Annotation {
-      Position                [75, 250]
+      Position                [80, 250]
       Text                    "..."
-      #GUID                   a835caf3-dcad-4c57-baed-ad454545f4f4
+      #GUID                   32192e95-8c20-4535-98b7-e8ac438b6097
     }
     Annotation {
-      Position                [445, 160]
+      Position                [450, 160]
       Text                    "Digital outputs"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   ac0b7d4b-be8d-4c31-8ba9-02b671807ca3
+      #GUID                   df48033a-0037-4043-91a7-22e0b1d372b2
     }
     Annotation {
-      Position                [535, 190]
+      Position                [540, 190]
       Text                    "output O1"
-      #GUID                   12a4a79c-334a-4c54-a2a7-fb7cad00c6e6
+      #GUID                   c371733d-ee93-4a3d-b7a9-09380ce30e05
     }
     Annotation {
-      Position                [535, 210]
+      Position                [540, 210]
       Text                    "output O2"
-      #GUID                   02729f2f-c9ef-4611-af29-c2acbd6bab40
+      #GUID                   f1c56462-ea58-4729-a1f7-fd8e7c01953a
     }
     Annotation {
-      Position                [535, 270]
+      Position                [540, 270]
       Text                    "output O8"
-      #GUID                   4e8f01e3-3346-4496-85d9-e3cdf7a880cc
+      #GUID                   434a9370-1350-4d1e-9235-01bfa2c3119b
     }
     Annotation {
-      Position                [555, 300]
+      Position                [560, 300]
       Text                    "Disable ALL outputs"
-      #GUID                   3832b9d1-314a-4797-8229-77b89dbc6317
+      #GUID                   eda8b855-1504-4a5c-9db2-270fa314ed03
     }
     Annotation {
-      Position                [535, 230]
+      Position                [540, 230]
       Text                    "output O3"
-      #GUID                   817123d5-f5d1-4e23-bc6f-d5173344d5d4
+      #GUID                   a1c7f834-d06f-449b-a6f2-701382c4bcf2
     }
     Annotation {
-      Position                [445, 415]
+      Position                [450, 415]
       Text                    "LED indicators"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   3bccc42a-1d92-429c-88fb-5cb5e02d1891
+      #GUID                   eb14ccb5-da3e-4233-85a4-6e0bf11f80d9
     }
     Annotation {
-      Position                [425, 495]
+      Position                [430, 495]
       Text                    "Watchdog"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   57b76f1b-5c0e-49eb-8f63-81334015416f
+      #GUID                   e57c33d3-cf0d-4f1f-be84-03ad3722f4ef
     }
     Annotation {
-      Position                [550, 520]
+      Position                [555, 520]
       Text                    "Enable watchdog"
-      #GUID                   008d49a4-39f6-4ad2-b603-0841cfa25efb
+      #GUID                   0cac62a3-26a4-4d2b-9ca3-19090878e5f8
     }
     Annotation {
-      Position                [545, 540]
+      Position                [550, 540]
       Text                    "Watchdog input"
-      #GUID                   bc4b0863-19ad-4d0a-b5be-e48467436b65
+      #GUID                   91387731-e20a-47a4-9ff3-2f7c4eb193c9
     }
     Annotation {
-      Position                [475, 580]
+      Position                [480, 580]
       Text                    "Internal power supplies"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   ab2c4ae0-e788-4620-b7a9-f40b567149c3
+      #GUID                   32fe3f68-6003-4ce5-9ce8-a1fe495952ae
     }
     Annotation {
-      Position                [135, 160]
+      Position                [140, 160]
       Text                    "Digital inputs (opto-isolated)"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   8b7d4d26-6d63-4ce6-9978-48ac0bca98eb
+      #GUID                   8eb91cf7-a588-4671-95b6-edb87dc148fb
     }
     Annotation {
-      Position                [125, 300]
+      Position                [130, 300]
       Text                    "Digital inputs (dry contact)"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   ea3cb5bf-dd0e-4dac-83e2-dbeea3ec2131
+      #GUID                   912c5b95-b89c-43a1-a48b-ffcf904ba2a7
     }
     Annotation {
-      Position                [125, 430]
+      Position                [130, 430]
       Text                    "Analog inputs (RB300 only)"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   c1908d19-cd38-4ccb-86db-e0f8a7faf8e1
+      #GUID                   2fc085e2-8747-4b75-ac98-421af32f9d31
     }
     Annotation {
-      Position                [490, 340]
+      Position                [495, 340]
       Text                    "Analog outputs (RB300 only)"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   474eb5a7-42cd-4734-b106-5cb889a90245
+      #GUID                   12f5c7d9-975d-4e66-97ad-255ad8cf96e5
     }
     Annotation {
-      Position                [120, 560]
+      Position                [125, 560]
       Text                    "Pigeon PLC diagnostics"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   6bac598b-f673-499e-a82a-1ea275642c47
+      #GUID                   f6ef98d4-d56e-41db-a8f5-05f75fe986c0
     }
   }
 }

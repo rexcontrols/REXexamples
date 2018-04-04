@@ -1,7 +1,7 @@
 Model {
   Name                    "myproject_exec"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "myproject_exec"
-    Location                [13, 34, 234, 484]
+    Location                [13, 34, 274, 484]
     #GUID                   2a2cba2d-8a91-4418-9d0f-df579ff28e96
     Block {
       BlockType               Reference
@@ -128,17 +128,17 @@ Model {
       #GUID                   393ac787-04bc-4f8c-bd3f-1fb41074b961
     }
     Annotation {
-      Position                [110, 25]
-      Text                    "Getting started with REX"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   c7460e16-08c2-4d19-9c74-55daaf287b92
-    }
-    Annotation {
       Position                [90, 55]
       Text                    "See the README.md file for\ndetailed informatio"
 "n."
       #GUID                   12c164ef-3643-414c-ad06-d472440b2421
+    }
+    Annotation {
+      Position                [130, 25]
+      Text                    "Getting started with REXYGEN"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   c7460e16-08c2-4d19-9c74-55daaf287b92
     }
   }
 }

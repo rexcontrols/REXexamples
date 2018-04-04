@@ -1,7 +1,7 @@
 Model {
   Name                    "mysql_recipes_task"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,13 +34,13 @@ Model {
   }
   System {
     Name                    "mysql_recipes_task"
-    Location                [300, 31, 689, 422]
+    Location                [300, 31, 749, 422]
     #GUID                   326bce78-6ac7-4a5b-977d-317426f29c65
     Block {
       BlockType               Reference
       Name                    "CNB_RUN"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [260, 243, 280, 257]
+      Position                [295, 203, 315, 217]
       SourceBlock             "mathlib/CNB"
       ShowName                on
       NamePlacement           ""
@@ -51,7 +51,7 @@ Model {
       BlockType               Reference
       Name                    "CNI_ID"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 148, 60, 162]
+      Position                [105, 108, 125, 122]
       SourceBlock             "mathlib/CNI"
       icn                     1
       #GUID                   18eab312-0f4c-4966-a513-c025f09afa3b
@@ -60,59 +60,59 @@ Model {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 203, 150, 217]
+      Position                [40, 163, 205, 177]
       ShowName                off
-      GotoTag                 "DB__sand"
+      GotoTag                 "DB__readGroup_sand"
       BackgroundColor         "yellow"
       #GUID                   3601deb4-d17a-4f81-8401-f132fbe06317
     }
     Block {
       BlockType               From
-      Name                    "From1"
+      Name                    "From2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 308, 150, 322]
+      Position                [40, 188, 205, 202]
       ShowName                off
-      GotoTag                 "DB__description"
+      GotoTag                 "DB__readGroup_cement"
       BackgroundColor         "yellow"
-      #GUID                   b8a5e1fb-7486-4a9f-8f34-3766f679f155
+      #GUID                   3ed4903e-43a0-45e2-b0a8-014c77121180
     }
     Block {
       BlockType               From
-      Name                    "From10"
+      Name                    "From3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 278, 150, 292]
+      Position                [40, 213, 205, 227]
       ShowName                off
-      GotoTag                 "DB__water"
+      GotoTag                 "DB__readGroup_lime"
       BackgroundColor         "yellow"
-      #GUID                   f46c3d25-12c1-414a-9b60-95e345f3d500
+      #GUID                   355b22a7-29da-4d68-8ce7-542ade3d3140
     }
     Block {
       BlockType               From
-      Name                    "From8"
+      Name                    "From4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 228, 150, 242]
+      Position                [40, 238, 205, 252]
       ShowName                off
-      GotoTag                 "DB__cement"
+      GotoTag                 "DB__readGroup_water"
       BackgroundColor         "yellow"
-      #GUID                   6eed14c6-d776-49af-a816-3d097ef9ad0e
+      #GUID                   11da8d44-0a78-461e-8b50-12aaacf8737c
     }
     Block {
       BlockType               From
-      Name                    "From9"
+      Name                    "From5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [40, 253, 150, 267]
+      Position                [40, 263, 205, 277]
       ShowName                off
-      GotoTag                 "DB__lime"
+      GotoTag                 "DB__readGroup_description"
       BackgroundColor         "yellow"
-      #GUID                   0078699d-6453-4a4d-972e-226613123914
+      #GUID                   3cc7f7f2-5072-4ec2-874e-a1ac6177cf91
     }
     Block {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [235, 147, 355, 163]
+      Position                [235, 106, 405, 124]
       ShowName                off
-      GotoTag                 "DB__ident"
+      GotoTag                 "DB__readGroup_ident"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
       #GUID                   d19e9645-07a7-4934-8631-7871323b5b39
@@ -121,7 +121,7 @@ Model {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [310, 197, 355, 273]
+      Position                [345, 157, 390, 233]
       SourceBlock             "arclib/TRND"
       ShowName                on
       NamePlacement           ""
@@ -137,8 +137,8 @@ Model {
       arc                     0
       id                      1
       Title                   "Trend Title"
+      timesrc                 1
       #GUID                   2a55979a-6023-4f7b-baae-5029087881ea
-        timesrc       1
     }
     Line {
       SrcBlock                "CNB_RUN"
@@ -162,28 +162,28 @@ Model {
       #GUID                   8ef3cf30-972f-401e-a6f0-dcc6a45a1d3c
     }
     Line {
-      SrcBlock                "From10"
+      SrcBlock                "From2"
       SrcPort                 1
-      Points                  [30, 0; 0, -45]
-      DstBlock                "TRND"
-      DstPort                 4
-      #GUID                   1daaaaaf-3dcf-4ebb-be7c-16d942321b89
-    }
-    Line {
-      SrcBlock                "From8"
-      SrcPort                 1
-      Points                  [10, 0; 0, -15]
+      Points                  [20, 0; 0, -15]
       DstBlock                "TRND"
       DstPort                 2
-      #GUID                   700274df-c16c-4f5a-8485-6353c6e87885
+      #GUID                   54c39ff0-d79d-46f9-b9e8-1d26ca7dc091
     }
     Line {
-      SrcBlock                "From9"
+      SrcBlock                "From3"
       SrcPort                 1
-      Points                  [20, 0; 0, -30]
+      Points                  [35, 0; 0, -30]
       DstBlock                "TRND"
       DstPort                 3
-      #GUID                   132ba845-21ae-4d83-9e62-0b76a855ee6d
+      #GUID                   e5df4cd0-dcc7-4587-9525-b16f3e213ab7
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      Points                  [50, 0; 0, -45]
+      DstBlock                "TRND"
+      DstPort                 4
+      #GUID                   13036e3e-3dc7-4dcb-9593-5b02ea46ad0d
     }
     Annotation {
       Position                [145, 35]

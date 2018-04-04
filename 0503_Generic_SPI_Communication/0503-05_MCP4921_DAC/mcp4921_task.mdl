@@ -1,7 +1,7 @@
 Model {
   Name                    "mcp4921_task"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "mcp4921_task"
-    Location                [260, 32, 580, 398]
+    Location                [272, 34, 592, 405]
     #GUID                   3157d45e-4e92-4cb7-bda7-1051db13651e
     Block {
       BlockType               Reference

@@ -1,296 +1,7 @@
 Model {
   Name                    "pid_autotuning_control"
-  Version                 5.0
-  SaveDefaultBlockParams  on
-  SampleTimeColors        off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowLoopsOnError        on
-  IgnoreBidirectionalLines off
-  ShowStorageClass        off
-  ExecutionOrder          off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  covSaveCumulativeToWorkspaceVar on
-  CovSaveSingleToWorkspaceVar on
-  CovCumulativeVarName    "covCumulativeData"
-  CovCumulativeReport     off
-  DataTypeOverride        "UseLocalSettings"
-  MinMaxOverflowLogging   "UseLocalSettings"
-  MinMaxOverflowArchiveMode "Overwrite"
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  Created                 "Mon Dec 30 16:43:09 2002"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "david"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Tue Mar 11 12:30:27 2003"
-  ModelVersionFormat      "1.%<AutoIncrement:39>"
-  ConfigurationManager    "none"
-  SimParamPage            "Solver"
-  LinearizationMsg        "none"
-  Profile                 off
-  ParamWorkspaceSource    "MATLABWorkspace"
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  BufferReuse             on
-  RTWExpressionDepthLimit 5
-  SimulationMode          "normal"
-  Solver                  "FixedStepDiscrete"
-  SolverMode              "Auto"
-  StartTime               "0.0"
-  StopTime                "500.0"
-  MaxOrder                5
-  MaxStep                 "auto"
-  MinStep                 "auto"
-  MaxNumMinSteps          -1
-  InitialStep             "auto"
-  FixedStep               "0.1"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  Refine                  1
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Array"
-  Decimation              1
-  LimitDataPoints         off
-  MaxDataPoints           1000
-  SignalLoggingName       "sigsOut"
-  ConsistencyChecking     "none"
-  ArrayBoundsChecking     "none"
-  AlgebraicLoopMsg        "warning"
-  BlockPriorityViolationMsg "warning"
-  MinStepSizeMsg          "warning"
-  InheritedTsInSrcMsg     "warning"
-  DiscreteInheritContinuousMsg "warning"
-  MultiTaskRateTransMsg   "error"
-  SingleTaskRateTransMsg  "none"
-  CheckForMatrixSingularity "none"
-  IntegerOverflowMsg      "warning"
-  Int32ToFloatConvMsg     "warning"
-  ParameterDowncastMsg    "error"
-  ParameterOverflowMsg    "error"
-  ParameterPrecisionLossMsg "warning"
-  UnderSpecifiedDataTypeMsg "none"
-  UnnecessaryDatatypeConvMsg "none"
-  VectorMatrixConversionMsg "none"
-  InvalidFcnCallConnMsg   "error"
-  SignalLabelMismatchMsg  "none"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  SfunCompatibilityCheckMsg "none"
-  RTWInlineParameters     off
-  BlockReductionOpt       on
-  BooleanDataType         off
-  ConditionallyExecuteInputs on
-  ParameterPooling        on
-  OptimizeBlockIOStorage  on
-  ZeroCross               on
-  AssertionControl        "UseLocalSettings"
-  ProdHWDeviceType        "Microprocessor"
-  ProdHWWordLengths       "8,16,32,32"
-  RTWSystemTargetFile     "grt.tlc"
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  RTWRetainRTWFile        off
-  TLCProfiler             off
-  TLCDebug                off
-  TLCCoverage             off
-  TLCAssertion            off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
-  SaveDefaultBlockParams  on
-  SampleTimeColors        off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowLoopsOnError        on
-  IgnoreBidirectionalLines off
-  ShowStorageClass        off
-  ExecutionOrder          off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  covSaveCumulativeToWorkspaceVar on
-  CovSaveSingleToWorkspaceVar on
-  CovCumulativeVarName    "covCumulativeData"
-  CovCumulativeReport     off
-  DataTypeOverride        "UseLocalSettings"
-  MinMaxOverflowLogging   "UseLocalSettings"
-  MinMaxOverflowArchiveMode "Overwrite"
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  Created                 "Mon Dec 30 16:43:09 2002"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "david"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Tue Mar 11 12:30:27 2003"
-  ModelVersionFormat      "1.%<AutoIncrement:39>"
-  ConfigurationManager    "none"
-  SimParamPage            "Solver"
-  LinearizationMsg        "none"
-  Profile                 off
-  ParamWorkspaceSource    "MATLABWorkspace"
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  BufferReuse             on
-  RTWExpressionDepthLimit 5
-  SimulationMode          "normal"
-  Solver                  "FixedStepDiscrete"
-  SolverMode              "Auto"
-  StartTime               "0.0"
-  StopTime                "500.0"
-  MaxOrder                5
-  MaxStep                 "auto"
-  MinStep                 "auto"
-  MaxNumMinSteps          -1
-  InitialStep             "auto"
-  FixedStep               "0.1"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  Refine                  1
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Array"
-  Decimation              1
-  LimitDataPoints         off
-  MaxDataPoints           1000
-  SignalLoggingName       "sigsOut"
-  ConsistencyChecking     "none"
-  ArrayBoundsChecking     "none"
-  AlgebraicLoopMsg        "warning"
-  BlockPriorityViolationMsg "warning"
-  MinStepSizeMsg          "warning"
-  InheritedTsInSrcMsg     "warning"
-  DiscreteInheritContinuousMsg "warning"
-  MultiTaskRateTransMsg   "error"
-  SingleTaskRateTransMsg  "none"
-  CheckForMatrixSingularity "none"
-  IntegerOverflowMsg      "warning"
-  Int32ToFloatConvMsg     "warning"
-  ParameterDowncastMsg    "error"
-  ParameterOverflowMsg    "error"
-  ParameterPrecisionLossMsg "warning"
-  UnderSpecifiedDataTypeMsg "none"
-  UnnecessaryDatatypeConvMsg "none"
-  VectorMatrixConversionMsg "none"
-  InvalidFcnCallConnMsg   "error"
-  SignalLabelMismatchMsg  "none"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  SfunCompatibilityCheckMsg "none"
-  RTWInlineParameters     off
-  BlockReductionOpt       on
-  BooleanDataType         off
-  ConditionallyExecuteInputs on
-  ParameterPooling        on
-  OptimizeBlockIOStorage  on
-  ZeroCross               on
-  AssertionControl        "UseLocalSettings"
-  ProdHWDeviceType        "Microprocessor"
-  ProdHWWordLengths       "8,16,32,32"
-  RTWSystemTargetFile     "grt.tlc"
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  RTWRetainRTWFile        off
-  TLCProfiler             off
-  TLCDebug                off
-  TLCCoverage             off
-  TLCAssertion            off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -305,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -323,17 +34,8 @@ Model {
   }
   System {
     Name                    "pid_autotuning_control"
-    Location                [396, 31, 869, 460]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    ReportName              "simulink-default.rpt"
-    #GUID                   7c14bdec-e0b9-4010-be12-ded0f0a0a3b1
+    Location                [396, 33, 868, 464]
+    #GUID                   aad0c4eb-ae09-4cd1-8d27-6e91f5342be7
     Block {
       BlockType               Inport
       Name                    "pv"
@@ -343,7 +45,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       BackgroundColor         "green"
-      #GUID                   b1d5b3a2-fa5d-4e54-ae8e-9c668543ddd4
+      #GUID                   6bda19bd-ee84-4864-a844-348561f6c2bf
     }
     Block {
       BlockType               Reference
@@ -355,7 +57,7 @@ Model {
       NamePlacement           ""
       YCN                     on
       BackgroundColor         "magenta"
-      #GUID                   9c1ec390-70c1-4b2a-b51b-66cefcc8ee1a
+      #GUID                   57cdad69-e9f8-47c9-94fd-ebed8f4770ee
     }
     Block {
       BlockType               Reference
@@ -366,7 +68,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       YCN                     on
-      #GUID                   39cef31f-704a-45df-9403-988fce4955d1
+      #GUID                   0edcfab2-bd33-41a4-8017-ccb520e7592e
     }
     Block {
       BlockType               Reference
@@ -378,7 +80,7 @@ Model {
       NamePlacement           ""
       YCN                     on
       BackgroundColor         "magenta"
-      #GUID                   47856b36-d4d8-4bca-915f-3a22fe10bf38
+      #GUID                   c38c7071-3b9b-4931-b7e2-91743cb59229
     }
     Block {
       BlockType               Reference
@@ -390,7 +92,7 @@ Model {
       NamePlacement           ""
       ycn                     0
       BackgroundColor         "magenta"
-      #GUID                   828cdca6-d76a-485a-af69-8b537ad85c32
+      #GUID                   6cc5ba78-1263-4888-aafd-c0da5809a92c
     }
     Block {
       BlockType               Reference
@@ -402,7 +104,7 @@ Model {
       NamePlacement           ""
       ycn                     0
       BackgroundColor         "magenta"
-      #GUID                   c31e8ce2-6585-400e-90cb-d6d742f9b199
+      #GUID                   60aaca45-947e-456a-ba97-a82820c81a7e
     }
     Block {
       BlockType               From
@@ -412,7 +114,7 @@ Model {
       ShowName                off
       GotoTag                 "pv"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   aad5a6c1-b3a5-410c-a6a2-24b874876786
+      #GUID                   1f1f699e-b7e4-4103-9876-25de06ab034d
     }
     Block {
       BlockType               From
@@ -422,7 +124,7 @@ Model {
       ShowName                off
       GotoTag                 "mv"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   42cb178a-6d64-426b-b531-d0c306471578
+      #GUID                   7674bf5d-afcb-4b86-ad07-57c0e5637824
     }
     Block {
       BlockType               From
@@ -432,7 +134,7 @@ Model {
       ShowName                off
       GotoTag                 "sp"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   2adb3fb2-cc97-438e-9217-8c01918abedf
+      #GUID                   2131c166-8411-417b-b11f-a3a8f78dc661
     }
     Block {
       BlockType               Goto
@@ -443,7 +145,7 @@ Model {
       GotoTag                 "pv"
       TagVisibility           "local"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   b93aeb5c-ec23-492e-9086-074dde676094
+      #GUID                   67f45192-67e7-470b-80b6-1051d12a6793
     }
     Block {
       BlockType               Goto
@@ -454,7 +156,7 @@ Model {
       GotoTag                 "mv"
       TagVisibility           "local"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   0addcb92-87eb-4715-9962-450b566d037e
+      #GUID                   b82e1fb3-febd-4ed3-b8d0-4e28a4240eff
     }
     Block {
       BlockType               Goto
@@ -465,7 +167,7 @@ Model {
       GotoTag                 "sp"
       TagVisibility           "local"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   685162c9-b46e-4400-a34d-8fa3d9704cbb
+      #GUID                   f60491da-256a-43a8-8c67-41daca50b110
     }
     Block {
       BlockType               Reference
@@ -477,7 +179,7 @@ Model {
       BackgroundColor         "lightBlue"
       ShowName                off
       SourceType              "LPBRK"
-      #GUID                   d1904b6a-ceed-4016-adca-d93d79206deb
+      #GUID                   fb2559bb-487e-425e-aca7-7322d542ea7a
     }
     Block {
       BlockType               Reference
@@ -491,7 +193,7 @@ Model {
       BSTATE                  off
       RPTF                    off
       BackgroundColor         "magenta"
-      #GUID                   d2a4ba54-1708-4ac0-bde6-dde7bf5f6f43
+      #GUID                   00d25661-c298-4afd-b9ed-2bba9ea7371b
     }
     Block {
       BlockType               Reference
@@ -505,7 +207,7 @@ Model {
       BSTATE                  off
       RPTF                    off
       BackgroundColor         "magenta"
-      #GUID                   b53ff1d0-29a2-4b26-ac7b-139611311bff
+      #GUID                   f03b2d1e-d239-4e71-a7cf-ac8ade136404
     }
     Block {
       BlockType               Reference
@@ -538,7 +240,7 @@ Model {
       ispeed                  "2: Normal (middle fast) CL"
       ipid                    "1: Parallel form"
       BackgroundColor         "cyan"
-      #GUID                   82c9c1ba-121c-4352-ad44-3bb17bff1b07
+      #GUID                   2dbb8601-bc17-40a3-a581-b4bac88e26fa
     }
     Block {
       BlockType               Reference
@@ -560,8 +262,8 @@ Model {
       arc                     0
       id                      1
       Title                   "Trend Title"
-      #GUID                   55d57578-67fc-4886-afd6-5982f258f54e
-        timesrc       1
+      timesrc                 1
+      #GUID                   1f0d975a-1bf7-4270-b4b2-9c7c7ee288bb
     }
     Block {
       BlockType               Outport
@@ -572,51 +274,51 @@ Model {
       ShowName                on
       NamePlacement           ""
       BackgroundColor         "green"
-      #GUID                   14c684e7-f189-4250-b03b-db1227f8aa3f
+      #GUID                   ffb00b16-8dea-497e-89d8-0ed3c0c66ea6
     }
     Line {
       SrcBlock                "CNB_MAN"
       SrcPort                 1
       DstBlock                "PIDMA"
       DstPort                 6
-      #GUID                   a01e3827-d097-4a6e-aeda-f40ddc4e3405
+      #GUID                   9f85438d-e69b-4c58-b696-5be1be4a42e0
     }
     Line {
       SrcBlock                "CNB_RUN"
       SrcPort                 1
       DstBlock                "TRND_PIDMA"
       DstPort                 5
-      #GUID                   ca02331a-8224-452c-bce3-b19474ddaef3
+      #GUID                   f182b45c-709e-4c75-b59d-60cb190e38a3
     }
     Line {
       SrcBlock                "CNB_TAFF"
       SrcPort                 1
       DstBlock                "PIDMA"
       DstPort                 10
-      #GUID                   55b717e2-a1f3-487d-9519-fa8d473923c4
+      #GUID                   640e256e-fd4a-441a-b66c-c02e1251072c
     }
     Line {
       SrcBlock                "CNR_hv"
       SrcPort                 1
       DstBlock                "PIDMA"
       DstPort                 5
-      #GUID                   aeca6ca9-3898-46e3-adec-3869cc13e1ef
+      #GUID                   a85633ea-238c-4517-ad50-1376ebc30d99
     }
     Line {
       SrcBlock                "CNR_sp"
       SrcPort                 1
       Points                  [10, 0]
-      #GUID                   458df21e-624a-4ad3-b289-a0ff9376f707
+      #GUID                   f33434d6-474a-49ef-9810-34b3713cab30
       Branch {
         DstBlock                "Goto2"
         DstPort                 1
-        #GUID                   b63a7b69-8fa0-4dfd-8b98-a9739aa855e0
+        #GUID                   39dcf359-571b-4e50-9173-fa7bff484f37
       }
       Branch {
         Points                  [0, 15]
         DstBlock                "PIDMA"
         DstPort                 2
-        #GUID                   710c5b5e-2919-4615-95f7-921ee14a8b69
+        #GUID                   28d9fd9f-5869-44a2-8439-9d0ca525bf6a
       }
     }
     Line {
@@ -624,21 +326,21 @@ Model {
       SrcPort                 1
       DstBlock                "TRND_PIDMA"
       DstPort                 1
-      #GUID                   f13ee18a-cef6-49be-b659-adc3b984d4ce
+      #GUID                   294f6691-44e9-4151-aeb1-54ce4f74db76
     }
     Line {
       SrcBlock                "From1"
       SrcPort                 1
       DstBlock                "TRND_PIDMA"
       DstPort                 2
-      #GUID                   a0baea1b-464d-4b0f-9747-6465235ed196
+      #GUID                   073333a8-6494-4213-9330-4af7262c5ed5
     }
     Line {
       SrcBlock                "From2"
       SrcPort                 1
       DstBlock                "TRND_PIDMA"
       DstPort                 3
-      #GUID                   fadc0c2d-b8bc-4a6d-bf97-19e3d83e77b2
+      #GUID                   d68f4da3-786b-410c-91b7-a01af9ba4092
     }
     Line {
       SrcBlock                "LPBRK"
@@ -646,66 +348,66 @@ Model {
       Points                  [-35, 0; 0, 65]
       DstBlock                "PIDMA"
       DstPort                 4
-      #GUID                   172fd361-e910-487d-86e6-0852c1caae0c
+      #GUID                   7c21f554-be69-48f6-ada6-9dd3f128cba9
     }
     Line {
       SrcBlock                "MP_TBRK"
       SrcPort                 1
       DstBlock                "PIDMA"
       DstPort                 9
-      #GUID                   76191316-bae9-4ed9-871b-664dfac42f1e
+      #GUID                   6b05effa-d24f-40d6-95b9-1df5b508e453
     }
     Line {
       SrcBlock                "MP_TUNE"
       SrcPort                 1
       DstBlock                "PIDMA"
       DstPort                 8
-      #GUID                   3c5bacb3-c8c9-4b69-84af-f54abdf4c178
+      #GUID                   1886a23b-70db-45ad-9fc1-4e2a6913d361
     }
     Line {
       SrcBlock                "PIDMA"
       SrcPort                 1
       Points                  [40, 0]
-      #GUID                   c9628955-c41f-461c-bc63-558dfabbe776
+      #GUID                   08d2efa0-f61a-4445-b827-4acfb698801a
       Branch {
         DstBlock                "Goto1"
         DstPort                 1
-        #GUID                   aed343c3-66ae-447b-9b84-036ca2f35477
+        #GUID                   ed0941b5-e7dc-48a1-a4a4-99f09a1c6c0e
       }
       Branch {
         Points                  [0, -30]
         DstBlock                "LPBRK"
         DstPort                 1
-        #GUID                   5071c56b-5e76-4bba-b9cc-ecef08bca360
+        #GUID                   57fb531d-6641-49ba-a8f3-00300ea6eae4
       }
       Branch {
         DstBlock                "mv"
         DstPort                 1
-        #GUID                   547a5695-3eb2-4fc7-ae99-3f3e6c6c7dd7
+        #GUID                   278a8b20-2d8d-4455-8966-a5e20f66ece8
       }
     }
     Line {
       SrcBlock                "pv"
       SrcPort                 1
       Points                  [5, 0]
-      #GUID                   292fb1ea-708c-43b8-946d-2dac459a5868
+      #GUID                   f2f2b014-e2ab-4c25-8d03-341a5e60bbf2
       Branch {
         Points                  [0, 10]
         DstBlock                "Goto"
         DstPort                 1
-        #GUID                   98ffff73-f258-4a32-83dc-838beb7834c7
+        #GUID                   a649c68e-fd26-4294-bebc-960c5b439200
       }
       Branch {
         DstBlock                "PIDMA"
         DstPort                 3
-        #GUID                   632f2ae5-339c-4215-b364-390ee0fd3e80
+        #GUID                   0329f13b-80c7-499c-8ee4-948008c7d4ca
       }
     }
     Annotation {
       Position                [140, 45]
       Text                    "See the README.md file for detailed information"
 "."
-      #GUID                   da3312d2-9102-4237-9447-fa6d99610db0
+      #GUID                   fa3ca630-59db-492c-bcc1-36345584e727
     }
     Annotation {
       Position                [235, 20]
@@ -713,7 +415,7 @@ Model {
 "control task"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   8c33a7ad-5d4f-4fa9-b9e6-0f04b63659b6
+      #GUID                   9f473d08-8fc0-4f1b-96f8-01a7c4a6adc7
     }
   }
 }

@@ -9,12 +9,12 @@ included in this repository.
 
 ## Documentation ##
 
-- [HMI in REX Control System](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexHMI/RexHMI_ENG.html)
-- [REST API of the REX Control System](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexRestApi/RexRestApi_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [REXYGEN HMI User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenHMI_ENG.pdf)
+- [REST API of the REXYGEN System](https://www.rexygen.com/doc/PDF/ENGLISH/RexRestApi_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

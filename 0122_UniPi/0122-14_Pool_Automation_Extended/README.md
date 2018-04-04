@@ -1,13 +1,9 @@
-﻿Pool automation with web-based graphical HMI 
+Pool automation with web-based graphical HMI 
 ============================================
 
 This folder contains the source files for the demonstration project on pool 
-automation using REX and the Raspberry Pi minicomputer with 
+automation using REXYGEN and the Raspberry Pi minicomputer with 
 the UniPi extension board.
-
-This example is an extension of the original example related to the 
-[tutorial on using REX](http://www.rexcontrols.com/articles/getting-started-with-rex-on-raspberry-pi)
-on Raspberry Pi.
 
 A single push-button connected to digital input I01 can be used for controlling 
 the pool. In automatic mode the lights and filtration pump are switched on at 
@@ -20,11 +16,11 @@ simple thermostat. The temperature is measured by the 1-Wire DS18B20 sensor and
 the onboard relay 5 is switched on and off with a hysteresis of 0.5°C.
 
 The measured temperature and status of the relay is recorded in the TRND blocks
-which allow displaying of the trends (graphs) in the RexView diagnostic tool. 
+which allow displaying of the trends (graphs) in the *REXYGEN Diagnostics* diagnostic tool. 
 
 ## Prerequisites ##
 
-- RexCore and RPiDrv modules must be installed and running on the Raspberry Pi.
+- *REXYGEN Runtime Core* and RPiDrv modules must be installed and running on the Raspberry Pi.
 - Owserver (part of the OWFS package) must be installed, correctly configured and running on the Raspberry Pi.
 - I2C bus must be enabled on the Raspberry Pi.
 - The DS18B20 temperature sensor must be connected.
@@ -32,29 +28,30 @@ which allow displaying of the trends (graphs) in the RexView diagnostic tool.
 
 ## Running the example ##
 
-- The **exec.mdl* file is the project main file, open it with RexDraw.
+- The **exec.mdl* file is the project main file, open it with *REXYGEN Studio*.
 - Specify the 64-bit ROM ID of the attached temperature sensor. See the 1-Wire driver manual below.
 - Compile and download the project to the target device.
 
 ## User interface (HMI) ##
 
-The example is accompanied by a graphical user interface generated from RexHMI Designer. See the above mentioned tutorial for instructions on 
+The example is accompanied by a graphical user interface generated from *REXYGEN HMI Designer*. See the above mentioned tutorial for instructions on 
 deploying the HMI on the Raspberry Pi.
 
 ## Documentation ##
 
-- **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX and UniPi board](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_UniPi_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [OwsDrv - 1-Wire driver](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/OwsDrv/OwsDrv_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
+- [Getting started with REXYGEN  and UniPi board](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_UniPi_ENG.pdf)
+- [REXYGEN HMI User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenHMI_ENG.pdf)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [OwsDrv - 1-Wire driver](https://www.rexygen.com/doc/PDF/ENGLISH/OwsDrv_ENG.pdf)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
 - More info about the UniPi board can be found at [unipi.technology](http://www.unipi.technology).
 - Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
 - 1-Wire is a trademark of [Maxim Integrated](http://www.maxim-ic.com).
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

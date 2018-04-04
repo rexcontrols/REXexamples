@@ -1,99 +1,7 @@
 Model {
   Name                    "flags_task"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Thu Jan 06 15:26:11 2005"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "mertlj"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Tue Apr 29 09:25:44 2008"
-  ModelVersionFormat      "1.%<AutoIncrement:195>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -108,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,562 +34,552 @@ Model {
   }
   System {
     Name                    "flags_task"
-    Location                [290, 35, 1196, 1000]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "A4"
-    PaperUnits              "centimeters"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   92200e26-7821-416b-a2d2-6b94ab9f00ec
+    Location                [291, 36, 1196, 732]
+    #GUID                   af0e3bfe-e4f6-4a76-9c46-db57720b30e1
     Block {
       BlockType               From
       Name                    "From1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 173, 125, 187]
+      Position                [40, 173, 130, 187]
       ShowName                off
       GotoTag                 "UNP__AI1"
       BackgroundColor         "yellow"
-      #GUID                   7b975330-26f2-4c6d-a095-d9265fa99335
+      #GUID                   5a276b4b-b7aa-4077-8c3b-8ec11e1ea959
     }
     Block {
       BlockType               From
       Name                    "From2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 193, 125, 207]
+      Position                [40, 193, 130, 207]
       ShowName                off
       GotoTag                 "UNP__AI2"
       BackgroundColor         "yellow"
-      #GUID                   9d61bd65-c388-4465-8559-0f3af0aa5255
+      #GUID                   e9b5189c-3f70-4459-a3dc-928efe5db623
     }
     Block {
       BlockType               From
       Name                    "From25"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 378, 125, 392]
+      Position                [40, 378, 130, 392]
       ShowName                off
       GotoTag                 "UNP__I01"
       BackgroundColor         "yellow"
-      #GUID                   5c240f59-ad6c-44be-9c8c-d5c2c19d13cc
+      #GUID                   c8c2f272-4e3c-412e-ae37-c7526dd8a2d2
     }
     Block {
       BlockType               From
       Name                    "From3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 238, 125, 252]
+      Position                [40, 238, 130, 252]
       ShowName                off
       GotoTag                 "UNP__AIA1"
       BackgroundColor         "yellow"
-      #GUID                   6c4a32d1-8cf8-4c83-b478-4b9d17900b31
+      #GUID                   66c5d4a3-a90f-43d3-b424-b1cdaffed71a
     }
     Block {
       BlockType               From
       Name                    "From4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 258, 125, 272]
+      Position                [40, 258, 130, 272]
       ShowName                off
       GotoTag                 "UNP__AIA2"
       BackgroundColor         "yellow"
-      #GUID                   d4a16545-3212-4100-b0fc-57ef3617cd15
+      #GUID                   e3f536ef-5b4c-475a-b809-9f60f5557839
     }
     Block {
       BlockType               From
       Name                    "From5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 303, 165, 317]
+      Position                [40, 303, 170, 317]
       ShowName                off
       GotoTag                 "UNP__AIA1V12"
       BackgroundColor         "yellow"
-      #GUID                   9f260096-7cd1-4869-ac7d-002139eb0d53
+      #GUID                   878411f5-5ad6-4bc5-9f26-99c9808a65d5
     }
     Block {
       BlockType               From
       Name                    "From6"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 323, 165, 337]
+      Position                [40, 323, 170, 337]
       ShowName                off
       GotoTag                 "UNP__AIA1V18G2"
       BackgroundColor         "yellow"
-      #GUID                   79b3873f-fc8a-4a63-9099-507a6a1cfa9f
+      #GUID                   fddb41ab-b440-4c72-a545-d5acbd0a6b41
     }
     Block {
       BlockType               From
       Name                    "From7"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 398, 125, 412]
+      Position                [40, 398, 130, 412]
       ShowName                off
       GotoTag                 "UNP__I02"
       BackgroundColor         "yellow"
-      #GUID                   3cb476b7-60e8-457c-a710-4a97a66c5e90
+      #GUID                   5ed99f61-c3ec-45fa-9299-d3093879c087
     }
     Block {
       BlockType               From
       Name                    "From8"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 418, 125, 432]
+      Position                [40, 418, 130, 432]
       ShowName                off
       GotoTag                 "UNP__I03"
       BackgroundColor         "yellow"
-      #GUID                   8e6a79e4-fe44-4ce4-9f9b-ac53bbdcfc87
+      #GUID                   16d6003d-8618-47ac-89ff-ba7593b12f93
     }
     Block {
       BlockType               From
       Name                    "From9"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 453, 125, 467]
+      Position                [40, 453, 130, 467]
       ShowName                off
       GotoTag                 "UNP__I12"
       BackgroundColor         "yellow"
-      #GUID                   df2ba8b6-984e-489d-92ae-333d1d98c4dc
+      #GUID                   682bcde9-990a-4560-8c7d-e66e2a77c55f
     }
     Block {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 298, 575, 312]
+      Position                [490, 298, 580, 312]
       ShowName                off
       GotoTag                 "UNP__RLY2"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   069132e5-5d97-45e6-8238-4ad7136361a2
+      #GUID                   03916bc7-ae23-42a9-8b8c-e2dc04f64d09
     }
     Block {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 198, 575, 212]
+      Position                [490, 198, 580, 212]
       ShowName                off
       GotoTag                 "UNP__AO"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   39bf8f39-4f91-48de-8f19-a673c7bad321
+      #GUID                   0cbcfd56-cb53-4b0f-8f0f-84346a39f62a
     }
     Block {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 318, 575, 332]
+      Position                [490, 318, 580, 332]
       ShowName                off
       GotoTag                 "UNP__RLY3"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   462e19d1-82cf-4f46-9d99-9c7dce7cf881
+      #GUID                   21677859-678b-4363-8989-2e13c9681599
     }
     Block {
       BlockType               Goto
       Name                    "Goto34"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 278, 575, 292]
+      Position                [490, 278, 580, 292]
       ShowName                off
       GotoTag                 "UNP__RLY1"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   625c7e59-1926-4a6d-8ed3-086c84276b68
+      #GUID                   590f39be-199d-473a-b40e-b6df022a1956
     }
     Block {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 353, 575, 367]
+      Position                [490, 353, 580, 367]
       ShowName                off
       GotoTag                 "UNP__RLY8"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   55e2bf30-87ae-4eb3-9b19-48422188f11d
+      #GUID                   7518a22b-ac85-445e-a113-612f5857d616
     }
     Block {
       BlockType               Goto
       Name                    "Goto5"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [485, 223, 575, 237]
+      Position                [490, 223, 580, 237]
       ShowName                off
       GotoTag                 "UNP__AO1X"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   c3b87d23-f934-411d-986d-6e5891fc66cb
+      #GUID                   a5ad21a4-4328-4f7e-b000-701916d09406
     }
     Block {
       BlockType               Reference
       Name                    "UNP__DATA"
       Ports                   [0, 16, 0, 0, 0]
-      Position                [60, 541, 90, 709]
+      Position                [65, 541, 95, 709]
       SourceBlock             "inoutlib/INHEXD"
       BackgroundColor         "yellow"
-      #GUID                   52cdc15f-68d7-4a6d-8552-821da02922cc
+      #GUID                   01818e68-eba3-455f-9336-41d37e758506
     }
     Block {
       BlockType               Reference
       Name                    "UNP__DATA_WRITE"
       Ports                   [16, 0, 0, 0, 0]
-      Position                [525, 541, 555, 709]
+      Position                [530, 541, 560, 709]
       SourceBlock             "inoutlib/OUTHEXD"
       BackgroundColor         "lightBlue"
-      #GUID                   f86820f0-06c1-42cf-a60a-0a60821dd503
+      #GUID                   e2cc24e0-e8c3-455b-91c9-668798065ea4
     }
     Block {
       BlockType               Reference
       Name                    "UNP__RLY"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [525, 396, 555, 484]
+      Position                [530, 396, 560, 484]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
-      #GUID                   76122d9a-06d1-4c9d-bf94-24e907c560ed
+      #GUID                   7d484859-3398-464e-a8a2-f0d31f5b37d7
     }
     Block {
       BlockType               Reference
       Name                    "UNP__RTC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [60, 786, 90, 874]
+      Position                [65, 786, 95, 874]
       SourceBlock             "inoutlib/INOCT"
       BackgroundColor         "yellow"
-      #GUID                   dcd52bf1-011f-4bee-821e-5b83d97c4559
+      #GUID                   61d68b76-7b25-4e51-84f5-0e3eba0d171a
     }
     Block {
       BlockType               Reference
       Name                    "UNP__RTC_WRITE"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [525, 786, 555, 874]
+      Position                [530, 786, 560, 874]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
-      #GUID                   435b2ba7-9591-488c-903f-a902647757bb
+      #GUID                   8fc7afc4-b094-4ef8-868b-c6d321a7b637
     }
     Annotation {
-      Position                [445, 45]
+      Position                [450, 45]
       Text                    "This example serves as a library. It won't comp"
-"ile because it contains ALL input and output \nflags and there are conflicts."
-"\nPick only the input and output flags which you need and copy&paste them into"
-" your project."
+"ile because it contains ALL input and output \nflags and there are conflicts.\n"
+"Pick only the input and output flags which you need and copy&paste them into y"
+"our project."
       FontName                "Arial"
       FontSize                20
       FontWeight              "bold"
       ForegroundColor         "red"
-      #GUID                   1f6008b6-78d0-471b-a1a7-f29d616305bf
+      #GUID                   e8782cb6-d6a9-4f9a-ae23-0073d23737b8
     }
     Annotation {
-      Position                [130, 795]
+      Position                [135, 795]
       Text                    "year"
-      #GUID                   b9a3c677-6113-48a0-869b-ed03c45aae4d
+      #GUID                   d43eeb33-0306-480f-bb78-0f5a4b79e42a
     }
     Annotation {
-      Position                [130, 805]
+      Position                [135, 805]
       Text                    "month"
-      #GUID                   e64d5afe-7fbd-4f95-9fc7-6b7bd922fb4c
+      #GUID                   784e7451-8fc4-4927-9f70-46e4e5cdfc77
     }
     Annotation {
-      Position                [130, 815]
+      Position                [135, 815]
       Text                    "day"
-      #GUID                   6f2cd338-73a0-4130-a5c9-efbcc83ff9b2
+      #GUID                   36cff201-1b0b-4ca8-84ba-e792c4cf0f35
     }
     Annotation {
-      Position                [130, 825]
+      Position                [135, 825]
       Text                    "hour"
-      #GUID                   bdebe961-b706-4c4c-9727-ddc4f4ace0bf
+      #GUID                   79b3519b-9f86-4abe-b62c-b2832118a1a1
     }
     Annotation {
-      Position                [130, 835]
+      Position                [135, 835]
       Text                    "minute"
-      #GUID                   f0eaaaa6-22a5-4ecb-bac9-cbe71938b4f4
+      #GUID                   2b25ccc4-056c-4f1d-a3c5-56d978104d8a
     }
     Annotation {
-      Position                [130, 845]
+      Position                [135, 845]
       Text                    "second"
-      #GUID                   c07ef840-20c2-445e-b37f-79465168121a
+      #GUID                   a31c7b84-865e-4ccb-b62b-b12af0d44364
     }
     Annotation {
-      Position                [485, 795]
+      Position                [490, 795]
       Text                    "year"
-      #GUID                   ff084749-c9dd-44df-a1a0-fe0da099e74f
+      #GUID                   4e369aeb-83af-4356-a9c2-1b046d2593dc
     }
     Annotation {
-      Position                [485, 805]
+      Position                [490, 805]
       Text                    "month"
-      #GUID                   820f930c-5277-4478-a5d1-8a0abef9c0f0
+      #GUID                   1574a7a0-7f66-4d6c-8d3d-f739846bc148
     }
     Annotation {
-      Position                [485, 815]
+      Position                [490, 815]
       Text                    "day"
-      #GUID                   a60a1e67-1bf4-404f-9b40-de359b82895b
+      #GUID                   57b0a821-f44c-4669-9bab-732d548a5362
     }
     Annotation {
-      Position                [485, 825]
+      Position                [490, 825]
       Text                    "hour"
-      #GUID                   5fa19979-eead-48e5-8dbe-5112c0c0ee0c
+      #GUID                   0f405683-0f73-4ce1-9cca-5240e23591e7
     }
     Annotation {
-      Position                [485, 835]
+      Position                [490, 835]
       Text                    "minute"
-      #GUID                   1ebf3dd8-e414-4b38-8bd2-d14b675ede02
+      #GUID                   0e7543df-8603-4227-9178-ed39c495829a
     }
     Annotation {
-      Position                [485, 845]
+      Position                [490, 845]
       Text                    "second"
-      #GUID                   4f493632-dfd2-4550-a349-5b1f135e08f1
+      #GUID                   b1e1d7a3-68b0-4e93-86a5-885da0e42034
     }
     Annotation {
-      Position                [485, 865]
+      Position                [490, 865]
       Text                    "SET"
-      #GUID                   06bf82db-0362-4b0b-8820-dd50930e9738
+      #GUID                   caf10a73-920d-4fb3-a7cf-aa01c3ae1a4a
     }
     Annotation {
-      Position                [485, 855]
+      Position                [490, 855]
       Text                    "day of week"
-      #GUID                   ba9650bb-4542-43bb-975a-506aeaffb017
+      #GUID                   78acafde-6cea-4a20-8e0a-19738010446d
     }
     Annotation {
-      Position                [80, 365]
+      Position                [85, 365]
       Text                    "Digital inputs"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   8b7d4d26-6d63-4ce6-9978-48ac0bca98eb
+      #GUID                   dd3c1e1d-cdbe-4189-b8e3-ede86e89d343
     }
     Annotation {
-      Position                [130, 855]
+      Position                [135, 855]
       Text                    "day of week"
-      #GUID                   cffa71ca-9aba-4d0a-8a72-0dd68de65ef5
+      #GUID                   66ce5a50-5080-4895-8896-98ebb36a0ace
     }
     Annotation {
-      Position                [65, 775]
+      Position                [70, 775]
       Text                    "RTC read"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   8bd88cfc-b9d2-40c8-b14e-ada26415a57e
+      #GUID                   b0152c24-a77c-438e-8c5a-38a28ba2440c
     }
     Annotation {
-      Position                [450, 160]
+      Position                [455, 160]
       Text                    "Analog outputs"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   ac0b7d4b-be8d-4c31-8ba9-02b671807ca3
+      #GUID                   40d4b742-ebd3-495c-96c0-651f0af4d3e8
     }
     Annotation {
-      Position                [475, 260]
+      Position                [480, 260]
       Text                    "Digital outputs (relays)"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   60d9e6db-1f87-4ab3-908c-49a2c697fd3c
+      #GUID                   43b51fbc-10a1-4f6a-a4e8-b10165acf2ee
     }
     Annotation {
-      Position                [430, 775]
+      Position                [435, 775]
       Text                    "RTC write"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   bb822ebb-d5b4-486b-8d81-7cdb9bfadd73
+      #GUID                   fc400a40-f447-4af5-9b11-6569ae68a00e
     }
     Annotation {
-      Position                [450, 285]
+      Position                [455, 285]
       Text                    "relay 1"
-      #GUID                   849cd7d5-5322-41bc-aba8-061b81222860
+      #GUID                   35adb9f2-80de-4024-9d32-f4aa19df0863
     }
     Annotation {
-      Position                [450, 305]
+      Position                [455, 305]
       Text                    "relay 2"
-      #GUID                   baa04746-cad0-4f65-a3c6-2c564e9852a6
+      #GUID                   a168dcc0-4e36-4679-aebd-aa72c320421c
     }
     Annotation {
-      Position                [475, 550]
+      Position                [480, 550]
       Text                    "integer value 0"
-      #GUID                   5102f5a9-f785-4c76-94f9-e2b36fd92b35
+      #GUID                   2118ed29-d7ac-47e0-a249-f42f7503b8ee
     }
     Annotation {
-      Position                [475, 570]
+      Position                [480, 570]
       Text                    "integer value 2"
-      #GUID                   b0826007-26c1-40d0-9b8b-cc8e11988b65
+      #GUID                   0ea18f6a-cff5-43e9-890a-3a74b9579452
     }
     Annotation {
-      Position                [480, 560]
+      Position                [485, 560]
       Text                    "..."
-      #GUID                   828e8bd0-3ad0-43d8-874b-bcbba7d8404b
+      #GUID                   bfb15c86-7977-47b2-b8ec-8570f8df3660
     }
     Annotation {
-      Position                [475, 690]
+      Position                [480, 690]
       Text                    "integer value 14"
-      #GUID                   2790baf2-e3bd-4ca9-8cbb-d0857ed00352
+      #GUID                   852c2721-e5ac-45d6-ac09-1aa425857db2
     }
     Annotation {
-      Position                [505, 700]
+      Position                [510, 700]
       Text                    "SET"
-      #GUID                   792437eb-d7cb-4467-b07b-0df2062fd4bf
+      #GUID                   f49b2418-7b70-48a5-8a10-36b1f77a4942
     }
     Annotation {
-      Position                [475, 640]
+      Position                [480, 640]
       Text                    "integer value 9"
-      #GUID                   79874fce-fb9f-42d7-afba-613df4369413
+      #GUID                   3cff61a5-a2ce-4efb-8bfa-43ebd22e0303
     }
     Annotation {
-      Position                [480, 605]
+      Position                [485, 605]
       Text                    "..."
-      #GUID                   42efd753-a1c0-4ee3-b1f5-a1be205dd66d
+      #GUID                   14a068f2-5f4f-4d46-89a9-138ed3130416
     }
     Annotation {
-      Position                [480, 665]
+      Position                [485, 665]
       Text                    "..."
-      #GUID                   5b0835fc-7bd4-4e49-ac30-bdd4196ee8ca
+      #GUID                   dd6d79b0-bb75-499d-b2dc-54a4aec1e6ca
     }
     Annotation {
-      Position                [135, 120]
+      Position                [140, 120]
       Text                    "UniPi input/output flags"
       FontName                "Arial"
       FontSize                20
       FontWeight              "bold"
-      #GUID                   71730ece-9cd7-446c-843f-47446105a937
+      #GUID                   03548b47-ad8e-40db-b76d-6dd45567b375
     }
     Annotation {
-      Position                [90, 160]
+      Position                [95, 160]
       Text                    "Analog inputs"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   140257a1-adf5-4f70-974a-baa84db9046a
+      #GUID                   065f9adf-6eb6-4033-93ae-20f441397c07
     }
     Annotation {
-      Position                [200, 180]
+      Position                [205, 180]
       Text                    "voltage input, 0..10V, 16-bit"
-      #GUID                   66dfcac9-05d4-4024-a2ac-22ef5600345b
+      #GUID                   28121922-46be-4499-98cf-bea76c984425
     }
     Annotation {
-      Position                [200, 200]
+      Position                [205, 200]
       Text                    "voltage input, 0..10V, 16-bit"
-      #GUID                   2a21893b-1739-4083-90fc-ad1433146c16
+      #GUID                   14147898-2fef-4033-a7af-09f2926a4e5e
     }
     Annotation {
-      Position                [85, 225]
+      Position                [90, 225]
       Text                    "Asynchronous mode:"
-      #GUID                   a8f20ad2-2f3e-4515-bb39-c9922fc86ca4
+      #GUID                   243bd491-9e77-4660-829f-a1a532933e52
     }
     Annotation {
-      Position                [200, 240]
+      Position                [205, 240]
       Text                    "voltage input, 0..10V, 16-bit"
-      #GUID                   e9e455a2-e02f-4125-af1c-e51ec3161618
+      #GUID                   6b35d0b3-5ab7-4f0e-b84b-c2a6f7f34741
     }
     Annotation {
-      Position                [200, 260]
+      Position                [205, 260]
       Text                    "voltage input, 0..10V, 16-bit"
-      #GUID                   fc51c4c1-b661-49ce-8c34-3ed660d63840
+      #GUID                   5abf1c38-c06b-4c23-af53-7d3e2ae5cf57
     }
     Annotation {
-      Position                [245, 310]
+      Position                [250, 310]
       Text                    "voltage input, 0..10V, 12-bit"
-      #GUID                   d4c667c2-f1a6-4fcf-903c-b30ddc1a5858
+      #GUID                   f9e7f923-6064-422d-8bbc-4010085ad74f
     }
     Annotation {
-      Position                [245, 330]
+      Position                [250, 330]
       Text                    "voltage input, 0..5V, 18-bit"
-      #GUID                   e6373c35-f343-4d22-a74e-7d5c711270dd
+      #GUID                   6ef50acd-0cad-47d4-ae97-ace36fd33faf
     }
     Annotation {
-      Position                [70, 290]
+      Position                [75, 290]
       Text                    "Special uses:"
-      #GUID                   3c2173c5-0ada-4907-bb4c-1c7c4676215e
+      #GUID                   4c6d72af-9f7a-4b5a-bf8d-12fd0af35c01
     }
     Annotation {
-      Position                [75, 440]
+      Position                [80, 440]
       Text                    "..."
-      #GUID                   7613cdd7-e5b6-45a6-9f69-4ae3c6bb0996
+      #GUID                   ce41db7c-bfea-4e59-8829-f8b990098f7a
     }
     Annotation {
-      Position                [165, 385]
+      Position                [170, 385]
       Text                    "input I01"
-      #GUID                   a1bed673-b5e1-4317-8dbd-ca15fe503a2e
+      #GUID                   7553fb36-6c75-44f3-a253-ea1cbb46a9ab
     }
     Annotation {
-      Position                [165, 405]
+      Position                [170, 405]
       Text                    "input I02"
-      #GUID                   a2b13ede-72ab-41c0-8a31-069cc009acfe
+      #GUID                   61bf3194-0be2-4852-8bd7-f2efbf2b9179
     }
     Annotation {
-      Position                [165, 425]
+      Position                [170, 425]
       Text                    "input I03"
-      #GUID                   14d61ce1-9272-420c-9d52-ab6349db6230
+      #GUID                   d6cd2aa1-0905-4519-beb4-eb3650feb05d
     }
     Annotation {
-      Position                [165, 460]
+      Position                [170, 460]
       Text                    "input I12"
-      #GUID                   c6334328-be7e-4daf-b88d-63513900c9a2
+      #GUID                   272121a3-2152-4bba-9301-79c663615245
     }
     Annotation {
-      Position                [450, 325]
+      Position                [455, 325]
       Text                    "relay 3"
-      #GUID                   52a292e9-8578-445c-b879-3c73b91e6efe
+      #GUID                   4f574acd-15c5-4c31-a414-e8ecd015e51c
     }
     Annotation {
-      Position                [535, 340]
+      Position                [540, 340]
       Text                    "..."
-      #GUID                   c644f21c-52c8-41b9-94d2-bded0130072e
+      #GUID                   5cf7d215-2bcf-4c39-9434-2f05cbd90221
     }
     Annotation {
-      Position                [450, 360]
+      Position                [455, 360]
       Text                    "relay 8"
-      #GUID                   2998ebd2-cbd7-4b66-812d-9394aee37a41
+      #GUID                   96467824-1982-42b4-8157-1951ecf26089
     }
     Annotation {
-      Position                [135, 525]
+      Position                [140, 525]
       Text                    "Persistent data read (SRAM)"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   f93165dc-d4aa-451a-8b9b-4b0da7e03328
+      #GUID                   4a057348-bbd7-4677-be4e-358e8cb14e3d
     }
     Annotation {
-      Position                [470, 525]
+      Position                [475, 525]
       Text                    "Persistent data write (SRAM)"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   ee193fbd-9002-4937-a00b-dc35c26bb0c1
+      #GUID                   b7296a8a-3387-4fb2-ab18-b247a75c1a98
     }
     Annotation {
-      Position                [305, 750]
+      Position                [310, 750]
       Text                    "It is highly recommended to configure the RTC c"
 "hip as a valid hwclock device!"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   83a534dd-52c8-47ba-852f-3032747189f1
+      #GUID                   f7b1d78c-a895-48ec-8986-6a1e7dc44c6a
     }
     Annotation {
-      Position                [415, 230]
+      Position                [420, 230]
       Text                    "PWM on pin 18, 0..1023"
-      #GUID                   01072a69-025b-430d-bfee-1713991ac7f0
+      #GUID                   fb6b227a-5a67-4ba4-8b33-a0259654fe54
     }
     Annotation {
-      Position                [460, 180]
+      Position                [465, 180]
       Text                    "Read the documentation first!"
-      #GUID                   00572d6a-95c6-4854-ad29-e3388cbd34f2
+      #GUID                   e914a5db-dcd7-4e29-9224-8615a24aa1a7
     }
     Annotation {
-      Position                [500, 405]
+      Position                [505, 405]
       Text                    "relay 1"
-      #GUID                   9913300f-3c4d-4a1c-a357-5b790d172b41
+      #GUID                   82ee2b77-706a-4e09-b94b-e55202f290b7
     }
     Annotation {
-      Position                [500, 475]
+      Position                [505, 475]
       Text                    "relay 8"
-      #GUID                   171ddf2c-94af-4e3d-98c2-d14acc6fd963
+      #GUID                   e24a1ea5-8404-4e52-9069-c8fca3177b12
     }
     Annotation {
-      Position                [500, 445]
+      Position                [505, 445]
       Text                    "..."
-      #GUID                   0f196de8-902e-4328-b39b-edc94b3d84a1
+      #GUID                   01c1c479-74bd-4e4f-ae10-dc27efb1629d
     }
     Annotation {
-      Position                [460, 390]
+      Position                [465, 390]
       Text                    "Multi-flag:"
-      #GUID                   10625dee-d337-4c20-9774-a78bdcda2ac2
+      #GUID                   31c116a5-692b-42d9-868f-f71c1cb890dd
     }
     Annotation {
-      Position                [500, 415]
+      Position                [505, 415]
       Text                    "relay 2"
-      #GUID                   bca7bd39-08de-44ac-bf2b-631a481d32e0
+      #GUID                   0e18cda7-a06a-441f-afdc-f3e87776a7d3
     }
     Annotation {
-      Position                [500, 425]
+      Position                [505, 425]
       Text                    "relay 3"
-      #GUID                   ccff5b23-a500-432a-87c9-3f5ddc1ac7d3
+      #GUID                   8a69aa33-a8b1-4081-9e8f-ae288da2919c
     }
     Annotation {
-      Position                [435, 205]
+      Position                [440, 205]
       Text                    "voltage, 0..10V"
-      #GUID                   289a06a6-4b35-47b4-8cbb-44d2c710fce5
+      #GUID                   b28961b0-a6c5-45aa-8735-1acb1142b092
     }
   }
 }

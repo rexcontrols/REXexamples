@@ -1,7 +1,7 @@
 Model {
   Name                    "cascade_exec"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,11 +34,11 @@ Model {
   }
   System {
     Name                    "cascade_exec"
-    Location                [9, 31, 275, 404]
+    Location                [12, 34, 278, 407]
     #GUID                   f5ffee10-7913-470f-b666-c0336984f207
     Block {
       BlockType               Reference
-      Name                    "EXEC_1"
+      Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
       Position                [25, 68, 70, 337]
       SourceBlock             "execlib/EXEC"
@@ -89,7 +89,7 @@ Model {
       #GUID                   b75e8fb2-1a3c-4ac0-b492-e9981b3f4e68
     }
     Line {
-      SrcBlock                "EXEC_1"
+      SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "cascade_control"
       DstPort                 1

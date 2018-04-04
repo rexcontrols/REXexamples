@@ -1,194 +1,7 @@
 Model {
   Name                    "Example_RPI_Xroad_exec"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Wed May 20 15:02:02 2009"
-  Creator                 "ojezek"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:32:01 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:50>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Wed May 20 15:02:02 2009"
-  Creator                 "ojezek"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "XPMUser"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Thu Apr 04 19:32:01 2013"
-  ModelVersionFormat      "1.%<AutoIncrement:50>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -203,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -221,18 +34,8 @@ Model {
   }
   System {
     Name                    "Example_RPI_Xroad_exec"
-    Location                [10, 31, 254, 413]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "A4"
-    PaperUnits              "centimeters"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   63c7994b-3fc3-4f92-9bb1-30218746ab4a
+    Location                [11, 33, 253, 414]
+    #GUID                   5d206488-bf69-4efe-a9e0-fefe9de9022a
     Block {
       BlockType               Reference
       Name                    "EXEC"
@@ -250,7 +53,7 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
-      #GUID                   3f932883-bab7-425a-a354-dd3921bb557a
+      #GUID                   f7c63505-07d5-4a6b-9b4d-1cd5c3a8a459
     }
     Block {
       BlockType               Reference
@@ -266,7 +69,7 @@ Model {
       filename                ""
       MDLOPEN                 on
       bEdit                   off
-      #GUID                   5e3a4ae0-7321-4050-aedc-1e37b156bede
+      #GUID                   c8e798d0-0e92-4353-9853-16518b1ef741
     }
     Block {
       BlockType               Reference
@@ -281,7 +84,7 @@ Model {
       GenerateRexHMI          on
       RedirectToHMI           off
       Compression             off
-      #GUID                   1854b6c1-3619-4a6c-bc70-4d096b76a990
+      #GUID                   fa16e901-1dde-4b6b-8e6e-bf9c63fa3ec5
     }
     Block {
       BlockType               Reference
@@ -296,7 +99,7 @@ Model {
       stack                   10240
       pri                     3
       timer                   off
-      #GUID                   e264e14f-a9ed-4d5c-8686-e953f78d8495
+      #GUID                   960a63fc-0afc-4c66-acb5-e66ab0855494
     }
     Block {
       BlockType               Reference
@@ -304,40 +107,40 @@ Model {
       Ports                   [1, 1, 0, 0, 0]
       Position                [130, 78, 180, 92]
       SourceBlock             "execlib/MODULE"
-      #GUID                   dec20f44-e101-4f57-8498-73b2d7932449
+      #GUID                   1554b80e-1a0b-458b-8893-c70cb1ab31e7
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 1
       DstBlock                "RPiDrv"
       DstPort                 1
-      #GUID                   fa39c3f8-dc16-4b1a-8fb9-560fd50d471a
+      #GUID                   51bcc304-4c86-48a1-850b-7674408e68b9
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 2
       DstBlock                "RPI"
       DstPort                 1
-      #GUID                   28a9ceb3-206e-49f7-b465-756f8daa7ba8
+      #GUID                   9468867d-5c3a-47c7-b4c0-7e3cffe68802
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "Example_RPI_Xroad_task"
       DstPort                 1
-      #GUID                   045e8092-5517-46ae-95cd-17b385aee420
+      #GUID                   7cb35bc5-beb9-4f00-8712-2fef0b5b355d
     }
     Annotation {
       Position                [115, 40]
       Text                    "See the README.md file for details."
-      #GUID                   832de3f3-4986-451d-ad91-80462638f443
+      #GUID                   246b245b-2e04-4f4c-a636-d90cf13f8426
     }
     Annotation {
       Position                [120, 20]
       Text                    "Traffic lights on a crossroad"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   6706f791-1241-4a78-ac26-cfe150fa9cb4
+      #GUID                   c4dd1096-5a6f-4e3a-96cc-11cf077bcd0f
     }
   }
 }

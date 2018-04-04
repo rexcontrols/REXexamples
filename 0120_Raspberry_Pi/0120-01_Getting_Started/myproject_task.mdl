@@ -1,7 +1,7 @@
 Model {
   Name                    "myproject_task"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "myproject_task"
-    Location                [255, 34, 914, 484]
+    Location                [303, 34, 975, 484]
     #GUID                   39f76f42-6e8d-4e59-a416-00b29e002066
     Block {
       BlockType               Reference
@@ -312,8 +312,8 @@ Model {
       #GUID                   41ecd878-9d5e-466f-956e-c611beb0e28d
     }
     Annotation {
-      Position                [175, 25]
-      Text                    "Getting started with REX on Raspberry Pi"
+      Position                [195, 25]
+      Text                    "Getting started with REXYGEN on Raspberry Pi"
       FontWeight              "bold"
       FontSize                16
       #GUID                   c7b867f7-5096-4c01-a959-398c83a620d5

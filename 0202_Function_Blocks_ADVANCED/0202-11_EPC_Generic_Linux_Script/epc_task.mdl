@@ -1,192 +1,7 @@
 Model {
   Name                    "epc_task"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "Auto"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  on
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  Created                 "Tue Aug 28 12:33:33 2001"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "mertlj"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Mon Jan 07 09:53:40 2008"
-  ModelVersionFormat      "1.%<AutoIncrement:43>"
-  ConfigurationManager    "none"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "Auto"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  on
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  Created                 "Tue Aug 28 12:33:33 2001"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "mertlj"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Mon Jan 07 09:53:40 2008"
-  ModelVersionFormat      "1.%<AutoIncrement:43>"
-  ConfigurationManager    "none"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -201,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -219,18 +34,8 @@ Model {
   }
   System {
     Name                    "epc_task"
-    Location                [337, 31, 812, 414]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "automatic"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   64a78286-c1c8-44ea-aaf5-d5afc6d5fdb3
+    Location                [336, 33, 810, 410]
+    #GUID                   53b577cc-d1db-4f24-ade3-c0204c6d98a9
     Block {
       BlockType               Reference
       Name                    "BIS"
@@ -247,7 +52,7 @@ Model {
       t7                      7
       t8                      8
       RPT                     on
-      #GUID                   a3c389c0-ba2d-4cc7-aa01-812e738e9bb9
+      #GUID                   0a3931a8-b8d6-45ac-b198-3058ee8e9cbb
     }
     Block {
       BlockType               Reference
@@ -263,7 +68,7 @@ Model {
       format                  "1: Space-delimited values"
       BackgroundColor         "cyan"
       nmax                    100
-      #GUID                   85c9b017-5456-44c2-a821-2b7a6eac4ffa
+      #GUID                   e8399f1b-a441-4ffb-beac-64c01b690b26
     }
     Block {
       BlockType               Reference
@@ -275,7 +80,7 @@ Model {
       BSTATE                  on
       RPTF                    off
       BackgroundColor         "magenta"
-      #GUID                   8f5ddbff-feb7-47f1-84a8-81ada4ff6dc2
+      #GUID                   35bf6806-3d38-4295-99b3-7537437b963e
     }
     Block {
       BlockType               Reference
@@ -287,7 +92,7 @@ Model {
       offset                  0
       n                       3
       etype                   "8: Double"
-      #GUID                   c09a52ae-63b4-45a5-953c-26ff44bd98e9
+      #GUID                   ed422ec4-2b15-4996-af9b-12b8fb63a210
     }
     Block {
       BlockType               Reference
@@ -299,7 +104,7 @@ Model {
       offset                  0
       n                       3
       etype                   "8: Double"
-      #GUID                   b9b2db64-ee3f-4020-ae66-64e17a38d42e
+      #GUID                   296e2a00-a000-43d9-9c44-ec58cdad7eca
     }
     Block {
       BlockType               Reference
@@ -317,7 +122,7 @@ Model {
       NamePlacement           ""
       ShowName                on
       offset                  0
-      #GUID                   468c34af-cebe-4044-bd7f-0fd71d76b6a9
+      #GUID                   26f5e88a-2562-4959-8e54-4bcbf5606cae
     }
     Block {
       BlockType               Reference
@@ -335,7 +140,7 @@ Model {
       NamePlacement           ""
       ShowName                on
       offset                  0
-      #GUID                   ed045053-97b3-47b6-84d7-478ae3ec4990
+      #GUID                   78ea8b77-054d-4674-bea5-6b11e728f3de
     }
     Block {
       BlockType               Reference
@@ -344,7 +149,7 @@ Model {
       Position                [45, 213, 85, 247]
       SourceBlock             "timelib/TIME"
       tz                      "1: Local time"
-      #GUID                   085c4ee8-e594-4f0d-836e-02f2e33f7e7f
+      #GUID                   be27bcab-fd3b-40eb-baf6-f1493b32a963
     }
     Block {
       BlockType               Reference
@@ -355,7 +160,7 @@ Model {
       n                       5
       offset                  0
       etype                   "8: Double"
-      #GUID                   182c2eaa-ef96-4259-9061-c881ed59733e
+      #GUID                   604d8a6b-998e-4aa6-a30e-25e74a90de0d
     }
     Block {
       BlockType               Reference
@@ -366,7 +171,7 @@ Model {
       n                       3
       offset                  0
       etype                   "8: Double"
-      #GUID                   c133687a-5977-47d9-b5ff-e6f508a5279d
+      #GUID                   73eac0e6-94ce-4055-81e2-57f52e84108e
     }
     Line {
       SrcBlock                "BIS"
@@ -374,14 +179,14 @@ Model {
       Points                  [40, 0]
       DstBlock                "RTOV_data"
       DstPort                 4
-      #GUID                   ac7e3abe-d3ab-433d-b3a7-a2bfde036095
+      #GUID                   73eabe5e-145f-43e4-b61e-63da941d6bc5
     }
     Line {
       SrcBlock                "EPC"
       SrcPort                 1
       DstBlock                "VTOR"
       DstPort                 1
-      #GUID                   54c2ad3a-3d90-4a23-a284-b1febed74f59
+      #GUID                   80d66cd7-409e-41ce-9fc9-e3f2882204cd
     }
     Line {
       SrcBlock                "EPC"
@@ -389,7 +194,7 @@ Model {
       Points                  [65, 0]
       DstBlock                "VTOR1"
       DstPort                 1
-      #GUID                   90455027-7321-4f2e-882c-fb0181a40be0
+      #GUID                   afd2bd1c-83d0-40d4-bc18-ca2aad17fb6b
     }
     Line {
       SrcBlock                "MP_EXECUTE"
@@ -397,14 +202,14 @@ Model {
       Points                  [145, 0]
       DstBlock                "EPC"
       DstPort                 9
-      #GUID                   9b71c273-e031-4a54-8baa-90b4b86c7abb
+      #GUID                   36a6f951-0944-405e-bb4f-57066515244a
     }
     Line {
       SrcBlock                "RTOV_data"
       SrcPort                 1
       DstBlock                "EPC"
       DstPort                 1
-      #GUID                   dbf0d1c0-7130-4d70-ad00-4f8084a4577f
+      #GUID                   5da0da1f-ef31-4027-b245-ab0da611aa2b
     }
     Line {
       SrcBlock                "RTOV_time"
@@ -412,7 +217,7 @@ Model {
       Points                  [25, 0; 0, -100]
       DstBlock                "EPC"
       DstPort                 2
-      #GUID                   ba07c17a-1108-4d1c-a077-1bd53755f47b
+      #GUID                   a3e89e6b-4dfc-4005-8a8d-fb15810b9391
     }
     Line {
       SrcBlock                "SG_saw"
@@ -420,48 +225,48 @@ Model {
       Points                  [10, 0; 0, -20]
       DstBlock                "RTOV_data"
       DstPort                 3
-      #GUID                   35ddf6a3-d75b-4ebd-a34d-a81e999163ae
+      #GUID                   2a15df36-0b12-48cd-b2ee-54ba2cf47851
     }
     Line {
       SrcBlock                "SG_sine"
       SrcPort                 1
       DstBlock                "RTOV_data"
       DstPort                 2
-      #GUID                   5138d033-faa0-4677-b487-77811f166059
+      #GUID                   8b175353-1f76-4bcc-a7d9-4ebe218d1ac3
     }
     Line {
       SrcBlock                "TIME"
       SrcPort                 1
       DstBlock                "RTOV_time"
       DstPort                 2
-      #GUID                   af86c233-bb0e-42c2-86dd-e619aa0569d4
+      #GUID                   f38ebde3-3125-48ac-a42b-4accb460ee8c
     }
     Line {
       SrcBlock                "TIME"
       SrcPort                 2
       DstBlock                "RTOV_time"
       DstPort                 3
-      #GUID                   d1c69204-c0c5-461e-b631-4455b407819f
+      #GUID                   2e2ff021-6ca4-41a5-9e19-880fa3a82d4c
     }
     Line {
       SrcBlock                "TIME"
       SrcPort                 3
       DstBlock                "RTOV_time"
       DstPort                 4
-      #GUID                   ce12bf3a-fd32-4a1c-ae1a-9563ff9b4ea4
+      #GUID                   9b4af23e-acd3-4ba0-9edd-14071f166a5a
     }
     Annotation {
       Position                [150, 20]
       Text                    "EPC - calling external programs in Linux"
       FontSize                14
       FontWeight              "bold"
-      #GUID                   0769b06e-86b9-4d92-9928-3a27d37b47a8
+      #GUID                   951e415c-435c-4ea9-b9f2-a49f8b120a1c
     }
     Annotation {
       Position                [135, 45]
       Text                    "See the README.md file for detailed information"
 "."
-      #GUID                   b02b0f0b-e249-43de-829a-4e61b69e8c9d
+      #GUID                   c68401fe-8e41-4264-b688-2c37fa468bee
     }
   }
 }

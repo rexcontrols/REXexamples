@@ -2,7 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:ns0="http://www.rexcontrols.com/rexsvg"
+   xmlns:rexsvg="http://www.rexcontrols.com/rexsvg"
    xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -441,7 +441,7 @@
        xlink:href="#linearGradient9575-6-7"
        inkscape:collect="always" />
     <linearGradient
-       ns0:tag="gradientPipe"
+       rexsvg:tag="gradientPipe"
        y2="126.87131"
        x2="124.83475"
        y1="166.04156"
@@ -450,17 +450,17 @@
        gradientUnits="userSpaceOnUse"
        id="linearGradient9575-6-7">
       <stop
-         ns0:tag="stopColor1"
+         rexsvg:tag="stopColor1"
          id="stop8822-7-1-9"
          offset="0"
          style="stop-color:#6e6e6e;stop-opacity:1;" />
       <stop
-         ns0:tag="stopColor3"
+         rexsvg:tag="stopColor3"
          style="stop-color:#ffffff;stop-opacity:1;"
          offset="0.5"
          id="stop8826-1-4-5" />
       <stop
-         ns0:tag="stopColor4"
+         rexsvg:tag="stopColor4"
          id="stop8828-2-2-4"
          offset="1"
          style="stop-color:#6e6e6e;stop-opacity:1;" />

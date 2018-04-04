@@ -1,252 +1,7 @@
 Model {
   Name                    "music_exec"
-  Version                 4.00
-  SampleTimeColors        off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowStorageClass        off
-  ExecutionOrder          off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  Created                 "Mon Dec 20 17:00:37 1999"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "schlegel"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Fri Nov 21 10:36:22 2003"
-  ModelVersionFormat      "1.%<AutoIncrement:40>"
-  ConfigurationManager    "none"
-  SimParamPage            "Solver"
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "Auto"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  MinStep                 "auto"
-  MaxNumMinSteps          -1
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Array"
-  LimitDataPoints         off
-  MaxDataPoints           1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  SingleTaskRateTransMsg  "none"
-  MultiTaskRateTransMsg   "error"
-  IntegerOverflowMsg      "warning"
-  CheckForMatrixSingularity "none"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  InvalidFcnCallConnMsg   "error"
-  SignalLabelMismatchMsg  "none"
-  LinearizationMsg        "none"
-  VectorMatrixConversionMsg "none"
-  SfunCompatibilityCheckMsg "none"
-  BlockPriorityViolationMsg "warning"
-  ArrayBoundsChecking     "none"
-  ConsistencyChecking     "none"
-  ZeroCross               on
-  Profile                 off
-  SimulationMode          "normal"
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  TLCProfiler             off
-  TLCDebug                off
-  TLCCoverage             off
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  ParameterPooling        on
-  BlockReductionOpt       on
-  RTWExpressionDepthLimit 5
-  BooleanDataType         off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
-  SampleTimeColors        off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowStorageClass        off
-  ExecutionOrder          off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  Created                 "Mon Dec 20 17:00:37 1999"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "schlegel"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Fri Nov 21 10:36:22 2003"
-  ModelVersionFormat      "1.%<AutoIncrement:40>"
-  ConfigurationManager    "none"
-  SimParamPage            "Solver"
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "Auto"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  MinStep                 "auto"
-  MaxNumMinSteps          -1
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Array"
-  LimitDataPoints         off
-  MaxDataPoints           1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  SingleTaskRateTransMsg  "none"
-  MultiTaskRateTransMsg   "error"
-  IntegerOverflowMsg      "warning"
-  CheckForMatrixSingularity "none"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  InvalidFcnCallConnMsg   "error"
-  SignalLabelMismatchMsg  "none"
-  LinearizationMsg        "none"
-  VectorMatrixConversionMsg "none"
-  SfunCompatibilityCheckMsg "none"
-  BlockPriorityViolationMsg "warning"
-  ArrayBoundsChecking     "none"
-  ConsistencyChecking     "none"
-  ZeroCross               on
-  Profile                 off
-  SimulationMode          "normal"
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  TLCProfiler             off
-  TLCDebug                off
-  TLCCoverage             off
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  ParameterPooling        on
-  BlockReductionOpt       on
-  RTWExpressionDepthLimit 5
-  BooleanDataType         off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -261,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -279,17 +34,8 @@ Model {
   }
   System {
     Name                    "music_exec"
-    Location                [10, 33, 287, 407]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "automatic"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    ReportName              "simulink-default.rpt"
-    #GUID                   b4e40837-8840-4f7f-b13c-2c26f47d165d
+    Location                [10, 34, 283, 409]
+    #GUID                   675c55a1-4ef7-405f-9695-a1cd3e5a6a2b
     Block {
       BlockType               Reference
       Name                    "EXEC"
@@ -306,7 +52,7 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
-      #GUID                   daeea9fe-c17b-4199-ad27-6c9f0cdfe1b2
+      #GUID                   ea8c02ee-ddf2-420f-9cd4-f637e5f7fb95
     }
     Block {
       BlockType               Reference
@@ -320,27 +66,27 @@ Model {
       stack                   10240
       filename                ""
       MDLOPEN                 on
-      #GUID                   afd91ee7-5002-4d56-a663-3cca2e8a1bc6
+      #GUID                   d45954a2-e287-452f-8d4e-e54cf76096cd
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "music_task"
       DstPort                 1
-      #GUID                   55122b7b-34ef-47a5-ba19-e0279c12de0d
+      #GUID                   9d7230fb-a276-4532-a957-3a730405cb77
     }
     Annotation {
       Position                [140, 40]
       Text                    "See the README.md file for detailed information"
 "."
-      #GUID                   21bdb5f8-b1cc-4e0c-aa62-ef8edd689a68
+      #GUID                   807d9388-8dd1-4874-bccc-4e49c6a41bc4
     }
     Annotation {
       Position                [130, 20]
       Text                    "Run music file from REX on RPi"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   b07b4784-d0f4-42a0-b472-22044346120f
+      #GUID                   58325433-8046-4828-9313-105be5331682
     }
   }
 }

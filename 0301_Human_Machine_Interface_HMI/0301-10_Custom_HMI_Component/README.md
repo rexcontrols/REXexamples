@@ -1,4 +1,4 @@
-RexHMI Designer - custom component
+*REXYGEN HMI Designer* - custom component
 ==================================
 
 When the special behaviour of the component is needed it is possible to create custom one. Custom HMI component is 
@@ -20,7 +20,7 @@ The SVG component is marked using `rexsvg:module` attribute. In this example we 
   </text>
 </g>
 ```
-The `<desc>` tag contain configuration in JSON format. One can edit it using XML *XML Editor* function in RexHMI Designer (CTRL+SHITF+X). The most important field is `connections` where connection strings are defined. In this case the configuration is following:
+The `<desc>` tag contain configuration in JSON format. One can edit it using XML *XML Editor* function in *REXYGEN HMI Designer* (CTRL+SHITF+X). The most important field is `connections` where connection strings are defined. In this case the configuration is following:
 ```
 {
  "connections":{
@@ -46,12 +46,12 @@ The component is finnaly loaded to the final SVG scheme using *Library Path* set
 
 ## Documentation ##
 
-- [RexHMI documentation](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexHMI/RexHMI_ENG.html)
+- [REXYGEN HMI User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenHMI_ENG.pdf)
 - [SVG.JS](http://svgjs.com)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

@@ -1,129 +1,7 @@
 Model {
   Name                    "master_exec"
-  Version                 4.00
-  SampleTimeColors        off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowStorageClass        off
-  ExecutionOrder          off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  Created                 "Mon Dec 20 17:00:37 1999"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "schlegel"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Fri Nov 21 10:36:22 2003"
-  ModelVersionFormat      "1.%<AutoIncrement:40>"
-  ConfigurationManager    "none"
-  SimParamPage            "Solver"
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "Auto"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  MinStep                 "auto"
-  MaxNumMinSteps          -1
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Array"
-  LimitDataPoints         off
-  MaxDataPoints           1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  SingleTaskRateTransMsg  "none"
-  MultiTaskRateTransMsg   "error"
-  IntegerOverflowMsg      "warning"
-  CheckForMatrixSingularity "none"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  InvalidFcnCallConnMsg   "error"
-  SignalLabelMismatchMsg  "none"
-  LinearizationMsg        "none"
-  VectorMatrixConversionMsg "none"
-  SfunCompatibilityCheckMsg "none"
-  BlockPriorityViolationMsg "warning"
-  ArrayBoundsChecking     "none"
-  ConsistencyChecking     "none"
-  ZeroCross               on
-  Profile                 off
-  SimulationMode          "normal"
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  TLCProfiler             off
-  TLCDebug                off
-  TLCCoverage             off
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  ParameterPooling        on
-  BlockReductionOpt       on
-  RTWExpressionDepthLimit 5
-  BooleanDataType         off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -138,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -156,24 +34,15 @@ Model {
   }
   System {
     Name                    "master_exec"
-    Location                [9, 31, 235, 416]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "automatic"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    ReportName              "simulink-default.rpt"
-    #GUID                   b4e40837-8840-4f7f-b13c-2c26f47d165d
+    Location                [12, 34, 294, 419]
+    #GUID                   fdda5af5-40ad-4a8c-8166-39615417ca16
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [45, 68, 90, 357]
+      Position                [40, 68, 85, 357]
       SourceBlock             "execlib/EXEC"
-      target                  "PC - Windows"
+      target                  "Generic target device"
       tick                    "0.05"
       ntick0                  10
       ntick1                  50
@@ -183,13 +52,13 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
-      #GUID                   daeea9fe-c17b-4199-ad27-6c9f0cdfe1b2
+      #GUID                   9e6f8c8b-bb80-4b7c-8561-60546a8cfa0f
     }
     Block {
       BlockType               Reference
       Name                    "MBM"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [125, 118, 175, 132]
+      Position                [120, 118, 170, 132]
       SourceBlock             "execlib/IODRV"
       module                  "MbDrv"
       classname               "MbmDrv"
@@ -198,21 +67,44 @@ Model {
       stack                   10240
       pri                     3
       timer                   off
-      #GUID                   c4ac8f3f-4852-4cca-aeac-597bbf04dbd3
+      #GUID                   4c049640-9aa9-48d1-9bfd-5ec29d9c5695
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [205, 118, 255, 132]
+      SourceBlock             "execlib/IODRV"
+      module                  "MonarcoDrv"
+      classname               "MonarcoHatDrv"
+      cfgname                 "monarco.rio"
+      factor                  10
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   f652cc07-f6b5-4959-84fe-a24c2a485298
     }
     Block {
       BlockType               Reference
       Name                    "MbDrv"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [125, 83, 175, 97]
+      Position                [120, 83, 170, 97]
       SourceBlock             "execlib/MODULE"
-      #GUID                   5b4face7-2e46-4264-9f49-84b4e7aba30e
+      #GUID                   d690c847-76b8-4e39-a852-e856f04a1cb1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MonarcoDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [205, 83, 255, 97]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   550004e7-37e6-4f9a-97bd-cf3a9b37ce58
     }
     Block {
       BlockType               Reference
       Name                    "master_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [125, 223, 175, 237]
+      Position                [120, 223, 170, 237]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -220,40 +112,54 @@ Model {
       stack                   10240
       filename                ""
       MDLOPEN                 on
-      #GUID                   afd91ee7-5002-4d56-a663-3cca2e8a1bc6
+      #GUID                   9f1d3e15-c035-4d98-9846-3a692fb15bd0
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 1
       DstBlock                "MbDrv"
       DstPort                 1
-      #GUID                   243e9000-fc16-432a-915f-fe2b8c14d067
+      #GUID                   42b9fcc1-a100-4fc9-bb1c-ba6b43d25d4f
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 2
       DstBlock                "MBM"
       DstPort                 1
-      #GUID                   44a2d157-6a2f-4085-9967-b2e8fa394593
+      #GUID                   9018a246-ea44-4b80-a598-26d087208655
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "master_task"
       DstPort                 1
-      #GUID                   55122b7b-34ef-47a5-ba19-e0279c12de0d
+      #GUID                   6210b7e2-3638-4da7-9304-53c110ec7c71
+    }
+    Line {
+      SrcBlock                "MBM"
+      SrcPort                 1
+      DstBlock                "MNR"
+      DstPort                 1
+      #GUID                   6fa48e7d-cc88-463d-aa45-a12dba6e0461
+    }
+    Line {
+      SrcBlock                "MbDrv"
+      SrcPort                 1
+      DstBlock                "MonarcoDrv"
+      DstPort                 1
+      #GUID                   582de254-f6c2-4edb-b0cc-e44bad487ca2
     }
     Annotation {
-      Position                [120, 40]
+      Position                [115, 40]
       Text                    "See the README.md file for details."
-      #GUID                   057f0a48-9076-473d-bf58-5ef4a5d8bfe9
+      #GUID                   9c803041-ccfd-4620-82a6-e7242f17ad9d
     }
     Annotation {
-      Position                [95, 20]
+      Position                [90, 20]
       Text                    "Modbus RTU master"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   891c296a-5728-45ab-8d72-6ad0b3276c68
+      #GUID                   e89f2af5-5407-42b8-b954-7d90c6a38010
     }
   }
 }

@@ -1,99 +1,7 @@
 Model {
   Name                    "stepping_control"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "500.0"
-  SolverMode              "Auto"
-  Solver                  "FixedStepDiscrete"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "0.1"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  on
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  Created                 "Mon Dec 30 16:43:09 2002"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "mertlj"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Mon Mar 30 09:41:00 2009"
-  ModelVersionFormat      "1.%<AutoIncrement:52>"
-  ConfigurationManager    "none"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -108,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,18 +34,8 @@ Model {
   }
   System {
     Name                    "stepping_control"
-    Location                [305, 31, 788, 465]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   23f3f93d-5c44-4c20-a8cd-f3bca8ffa786
+    Location                [305, 34, 789, 479]
+    #GUID                   5a654bd3-a16b-40c8-8f71-3ea80fbf59d9
     Block {
       BlockType               Inport
       Name                    "pv"
@@ -147,7 +45,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       BackgroundColor         "green"
-      #GUID                   7e0ed4b6-bf16-4caf-92a1-80ee41086325
+      #GUID                   1e84d9c0-2e19-4597-a596-33e8c74cf8c2
     }
     Block {
       BlockType               Inport
@@ -158,7 +56,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       BackgroundColor         "green"
-      #GUID                   30521d0c-e6ad-49b3-a6d8-8dd59cd1b2da
+      #GUID                   17d7dcb6-9b71-46d9-b2bd-06a853ee96ab
     }
     Block {
       BlockType               Inport
@@ -169,7 +67,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       BackgroundColor         "green"
-      #GUID                   77c89c2f-9450-4fa3-9be5-0c99ed5c0576
+      #GUID                   2687563f-43f5-4276-aee2-57a29383c8a2
     }
     Block {
       BlockType               Inport
@@ -180,7 +78,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       BackgroundColor         "green"
-      #GUID                   3acc9682-71ae-482d-b669-8c0ff486d3ff
+      #GUID                   d357263c-4845-4d50-9ab2-f583ec7ff194
     }
     Block {
       BlockType               Reference
@@ -192,7 +90,7 @@ Model {
       NamePlacement           ""
       YCN                     off
       BackgroundColor         "magenta"
-      #GUID                   ca25ea63-818d-4f7d-bc68-072cc550216a
+      #GUID                   10d9e211-08f4-4a3d-8704-71d45b75d75f
     }
     Block {
       BlockType               Reference
@@ -204,7 +102,7 @@ Model {
       NamePlacement           ""
       YCN                     off
       BackgroundColor         "magenta"
-      #GUID                   df730e16-e278-4784-9c5c-b60d7f237b4d
+      #GUID                   bab6dc86-1a90-4ff6-b4dc-973a5429852d
     }
     Block {
       BlockType               Reference
@@ -215,7 +113,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       YCN                     on
-      #GUID                   428b47bc-9d71-4b6a-ab4b-e87282c7278f
+      #GUID                   fe06b89f-e14c-4d5a-b0ee-b2a7b0a385a6
     }
     Block {
       BlockType               Reference
@@ -226,7 +124,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       YCN                     on
-      #GUID                   07d88dc5-e27a-4804-9f93-f30e9bd7451a
+      #GUID                   e3f25b3b-8932-4e40-91ae-5a1fed2b89ba
     }
     Block {
       BlockType               Reference
@@ -238,7 +136,7 @@ Model {
       NamePlacement           ""
       ycn                     0
       BackgroundColor         "magenta"
-      #GUID                   6647e77a-0d65-4fb9-8c4b-728c955474c7
+      #GUID                   12792831-9ef4-4e7a-9804-7f67fd60cbde
     }
     Block {
       BlockType               From
@@ -248,7 +146,7 @@ Model {
       ShowName                off
       GotoTag                 "pv"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   ac9ef4f6-4742-4f1e-ba8b-bc44d6ac68a4
+      #GUID                   c149c70d-a25e-48cb-a99f-cc0e7611060c
     }
     Block {
       BlockType               From
@@ -258,7 +156,7 @@ Model {
       ShowName                off
       GotoTag                 "sp"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   135f96ba-79db-4315-bb22-a9fd227e5a26
+      #GUID                   440a6f84-824a-42bd-ad67-fac153060eb6
     }
     Block {
       BlockType               From
@@ -268,7 +166,7 @@ Model {
       ShowName                off
       GotoTag                 "up"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   4e5afbb3-cfdc-4232-9814-a7d653705b63
+      #GUID                   b47f1b2c-98ec-41dd-bd07-a6924162a4f6
     }
     Block {
       BlockType               From
@@ -278,7 +176,7 @@ Model {
       ShowName                off
       GotoTag                 "dn"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   e4f904d0-0b82-42bb-b08f-eaa46be87952
+      #GUID                   d1568c5f-177c-4669-b189-0cf9bd1200d7
     }
     Block {
       BlockType               Goto
@@ -289,7 +187,7 @@ Model {
       GotoTag                 "pv"
       TagVisibility           "local"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   423aff36-fbd5-45df-a0e1-9ea2d0a3ada9
+      #GUID                   1f6b3e6b-e99f-4e6d-a182-9c2fad98ea82
     }
     Block {
       BlockType               Goto
@@ -300,7 +198,7 @@ Model {
       GotoTag                 "sp"
       TagVisibility           "local"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   8a342214-532d-4a00-b9e7-d8a3a821cba5
+      #GUID                   78eee1a2-88df-4e45-8aa8-87f26509da59
     }
     Block {
       BlockType               Goto
@@ -311,7 +209,7 @@ Model {
       GotoTag                 "up"
       TagVisibility           "local"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   154af6e4-8cca-4980-b318-a4f1ab0d5bfc
+      #GUID                   515081a9-1f8d-40aa-9753-eb903cb13935
     }
     Block {
       BlockType               Goto
@@ -322,7 +220,7 @@ Model {
       GotoTag                 "dn"
       TagVisibility           "local"
       BackgroundColor         [1.000000, 1.000000, 0.349020]
-      #GUID                   90144622-af1b-4203-b0b0-1f938c9b6dac
+      #GUID                   ec0d9469-af32-4a7f-a50a-540487c9fa25
     }
     Block {
       BlockType               Reference
@@ -334,7 +232,7 @@ Model {
       BackgroundColor         "lightBlue"
       ShowName                off
       SourceType              "LPBRK"
-      #GUID                   40bcd260-3843-40db-96b9-7e4aeeeed6ea
+      #GUID                   de51261d-aa3e-47cf-8237-23fb6ba67909
     }
     Block {
       BlockType               Reference
@@ -348,7 +246,7 @@ Model {
       BSTATE                  off
       RPTF                    off
       BackgroundColor         "magenta"
-      #GUID                   0ac126ee-b966-4148-9538-88a1f90801b3
+      #GUID                   3a5396b6-e9fd-4835-bddf-39ccedc58f68
     }
     Block {
       BlockType               Reference
@@ -362,7 +260,7 @@ Model {
       BSTATE                  off
       RPTF                    off
       BackgroundColor         "magenta"
-      #GUID                   addf0aab-4266-42fe-9cf5-56cc682afe0f
+      #GUID                   d9a3aa87-d2e8-4ac0-b160-7eaf33dd5401
     }
     Block {
       BlockType               Reference
@@ -384,7 +282,7 @@ Model {
       dz                      0
       icotype                 "4: SCUV"
       BackgroundColor         "cyan"
-      #GUID                   01687a50-a2f7-4e9d-804f-88e4befed7e1
+      #GUID                   fbe022b0-80c2-4147-9f1a-6912a9fd6f35
     }
     Block {
       BlockType               Reference
@@ -404,7 +302,7 @@ Model {
       tt                      1
       NamePlacement           ""
       ShowName                on
-      #GUID                   49298d2a-0cb9-4d50-bc8f-3c6a85a134b3
+      #GUID                   3f32eb4a-a4ea-4e13-9825-8cbe13a5aa8a
     }
     Block {
       BlockType               Reference
@@ -427,7 +325,7 @@ Model {
       id                      1
       Title                   "Trend Title"
       timesrc                 1
-      #GUID                   428dbe5f-97db-405a-9b44-162237e8f5fe
+      #GUID                   503130ff-8095-44a1-b743-7d586b9232b8
     }
     Block {
       BlockType               Reference
@@ -450,7 +348,7 @@ Model {
       id                      2
       Title                   "Trend Title"
       timesrc                 1
-      #GUID                   77c82338-6b66-4306-82f8-bd40b521cd55
+      #GUID                   b54842d0-1a0f-4e25-aeee-19075640a7e0
     }
     Block {
       BlockType               Outport
@@ -461,7 +359,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       BackgroundColor         "green"
-      #GUID                   8275cf44-d2c6-4ab1-8f82-412746be2952
+      #GUID                   00b09dc1-32c0-4c0c-b293-deca113e65a0
     }
     Block {
       BlockType               Outport
@@ -472,7 +370,7 @@ Model {
       ShowName                on
       NamePlacement           ""
       BackgroundColor         "green"
-      #GUID                   4f504682-e196-4ef5-a790-48008e2c078a
+      #GUID                   4417206b-bde7-4558-af72-fe76b3788f7f
     }
     Line {
       SrcBlock                "CNB_MAN"
@@ -480,44 +378,44 @@ Model {
       Points                  [50, 0]
       DstBlock                "SCUV"
       DstPort                 11
-      #GUID                   3cfea041-07ac-4f4f-9979-f86bcaa74acd
+      #GUID                   aa25d29f-7a41-4e8e-bce2-c5c186684fd7
     }
     Line {
       SrcBlock                "CNB_MAN_PID"
       SrcPort                 1
       DstBlock                "PIDU"
       DstPort                 6
-      #GUID                   6ef581dc-b7f5-4602-97c7-a877a19ee3c8
+      #GUID                   f65c48ff-a6d2-4599-813a-e767bb0c1755
     }
     Line {
       SrcBlock                "CNB_RUN"
       SrcPort                 1
       DstBlock                "TRND_SCUV"
       DstPort                 5
-      #GUID                   ba69baf2-293c-490c-b446-449ac3d906b5
+      #GUID                   03d4b7b3-b192-49d3-af55-e2175ab51964
     }
     Line {
       SrcBlock                "CNB_RUN1"
       SrcPort                 1
       DstBlock                "TRND_Step"
       DstPort                 5
-      #GUID                   3f903f09-9e7d-4c2b-ae6c-937dd5b6f90a
+      #GUID                   558d26e7-dcde-4218-b8f6-45bcc805c393
     }
     Line {
       SrcBlock                "CNR_sp"
       SrcPort                 1
       Points                  [20, 0]
-      #GUID                   19e04429-be8e-4f55-bfdb-c591ca2e8d63
+      #GUID                   d1fe6056-4ce3-4d00-859e-7b532686940e
       Branch {
         DstBlock                "Goto2"
         DstPort                 1
-        #GUID                   0925a103-07e4-41ce-bf3f-e6917b8697d8
+        #GUID                   4cc37ccc-845d-4b15-88af-131dd0c81e74
       }
       Branch {
         Points                  [0, 35]
         DstBlock                "PIDU"
         DstPort                 2
-        #GUID                   71fba720-a5a9-4fe2-a652-b312108a7522
+        #GUID                   e6eedd9e-65f1-4fa2-b70b-83f2dbcbd352
       }
     }
     Line {
@@ -525,28 +423,28 @@ Model {
       SrcPort                 1
       DstBlock                "TRND_Step"
       DstPort                 3
-      #GUID                   e205eeaf-48ee-42b4-a6b1-db0b24fd5775
+      #GUID                   8e2a6b8b-c48a-4a70-a593-11d608ddef59
     }
     Line {
       SrcBlock                "From2"
       SrcPort                 1
       DstBlock                "TRND_Step"
       DstPort                 1
-      #GUID                   3fd78a49-1884-4c4f-b156-9445ace619fe
+      #GUID                   efe28df2-eb6e-458c-8acb-944670d95b86
     }
     Line {
       SrcBlock                "From3"
       SrcPort                 1
       DstBlock                "TRND_SCUV"
       DstPort                 1
-      #GUID                   4801877e-c49a-4e1d-b1d4-86d8e08b45b9
+      #GUID                   57ae309f-b02f-42b4-b974-a8257c6a593d
     }
     Line {
       SrcBlock                "From4"
       SrcPort                 1
       DstBlock                "TRND_SCUV"
       DstPort                 2
-      #GUID                   a5ffb3a5-1f2e-4262-82ba-2a50fa4859d3
+      #GUID                   961c18cc-8354-437d-acd9-102b79995b44
     }
     Line {
       SrcBlock                "LPBRK"
@@ -554,7 +452,7 @@ Model {
       Points                  [-20, 0]
       DstBlock                "PIDU"
       DstPort                 4
-      #GUID                   bb032849-fda8-475a-95fc-d30d46b35176
+      #GUID                   bcedd315-aac2-4626-9909-55b00c71a90d
     }
     Line {
       SrcBlock                "MP_DN"
@@ -562,7 +460,7 @@ Model {
       Points                  [45, 0; 0, -65]
       DstBlock                "SCUV"
       DstPort                 8
-      #GUID                   8ab0db54-bb50-4727-b55e-4246b1529701
+      #GUID                   14c3b1f5-e4e4-4190-8b2b-b4858cd990c1
     }
     Line {
       SrcBlock                "MP_UP"
@@ -570,23 +468,23 @@ Model {
       Points                  [35, 0; 0, -45]
       DstBlock                "SCUV"
       DstPort                 7
-      #GUID                   b3404bc1-c8fc-417a-98cf-d93370fe2a19
+      #GUID                   ca79dd02-3786-41b2-9e5d-934b7a695ee9
     }
     Line {
       SrcBlock                "PIDU"
       SrcPort                 1
       Points                  [5, 0]
-      #GUID                   5ebe8c85-ba59-4152-9270-980663268df6
+      #GUID                   7a848dab-0529-4998-8eab-a6cc2286f0b5
       Branch {
         Points                  [0, -20]
         DstBlock                "LPBRK"
         DstPort                 1
-        #GUID                   554b3ed5-01d9-41b7-9ca9-5098dbc55506
+        #GUID                   99020853-6416-4861-b60f-40c2e4ee9bc5
       }
       Branch {
         DstBlock                "SCUV"
         DstPort                 1
-        #GUID                   114c1a81-f9e0-4537-8263-a2779b736f41
+        #GUID                   092cf17f-6314-4a56-af3c-57f4e498cbcb
       }
     }
     Line {
@@ -595,7 +493,7 @@ Model {
       Points                  [10, 0; 0, -10]
       DstBlock                "SCUV"
       DstPort                 2
-      #GUID                   8bf26fed-e8be-4509-acd9-a8d7c8660276
+      #GUID                   6bd1473b-f585-451a-8895-86df49f8cafa
     }
     Line {
       SrcBlock                "PIDU"
@@ -603,40 +501,40 @@ Model {
       Points                  [10, 0; 0, -30]
       DstBlock                "SCUV"
       DstPort                 4
-      #GUID                   e0e091f6-12e8-4663-aba9-9ca97677a219
+      #GUID                   811f524f-9234-4c0d-9486-47c2bfacd0f7
     }
     Line {
       SrcBlock                "SCUV"
       SrcPort                 1
       Points                  [10, 0]
-      #GUID                   e06cfb04-1a74-417a-9959-1309c19aaead
+      #GUID                   ec216833-cee4-40d6-87fa-3285706344ea
       Branch {
         Points                  [0, -40]
         DstBlock                "Goto3"
         DstPort                 1
-        #GUID                   62be62c0-7c3a-457f-ae0d-babb2660aab9
+        #GUID                   66e57c4d-542b-4483-86b2-03642349d135
       }
       Branch {
         DstBlock                "up"
         DstPort                 1
-        #GUID                   171e3f31-a72d-491a-99a6-70ab7bcc9f64
+        #GUID                   fcd6ea75-6442-4002-ad6a-42274867870b
       }
     }
     Line {
       SrcBlock                "SCUV"
       SrcPort                 2
       Points                  [10, 0]
-      #GUID                   776e9800-7c57-4647-8a0a-547280d3288b
+      #GUID                   0539cd16-60c0-42d7-8d21-933b07fb707b
       Branch {
         Points                  [0, 35]
         DstBlock                "Goto4"
         DstPort                 1
-        #GUID                   870247c7-54a8-4c78-bcdd-e841ca37cef5
+        #GUID                   443266d6-eab7-4cbc-910c-f1c54f5cdd85
       }
       Branch {
         DstBlock                "dn"
         DstPort                 1
-        #GUID                   554f260d-a530-420e-83e8-967b057540ff
+        #GUID                   de855712-096b-4a9c-9c7b-1f5554ba963e
       }
     }
     Line {
@@ -644,7 +542,7 @@ Model {
       SrcPort                 1
       DstBlock                "SCUV"
       DstPort                 5
-      #GUID                   b395817f-2836-4ab5-99b1-f4d65c0558ca
+      #GUID                   889f281c-bd68-4405-834c-44e9dc2bdce1
     }
     Line {
       SrcBlock                "ls"
@@ -652,43 +550,43 @@ Model {
       Points                  [15, 0; 0, -20]
       DstBlock                "SCUV"
       DstPort                 6
-      #GUID                   1e55183b-6eda-4289-8169-6c085cf5c7e4
+      #GUID                   312cf18e-5b90-496e-9e76-c290fef6d6ef
     }
     Line {
       SrcBlock                "mv_valve"
       SrcPort                 1
       DstBlock                "TRND_Step"
       DstPort                 2
-      #GUID                   96ec22a4-f97e-4285-b8d0-7d7616bf9340
+      #GUID                   69acb49b-5268-4b90-a2f1-65a86c9464c0
     }
     Line {
       SrcBlock                "pv"
       SrcPort                 1
       Points                  [10, 0]
-      #GUID                   e360bbe0-a2fa-4dd0-8ee7-3ccf4f17339e
+      #GUID                   3fdd5877-4a52-4ea0-8ebc-7895c43723e8
       Branch {
         DstBlock                "Goto"
         DstPort                 1
-        #GUID                   8f4865b7-5655-42dd-a06b-cd8cdcd24177
+        #GUID                   c11595ee-295c-488f-b2fc-f4d5a5e05bff
       }
       Branch {
         DstBlock                "PIDU"
         DstPort                 3
-        #GUID                   7cf8e482-caa0-4985-b90a-20b76531728f
+        #GUID                   ea5a39a2-2eed-4756-a273-15023ad17de6
       }
     }
     Annotation {
       Position                [140, 45]
       Text                    "See the README.md file for detailed information"
 "."
-      #GUID                   ab01b35d-b9f6-4263-8007-e411dffc0d8f
+      #GUID                   3330584f-46b5-4011-b6f1-f7e04d074eba
     }
     Annotation {
       Position                [135, 20]
       Text                    "Stepping controller - control task"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   c22f97e9-9c4e-428e-86b2-3972f21ba990
+      #GUID                   8d057930-5518-4906-ada2-fcaee5b80455
     }
   }
 }

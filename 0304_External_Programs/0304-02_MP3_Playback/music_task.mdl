@@ -1,174 +1,7 @@
 Model {
   Name                    "music_task"
-  Version                 7.1
-  MdlSubVersion           0
-  SaveDefaultBlockParams  on
-  SampleTimeColors        off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowLoopsOnError        on
-  IgnoreBidirectionalLines off
-  ShowStorageClass        off
-  ShowTestPointIcons      on
-  ShowSignalResolutionIcons on
-  ShowViewerIcons         on
-  SortedOrder             off
-  ExecutionContextIcon    off
-  ShowLinearizationAnnotations on
-  ScopeRefreshTime        "0.035000"
-  OverrideScopeRefreshTime on
-  DisableAllScopes        off
-  DataTypeOverride        "UseLocalSettings"
-  MinMaxOverflowLogging   "UseLocalSettings"
-  MinMaxOverflowArchiveMode "Overwrite"
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  Created                 "Thu Jan 14 14:46:32 2010"
-  Creator                 "jsobota"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "jsobota"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Tue Jan 19 10:05:35 2010"
-  RTWModifiedTimeStamp    0
-  ModelVersionFormat      "1.%<AutoIncrement:20>"
-  ConfigurationManager    "none"
-  SimulationMode          "normal"
-  LinearizationMsg        "none"
-  Profile                 off
-  ParamWorkspaceSource    "MATLABWorkspace"
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  covSaveCumulativeToWorkspaceVar on
-  CovSaveSingleToWorkspaceVar on
-  CovCumulativeVarName    "covCumulativeData"
-  CovCumulativeReport     off
-  CovReportOnPause        on
-  CovModelRefEnable       "Off"
-  ExtModeBatchMode        off
-  ExtModeEnableFloating   on
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigDurationFloating "auto"
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  BufferReuse             on
-  ShowModelReferenceBlockVersion off
-  ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
-  MdlSubVersion           0
-  SaveDefaultBlockParams  on
-  SampleTimeColors        off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowLoopsOnError        on
-  IgnoreBidirectionalLines off
-  ShowStorageClass        off
-  ShowTestPointIcons      on
-  ShowSignalResolutionIcons on
-  ShowViewerIcons         on
-  SortedOrder             off
-  ExecutionContextIcon    off
-  ShowLinearizationAnnotations on
-  ScopeRefreshTime        "0.035000"
-  OverrideScopeRefreshTime on
-  DisableAllScopes        off
-  DataTypeOverride        "UseLocalSettings"
-  MinMaxOverflowLogging   "UseLocalSettings"
-  MinMaxOverflowArchiveMode "Overwrite"
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  Created                 "Thu Jan 14 14:46:32 2010"
-  Creator                 "jsobota"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "jsobota"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Tue Jan 19 10:05:35 2010"
-  RTWModifiedTimeStamp    0
-  ModelVersionFormat      "1.%<AutoIncrement:20>"
-  ConfigurationManager    "none"
-  SimulationMode          "normal"
-  LinearizationMsg        "none"
-  Profile                 off
-  ParamWorkspaceSource    "MATLABWorkspace"
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  covSaveCumulativeToWorkspaceVar on
-  CovSaveSingleToWorkspaceVar on
-  CovCumulativeVarName    "covCumulativeData"
-  CovCumulativeReport     off
-  CovReportOnPause        on
-  CovModelRefEnable       "Off"
-  ExtModeBatchMode        off
-  ExtModeEnableFloating   on
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigDurationFloating "auto"
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  BufferReuse             on
-  ShowModelReferenceBlockVersion off
-  ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  Version                 3.0
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -202,7 +35,7 @@ Model {
   }
   System {
     Name                    "music_task"
-    Location                [311, 33, 793, 408]
+    Location                [304, 34, 786, 409]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -275,18 +108,18 @@ Model {
       #GUID                   70be94bb-e638-4275-9277-1b8a8ee2e082
     }
     Annotation {
-      Position                [230, 20]
-      Text                    "Run music file from REX Control System on Raspb"
-"erry PI"
-      FontWeight              "bold"
-      FontSize                16
-      #GUID                   30d98409-46ee-49e2-a817-39a3a8d14549
-    }
-    Annotation {
       Position                [145, 55]
       Text                    "See the README.md file for detailed information"
 "."
       #GUID                   b6c15c5c-7688-4b2c-8f43-867dc381c7fb
+    }
+    Annotation {
+      Position                [230, 20]
+      Text                    "Run music file from REX Control System on Raspb"
+"erry Pi"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   30d98409-46ee-49e2-a817-39a3a8d14549
     }
   }
 }

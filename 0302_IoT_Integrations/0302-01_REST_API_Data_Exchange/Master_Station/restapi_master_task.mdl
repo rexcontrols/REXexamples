@@ -1,7 +1,7 @@
 Model {
   Name                    "restapi_master_task"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -66,15 +66,6 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "CNI"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [185, 208, 205, 222]
-      SourceBlock             "mathlib/CNI"
-      icn                     0
-      #GUID                   be842bf8-5ed8-4736-b848-aefa6b7ee2c8
-    }
-    Block {
-      BlockType               Reference
       Name                    "CONCAT"
       Ports                   [8, 1, 0, 0, 0]
       Position                [220, 110, 280, 200]
@@ -82,15 +73,6 @@ Model {
       ptrn                    "{ \"v\": %1}"
       nmax                    0
       #GUID                   86d459b9-67f1-4bf3-9fb5-7a53c376c36e
-    }
-    Block {
-      BlockType               Reference
-      Name                    "DIF_"
-      Ports                   [1, 1, 0, 0, 0]
-      Position                [185, 238, 210, 252]
-      SourceBlock             "mathlib/DIF_"
-      ISSF                    off
-      #GUID                   f3b40735-43ae-4173-ae50-6cb1633079aa
     }
     Block {
       BlockType               Display
@@ -103,6 +85,15 @@ Model {
       Suffix                  ""
       DispValue               ""
       #GUID                   5460582b-7e4a-4824-a29a-49bdba3abc71
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_BOTH"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [240, 233, 265, 247]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "3: Both edges"
+      #GUID                   67e5f9ad-7678-44f5-959d-dab385cd0b35
     }
     Block {
       BlockType               Reference
@@ -168,15 +159,6 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "REL"
-      Ports                   [2, 1, 0, 0, 0]
-      Position                [230, 228, 255, 252]
-      SourceBlock             "mathlib/REL"
-      irel                    "2: inequality (!=)"
-      #GUID                   a61308eb-cbee-4211-83d4-5f42b771d70d
-    }
-    Block {
-      BlockType               Reference
       Name                    "RTOI"
       Ports                   [1, 1, 0, 0, 0]
       Position                [325, 333, 350, 347]
@@ -206,8 +188,8 @@ Model {
       Points                  [30, 0]
       #GUID                   d07e8cf2-1bac-4848-9508-c0e98d1fa0a8
       Branch {
-        Points                  [0, 125]
-        DstBlock                "DIF_"
+        Points                  [0, 120]
+        DstBlock                "EDGE_BOTH"
         DstPort                 1
         #GUID                   a252a5d9-4856-4884-ba16-1abc4116f26c
       }
@@ -218,14 +200,6 @@ Model {
       }
     }
     Line {
-      SrcBlock                "CNI"
-      SrcPort                 1
-      Points                  [5, 0]
-      DstBlock                "REL"
-      DstPort                 1
-      #GUID                   0ee08257-1002-41a8-9cba-ebf87a26409b
-    }
-    Line {
       SrcBlock                "CONCAT"
       SrcPort                 1
       DstBlock                "HTTP_post"
@@ -233,11 +207,12 @@ Model {
       #GUID                   10f03922-d0ff-4deb-8817-52a7b4f24519
     }
     Line {
-      SrcBlock                "DIF_"
+      SrcBlock                "EDGE_BOTH"
       SrcPort                 1
-      DstBlock                "REL"
-      DstPort                 2
-      #GUID                   08419f6e-5d09-4c5b-923b-0b7688aa34a8
+      Points                  [35, 0; 0, -40]
+      DstBlock                "HTTP_post"
+      DstPort                 4
+      #GUID                   c2da6bc7-728a-4922-8a63-a57d2b7734fd
     }
     Line {
       SrcBlock                "HTTP_get_status"
@@ -260,14 +235,6 @@ Model {
       DstBlock                "RTOI"
       DstPort                 1
       #GUID                   e9126f8d-34dd-4882-8954-028a0da0e335
-    }
-    Line {
-      SrcBlock                "REL"
-      SrcPort                 1
-      Points                  [35, 0; 0, -40]
-      DstBlock                "HTTP_post"
-      DstPort                 4
-      #GUID                   f376fab7-8022-42fc-ad80-a710ba056703
     }
     Line {
       SrcBlock                "RTOI"

@@ -1,182 +1,7 @@
 Model {
   Name                    "mcp23s17_task"
-  Version                 7.5
-  MdlSubVersion           0
-  SaveDefaultBlockParams  on
-  ScopeRefreshTime        "0.035000"
-  OverrideScopeRefreshTime on
-  DisableAllScopes        off
-  DataTypeOverride        "UseLocalSettings"
-  MinMaxOverflowLogging   "UseLocalSettings"
-  MinMaxOverflowArchiveMode "Overwrite"
-  MaxMDLFileLineLength    120
-  Created                 "Fri Sep 17 13:31:26 2010"
-  Creator                 "jsobota"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "jsobota"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Mon May 16 10:26:28 2011"
-  RTWModifiedTimeStamp    227442227
-  ModelVersionFormat      "1.%<AutoIncrement:7>"
-  ConfigurationManager    "none"
-  SampleTimeColors        off
-  SampleTimeAnnotations   off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowLoopsOnError        on
-  IgnoreBidirectionalLines off
-  ShowStorageClass        off
-  ShowTestPointIcons      on
-  ShowSignalResolutionIcons on
-  ShowViewerIcons         on
-  SortedOrder             off
-  ExecutionContextIcon    off
-  ShowLinearizationAnnotations on
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  SimulationMode          "normal"
-  LinearizationMsg        "none"
-  Profile                 off
-  ParamWorkspaceSource    "MATLABWorkspace"
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  CovForceBlockReductionOff on
-  covSaveCumulativeToWorkspaceVar on
-  CovSaveSingleToWorkspaceVar on
-  CovCumulativeVarName    "covCumulativeData"
-  CovCumulativeReport     off
-  CovReportOnPause        on
-  CovModelRefEnable       "Off"
-  CovExternalEMLEnable    off
-  ExtModeBatchMode        off
-  ExtModeEnableFloating   on
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigDurationFloating "auto"
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  BufferReuse             on
-  ShowModelReferenceBlockVersion off
-  ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
-  MdlSubVersion           0
-  SaveDefaultBlockParams  on
-  ScopeRefreshTime        "0.035000"
-  OverrideScopeRefreshTime on
-  DisableAllScopes        off
-  DataTypeOverride        "UseLocalSettings"
-  MinMaxOverflowLogging   "UseLocalSettings"
-  MinMaxOverflowArchiveMode "Overwrite"
-  MaxMDLFileLineLength    120
-  Created                 "Fri Sep 17 13:31:26 2010"
-  Creator                 "jsobota"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "jsobota"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Mon May 16 10:26:28 2011"
-  RTWModifiedTimeStamp    227442227
-  ModelVersionFormat      "1.%<AutoIncrement:7>"
-  ConfigurationManager    "none"
-  SampleTimeColors        off
-  SampleTimeAnnotations   off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowLoopsOnError        on
-  IgnoreBidirectionalLines off
-  ShowStorageClass        off
-  ShowTestPointIcons      on
-  ShowSignalResolutionIcons on
-  ShowViewerIcons         on
-  SortedOrder             off
-  ExecutionContextIcon    off
-  ShowLinearizationAnnotations on
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  SimulationMode          "normal"
-  LinearizationMsg        "none"
-  Profile                 off
-  ParamWorkspaceSource    "MATLABWorkspace"
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  CovForceBlockReductionOff on
-  covSaveCumulativeToWorkspaceVar on
-  CovSaveSingleToWorkspaceVar on
-  CovCumulativeVarName    "covCumulativeData"
-  CovCumulativeReport     off
-  CovReportOnPause        on
-  CovModelRefEnable       "Off"
-  CovExternalEMLEnable    off
-  ExtModeBatchMode        off
-  ExtModeEnableFloating   on
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigDurationFloating "auto"
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  BufferReuse             on
-  ShowModelReferenceBlockVersion off
-  ShowModelReferenceBlockIO off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  Version                 3.0
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -210,7 +35,7 @@ Model {
   }
   System {
     Name                    "mcp23s17_task"
-    Location                [309, 34, 787, 361]
+    Location                [309, 34, 967, 377]
     Open                    on
     ModelBrowserVisibility  off
     ModelBrowserWidth       200
@@ -229,10 +54,10 @@ Model {
       BlockType               Reference
       Name                    "BDOCT_GPIOB"
       Ports                   [1, 8, 0, 0, 0]
-      Position                [400, 161, 435, 249]
+      Position                [390, 161, 425, 249]
       SourceBlock             "logiclib/BDOCT"
       shift                   0
-      #GUID                   d96bb11c-36da-44a9-a6bd-f003991623ce
+      #GUID                   d1538b21-122c-4b77-819e-4d7502c875ac
     }
     Block {
       BlockType               Reference
@@ -324,10 +149,106 @@ Model {
       #GUID                   0ee2e1e5-85dd-4112-af56-ed6b8171363a
     }
     Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 58, 590, 82]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   d1e1b9e4-6a59-4326-b4ae-6891b6aceb0c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 88, 590, 112]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   dcc709d2-1f81-4bfa-ae18-797c356a61dc
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 118, 590, 142]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   c57bca19-ea87-4968-8e4d-c4fe012be00b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 148, 590, 172]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   2904ac94-5a9b-4b9a-9902-bf8806d6f21d
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 178, 590, 202]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   785de2c3-dbf4-4bac-9571-fc229c935c73
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 208, 590, 232]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   138c9e46-e9d4-4f4e-ab10-5d038db6918f
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 238, 590, 262]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   e06a179b-00c1-4a6f-a58c-e7c4b6b0f911
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [510, 268, 590, 292]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   b0b2efa0-1db9-4893-a8b8-b46dd0452214
+    }
+    Block {
       BlockType               Reference
       Name                    "REXLANG"
       Ports                   [18, 17, 0, 0, 0]
-      Position                [280, 86, 330, 264]
+      Position                [280, 82, 330, 268]
       SourceBlock             "speclib/REXLANG"
       strs                    0
       #RTFlags                1025
@@ -365,6 +286,69 @@ Model {
       p15                     0
       fname                   "/dev/spidev0.0"
       #GUID                   76852e46-e48f-4267-b434-b0cf27f1b52e
+    }
+    Line {
+      SrcBlock                "BDOCT_GPIOB"
+      SrcPort                 1
+      Points                  [10, 0; 0, -100]
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   668ee7ce-afa6-43f7-a0a4-da3db55d45ac
+    }
+    Line {
+      SrcBlock                "BDOCT_GPIOB"
+      SrcPort                 2
+      Points                  [20, 0; 0, -80]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   8eedca9c-54a7-47ac-a546-df63508a557d
+    }
+    Line {
+      SrcBlock                "BDOCT_GPIOB"
+      SrcPort                 3
+      Points                  [30, 0; 0, -60]
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   cd676eb5-7a83-48eb-95f7-325ee59f3043
+    }
+    Line {
+      SrcBlock                "BDOCT_GPIOB"
+      SrcPort                 4
+      Points                  [40, 0; 0, -40]
+      DstBlock                "Display3"
+      DstPort                 1
+      #GUID                   3209b466-e4d4-4e23-8eb1-6bf0ffb984a7
+    }
+    Line {
+      SrcBlock                "BDOCT_GPIOB"
+      SrcPort                 5
+      Points                  [50, 0; 0, -20]
+      DstBlock                "Display4"
+      DstPort                 1
+      #GUID                   3374a85a-5dc8-4085-ac3b-c0c52b195ce4
+    }
+    Line {
+      SrcBlock                "BDOCT_GPIOB"
+      SrcPort                 6
+      DstBlock                "Display5"
+      DstPort                 1
+      #GUID                   61111d41-00f2-410e-aa09-dd8cbdb283f7
+    }
+    Line {
+      SrcBlock                "BDOCT_GPIOB"
+      SrcPort                 7
+      Points                  [50, 0; 0, 20]
+      DstBlock                "Display6"
+      DstPort                 1
+      #GUID                   1e5376f6-deb7-45d4-838c-1be7799b3185
+    }
+    Line {
+      SrcBlock                "BDOCT_GPIOB"
+      SrcPort                 8
+      Points                  [40, 0; 0, 40]
+      DstBlock                "Display7"
+      DstPort                 1
+      #GUID                   44df19ed-3ecd-4d04-9ff0-d532e6e73d9c
     }
     Line {
       SrcBlock                "BMOCT_GPIOA"

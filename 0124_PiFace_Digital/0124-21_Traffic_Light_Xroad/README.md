@@ -1,8 +1,8 @@
-﻿Demonstration algorithm for PiFace Digital on Raspberry Pi 
+Demonstration algorithm for PiFace Digital on Raspberry Pi 
 ==========================================================
 
 This folder contains the source files for the traffic light project on using the 
-REX and the Raspberry Pi minicomputer with 
+REXYGEN and the Raspberry Pi minicomputer with 
 the PiFace Digital extension board. This project is dedicated for the advanced users.
 
 In the Example_RPI_Xroad_task.ATMT.png you'll find the logic for traffic lights of a typical
@@ -39,29 +39,30 @@ In automatic mode, the setting and resetting of this RS block is based on timeou
 
 ## Prerequisites ##
 
-- RexCore and RPiDrv modules must be installed and running on the Raspberry Pi.
+- *REXYGEN Runtime Core* and RPiDrv modules must be installed and running on the Raspberry Pi.
 - SPI bus must be enabled on the Raspberry Pi.
 
 ## Running the example ##
 
-- The **exec.mdl* file is the project main file, open it with RexDraw.
+- The **exec.mdl* file is the project main file, open it with *REXYGEN Studio*.
 - Compile and download the project to the target device.
 
 ## User interface (HMI) ##
 The example is accompanied by a HTML5-based user interface built on the WebBuDi 
-framework (Web Buttons and Displays) of REX. Download it to 
-the Raspberry Pi using the RexView diagnostic tool.
+framework (Web Buttons and Displays) of REXYGEN. Download it to 
+the Raspberry Pi using the *REXYGEN Diagnostics* diagnostic tool.
 
 ## Documentation ##
 
-- [Getting started with REX and Raspberry Pi](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [Getting started with REXYGEN and Raspberry Pi](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_RasPi_ENG.pdf)
+- [REXYGEN HMI User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenHMI_ENG.pdf)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
 - Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

@@ -8,16 +8,16 @@ Pick only the input and output flags which you need and copy&paste them into you
 
 ## Opening the example ##
 - The **exec.mdl* file is the project main file
-- Open it with RexDraw
+- Open it with *REXYGEN Studio*
 
 ## Documentation ##
 
-- [Modbus driver for REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/DbDrv/DbDrv_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [Modbus driver for REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/DbDrv_ENG.pdf)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

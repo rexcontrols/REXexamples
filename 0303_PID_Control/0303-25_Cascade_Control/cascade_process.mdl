@@ -1,7 +1,7 @@
 Model {
   Name                    "cascade_process"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "cascade_process"
-    Location                [836, 30, 1106, 186]
+    Location                [840, 35, 1110, 191]
     #GUID                   2b6b664f-bde0-4b7e-80af-545ab6aec754
     Block {
       BlockType               Inport

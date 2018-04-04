@@ -2,7 +2,7 @@ How To examples
 ===============
 
 The examples contained in this folder are answers to general questions "How to 
-do ... in REX?" 
+do ... in REXYGEN?" 
 
 The examples are platform independent and do not contain any input/output 
 drivers. See platform specific examples (01xx-xx) or I/O driver specific 
@@ -11,11 +11,11 @@ the algorithm.
 
 ## Documentation ##
 
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

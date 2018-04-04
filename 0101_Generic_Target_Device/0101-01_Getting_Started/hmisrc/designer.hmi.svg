@@ -15,32 +15,64 @@
    height="800"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.1 r15381"
+   inkscape:version="0.92.2 (b81de4013d, 2018-02-13, custom)"
    sodipodi:docname="designer.hmi.svg">
   <sodipodi:namedview
      id="base"
-     pagecolor="#ffffff"
+     pagecolor="#eef1f0"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="303.37896"
-     inkscape:cy="472.80973"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="352.64129"
+     inkscape:cy="676.1159"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="834"
-     inkscape:window-height="523"
-     inkscape:window-x="185"
-     inkscape:window-y="248"
+     inkscape:window-width="1585"
+     inkscape:window-height="992"
+     inkscape:window-x="2031"
+     inkscape:window-y="128"
      inkscape:window-maximized="0"
      inkscape:lockguides="false"
      inkscape:snap-global="false"
      showguides="false" />
   <defs
      id="defs2">
+    <linearGradient
+       y2="27.8286"
+       x2="71.097"
+       y1="-7.875"
+       x1="9.2475996"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient1292">
+      <stop
+         id="stop1288"
+         style="stop-color:#0074C5;stop-opacity:0"
+         offset="0.4" />
+      <stop
+         id="stop1290"
+         style="stop-color:#00C8B4"
+         offset="0.95" />
+    </linearGradient>
+    <linearGradient
+       y2="27.8286"
+       x2="71.097"
+       y1="-7.875"
+       x1="9.2475996"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient1286">
+      <stop
+         id="stop1282"
+         style="stop-color:#0074C5"
+         offset="0.71896869" />
+      <stop
+         id="stop1284"
+         style="stop-color:#00C8B4"
+         offset="0.95" />
+    </linearGradient>
     <linearGradient
        id="linearGradient3928">
       <stop
@@ -156,15 +188,6 @@
          style="stop-color:#000000;stop-opacity:0;" />
     </linearGradient>
     <linearGradient
-       gradientUnits="userSpaceOnUse"
-       y2="118.44681"
-       x2="125.0676"
-       y1="20.005066"
-       x1="90.636459"
-       id="linearGradient3820"
-       xlink:href="#linearGradient3814"
-       inkscape:collect="always" />
-    <linearGradient
        id="linearGradient3814">
       <stop
          id="stop3816"
@@ -186,17 +209,6 @@
        id="radialGradient3036-1"
        xlink:href="#linearGradient3030"
        inkscape:collect="always" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3030"
-       id="radialGradient3080"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-       cx="73.957253"
-       cy="31.518335"
-       fx="73.957253"
-       fy="31.518335"
-       r="46.138351" />
     <linearGradient
        gradientUnits="userSpaceOnUse"
        y2="112.13119"
@@ -205,17 +217,6 @@
        x1="13.260799"
        id="linearGradient3922"
        xlink:href="#linearGradient3916"
-       inkscape:collect="always" />
-    <radialGradient
-       gradientTransform="matrix(0.9806853,0,0,0.88403987,1.6249126,11.559246)"
-       gradientUnits="userSpaceOnUse"
-       r="46.138351"
-       fy="80.339134"
-       fx="89.51339"
-       cy="80.339134"
-       cx="89.51339"
-       id="radialGradient3934"
-       xlink:href="#linearGradient3928"
        inkscape:collect="always" />
     <linearGradient
        gradientTransform="matrix(0,0.25798638,-0.09608919,0,193.1696,39.134503)"
@@ -226,15 +227,6 @@
        gradientUnits="userSpaceOnUse"
        id="linearGradient3939"
        xlink:href="#linearGradient3916"
-       inkscape:collect="always" />
-    <linearGradient
-       y2="118.44681"
-       x2="125.0676"
-       y1="20.005066"
-       x1="90.636459"
-       gradientUnits="userSpaceOnUse"
-       id="linearGradient4153"
-       xlink:href="#linearGradient3814"
        inkscape:collect="always" />
     <linearGradient
        id="linearGradient3828">
@@ -554,46 +546,6 @@
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient3030"
-       id="radialGradient2725"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-       cx="73.957253"
-       cy="31.518335"
-       fx="73.957253"
-       fy="31.518335"
-       r="46.138351" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3814"
-       id="linearGradient2727"
-       gradientUnits="userSpaceOnUse"
-       x1="90.636459"
-       y1="20.005066"
-       x2="125.0676"
-       y2="118.44681" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3814"
-       id="linearGradient2729"
-       gradientUnits="userSpaceOnUse"
-       x1="90.636459"
-       y1="20.005066"
-       x2="125.0676"
-       y2="118.44681" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3928"
-       id="radialGradient2731"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.9806853,0,0,0.88403987,1.6249126,11.559246)"
-       cx="89.51339"
-       cy="80.339134"
-       fx="89.51339"
-       fy="80.339134"
-       r="46.138351" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3030"
        id="radialGradient2733"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
@@ -676,6 +628,163 @@
          id="stop3162"
          offset="1" />
     </radialGradient>
+    <linearGradient
+       y2="940.29138"
+       x2="112.40858"
+       y1="1015.4736"
+       x1="47.505596"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6414"
+       xlink:href="#linearGradient3842-46"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="979.15167"
+       x2="-5.1106839"
+       y1="999.95007"
+       x1="72.509972"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6416"
+       xlink:href="#linearGradient3813-8-11"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="971.07275"
+       x2="-32.346645"
+       y1="999.95007"
+       x1="72.509972"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6418"
+       xlink:href="#linearGradient3813-8-11"
+       inkscape:collect="always" />
+    <linearGradient
+       y2="988.34045"
+       x2="45.027348"
+       y1="968.71997"
+       x1="118.25204"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6420"
+       xlink:href="#linearGradient3832-3"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(1,0,0,2.0752688,417.99997,-12.903198)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient2122"
+       id="linearGradient2095-3"
+       gradientUnits="userSpaceOnUse"
+       x1="12.505092"
+       y1="12.065967"
+       x2="397.1442"
+       y2="197.92108" />
+    <linearGradient
+       id="linearGradient2122"
+       gradientUnits="userSpaceOnUse"
+       x1="9.2475996"
+       y1="-7.875"
+       x2="71.097"
+       y2="27.8286">
+      <stop
+         offset="0.4"
+         style="stop-color:#0074C5"
+         id="stop864-8" />
+      <stop
+         offset="0.95"
+         style="stop-color:#00C8B4"
+         id="stop866-0" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="translate(-11.000015,-11)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient2122"
+       id="linearGradient2095-7"
+       gradientUnits="userSpaceOnUse"
+       x1="12.505092"
+       y1="12.065967"
+       x2="397.1442"
+       y2="197.92108" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1292"
+       id="linearGradient6029"
+       gradientUnits="userSpaceOnUse"
+       x1="12.505092"
+       y1="12.065967"
+       x2="397.1442"
+       y2="197.92108" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2122"
+       id="linearGradient1294"
+       gradientUnits="userSpaceOnUse"
+       x1="12.505092"
+       y1="12.065967"
+       x2="397.1442"
+       y2="197.92108" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2122"
+       id="linearGradient1296"
+       gradientUnits="userSpaceOnUse"
+       x1="12.505092"
+       y1="12.065967"
+       x2="397.1442"
+       y2="197.92108" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2122"
+       id="linearGradient1306"
+       x1="848"
+       y1="205"
+       x2="1234"
+       y2="205"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2122"
+       id="linearGradient1322"
+       x1="12"
+       y1="605"
+       x2="1234"
+       y2="605"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#PushOnOff-base-88BDF4"
+       id="linearGradient1345"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9317,-0.3633,0.3633,0.9317,-13.5645,20.5527)"
+       x1="37.909199"
+       y1="67.155296"
+       x2="64.405098"
+       y2="-0.78509998" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#PushOnOff-shadow-88BDF4"
+       id="linearGradient1347"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)"
+       x1="412.4375"
+       y1="-227.3804"
+       x2="429.54321"
+       y2="-180.3829" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#PushOnOff-base-54991F"
+       id="linearGradient1349"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9317,-0.3633,0.3633,0.9317,-13.5645,20.5527)"
+       x1="37.909199"
+       y1="67.155296"
+       x2="64.405098"
+       y2="-0.78509998" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#PushOnOff-shadow-54991F"
+       id="linearGradient1351"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)"
+       x1="412.4375"
+       y1="-227.3804"
+       x2="429.54321"
+       y2="-180.3829" />
   </defs>
   <metadata
      id="metadata5">
@@ -694,38 +803,552 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#b0f1ce;fill-opacity:1;fill-rule:nonzero;stroke:#2d5368;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;font-variant-east_asian:normal;vector-effect:none"
-       id="rect188"
+       rx="3"
+       ry="3"
+       y="212.5"
+       x="13.357142"
+       height="185"
        width="385"
-       height="385"
-       x="430.5"
-       y="12.5"
-       ry="10"
-       rx="10" />
+       id="rect2629"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient1296);stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    <g
+       rexsvg:module="PushOnOff"
+       rexsvg:filename="PushOnOff.svg"
+       rexsvg:version="12"
+       id="g1279"
+       transform="translate(64.753496,234.91406)"
+       inkscape:label="PushOnOff">
+      <desc
+         id="desc1217">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;$T&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;VALUE_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;VALUE_W&quot;,
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The PushOnOff button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When  released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;reverse_meaning&quot;
+],
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#B8BDC5&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;ToggleButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <title
+         id="title1219">PushOnOff_SW_3</title>
+      <g
+         id="g1247"
+         rexsvg:tag="button">
+        <g
+           id="g1225">
+          <path
+             id="path1221"
+             d="M 3.236,63.066 C 12.587,86.771 39.382,98.407 63.085,89.055 86.791,79.703 98.427,52.91 89.073,29.203 79.724,5.503 52.927,-6.134 29.223,3.217 5.522,12.567 -6.114,39.365 3.236,63.066 Z"
+             inkscape:connector-curvature="0"
+             style="fill:#ccd1d9" />
+          <circle
+             id="circle1223"
+             cx="46.154999"
+             cy="46.134998"
+             r="42.487999"
+             style="fill:url(#linearGradient1345)" />
+        </g>
+        <circle
+           id="circle1227"
+           cx="46.155998"
+           cy="46.136002"
+           r="29.993"
+           style="fill:#b8bdc5"
+           rexsvg:tag="main" />
+        <g
+           id="g1233">
+          <g
+             id="g1231"
+             style="opacity:0.5">
+            <circle
+               enable-background="new    "
+               cx="46.139999"
+               cy="46.140999"
+               r="25"
+               id="circle1229"
+               style="opacity:0.5;fill:url(#linearGradient1347)" />
+          </g>
+        </g>
+        <g
+           id="g1239"
+           rexsvg:tag="active"
+           style="display:none">
+          <circle
+             id="circle1235"
+             display="inline"
+             cx="46.154999"
+             cy="46.134998"
+             r="42.487999"
+             style="display:inline;opacity:0.05;fill:#1d1d1b" />
+          <circle
+             id="circle1237"
+             display="inline"
+             cx="46.140999"
+             cy="46.136002"
+             r="29.993"
+             style="display:inline;opacity:0.1;fill:#1d1d1b" />
+        </g>
+        <g
+           id="g1245"
+           rexsvg:tag="hover"
+           style="display:none">
+          <circle
+             id="circle1241"
+             display="inline"
+             cx="46.154999"
+             cy="46.134998"
+             r="42.487999"
+             style="display:inline;opacity:0.2;fill:#ffffff" />
+          <circle
+             id="circle1243"
+             display="inline"
+             cx="46.140999"
+             cy="46.136002"
+             r="29.993"
+             style="display:inline;opacity:0.2;fill:#ffffff" />
+        </g>
+      </g>
+      <defs
+         id="defs1277">
+        <linearGradient
+           id="linearGradient1253"
+           gradientUnits="userSpaceOnUse"
+           x1="37.909199"
+           y1="67.155296"
+           x2="64.405098"
+           y2="-0.78509998"
+           gradientTransform="matrix(0.9317,-0.3633,0.3633,0.9317,-13.5645,20.5527)"
+           xlink:href="#PushOnOff-shadow-88BDF4">
+          <stop
+             offset="0"
+             style="stop-color:#CCD1D9"
+             id="stop1249" />
+          <stop
+             offset="1"
+             style="stop-color:#FFFFFF"
+             id="stop1251" />
+        </linearGradient>
+        <linearGradient
+           id="linearGradient1273"
+           gradientUnits="userSpaceOnUse"
+           x1="412.4375"
+           y1="-227.3804"
+           x2="429.54321"
+           y2="-180.3829"
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)">
+          <stop
+             offset="0"
+             style="stop-color:#FFFFFF;stop-opacity:0"
+             id="stop1255" />
+          <stop
+             offset="0.0576"
+             style="stop-color:#E6E6E6;stop-opacity:0.0576"
+             id="stop1257" />
+          <stop
+             offset="0.1941"
+             style="stop-color:#B2B2B1;stop-opacity:0.1941"
+             id="stop1259" />
+          <stop
+             offset="0.3324"
+             style="stop-color:#848483;stop-opacity:0.3324"
+             id="stop1261" />
+          <stop
+             offset="0.4696"
+             style="stop-color:#5F5F5D;stop-opacity:0.4696"
+             id="stop1263" />
+          <stop
+             offset="0.6056"
+             style="stop-color:#424240;stop-opacity:0.6056"
+             id="stop1265" />
+          <stop
+             offset="0.7401"
+             style="stop-color:#2D2D2C;stop-opacity:0.7401"
+             id="stop1267" />
+          <stop
+             offset="0.8724"
+             style="stop-color:#21211F;stop-opacity:0.8724"
+             id="stop1269" />
+          <stop
+             offset="1"
+             style="stop-color:#1D1D1B"
+             id="stop1271" />
+        </linearGradient>
+        <linearGradient
+           y2="-180.3829"
+           x2="429.54321"
+           y1="-227.3804"
+           x1="412.4375"
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)"
+           gradientUnits="userSpaceOnUse"
+           id="linearGradient1275"
+           xlink:href="#PushOnOff-shadow-88BDF4"
+           inkscape:collect="always" />
+      </defs>
+    </g>
     <rect
-       rx="10"
-       ry="10"
-       y="12.5"
-       x="848.5"
-       height="385"
-       width="385"
-       id="rect190"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#b8bdf1;fill-opacity:1;fill-rule:nonzero;stroke:#2d5368;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate;font-variant-east_asian:normal;vector-effect:none" />
-    <rect
-       rx="10"
-       ry="10"
+       rx="3"
+       ry="3"
        y="12.5"
        x="12.500015"
        height="185"
        width="385"
        id="rect4217"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#b1d8ee;fill-opacity:1;fill-rule:nonzero;stroke:#2d5368;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient1294);stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
     <g
-       id="TRND"
-       rexsvg:module="TRND"
+       rexsvg:module="PushOnOff"
+       rexsvg:filename="PushOnOff.svg"
+       rexsvg:version="12"
+       id="g1343"
+       transform="translate(64.753496,35.914063)"
+       inkscape:label="PushOnOff">
+      <desc
+         id="desc1281">{
+&quot;connections&quot;:{
+&quot;disable_by&quot;:&quot;&quot;,
+&quot;hide_by&quot;:&quot;&quot;,
+&quot;refresh_from&quot;:&quot;&quot;,
+&quot;value&quot;:&quot;$T&quot;
+},
+&quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;connections&quot;:{
+&quot;disable_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
+&quot;optional&quot;:true
+},
+&quot;hide_by&quot;:{
+&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
+&quot;optional&quot;:true
+},
+&quot;refresh_from&quot;:{
+&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;VALUE_R&quot;
+]
+},
+&quot;value&quot;:{
+&quot;desc&quot;:&quot;Datapoint where boolean value is written.&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;prev&quot;:[
+&quot;VALUE_W&quot;,
+&quot;BUTTON&quot;
+],
+&quot;write&quot;:true
+}
+},
+&quot;desc&quot;:&quot;The PushOnOff button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When  released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;reverseMeaning&quot;:{
+&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;reverse_meaning&quot;
+],
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;type&quot;:{
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;PushButton&quot;,
+&quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
+&quot;ToggleButton&quot;
+]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;table&quot;
+}
+},
+&quot;options&quot;:{
+&quot;colorFalse&quot;:&quot;#B8BDC5&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;ToggleButton&quot;,
+&quot;writePerm&quot;:[]
+}
+}</desc>
+      <title
+         id="title1283">PushOnOff_SW_1</title>
+      <g
+         id="g1311"
+         rexsvg:tag="button">
+        <g
+           id="g1289">
+          <path
+             id="path1285"
+             d="M 3.236,63.066 C 12.587,86.771 39.382,98.407 63.085,89.055 86.791,79.703 98.427,52.91 89.073,29.203 79.724,5.503 52.927,-6.134 29.223,3.217 5.522,12.567 -6.114,39.365 3.236,63.066 Z"
+             inkscape:connector-curvature="0"
+             style="fill:#ccd1d9" />
+          <circle
+             id="circle1287"
+             cx="46.154999"
+             cy="46.134998"
+             r="42.487999"
+             style="fill:url(#linearGradient1349)" />
+        </g>
+        <circle
+           id="circle1291"
+           cx="46.155998"
+           cy="46.136002"
+           r="29.993"
+           style="fill:#b8bdc5"
+           rexsvg:tag="main" />
+        <g
+           id="g1297">
+          <g
+             id="g1295"
+             style="opacity:0.5">
+            <circle
+               enable-background="new    "
+               cx="46.139999"
+               cy="46.140999"
+               r="25"
+               id="circle1293"
+               style="opacity:0.5;fill:url(#linearGradient1351)" />
+          </g>
+        </g>
+        <g
+           id="g1303"
+           rexsvg:tag="active"
+           style="display:none">
+          <circle
+             id="circle1299"
+             display="inline"
+             cx="46.154999"
+             cy="46.134998"
+             r="42.487999"
+             style="display:inline;opacity:0.05;fill:#1d1d1b" />
+          <circle
+             id="circle1301"
+             display="inline"
+             cx="46.140999"
+             cy="46.136002"
+             r="29.993"
+             style="display:inline;opacity:0.1;fill:#1d1d1b" />
+        </g>
+        <g
+           id="g1309"
+           rexsvg:tag="hover"
+           style="display:none">
+          <circle
+             id="circle1305"
+             display="inline"
+             cx="46.154999"
+             cy="46.134998"
+             r="42.487999"
+             style="display:inline;opacity:0.2;fill:#ffffff" />
+          <circle
+             id="circle1307"
+             display="inline"
+             cx="46.140999"
+             cy="46.136002"
+             r="29.993"
+             style="display:inline;opacity:0.2;fill:#ffffff" />
+        </g>
+      </g>
+      <defs
+         id="defs1341">
+        <linearGradient
+           id="linearGradient1317"
+           gradientUnits="userSpaceOnUse"
+           x1="37.909199"
+           y1="67.155296"
+           x2="64.405098"
+           y2="-0.78509998"
+           gradientTransform="matrix(0.9317,-0.3633,0.3633,0.9317,-13.5645,20.5527)"
+           xlink:href="#PushOnOff-shadow-54991F">
+          <stop
+             offset="0"
+             style="stop-color:#CCD1D9"
+             id="stop1313" />
+          <stop
+             offset="1"
+             style="stop-color:#FFFFFF"
+             id="stop1315" />
+        </linearGradient>
+        <linearGradient
+           id="linearGradient1337"
+           gradientUnits="userSpaceOnUse"
+           x1="412.4375"
+           y1="-227.3804"
+           x2="429.54321"
+           y2="-180.3829"
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)">
+          <stop
+             offset="0"
+             style="stop-color:#FFFFFF;stop-opacity:0"
+             id="stop1319" />
+          <stop
+             offset="0.0576"
+             style="stop-color:#E6E6E6;stop-opacity:0.0576"
+             id="stop1321" />
+          <stop
+             offset="0.1941"
+             style="stop-color:#B2B2B1;stop-opacity:0.1941"
+             id="stop1323" />
+          <stop
+             offset="0.3324"
+             style="stop-color:#848483;stop-opacity:0.3324"
+             id="stop1325" />
+          <stop
+             offset="0.4696"
+             style="stop-color:#5F5F5D;stop-opacity:0.4696"
+             id="stop1327" />
+          <stop
+             offset="0.6056"
+             style="stop-color:#424240;stop-opacity:0.6056"
+             id="stop1329" />
+          <stop
+             offset="0.7401"
+             style="stop-color:#2D2D2C;stop-opacity:0.7401"
+             id="stop1331" />
+          <stop
+             offset="0.8724"
+             style="stop-color:#21211F;stop-opacity:0.8724"
+             id="stop1333" />
+          <stop
+             offset="1"
+             style="stop-color:#1D1D1B"
+             id="stop1335" />
+        </linearGradient>
+        <linearGradient
+           y2="-180.3829"
+           x2="429.54321"
+           y1="-227.3804"
+           x1="412.4375"
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)"
+           gradientUnits="userSpaceOnUse"
+           id="linearGradient1339"
+           xlink:href="#PushOnOff-shadow-54991F"
+           inkscape:collect="always" />
+      </defs>
+    </g>
+    <rect
+       rx="3"
+       ry="6.2258062"
+       y="13.037628"
+       x="430.5"
+       height="383.92474"
+       width="385"
+       id="rect4217-3"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient2095-3);stroke-width:1.4405793;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    <rect
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient1322);stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+       id="rect738"
+       width="1221"
+       height="385"
+       x="12.5"
+       y="412.5"
+       ry="3"
+       rx="3" />
+    <rect
+       rx="3"
+       ry="3"
+       y="12.5"
+       x="848.5"
+       height="385"
+       width="385"
+       id="rect190"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:url(#linearGradient1306);stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
+    <g
+       transform="matrix(1.8941222,0,0,0.78836026,16.880896,415.79354)"
+       rexsvg:version="11"
        rexsvg:filename="TRND.svg"
-       rexsvg:version="8198"
-       transform="matrix(1.8941222,0,0,0.78836026,16.880896,415.79354)">
+       rexsvg:module="TRND"
+       id="TRND">
       <title
          id="title2990">TRND</title>
       <desc
@@ -756,6 +1379,11 @@
 }
 },
 &quot;desc&quot;:&quot;The TRND component is used for displaying the signals from the TRND blocks. Simply just set &lt;code&gt;TRND&lt;/code&gt; datapoint to any parameter of the TRND block eg. &lt;code&gt;taskname.TRND:u1&lt;/code&gt;. All signals will be displayed in the trend. Each signal can be labeled using &lt;code&gt;signals&lt;/code&gt; table.&quot;,
+&quot;dygraphOptions&quot;:{
+&quot;desc&quot;:&quot;Custom options for Dygraph library. See http://dygraphs.com/options.html for more info.&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;object&quot;
+},
 &quot;hideLegend&quot;:{
 &quot;desc&quot;:&quot;Hide the legend of the graph.&quot;,
 &quot;order&quot;:&quot;05&quot;,
@@ -786,6 +1414,7 @@
 },
 &quot;options&quot;:{
 &quot;bufferSize&quot;:200,
+&quot;dygraphOptions&quot;:{},
 &quot;hideLegend&quot;:&quot;False&quot;,
 &quot;refreshRate&quot;:-1,
 &quot;signals&quot;:[
@@ -806,29 +1435,29 @@
 }
 }</desc>
       <rect
-         y="0"
-         x="0"
-         height="480"
-         width="640"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
          id="rect3010"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+         width="640"
+         height="480"
+         x="0"
+         y="0" />
       <text
-         id="Text-1"
-         y="226.0677"
-         x="319.14062"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none"
+         inkscape:label="#text3012"
          xml:space="preserve"
-         inkscape:label="#text3012"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1"
-           y="226.0677"
-           x="319.14062"
-           id="tspan3014"
-           sodipodi:role="line">Real time trend</tspan><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1"
-           y="292.73438"
-           x="319.14062"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none"
+         x="319.14062"
+         y="226.0677"
+         id="Text-1"><tspan
            sodipodi:role="line"
-           id="tspan2987">from TRND block</tspan></text>
+           id="tspan3014"
+           x="319.14062"
+           y="226.0677"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1">Real time trend</tspan><tspan
+           id="tspan2987"
+           sodipodi:role="line"
+           x="319.14062"
+           y="292.73438"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.33333206px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#0000ff;fill-opacity:1">from TRND block</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -836,13 +1465,13 @@
        x="864.35419"
        y="242"
        id="text4161"><tspan
-         style="font-size:42.66666794px;line-height:100%"
+         style="font-size:42.66666794px;line-height:100%;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          sodipodi:role="line"
          id="tspan4159"
          x="864.35419"
          y="242">remaining</tspan><tspan
          id="tspan4705"
-         style="font-size:42.66666794px;line-height:100%"
+         style="font-size:42.66666794px;line-height:100%;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          sodipodi:role="line"
          x="864.35419"
          y="284.66666">time</tspan></text>
@@ -850,7 +1479,7 @@
        transform="matrix(0.62428573,0,0,0.62428573,1082.5478,224.51966)"
        rexsvg:module="Display"
        rexsvg:filename="Display.svg"
-       rexsvg:version="8183"
+       rexsvg:version="10"
        id="Display"
        rexsvg:update="Partial">
       <title
@@ -969,7 +1598,7 @@
          id="display"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.85125732px;line-height:0%;font-family:Verdana;-inkscape-font-specification:'Verdana, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle">
         <tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:102.51715851px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS'"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:102.51715851px;font-family:Roboto;-inkscape-font-specification:Roboto"
            id="tspan2986">X.XX</tspan>
       </text>
     </g>
@@ -983,35 +1612,43 @@
          y="153.92255"
          x="555.26147"
          sodipodi:role="line"
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle">S1 OR S2</tspan></text>
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">S1 OR S2</tspan></text>
     <g
-       rexsvg:module="Led"
-       rexsvg:filename="Led.svg"
-       rexsvg:version="8194"
+       inkscape:label="Led"
        transform="translate(706.89758,98.61021)"
        id="Led"
-       inkscape:label="Led">
+       rexsvg:version="12"
+       rexsvg:filename="Led.svg"
+       rexsvg:module="Led">
       <desc
          id="desc-led-9">{
 &quot;connections&quot;:{
 &quot;disable_by&quot;:&quot;&quot;,
+&quot;error_by&quot;:&quot;&quot;,
 &quot;hide_by&quot;:&quot;&quot;,
 &quot;value&quot;:&quot;$T&quot;
 },
 &quot;metaData&quot;:{
-&quot;color_false&quot;:{
+&quot;colorError&quot;:{
+&quot;desc&quot;:&quot;LED background color when the signal error is TRUE.&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorFalse&quot;:{
 &quot;desc&quot;:&quot;LED background color when the signal is OFF, DISABLED, ...&quot;,
 &quot;order&quot;:&quot;03&quot;,
 &quot;prev&quot;:[
-&quot;colorStop&quot;
+&quot;colorStop&quot;,
+&quot;color_false&quot;
 ],
 &quot;type&quot;:&quot;color&quot;
 },
-&quot;color_true&quot;:{
+&quot;colorTrue&quot;:{
 &quot;desc&quot;:&quot;LED background color when the signal is ON, ENABLED, ...&quot;,
 &quot;order&quot;:&quot;02&quot;,
 &quot;prev&quot;:[
-&quot;colorRun&quot;
+&quot;colorRun&quot;,
+&quot;color_true&quot;
 ],
 &quot;type&quot;:&quot;color&quot;
 },
@@ -1019,6 +1656,11 @@
 &quot;disable_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
 &quot;optional&quot;:true
+},
+&quot;error_by&quot;:{
+&quot;desc&quot;:&quot;If set and TRUE the led will show &lt;code&gt;colorError&lt;/code&gt;&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;
 },
 &quot;hide_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
@@ -1041,140 +1683,112 @@
 }
 },
 &quot;options&quot;:{
-&quot;color_false&quot;:&quot;#ff2200&quot;,
-&quot;color_true&quot;:&quot;#33ee00&quot;,
+&quot;colorError&quot;:&quot;#DF2626&quot;,
+&quot;colorFalse&quot;:&quot;#B8BDC5&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
 &quot;reverseMeaning&quot;:&quot;False&quot;
 }
 }</desc>
       <title
          id="title75">Led_OR_A</title>
       <g
-         id="led_area"
-         transform="translate(-35.261262,-958.71875)"
-         rexsvg:tag="led_area">
+         id="Led-5"
+         transform="matrix(0.86738706,0,0,0.86738706,-0.00375412,0.01338328)">
         <g
-           id="g4209-4">
+           id="bottom">
           <path
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             sodipodi:ry="40.031803"
-             sodipodi:rx="40.031803"
-             sodipodi:cy="998.76025"
-             sodipodi:cx="75.314072"
-             id="path3039-3"
-             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             sodipodi:type="arc" />
+             id="color_10_"
+             d="M 3.235,63.067 C 12.587,86.772 39.381,98.409 63.087,89.057 86.793,79.704 98.43,52.911 89.076,29.203 79.725,5.502 52.928,-6.135 29.223,3.216 5.521,12.566 -6.115,39.365 3.235,63.067 Z"
+             style="fill:url(#led-c1-D0806D)"
+             inkscape:connector-curvature="0" />
           <path
-             transform="matrix(0.84745762,0,0,0.84745762,11.488588,152.35326)"
-             sodipodi:type="arc"
-             style="fill:url(#linearGradient3296);fill-opacity:1;fill-rule:nonzero;stroke:#bbbbbb;stroke-width:0.76345998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-             id="path3041-5"
-             sodipodi:cx="75.314072"
-             sodipodi:cy="998.76025"
-             sodipodi:rx="40.031803"
-             sodipodi:ry="40.031803"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z" />
-          <path
-             inkscape:label="#path3811-9"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             sodipodi:ry="40.031803"
-             sodipodi:rx="40.031803"
-             sodipodi:cy="998.76025"
-             sodipodi:cx="75.314072"
-             id="led"
-             style="fill:url(#linearGradient3298);fill-opacity:1;fill-rule:nonzero;stroke:none"
-             sodipodi:type="arc"
-             transform="matrix(0.76271186,0,0,0.76271186,17.871137,236.99396)"
-             rexsvg:tag="led" />
-          <path
-             transform="matrix(0.76271186,0,0,0.76271186,17.871137,236.99396)"
-             sodipodi:type="arc"
-             style="fill:url(#linearGradient3300);fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path3091"
-             sodipodi:cx="75.314072"
-             sodipodi:cy="998.76025"
-             sodipodi:rx="40.031803"
-             sodipodi:ry="40.031803"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             inkscape:label="#path3811-9" />
-          <path
+             id="color_9_"
+             d="M 9.985,60.404 C 17.868,80.382 40.447,90.186 60.423,82.307 80.402,74.425 90.206,51.843 82.329,31.867 74.444,11.892 51.862,2.087 31.887,9.967 11.91,17.844 2.105,40.428 9.985,60.404 Z"
              inkscape:connector-curvature="0"
-             id="path3821-84"
-             d="m 100.41876,987.22567 c 0,10.49236 -11.239748,18.99813 -25.104688,18.99813 -13.864938,0 -25.104693,-8.50577 -25.104693,-18.99813 0,-10.49239 11.239755,-18.99815 25.104693,-18.99815 13.86494,0 25.104688,8.50576 25.104688,18.99815 z"
-             style="fill:url(#linearGradient3302);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+             style="fill:url(#linearGradient4660-D0806D)" />
         </g>
+        <path
+           rexsvg:tag="main"
+           id="main"
+           d="M 11.889,59.654 C 19.353,78.578 40.748,87.869 59.674,80.402 78.596,72.936 87.889,51.546 80.422,32.62 72.955,13.694 51.564,4.404 32.639,11.87 13.713,19.335 4.423,40.729 11.889,59.654 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#b8bdc5" />
+        <path
+           id="glance"
+           d="M 75.564001,43.888 A 29.961,29.961 0 0 1 45.603001,73.849001 29.961,29.961 0 0 1 15.642,43.888 29.961,29.961 0 0 1 45.603001,13.927 a 29.961,29.961 0 0 1 29.961,29.961 z"
+           style="opacity:0.5;fill:url(#led-glance-D0806D);fill-opacity:1" />
       </g>
       <defs
          id="defs-led">
+        <pattern
+           id="EMFhbasepattern"
+           patternUnits="userSpaceOnUse"
+           width="6"
+           height="6"
+           x="0"
+           y="0" />
         <linearGradient
-           id="linearGradient3842-46-8">
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           y2="-272.83911"
+           x2="323.94501"
+           y1="-346.61789"
+           x1="295.17209"
+           gradientUnits="userSpaceOnUse"
+           id="led-c1-D0806D">
           <stop
-             id="stop3844-06-32"
-             offset="0"
-             style="stop-color:#5a5a5a;stop-opacity:1;" />
+             id="stop2"
+             style="stop-color:#CCD1D9"
+             offset="0" />
           <stop
-             id="stop3846-6-4"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:1" />
+             id="stop4"
+             style="stop-color:#FCFDFD"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           id="linearGradient4159">
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           y2="-286.89969"
+           x2="318.4606"
+           y1="-359.3689"
+           x1="290.19849"
+           gradientUnits="userSpaceOnUse"
+           id="led-c2-D0806D">
           <stop
-             id="stop4155"
-             offset="0"
-             style="stop-color:#616161;stop-opacity:0;" />
+             id="stop8"
+             style="stop-color:#FCFDFD"
+             offset="0" />
           <stop
-             id="stop4157"
-             offset="1"
-             style="stop-color:#7f7f7f;stop-opacity:1;" />
+             id="stop10"
+             style="stop-color:#CCD1D9"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           id="linearGradient3832-3-1"
-           inkscape:collect="always">
+           xlink:href="#led-c2-D0806D"
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-158.4604)"
+           y2="-174.18719"
+           x2="430.70221"
+           y1="-230.50999"
+           x1="410.20239"
+           gradientUnits="userSpaceOnUse"
+           id="led-glance-D0806D">
           <stop
-             id="stop3834-78-06"
-             offset="0"
-             style="stop-color:#ffffff;stop-opacity:1;" />
+             id="stop21"
+             style="stop-color:#FFFFFF;stop-opacity:0"
+             offset="0.5" />
           <stop
-             id="stop3836-8-4"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
+             id="stop23"
+             style="stop-color:#FFFFFF"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           y2="940.29138"
-           x2="112.40858"
-           y1="1015.4736"
-           x1="47.505596"
+           inkscape:collect="always"
+           xlink:href="#led-c2-D0806D"
+           id="linearGradient4660-D0806D"
            gradientUnits="userSpaceOnUse"
-           id="linearGradient3296"
-           xlink:href="#linearGradient3842-46-8"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="979.15167"
-           x2="-5.1106839"
-           y1="999.95007"
-           x1="72.509972"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient3298"
-           xlink:href="#linearGradient3813-8-11"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="971.07275"
-           x2="-32.346645"
-           y1="999.95007"
-           x1="72.509972"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient3300"
-           xlink:href="#linearGradient3813-8-11"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="988.34045"
-           x2="45.027348"
-           y1="968.71997"
-           x1="118.25204"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient3302"
-           xlink:href="#linearGradient3832-3-1"
-           inkscape:collect="always" />
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           x1="290.19849"
+           y1="-359.3689"
+           x2="318.4606"
+           y2="-286.89969" />
       </defs>
     </g>
     <text
@@ -1183,7 +1797,7 @@
        x="1041.0104"
        y="67.428543"
        id="text4703"><tspan
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle"
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Montserrat;font-family:Montserrat;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          id="tspan4701"
          sodipodi:role="line"
          x="1041.0104"
@@ -1197,23 +1811,23 @@
          y="142.91414"
          x="864.35419"
          sodipodi:role="line"
-         style="font-size:42.66666794px;line-height:100%"
+         style="font-size:42.66666794px;line-height:100%;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          id="tspan4709">timer </tspan><tspan
          id="tspan4715"
          y="185.58081"
          x="864.35419"
          sodipodi:role="line"
-         style="font-size:42.66666794px;line-height:100%">interval</tspan></text>
+         style="font-size:42.66666794px;line-height:100%;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">interval</tspan></text>
     <g
-       id="Input"
-       rexsvg:module="Input"
+       transform="matrix(1.6822831,0,0,1.6822831,1047.0506,121.02344)"
+       rexsvg:version="13"
        rexsvg:filename="Input.svg"
-       rexsvg:version="8183"
-       transform="matrix(1.6822831,0,0,1.6822831,1047.0506,121.02344)">
+       rexsvg:module="Input"
+       id="Input">
       <title
-         id="title4175">Input_interval</title>
+         id="title582">Input_interval</title>
       <desc
-         id="desc4177">{
+         id="desc584">{
 &quot;connections&quot;:{
 &quot;disable_by&quot;:&quot;&quot;,
 &quot;hide_by&quot;:&quot;&quot;,
@@ -1247,11 +1861,16 @@
 &quot;write&quot;:true
 }
 },
+&quot;css&quot;:{
+&quot;desc&quot;:&quot;Custom CSS style for the HTML input object. For example \\{'background-color':'#00ffff'\\}&quot;,
+&quot;order&quot;:&quot;11&quot;,
+&quot;type&quot;:&quot;object&quot;
+},
 &quot;decimals&quot;:{
 &quot;desc&quot;:&quot;Round the value to defined number of decimals. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
 &quot;max&quot;:&quot;6&quot;,
 &quot;min&quot;:&quot;0&quot;,
-&quot;order&quot;:&quot;04&quot;,
+&quot;order&quot;:&quot;06&quot;,
 &quot;type&quot;:&quot;int&quot;
 },
 &quot;desc&quot;:&quot;Input component allow to write numbers, texts, dates or times to the target. If the &lt;code&gt;number&lt;/code&gt; format is selected the value can be converted using &lt;code&gt;scale&lt;/code&gt; and &lt;code&gt;offset&lt;/code&gt; adn rounded to number of &lt;code&gt;decimals&lt;/code&gt;. The Input allows to limit user input to the range defined by &lt;code&gt;min&lt;/code&gt; and &lt;code&gt;max&lt;/code&gt; parameters. There is &lt;code&gt;virtualKeyboard&lt;/code&gt; available for kiosk mode devices. The &lt;code&gt;date&lt;/code&gt;, &lt;code&gt;time&lt;/code&gt; and &lt;code&gt;datetime&lt;/code&gt; format has a special widget to enter the dates. The value from this format is converted to the number of milliseconds from REX epoch.&lt;br /&gt;&lt;i&gt;Note:The value is written to the &lt;code&gt;value&lt;/code&gt; datapoint, if necessary it can be refresh from different location defined in the  &lt;code&gt;refresh_from&lt;/code&gt; datapoint. It can be used if the value is limited by saturation. &lt;/i&gt;&quot;,
@@ -1274,31 +1893,57 @@
 },
 &quot;max&quot;:{
 &quot;desc&quot;:&quot;The maximum value user can enter. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
-&quot;order&quot;:&quot;06&quot;,
+&quot;order&quot;:&quot;08&quot;,
 &quot;type&quot;:&quot;float&quot;
 },
 &quot;min&quot;:{
 &quot;desc&quot;:&quot;The minimum value user can enter. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
-&quot;order&quot;:&quot;05&quot;,
+&quot;order&quot;:&quot;07&quot;,
 &quot;type&quot;:&quot;float&quot;
 },
 &quot;offset&quot;:{
 &quot;desc&quot;:&quot;Add some offset to the value. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
-&quot;order&quot;:&quot;03&quot;,
+&quot;order&quot;:&quot;05&quot;,
 &quot;type&quot;:&quot;float&quot;
 },
 &quot;scale&quot;:{
 &quot;desc&quot;:&quot;Scale the value. Applicable for &lt;code&gt;number&lt;/code&gt; format only.&quot;,
-&quot;order&quot;:&quot;02&quot;,
+&quot;order&quot;:&quot;04&quot;,
 &quot;type&quot;:&quot;float&quot;
+},
+&quot;setOnBlur&quot;:{
+&quot;desc&quot;:&quot;If True the data input value is set on blur event (Press ESC to cancel write).&quot;,
+&quot;order&quot;:&quot;09&quot;,
+&quot;type&quot;:&quot;bool&quot;
+},
+&quot;textAlign&quot;:{
+&quot;desc&quot;:&quot;The Input is using HTML input component which is not binded with SVG. Use this parameter to scale font.&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;left&quot;,
+&quot;center&quot;,
+&quot;right&quot;
+]
 },
 &quot;virtualKeyboard&quot;:{
 &quot;desc&quot;:&quot;If True the virtual keyboard is show for data input.&quot;,
-&quot;order&quot;:&quot;07&quot;,
+&quot;order&quot;:&quot;10&quot;,
 &quot;type&quot;:&quot;bool&quot;
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Input will be disabled.&quot;,
+&quot;order&quot;:&quot;12&quot;,
+&quot;type&quot;:&quot;table&quot;
 }
 },
 &quot;options&quot;:{
+&quot;css&quot;:{},
 &quot;decimals&quot;:2,
 &quot;fontScale&quot;:2.0,
 &quot;format&quot;:&quot;number&quot;,
@@ -1306,28 +1951,31 @@
 &quot;min&quot;:&quot;&quot;,
 &quot;offset&quot;:0,
 &quot;scale&quot;:1,
-&quot;virtualKeyboard&quot;:&quot;False&quot;
+&quot;setOnBlur&quot;:&quot;False&quot;,
+&quot;textAlign&quot;:&quot;left&quot;,
+&quot;virtualKeyboard&quot;:&quot;False&quot;,
+&quot;writePerm&quot;:[]
 }
 }</desc>
       <rect
-         y="0"
-         x="0"
-         height="30"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.85783237;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect586"
          width="100"
-         id="rect4179"
-         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.85783237;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+         height="30"
+         x="0"
+         y="0" />
       <text
-         id="text4183"
-         y="17.929766"
-         x="9.3235693"
-         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none"
+         inkscape:label="#text3012"
          xml:space="preserve"
-         inkscape:label="#text3012"><tspan
-           style="font-size:11.3317461px;line-height:1.25;font-family:sans-serif;fill:#0000ff;fill-opacity:1"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none"
+         x="49.687382"
+         y="17.929766"
+         id="text590"><tspan
+           sodipodi:role="line"
+           id="tspan588"
+           x="49.687382"
            y="17.929766"
-           x="9.3235693"
-           id="tspan4181"
-           sodipodi:role="line">Numeric input</tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3317461px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1">Input</tspan></text>
     </g>
     <text
        id="text4755"
@@ -1338,36 +1986,44 @@
          y="356"
          x="864.35419"
          sodipodi:role="line"
-         style="font-size:42.66666794px;line-height:100%"
+         style="font-size:42.66666794px;line-height:100%;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          id="tspan4753">output</tspan></text>
     <g
-       rexsvg:module="Led"
-       rexsvg:filename="Led.svg"
-       rexsvg:version="8194"
+       inkscape:label="Led"
        transform="translate(1135.9159,300.43766)"
        id="g4777"
-       inkscape:label="Led">
+       rexsvg:version="12"
+       rexsvg:filename="Led.svg"
+       rexsvg:module="Led">
       <desc
-         id="desc4188">{
+         id="desc595">{
 &quot;connections&quot;:{
 &quot;disable_by&quot;:&quot;&quot;,
+&quot;error_by&quot;:&quot;&quot;,
 &quot;hide_by&quot;:&quot;&quot;,
 &quot;value&quot;:&quot;$T&quot;
 },
 &quot;metaData&quot;:{
-&quot;color_false&quot;:{
+&quot;colorError&quot;:{
+&quot;desc&quot;:&quot;LED background color when the signal error is TRUE.&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorFalse&quot;:{
 &quot;desc&quot;:&quot;LED background color when the signal is OFF, DISABLED, ...&quot;,
 &quot;order&quot;:&quot;03&quot;,
 &quot;prev&quot;:[
-&quot;colorStop&quot;
+&quot;colorStop&quot;,
+&quot;color_false&quot;
 ],
 &quot;type&quot;:&quot;color&quot;
 },
-&quot;color_true&quot;:{
+&quot;colorTrue&quot;:{
 &quot;desc&quot;:&quot;LED background color when the signal is ON, ENABLED, ...&quot;,
 &quot;order&quot;:&quot;02&quot;,
 &quot;prev&quot;:[
-&quot;colorRun&quot;
+&quot;colorRun&quot;,
+&quot;color_true&quot;
 ],
 &quot;type&quot;:&quot;color&quot;
 },
@@ -1375,6 +2031,11 @@
 &quot;disable_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
 &quot;optional&quot;:true
+},
+&quot;error_by&quot;:{
+&quot;desc&quot;:&quot;If set and TRUE the led will show &lt;code&gt;colorError&lt;/code&gt;&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;
 },
 &quot;hide_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
@@ -1397,128 +2058,112 @@
 }
 },
 &quot;options&quot;:{
-&quot;color_false&quot;:&quot;#ff2200&quot;,
-&quot;color_true&quot;:&quot;#33ee00&quot;,
+&quot;colorError&quot;:&quot;#DF2626&quot;,
+&quot;colorFalse&quot;:&quot;#B8BDC5&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
 &quot;reverseMeaning&quot;:&quot;False&quot;
 }
 }</desc>
       <title
-         id="title4190">Led_TIMER_OUT</title>
+         id="title597">Led_TIMER_OUT</title>
       <g
-         id="g4204"
-         transform="translate(-35.261262,-958.71875)"
-         rexsvg:tag="led_area">
+         id="g609"
+         transform="matrix(0.86738706,0,0,0.86738706,-0.00375412,0.01338328)">
         <g
-           id="g4202">
+           id="g603">
           <path
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             sodipodi:ry="40.031803"
-             sodipodi:rx="40.031803"
-             sodipodi:cy="998.76025"
-             sodipodi:cx="75.314072"
-             id="path4192"
-             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             sodipodi:type="arc" />
+             id="path599"
+             d="M 3.235,63.067 C 12.587,86.772 39.381,98.409 63.087,89.057 86.793,79.704 98.43,52.911 89.076,29.203 79.725,5.502 52.928,-6.135 29.223,3.216 5.521,12.566 -6.115,39.365 3.235,63.067 Z"
+             style="fill:url(#led-c1-2F78E2)"
+             inkscape:connector-curvature="0" />
           <path
-             transform="matrix(0.84745762,0,0,0.84745762,11.488588,152.35326)"
-             sodipodi:type="arc"
-             style="fill:url(#linearGradient3296);fill-opacity:1;fill-rule:nonzero;stroke:#bbbbbb;stroke-width:0.76345998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-             id="path4194"
-             sodipodi:cx="75.314072"
-             sodipodi:cy="998.76025"
-             sodipodi:rx="40.031803"
-             sodipodi:ry="40.031803"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z" />
-          <path
-             inkscape:label="#path3811-9"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             sodipodi:ry="40.031803"
-             sodipodi:rx="40.031803"
-             sodipodi:cy="998.76025"
-             sodipodi:cx="75.314072"
-             id="path4196"
-             style="fill:url(#linearGradient3298);fill-opacity:1;fill-rule:nonzero;stroke:none"
-             sodipodi:type="arc"
-             transform="matrix(0.76271186,0,0,0.76271186,17.871137,236.99396)"
-             rexsvg:tag="led" />
-          <path
-             transform="matrix(0.76271186,0,0,0.76271186,17.871137,236.99396)"
-             sodipodi:type="arc"
-             style="fill:url(#linearGradient3300);fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path4198"
-             sodipodi:cx="75.314072"
-             sodipodi:cy="998.76025"
-             sodipodi:rx="40.031803"
-             sodipodi:ry="40.031803"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             inkscape:label="#path3811-9" />
-          <path
+             id="path601"
+             d="M 9.985,60.404 C 17.868,80.382 40.447,90.186 60.423,82.307 80.402,74.425 90.206,51.843 82.329,31.867 74.444,11.892 51.862,2.087 31.887,9.967 11.91,17.844 2.105,40.428 9.985,60.404 Z"
              inkscape:connector-curvature="0"
-             id="path4200"
-             d="m 100.41876,987.22567 c 0,10.49236 -11.239748,18.99813 -25.104688,18.99813 -13.864938,0 -25.104693,-8.50577 -25.104693,-18.99813 0,-10.49239 11.239755,-18.99815 25.104693,-18.99815 13.86494,0 25.104688,8.50576 25.104688,18.99815 z"
-             style="fill:url(#linearGradient3302);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+             style="fill:url(#linearGradient4660-2F78E2)" />
         </g>
+        <path
+           rexsvg:tag="main"
+           id="path605"
+           d="M 11.889,59.654 C 19.353,78.578 40.748,87.869 59.674,80.402 78.596,72.936 87.889,51.546 80.422,32.62 72.955,13.694 51.564,4.404 32.639,11.87 13.713,19.335 4.423,40.729 11.889,59.654 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#b8bdc5" />
+        <path
+           id="path607"
+           d="M 75.564001,43.888 A 29.961,29.961 0 0 1 45.603001,73.849001 29.961,29.961 0 0 1 15.642,43.888 29.961,29.961 0 0 1 45.603001,13.927 a 29.961,29.961 0 0 1 29.961,29.961 z"
+           style="opacity:0.5;fill:url(#led-glance-2F78E2);fill-opacity:1" />
       </g>
       <defs
-         id="defs4232">
+         id="defs629">
+        <pattern
+           id="pattern611"
+           patternUnits="userSpaceOnUse"
+           width="6"
+           height="6"
+           x="0"
+           y="0" />
         <linearGradient
-           id="linearGradient4210">
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           y2="-272.83911"
+           x2="323.94501"
+           y1="-346.61789"
+           x1="295.17209"
+           gradientUnits="userSpaceOnUse"
+           id="led-c1-2F78E2">
           <stop
-             id="stop4206"
-             offset="0"
-             style="stop-color:#5a5a5a;stop-opacity:1;" />
+             id="stop613"
+             style="stop-color:#CCD1D9"
+             offset="0" />
           <stop
-             id="stop4208"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:1" />
+             id="stop615"
+             style="stop-color:#FCFDFD"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           id="linearGradient4216">
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           y2="-286.89969"
+           x2="318.4606"
+           y1="-359.3689"
+           x1="290.19849"
+           gradientUnits="userSpaceOnUse"
+           id="led-c2-2F78E2">
           <stop
-             id="stop4212"
-             offset="0"
-             style="stop-color:#616161;stop-opacity:0;" />
+             id="stop618"
+             style="stop-color:#FCFDFD"
+             offset="0" />
           <stop
-             id="stop4214"
-             offset="1"
-             style="stop-color:#7f7f7f;stop-opacity:1;" />
+             id="stop620"
+             style="stop-color:#CCD1D9"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           y2="940.29138"
-           x2="112.40858"
-           y1="1015.4736"
-           x1="47.505596"
+           xlink:href="#led-c2-2F78E2"
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-158.4604)"
+           y2="-174.18719"
+           x2="430.70221"
+           y1="-230.50999"
+           x1="410.20239"
            gradientUnits="userSpaceOnUse"
-           id="linearGradient4224"
-           xlink:href="#linearGradient3842-46-8"
-           inkscape:collect="always" />
+           id="led-glance-2F78E2">
+          <stop
+             id="stop623"
+             style="stop-color:#FFFFFF;stop-opacity:0"
+             offset="0.5" />
+          <stop
+             id="stop625"
+             style="stop-color:#FFFFFF"
+             offset="1" />
+        </linearGradient>
         <linearGradient
-           y2="979.15167"
-           x2="-5.1106839"
-           y1="999.95007"
-           x1="72.509972"
+           inkscape:collect="always"
+           xlink:href="#led-c2-2F78E2"
+           id="linearGradient4660-2F78E2"
            gradientUnits="userSpaceOnUse"
-           id="linearGradient4226"
-           xlink:href="#linearGradient3813-8-11"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="971.07275"
-           x2="-32.346645"
-           y1="999.95007"
-           x1="72.509972"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4228"
-           xlink:href="#linearGradient3813-8-11"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="988.34045"
-           x2="45.027348"
-           y1="968.71997"
-           x1="118.25204"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4230"
-           xlink:href="#linearGradient3832-3-1"
-           inkscape:collect="always" />
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           x1="290.19849"
+           y1="-359.3689"
+           x2="318.4606"
+           y2="-286.89969" />
       </defs>
     </g>
     <text
@@ -1528,38 +2173,46 @@
        y="251.0654"
        id="text4821"><tspan
          id="tspan2039"
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle"
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          sodipodi:role="line"
          x="555.26147"
          y="251.0654">S3 OR S4</tspan></text>
     <g
-       rexsvg:module="Led"
-       rexsvg:filename="Led.svg"
-       rexsvg:version="8194"
+       inkscape:label="Led"
        transform="translate(706.89758,195.75306)"
        id="g4841"
-       inkscape:label="Led">
+       rexsvg:version="12"
+       rexsvg:filename="Led.svg"
+       rexsvg:module="Led">
       <desc
-         id="desc4237">{
+         id="desc634">{
 &quot;connections&quot;:{
 &quot;disable_by&quot;:&quot;&quot;,
+&quot;error_by&quot;:&quot;&quot;,
 &quot;hide_by&quot;:&quot;&quot;,
 &quot;value&quot;:&quot;$T&quot;
 },
 &quot;metaData&quot;:{
-&quot;color_false&quot;:{
+&quot;colorError&quot;:{
+&quot;desc&quot;:&quot;LED background color when the signal error is TRUE.&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorFalse&quot;:{
 &quot;desc&quot;:&quot;LED background color when the signal is OFF, DISABLED, ...&quot;,
 &quot;order&quot;:&quot;03&quot;,
 &quot;prev&quot;:[
-&quot;colorStop&quot;
+&quot;colorStop&quot;,
+&quot;color_false&quot;
 ],
 &quot;type&quot;:&quot;color&quot;
 },
-&quot;color_true&quot;:{
+&quot;colorTrue&quot;:{
 &quot;desc&quot;:&quot;LED background color when the signal is ON, ENABLED, ...&quot;,
 &quot;order&quot;:&quot;02&quot;,
 &quot;prev&quot;:[
-&quot;colorRun&quot;
+&quot;colorRun&quot;,
+&quot;color_true&quot;
 ],
 &quot;type&quot;:&quot;color&quot;
 },
@@ -1567,6 +2220,11 @@
 &quot;disable_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
 &quot;optional&quot;:true
+},
+&quot;error_by&quot;:{
+&quot;desc&quot;:&quot;If set and TRUE the led will show &lt;code&gt;colorError&lt;/code&gt;&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;
 },
 &quot;hide_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
@@ -1589,167 +2247,150 @@
 }
 },
 &quot;options&quot;:{
-&quot;color_false&quot;:&quot;#ff2200&quot;,
-&quot;color_true&quot;:&quot;#33ee00&quot;,
+&quot;colorError&quot;:&quot;#DF2626&quot;,
+&quot;colorFalse&quot;:&quot;#B8BDC5&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
 &quot;reverseMeaning&quot;:&quot;False&quot;
 }
 }</desc>
       <title
-         id="title4239">Led_OR_B</title>
+         id="title636">Led_OR_B</title>
       <g
-         id="g4253"
-         transform="translate(-35.261262,-958.71875)"
-         rexsvg:tag="led_area">
+         id="g648"
+         transform="matrix(0.86738706,0,0,0.86738706,-0.00375412,0.01338328)">
         <g
-           id="g4251">
+           id="g642">
           <path
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             sodipodi:ry="40.031803"
-             sodipodi:rx="40.031803"
-             sodipodi:cy="998.76025"
-             sodipodi:cx="75.314072"
-             id="path4241"
-             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             sodipodi:type="arc" />
+             id="path638"
+             d="M 3.235,63.067 C 12.587,86.772 39.381,98.409 63.087,89.057 86.793,79.704 98.43,52.911 89.076,29.203 79.725,5.502 52.928,-6.135 29.223,3.216 5.521,12.566 -6.115,39.365 3.235,63.067 Z"
+             style="fill:url(#led-c1-56F9DE)"
+             inkscape:connector-curvature="0" />
           <path
-             transform="matrix(0.84745762,0,0,0.84745762,11.488588,152.35326)"
-             sodipodi:type="arc"
-             style="fill:url(#linearGradient3296);fill-opacity:1;fill-rule:nonzero;stroke:#bbbbbb;stroke-width:0.76345998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-             id="path4243"
-             sodipodi:cx="75.314072"
-             sodipodi:cy="998.76025"
-             sodipodi:rx="40.031803"
-             sodipodi:ry="40.031803"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z" />
-          <path
-             inkscape:label="#path3811-9"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             sodipodi:ry="40.031803"
-             sodipodi:rx="40.031803"
-             sodipodi:cy="998.76025"
-             sodipodi:cx="75.314072"
-             id="path4245"
-             style="fill:url(#linearGradient3298);fill-opacity:1;fill-rule:nonzero;stroke:none"
-             sodipodi:type="arc"
-             transform="matrix(0.76271186,0,0,0.76271186,17.871137,236.99396)"
-             rexsvg:tag="led" />
-          <path
-             transform="matrix(0.76271186,0,0,0.76271186,17.871137,236.99396)"
-             sodipodi:type="arc"
-             style="fill:url(#linearGradient3300);fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path4247"
-             sodipodi:cx="75.314072"
-             sodipodi:cy="998.76025"
-             sodipodi:rx="40.031803"
-             sodipodi:ry="40.031803"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             inkscape:label="#path3811-9" />
-          <path
+             id="path640"
+             d="M 9.985,60.404 C 17.868,80.382 40.447,90.186 60.423,82.307 80.402,74.425 90.206,51.843 82.329,31.867 74.444,11.892 51.862,2.087 31.887,9.967 11.91,17.844 2.105,40.428 9.985,60.404 Z"
              inkscape:connector-curvature="0"
-             id="path4249"
-             d="m 100.41876,987.22567 c 0,10.49236 -11.239748,18.99813 -25.104688,18.99813 -13.864938,0 -25.104693,-8.50577 -25.104693,-18.99813 0,-10.49239 11.239755,-18.99815 25.104693,-18.99815 13.86494,0 25.104688,8.50576 25.104688,18.99815 z"
-             style="fill:url(#linearGradient3302);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+             style="fill:url(#linearGradient4660-56F9DE)" />
         </g>
+        <path
+           rexsvg:tag="main"
+           id="path644"
+           d="M 11.889,59.654 C 19.353,78.578 40.748,87.869 59.674,80.402 78.596,72.936 87.889,51.546 80.422,32.62 72.955,13.694 51.564,4.404 32.639,11.87 13.713,19.335 4.423,40.729 11.889,59.654 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#b8bdc5" />
+        <path
+           id="path646"
+           d="M 75.564001,43.888 A 29.961,29.961 0 0 1 45.603001,73.849001 29.961,29.961 0 0 1 15.642,43.888 29.961,29.961 0 0 1 45.603001,13.927 a 29.961,29.961 0 0 1 29.961,29.961 z"
+           style="opacity:0.5;fill:url(#led-glance-56F9DE);fill-opacity:1" />
       </g>
       <defs
-         id="defs4281">
+         id="defs668">
+        <pattern
+           id="pattern650"
+           patternUnits="userSpaceOnUse"
+           width="6"
+           height="6"
+           x="0"
+           y="0" />
         <linearGradient
-           id="linearGradient4259">
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           y2="-272.83911"
+           x2="323.94501"
+           y1="-346.61789"
+           x1="295.17209"
+           gradientUnits="userSpaceOnUse"
+           id="led-c1-56F9DE">
           <stop
-             id="stop4255"
-             offset="0"
-             style="stop-color:#5a5a5a;stop-opacity:1;" />
+             id="stop652"
+             style="stop-color:#CCD1D9"
+             offset="0" />
           <stop
-             id="stop4257"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:1" />
+             id="stop654"
+             style="stop-color:#FCFDFD"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           id="linearGradient4265">
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           y2="-286.89969"
+           x2="318.4606"
+           y1="-359.3689"
+           x1="290.19849"
+           gradientUnits="userSpaceOnUse"
+           id="led-c2-56F9DE">
           <stop
-             id="stop4261"
-             offset="0"
-             style="stop-color:#616161;stop-opacity:0;" />
+             id="stop657"
+             style="stop-color:#FCFDFD"
+             offset="0" />
           <stop
-             id="stop4263"
-             offset="1"
-             style="stop-color:#7f7f7f;stop-opacity:1;" />
+             id="stop659"
+             style="stop-color:#CCD1D9"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           y2="940.29138"
-           x2="112.40858"
-           y1="1015.4736"
-           x1="47.505596"
+           xlink:href="#led-c2-56F9DE"
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-158.4604)"
+           y2="-174.18719"
+           x2="430.70221"
+           y1="-230.50999"
+           x1="410.20239"
            gradientUnits="userSpaceOnUse"
-           id="linearGradient4273"
-           xlink:href="#linearGradient3842-46-8"
-           inkscape:collect="always" />
+           id="led-glance-56F9DE">
+          <stop
+             id="stop662"
+             style="stop-color:#FFFFFF;stop-opacity:0"
+             offset="0.5" />
+          <stop
+             id="stop664"
+             style="stop-color:#FFFFFF"
+             offset="1" />
+        </linearGradient>
         <linearGradient
-           y2="979.15167"
-           x2="-5.1106839"
-           y1="999.95007"
-           x1="72.509972"
+           inkscape:collect="always"
+           xlink:href="#led-c2-56F9DE"
+           id="linearGradient4660-56F9DE"
            gradientUnits="userSpaceOnUse"
-           id="linearGradient4275"
-           xlink:href="#linearGradient3813-8-11"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="971.07275"
-           x2="-32.346645"
-           y1="999.95007"
-           x1="72.509972"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4277"
-           xlink:href="#linearGradient3813-8-11"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="988.34045"
-           x2="45.027348"
-           y1="968.71997"
-           x1="118.25204"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4279"
-           xlink:href="#linearGradient3832-3-1"
-           inkscape:collect="always" />
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           x1="290.19849"
+           y1="-359.3689"
+           x2="318.4606"
+           y2="-286.89969" />
       </defs>
     </g>
-    <rect
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#2d5368;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
-       id="rect738"
-       width="1221"
-       height="385"
-       x="12.5"
-       y="412.5"
-       ry="10"
-       rx="10" />
     <g
-       rexsvg:module="Led"
-       rexsvg:filename="Led.svg"
-       rexsvg:version="8194"
+       inkscape:label="Led"
        transform="translate(706.89758,292.8959)"
        id="g2067"
-       inkscape:label="Led">
+       rexsvg:version="12"
+       rexsvg:filename="Led.svg"
+       rexsvg:module="Led">
       <desc
-         id="desc4285">{
+         id="desc671">{
 &quot;connections&quot;:{
 &quot;disable_by&quot;:&quot;&quot;,
+&quot;error_by&quot;:&quot;&quot;,
 &quot;hide_by&quot;:&quot;&quot;,
 &quot;value&quot;:&quot;$T&quot;
 },
 &quot;metaData&quot;:{
-&quot;color_false&quot;:{
+&quot;colorError&quot;:{
+&quot;desc&quot;:&quot;LED background color when the signal error is TRUE.&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorFalse&quot;:{
 &quot;desc&quot;:&quot;LED background color when the signal is OFF, DISABLED, ...&quot;,
 &quot;order&quot;:&quot;03&quot;,
 &quot;prev&quot;:[
-&quot;colorStop&quot;
+&quot;colorStop&quot;,
+&quot;color_false&quot;
 ],
 &quot;type&quot;:&quot;color&quot;
 },
-&quot;color_true&quot;:{
+&quot;colorTrue&quot;:{
 &quot;desc&quot;:&quot;LED background color when the signal is ON, ENABLED, ...&quot;,
 &quot;order&quot;:&quot;02&quot;,
 &quot;prev&quot;:[
-&quot;colorRun&quot;
+&quot;colorRun&quot;,
+&quot;color_true&quot;
 ],
 &quot;type&quot;:&quot;color&quot;
 },
@@ -1757,6 +2398,11 @@
 &quot;disable_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
 &quot;optional&quot;:true
+},
+&quot;error_by&quot;:{
+&quot;desc&quot;:&quot;If set and TRUE the led will show &lt;code&gt;colorError&lt;/code&gt;&quot;,
+&quot;optional&quot;:true,
+&quot;order&quot;:&quot;02&quot;
 },
 &quot;hide_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
@@ -1779,128 +2425,112 @@
 }
 },
 &quot;options&quot;:{
-&quot;color_false&quot;:&quot;#ff2200&quot;,
-&quot;color_true&quot;:&quot;#33ee00&quot;,
+&quot;colorError&quot;:&quot;#DF2626&quot;,
+&quot;colorFalse&quot;:&quot;#B8BDC5&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
 &quot;reverseMeaning&quot;:&quot;False&quot;
 }
 }</desc>
       <title
-         id="title4287">Led_AND</title>
+         id="title673">Led_AND</title>
       <g
-         id="g4301"
-         transform="translate(-35.261262,-958.71875)"
-         rexsvg:tag="led_area">
+         id="g685"
+         transform="matrix(0.86738706,0,0,0.86738706,-0.00375412,0.01338328)">
         <g
-           id="g4299">
+           id="g679">
           <path
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             sodipodi:ry="40.031803"
-             sodipodi:rx="40.031803"
-             sodipodi:cy="998.76025"
-             sodipodi:cx="75.314072"
-             id="path4289"
-             style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
-             sodipodi:type="arc" />
+             id="path675"
+             d="M 3.235,63.067 C 12.587,86.772 39.381,98.409 63.087,89.057 86.793,79.704 98.43,52.911 89.076,29.203 79.725,5.502 52.928,-6.135 29.223,3.216 5.521,12.566 -6.115,39.365 3.235,63.067 Z"
+             style="fill:url(#led-c1-F0EBF2)"
+             inkscape:connector-curvature="0" />
           <path
-             transform="matrix(0.84745762,0,0,0.84745762,11.488588,152.35326)"
-             sodipodi:type="arc"
-             style="fill:url(#linearGradient3296);fill-opacity:1;fill-rule:nonzero;stroke:#bbbbbb;stroke-width:0.76345998;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-             id="path4291"
-             sodipodi:cx="75.314072"
-             sodipodi:cy="998.76025"
-             sodipodi:rx="40.031803"
-             sodipodi:ry="40.031803"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z" />
-          <path
-             inkscape:label="#path3811-9"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             sodipodi:ry="40.031803"
-             sodipodi:rx="40.031803"
-             sodipodi:cy="998.76025"
-             sodipodi:cx="75.314072"
-             id="path4293"
-             style="fill:url(#linearGradient3298);fill-opacity:1;fill-rule:nonzero;stroke:none"
-             sodipodi:type="arc"
-             transform="matrix(0.76271186,0,0,0.76271186,17.871137,236.99396)"
-             rexsvg:tag="led" />
-          <path
-             transform="matrix(0.76271186,0,0,0.76271186,17.871137,236.99396)"
-             sodipodi:type="arc"
-             style="fill:url(#linearGradient3300);fill-opacity:1;fill-rule:nonzero;stroke:none"
-             id="path4295"
-             sodipodi:cx="75.314072"
-             sodipodi:cy="998.76025"
-             sodipodi:rx="40.031803"
-             sodipodi:ry="40.031803"
-             d="m 115.34587,998.76025 a 40.031803,40.031803 0 0 1 -40.031798,40.03185 40.031803,40.031803 0 0 1 -40.031803,-40.03185 40.031803,40.031803 0 0 1 40.031803,-40.0318 40.031803,40.031803 0 0 1 40.031798,40.0318 z"
-             inkscape:label="#path3811-9" />
-          <path
+             id="path677"
+             d="M 9.985,60.404 C 17.868,80.382 40.447,90.186 60.423,82.307 80.402,74.425 90.206,51.843 82.329,31.867 74.444,11.892 51.862,2.087 31.887,9.967 11.91,17.844 2.105,40.428 9.985,60.404 Z"
              inkscape:connector-curvature="0"
-             id="path4297"
-             d="m 100.41876,987.22567 c 0,10.49236 -11.239748,18.99813 -25.104688,18.99813 -13.864938,0 -25.104693,-8.50577 -25.104693,-18.99813 0,-10.49239 11.239755,-18.99815 25.104693,-18.99815 13.86494,0 25.104688,8.50576 25.104688,18.99815 z"
-             style="fill:url(#linearGradient3302);fill-opacity:1;fill-rule:nonzero;stroke:none" />
+             style="fill:url(#linearGradient4660-F0EBF2)" />
         </g>
+        <path
+           rexsvg:tag="main"
+           id="path681"
+           d="M 11.889,59.654 C 19.353,78.578 40.748,87.869 59.674,80.402 78.596,72.936 87.889,51.546 80.422,32.62 72.955,13.694 51.564,4.404 32.639,11.87 13.713,19.335 4.423,40.729 11.889,59.654 Z"
+           inkscape:connector-curvature="0"
+           style="fill:#b8bdc5" />
+        <path
+           id="path683"
+           d="M 75.564001,43.888 A 29.961,29.961 0 0 1 45.603001,73.849001 29.961,29.961 0 0 1 15.642,43.888 29.961,29.961 0 0 1 45.603001,13.927 a 29.961,29.961 0 0 1 29.961,29.961 z"
+           style="opacity:0.5;fill:url(#led-glance-F0EBF2);fill-opacity:1" />
       </g>
       <defs
-         id="defs4329">
+         id="defs705">
+        <pattern
+           id="pattern687"
+           patternUnits="userSpaceOnUse"
+           width="6"
+           height="6"
+           x="0"
+           y="0" />
         <linearGradient
-           id="linearGradient4307">
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           y2="-272.83911"
+           x2="323.94501"
+           y1="-346.61789"
+           x1="295.17209"
+           gradientUnits="userSpaceOnUse"
+           id="led-c1-F0EBF2">
           <stop
-             id="stop4303"
-             offset="0"
-             style="stop-color:#5a5a5a;stop-opacity:1;" />
+             id="stop689"
+             style="stop-color:#CCD1D9"
+             offset="0" />
           <stop
-             id="stop4305"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:1" />
+             id="stop691"
+             style="stop-color:#FCFDFD"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           id="linearGradient4313">
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           y2="-286.89969"
+           x2="318.4606"
+           y1="-359.3689"
+           x1="290.19849"
+           gradientUnits="userSpaceOnUse"
+           id="led-c2-F0EBF2">
           <stop
-             id="stop4309"
-             offset="0"
-             style="stop-color:#616161;stop-opacity:0;" />
+             id="stop694"
+             style="stop-color:#FCFDFD"
+             offset="0" />
           <stop
-             id="stop4311"
-             offset="1"
-             style="stop-color:#7f7f7f;stop-opacity:1;" />
+             id="stop696"
+             style="stop-color:#CCD1D9"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           y2="940.29138"
-           x2="112.40858"
-           y1="1015.4736"
-           x1="47.505596"
+           xlink:href="#led-c2-F0EBF2"
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-158.4604)"
+           y2="-174.18719"
+           x2="430.70221"
+           y1="-230.50999"
+           x1="410.20239"
            gradientUnits="userSpaceOnUse"
-           id="linearGradient4321"
-           xlink:href="#linearGradient3842-46-8"
-           inkscape:collect="always" />
+           id="led-glance-F0EBF2">
+          <stop
+             id="stop699"
+             style="stop-color:#FFFFFF;stop-opacity:0"
+             offset="0.5" />
+          <stop
+             id="stop701"
+             style="stop-color:#FFFFFF"
+             offset="1" />
+        </linearGradient>
         <linearGradient
-           y2="979.15167"
-           x2="-5.1106839"
-           y1="999.95007"
-           x1="72.509972"
+           inkscape:collect="always"
+           xlink:href="#led-c2-F0EBF2"
+           id="linearGradient4660-F0EBF2"
            gradientUnits="userSpaceOnUse"
-           id="linearGradient4323"
-           xlink:href="#linearGradient3813-8-11"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="971.07275"
-           x2="-32.346645"
-           y1="999.95007"
-           x1="72.509972"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4325"
-           xlink:href="#linearGradient3813-8-11"
-           inkscape:collect="always" />
-        <linearGradient
-           y2="988.34045"
-           x2="45.027348"
-           y1="968.71997"
-           x1="118.25204"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4327"
-           xlink:href="#linearGradient3832-3-1"
-           inkscape:collect="always" />
+           gradientTransform="matrix(0.9317,-0.3633,-0.3633,-0.9317,-354.7826,-144.3649)"
+           x1="290.19849"
+           y1="-359.3689"
+           x2="318.4606"
+           y2="-286.89969" />
       </defs>
     </g>
     <text
@@ -1912,24 +2542,15 @@
          y="348.19781"
          x="548.76147"
          sodipodi:role="line"
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle"
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          id="tspan2625">A AND B</tspan></text>
-    <rect
-       rx="10"
-       ry="10"
-       y="212.5"
-       x="13.357142"
-       height="185"
-       width="385"
-       id="rect2629"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;vector-effect:none;fill:#b1d8ee;fill-opacity:1;fill-rule:nonzero;stroke:#2d5368;stroke-width:5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate" />
     <g
-       rexsvg:module="PushOnOff"
+       inkscape:label="PushOnOff"
+       transform="translate(252.79172,234.91406)"
+       id="g4801"
+       rexsvg:version="12"
        rexsvg:filename="PushOnOff.svg"
-       rexsvg:version="8198"
-       transform="translate(64.791721,234.91406)"
-       id="PushOnOff"
-       inkscape:label="PushOnOff">
+       rexsvg:module="PushOnOff">
       <desc
          id="desc-p">{
 &quot;connections&quot;:{
@@ -1939,6 +2560,16 @@
 &quot;value&quot;:&quot;$T&quot;
 },
 &quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
 &quot;connections&quot;:{
 &quot;disable_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
@@ -1967,610 +2598,198 @@
 }
 },
 &quot;desc&quot;:&quot;The PushOnOff button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When  released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
-&quot;reverse_meaning&quot;:{
+&quot;reverseMeaning&quot;:{
 &quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
-&quot;order&quot;:&quot;01&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;reverse_meaning&quot;
+],
 &quot;type&quot;:&quot;bool&quot;
 },
 &quot;type&quot;:{
-&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
-&quot;order&quot;:&quot;02&quot;,
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
 &quot;type&quot;:&quot;enum&quot;,
 &quot;values&quot;:[
 &quot;PushButton&quot;,
 &quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
 &quot;ToggleButton&quot;
 ]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;table&quot;
 }
 },
 &quot;options&quot;:{
-&quot;reverse_meaning&quot;:false,
-&quot;type&quot;:&quot;ToggleButton&quot;
+&quot;colorFalse&quot;:&quot;#B8BDC5&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;reverseMeaning&quot;:false,
+&quot;type&quot;:&quot;ToggleButton&quot;,
+&quot;writePerm&quot;:[]
 }
 }</desc>
       <title
-         id="title50">PushOnOff_SW_3</title>
+         id="title50">PushOnOff_SW_4</title>
       <g
-         id="pushOnOff_area"
-         rexsvg:tag="pushOnOff_area">
-        <path
-           transform="translate(-40.710312,-33.246755)"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           sodipodi:ry="46.138351"
-           sodipodi:rx="46.138351"
-           sodipodi:cy="79.385773"
-           sodipodi:cx="86.848663"
-           id="path2984"
-           style="fill:url(#radialGradient3080);fill-opacity:1;fill-rule:evenodd;stroke:none"
-           sodipodi:type="arc" />
-        <path
-           sodipodi:type="arc"
-           style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3820);stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="button_part3"
-           sodipodi:cx="86.848663"
-           sodipodi:cy="79.385773"
-           sodipodi:rx="46.138351"
-           sodipodi:ry="46.138351"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           transform="matrix(0.68591692,0,0,0.68591691,-13.546916,-10.088074)"
-           inkscape:label="#button_part3"
-           rexsvg:tag="button_part3" />
-        <path
-           transform="matrix(0.63599868,0,0,0.63058019,-10.371977,-8.7645091)"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           sodipodi:ry="46.138351"
-           sodipodi:rx="46.138351"
-           sodipodi:cy="79.385773"
-           sodipodi:cx="86.848663"
-           id="button_part1"
-           style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3884);stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           sodipodi:type="arc"
-           rexsvg:tag="button_part1" />
-        <path
-           sodipodi:type="arc"
-           style="fill:url(#radialGradient3934);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="button_part2"
-           sodipodi:cx="86.848663"
-           sodipodi:cy="79.385773"
-           sodipodi:rx="46.138351"
-           sodipodi:ry="46.138351"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           transform="matrix(0.63599868,0,0,0.63058019,-10.371977,-8.7645091)"
-           rexsvg:tag="button_part2" />
+         rexsvg:tag="button"
+         id="PushOnOff-button">
+        <g
+           id="zaklad">
+          <path
+             style="fill:#ccd1d9"
+             inkscape:connector-curvature="0"
+             d="M 3.236,63.066 C 12.587,86.771 39.382,98.407 63.085,89.055 86.791,79.703 98.427,52.91 89.073,29.203 79.724,5.503 52.927,-6.134 29.223,3.217 5.522,12.567 -6.114,39.365 3.236,63.066 Z"
+             id="color_1_" />
+          <circle
+             style="fill:url(#PushOnOff-base-88BDF4)"
+             r="42.487999"
+             cy="46.134998"
+             cx="46.154999"
+             id="circle714" />
+        </g>
+        <circle
+           rexsvg:tag="main"
+           style="fill:#b8bdc5"
+           r="29.993"
+           cy="46.136002"
+           cx="46.155998"
+           id="circle717" />
+        <g
+           id="shadow">
+          <g
+             style="opacity:0.5"
+             id="lesk_kopie_1_">
+            <circle
+               style="opacity:0.5;fill:url(#linearGradient895-88BDF4)"
+               id="circle31"
+               r="25"
+               cy="46.140999"
+               cx="46.139999"
+               enable-background="new    " />
+          </g>
+        </g>
+        <g
+           style="display:none"
+           rexsvg:tag="active"
+           id="dark">
+          <circle
+             style="display:inline;opacity:0.05;fill:#1d1d1b"
+             r="42.487999"
+             cy="46.134998"
+             cx="46.154999"
+             display="inline"
+             id="color_7_" />
+          <circle
+             style="display:inline;opacity:0.1;fill:#1d1d1b"
+             r="29.993"
+             cy="46.136002"
+             cx="46.140999"
+             display="inline"
+             id="color_2_" />
+        </g>
+        <g
+           style="display:none"
+           rexsvg:tag="hover"
+           id="light">
+          <circle
+             style="display:inline;opacity:0.2;fill:#ffffff"
+             r="42.487999"
+             cy="46.134998"
+             cx="46.154999"
+             display="inline"
+             id="color_6_" />
+          <circle
+             style="display:inline;opacity:0.2;fill:#ffffff"
+             r="29.993"
+             cy="46.136002"
+             cx="46.140999"
+             display="inline"
+             id="color_11_" />
+        </g>
       </g>
       <defs
          id="defs3">
         <linearGradient
-           id="linearGradient4348">
-          <stop
-             id="stop4342"
-             offset="0"
-             style="stop-color:#e1e1e1;stop-opacity:1;" />
-          <stop
-             style="stop-color:#cacaca;stop-opacity:0.49803922;"
-             offset="0.5"
-             id="stop4344" />
-          <stop
-             id="stop4346"
-             offset="1"
-             style="stop-color:#b3b3b3;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4354">
-          <stop
-             style="stop-color:#ffffff;stop-opacity:0.65098039;"
-             offset="0"
-             id="stop4350" />
-          <stop
-             id="stop4352"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4360">
-          <stop
-             id="stop4356"
-             offset="0"
-             style="stop-color:#e1e1e1;stop-opacity:1;" />
-          <stop
-             id="stop4358"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4366">
-          <stop
-             id="stop4362"
-             offset="0"
-             style="stop-color:#cccccc;stop-opacity:1;" />
-          <stop
-             id="stop4364"
-             offset="1"
-             style="stop-color:#cccccc;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4372">
-          <stop
-             id="stop4368"
-             offset="0"
-             style="stop-color:#868686;stop-opacity:1;" />
-          <stop
-             id="stop4370"
-             offset="1"
-             style="stop-color:#afafaf;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4378">
-          <stop
-             id="stop4374"
-             offset="0"
-             style="stop-color:#333333;stop-opacity:1;" />
-          <stop
-             id="stop4376"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4384">
-          <stop
-             id="stop4380"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4382"
-             offset="1"
-             style="stop-color:#999999;stop-opacity:0;" />
-        </linearGradient>
-        <radialGradient
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
+           xlink:href="#PushOnOff-shadow-88BDF4"
+           gradientTransform="matrix(0.9317,-0.3633,0.3633,0.9317,-13.5645,20.5527)"
+           y2="-0.78509998"
+           x2="64.405098"
+           y1="67.155296"
+           x1="37.909199"
            gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="31.518335"
-           fx="73.957253"
-           cy="31.518335"
-           cx="73.957253"
-           id="radialGradient4386"
-           xlink:href="#linearGradient3030"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4392">
+           id="PushOnOff-base-88BDF4">
           <stop
-             id="stop4388"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
+             id="stop3"
+             style="stop-color:#CCD1D9"
+             offset="0" />
           <stop
-             id="stop4390"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:1;" />
+             id="stop5"
+             style="stop-color:#FFFFFF"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           id="linearGradient4398">
-          <stop
-             id="stop4394"
-             offset="0"
-             style="stop-color:#000000;stop-opacity:1;" />
-          <stop
-             id="stop4396"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)"
+           y2="-180.3829"
+           x2="429.54321"
+           y1="-227.3804"
+           x1="412.4375"
            gradientUnits="userSpaceOnUse"
-           y2="118.44681"
-           x2="125.0676"
-           y1="20.005066"
-           x1="90.636459"
-           id="linearGradient4400"
-           xlink:href="#linearGradient3814"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4406">
+           id="PushOnOff-shadow-88BDF4">
           <stop
-             id="stop4402"
-             offset="0"
-             style="stop-color:#ffffff;stop-opacity:1;" />
+             id="stop12"
+             style="stop-color:#FFFFFF;stop-opacity:0"
+             offset="0" />
           <stop
-             id="stop4404"
-             offset="1"
-             style="stop-color:#1c1c1c;stop-opacity:1" />
+             id="stop14"
+             style="stop-color:#E6E6E6;stop-opacity:0.0576"
+             offset="0.0576" />
+          <stop
+             id="stop16"
+             style="stop-color:#B2B2B1;stop-opacity:0.1941"
+             offset="0.1941" />
+          <stop
+             id="stop18"
+             style="stop-color:#848483;stop-opacity:0.3324"
+             offset="0.3324" />
+          <stop
+             id="stop20"
+             style="stop-color:#5F5F5D;stop-opacity:0.4696"
+             offset="0.4696" />
+          <stop
+             id="stop22"
+             style="stop-color:#424240;stop-opacity:0.6056"
+             offset="0.6056" />
+          <stop
+             id="stop24"
+             style="stop-color:#2D2D2C;stop-opacity:0.7401"
+             offset="0.7401" />
+          <stop
+             id="stop26"
+             style="stop-color:#21211F;stop-opacity:0.8724"
+             offset="0.8724" />
+          <stop
+             id="stop28"
+             style="stop-color:#1D1D1B"
+             offset="1" />
         </linearGradient>
-        <radialGradient
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="31.518335"
-           fx="73.957253"
-           cy="31.518335"
-           cx="73.957253"
-           id="radialGradient4408"
-           xlink:href="#linearGradient3030-7"
-           inkscape:collect="always" />
         <linearGradient
-           id="linearGradient3030-7">
-          <stop
-             id="stop3032-4"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop3034-0"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:1;" />
-        </linearGradient>
-        <radialGradient
            inkscape:collect="always"
-           xlink:href="#linearGradient3030-7"
-           id="radialGradient4413"
+           xlink:href="#PushOnOff-shadow-88BDF4"
+           id="linearGradient895-88BDF4"
            gradientUnits="userSpaceOnUse"
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           cx="73.957253"
-           cy="31.518335"
-           fx="73.957253"
-           fy="31.518335"
-           r="46.138351" />
-        <linearGradient
-           y2="118.44681"
-           x2="125.0676"
-           y1="20.005066"
-           x1="90.636459"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient3884"
-           xlink:href="#linearGradient3814"
-           inkscape:collect="always" />
-        <linearGradient
-           gradientUnits="userSpaceOnUse"
-           y2="112.13119"
-           x2="148.79108"
-           y1="84.082726"
-           x1="13.260799"
-           id="linearGradient4416"
-           xlink:href="#linearGradient3916"
-           inkscape:collect="always" />
-        <radialGradient
-           gradientTransform="matrix(0.9806853,0,0,0.88403987,1.6249126,11.559246)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="80.339134"
-           fx="89.51339"
-           cy="80.339134"
-           cx="89.51339"
-           id="radialGradient4418"
-           xlink:href="#linearGradient3928"
-           inkscape:collect="always" />
-        <linearGradient
-           gradientTransform="matrix(0,0.25798638,-0.09608919,0,193.1696,39.134503)"
-           y2="190.18367"
-           x2="32.990391"
-           y1="72.374855"
-           x1="194.95644"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4420"
-           xlink:href="#linearGradient3916"
-           inkscape:collect="always" />
-      </defs>
-    </g>
-    <g
-       rexsvg:module="PushOnOff"
-       rexsvg:filename="PushOnOff.svg"
-       rexsvg:version="8198"
-       transform="translate(252.79172,234.91406)"
-       id="g4801"
-       inkscape:label="PushOnOff">
-      <desc
-         id="desc4424">{
-&quot;connections&quot;:{
-&quot;disable_by&quot;:&quot;&quot;,
-&quot;hide_by&quot;:&quot;&quot;,
-&quot;refresh_from&quot;:&quot;&quot;,
-&quot;value&quot;:&quot;$T&quot;
-},
-&quot;metaData&quot;:{
-&quot;connections&quot;:{
-&quot;disable_by&quot;:{
-&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
-&quot;optional&quot;:true
-},
-&quot;hide_by&quot;:{
-&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
-&quot;optional&quot;:true
-},
-&quot;refresh_from&quot;:{
-&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
-&quot;optional&quot;:true,
-&quot;order&quot;:&quot;02&quot;,
-&quot;prev&quot;:[
-&quot;VALUE_R&quot;
-]
-},
-&quot;value&quot;:{
-&quot;desc&quot;:&quot;Datapoint where boolean value is written.&quot;,
-&quot;order&quot;:&quot;01&quot;,
-&quot;prev&quot;:[
-&quot;VALUE_W&quot;,
-&quot;BUTTON&quot;
-],
-&quot;write&quot;:true
-}
-},
-&quot;desc&quot;:&quot;The PushOnOff button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When  released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
-&quot;reverse_meaning&quot;:{
-&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
-&quot;order&quot;:&quot;01&quot;,
-&quot;type&quot;:&quot;bool&quot;
-},
-&quot;type&quot;:{
-&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
-&quot;order&quot;:&quot;02&quot;,
-&quot;type&quot;:&quot;enum&quot;,
-&quot;values&quot;:[
-&quot;PushButton&quot;,
-&quot;ManualPulse&quot;,
-&quot;ToggleButton&quot;
-]
-}
-},
-&quot;options&quot;:{
-&quot;reverse_meaning&quot;:false,
-&quot;type&quot;:&quot;ToggleButton&quot;
-}
-}</desc>
-      <title
-         id="title4426">PushOnOff_SW_4</title>
-      <g
-         id="g4436"
-         rexsvg:tag="pushOnOff_area">
-        <path
-           transform="translate(-40.710312,-33.246755)"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           sodipodi:ry="46.138351"
-           sodipodi:rx="46.138351"
-           sodipodi:cy="79.385773"
-           sodipodi:cx="86.848663"
-           id="path4428"
-           style="fill:url(#radialGradient3080);fill-opacity:1;fill-rule:evenodd;stroke:none"
-           sodipodi:type="arc" />
-        <path
-           sodipodi:type="arc"
-           style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3820);stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="path4430"
-           sodipodi:cx="86.848663"
-           sodipodi:cy="79.385773"
-           sodipodi:rx="46.138351"
-           sodipodi:ry="46.138351"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           transform="matrix(0.68591692,0,0,0.68591691,-13.546916,-10.088074)"
-           inkscape:label="#button_part3"
-           rexsvg:tag="button_part3" />
-        <path
-           transform="matrix(0.63599868,0,0,0.63058019,-10.371977,-8.7645091)"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           sodipodi:ry="46.138351"
-           sodipodi:rx="46.138351"
-           sodipodi:cy="79.385773"
-           sodipodi:cx="86.848663"
-           id="path4432"
-           style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3884);stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           sodipodi:type="arc"
-           rexsvg:tag="button_part1" />
-        <path
-           sodipodi:type="arc"
-           style="fill:url(#radialGradient3934);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="path4434"
-           sodipodi:cx="86.848663"
-           sodipodi:cy="79.385773"
-           sodipodi:rx="46.138351"
-           sodipodi:ry="46.138351"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           transform="matrix(0.63599868,0,0,0.63058019,-10.371977,-8.7645091)"
-           rexsvg:tag="button_part2" />
-      </g>
-      <defs
-         id="defs4522">
-        <linearGradient
-           id="linearGradient4444">
-          <stop
-             id="stop4438"
-             offset="0"
-             style="stop-color:#e1e1e1;stop-opacity:1;" />
-          <stop
-             style="stop-color:#cacaca;stop-opacity:0.49803922;"
-             offset="0.5"
-             id="stop4440" />
-          <stop
-             id="stop4442"
-             offset="1"
-             style="stop-color:#b3b3b3;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4450">
-          <stop
-             style="stop-color:#ffffff;stop-opacity:0.65098039;"
-             offset="0"
-             id="stop4446" />
-          <stop
-             id="stop4448"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4456">
-          <stop
-             id="stop4452"
-             offset="0"
-             style="stop-color:#e1e1e1;stop-opacity:1;" />
-          <stop
-             id="stop4454"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4462">
-          <stop
-             id="stop4458"
-             offset="0"
-             style="stop-color:#cccccc;stop-opacity:1;" />
-          <stop
-             id="stop4460"
-             offset="1"
-             style="stop-color:#cccccc;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4468">
-          <stop
-             id="stop4464"
-             offset="0"
-             style="stop-color:#868686;stop-opacity:1;" />
-          <stop
-             id="stop4466"
-             offset="1"
-             style="stop-color:#afafaf;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4474">
-          <stop
-             id="stop4470"
-             offset="0"
-             style="stop-color:#333333;stop-opacity:1;" />
-          <stop
-             id="stop4472"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4480">
-          <stop
-             id="stop4476"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4478"
-             offset="1"
-             style="stop-color:#999999;stop-opacity:0;" />
-        </linearGradient>
-        <radialGradient
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="31.518335"
-           fx="73.957253"
-           cy="31.518335"
-           cx="73.957253"
-           id="radialGradient4482"
-           xlink:href="#linearGradient3030"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4488">
-          <stop
-             id="stop4484"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4486"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4494">
-          <stop
-             id="stop4490"
-             offset="0"
-             style="stop-color:#000000;stop-opacity:1;" />
-          <stop
-             id="stop4492"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           gradientUnits="userSpaceOnUse"
-           y2="118.44681"
-           x2="125.0676"
-           y1="20.005066"
-           x1="90.636459"
-           id="linearGradient4496"
-           xlink:href="#linearGradient3814"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4502">
-          <stop
-             id="stop4498"
-             offset="0"
-             style="stop-color:#ffffff;stop-opacity:1;" />
-          <stop
-             id="stop4500"
-             offset="1"
-             style="stop-color:#1c1c1c;stop-opacity:1" />
-        </linearGradient>
-        <radialGradient
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="31.518335"
-           fx="73.957253"
-           cy="31.518335"
-           cx="73.957253"
-           id="radialGradient4504"
-           xlink:href="#linearGradient3030-7"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4510">
-          <stop
-             id="stop4506"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4508"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:1;" />
-        </linearGradient>
-        <radialGradient
-           inkscape:collect="always"
-           xlink:href="#linearGradient3030-7"
-           id="radialGradient4512"
-           gradientUnits="userSpaceOnUse"
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           cx="73.957253"
-           cy="31.518335"
-           fx="73.957253"
-           fy="31.518335"
-           r="46.138351" />
-        <linearGradient
-           y2="118.44681"
-           x2="125.0676"
-           y1="20.005066"
-           x1="90.636459"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4514"
-           xlink:href="#linearGradient3814"
-           inkscape:collect="always" />
-        <linearGradient
-           gradientUnits="userSpaceOnUse"
-           y2="112.13119"
-           x2="148.79108"
-           y1="84.082726"
-           x1="13.260799"
-           id="linearGradient4516"
-           xlink:href="#linearGradient3916"
-           inkscape:collect="always" />
-        <radialGradient
-           gradientTransform="matrix(0.9806853,0,0,0.88403987,1.6249126,11.559246)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="80.339134"
-           fx="89.51339"
-           cy="80.339134"
-           cx="89.51339"
-           id="radialGradient4518"
-           xlink:href="#linearGradient3928"
-           inkscape:collect="always" />
-        <linearGradient
-           gradientTransform="matrix(0,0.25798638,-0.09608919,0,193.1696,39.134503)"
-           y2="190.18367"
-           x2="32.990391"
-           y1="72.374855"
-           x1="194.95644"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4520"
-           xlink:href="#linearGradient3916"
-           inkscape:collect="always" />
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)"
+           x1="412.4375"
+           y1="-227.3804"
+           x2="429.54321"
+           y2="-180.3829" />
       </defs>
     </g>
     <text
@@ -2579,7 +2798,7 @@
        x="111.65923"
        y="374.66861"
        id="text4813"><tspan
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle"
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          id="tspan4811"
          sodipodi:role="line"
          x="111.65923"
@@ -2594,7 +2813,7 @@
          x="299.65921"
          sodipodi:role="line"
          id="tspan4815"
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle">switch 4</tspan></text>
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">switch 4</tspan></text>
     <text
        id="text2633"
        y="67.428543"
@@ -2605,341 +2824,16 @@
          x="622.8125"
          sodipodi:role="line"
          id="tspan2631"
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle">Timer input</tspan></text>
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Montserrat;font-family:Montserrat;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">Timer input</tspan></text>
     <g
-       rexsvg:module="PushOnOff"
-       rexsvg:filename="PushOnOff.svg"
-       rexsvg:version="8198"
-       transform="translate(64.57001,35.914063)"
-       id="g2695"
-       inkscape:label="PushOnOff">
-      <desc
-         id="desc4531">{
-&quot;connections&quot;:{
-&quot;disable_by&quot;:&quot;&quot;,
-&quot;hide_by&quot;:&quot;&quot;,
-&quot;refresh_from&quot;:&quot;&quot;,
-&quot;value&quot;:&quot;$T&quot;
-},
-&quot;metaData&quot;:{
-&quot;connections&quot;:{
-&quot;disable_by&quot;:{
-&quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
-&quot;optional&quot;:true
-},
-&quot;hide_by&quot;:{
-&quot;desc&quot;:&quot;If non-zero the component is hidden.&quot;,
-&quot;optional&quot;:true
-},
-&quot;refresh_from&quot;:{
-&quot;desc&quot;:&quot;If set the state of the component is updated based on the value read from this datapoint. Otherwise the value from main datapoint is used.&quot;,
-&quot;optional&quot;:true,
-&quot;order&quot;:&quot;02&quot;,
-&quot;prev&quot;:[
-&quot;VALUE_R&quot;
-]
-},
-&quot;value&quot;:{
-&quot;desc&quot;:&quot;Datapoint where boolean value is written.&quot;,
-&quot;order&quot;:&quot;01&quot;,
-&quot;prev&quot;:[
-&quot;VALUE_W&quot;,
-&quot;BUTTON&quot;
-],
-&quot;write&quot;:true
-}
-},
-&quot;desc&quot;:&quot;The PushOnOff button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When  released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
-&quot;reverse_meaning&quot;:{
-&quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
-&quot;order&quot;:&quot;01&quot;,
-&quot;type&quot;:&quot;bool&quot;
-},
-&quot;type&quot;:{
-&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
-&quot;order&quot;:&quot;02&quot;,
-&quot;type&quot;:&quot;enum&quot;,
-&quot;values&quot;:[
-&quot;PushButton&quot;,
-&quot;ManualPulse&quot;,
-&quot;ToggleButton&quot;
-]
-}
-},
-&quot;options&quot;:{
-&quot;reverse_meaning&quot;:&quot;False&quot;,
-&quot;type&quot;:&quot;ToggleButton&quot;
-}
-}</desc>
-      <title
-         id="title4533">PushOnOff_SW_1</title>
-      <g
-         id="g4543"
-         rexsvg:tag="pushOnOff_area">
-        <path
-           transform="translate(-40.710312,-33.246755)"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           sodipodi:ry="46.138351"
-           sodipodi:rx="46.138351"
-           sodipodi:cy="79.385773"
-           sodipodi:cx="86.848663"
-           id="path4535"
-           style="fill:url(#radialGradient3080);fill-opacity:1;fill-rule:evenodd;stroke:none"
-           sodipodi:type="arc" />
-        <path
-           sodipodi:type="arc"
-           style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3820);stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="path4537"
-           sodipodi:cx="86.848663"
-           sodipodi:cy="79.385773"
-           sodipodi:rx="46.138351"
-           sodipodi:ry="46.138351"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           transform="matrix(0.68591692,0,0,0.68591691,-13.546916,-10.088074)"
-           inkscape:label="#button_part3"
-           rexsvg:tag="button_part3" />
-        <path
-           transform="matrix(0.63599868,0,0,0.63058019,-10.371977,-8.7645091)"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           sodipodi:ry="46.138351"
-           sodipodi:rx="46.138351"
-           sodipodi:cy="79.385773"
-           sodipodi:cx="86.848663"
-           id="path4539"
-           style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3884);stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           sodipodi:type="arc"
-           rexsvg:tag="button_part1" />
-        <path
-           sodipodi:type="arc"
-           style="fill:url(#radialGradient3934);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="path4541"
-           sodipodi:cx="86.848663"
-           sodipodi:cy="79.385773"
-           sodipodi:rx="46.138351"
-           sodipodi:ry="46.138351"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           transform="matrix(0.63599868,0,0,0.63058019,-10.371977,-8.7645091)"
-           rexsvg:tag="button_part2" />
-      </g>
-      <defs
-         id="defs4629">
-        <linearGradient
-           id="linearGradient4551">
-          <stop
-             id="stop4545"
-             offset="0"
-             style="stop-color:#e1e1e1;stop-opacity:1;" />
-          <stop
-             style="stop-color:#cacaca;stop-opacity:0.49803922;"
-             offset="0.5"
-             id="stop4547" />
-          <stop
-             id="stop4549"
-             offset="1"
-             style="stop-color:#b3b3b3;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4557">
-          <stop
-             style="stop-color:#ffffff;stop-opacity:0.65098039;"
-             offset="0"
-             id="stop4553" />
-          <stop
-             id="stop4555"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4563">
-          <stop
-             id="stop4559"
-             offset="0"
-             style="stop-color:#e1e1e1;stop-opacity:1;" />
-          <stop
-             id="stop4561"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4569">
-          <stop
-             id="stop4565"
-             offset="0"
-             style="stop-color:#cccccc;stop-opacity:1;" />
-          <stop
-             id="stop4567"
-             offset="1"
-             style="stop-color:#cccccc;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4575">
-          <stop
-             id="stop4571"
-             offset="0"
-             style="stop-color:#868686;stop-opacity:1;" />
-          <stop
-             id="stop4573"
-             offset="1"
-             style="stop-color:#afafaf;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4581">
-          <stop
-             id="stop4577"
-             offset="0"
-             style="stop-color:#333333;stop-opacity:1;" />
-          <stop
-             id="stop4579"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4587">
-          <stop
-             id="stop4583"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4585"
-             offset="1"
-             style="stop-color:#999999;stop-opacity:0;" />
-        </linearGradient>
-        <radialGradient
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="31.518335"
-           fx="73.957253"
-           cy="31.518335"
-           cx="73.957253"
-           id="radialGradient4589"
-           xlink:href="#linearGradient3030"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4595">
-          <stop
-             id="stop4591"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4593"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4601">
-          <stop
-             id="stop4597"
-             offset="0"
-             style="stop-color:#000000;stop-opacity:1;" />
-          <stop
-             id="stop4599"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           gradientUnits="userSpaceOnUse"
-           y2="118.44681"
-           x2="125.0676"
-           y1="20.005066"
-           x1="90.636459"
-           id="linearGradient4603"
-           xlink:href="#linearGradient3814"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4609">
-          <stop
-             id="stop4605"
-             offset="0"
-             style="stop-color:#ffffff;stop-opacity:1;" />
-          <stop
-             id="stop4607"
-             offset="1"
-             style="stop-color:#1c1c1c;stop-opacity:1" />
-        </linearGradient>
-        <radialGradient
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="31.518335"
-           fx="73.957253"
-           cy="31.518335"
-           cx="73.957253"
-           id="radialGradient4611"
-           xlink:href="#linearGradient3030-7"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4617">
-          <stop
-             id="stop4613"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4615"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:1;" />
-        </linearGradient>
-        <radialGradient
-           inkscape:collect="always"
-           xlink:href="#linearGradient3030-7"
-           id="radialGradient4619"
-           gradientUnits="userSpaceOnUse"
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           cx="73.957253"
-           cy="31.518335"
-           fx="73.957253"
-           fy="31.518335"
-           r="46.138351" />
-        <linearGradient
-           y2="118.44681"
-           x2="125.0676"
-           y1="20.005066"
-           x1="90.636459"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4621"
-           xlink:href="#linearGradient3814"
-           inkscape:collect="always" />
-        <linearGradient
-           gradientUnits="userSpaceOnUse"
-           y2="112.13119"
-           x2="148.79108"
-           y1="84.082726"
-           x1="13.260799"
-           id="linearGradient4623"
-           xlink:href="#linearGradient3916"
-           inkscape:collect="always" />
-        <radialGradient
-           gradientTransform="matrix(0.9806853,0,0,0.88403987,1.6249126,11.559246)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="80.339134"
-           fx="89.51339"
-           cy="80.339134"
-           cx="89.51339"
-           id="radialGradient4625"
-           xlink:href="#linearGradient3928"
-           inkscape:collect="always" />
-        <linearGradient
-           gradientTransform="matrix(0,0.25798638,-0.09608919,0,193.1696,39.134503)"
-           y2="190.18367"
-           x2="32.990391"
-           y1="72.374855"
-           x1="194.95644"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4627"
-           xlink:href="#linearGradient3916"
-           inkscape:collect="always" />
-      </defs>
-    </g>
-    <g
-       rexsvg:module="PushOnOff"
-       rexsvg:filename="PushOnOff.svg"
-       rexsvg:version="8198"
+       inkscape:label="PushOnOff"
        transform="translate(252.57001,35.914063)"
        id="g2715"
-       inkscape:label="PushOnOff">
+       rexsvg:version="12"
+       rexsvg:filename="PushOnOff.svg"
+       rexsvg:module="PushOnOff">
       <desc
-         id="desc4632">{
+         id="desc751">{
 &quot;connections&quot;:{
 &quot;disable_by&quot;:&quot;&quot;,
 &quot;hide_by&quot;:&quot;&quot;,
@@ -2947,6 +2841,16 @@
 &quot;value&quot;:&quot;$T&quot;
 },
 &quot;metaData&quot;:{
+&quot;colorFalse&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is OFF&quot;,
+&quot;order&quot;:&quot;03&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
+&quot;colorTrue&quot;:{
+&quot;desc&quot;:&quot;Button background color when the state is ON&quot;,
+&quot;order&quot;:&quot;04&quot;,
+&quot;type&quot;:&quot;color&quot;
+},
 &quot;connections&quot;:{
 &quot;disable_by&quot;:{
 &quot;desc&quot;:&quot;If non-zero the component is disabled and data are no longer updated.&quot;,
@@ -2975,285 +2879,198 @@
 }
 },
 &quot;desc&quot;:&quot;The PushOnOff button component changes the boolean value. Normally the ON state means TRUE value and OFF mean FALSE value. If needed the parameter &lt;code&gt;reverseMeaning&lt;/code&gt; switches the written values.&lt;br /&gt; There are three different modes of operation: &lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When  released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
-&quot;reverse_meaning&quot;:{
+&quot;reverseMeaning&quot;:{
 &quot;desc&quot;:&quot;If True the meaning of the value is switched. So the ON state is False and OFF state is True.&quot;,
-&quot;order&quot;:&quot;01&quot;,
+&quot;order&quot;:&quot;02&quot;,
+&quot;prev&quot;:[
+&quot;reverse_meaning&quot;
+],
 &quot;type&quot;:&quot;bool&quot;
 },
 &quot;type&quot;:{
-&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; always write TRUE value after button is pressed, release is ignored.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
-&quot;order&quot;:&quot;02&quot;,
+&quot;desc&quot;:&quot;Changes the type of the Button.&lt;br /&gt;&lt;code&gt;PushButton&lt;/code&gt; when press or touched the ON state is written to the target &lt;code&gt;value&lt;/code&gt; datapoint. When released the OFF state is written.&lt;br /&gt;&lt;code&gt;ManualPulse&lt;/code&gt; writes TRUE value once after button is pressed, release is ignored.&lt;br /&gt;&lt;code&gt;ManualPulseRpt&lt;/code&gt; writes TRUE value periodically (20ms period) after button is pressed, release stops writing.(Suitable for MP block control)&lt;br /&gt;&lt;code&gt;ToggleButton&lt;/code&gt; when button is pressed the value is toggled (ON -&gt; OFF -&gt; ON).&quot;,
+&quot;order&quot;:&quot;01&quot;,
 &quot;type&quot;:&quot;enum&quot;,
 &quot;values&quot;:[
 &quot;PushButton&quot;,
 &quot;ManualPulse&quot;,
+&quot;ManualPulseRpt&quot;,
 &quot;ToggleButton&quot;
 ]
+},
+&quot;writePerm&quot;:{
+&quot;columns&quot;:{
+&quot;login&quot;:{
+&quot;type&quot;:&quot;str&quot;
+}
+},
+&quot;desc&quot;:&quot;List of logins who are allowed to write to the data point. If not in list the Button will be disabled.&quot;,
+&quot;order&quot;:&quot;05&quot;,
+&quot;type&quot;:&quot;table&quot;
 }
 },
 &quot;options&quot;:{
-&quot;reverse_meaning&quot;:&quot;False&quot;,
-&quot;type&quot;:&quot;ToggleButton&quot;
+&quot;colorFalse&quot;:&quot;#B8BDC5&quot;,
+&quot;colorTrue&quot;:&quot;#00C8B4&quot;,
+&quot;reverseMeaning&quot;:&quot;False&quot;,
+&quot;type&quot;:&quot;ToggleButton&quot;,
+&quot;writePerm&quot;:[]
 }
 }</desc>
       <title
-         id="title4634">PushOnOff_SW_2</title>
+         id="title753">PushOnOff_SW_2</title>
       <g
-         id="g4644"
-         rexsvg:tag="pushOnOff_area">
-        <path
-           transform="translate(-40.710312,-33.246755)"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           sodipodi:ry="46.138351"
-           sodipodi:rx="46.138351"
-           sodipodi:cy="79.385773"
-           sodipodi:cx="86.848663"
-           id="path4636"
-           style="fill:url(#radialGradient3080);fill-opacity:1;fill-rule:evenodd;stroke:none"
-           sodipodi:type="arc" />
-        <path
-           sodipodi:type="arc"
-           style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3820);stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="path4638"
-           sodipodi:cx="86.848663"
-           sodipodi:cy="79.385773"
-           sodipodi:rx="46.138351"
-           sodipodi:ry="46.138351"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           transform="matrix(0.68591692,0,0,0.68591691,-13.546916,-10.088074)"
-           inkscape:label="#button_part3"
-           rexsvg:tag="button_part3" />
-        <path
-           transform="matrix(0.63599868,0,0,0.63058019,-10.371977,-8.7645091)"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           sodipodi:ry="46.138351"
-           sodipodi:rx="46.138351"
-           sodipodi:cy="79.385773"
-           sodipodi:cx="86.848663"
-           id="path4640"
-           style="fill:#b3b3b3;fill-opacity:1;fill-rule:evenodd;stroke:url(#linearGradient3884);stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           sodipodi:type="arc"
-           rexsvg:tag="button_part1" />
-        <path
-           sodipodi:type="arc"
-           style="fill:url(#radialGradient3934);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1.56014168000000010;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           id="path4642"
-           sodipodi:cx="86.848663"
-           sodipodi:cy="79.385773"
-           sodipodi:rx="46.138351"
-           sodipodi:ry="46.138351"
-           d="M 132.98701,79.385773 A 46.138351,46.138351 0 0 1 86.848663,125.52412 46.138351,46.138351 0 0 1 40.710312,79.385773 46.138351,46.138351 0 0 1 86.848663,33.247421 46.138351,46.138351 0 0 1 132.98701,79.385773 Z"
-           transform="matrix(0.63599868,0,0,0.63058019,-10.371977,-8.7645091)"
-           rexsvg:tag="button_part2" />
+         rexsvg:tag="button"
+         id="g781">
+        <g
+           id="g759">
+          <path
+             style="fill:#ccd1d9"
+             inkscape:connector-curvature="0"
+             d="M 3.236,63.066 C 12.587,86.771 39.382,98.407 63.085,89.055 86.791,79.703 98.427,52.91 89.073,29.203 79.724,5.503 52.927,-6.134 29.223,3.217 5.522,12.567 -6.114,39.365 3.236,63.066 Z"
+             id="path755" />
+          <circle
+             style="fill:url(#PushOnOff-base-54991F)"
+             r="42.487999"
+             cy="46.134998"
+             cx="46.154999"
+             id="circle757" />
+        </g>
+        <circle
+           rexsvg:tag="main"
+           style="fill:#b8bdc5"
+           r="29.993"
+           cy="46.136002"
+           cx="46.155998"
+           id="circle761" />
+        <g
+           id="g767">
+          <g
+             style="opacity:0.5"
+             id="g765">
+            <circle
+               style="opacity:0.5;fill:url(#linearGradient895-54991F)"
+               id="circle763"
+               r="25"
+               cy="46.140999"
+               cx="46.139999"
+               enable-background="new    " />
+          </g>
+        </g>
+        <g
+           style="display:none"
+           rexsvg:tag="active"
+           id="g773">
+          <circle
+             style="display:inline;opacity:0.05;fill:#1d1d1b"
+             r="42.487999"
+             cy="46.134998"
+             cx="46.154999"
+             display="inline"
+             id="circle769" />
+          <circle
+             style="display:inline;opacity:0.1;fill:#1d1d1b"
+             r="29.993"
+             cy="46.136002"
+             cx="46.140999"
+             display="inline"
+             id="circle771" />
+        </g>
+        <g
+           style="display:none"
+           rexsvg:tag="hover"
+           id="g779">
+          <circle
+             style="display:inline;opacity:0.2;fill:#ffffff"
+             r="42.487999"
+             cy="46.134998"
+             cx="46.154999"
+             display="inline"
+             id="circle775" />
+          <circle
+             style="display:inline;opacity:0.2;fill:#ffffff"
+             r="29.993"
+             cy="46.136002"
+             cx="46.140999"
+             display="inline"
+             id="circle777" />
+        </g>
       </g>
       <defs
-         id="defs4730">
+         id="defs808">
         <linearGradient
-           id="linearGradient4652">
-          <stop
-             id="stop4646"
-             offset="0"
-             style="stop-color:#e1e1e1;stop-opacity:1;" />
-          <stop
-             style="stop-color:#cacaca;stop-opacity:0.49803922;"
-             offset="0.5"
-             id="stop4648" />
-          <stop
-             id="stop4650"
-             offset="1"
-             style="stop-color:#b3b3b3;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4658">
-          <stop
-             style="stop-color:#ffffff;stop-opacity:0.65098039;"
-             offset="0"
-             id="stop4654" />
-          <stop
-             id="stop4656"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4664">
-          <stop
-             id="stop4660"
-             offset="0"
-             style="stop-color:#e1e1e1;stop-opacity:1;" />
-          <stop
-             id="stop4662"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4670">
-          <stop
-             id="stop4666"
-             offset="0"
-             style="stop-color:#cccccc;stop-opacity:1;" />
-          <stop
-             id="stop4668"
-             offset="1"
-             style="stop-color:#cccccc;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4676">
-          <stop
-             id="stop4672"
-             offset="0"
-             style="stop-color:#868686;stop-opacity:1;" />
-          <stop
-             id="stop4674"
-             offset="1"
-             style="stop-color:#afafaf;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4682">
-          <stop
-             id="stop4678"
-             offset="0"
-             style="stop-color:#333333;stop-opacity:1;" />
-          <stop
-             id="stop4680"
-             offset="1"
-             style="stop-color:#ffffff;stop-opacity:1;" />
-        </linearGradient>
-        <linearGradient
-           id="linearGradient4688">
-          <stop
-             id="stop4684"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4686"
-             offset="1"
-             style="stop-color:#999999;stop-opacity:0;" />
-        </linearGradient>
-        <radialGradient
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
+           xlink:href="#PushOnOff-shadow-54991F"
+           gradientTransform="matrix(0.9317,-0.3633,0.3633,0.9317,-13.5645,20.5527)"
+           y2="-0.78509998"
+           x2="64.405098"
+           y1="67.155296"
+           x1="37.909199"
            gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="31.518335"
-           fx="73.957253"
-           cy="31.518335"
-           cx="73.957253"
-           id="radialGradient4690"
-           xlink:href="#linearGradient3030"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4696">
+           id="PushOnOff-base-54991F">
           <stop
-             id="stop4692"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
+             id="stop783"
+             style="stop-color:#CCD1D9"
+             offset="0" />
           <stop
-             id="stop4694"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:1;" />
+             id="stop785"
+             style="stop-color:#FFFFFF"
+             offset="1" />
         </linearGradient>
         <linearGradient
-           id="linearGradient4702">
-          <stop
-             id="stop4698"
-             offset="0"
-             style="stop-color:#000000;stop-opacity:1;" />
-          <stop
-             id="stop4700"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:0;" />
-        </linearGradient>
-        <linearGradient
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)"
+           y2="-180.3829"
+           x2="429.54321"
+           y1="-227.3804"
+           x1="412.4375"
            gradientUnits="userSpaceOnUse"
-           y2="118.44681"
-           x2="125.0676"
-           y1="20.005066"
-           x1="90.636459"
-           id="linearGradient4704"
-           xlink:href="#linearGradient3814"
-           inkscape:collect="always" />
-        <linearGradient
-           id="linearGradient4710">
+           id="PushOnOff-shadow-54991F">
           <stop
-             id="stop4706"
-             offset="0"
-             style="stop-color:#ffffff;stop-opacity:1;" />
+             id="stop788"
+             style="stop-color:#FFFFFF;stop-opacity:0"
+             offset="0" />
           <stop
-             id="stop4708"
-             offset="1"
-             style="stop-color:#1c1c1c;stop-opacity:1" />
+             id="stop790"
+             style="stop-color:#E6E6E6;stop-opacity:0.0576"
+             offset="0.0576" />
+          <stop
+             id="stop792"
+             style="stop-color:#B2B2B1;stop-opacity:0.1941"
+             offset="0.1941" />
+          <stop
+             id="stop794"
+             style="stop-color:#848483;stop-opacity:0.3324"
+             offset="0.3324" />
+          <stop
+             id="stop796"
+             style="stop-color:#5F5F5D;stop-opacity:0.4696"
+             offset="0.4696" />
+          <stop
+             id="stop798"
+             style="stop-color:#424240;stop-opacity:0.6056"
+             offset="0.6056" />
+          <stop
+             id="stop800"
+             style="stop-color:#2D2D2C;stop-opacity:0.7401"
+             offset="0.7401" />
+          <stop
+             id="stop802"
+             style="stop-color:#21211F;stop-opacity:0.8724"
+             offset="0.8724" />
+          <stop
+             id="stop804"
+             style="stop-color:#1D1D1B"
+             offset="1" />
         </linearGradient>
-        <radialGradient
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="31.518335"
-           fx="73.957253"
-           cy="31.518335"
-           cx="73.957253"
-           id="radialGradient4712"
-           xlink:href="#linearGradient3030-7"
-           inkscape:collect="always" />
         <linearGradient
-           id="linearGradient4718">
-          <stop
-             id="stop4714"
-             offset="0"
-             style="stop-color:#d6d6d6;stop-opacity:1;" />
-          <stop
-             id="stop4716"
-             offset="1"
-             style="stop-color:#000000;stop-opacity:1;" />
-        </linearGradient>
-        <radialGradient
            inkscape:collect="always"
-           xlink:href="#linearGradient3030-7"
-           id="radialGradient4720"
+           xlink:href="#PushOnOff-shadow-54991F"
+           id="linearGradient895-54991F"
            gradientUnits="userSpaceOnUse"
-           gradientTransform="matrix(-6.6699898e-6,1.6977815,-1.848672,-8.3725531e-8,124.31117,-74.81816)"
-           cx="73.957253"
-           cy="31.518335"
-           fx="73.957253"
-           fy="31.518335"
-           r="46.138351" />
-        <linearGradient
-           y2="118.44681"
-           x2="125.0676"
-           y1="20.005066"
-           x1="90.636459"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4722"
-           xlink:href="#linearGradient3814"
-           inkscape:collect="always" />
-        <linearGradient
-           gradientUnits="userSpaceOnUse"
-           y2="112.13119"
-           x2="148.79108"
-           y1="84.082726"
-           x1="13.260799"
-           id="linearGradient4724"
-           xlink:href="#linearGradient3916"
-           inkscape:collect="always" />
-        <radialGradient
-           gradientTransform="matrix(0.9806853,0,0,0.88403987,1.6249126,11.559246)"
-           gradientUnits="userSpaceOnUse"
-           r="46.138351"
-           fy="80.339134"
-           fx="89.51339"
-           cy="80.339134"
-           cx="89.51339"
-           id="radialGradient4726"
-           xlink:href="#linearGradient3928"
-           inkscape:collect="always" />
-        <linearGradient
-           gradientTransform="matrix(0,0.25798638,-0.09608919,0,193.1696,39.134503)"
-           y2="190.18367"
-           x2="32.990391"
-           y1="72.374855"
-           x1="194.95644"
-           gradientUnits="userSpaceOnUse"
-           id="linearGradient4728"
-           xlink:href="#linearGradient3916"
-           inkscape:collect="always" />
+           gradientTransform="matrix(1,0,0,-1,-374.8496,-157.7402)"
+           x1="412.4375"
+           y1="-227.3804"
+           x2="429.54321"
+           y2="-180.3829" />
       </defs>
     </g>
     <text
@@ -3266,14 +3083,14 @@
          x="111.43751"
          sodipodi:role="line"
          id="tspan2717"
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle">switch 1</tspan></text>
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal">switch 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:25px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="299.43753"
        y="173.66861"
        id="text2723"><tspan
-         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle"
+         style="font-size:42.66666794px;line-height:120.00000477%;text-align:center;text-anchor:middle;-inkscape-font-specification:Roboto;font-family:Roboto;font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal"
          id="tspan2721"
          sodipodi:role="line"
          x="299.43753"
@@ -3281,157 +3098,155 @@
   </g>
   <g
      rexsvg:module="HMIConfig"
-     rexsvg:version="8200"
-     rexsvg:rexversion="2.50.4-8221"
+     rexsvg:version="14"
+     rexsvg:rexversion="2.50.7-9030"
      id="HMIConfig"
      width="200"
      height="80"
      transform="translate(0,-85)"
      sodipodi:insensitive="true">
+    <rect
+       width="200"
+       height="80"
+       rx="3"
+       ry="3"
+       id="rect3041"
+       style="fill:#ffffff;stroke:url(#lg-hmic982-B95BB8);stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="0"
+       y="0" />
     <defs
        id="defs35174">
       <linearGradient
-         y2="589.26599"
-         x2="-34.8232"
-         y1="663.3252"
-         x1="-34.8232"
-         gradientTransform="matrix(0.7301,0,0,-0.7301,80.202758,488.87001)"
+         y2="1.5484"
+         x2="86.271103"
+         y1="-34.1563"
+         x1="24.419901"
          gradientUnits="userSpaceOnUse"
-         id="linearGradient3078"
-         xlink:href="#path3021_2_"
-         inkscape:collect="always" />
-      <linearGradient
-         y2="197.72321"
-         x2="27.268299"
-         y1="259.0498"
-         x1="27.7729"
-         gradientTransform="matrix(0.99999997,0,0,-0.99999997,27.458457,283.81341)"
-         gradientUnits="userSpaceOnUse"
-         id="linearGradient3076"
-         xlink:href="#XMLID_5_"
-         inkscape:collect="always" />
-      <linearGradient
-         gradientTransform="matrix(0.7301,0,0,-0.7301,86.9006,484.8105)"
-         y2="589.26599"
-         x2="-34.8232"
-         y1="663.3252"
-         x1="-34.8232"
-         gradientUnits="userSpaceOnUse"
-         id="path3021_2_">
+         id="lg-hmic_7_-B95BB8">
         <stop
-           id="stop89"
-           style="stop-color:#49B3ED"
-           offset="0.216" />
+           id="stop906"
+           style="stop-color:#0074C5"
+           offset="0.4" />
         <stop
-           id="stop91"
-           style="stop-color:#36A3E0"
-           offset="0.4258" />
-        <stop
-           id="stop93"
-           style="stop-color:#2493D3"
-           offset="0.5387" />
-        <stop
-           id="stop95"
-           style="stop-color:#0079C4"
-           offset="0.7694" />
-        <stop
-           id="stop97"
-           style="stop-color:#0072B9"
-           offset="1" />
-        <midPointStop
-           style="stop-color:#49B3ED"
-           offset="0.216" />
-        <midPointStop
-           style="stop-color:#49B3ED"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#36A3E0"
-           offset="0.4258" />
-        <midPointStop
-           style="stop-color:#36A3E0"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#2493D3"
-           offset="0.5387" />
-        <midPointStop
-           style="stop-color:#2493D3"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#0079C4"
-           offset="0.7694" />
-        <midPointStop
-           style="stop-color:#0079C4"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#0072B9"
-           offset="1" />
+           id="stop908"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
       </linearGradient>
       <linearGradient
-         gradientTransform="matrix(1,0,0,-1,34.1563,279.7539)"
-         y2="197.72321"
-         x2="27.268299"
-         y1="259.0498"
-         x1="27.7729"
+         y2="5.9594998"
+         x2="83.723198"
+         y1="-29.750999"
+         x1="21.861799"
          gradientUnits="userSpaceOnUse"
-         id="XMLID_5_">
+         id="lg-hmic_6_-B95BB8">
         <stop
-           id="stop74"
-           style="stop-color:#C2C2C2"
-           offset="0" />
+           id="stop899"
+           style="stop-color:#0074C5"
+           offset="0.4" />
         <stop
-           id="stop76"
-           style="stop-color:#BCBCBC"
-           offset="0.1937" />
-        <stop
-           id="stop78"
-           style="stop-color:#A0A0A0"
-           offset="0.3874" />
-        <stop
-           id="stop80"
-           style="stop-color:#747474"
-           offset="0.5652" />
-        <stop
-           id="stop82"
-           style="stop-color:#5D5B5A"
-           offset="0.7319" />
-        <stop
-           id="stop84"
-           style="stop-color:#35312E"
-           offset="1" />
-        <midPointStop
-           style="stop-color:#C2C2C2"
-           offset="0" />
-        <midPointStop
-           style="stop-color:#C2C2C2"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#BCBCBC"
-           offset="0.1937" />
-        <midPointStop
-           style="stop-color:#BCBCBC"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#A0A0A0"
-           offset="0.3874" />
-        <midPointStop
-           style="stop-color:#A0A0A0"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#747474"
-           offset="0.5652" />
-        <midPointStop
-           style="stop-color:#747474"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#5D5B5A"
-           offset="0.7319" />
-        <midPointStop
-           style="stop-color:#5D5B5A"
-           offset="0.5" />
-        <midPointStop
-           style="stop-color:#35312E"
-           offset="1" />
+           id="stop901"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
       </linearGradient>
+      <linearGradient
+         y2="10.1834"
+         x2="81.286201"
+         y1="-25.5215"
+         x1="19.434601"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_5_-B95BB8">
+        <stop
+           id="stop892"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop894"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="13.7713"
+         x2="79.214401"
+         y1="-21.935499"
+         x1="17.3594"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_4_-B95BB8">
+        <stop
+           id="stop885"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop887"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="18.733299"
+         x2="76.349602"
+         y1="-16.971201"
+         x1="14.4985"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_3_-B95BB8">
+        <stop
+           id="stop878"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop904"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="22.9674"
+         x2="73.905602"
+         y1="-12.7388"
+         x1="12.0518"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_2_-B95BB8">
+        <stop
+           id="stop871"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop873"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         y2="27.8286"
+         x2="71.097"
+         y1="-7.875"
+         x1="9.2475996"
+         gradientUnits="userSpaceOnUse"
+         id="lg-hmic_1_-B95BB8">
+        <stop
+           id="stop864"
+           style="stop-color:#0074C5"
+           offset="0.4" />
+        <stop
+           id="stop866"
+           style="stop-color:#00C8B4"
+           offset="0.95" />
+      </linearGradient>
+      <linearGradient
+         gradientTransform="translate(0,14.5)"
+         inkscape:collect="always"
+         xlink:href="#lg-hmic_1_-B95BB8"
+         id="lg-hmic982-B95BB8"
+         x1="-0.177"
+         y1="40"
+         x2="200.177"
+         y2="40"
+         gradientUnits="userSpaceOnUse" />
+      <linearGradient
+         inkscape:collect="always"
+         xlink:href="#lg-hmic_1_-B95BB8"
+         id="lg-hmic984-B95BB8"
+         gradientUnits="userSpaceOnUse"
+         x1="9.2475996"
+         y1="-7.875"
+         x2="71.097"
+         y2="27.8286" />
     </defs>
     <title
        id="title3014">HMIConfig
@@ -3483,7 +3298,7 @@
 &quot;Title&quot;:&quot;My project&quot;,
 &quot;Tooltips&quot;:true,
 &quot;ViewBox&quot;:true,
-&quot;checkedVersion&quot;:&quot;8221&quot;
+&quot;checkedVersion&quot;:&quot;9219&quot;
 },
 &quot;UserData&quot;:{},
 &quot;connections&quot;:[
@@ -3510,6 +3325,16 @@
 {
 &quot;alias&quot;:&quot;Led_OR_B&quot;,
 &quot;cstring&quot;:&quot;myproject_task.OR_B:Y&quot;,
+&quot;type&quot;:&quot;R&quot;
+},
+{
+&quot;alias&quot;:&quot;Led_SW1&quot;,
+&quot;cstring&quot;:&quot;myproject_task.OR_A:U1&quot;,
+&quot;type&quot;:&quot;R&quot;
+},
+{
+&quot;alias&quot;:&quot;Led_SW3&quot;,
+&quot;cstring&quot;:&quot;myproject_task.OR_B:U1&quot;,
 &quot;type&quot;:&quot;R&quot;
 },
 {
@@ -3545,9 +3370,22 @@
 ],
 &quot;metaData&quot;:{
 &quot;desc&quot;:&quot;Global RexHMI configuration component. User can change project options, configure the HTML export and define list of connections between REX target and HMI.&quot;,
+&quot;header_mode&quot;:{
+&quot;desc&quot;:&quot;Change the default size of the header (thin, packed). If packed click on the logo to show the header.&quot;,
+&quot;order&quot;:&quot;06&quot;,
+&quot;type&quot;:&quot;enum&quot;,
+&quot;values&quot;:[
+&quot;&quot;,
+&quot;thin&quot;,
+&quot;pack-top-left&quot;,
+&quot;pack-top-right&quot;,
+&quot;pack-bottom-left&quot;,
+&quot;pack-bottom-right&quot;
+]
+},
 &quot;kiosk_mode&quot;:{
 &quot;desc&quot;:&quot;If True the links from header (from logo and header) are removed and user can not change the refresh rate and target.&quot;,
-&quot;order&quot;:&quot;06&quot;,
+&quot;order&quot;:&quot;07&quot;,
 &quot;type&quot;:&quot;bool&quot;
 },
 &quot;log_level&quot;:{
@@ -3590,6 +3428,7 @@
 }
 },
 &quot;options&quot;:{
+&quot;header_mode&quot;:&quot;&quot;,
 &quot;kiosk_mode&quot;:&quot;False&quot;,
 &quot;log_level&quot;:&quot;&quot;,
 &quot;refresh_rate&quot;:100,
@@ -3599,148 +3438,86 @@
 }
 }</desc>
     <g
-       id="g3023">
-      <rect
-         width="200"
-         height="80"
-         rx="4.6428571"
-         ry="4.6428576"
-         id="rect3041"
-         style="fill:#ffffff;stroke:#000000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         x="0"
-         y="0" />
+       id="g883">
       <text
-         x="99.121094"
-         y="72.01683"
-         id="text3037"
          xml:space="preserve"
-         style="font-size:18px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Verdana;-inkscape-font-specification:Verdana"><tspan
-           x="99.121094"
-           y="72.01683"
-           id="tspan3039">HMI Config </tspan></text>
+         y="2"
+         id="text3037"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;font-family:Montserrat;-inkscape-font-specification:Montserrat;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#545e6f;fill-opacity:1"
+           id="tspan3039"
+           y="65"
+           x="99">HMI Config </tspan></text>
       <g
-         id="REX-Logo"
-         transform="matrix(0.48226201,0,0,0.48149458,16.427058,-0.40939146)">
+         style="stroke-width:0.55555552"
+         transform="matrix(1.6877637,0,0,1.6877637,15.611815,15.165)"
+         id="rexygen-logo">
         <g
-           transform="translate(28.447843,16.940545)"
-           id="g15">
-          <defs
-             id="defs17">
-            <path
-               inkscape:connector-curvature="0"
-               d="m 68.108,15.253 0,0 0,0"
-               id="XMLID_1_" />
-          </defs>
-          <clipPath
-             id="XMLID_2_">
-            <use
-               height="86.328003"
-               width="307.82599"
-               y="0"
-               x="0"
-               id="use21"
-               xlink:href="#XMLID_1_" />
-          </clipPath>
+           style="stroke-width:0.55555552"
+           id="g913">
           <path
+             style="fill:url(#lg-hmic984-B95BB8);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
-             id="polygon23"
-             d="m 68.108,15.253 0,0 0,0 0,0 0,0 z"
-             clip-path="url(#XMLID_2_)"
-             style="fill:#0072b9;fill-rule:evenodd" />
+             d="m 36.293,9.011 h -0.069 -1.87 V 11.74 H 31.889 V 2.045 h 4.334 c 2.562,0 4.03,1.219 4.03,3.379 0,1.482 -0.624,2.549 -1.759,3.116 l 2.036,3.199 H 37.732 Z M 36.224,7.072 c 1.066,0 1.69,-0.54 1.69,-1.565 0,-1.011 -0.624,-1.523 -1.69,-1.523 h -1.87 v 3.089 h 1.87 z"
+             id="path869" />
           <path
+             style="fill:url(#lg-hmic_2_-B95BB8);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
-             id="polygon25"
-             d="m 68.108,15.253 0,0 0,0 0,0 0,0 z"
-             clip-path="url(#XMLID_2_)"
-             style="fill:#61bff3;fill-rule:evenodd" />
+             d="m 44.729,3.983 v 1.926 h 4.626 V 7.847 H 44.729 V 9.8 h 5.276 v 1.939 H 42.264 V 2.045 h 7.588 v 1.938 z"
+             id="path876" />
           <path
+             style="fill:url(#lg-hmic_3_-B95BB8);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
-             id="polygon27"
-             d="m 68.108,15.253 0,0 0,0 0,0 0,0 z"
-             clip-path="url(#XMLID_2_)"
-             style="fill:#61bff3;fill-rule:evenodd" />
+             d="M 60.975,11.739 H 58.026 L 55.935,8.65 53.844,11.739 H 50.977 L 54.439,6.781 51.198,2.045 h 2.867 l 1.87,2.825 1.869,-2.825 h 2.895 l -3.2,4.625 z"
+             id="path883" />
+          <path
+             style="fill:url(#lg-hmic_4_-B95BB8);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="M 66.766,11.739 H 64.315 V 8.679 L 60.728,2.045 h 2.466 l 2.34,4.224 2.284,-4.224 h 2.466 l -3.518,6.564 z"
+             id="path890" />
+          <path
+             style="fill:url(#lg-hmic_5_-B95BB8);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 79.479,6.809 v 3.781 c -1.038,0.733 -2.673,1.26 -4.03,1.26 -2.949,0 -5.179,-2.133 -5.179,-4.958 0,-2.812 2.285,-4.931 5.346,-4.931 1.44,0 2.963,0.555 3.961,1.441 l -1.385,1.676 c -0.707,-0.651 -1.69,-1.053 -2.59,-1.053 -1.593,0 -2.812,1.246 -2.812,2.866 0,1.648 1.232,2.895 2.839,2.895 0.499,0 1.136,-0.18 1.717,-0.471 V 6.809 Z"
+             id="path897" />
+          <path
+             style="fill:url(#lg-hmic_6_-B95BB8);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="m 84.011,3.983 v 1.926 h 4.625 V 7.847 H 84.011 V 9.8 h 5.276 v 1.939 H 81.545 V 2.045 h 7.589 v 1.938 z"
+             id="path904" />
+          <path
+             style="fill:url(#lg-hmic_7_-B95BB8);stroke-width:0.55555552"
+             inkscape:connector-curvature="0"
+             d="M 97.827,11.739 93.367,5.77 v 5.969 H 91.054 V 2.045 h 2.174 l 4.474,5.982 V 2.045 H 100 v 9.694 z"
+             id="path911" />
         </g>
         <g
-           transform="translate(28.447843,16.940545)"
-           id="g31">
-          <defs
-             id="defs33">
-            <path
-               inkscape:connector-curvature="0"
-               d="m 54.591,15.253 0,0 0,0"
-               id="XMLID_3_" />
-          </defs>
-          <clipPath
-             id="XMLID_4_">
-            <use
-               height="86.328003"
-               width="307.82599"
-               y="0"
-               x="0"
-               id="use37"
-               xlink:href="#XMLID_3_" />
-          </clipPath>
+           style="stroke-width:0.55555552"
+           id="g925">
           <path
+             style="fill:#0074c5;stroke-width:0.55555552"
              inkscape:connector-curvature="0"
-             id="polygon39"
-             d="m 54.591,15.253 0,0 0,0 0,0 0,0 z"
-             clip-path="url(#XMLID_4_)"
-             style="fill:#0072b9;fill-rule:evenodd" />
+             d="m 14.364,0.285 -2.335,1.759 c 0.158,0.241 0.314,0.483 0.466,0.727 0.683,1.093 1.309,2.21 1.869,3.284 0.563,-1.084 1.194,-2.211 1.883,-3.313 0.146,-0.234 0.298,-0.466 0.45,-0.698 z"
+             id="path915" />
           <path
+             style="fill:#0074c5;stroke-width:0.55555552"
              inkscape:connector-curvature="0"
-             id="polygon41"
-             d="m 54.591,15.253 0,0 0,0 0,0 0,0 z"
-             clip-path="url(#XMLID_4_)"
-             style="fill:#61bff3;fill-rule:evenodd" />
+             d="M 2.712,0 0,2.044 c 1.237,1.475 2.938,3.623 4.298,5.798 0.813,1.303 1.534,2.663 2.133,3.896 h 3.747 C 9.436,10.094 8.41,8.025 7.173,6.046 5.746,3.763 4.01,1.554 2.712,0 Z"
+             id="path917" />
           <path
+             style="fill:#0074c5;stroke-width:0.55555552"
              inkscape:connector-curvature="0"
-             id="polygon43"
-             d="m 54.591,15.253 0,0 0,0 0,0 0,0 z"
-             clip-path="url(#XMLID_4_)"
-             style="fill:#61bff3;fill-rule:evenodd" />
-        </g>
-        <g
-           transform="translate(28.447843,16.940545)"
-           id="g3031" />
-        <g
-           transform="translate(28.447843,16.940545)"
-           id="g3031_1_" />
-        <g
-           transform="translate(28.447843,16.940545)"
-           id="g3031_2_" />
-        <g
-           id="text3501"
-           style="font-size:66.23697662px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:-3px;word-spacing:0px;fill:#0074c5;fill-opacity:1;stroke:none;font-family:Benguiat;-inkscape-font-specification:Sans Bold"
-           transform="scale(1.118034,0.89442719)">
+             d="m 8.871,0.006 -2.708,2.04 c 0.761,1.021 1.533,2.118 2.231,3.236 1.429,2.286 2.583,4.686 3.36,6.456 h 3.682 C 14.665,9.862 13.202,6.578 11.27,3.485 10.518,2.282 9.688,1.1 8.871,0.006 Z"
+             id="path919" />
           <path
+             style="fill:#0074c5;stroke-width:0.55555552"
              inkscape:connector-curvature="0"
-             id="path3060"
-             style="font-size:65px;fill:#0074c5;-inkscape-font-specification:Benguiat Bold"
-             d="m 189.7962,95.182228 -24.66858,0 0,-1.763458 c 0.88071,-0.09786 1.68012,-0.358376 2.39823,-0.781555 0.3914,-0.228778 0.58712,-0.669807 0.58716,-1.32309 -4e-5,-0.880733 -0.35908,-2.120508 -1.07712,-3.71933 -0.48933,-1.076448 -1.8435,-3.604928 -4.0625,-7.585449 -0.65331,-1.142562 -1.47751,-2.399198 -2.47261,-3.769913 -0.99516,-1.370676 -1.98202,-2.724511 -2.96059,-4.061508 l -2.5946,1.221924 0,13.804169 c -2e-5,1.043403 0.0734,1.899674 0.22018,2.568817 0.14677,0.669153 0.41588,1.248376 0.80734,1.737671 0.52234,0.653282 1.02817,1.09365 1.51749,1.321106 0.22876,0.09786 0.80004,0.244651 1.71387,0.440368 l 0,1.860657 -23.34748,0 0,-1.860657 c 0.55542,2e-6 1.00439,-0.07339 1.3469,-0.220184 0.3425,-0.146787 0.75841,-0.415901 1.24771,-0.807343 0.65195,-0.522355 1.07579,-1.126043 1.27151,-1.811065 0.19572,-0.685013 0.29358,-1.58228 0.29358,-2.691803 l 0.0992,-32.059632 c -1e-5,-1.011617 -0.0165,-1.794494 -0.0496,-2.348632 -0.13092,-1.729693 -0.38384,-2.920869 -0.75874,-3.573532 -0.37491,-0.652573 -0.80702,-1.101206 -1.29631,-1.345902 -0.4893,-0.244602 -1.07712,-0.366927 -1.76346,-0.366974 l 0,-1.908264 34.26346,0 c 3.81781,4.9e-5 6.73013,0.587207 8.73695,1.761475 2.00674,1.174362 3.15692,2.871036 3.45055,5.090026 0.0647,0.5872 0.0971,1.011699 0.0972,1.273499 -5e-5,2.414793 -0.92972,4.682094 -2.789,6.80191 -1.33835,1.500989 -3.08461,2.888215 -5.2388,4.161683 -1.6306,0.945565 -2.57679,1.418332 -2.8386,1.418304 1.7297,2.187323 3.23892,4.218901 4.52767,6.094742 1.28866,1.875885 2.63456,3.988793 4.0377,6.33873 0.75109,1.272191 2.0074,4.09425 3.76892,8.466186 1.30519,3.198959 2.38231,4.977623 3.23136,5.335999 0.62016,0.26052 1.38717,0.47277 2.30102,0.636749 z M 167.03589,56.661873 c -4e-5,-1.696636 -0.70158,-3.034932 -2.10465,-4.014893 -1.2074,-0.847633 -2.74142,-1.271471 -4.60205,-1.271515 -1.2722,4.4e-5 -2.46304,0.228163 -3.57254,0.684357 -0.62024,0.261884 -1.05267,0.694648 -1.2973,1.298294 -0.24467,0.60373 -0.367,1.312881 -0.36697,2.127457 l 0,12.286682 1.71386,-0.539551 c 2.47953,-0.847648 4.6655,-2.087423 6.55793,-3.71933 2.44778,-2.121141 3.67168,-4.404973 3.67172,-6.851501 z" />
+             d="m 26.006,0 c -1.295,1.552 -3.018,3.748 -4.436,6.017 -1.245,1.991 -2.275,4.072 -3.019,5.722 h 3.746 c 0.602,-1.241 1.328,-2.613 2.148,-3.926 1.349,-2.16 3.037,-4.294 4.272,-5.769 z"
+             id="path921" />
           <path
+             style="fill:#0074c5;stroke-width:0.55555552"
              inkscape:connector-curvature="0"
-             id="path3062"
-             style="letter-spacing:-5px;fill:#0074c5"
-             d="m 238.8688,77.315559 -6.36352,18.747406 -1.66229,-0.489959 c -0.55546,-0.162659 -1.17568,-0.276719 -1.86066,-0.342179 -0.68506,-0.06546 -1.40313,-0.09819 -2.15424,-0.09819 l -35.68176,0 0,-1.860657 c 0.97992,-0.162656 1.6084,-0.31738 1.88545,-0.464172 0.27705,-0.146787 0.61129,-0.432431 1.00274,-0.856934 0.52235,-0.620215 0.85692,-1.248368 1.00372,-1.88446 0.14678,-0.636082 0.22018,-1.459955 0.22018,-2.471619 l 0,-34.751434 c 0,-0.260476 0,-0.439665 0,-0.537567 0,-0.848956 -0.0407,-1.493639 -0.12199,-1.934052 -0.0813,-0.440323 -0.31805,-0.880691 -0.71015,-1.321106 -0.3921,-0.440322 -0.78387,-0.717701 -1.1753,-0.832138 -0.39145,-0.114343 -0.9462,-0.171538 -1.66428,-0.171585 l 0,-1.908264 32.3056,0 c 0.16263,0.03179 0.45621,0.04766 0.88074,0.04761 1.20734,4.9e-5 2.59391,-0.13021 4.1597,-0.390777 0.8159,-0.130871 1.25627,-0.196331 1.32111,-0.196381 0.32659,-0.06475 0.76762,-0.211539 1.32308,-0.440368 l 3.57255,16.543579 -1.61469,1.223907 c -0.75118,-3.230657 -2.39959,-5.971387 -4.94522,-8.222198 -1.46793,-1.273457 -3.21354,-2.236515 -5.23682,-2.889176 -2.02334,-0.652574 -4.0136,-0.978883 -5.97076,-0.978927 -2.186,4.4e-5 -3.80135,0.392144 -4.84604,1.1763 -0.68504,0.521079 -1.16607,1.156836 -1.4431,1.907272 -0.27707,0.750519 -0.41559,1.631586 -0.41557,2.643204 l 0,5.335998 6.90109,0 c 0.65193,3.4e-5 1.27975,-0.08989 1.88347,-0.269775 0.60366,-0.179817 1.18321,-0.49786 1.73866,-0.954132 1.10948,-0.978562 1.66424,-2.169407 1.66428,-3.57254 -4e-5,-0.326602 -0.0166,-0.571251 -0.0496,-0.733948 l 1.46789,-0.440369 3.27896,18.648224 -1.85867,0.293579 c -0.13096,-0.653259 -0.4576,-1.485726 -0.97992,-2.497406 -0.65199,-1.239091 -1.38594,-2.217687 -2.20184,-2.935791 -0.81597,-0.718052 -1.74597,-1.297275 -2.79,-1.737671 -1.04408,-0.440341 -1.92515,-0.660525 -2.6432,-0.660553 l -6.26434,0 0,13.998566 c -3e-5,0.456251 -3e-5,0.84769 0,1.174316 -3e-5,0.326653 -3e-5,0.587832 0,0.783539 -3e-5,1.076468 0.0813,1.989934 0.24398,2.740402 0.16264,0.750487 0.53788,1.533694 1.12572,2.349625 0.5878,0.815944 1.41993,1.427898 2.49642,1.835861 1.07643,0.407974 2.3162,0.611958 3.71933,0.611954 1.53398,4e-6 3.10866,-0.228445 4.72404,-0.685349 1.61531,-0.456893 3.09147,-1.060911 4.42848,-1.812057 1.99022,-1.141248 3.89914,-2.756592 5.72678,-4.846039 2.05633,-2.31688 3.36156,-4.551782 3.91571,-6.704712 z" />
-          <path
-             inkscape:connector-curvature="0"
-             id="path3064"
-             style="font-size:65px;fill:#0074c5;-inkscape-font-specification:Benguiat Bold"
-             d="m 292.10855,95.132637 -26.92001,0 0,-1.860657 c 1.3052,2e-6 2.31686,-0.587155 3.03497,-1.761474 0.26049,-0.424496 0.39075,-0.913794 0.39078,-1.467896 -3e-5,-0.782872 -0.29361,-1.631209 -0.88074,-2.545013 l -8.07541,-13.460999 -6.95068,12.53067 c -0.35972,0.651965 -0.65363,1.353182 -0.88173,2.103653 -0.22814,0.750484 -0.3422,1.354503 -0.34218,1.812058 -2e-5,0.718082 0.17124,1.28904 0.51376,1.712875 0.3425,0.423841 0.70947,0.709155 1.10093,0.855942 0.39142,0.146791 0.79939,0.220186 1.2239,0.220184 l 0,1.860657 -16.34719,0 0,-1.860657 c 0.62021,-0.195717 1.1667,-0.415901 1.63948,-0.660553 0.47276,-0.244646 1.08438,-0.619885 1.83487,-1.125717 0.75047,-0.505825 1.5826,-1.248037 2.49641,-2.226639 0.29357,-0.326633 0.70154,-0.815931 1.22391,-1.467895 L 256.57358,69.093361 247.47064,53.48011 c -0.65329,-0.913755 -1.17565,-1.599434 -1.56708,-2.057037 -1.27218,-1.467851 -2.43063,-2.397517 -3.47534,-2.789002 -0.39144,-0.130873 -0.78288,-0.253198 -1.17431,-0.366974 -0.39145,-0.113681 -0.75049,-0.187076 -1.07712,-0.220184 l 0,-1.908264 26.72561,0 0,1.908264 c -0.39279,-0.06475 -0.87448,-0.0076 -1.44508,0.171585 -0.57066,0.179236 -0.97036,0.496949 -1.19911,0.95314 -0.26055,0.359747 -0.39081,0.784246 -0.39078,1.273499 -3e-5,0.326684 0.0406,0.612328 0.122,0.856934 0.0813,0.244692 0.21982,0.562736 0.41557,0.954132 l 5.57999,9.592895 5.3836,-8.025818 c 0.22874,-0.392719 0.47339,-0.800688 0.73395,-1.223907 0.45752,-0.848956 0.6863,-1.550503 0.68634,-2.104645 -4e-5,-0.261796 -0.049,-0.490576 -0.14679,-0.68634 -0.22882,-0.587113 -0.72672,-1.035746 -1.49368,-1.345902 -0.76705,-0.310062 -1.34627,-0.448586 -1.73767,-0.415573 l 0,-1.908264 16.20239,0 0,1.908264 c -0.75119,0.162706 -1.37141,0.31743 -1.86066,0.464173 -0.48935,0.146836 -1.02758,0.40008 -1.61468,0.759735 -0.84905,0.522404 -1.71392,1.272882 -2.59461,2.251434 -0.5224,0.587201 -1.04476,1.272218 -1.56708,2.055054 l -8.80935,13.264618 13.36181,21.927185 c 0.42445,0.685023 0.86515,1.321441 1.3221,1.909256 0.45685,0.587823 0.91342,1.044391 1.36971,1.369705 0.97854,0.718081 1.94127,1.12605 2.88818,1.223907 z" />
-        </g>
-        <g
-           transform="translate(26.697843,15.940517)"
-           id="g4327">
-          <path
-             inkscape:connector-curvature="0"
-             style="fill:url(#linearGradient3076);stroke:none"
-             d="M 21.770908,26.465731 C 4.6752299,32.731162 -6.6978421,43.686859 -6.6978421,56.090732 c 0,9.911 8.3775,20.049749 25.3125001,27.84375 1.565,0.72 6.8535,2.609499 12.4375,4.0625 5.578,1.447 11.45025,2.095 14.28125,2.375 l -13.28125,-10.875001 14.46875,-6.34375 c -2.587,-0.477 -2.85125,-0.522 -4.40625,-0.875 l -3.84375,-1 c -14.21,-3.712 -24.15625,-12.075 -24.15625,-22 0,-5.272693 2.842593,-10.2624 7.65625,-14.375 l 0,-8.4375 z m 67.5,0.40625 0,9.343751 c 3.85123,3.837184 6.0625,8.343063 6.0625,13.0625 0,9.631 -9.36725,17.79925 -22.90625,21.65625 l -9.8125,11.1875 18.90625,5.4375 c 19.088002,-5.99 35.125002,-18.20975 35.125002,-31.46875 0,-12.137645 -10.89949,-22.892056 -27.375002,-29.21875 z"
-             id="path5173" />
-          <path
-             inkscape:connector-curvature="0"
-             style="fill:url(#linearGradient3078)"
-             d="m 99.813158,4.0635126 c -5.893,0.166 -12.786,5.067 -12.457,11.6560004 -0.709,-1.113 -8.881,-1.965 -11.414,4.681 4.538,0.722 8.019,4.682 8.019,9.436999 0,5.267 -4.262,9.57 -9.495,9.57 -5.233,0 -9.512,-4.304 -9.512,-9.57 0,-4.32 2.875,-7.978 6.8,-9.161 -2.888,-5.826 -9.564,-3.621 -9.954,-2.528 -0.014,-1.541 -2.612,-10.5069994 -7.017,-13.2159994 -4.412,2.709 -7.01,11.6749994 -7.017,13.2160004 -0.39,-1.093001 -7.066,-3.298 -9.954,2.527999 3.918,1.184001 6.792,4.841001 6.792,9.161 0,5.267 -4.271,9.57 -9.503,9.57 -5.233,0 -9.503,-4.304 -9.503,-9.57 0,-4.755 3.488,-8.715 8.018,-9.436999 -2.526,-6.646 -10.703,-5.794 -11.406,-4.681 0.339,-6.8020004 -7.03,-11.7950004 -13.0330001,-11.6470004 -0.4,0.009 -0.8,0.043 -1.185,0.1 L 20.708158,58.649512 h 34.074 34.059 L 101.56516,4.1725126 c -0.386,-0.057 -0.784,-0.099 -1.185,-0.108 -0.187,-0.006 -0.377,-0.007 -0.567002,-10e-4 z"
-             id="path5175" />
+             d="m 19.852,0.003 c -0.81,1.087 -1.633,2.259 -2.379,3.453 -0.876,1.401 -1.655,2.843 -2.317,4.175 0.818,1.688 1.439,3.161 1.819,4.109 0.777,-1.774 1.937,-4.188 3.373,-6.487 0.692,-1.108 1.457,-2.196 2.211,-3.21 z"
+             id="path923" />
         </g>
       </g>
     </g>

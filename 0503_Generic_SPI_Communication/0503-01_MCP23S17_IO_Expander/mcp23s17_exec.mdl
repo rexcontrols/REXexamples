@@ -1,100 +1,7 @@
 Model {
   Name                    "mcp23s17_exec"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Wed May 20 15:02:02 2009"
-  Creator                 "ojezek"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "jsobota"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Fri Sep 17 13:32:16 2010"
-  ModelVersionFormat      "1.%<AutoIncrement:53>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -109,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -127,18 +34,8 @@ Model {
   }
   System {
     Name                    "mcp23s17_exec"
-    Location                [12, 34, 287, 376]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "A4"
-    PaperUnits              "centimeters"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   a214d02f-ef4f-41e8-85ef-012aeee364df
+    Location                [11, 34, 288, 377]
+    #GUID                   7d3d7464-b1fb-4ff3-b601-c9afe3544400
     Block {
       BlockType               Reference
       Name                    "EXEC"
@@ -156,7 +53,7 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
-      #GUID                   aafddf20-5726-4120-9144-ddecf8109a51
+      #GUID                   a3a6d934-1a9d-451a-93bd-603ed7d9c7c3
     }
     Block {
       BlockType               Reference
@@ -171,27 +68,27 @@ Model {
       stack                   10240
       MDLOPEN                 on
       filename                ""
-      #GUID                   e7ac6387-2045-4437-9bb7-1a7b93197ac3
+      #GUID                   38b63a96-eec5-49b5-bf4e-49a24a8a0295
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "mcp23s17_task"
       DstPort                 1
-      #GUID                   6d87b972-cc9e-49b8-952a-f05f70a9f6d0
+      #GUID                   acff8070-c1d0-4219-8dfa-5784eb49d075
     }
     Annotation {
       Position                [140, 40]
       Text                    "See the README.md and mcp23s17.c file for detai"
 "ls."
-      #GUID                   9213f373-6ab2-4721-809a-ad64e1d3cc3a
+      #GUID                   7f423611-11b4-4bdb-87a6-089390220966
     }
     Annotation {
       Position                [130, 20]
       Text                    "MCP23S17 I/O expander via SPI"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   d53dd17b-7d23-4db9-bcec-adb99c6d77cc
+      #GUID                   cb88b89f-e8f8-47f3-8d1c-798e3cc517ff
     }
   }
 }

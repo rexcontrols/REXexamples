@@ -1,9 +1,8 @@
-﻿Using the EMO-AO4/12 expansion board (UniPi) 
+Using the EMO-AO4/12 expansion board (UniPi) 
 ============================================
 
 This project demonstrates the use of the EMO-AO4/12 expansion board for UniPi.
-The example is based on the REXLANG user-programmable function block of the REX
-Control System. 
+The example is based on the REXLANG user-programmable function block of the REXYGEN System. 
 
 Channels 0..3 control the voltage outputs CH0..CH3. Channels 0..2 are set to 
 user-defined constants. Channel 3 is controlled by sine wave generator. The SAT 
@@ -22,7 +21,7 @@ Feel free to add as many channels as you want. You will need to modify both the
 
 You may connect the outputs of EMO-AO4/12 expansion board to the analog inputs 
 of the UniPi itself for verification. The measured values are recorded in the 
-TRND block which allows displaying of the trends (graphs) in the RexView 
+TRND block which allows displaying of the trends (graphs) in the *REXYGEN Diagnostics* 
 diagnostic tool. 
 
 ## Timing of the project ##
@@ -31,14 +30,14 @@ The algorithm runs each 50 milliseconds (0.05 s). See the EXEC function block,
 tick x ntick0 = 0.05 x 1 = 0.05 
 
 ## Prerequisites ##
-- RexCore and RPiDrv modules must be installed and running on the target device 
+- *REXYGEN Runtime Core* and RPiDrv modules must be installed and running on the target device 
 (Raspberry Pi).
 - I2C bus must be enabled and available on the Raspberry Pi (/dev/i2c-1).
 - The EMO-AO4/12 expansion board must be connected.
 
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
-- Open it with *RexDraw*.
+- Open it with *REXYGEN Studio*.
 - Specify the I2C bus by the fname parameter of the REXLANG function block.
 - Compile and download it to the target device.
 - Switch to online mode and watch the algorithm.
@@ -47,18 +46,18 @@ tick x ntick0 = 0.05 x 1 = 0.05
 
 ## Documentation ##
 
-- **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [Getting started with REX and UniPi board (Raspberry Pi)](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_UniPi_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
+- **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
+- [Getting started with REXYGEN and UniPi board (Raspberry Pi)](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_UniPi_ENG.pdf)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
 - PCA9685 datasheet (attached)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
 - Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.
 
 

@@ -1,7 +1,7 @@
 Model {
   Name                    "stepping_process"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "stepping_process"
-    Location                [810, 32, 1114, 264]
+    Location                [810, 34, 1114, 266]
     #GUID                   9b324781-a67f-458e-a817-38dc519b169b
     Block {
       BlockType               Inport
@@ -76,6 +76,7 @@ Model {
     Block {
       BlockType               Reference
       Name                    "MVD"
+      Ports                   [2, 3, 0, 0, 0]
       Position                [70, 88, 105, 122]
       SourceBlock             "modellib/MVD"
       SourceType              "MVD"
@@ -86,7 +87,6 @@ Model {
       NamePlacement           ""
       ShowName                on
       #GUID                   61e63e9b-a213-4d33-89c4-7274483adff3
-           Ports             [2, 3, 0, 0, 0]
     }
     Block {
       BlockType               Outport

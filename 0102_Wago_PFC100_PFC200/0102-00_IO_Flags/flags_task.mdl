@@ -1,99 +1,7 @@
 Model {
   Name                    "flags_task"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Thu Jan 06 15:26:11 2005"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "mertlj"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Tue Apr 29 09:25:44 2008"
-  ModelVersionFormat      "1.%<AutoIncrement:195>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -108,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,365 +34,355 @@ Model {
   }
   System {
     Name                    "flags_task"
-    Location                [215, 35, 1150, 1030]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "A4"
-    PaperUnits              "centimeters"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   92200e26-7821-416b-a2d2-6b94ab9f00ec
+    Location                [214, 36, 1054, 930]
+    #GUID                   aa54f9db-fc2d-4a0e-966f-2ad06b131518
     Block {
       BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 818, 65, 832]
+      Position                [40, 823, 60, 837]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
-      #GUID                   b6131047-fd00-4a5d-8b30-7fb5d10a79ca
+      #GUID                   3cb5e24a-9fb9-47d8-b0dc-fd5276888521
     }
     Block {
       BlockType               Reference
       Name                    "CNI_MS"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 558, 520, 572]
+      Position                [495, 563, 515, 577]
       SourceBlock             "mathlib/CNI"
       icn                     0
       FontSize                10
       BackgroundColor         "magenta"
-      #GUID                   d526458c-cbbd-4f9c-adb2-a7e25b9c322e
+      #GUID                   d1b175d9-e88c-42a2-9531-84f7061e9dcd
     }
     Block {
       BlockType               Reference
       Name                    "CNI_NS"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 588, 520, 602]
+      Position                [495, 593, 515, 607]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   96736432-58e5-427b-bef3-e220044cd46e
+      #GUID                   9be71fd3-d36b-4f28-9d0f-11da0f720bc0
     }
     Block {
       BlockType               Reference
       Name                    "CNI_U1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 648, 520, 662]
+      Position                [495, 653, 515, 667]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   ad17749f-b4a5-4220-8858-5643e2278c30
+      #GUID                   a7b248ed-4273-456b-b07c-b911e22969d5
     }
     Block {
       BlockType               Reference
       Name                    "CNI_U2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 678, 520, 692]
+      Position                [495, 683, 515, 697]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   f77d3497-c63f-456b-9a90-8c3bc99585c8
+      #GUID                   2cab1a40-27d0-4e9b-bad9-de7452365552
     }
     Block {
       BlockType               Reference
       Name                    "CNI_U3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 708, 520, 722]
+      Position                [495, 713, 515, 727]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   1bf3eb9b-ee27-4441-a383-b3ae225923fd
+      #GUID                   9deb2b13-c5ae-42f5-aa01-5db3770b0e64
     }
     Block {
       BlockType               Reference
       Name                    "CNI_U4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 738, 520, 752]
+      Position                [495, 743, 515, 757]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   ad4c1d02-dc31-4d76-8528-f4a2117ddcf6
+      #GUID                   cbc6377f-9efe-4dae-b19d-9efad8781b40
     }
     Block {
       BlockType               Reference
       Name                    "CNI_U5"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 768, 520, 782]
+      Position                [495, 773, 515, 787]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   e09cecba-2a5b-4be5-b153-b89e1b811924
+      #GUID                   5f93e70e-b7b1-4eb4-b21b-7349b39630fe
     }
     Block {
       BlockType               Reference
       Name                    "CNI_U6"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 798, 520, 812]
+      Position                [495, 803, 515, 817]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   fce448eb-f5c1-4b9c-9448-9bf2cdd396d8
+      #GUID                   f904870a-7d50-4e35-a8f9-135c29f25b5e
     }
     Block {
       BlockType               Reference
       Name                    "CNI_U7"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 828, 520, 842]
+      Position                [495, 833, 515, 847]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   08015fbc-1133-43f9-8d8c-5c48620b7163
+      #GUID                   40689a82-3be4-4318-9db3-a52b388a656b
     }
     Block {
       BlockType               Reference
       Name                    "CNI_USR"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [500, 618, 520, 632]
+      Position                [495, 623, 515, 637]
       SourceBlock             "mathlib/CNI"
       icn                     0
       BackgroundColor         "magenta"
-      #GUID                   24d59486-79e7-4815-88bf-f390ab7bb931
+      #GUID                   ab7c5b51-d181-4b44-99e0-8dd434955bf0
     }
     Block {
       BlockType               Display
       Name                    "Display4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [180, 598, 260, 622]
+      Position                [175, 603, 255, 627]
       Format                  "Best fit"
       ShowName                off
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   ff447ecd-195b-43e0-92e3-9fdb16ae6529
+      #GUID                   292ac5d8-f5d9-40c0-b700-fbe6ba615ffc
     }
     Block {
       BlockType               Display
       Name                    "Display40"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [180, 673, 260, 697]
+      Position                [175, 678, 255, 702]
       Format                  "Best fit"
       ShowName                off
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   88199a1c-4fc9-4a28-baa1-39b6701c62fa
+      #GUID                   e152f1e6-d0c1-4f68-a241-df0012202a22
     }
     Block {
       BlockType               Display
       Name                    "Display41"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [180, 743, 260, 767]
+      Position                [175, 748, 255, 772]
       Format                  "Best fit"
       ShowName                off
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   53e5c50b-f6d8-43b9-b705-1a5789cc774d
+      #GUID                   39c508ba-9c5a-4538-824d-2090485e6dbe
     }
     Block {
       BlockType               Display
       Name                    "Display5"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [180, 633, 260, 657]
+      Position                [175, 638, 255, 662]
       Format                  "Best fit"
       ShowName                off
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   ee22cf5f-b0cb-4807-9b50-5f04c6694b2a
+      #GUID                   c8d12f36-9002-4d33-9a58-036f61cfb274
     }
     Block {
       BlockType               Display
       Name                    "Display50"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [180, 563, 260, 587]
+      Position                [175, 568, 255, 592]
       Format                  "Best fit"
       ShowName                off
       Decimation              1
       Suffix                  ""
       DispValue               ""
-      #GUID                   6edca1a4-a43b-4774-9f15-0942a4e95f4d
+      #GUID                   66f0aa4a-cc9b-456a-9fd4-225e0615d2b2
     }
     Block {
       BlockType               From
       Name                    "From"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 603, 145, 617]
+      Position                [30, 608, 140, 622]
       ShowName                off
       GotoTag                 "WG__KbusOK"
       BackgroundColor         "yellow"
-      #GUID                   a698863f-e7d7-4f11-8a1d-7caa40852af1
+      #GUID                   8129e8bc-13d2-480e-b8f3-610161b8dc25
     }
     Block {
       BlockType               From
       Name                    "From1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 638, 145, 652]
+      Position                [30, 643, 140, 657]
       ShowName                off
       GotoTag                 "WG__KbusStatus"
       BackgroundColor         "yellow"
-      #GUID                   4bcb8bd8-c373-4ec8-b09c-2aa2bd5daeb5
+      #GUID                   e2652121-9c0a-4172-9873-b2ed6fdce234
     }
     Block {
       BlockType               From
       Name                    "From13"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 568, 145, 582]
+      Position                [30, 573, 140, 587]
       ShowName                off
       GotoTag                 "WG__CycleCount"
       BackgroundColor         "yellow"
-      #GUID                   64600767-cf2d-409a-b8ce-5edfaa27beee
+      #GUID                   2a4799bb-1d10-40cf-8383-4804b202a691
     }
     Block {
       BlockType               From
       Name                    "From3"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 678, 145, 692]
+      Position                [30, 683, 140, 697]
       ShowName                off
       GotoTag                 "WG__ModulesOK"
       BackgroundColor         "yellow"
-      #GUID                   782d9dfa-59c6-43c0-af44-c69cd22cc032
+      #GUID                   cb456e62-d57a-48d2-8711-35c2efdf0d97
     }
     Block {
       BlockType               From
       Name                    "From4"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [35, 748, 145, 762]
+      Position                [30, 753, 140, 767]
       ShowName                off
       GotoTag                 "WG__SxMyyyOK"
       BackgroundColor         "yellow"
-      #GUID                   a5b064d1-49bd-4077-bc40-145c67e6272c
+      #GUID                   aa4f80b8-974b-4f24-bdb4-8eb36ba85aee
     }
     Block {
       BlockType               Goto
       Name                    "Goto"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [130, 817, 325, 833]
+      Position                [125, 822, 320, 838]
       ShowName                off
       GotoTag                 "WG__KbusAllowControlMode"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   9f62aeb8-9bd2-4dc2-83d3-ffacc4870a76
+      #GUID                   f72d1813-f402-4a41-b3a1-1ab14a072d78
     }
     Block {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 618, 730, 632]
+      Position                [595, 623, 725, 637]
       ShowName                off
       GotoTag                 "WG__LedUSR"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   f248e57a-d88c-44f7-b4d5-b2007c4e84d4
+      #GUID                   2f001127-845b-41d4-9674-0d4721283aad
     }
     Block {
       BlockType               Goto
       Name                    "Goto10"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 828, 730, 842]
+      Position                [595, 833, 725, 847]
       ShowName                off
       GotoTag                 "WG__LedU7"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   e9011321-3ead-449c-830e-ec96608883da
+      #GUID                   bdad000f-e89d-4abe-b2dc-63b832d55867
     }
     Block {
       BlockType               Goto
       Name                    "Goto2"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 558, 730, 572]
+      Position                [595, 563, 725, 577]
       ShowName                off
       GotoTag                 "WG__LedMS"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   94220962-bfc2-4d70-81a1-b338757b2020
+      #GUID                   d0c70d2f-9ceb-4354-bb8b-b1d61e2d2bcd
     }
     Block {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 588, 730, 602]
+      Position                [595, 593, 725, 607]
       ShowName                off
       GotoTag                 "WG__LedNS"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   be2659a8-bae0-4650-8707-1e2e9e895f79
+      #GUID                   61ce07f6-365b-401a-8f62-217866e033a7
     }
     Block {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 648, 730, 662]
+      Position                [595, 653, 725, 667]
       ShowName                off
       GotoTag                 "WG__LedU1"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   077fd913-d4e3-4b84-b260-f41cb9864339
+      #GUID                   ba9607bd-3be2-4a09-b368-fcc79bdf7eba
     }
     Block {
       BlockType               Goto
       Name                    "Goto5"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 678, 730, 692]
+      Position                [595, 683, 725, 697]
       ShowName                off
       GotoTag                 "WG__LedU2"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   d418ae90-867c-4489-b33d-1e02d800c797
+      #GUID                   c8394590-9b39-454c-85c3-0d9f8672be40
     }
     Block {
       BlockType               Goto
       Name                    "Goto6"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 708, 730, 722]
+      Position                [595, 713, 725, 727]
       ShowName                off
       GotoTag                 "WG__LedU3"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   da927ba4-798a-4714-8de7-85ceb164f239
+      #GUID                   d5928635-3391-406d-a468-21f6dc906d55
     }
     Block {
       BlockType               Goto
       Name                    "Goto7"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 738, 730, 752]
+      Position                [595, 743, 725, 757]
       ShowName                off
       GotoTag                 "WG__LedU4"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   e7f9169a-e936-41ad-877c-1f5485be383b
+      #GUID                   06b671aa-83b0-42c4-bba5-7784cc23aded
     }
     Block {
       BlockType               Goto
       Name                    "Goto8"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 768, 730, 782]
+      Position                [595, 773, 725, 787]
       ShowName                off
       GotoTag                 "WG__LedU5"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   671cd3b7-9e66-47cf-bbce-89eba2d49669
+      #GUID                   32dc1718-c2dc-4232-9e5a-16ba546c9b80
     }
     Block {
       BlockType               Goto
       Name                    "Goto9"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [600, 798, 730, 812]
+      Position                [595, 803, 725, 817]
       ShowName                off
       GotoTag                 "WG__LedU6"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   39d162ec-12d0-4af8-adee-7c62d3183a36
+      #GUID                   d037f1ef-0622-4241-9120-f4c344eb76d4
     }
     Block {
       BlockType               SubSystem
       Name                    "M430"
       Ports                   [0, 0, 0, 0, 0]
-      Position                [90, 180, 150, 210]
+      Position                [85, 185, 145, 215]
       BackgroundColor         [1.000000, 0.960784, 0.509804]
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -492,7 +390,7 @@ Model {
       MaskIconOpaque          on
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
-      #GUID                   b548a250-d99d-4c92-976e-befe1f33acb0
+      #GUID                   c2429040-5a62-40b8-b3de-4ac13e93e278
       System {
         Name                    "M430"
         Location                [695, 181, 992, 606]
@@ -505,7 +403,7 @@ Model {
         PaperType               "usletter"
         PaperUnits              "inches"
         AutoZoom                on
-        #GUID                   b548a250-d99d-4c92-976e-befe1f33acb0
+        #GUID                   c2429040-5a62-40b8-b3de-4ac13e93e278
         Block {
           BlockType               Reference
           Name                    "WG__SxM430"
@@ -514,7 +412,7 @@ Model {
           SourceBlock             "inoutlib/INOCT"
           BackgroundColor         "yellow"
           SourceType              "INOCT"
-          #GUID                   b82cd0ad-15cd-4816-aaff-99dbc34bc40e
+          #GUID                   1f68a912-b41f-48de-ae1b-692f0dd1e316
         }
         Block {
           BlockType               From
@@ -525,7 +423,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM430C1"
-          #GUID                   11716840-276d-43f1-9570-940cfc2d8b9a
+          #GUID                   ccf1585d-4a2a-49f5-bc0f-55c44d3d3b60
         }
         Block {
           BlockType               From
@@ -536,7 +434,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM430C2"
-          #GUID                   dc8a1d38-fed8-41ea-8138-1e0d50548092
+          #GUID                   5eb418a3-f441-48c2-89be-4406a91cbe49
         }
         Block {
           BlockType               From
@@ -547,7 +445,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM430C3"
-          #GUID                   b699ca6a-a630-4f70-9394-154a3d5fbf39
+          #GUID                   0e694604-468a-4238-a44a-d4aed03bc599
         }
         Block {
           BlockType               From
@@ -558,7 +456,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM430C4"
-          #GUID                   83d9d82f-e1cd-4c5f-ae46-5364d150f46e
+          #GUID                   94ed241f-4cde-4c75-b18e-63e443755a36
         }
         Block {
           BlockType               From
@@ -569,7 +467,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM430C5"
-          #GUID                   420182b9-03e4-4dc3-8a40-5caf24bfe15e
+          #GUID                   88b65ac0-8319-48a5-85d9-c5d91df89340
         }
         Block {
           BlockType               From
@@ -580,7 +478,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM430C6"
-          #GUID                   7675b749-0d0f-4262-8d04-12a1f697e91c
+          #GUID                   677f3450-3a26-4b10-974e-6ba82a6451ce
         }
         Block {
           BlockType               From
@@ -591,7 +489,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM430C7"
-          #GUID                   35939bc4-d9e5-40bf-b78f-958c7ee6065b
+          #GUID                   8db15745-c51d-4570-9173-31c280059b82
         }
         Block {
           BlockType               From
@@ -602,7 +500,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM430C8"
-          #GUID                   ed341b7f-34a5-4695-ab7e-65d12708b7e6
+          #GUID                   7fd13906-5bc6-486c-8c54-a52b9f273720
         }
         Annotation {
           Position                [130, 30]
@@ -611,7 +509,7 @@ Model {
           FontName                "Arial"
           FontSize                16
           FontWeight              "bold"
-          #GUID                   bd9c55a8-00dd-4c6b-974c-213e89b55529
+          #GUID                   867799f6-d1a0-48c3-9a70-21b90c630f3d
         }
       }
     }
@@ -619,7 +517,7 @@ Model {
       BlockType               SubSystem
       Name                    "M455"
       Ports                   [0, 0, 0, 0, 0]
-      Position                [90, 365, 150, 395]
+      Position                [85, 370, 145, 400]
       BackgroundColor         [0.003922, 0.772549, 0.462745]
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -627,7 +525,7 @@ Model {
       MaskIconOpaque          on
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
-      #GUID                   6d865750-3254-4e02-a427-2894ade9a2dc
+      #GUID                   3b5bb64c-9d59-4a0e-8813-96f100dc6de2
       System {
         Name                    "M455"
         Location                [695, 181, 1033, 452]
@@ -640,7 +538,7 @@ Model {
         PaperType               "usletter"
         PaperUnits              "inches"
         AutoZoom                on
-        #GUID                   6d865750-3254-4e02-a427-2894ade9a2dc
+        #GUID                   3b5bb64c-9d59-4a0e-8813-96f100dc6de2
         Block {
           BlockType               Reference
           Name                    "WG__M455"
@@ -648,7 +546,7 @@ Model {
           Position                [110, 187, 140, 233]
           SourceBlock             "inoutlib/INQUAD"
           BackgroundColor         "yellow"
-          #GUID                   4c476956-778a-4aa5-841a-bd1d00526167
+          #GUID                   d08524f9-a411-42e3-9f27-91fc3c062b79
         }
         Block {
           BlockType               From
@@ -659,7 +557,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM455C1"
-          #GUID                   42b193a5-9f86-4088-9058-ca0deb04d6e3
+          #GUID                   513f27e3-8c2b-4225-8863-ea3a7c106c8b
         }
         Block {
           BlockType               From
@@ -670,7 +568,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM455C2"
-          #GUID                   146d7df7-9bed-41f4-a2d7-71b976fe6f8b
+          #GUID                   46ac1009-c4cd-4408-beb5-5fcb68c27f9d
         }
         Block {
           BlockType               From
@@ -681,7 +579,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM455C3"
-          #GUID                   044de22c-b4d8-451c-852a-ade7093948aa
+          #GUID                   18640d48-7704-4adb-9da7-be8473419bf4
         }
         Block {
           BlockType               From
@@ -692,7 +590,7 @@ Model {
           ShowName                off
           CloseFcn                "tagdialog Close"
           GotoTag                 "WG__SxM455C4"
-          #GUID                   6334084e-4d59-41e4-bc13-6f05f1d54c25
+          #GUID                   8ef68879-5303-4655-9a46-3d1d0afc21c5
         }
         Annotation {
           Position                [165, 35]
@@ -701,7 +599,7 @@ Model {
           FontName                "Arial"
           FontSize                16
           FontWeight              "bold"
-          #GUID                   bef088b8-3bd3-4a4f-b3fa-4445c82a67bf
+          #GUID                   4e790465-e1fb-42b5-8db2-4244d4b219ce
         }
       }
     }
@@ -709,7 +607,7 @@ Model {
       BlockType               SubSystem
       Name                    "M530"
       Ports                   [0, 0, 0, 0, 0]
-      Position                [90, 270, 150, 300]
+      Position                [85, 275, 145, 305]
       BackgroundColor         [1.000000, 0.356863, 0.356863]
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -717,7 +615,7 @@ Model {
       MaskIconOpaque          on
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
-      #GUID                   4233b15e-ac83-4bb7-a52a-a2f6f254cc4b
+      #GUID                   2031e366-7b01-4f1e-b6a3-7a9eb5eeaf80
       System {
         Name                    "M530"
         Location                [695, 181, 959, 570]
@@ -730,7 +628,7 @@ Model {
         PaperType               "usletter"
         PaperUnits              "inches"
         AutoZoom                on
-        #GUID                   4233b15e-ac83-4bb7-a52a-a2f6f254cc4b
+        #GUID                   2031e366-7b01-4f1e-b6a3-7a9eb5eeaf80
         Block {
           BlockType               Reference
           Name                    "WG__SxM530"
@@ -739,7 +637,7 @@ Model {
           SourceBlock             "inoutlib/OUTOCT"
           BackgroundColor         "lightBlue"
           SourceType              "OUTOCT"
-          #GUID                   586f8798-98a2-4165-a03a-3ee0fede775a
+          #GUID                   990e5190-e85a-4715-a75d-2d8aca1c8a69
         }
         Block {
           BlockType               Goto
@@ -750,7 +648,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C1"
           TagVisibility           "local"
-          #GUID                   5638cac4-396a-48e5-8800-1c04a5bc6dee
+          #GUID                   f3ff83a6-2771-4037-952f-7e52465b2f86
         }
         Block {
           BlockType               Goto
@@ -761,7 +659,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C2"
           TagVisibility           "local"
-          #GUID                   bee5eb9f-5475-484d-89a7-28839ccc2b02
+          #GUID                   94f78efa-25e8-4937-af69-48383aac9f6f
         }
         Block {
           BlockType               Goto
@@ -772,7 +670,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C3"
           TagVisibility           "local"
-          #GUID                   4718d0b0-0568-49e8-99e4-8121338b6ea2
+          #GUID                   29b87c5f-47b4-40ca-981f-3e2cfe64ae8d
         }
         Block {
           BlockType               Goto
@@ -783,7 +681,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C4"
           TagVisibility           "local"
-          #GUID                   750d3671-3fe6-488b-a659-2f17bcf77345
+          #GUID                   d6c87314-8530-428d-85b1-eaef6354decf
         }
         Block {
           BlockType               Goto
@@ -794,7 +692,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C5"
           TagVisibility           "local"
-          #GUID                   b2c90353-34d5-4074-834b-e6f943eaa0d6
+          #GUID                   afcb7f84-55fe-4208-a2b7-4d6063028d21
         }
         Block {
           BlockType               Goto
@@ -805,7 +703,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C6"
           TagVisibility           "local"
-          #GUID                   9f72cf06-a270-48cb-a573-66b91acbbe2d
+          #GUID                   ed8bf248-8801-409e-aa07-3a8a0f3c56eb
         }
         Block {
           BlockType               Goto
@@ -816,7 +714,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C7"
           TagVisibility           "local"
-          #GUID                   fff1ac7c-f039-4a5a-a534-34fbbbe8699d
+          #GUID                   a7a04dfb-303e-42bb-9aac-860cb6761c09
         }
         Block {
           BlockType               Goto
@@ -827,7 +725,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C8"
           TagVisibility           "local"
-          #GUID                   d71624cc-41b9-46e7-9420-46d1d3c26080
+          #GUID                   299c1519-a1e0-4591-b8ce-a6524e3c051d
         }
         Annotation {
           Position                [135, 35]
@@ -836,7 +734,7 @@ Model {
           FontName                "Arial"
           FontSize                16
           FontWeight              "bold"
-          #GUID                   be414f33-4645-40fa-9a50-9326ba21d59a
+          #GUID                   35d02a73-3e8e-4af1-9d8b-c452e16ce78b
         }
       }
     }
@@ -844,7 +742,7 @@ Model {
       BlockType               SubSystem
       Name                    "M555"
       Ports                   [0, 0, 0, 0, 0]
-      Position                [90, 460, 150, 490]
+      Position                [85, 465, 145, 495]
       BackgroundColor         [0.000000, 0.466667, 0.717647]
       ShowPortLabels          on
       MaskType                "REX sequence"
@@ -852,7 +750,7 @@ Model {
       MaskIconOpaque          on
       MaskIconRotate          "none"
       MaskIconUnits           "autoscale"
-      #GUID                   18e061e9-c99c-4125-b312-c2e76e0036f2
+      #GUID                   509580cd-7204-4711-ae74-535b6be39dcb
       System {
         Name                    "M555"
         Location                [695, 181, 1044, 443]
@@ -865,7 +763,7 @@ Model {
         PaperType               "usletter"
         PaperUnits              "inches"
         AutoZoom                on
-        #GUID                   18e061e9-c99c-4125-b312-c2e76e0036f2
+        #GUID                   509580cd-7204-4711-ae74-535b6be39dcb
         Block {
           BlockType               Reference
           Name                    "WG__M555"
@@ -873,7 +771,7 @@ Model {
           Position                [125, 177, 155, 223]
           SourceBlock             "inoutlib/OUTQUAD"
           BackgroundColor         "lightBlue"
-          #GUID                   b0c88948-d6d4-4f40-9c48-8ba6c6501137
+          #GUID                   bf5db34a-7c27-42a0-9784-c2804f78f451
         }
         Block {
           BlockType               Goto
@@ -884,7 +782,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C1"
           TagVisibility           "local"
-          #GUID                   92f8aa49-00c6-4aeb-86f2-71e95bdcf95e
+          #GUID                   1b821d7a-6a80-4157-b257-efdbdaf5ef25
         }
         Block {
           BlockType               Goto
@@ -895,7 +793,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C2"
           TagVisibility           "local"
-          #GUID                   9faf6075-9a9b-4401-83b5-fc768cd5eff1
+          #GUID                   e92a90ce-7438-4828-b86c-866cf1e18890
         }
         Block {
           BlockType               Goto
@@ -906,7 +804,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C3"
           TagVisibility           "local"
-          #GUID                   5c6bdbb9-b109-43f4-a55b-9f830601ae01
+          #GUID                   6a4caa54-4550-43f6-8259-bc9de104f38f
         }
         Block {
           BlockType               Goto
@@ -917,7 +815,7 @@ Model {
           ShowName                off
           GotoTag                 "WG__SxM530C4"
           TagVisibility           "local"
-          #GUID                   8559a511-0b10-4dff-b7e1-f5250e78d918
+          #GUID                   89a0878e-0fcb-4dbf-95df-7d9be9abc988
         }
         Annotation {
           Position                [170, 35]
@@ -926,7 +824,7 @@ Model {
           FontName                "Arial"
           FontSize                16
           FontWeight              "bold"
-          #GUID                   33751c7a-c5b8-4456-9989-5a1b41403902
+          #GUID                   3c76a509-adb8-4d24-a427-9d82c5076a06
         }
       }
     }
@@ -935,115 +833,115 @@ Model {
       SrcPort                 1
       DstBlock                "Goto"
       DstPort                 1
-      #GUID                   6ac2f549-a647-4d80-a8d2-89251d9bfb7e
+      #GUID                   ea059dfe-2444-4ad4-a723-19d8909a815e
     }
     Line {
       SrcBlock                "CNI_MS"
       SrcPort                 1
       DstBlock                "Goto2"
       DstPort                 1
-      #GUID                   52eee2c5-3eaa-469e-a26a-b4719db826f9
+      #GUID                   0fc15d2c-8303-4ef5-a5bc-de2084f1702b
     }
     Line {
       SrcBlock                "CNI_NS"
       SrcPort                 1
       DstBlock                "Goto3"
       DstPort                 1
-      #GUID                   a14aee9c-d9e4-41ad-a1fd-db3ab416a428
+      #GUID                   391e4819-3c98-428f-afef-9a067975b41d
     }
     Line {
       SrcBlock                "CNI_U1"
       SrcPort                 1
       DstBlock                "Goto4"
       DstPort                 1
-      #GUID                   b25f5a19-8b3a-4b83-86d6-24a4094bcca7
+      #GUID                   785aab6d-89f4-43d8-834a-8d2388d27a6c
     }
     Line {
       SrcBlock                "CNI_U2"
       SrcPort                 1
       DstBlock                "Goto5"
       DstPort                 1
-      #GUID                   83b12e3a-a851-4930-8e21-cc3107234b4a
+      #GUID                   f8d3f068-9f93-4f35-a244-ca17475f0d8b
     }
     Line {
       SrcBlock                "CNI_U3"
       SrcPort                 1
       DstBlock                "Goto6"
       DstPort                 1
-      #GUID                   8cb4fecc-e2d1-4d29-8f4e-59b24ca02c72
+      #GUID                   7f7cc27a-204a-4e47-bc8c-8163d87b8de0
     }
     Line {
       SrcBlock                "CNI_U4"
       SrcPort                 1
       DstBlock                "Goto7"
       DstPort                 1
-      #GUID                   6f88a118-f956-441f-811b-eecb016018b8
+      #GUID                   287423c2-704c-4d94-9f47-f1e890a74cd2
     }
     Line {
       SrcBlock                "CNI_U5"
       SrcPort                 1
       DstBlock                "Goto8"
       DstPort                 1
-      #GUID                   c796795c-ee3b-43dc-a0f1-937a9d5cd423
+      #GUID                   271ea782-6346-4cc4-a7be-96518d90668e
     }
     Line {
       SrcBlock                "CNI_U6"
       SrcPort                 1
       DstBlock                "Goto9"
       DstPort                 1
-      #GUID                   e334ec43-63b2-4281-a341-b4cda4bca352
+      #GUID                   aa3471ba-c0aa-428b-87fe-4e8eb68f9ed0
     }
     Line {
       SrcBlock                "CNI_U7"
       SrcPort                 1
       DstBlock                "Goto10"
       DstPort                 1
-      #GUID                   eae3b08a-bd73-4dd1-bd19-b2653c22afea
+      #GUID                   1579343a-68a8-490c-8353-5b61e3984bb9
     }
     Line {
       SrcBlock                "CNI_USR"
       SrcPort                 1
       DstBlock                "Goto1"
       DstPort                 1
-      #GUID                   7bb63cdd-a440-449f-8715-bb77fea758db
+      #GUID                   48985af0-acbb-48b5-ac5a-6ce5ea8275ff
     }
     Line {
       SrcBlock                "From"
       SrcPort                 1
       DstBlock                "Display4"
       DstPort                 1
-      #GUID                   c968f699-3daf-44df-b42b-98405b06e2bf
+      #GUID                   bf31910c-4396-4555-9f55-213ef424f5ba
     }
     Line {
       SrcBlock                "From1"
       SrcPort                 1
       DstBlock                "Display5"
       DstPort                 1
-      #GUID                   4f606cf2-f702-4e7d-8442-4861d2418d58
+      #GUID                   ad7f4c51-11a8-4855-9fb5-09289b95b3b9
     }
     Line {
       SrcBlock                "From13"
       SrcPort                 1
       DstBlock                "Display50"
       DstPort                 1
-      #GUID                   601739a7-ffb6-4e79-9729-fb5eb5d24ac0
+      #GUID                   06e0b252-f8b5-4522-b7ca-3d9c238e46c0
     }
     Line {
       SrcBlock                "From3"
       SrcPort                 1
       DstBlock                "Display40"
       DstPort                 1
-      #GUID                   03436c23-ea6d-4fd3-9497-afcd4fa0b4a4
+      #GUID                   c290aacc-5f65-4891-a449-48598c339d8f
     }
     Line {
       SrcBlock                "From4"
       SrcPort                 1
       DstBlock                "Display41"
       DstPort                 1
-      #GUID                   fd20b002-ad1f-4048-9a59-b280701fd100
+      #GUID                   da8ae932-42bc-476a-9e54-859702185a5a
     }
     Annotation {
-      Position                [420, 55]
+      Position                [415, 60]
       Text                    "This example serves as a library. It won't comp"
 "ile because it contains only illustrative \ninput and output flags.\nPick the "
 "input and output flags which you need, copy&paste them into your project \nand"
@@ -1052,55 +950,55 @@ Model {
       FontSize                20
       FontWeight              "bold"
       ForegroundColor         "red"
-      #GUID                   1f6008b6-78d0-471b-a1a7-f29d616305bf
+      #GUID                   f67c0829-6ff5-4ac6-885a-1c089db91a1a
     }
     Annotation {
-      Position                [65, 540]
+      Position                [60, 545]
       Text                    "System flags"
       FontName                "Arial"
       FontSize                16
       FontWeight              "bold"
-      #GUID                   68e25cd3-34a4-40a5-9b6e-264ec796f64d
+      #GUID                   4db58213-a323-4dcc-98d8-2f61948b6ae3
     }
     Annotation {
-      Position                [470, 540]
+      Position                [465, 545]
       Text                    "LED indicators"
       FontName                "Arial"
       FontSize                16
       FontWeight              "bold"
-      #GUID                   ff02f9ef-a98c-40fe-9271-5b109381531d
+      #GUID                   df9ce663-6186-44b8-bfad-571f66db20d2
     }
     Annotation {
-      Position                [75, 160]
+      Position                [70, 165]
       Text                    "Digital inputs"
       FontName                "Arial"
       FontSize                16
       FontWeight              "bold"
-      #GUID                   59d1c0bd-437f-47cf-b4b6-6af2f4458469
+      #GUID                   f2c23580-f63e-4f52-b4fd-3a9449c7aec5
     }
     Annotation {
-      Position                [75, 250]
+      Position                [70, 255]
       Text                    "Digital outputs"
       FontName                "Arial"
       FontSize                16
       FontWeight              "bold"
-      #GUID                   03c5f282-8484-49a9-8dc7-005e319f5683
+      #GUID                   9453626d-0cd9-4bba-b45d-39feac3f7d57
     }
     Annotation {
-      Position                [75, 440]
+      Position                [70, 445]
       Text                    "Analog outputs"
       FontName                "Arial"
       FontSize                16
       FontWeight              "bold"
-      #GUID                   ed710845-b244-4d27-9f2e-a5646f8d8db8
+      #GUID                   3a99ac4f-51db-481b-8400-0cc37d185a4e
     }
     Annotation {
-      Position                [75, 345]
+      Position                [70, 350]
       Text                    "Analog inputs"
       FontName                "Arial"
       FontSize                16
       FontWeight              "bold"
-      #GUID                   4374429d-bd55-4190-8d7e-1246e8f8873d
+      #GUID                   56bc9517-08e6-45ad-a52e-2057166cdf30
     }
   }
 }

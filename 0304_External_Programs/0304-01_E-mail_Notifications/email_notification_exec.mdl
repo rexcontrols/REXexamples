@@ -1,99 +1,7 @@
 Model {
   Name                    "email_notification_exec"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "Auto"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  on
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  Created                 "Mon Dec 20 17:00:37 1999"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "mertlj"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Mon Jan 07 09:53:31 2008"
-  ModelVersionFormat      "1.%<AutoIncrement:49>"
-  ConfigurationManager    "none"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -108,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,18 +34,8 @@ Model {
   }
   System {
     Name                    "email_notification_exec"
-    Location                [10, 31, 352, 430]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "automatic"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   43a3d973-85be-4588-9964-ada8622debed
+    Location                [11, 32, 351, 429]
+    #GUID                   14f4061a-c1cb-44fb-8fbc-9ff586212b52
     Block {
       BlockType               Reference
       Name                    "EXEC"
@@ -155,7 +53,7 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
-      #GUID                   f02a7b07-877c-4da5-98ac-deab5531963a
+      #GUID                   209ee67a-7167-4596-b5e5-b12949180083
     }
     Block {
       BlockType               Reference
@@ -170,27 +68,27 @@ Model {
       stack                   10000
       MDLOPEN                 on
       filename                ""
-      #GUID                   4073111c-4c86-4621-9604-c5f1698e3fb8
+      #GUID                   6aab9731-e121-4c0a-a8d5-ee3251dc9ca0
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "email_notification_task"
       DstPort                 1
-      #GUID                   ebfc39c0-738d-4899-97a8-85f975cdb991
+      #GUID                   47885452-010b-4f64-97b0-fd94cc830cf8
     }
     Annotation {
       Position                [135, 45]
       Text                    "See the README.md file for detailed information"
 "."
-      #GUID                   6a8e76b6-0dcc-40c1-8e87-37697fff8c09
+      #GUID                   99c7d636-d63e-4187-9009-dd201c73b9b6
     }
     Annotation {
       Position                [170, 20]
       Text                    "EPC - sending e-mail notifications from Linux"
       FontSize                14
       FontWeight              "bold"
-      #GUID                   e83a45dd-0f89-48df-92a7-00e8e0417e0c
+      #GUID                   a12f7b27-3a38-419f-8947-53499d61100f
     }
   }
 }

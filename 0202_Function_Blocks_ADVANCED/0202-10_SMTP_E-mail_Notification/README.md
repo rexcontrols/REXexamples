@@ -15,14 +15,14 @@ The algorithm runs each 500 milliseconds (0.5 s). See the EXEC function block,
 tick x ntick0 = 0.1 x 5 = 0.5 s
 
 ## Prerequisites ##
-- RexCore and AdvBlk modules must be installed and running on the target device.
+- *REXYGEN Runtime Core* and AdvBlk modules must be installed and running on the target device.
 - Registration (free) at Gmail.com
 - [Enable less secure apps access](https://www.google.com/settings/security/lesssecureapps) 
 in security configuration of your Google account
 
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
-- Open it with *RexDraw*.
+- Open it with *REXYGEN Studio*.
 - Specify your Gmail account details in the SMTP function block parameters 
 "to", "from", "user", "password"
 - Fill in e-mail subject to "CNS_Subject:scv" and e-mail body to "CNS_Body:scv".
@@ -31,12 +31,12 @@ in security configuration of your Google account
 mailbox.
 
 ## Documentation ##
-- **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [SMTP function block documentation] (https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/SMTP.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
+- [SMTP function block documentation] (https://www.rexygen.com/doc/ENGLISH/MANUALS/BRef/SMTP.html)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

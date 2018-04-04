@@ -1,129 +1,7 @@
 Model {
   Name                    "slave_exec"
-  Version                 4.00
-  SampleTimeColors        off
-  LibraryLinkDisplay      "none"
-  WideLines               off
-  ShowLineDimensions      off
-  ShowPortDataTypes       off
-  ShowStorageClass        off
-  ExecutionOrder          off
-  RecordCoverage          off
-  CovPath                 "/"
-  CovSaveName             "covdata"
-  CovMetricSettings       "dw"
-  CovNameIncrementing     off
-  CovHtmlReporting        on
-  BlockNameDataTip        off
-  BlockParametersDataTip  on
-  BlockDescriptionStringDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  Created                 "Mon Dec 20 17:00:37 1999"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "schlegel"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Fri Nov 21 10:36:22 2003"
-  ModelVersionFormat      "1.%<AutoIncrement:40>"
-  ConfigurationManager    "none"
-  SimParamPage            "Solver"
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "Auto"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  MinStep                 "auto"
-  MaxNumMinSteps          -1
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Array"
-  LimitDataPoints         off
-  MaxDataPoints           1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  SingleTaskRateTransMsg  "none"
-  MultiTaskRateTransMsg   "error"
-  IntegerOverflowMsg      "warning"
-  CheckForMatrixSingularity "none"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  InvalidFcnCallConnMsg   "error"
-  SignalLabelMismatchMsg  "none"
-  LinearizationMsg        "none"
-  VectorMatrixConversionMsg "none"
-  SfunCompatibilityCheckMsg "none"
-  BlockPriorityViolationMsg "warning"
-  ArrayBoundsChecking     "none"
-  ConsistencyChecking     "none"
-  ZeroCross               on
-  Profile                 off
-  SimulationMode          "normal"
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  TLCProfiler             off
-  TLCDebug                off
-  TLCCoverage             off
-  AccelSystemTargetFile   "accel.tlc"
-  AccelTemplateMakefile   "accel_default_tmf"
-  AccelMakeCommand        "make_rtw"
-  TryForcingSFcnDF        off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "oneshot"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   off
-  ExtModeSkipDownloadWhenConnect off
-  ExtModeLogAll           on
-  ExtModeAutoUpdateStatusClock on
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  ParameterPooling        on
-  BlockReductionOpt       on
-  RTWExpressionDepthLimit 5
-  BooleanDataType         off
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -138,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -156,24 +34,15 @@ Model {
   }
   System {
     Name                    "slave_exec"
-    Location                [10, 31, 233, 424]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "automatic"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "usletter"
-    PaperUnits              "inches"
-    ReportName              "simulink-default.rpt"
-    #GUID                   b4e40837-8840-4f7f-b13c-2c26f47d165d
+    Location                [10, 33, 233, 426]
+    #GUID                   af78255d-e42a-44ca-8df8-b1467c161570
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
       Position                [40, 73, 85, 362]
       SourceBlock             "execlib/EXEC"
-      target                  "PC - Windows"
+      target                  "Generic target device"
       tick                    "0.05"
       ntick0                  10
       ntick1                  50
@@ -183,7 +52,7 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
-      #GUID                   daeea9fe-c17b-4199-ad27-6c9f0cdfe1b2
+      #GUID                   aec6e26d-4ea3-44f3-a71d-ae37f2991724
     }
     Block {
       BlockType               Reference
@@ -198,7 +67,7 @@ Model {
       stack                   10240
       pri                     3
       timer                   off
-      #GUID                   c4ac8f3f-4852-4cca-aeac-597bbf04dbd3
+      #GUID                   804ffffb-fef4-424f-b92f-fc0a3fb6bb15
     }
     Block {
       BlockType               Reference
@@ -206,7 +75,7 @@ Model {
       Ports                   [1, 1, 0, 0, 0]
       Position                [120, 88, 170, 102]
       SourceBlock             "execlib/MODULE"
-      #GUID                   5b4face7-2e46-4264-9f49-84b4e7aba30e
+      #GUID                   c4f3ac88-863b-48e0-9af8-99b96320722a
     }
     Block {
       BlockType               Reference
@@ -220,40 +89,40 @@ Model {
       stack                   10240
       filename                ""
       MDLOPEN                 on
-      #GUID                   afd91ee7-5002-4d56-a663-3cca2e8a1bc6
+      #GUID                   e15bb33e-2271-4176-8924-488eca270b92
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 1
       DstBlock                "MbDrv"
       DstPort                 1
-      #GUID                   243e9000-fc16-432a-915f-fe2b8c14d067
+      #GUID                   7969105e-53d9-4a78-a3b6-b8c5144657bb
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 2
       DstBlock                "MTS"
       DstPort                 1
-      #GUID                   44a2d157-6a2f-4085-9967-b2e8fa394593
+      #GUID                   a2ac3bf2-4066-4833-b646-4e4c30e8a0b5
     }
     Line {
       SrcBlock                "EXEC"
       SrcPort                 5
       DstBlock                "slave_task"
       DstPort                 1
-      #GUID                   55122b7b-34ef-47a5-ba19-e0279c12de0d
+      #GUID                   442093a4-8af1-4b64-9720-818302a1a819
     }
     Annotation {
       Position                [110, 20]
       Text                    "Modbus TCP slave station"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   c4998877-b984-4cd9-8e7a-2cd87257743d
+      #GUID                   d6a7a081-1384-469b-aaa2-ef7a83494d39
     }
     Annotation {
       Position                [110, 40]
       Text                    "Read the README.md file for details."
-      #GUID                   c2dad4aa-f155-4cc3-986b-a64a421a7d6c
+      #GUID                   dc3ba1e1-b6f5-4f47-bd5f-97a25e1e1d17
     }
   }
 }

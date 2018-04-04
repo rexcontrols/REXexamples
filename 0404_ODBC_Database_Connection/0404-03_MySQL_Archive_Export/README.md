@@ -1,4 +1,4 @@
-﻿Exporting archive signals to database
+Exporting archive signals to database
 =====================================
 
 This folder contains the source files for the demonstration project on exporting 
@@ -8,7 +8,7 @@ The ACD block archives the simulated temperature signal whenever a significant
 change occurs. The significant change can be absolute (TR=off, id=2) or relative 
 to the temperature trend (TR=on, id=1). 
 
-View the archived data in the Watch mode of *RexDraw* or in the *RexView* 
+View the archived data in the Watch mode of *REXYGEN Studio* or in the *REXYGEN Diagnostics* 
 diagnostic tool. Enable the data markers to compare the data intensity of 
 the two approaches. The temperature is archived 
 
@@ -29,7 +29,7 @@ tick x factor = 0.05 x 200 = 10
 
 ## Prerequisities ##
 
-- RexCore and DbDrv modules must be installed and running on the target device.
+- *REXYGEN Runtime Core* and DbDrv modules must be installed and running on the target device.
 - ODBC connector for MySQL database is installed on the target device.  
 - MySQL database server must be available and the credentials correctly defined 
 in the **.rio* file. 
@@ -65,19 +65,19 @@ are assumed.
 ## Running the example ##
 - Edit manually the database access credentials in the **.rio* file.
 - The **exec.mdl* file is the project main file.
-- Open it with *RexDraw*, compile and download it to the target device.
+- Open it with *REXYGEN Studio*, compile and download it to the target device.
 - Observe data which is being added to the database tables.
 
 ## Documentation ##
 
-- **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [DbDrv - Database access driver](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/DbDrv/DbDrv_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
+- [DbDrv - Database access driver](https://www.rexygen.com/doc/PDF/ENGLISH/DbDrv_ENG.pdf)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

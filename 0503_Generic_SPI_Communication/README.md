@@ -1,4 +1,4 @@
-Integrating SPI devices in REX 
+Integrating SPI devices in REXYGEN 
 =================================================
 
 It is possible to integrate arbitrary SPI device using the REXLANG programmable 
@@ -10,11 +10,11 @@ examples with 0203-xx ID.
 
 ## Documentation ##
 
-- [REXLANG function block](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/REXLANG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [REXLANG function block](https://www.rexygen.com/doc/ENGLISH/MANUALS/BRef/REXLANG.html)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

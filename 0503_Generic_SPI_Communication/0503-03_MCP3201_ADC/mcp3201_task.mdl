@@ -1,7 +1,7 @@
 Model {
   Name                    "mcp3201_task"
   Version                 3.00
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "mcp3201_task"
-    Location                [288, 32, 684, 405]
+    Location                [291, 33, 687, 411]
     #GUID                   3157d45e-4e92-4cb7-bda7-1051db13651e
     Block {
       BlockType               Reference
@@ -44,6 +44,30 @@ Model {
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   2157894e-d30a-441f-9868-11602f0bd7e4
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [145, 73, 225, 97]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a94dc485-a214-4561-90ff-e17934f42086
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [290, 73, 370, 97]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   161ecd6b-f8a3-4af7-89c2-c39fc58ca0d6
     }
     Block {
       BlockType               Reference
@@ -106,8 +130,8 @@ Model {
       arc                     0
       id                      1
       Title                   "Channels 0..3"
+      timesrc                 1
       #GUID                   e03bccef-d548-4b98-a964-357d7074dbf2
-        timesrc       1
     }
     Line {
       SrcBlock                "CNB"
@@ -119,19 +143,38 @@ Model {
     Line {
       SrcBlock                "LIN"
       SrcPort                 1
-      DstBlock                "TRND_ADC"
-      DstPort                 1
+      Points                  [55, 0]
       #GUID                   e7d5e791-a906-4ab1-bfe4-f53e7cb8ba68
+      Branch {
+        Points                  [0, -55]
+        DstBlock                "Display1"
+        DstPort                 1
+        #GUID                   ec552847-bdee-4382-8620-327eb56c7778
+      }
+      Branch {
+        DstBlock                "TRND_ADC"
+        DstPort                 1
+        #GUID                   677448ca-4f2f-4d44-8eac-0376da4bf41b
+      }
     }
     Line {
       SrcBlock                "REXLANG"
       SrcPort                 2
-      DstBlock                "LIN"
-      DstPort                 1
+      Points                  [40, 0]
       #GUID                   fd65321f-f5a4-488c-a49b-a9025fa414fc
+      Branch {
+        DstBlock                "Display"
+        DstPort                 1
+        #GUID                   e8799724-2c14-4d26-ba02-dee703625cfa
+      }
+      Branch {
+        DstBlock                "LIN"
+        DstPort                 1
+        #GUID                   1874e259-95cc-4c4a-a86c-4be4d3a54624
+      }
     }
     Annotation {
-      Position                [130, 130]
+      Position                [130, 145]
       Text                    "ADC data"
       #GUID                   53bcde54-e586-4f4b-9b3e-df9527121ee7
     }
@@ -149,12 +192,12 @@ Model {
       #GUID                   93930d64-916d-4310-85f7-53fe28514322
     }
     Annotation {
-      Position                [260, 130]
+      Position                [260, 145]
       Text                    "voltage reading"
       #GUID                   565406d6-fa08-4b9e-8c7f-f5148ed5a98d
     }
     Annotation {
-      Position                [185, 170]
+      Position                [185, 185]
       Text                    "Setup reference voltage ( .LIN:y2 )\nDefault se"
 "tting: 5 V"
       FontWeight              "bold"

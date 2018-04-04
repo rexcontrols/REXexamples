@@ -1,8 +1,8 @@
-﻿PiFace Digital as Modbus TCP master 
+PiFace Digital as Modbus TCP master 
 ===================================
  
 This folder contains the source files for the demonstration project on using
-REX on the Raspberry Pi minicomputer with the PiFace Digital
+REXYGEN on the Raspberry Pi minicomputer with the PiFace Digital
 expansion board. 
 
 This example implements a Modbus TCP master for controlling a Modbus TCP slave
@@ -10,7 +10,7 @@ device.
 
 ## Prerequisites ##
 
-- RexCore, RPiDrv and MbDrv modules must be installed and running on the Raspberry Pi.
+- *REXYGEN Runtime Core*, RPiDrv and MbDrv modules must be installed and running on the Raspberry Pi.
 - SPI bus must be enabled on the Raspberry Pi
 - The Modbus TCP slave device must be available. It is supposed to have the IP address 
 192.168.1.111.
@@ -18,7 +18,7 @@ device.
 ## Running the example ##
 
 - The **exec.mdl* file is the project main file.
-- Open it with RexDraw, compile and download it to the target device.
+- Open it with *REXYGEN Studio*, compile and download it to the target device.
 
 ## Modbus TCP slave setup ##
 In this example the Modbus slave has 8 output coils at addresses 0 to 7. 
@@ -33,16 +33,16 @@ for Modbus configuration. Make sure to read the Modbus driver documentation (see
 
 ## Documentation ##
 
-- [Getting started with REX and Raspberry Pi](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexGettingStarted/RexGettingStarted_RasPi_ENG.html)
-- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RPiDrv/RPiDrv_ENG.html)
-- [MbDrv - Modbus driver](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/MbDrv/MbDrv_ENG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [Getting started with REXYGEN and Raspberry Pi](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_RasPi_ENG.pdf)
+- [RPiDrv - Raspberry Pi driver (including PiFace Digital, UniPi, Intellisys PIO)](https://www.rexygen.com/doc/PDF/ENGLISH/RPiDrv_ENG.pdf)
+- [MbDrv - Modbus driver](https://www.rexygen.com/doc/PDF/ENGLISH/MbDrv_ENG.pdf)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
 - Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

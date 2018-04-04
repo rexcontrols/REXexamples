@@ -9,13 +9,13 @@ function block are available. See the examples with 05xx ID.
 
 ## Documentation ##
 
-- [REXLANG function block](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/REXLANG.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [Licensing of individual function blocks](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENGap1.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- [REXLANG function block](https://www.rexygen.com/doc/ENGLISH/MANUALS/BRef/REXLANG.html)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [Licensing of individual function blocks](https://www.rexygen.com/doc/ENGLISH/MANUALS/BRef/BRef_ENGap1.html)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.

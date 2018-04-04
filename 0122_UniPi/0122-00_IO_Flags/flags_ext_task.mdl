@@ -1,99 +1,7 @@
 Model {
   Name                    "flags_ext_task"
   Version                 3.00
-  SimParamPage            "Solver"
-  SampleTimeColors        off
-  InvariantConstants      off
-  WideVectorLines         off
-  ShowLineWidths          off
-  ShowPortDataTypes       off
-  StartTime               "0.0"
-  StopTime                "10.0"
-  SolverMode              "SingleTasking"
-  Solver                  "ode45"
-  RelTol                  "1e-3"
-  AbsTol                  "auto"
-  Refine                  1
-  MaxStep                 "auto"
-  InitialStep             "auto"
-  FixedStep               "auto"
-  MaxOrder                5
-  OutputOption            "RefineOutputTimes"
-  OutputTimes             []
-  LoadExternalInput       off
-  ExternalInput           [t, u]
-  SaveTime                on
-  TimeSaveName            "tout"
-  SaveState               off
-  StateSaveName           "xout"
-  SaveOutput              on
-  OutputSaveName          "yout"
-  LoadInitialState        off
-  InitialState            "xInitial"
-  SaveFinalState          off
-  FinalStateName          "xFinal"
-  SaveFormat              "Matrix"
-  LimitMaxRows            off
-  MaxRows                 1000
-  Decimation              1
-  AlgebraicLoopMsg        "warning"
-  MinStepSizeMsg          "warning"
-  UnconnectedInputMsg     "warning"
-  UnconnectedOutputMsg    "warning"
-  UnconnectedLineMsg      "warning"
-  InheritedTsInSrcMsg     "warning"
-  IntegerOverflowMsg      "warning"
-  UnnecessaryDatatypeConvMsg "none"
-  Int32ToFloatConvMsg     "warning"
-  SignalLabelMismatchMsg  "none"
-  ConsistencyChecking     off
-  ZeroCross               on
-  SimulationMode          "normal"
-  BlockDataTips           on
-  BlockParametersDataTip  off
-  BlockAttributesDataTip  off
-  BlockPortWidthsDataTip  off
-  BlockDescriptionStringDataTip off
-  BlockMaskParametersDataTip off
-  ToolBar                 on
-  StatusBar               on
-  BrowserShowLibraryLinks off
-  BrowserLookUnderMasks   off
-  OptimizeBlockIOStorage  on
-  BufferReuse             on
-  BooleanDataType         off
-  RTWSystemTargetFile     "grt.tlc"
-  RTWInlineParameters     off
-  RTWRetainRTWFile        off
-  RTWTemplateMakefile     "grt_default_tmf"
-  RTWMakeCommand          "make_rtw"
-  RTWGenerateCodeOnly     off
-  ExtModeMexFile          "ext_comm"
-  ExtModeBatchMode        off
-  ExtModeTrigType         "manual"
-  ExtModeTrigMode         "normal"
-  ExtModeTrigPort         1
-  ExtModeTrigElement      "any"
-  ExtModeTrigDuration     1000
-  ExtModeTrigHoldOff      0
-  ExtModeTrigDelay        0
-  ExtModeTrigDirection    "rising"
-  ExtModeTrigLevel        0
-  ExtModeArchiveMode      off
-  ExtModeAutoIncOneShot   off
-  ExtModeIncDirWhenArm    off
-  ExtModeAddSuffixToVar   off
-  ExtModeWriteAllDataToWs off
-  ExtModeArmWhenConnect   on
-  Created                 "Thu Jan 06 15:26:11 2005"
-  UpdateHistory           "UpdateHistoryNever"
-  ModifiedByFormat        "%<Auto>"
-  LastModifiedBy          "mertlj"
-  ModifiedDateFormat      "%<Auto>"
-  LastModifiedDate        "Tue Apr 29 09:25:44 2008"
-  ModelVersionFormat      "1.%<AutoIncrement:195>"
-  ConfigurationManager    "None"
-  #RexVersion             "2.50.5 rev. 8555 - REXCONV, Date 2017-9-1"
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -108,7 +16,7 @@ Model {
     Orientation             "right"
   }
   AnnotationDefaults {
-    HorizontalAlignment     "center"
+    HorizontalAlignment     "left"
     VerticalAlignment       "middle"
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -126,158 +34,148 @@ Model {
   }
   System {
     Name                    "flags_ext_task"
-    Location                [1219, 36, 2114, 496]
-    Open                    on
-    ModelBrowserVisibility  off
-    ModelBrowserWidth       200
-    ScreenColor             "white"
-    PaperOrientation        "landscape"
-    PaperPositionMode       "auto"
-    PaperType               "A4"
-    PaperUnits              "centimeters"
-    AutoZoom                on
-    ReportName              "simulink-default.rpt"
-    #GUID                   92200e26-7821-416b-a2d2-6b94ab9f00ec
+    Location                [901, 171, 1797, 629]
+    #GUID                   d6ff62a5-4310-4ec7-ab10-d0e1ce1d90d3
     Block {
       BlockType               Goto
       Name                    "Goto1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [110, 222, 255, 238]
+      Position                [115, 222, 260, 238]
       ShowName                off
       GotoTag                 "UNP__RLY2_A0x21"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   67fbbb6a-184e-4389-b724-389a7512f7af
+      #GUID                   f0d77938-01cc-4aae-8733-793aea7d22bb
     }
     Block {
       BlockType               Goto
       Name                    "Goto3"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [110, 242, 255, 258]
+      Position                [115, 242, 260, 258]
       ShowName                off
       GotoTag                 "UNP__RLY3_A33"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   a1c42ee3-cc8e-4fbc-9fda-f5563acfe2b8
+      #GUID                   c41d25eb-ffb3-4065-8678-b2ec13cde4bf
     }
     Block {
       BlockType               Goto
       Name                    "Goto34"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [110, 202, 255, 218]
+      Position                [115, 202, 260, 218]
       ShowName                off
       GotoTag                 "UNP__RLY1_A33"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   182bc231-b797-4b8b-8bc6-27fe94254085
+      #GUID                   f885d334-b6ac-4461-ac25-2ac3a5edf40e
     }
     Block {
       BlockType               Goto
       Name                    "Goto4"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [110, 277, 255, 293]
+      Position                [115, 277, 260, 293]
       ShowName                off
       GotoTag                 "UNP__RLY8_A0x21"
       TagVisibility           "local"
       BackgroundColor         "lightBlue"
-      #GUID                   c005688e-7086-4c2b-ad8f-4d22302fb022
+      #GUID                   617937a1-10fb-4247-afda-138c6d522842
     }
     Block {
       BlockType               Reference
       Name                    "UNP__RLY_A0x21"
       Ports                   [8, 0, 0, 0, 0]
-      Position                [170, 331, 200, 419]
+      Position                [175, 331, 205, 419]
       SourceBlock             "inoutlib/OUTOCT"
       BackgroundColor         "lightBlue"
-      #GUID                   d6347e4f-ee64-47da-9922-8d3930cc5b09
+      #GUID                   7b937f1c-761b-4dbe-9c37-dec1caacb10c
     }
     Annotation {
-      Position                [445, 45]
+      Position                [450, 45]
       Text                    "This example serves as a library. It won't comp"
-"ile because it contains ALL input and output \nflags and there are conflicts."
-"\nPick only the input and output flags which you need and copy&paste them into"
-" your project."
+"ile because it contains ALL input and output \nflags and there are conflicts.\n"
+"Pick only the input and output flags which you need and copy&paste them into y"
+"our project."
       FontName                "Arial"
       FontSize                20
       FontWeight              "bold"
       ForegroundColor         "red"
-      #GUID                   1f6008b6-78d0-471b-a1a7-f29d616305bf
+      #GUID                   38850ce6-41c3-41ca-810b-087fcf9e4396
     }
     Annotation {
-      Position                [75, 210]
+      Position                [80, 210]
       Text                    "relay 1"
-      #GUID                   4a5b3d59-7914-48b1-9769-0d88ee7a2d4a
+      #GUID                   3a0d8903-c583-4844-ab72-06c24667d3bd
     }
     Annotation {
-      Position                [75, 230]
+      Position                [80, 230]
       Text                    "relay 2"
-      #GUID                   59952784-1f40-4869-942b-c07d59c76d76
+      #GUID                   f7ac813a-0f03-479e-8a6d-fb2770220ea7
     }
     Annotation {
-      Position                [75, 250]
+      Position                [80, 250]
       Text                    "relay 3"
-      #GUID                   6e1c94a2-5bf9-4fb3-95d7-136d9c9a9790
+      #GUID                   3ba52d5c-b104-4364-9a39-f144c056f92c
     }
     Annotation {
-      Position                [160, 265]
+      Position                [165, 265]
       Text                    "..."
-      #GUID                   e7ac4216-56ba-493f-801d-71a64106e702
+      #GUID                   546b859c-d230-4c15-b338-a5757ee93f23
     }
     Annotation {
-      Position                [75, 285]
+      Position                [80, 285]
       Text                    "relay 8"
-      #GUID                   5d572656-df3c-48dd-b31e-59dc42817d55
+      #GUID                   c4cb2494-980d-4c46-af54-f9d5156621de
     }
     Annotation {
-      Position                [225, 125]
+      Position                [230, 125]
       Text                    "UniPi expansion boards input/output flags"
       FontName                "Arial"
       FontSize                20
       FontWeight              "bold"
-      #GUID                   c1ef051b-c408-4d2b-8d78-0517a0181121
+      #GUID                   8cb06592-efb8-4ccb-a335-d15237403a36
     }
     Annotation {
-      Position                [125, 165]
+      Position                [130, 165]
       Text                    "8x relay board (EMO-R-8)"
       FontWeight              "bold"
       FontSize                16
-      #GUID                   2440b24b-673b-455c-be1f-5515af294267
+      #GUID                   02847e98-b598-403d-a672-6a66d963b8f8
     }
     Annotation {
-      Position                [145, 340]
+      Position                [150, 340]
       Text                    "relay 1"
-      #GUID                   841e0987-5ce1-45b3-b2fd-e517a871ac52
+      #GUID                   2f2b5f37-34a6-442e-b9b1-8c267a6ba68f
     }
     Annotation {
-      Position                [145, 350]
+      Position                [150, 350]
       Text                    "relay 2"
-      #GUID                   7bd332c6-cedb-41a1-a382-4d55ad04c837
+      #GUID                   adf9c2be-2546-4048-9a97-f75550a59924
     }
     Annotation {
-      Position                [145, 410]
+      Position                [150, 410]
       Text                    "relay 8"
-      #GUID                   9569b312-0feb-4a03-9384-c0e46404b379
+      #GUID                   2d851c32-9ef4-4899-914f-9abdccb1ff02
     }
     Annotation {
-      Position                [145, 360]
+      Position                [150, 360]
       Text                    "relay 3"
-      #GUID                   0e4c267f-677c-42e6-b15d-5840d781e9f9
+      #GUID                   6af0eb4d-71f5-4732-adcb-2490f297c759
     }
     Annotation {
-      Position                [205, 190]
+      Position                [210, 190]
       Text                    "I2C address 33 (=0x21), change it according to "
 "the A0-A2 jumper setting"
-      #GUID                   d8c5b799-d9ff-4a09-90bd-4ca16812e32c
+      #GUID                   4e92f3a2-b59f-432c-9d44-3bd29cce7eec
     }
     Annotation {
-      Position                [80, 320]
+      Position                [85, 320]
       Text                    "Multi-flag:"
-      #GUID                   a92f6238-6f58-40cc-a244-baf92d592e72
+      #GUID                   7effbb21-e514-4539-996b-a5d4525f3445
     }
     Annotation {
-      Position                [145, 385]
+      Position                [150, 385]
       Text                    "..."
-      #GUID                   5d7aae7c-3a40-40eb-b276-f020b47d4fb1
+      #GUID                   a1f8786a-c80f-4b53-a24f-6fa76bf2fe8a
     }
   }
 }

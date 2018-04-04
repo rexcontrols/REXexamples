@@ -31,13 +31,13 @@ The algorithm runs each 500 milliseconds (0.5 s). See the EXEC function block,
 tick x ntick0 = 0.1 x 5 = 0.5 
 
 ## Prerequisites ##
-- RexCore and AdvBlk modules must be installed and running on the target device.
+- *REXYGEN Runtime Core* and AdvBlk modules must be installed and running on the target device.
 - A valid licence for advanced function blocks is required.
 - Copy the .sh file and the .csv files to /rex/data on the target device.
 
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
-- Open it with *RexDraw*, compile and download it to the target device.
+- Open it with *REXYGEN Studio*, compile and download it to the target device.
 - Switch to online mode and watch the algorithm.
 - Enable online monitoring of the VTOR blocks (Target->Watch Selection) and 
 the EPC block.
@@ -48,14 +48,14 @@ device.
 
 ## Documentation ##
 
-- **Press F1 for help** on the selected function block in the *RexDraw* program.
-- [EPC function block documentation](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/EPC.html)
-- [Function blocks of REX](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/BRef_ENG.html)
-- [RexDraw User Guide](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/RexDraw/RexDraw_ENG.html)
-- [Complete documentation of REX](http://www.rexcontrols.com/documentation-and-support)
+- **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
+- [EPC function block documentation](https://www.rexygen.com/doc/ENGLISH/MANUALS/BRef/EPC.html)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
-- Visit the [REX Controls company webpage](http://www.rexcontrols.com) 
+- Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REX.
+automation and control solutions using REXYGEN.
