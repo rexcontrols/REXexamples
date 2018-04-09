@@ -1,0 +1,165 @@
+Model {
+  Name                    "slave_exec"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "slave_exec"
+    Location                [10, 33, 301, 422]
+    #GUID                   65ef34b0-108c-4bb3-a609-96f50ba306d3
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [35, 73, 80, 362]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  1
+      ntick1                  20
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   dbc79cd2-ce22-4a46-baad-198f6c05814b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MBS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 123, 165, 137]
+      SourceBlock             "execlib/IODRV"
+      module                  "MbDrv"
+      classname               "MbsDrv"
+      cfgname                 "slave_cfg.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   6af58483-6f47-4970-8cea-53b9d4304c23
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 123, 240, 137]
+      SourceBlock             "execlib/IODRV"
+      module                  "MonarcoDrv"
+      classname               "MonarcoHatDrv"
+      cfgname                 "monarco.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   fb1ba12e-9c7c-42be-aeda-434700ac38a3
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MbDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 88, 165, 102]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   4f5e801b-782f-4c3c-8ab4-ebf51d045805
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MonarcoDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [190, 88, 240, 102]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   03587976-506a-4249-b480-e87712ba26ad
+    }
+    Block {
+      BlockType               Reference
+      Name                    "slave_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 228, 165, 242]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   d63a1fbf-03f9-406a-a199-4dd228288d0a
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "MbDrv"
+      DstPort                 1
+      #GUID                   2c57a412-7262-4cb7-b03b-f554b1dcdd42
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "MBS"
+      DstPort                 1
+      #GUID                   ab97ed6d-69c8-4166-b1f4-f6147f97ee48
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "slave_task"
+      DstPort                 1
+      #GUID                   f7ca9dc9-2816-43d7-b404-d8fd04ef5053
+    }
+    Line {
+      SrcBlock                "MBS"
+      SrcPort                 1
+      DstBlock                "MNR"
+      DstPort                 1
+      #GUID                   efeae2c6-4b7f-4be8-8100-7a42e69b3731
+    }
+    Line {
+      SrcBlock                "MbDrv"
+      SrcPort                 1
+      DstBlock                "MonarcoDrv"
+      DstPort                 1
+      #GUID                   108c6c24-90a1-4eef-8b1f-7a05291c3ce6
+    }
+    Annotation {
+      Position                [105, 40]
+      Text                    "See the README.md file for details."
+      #GUID                   667ca91a-d4e5-4f1d-bce2-a35b73a74708
+    }
+    Annotation {
+      Position                [140, 20]
+      Text                    "Monarco HAT - Modbus RTU slave"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   a7fe7c64-684b-4945-8d37-e98e314856bd
+    }
+  }
+}

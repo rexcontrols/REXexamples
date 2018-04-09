@@ -1,0 +1,165 @@
+Model {
+  Name                    "master_exec"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "master_exec"
+    Location                [9, 34, 312, 417]
+    #GUID                   12ac462d-0a2b-48c7-840c-924305d447fb
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [45, 68, 90, 357]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  1
+      ntick1                  10
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   7977f274-7732-400c-8e45-4e5a2d4f579d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MBM"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [125, 118, 175, 132]
+      SourceBlock             "execlib/IODRV"
+      module                  "MbDrv"
+      classname               "MbmDrv"
+      cfgname                 "master_cfg.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   4d5c53eb-f563-48a3-9a45-675719bafbf1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [200, 118, 250, 132]
+      SourceBlock             "execlib/IODRV"
+      module                  "MonarcoDrv"
+      classname               "MonarcoHatDrv"
+      cfgname                 "monarco.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   3ca51d83-2524-41c9-b9dd-d43ce5ff67b9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MbDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [125, 83, 175, 97]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   44475a47-8a3b-4365-954c-7d0c20759810
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MonarcoDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [200, 83, 250, 97]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   384e817b-448c-4d4d-b8c5-feb7447320b6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "master_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [125, 223, 175, 237]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   795a304b-a45f-4c20-9342-95eee3140c9c
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "MbDrv"
+      DstPort                 1
+      #GUID                   5e496d81-852d-4671-a286-ca6c16de99ec
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "MBM"
+      DstPort                 1
+      #GUID                   24effd36-90de-4c14-a20b-c98e365bef53
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "master_task"
+      DstPort                 1
+      #GUID                   f0d705bb-d296-47bb-82b7-06b3125012f1
+    }
+    Line {
+      SrcBlock                "MBM"
+      SrcPort                 1
+      DstBlock                "MNR"
+      DstPort                 1
+      #GUID                   f11a631c-3c22-4e0f-be18-269c6f09f206
+    }
+    Line {
+      SrcBlock                "MbDrv"
+      SrcPort                 1
+      DstBlock                "MonarcoDrv"
+      DstPort                 1
+      #GUID                   ff58c162-df3f-4c71-8b93-7b0a5c7454b2
+    }
+    Annotation {
+      Position                [120, 40]
+      Text                    "See the README.md file for details."
+      #GUID                   16ab12ab-7174-4011-a1f9-2bfb771875e9
+    }
+    Annotation {
+      Position                [150, 20]
+      Text                    "Monarco HAT - Modbus RTU master"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   024c0b2c-d952-493e-9908-5f42e417cf76
+    }
+  }
+}
