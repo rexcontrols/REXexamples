@@ -1,0 +1,155 @@
+Model {
+  Name                    "myproject_task"
+  Version                 3.00
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "myproject_task"
+    Location                [298, 33, 678, 491]
+    #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
+    Block {
+      BlockType               Reference
+      Name                    "BIS_FAST"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [85, 263, 100, 287]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      "0.5"
+      t2                      "1.0"
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   837b8b33-a31d-44a7-b7ce-c92b265fe9ae
+    }
+    Block {
+      BlockType               Reference
+      Name                    "BIS_SLOW"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [85, 213, 100, 237]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      2
+      t2                      4
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   29d21dd6-5ce7-4aef-8255-40ec78c60635
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [80, 168, 100, 182]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   a6a3c521-db1e-4bad-9353-438e37848f55
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 163, 245, 187]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   442596e7-ef6e-4660-aed7-2626ba86941a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 208, 245, 232]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   4b3e45ee-5fbc-4598-ae16-122efee0b82a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 258, 245, 282]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   7259e107-6b43-49bd-af74-0ae2270d7303
+    }
+    Line {
+      SrcBlock                "BIS_FAST"
+      SrcPort                 1
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   00d36f6f-2b8b-4bb4-912c-91c68ac83e37
+    }
+    Line {
+      SrcBlock                "BIS_SLOW"
+      SrcPort                 1
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   e3f8152c-13e4-408d-89b1-7fdc801677a2
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   9e75ee74-41f6-478f-a0de-9a6bb4538af0
+    }
+    Annotation {
+      Position                [140, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8f79b992-fa0e-490d-82e8-f15ef7d4ddd7
+    }
+    Annotation {
+      Position                [70, 20]
+      Text                    "Multi-page HMI"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   36b9b807-2c3d-4295-9b91-043cc9c9d1c4
+    }
+  }
+}
