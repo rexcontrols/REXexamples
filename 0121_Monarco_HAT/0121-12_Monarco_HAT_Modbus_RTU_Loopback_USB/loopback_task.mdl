@@ -1,0 +1,1260 @@
+Model {
+  Name                    "loopback_task"
+  Version                 3.0
+  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    BlockRotation           0
+    BlockMirror             off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Helvetica"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Helvetica"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "loopback_task"
+    Location                [404, 33, 1292, 851]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    TiledPaperMargins       [0.196850, 0.196850, 0.196850, 0.196850]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ReportName              "simulink-default.rpt"
+    #GUID                   b1efc608-f54c-482f-8d84-a902872a8bc8
+    Block {
+      BlockType               Reference
+      Name                    "BIS"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [40, 188, 55, 212]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      1
+      t2                      2
+      t3                      3
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   85df3655-3dfb-4b16-b19f-8f6eb0e680fb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 127, 85, 143]
+      SourceBlock             "mathlib/CNI"
+      icn                     111
+      BackgroundColor         "magenta"
+      #GUID                   85af24a5-0636-4954-b4b3-c79be87f71cb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 271, 85, 289]
+      SourceBlock             "mathlib/CNI"
+      icn                     64917
+      BackgroundColor         "magenta"
+      #GUID                   4103a37d-c230-423e-890f-c8691fe0bd18
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 307, 85, 323]
+      SourceBlock             "mathlib/CNI"
+      icn                     -29999
+      BackgroundColor         "magenta"
+      #GUID                   0cd881f0-a57d-41f7-94b8-fcb5c9b65aaf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 237, 85, 253]
+      SourceBlock             "mathlib/CNI"
+      icn                     -95
+      BackgroundColor         "magenta"
+      #GUID                   b4ad60f4-31a3-4f16-a5e4-c09fb3a2b226
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNI4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 157, 85, 173]
+      SourceBlock             "mathlib/CNI"
+      icn                     222
+      BackgroundColor         "magenta"
+      #GUID                   dfbb599d-14f8-474b-8062-bbcacb9dcced
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 341, 85, 359]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "-78.57"
+      BackgroundColor         "magenta"
+      #GUID                   d47ea172-73a8-422e-9cd1-395ad546f3d1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 376, 100, 394]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "-79315.18"
+      BackgroundColor         "magenta"
+      #GUID                   de365cec-a988-4f78-a550-b09b21b1f6be
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [570, 173, 650, 197]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   d4a44448-eff2-493f-95b9-4ca5a06ff7ed
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [570, 233, 650, 257]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   aead3523-1be0-42a9-b57f-101c332b6318
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display10"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [750, 563, 830, 587]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   f0018217-14fe-4a36-bbf8-7f4558fa9fcd
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display11"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [565, 643, 645, 667]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   8ec579f7-41f7-45aa-91c4-d0c24df755c6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display12"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [565, 673, 645, 697]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   800db62b-e042-4c7f-8f53-91d5cc7ad5a4
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display13"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [565, 708, 645, 732]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   823dfcea-a1ca-4302-a5f8-cdc6dc03fe03
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display14"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [565, 738, 645, 762]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   580b46eb-97c6-4a02-9ba2-817f0e0606f5
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [570, 268, 650, 292]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   aaa911e5-d888-4899-98c8-9ba9f48a3f2b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [570, 303, 650, 327]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a5bb5380-b931-4f54-88aa-7c0e87a1e1f0
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [570, 338, 650, 362]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   e72f771d-7795-42e8-9589-42539741e29f
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [570, 373, 650, 397]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   ab6099c5-82b8-4e25-976d-2645ae203b92
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display6"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [750, 443, 830, 467]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   6c4f9a33-fbc6-4737-9f10-ac74072c32b6
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display7"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [750, 473, 830, 497]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   2075d24d-30c6-4479-b43f-339299b40c1d
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display8"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [750, 503, 830, 527]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   855a4a4b-c50d-4e71-b343-5ea1df2965d4
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display9"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [750, 533, 830, 557]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   1c18f39a-05d5-40f5-8de9-01f0945e413b
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 508, 505, 522]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x011"
+      BackgroundColor         "yellow"
+      #GUID                   27592319-c03d-4973-a983-22047e3d29df
+    }
+    Block {
+      BlockType               From
+      Name                    "From10"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 343, 495, 357]
+      ShowName                off
+      GotoTag                 "MBS__writeFloat"
+      BackgroundColor         "yellow"
+      #GUID                   6ab062c4-6752-4598-b9da-965138114775
+    }
+    Block {
+      BlockType               From
+      Name                    "From11"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 378, 495, 392]
+      ShowName                off
+      GotoTag                 "MBS__writeDouble"
+      BackgroundColor         "yellow"
+      #GUID                   82fd02ab-4105-42b5-8c44-80436ac4dfa9
+    }
+    Block {
+      BlockType               From
+      Name                    "From12"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 458, 505, 472]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x010"
+      BackgroundColor         "yellow"
+      #GUID                   33a150d1-ae06-43cd-a451-c5cf4a932469
+    }
+    Block {
+      BlockType               From
+      Name                    "From13"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 743, 505, 757]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x019"
+      BackgroundColor         "yellow"
+      #GUID                   4f20534e-9bec-47d2-8875-d2de0f5ed77c
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 558, 505, 572]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x012"
+      BackgroundColor         "yellow"
+      #GUID                   71d8c440-7869-42a6-a87c-697a2a271e72
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 648, 505, 662]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x014"
+      BackgroundColor         "yellow"
+      #GUID                   ef577f3b-22fb-4bed-a00c-562cd1d8cd3c
+    }
+    Block {
+      BlockType               From
+      Name                    "From4"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 678, 505, 692]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x015"
+      BackgroundColor         "yellow"
+      #GUID                   57b7a947-eeaa-4d0d-9e64-71d8a09a386d
+    }
+    Block {
+      BlockType               From
+      Name                    "From5"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 713, 505, 727]
+      ShowName                off
+      GotoTag                 "MNR__SDCR0x018"
+      BackgroundColor         "yellow"
+      #GUID                   7e28193c-a484-40ff-aa0f-1df14d462efc
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 178, 495, 192]
+      ShowName                off
+      GotoTag                 "MBS__writeReg0"
+      BackgroundColor         "yellow"
+      #GUID                   71b6543d-0a22-422f-8254-da60f68a6fdd
+    }
+    Block {
+      BlockType               From
+      Name                    "From7"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 238, 495, 252]
+      ShowName                off
+      GotoTag                 "MBS__writeReg1"
+      BackgroundColor         "yellow"
+      #GUID                   82bb66b6-11e1-40b6-ab0d-d69a344e90c0
+    }
+    Block {
+      BlockType               From
+      Name                    "From8"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 273, 495, 287]
+      ShowName                off
+      GotoTag                 "MBS__writeReg2"
+      BackgroundColor         "yellow"
+      #GUID                   f476cea7-30b6-4d3d-82ec-0b36480597e7
+    }
+    Block {
+      BlockType               From
+      Name                    "From9"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [370, 308, 495, 322]
+      ShowName                off
+      GotoTag                 "MBS__writeReg3"
+      BackgroundColor         "yellow"
+      #GUID                   7d3946c3-27ff-4c09-86f9-6ce6574644e7
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 343, 285, 357]
+      ShowName                off
+      GotoTag                 "MBM__writeFloat"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   90da1660-f83d-45f0-af7d-562a625b4f28
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 178, 285, 192]
+      ShowName                off
+      GotoTag                 "MBM__writeReg0"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   494f43c4-fa68-4a0f-8d82-a48c31f3d870
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 273, 285, 287]
+      ShowName                off
+      GotoTag                 "MBM__writeReg2"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f2548fcc-04c6-4d98-ba28-cb9e7ee7f735
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 308, 285, 322]
+      ShowName                off
+      GotoTag                 "MBM__writeReg3"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   0a47511e-6094-4b15-988f-2a16e14c1d6b
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 238, 285, 252]
+      ShowName                off
+      GotoTag                 "MBM__writeReg1"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   f77b8548-0fb9-4890-b496-c7d9c6de3454
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [165, 378, 285, 392]
+      ShowName                off
+      GotoTag                 "MBM__writeDouble"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   b5e64c48-3662-4c62-a219-78bec7164dc1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "ISSW"
+      Ports                   [3, 1, 0, 0, 0]
+      Position                [115, 168, 145, 202]
+      SourceBlock             "logiclib/ISSW"
+      #GUID                   b90086e8-7887-44fa-a91e-0c9ef9e0d477
+    }
+    Block {
+      BlockType               SubSystem
+      Name                    "RS485_diagnostics"
+      Ports                   [3, 5, 0, 0, 0]
+      Position                [545, 439, 700, 591]
+      ShowPortLabels          on
+      MaskType                "REX sequence"
+      MaskIconFrame           on
+      MaskIconOpaque          on
+      MaskIconRotate          "none"
+      MaskIconUnits           "autoscale"
+      #GUID                   bb734251-f2c4-4344-8aff-5a9f6f9dfc16
+      System {
+        Name                    "RS485_diagnostics"
+        Location                [85, 107, 629, 776]
+        #GUID                   bb734251-f2c4-4344-8aff-5a9f6f9dfc16
+        Block {
+          BlockType               Inport
+          Name                    "reg0x010"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [30, 98, 60, 112]
+          Port                    1
+          BackgroundColor         "green"
+          #GUID                   56e9c714-1f10-4cd8-9cc5-11842a87f2ba
+        }
+        Block {
+          BlockType               Inport
+          Name                    "reg0x011"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [30, 253, 60, 267]
+          Port                    2
+          BackgroundColor         "green"
+          #GUID                   f1e46ecf-2e4f-4e61-800b-b92436db2b12
+        }
+        Block {
+          BlockType               Inport
+          Name                    "reg0x012"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [35, 598, 65, 612]
+          Port                    3
+          BackgroundColor         "green"
+          #GUID                   c12d7611-de90-4886-a78c-23a5bc19b754
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [195, 313, 215, 327]
+          SourceBlock             "mathlib/CNI"
+          icn                     5
+          #GUID                   96f1be2c-206b-45b6-bfbf-96397af6c962
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [230, 328, 250, 342]
+          SourceBlock             "mathlib/CNI"
+          icn                     6
+          #GUID                   81d70f7b-4b7b-42cb-a898-2643064f5dca
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI2"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [195, 348, 215, 362]
+          SourceBlock             "mathlib/CNI"
+          icn                     7
+          #GUID                   fd72d678-a939-437b-bf5a-f0dafa55c721
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNI3"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [230, 363, 250, 377]
+          SourceBlock             "mathlib/CNI"
+          icn                     8
+          #GUID                   2762beec-13d0-484c-b2cd-9c8e01be5ac3
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [195, 428, 215, 442]
+          SourceBlock             "mathlib/CNR"
+          ycn                     "0.5"
+          #GUID                   100303fb-ea92-42dd-8f69-9d6b7399acf0
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [230, 443, 250, 457]
+          SourceBlock             "mathlib/CNR"
+          ycn                     "1.0"
+          #GUID                   0c61aff9-e9dc-492a-a1b1-23eeb7b0f874
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR2"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [195, 463, 215, 477]
+          SourceBlock             "mathlib/CNR"
+          ycn                     "1.5"
+          #GUID                   1c0e85e5-a598-4a58-b8a4-b9fc5c760f20
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNR3"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [230, 483, 250, 497]
+          SourceBlock             "mathlib/CNR"
+          ycn                     "2.0"
+          #GUID                   c974c249-9d6a-4252-90aa-cb2adedca642
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNS"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [145, 174, 200, 186]
+          SourceBlock             "stringlib/CNS"
+          scv                     "0: none"
+          nmax                    0
+          #GUID                   a98a8bf3-0f85-45ba-8241-d301951c9bc4
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNS1"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [210, 184, 265, 196]
+          SourceBlock             "stringlib/CNS"
+          scv                     "1: even"
+          nmax                    0
+          #GUID                   4c040ed0-12d3-4a16-be53-a218838e1020
+        }
+        Block {
+          BlockType               Reference
+          Name                    "CNS2"
+          Ports                   [0, 1, 0, 0, 0]
+          Position                [145, 204, 200, 216]
+          SourceBlock             "stringlib/CNS"
+          scv                     "2: odd"
+          nmax                    0
+          #GUID                   f11af72d-3506-4704-91ce-87ca02501872
+        }
+        Block {
+          BlockType               Reference
+          Name                    "GAIN"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [145, 98, 170, 112]
+          SourceBlock             "mathlib/GAIN"
+          k                       100
+          #GUID                   a9a3961e-80f3-4a6a-b230-e6ca8b6c1479
+        }
+        Block {
+          BlockType               Reference
+          Name                    "GAIN1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [150, 598, 175, 612]
+          SourceBlock             "mathlib/GAIN"
+          k                       100
+          #GUID                   0ad40d40-5a9d-4aa0-a29f-cc201ca1b98e
+        }
+        Block {
+          BlockType               Reference
+          Name                    "INTSM"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [175, 253, 200, 267]
+          SourceBlock             "logiclib/INTSM"
+          shift                   0
+          mask                    0x07
+          #GUID                   37f68b33-7816-46b3-bb6f-f21e9eec9364
+        }
+        Block {
+          BlockType               Reference
+          Name                    "INTSM1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [175, 383, 200, 397]
+          SourceBlock             "logiclib/INTSM"
+          shift                   3
+          mask                    0x03
+          #GUID                   7a939852-b926-4126-b6ff-b462da3958cb
+        }
+        Block {
+          BlockType               Reference
+          Name                    "INTSM2"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [175, 508, 200, 522]
+          SourceBlock             "logiclib/INTSM"
+          shift                   5
+          mask                    0x03
+          #GUID                   75c579fa-3674-4df7-9b29-20018d6d1853
+        }
+        Block {
+          BlockType               Reference
+          Name                    "RTOI"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [200, 98, 225, 112]
+          SourceBlock             "mathlib/RTOI"
+          #GUID                   0b84e8cd-6298-48cd-808c-27ec1935a676
+        }
+        Block {
+          BlockType               Reference
+          Name                    "RTOI1"
+          Ports                   [1, 1, 0, 0, 0]
+          Position                [205, 598, 230, 612]
+          SourceBlock             "mathlib/RTOI"
+          #GUID                   c78e8527-75bb-4fd5-832f-f789411a26a6
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SELQUAD"
+          Ports                   [7, 1, 0, 0, 0]
+          Position                [315, 342, 350, 418]
+          SourceBlock             "analoglib/SELQUAD"
+          BINF                    off
+          #GUID                   339c05e5-1f0b-40b8-9685-a259990a72e0
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SELQUAD1"
+          Ports                   [7, 1, 0, 0, 0]
+          Position                [315, 467, 350, 543]
+          SourceBlock             "analoglib/SELQUAD"
+          BINF                    off
+          #GUID                   0b95b991-c9e0-4608-a2e2-fc8c0686b470
+        }
+        Block {
+          BlockType               Reference
+          Name                    "SELSOCT"
+          Ports                   [12, 1, 0, 0, 0]
+          Position                [315, 170, 355, 300]
+          SourceBlock             "stringlib/SELSOCT"
+          BINF                    off
+          nmax                    0
+          #GUID                   bd3d0f27-18ab-48de-912e-cceba3c9d018
+        }
+        Block {
+          BlockType               Outport
+          Name                    "RS485_baudrate"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [440, 98, 470, 112]
+          Port                    1
+          BackgroundColor         "green"
+          #GUID                   00bdcc1c-98e6-4c27-9073-1fe0c0a5a5f8
+        }
+        Block {
+          BlockType               Outport
+          Name                    "RS485_parity"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [440, 228, 470, 242]
+          Port                    2
+          BackgroundColor         "green"
+          #GUID                   044c3e10-c732-4b50-adcc-880bdf475187
+        }
+        Block {
+          BlockType               Outport
+          Name                    "RS485_databits"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [440, 373, 470, 387]
+          Port                    3
+          BackgroundColor         "green"
+          #GUID                   9dff9b51-c488-4ccf-ba96-5d65db6b34ff
+        }
+        Block {
+          BlockType               Outport
+          Name                    "RS485_stopbits"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [440, 498, 470, 512]
+          Port                    4
+          BackgroundColor         "green"
+          #GUID                   68c418e9-db1a-4d55-9f49-922d6a1e4220
+        }
+        Block {
+          BlockType               Outport
+          Name                    "UART_baudrate"
+          Ports                   [1, 0, 0, 0, 0]
+          Position                [440, 598, 470, 612]
+          Port                    5
+          BackgroundColor         "green"
+          #GUID                   f92e3c88-dcd6-4298-bca7-a9db44a6ebe1
+        }
+        Line {
+          SrcBlock                "CNI"
+          SrcPort                 1
+          Points                  [75, 0; 0, 30]
+          DstBlock                "SELQUAD"
+          DstPort                 1
+          #GUID                   a74fb19d-ea26-46f6-947b-2e73e1264b1e
+        }
+        Line {
+          SrcBlock                "CNI1"
+          SrcPort                 1
+          Points                  [30, 0; 0, 25]
+          DstBlock                "SELQUAD"
+          DstPort                 2
+          #GUID                   f4aaa1aa-2815-47f4-875f-e0fa5854e0bf
+        }
+        Line {
+          SrcBlock                "CNI2"
+          SrcPort                 1
+          Points                  [55, 0; 0, 15]
+          DstBlock                "SELQUAD"
+          DstPort                 3
+          #GUID                   39e0faf0-89bd-4ddd-b202-3f921654d4b9
+        }
+        Line {
+          SrcBlock                "CNI3"
+          SrcPort                 1
+          Points                  [10, 0; 0, 10]
+          DstBlock                "SELQUAD"
+          DstPort                 4
+          #GUID                   d6f2f73c-00bb-430d-82d8-ec38ef0bc2e5
+        }
+        Line {
+          SrcBlock                "CNR"
+          SrcPort                 1
+          Points                  [75, 0; 0, 40]
+          DstBlock                "SELQUAD1"
+          DstPort                 1
+          #GUID                   04914eb3-f9ab-43a0-9671-9230247f6fa3
+        }
+        Line {
+          SrcBlock                "CNR1"
+          SrcPort                 1
+          Points                  [30, 0; 0, 35]
+          DstBlock                "SELQUAD1"
+          DstPort                 2
+          #GUID                   61aea0eb-9ea1-4757-bb77-7a945f342d3d
+        }
+        Line {
+          SrcBlock                "CNR2"
+          SrcPort                 1
+          Points                  [55, 0; 0, 25]
+          DstBlock                "SELQUAD1"
+          DstPort                 3
+          #GUID                   0efe61da-8b76-4e9d-a2c0-a09c6746b1ce
+        }
+        Line {
+          SrcBlock                "CNR3"
+          SrcPort                 1
+          Points                  [10, 0; 0, 15]
+          DstBlock                "SELQUAD1"
+          DstPort                 4
+          #GUID                   fca12de7-f173-4571-a666-61a785e4172e
+        }
+        Line {
+          SrcBlock                "CNS"
+          SrcPort                 1
+          DstBlock                "SELSOCT"
+          DstPort                 1
+          #GUID                   bf4e5473-e3ca-41f6-bfe8-636959f4e594
+        }
+        Line {
+          SrcBlock                "CNS1"
+          SrcPort                 1
+          DstBlock                "SELSOCT"
+          DstPort                 2
+          #GUID                   c30b387f-895d-4ce8-bb4d-007facadaa3a
+        }
+        Line {
+          SrcBlock                "CNS2"
+          SrcPort                 1
+          Points                  [95, 0]
+          DstBlock                "SELSOCT"
+          DstPort                 3
+          #GUID                   df8062ef-b6fa-40b0-9a86-d6d29b07ab22
+        }
+        Line {
+          SrcBlock                "GAIN"
+          SrcPort                 1
+          DstBlock                "RTOI"
+          DstPort                 1
+          #GUID                   2ae24738-2136-4d14-a4b6-047fc85b8493
+        }
+        Line {
+          SrcBlock                "GAIN1"
+          SrcPort                 1
+          DstBlock                "RTOI1"
+          DstPort                 1
+          #GUID                   1a296d42-5284-4b87-90d5-eb8a73409ad6
+        }
+        Line {
+          SrcBlock                "INTSM"
+          SrcPort                 1
+          DstBlock                "SELSOCT"
+          DstPort                 9
+          #GUID                   f22c0bff-82a3-45f3-a2f6-1602c5266a5d
+        }
+        Line {
+          SrcBlock                "INTSM1"
+          SrcPort                 1
+          DstBlock                "SELQUAD"
+          DstPort                 5
+          #GUID                   d503b3c4-96d0-4e76-9301-68bb590527db
+        }
+        Line {
+          SrcBlock                "INTSM2"
+          SrcPort                 1
+          DstBlock                "SELQUAD1"
+          DstPort                 5
+          #GUID                   d04a9b56-22b5-4b69-aa8d-bdaa5bc0a702
+        }
+        Line {
+          SrcBlock                "RTOI"
+          SrcPort                 1
+          DstBlock                "RS485_baudrate"
+          DstPort                 1
+          #GUID                   ceae9464-a5c1-4ae2-8120-32d28c9f9222
+        }
+        Line {
+          SrcBlock                "RTOI1"
+          SrcPort                 1
+          DstBlock                "UART_baudrate"
+          DstPort                 1
+          #GUID                   0de74cd3-98d0-449a-9f2c-112dd028a5d2
+        }
+        Line {
+          SrcBlock                "SELQUAD"
+          SrcPort                 1
+          DstBlock                "RS485_databits"
+          DstPort                 1
+          #GUID                   91cb6f3d-d0e5-4843-94fc-775241f39e55
+        }
+        Line {
+          SrcBlock                "SELQUAD1"
+          SrcPort                 1
+          DstBlock                "RS485_stopbits"
+          DstPort                 1
+          #GUID                   40bc1898-012d-4751-b59f-e87912f95516
+        }
+        Line {
+          SrcBlock                "SELSOCT"
+          SrcPort                 1
+          DstBlock                "RS485_parity"
+          DstPort                 1
+          #GUID                   64472088-e2ec-4194-8dcf-ca697e8dffaf
+        }
+        Line {
+          SrcBlock                "reg0x010"
+          SrcPort                 1
+          DstBlock                "GAIN"
+          DstPort                 1
+          #GUID                   4316e2b2-c251-4564-b25a-df7611158f10
+        }
+        Line {
+          SrcBlock                "reg0x011"
+          SrcPort                 1
+          Points                  [50, 0]
+          #GUID                   be27718c-1bd1-4307-9fe0-494ad2220152
+          Branch {
+            DstBlock                "INTSM"
+            DstPort                 1
+            #GUID                   08c1f4f1-82f8-4e66-9bb6-1a25d70286fe
+          }
+          Branch {
+            Points                  [0, 130]
+            #GUID                   89486e1b-7055-4d4a-82d9-b61fac9111fa
+            Branch {
+              DstBlock                "INTSM1"
+              DstPort                 1
+              #GUID                   c6db0cb1-dddf-4aeb-b29e-6eb8ae4cfe0c
+            }
+            Branch {
+              Points                  [0, 125]
+              DstBlock                "INTSM2"
+              DstPort                 1
+              #GUID                   bcdecb4f-f493-4b63-ae43-68cb5f51ede7
+            }
+          }
+        }
+        Line {
+          SrcBlock                "reg0x012"
+          SrcPort                 1
+          DstBlock                "GAIN1"
+          DstPort                 1
+          #GUID                   25ca85c7-0ba7-4052-bbb7-7200194f4ef8
+        }
+        Annotation {
+          Position                [220, 30]
+          Text                    "Parsing data of Monarco HAT RS-485 diagnost"
+"ics"
+          FontWeight              "bold"
+          FontSize                12
+          #GUID                   05693dd6-2f5a-4859-b085-685535d90558
+        }
+      }
+    }
+    Line {
+      SrcBlock                "BIS"
+      SrcPort                 1
+      DstBlock                "ISSW"
+      DstPort                 3
+      #GUID                   7bb0e5f6-555e-4470-b9b5-891cd421e5ae
+    }
+    Line {
+      SrcBlock                "CNI"
+      SrcPort                 1
+      Points                  [5, 0; 0, 40]
+      DstBlock                "ISSW"
+      DstPort                 1
+      #GUID                   2f998dbb-f55d-48cf-a1e2-c41059647aa8
+    }
+    Line {
+      SrcBlock                "CNI1"
+      SrcPort                 1
+      DstBlock                "Goto2"
+      DstPort                 1
+      #GUID                   2b716cf2-9b7d-4776-9029-13b90ca72704
+    }
+    Line {
+      SrcBlock                "CNI2"
+      SrcPort                 1
+      DstBlock                "Goto3"
+      DstPort                 1
+      #GUID                   92f77d9d-f1c8-4ad6-8636-f47018c59f27
+    }
+    Line {
+      SrcBlock                "CNI3"
+      SrcPort                 1
+      DstBlock                "Goto4"
+      DstPort                 1
+      #GUID                   2acee98a-2e01-46d9-a2e1-12d4bac96e46
+    }
+    Line {
+      SrcBlock                "CNI4"
+      SrcPort                 1
+      Points                  [0, 20]
+      DstBlock                "ISSW"
+      DstPort                 2
+      #GUID                   fa3d8fe2-8642-4bc0-bb4e-fda2943a5104
+    }
+    Line {
+      SrcBlock                "CNR"
+      SrcPort                 1
+      DstBlock                "Goto"
+      DstPort                 1
+      #GUID                   3987af10-e789-4802-8c0f-b106be3360b4
+    }
+    Line {
+      SrcBlock                "CNR1"
+      SrcPort                 1
+      DstBlock                "Goto5"
+      DstPort                 1
+      #GUID                   71e58bd4-6488-4c77-b795-09fe8f9ca748
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      DstBlock                "RS485_diagnostics"
+      DstPort                 2
+      #GUID                   7a4f1034-ee79-46f3-ab64-c0ecd5dabce6
+    }
+    Line {
+      SrcBlock                "From10"
+      SrcPort                 1
+      DstBlock                "Display4"
+      DstPort                 1
+      #GUID                   a75eb2ce-e0da-4001-be43-16bb9a18c768
+    }
+    Line {
+      SrcBlock                "From11"
+      SrcPort                 1
+      DstBlock                "Display5"
+      DstPort                 1
+      #GUID                   881b94b4-61c4-4257-bd3e-3a5d13f26dff
+    }
+    Line {
+      SrcBlock                "From12"
+      SrcPort                 1
+      DstBlock                "RS485_diagnostics"
+      DstPort                 1
+      #GUID                   692bd0b6-9800-447a-900c-be0685861013
+    }
+    Line {
+      SrcBlock                "From13"
+      SrcPort                 1
+      DstBlock                "Display14"
+      DstPort                 1
+      #GUID                   c6e45da8-8128-4c59-a145-3178f50abc63
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      DstBlock                "RS485_diagnostics"
+      DstPort                 3
+      #GUID                   40192bbc-5249-43f4-8268-4ac18c566c0a
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      DstBlock                "Display11"
+      DstPort                 1
+      #GUID                   c42fefff-e7e5-48a4-8e34-8eff1f534111
+    }
+    Line {
+      SrcBlock                "From4"
+      SrcPort                 1
+      DstBlock                "Display12"
+      DstPort                 1
+      #GUID                   29730b3e-246c-404b-a3ab-973766dee97a
+    }
+    Line {
+      SrcBlock                "From5"
+      SrcPort                 1
+      DstBlock                "Display13"
+      DstPort                 1
+      #GUID                   2ab9bf07-405a-4e9f-aacc-4b44e5838587
+    }
+    Line {
+      SrcBlock                "From6"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   89f2527a-5d7a-4eee-9b7c-4758ef90d957
+    }
+    Line {
+      SrcBlock                "From7"
+      SrcPort                 1
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   9412788f-ca18-44f6-a330-9478ef436134
+    }
+    Line {
+      SrcBlock                "From8"
+      SrcPort                 1
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   5a21a4bd-6fc5-4ac3-b1f7-142144d847ff
+    }
+    Line {
+      SrcBlock                "From9"
+      SrcPort                 1
+      DstBlock                "Display3"
+      DstPort                 1
+      #GUID                   deb68285-caf0-4300-81eb-503014bbc90b
+    }
+    Line {
+      SrcBlock                "ISSW"
+      SrcPort                 1
+      DstBlock                "Goto1"
+      DstPort                 1
+      #GUID                   96fd9022-7d35-4645-98d0-4325ec43f458
+    }
+    Line {
+      SrcBlock                "RS485_diagnostics"
+      SrcPort                 1
+      DstBlock                "Display6"
+      DstPort                 1
+      #GUID                   12a29021-624b-47dc-a097-cf12cfd2685c
+    }
+    Line {
+      SrcBlock                "RS485_diagnostics"
+      SrcPort                 2
+      DstBlock                "Display7"
+      DstPort                 1
+      #GUID                   9c1e6196-a183-4f66-9129-888e8a034898
+    }
+    Line {
+      SrcBlock                "RS485_diagnostics"
+      SrcPort                 3
+      DstBlock                "Display8"
+      DstPort                 1
+      #GUID                   d6d33742-1003-4579-93e4-e23a8a27aa11
+    }
+    Line {
+      SrcBlock                "RS485_diagnostics"
+      SrcPort                 4
+      DstBlock                "Display9"
+      DstPort                 1
+      #GUID                   877ee938-fca8-4e53-ab66-bc9d726b82da
+    }
+    Line {
+      SrcBlock                "RS485_diagnostics"
+      SrcPort                 5
+      DstBlock                "Display10"
+      DstPort                 1
+      #GUID                   38cfa828-b21e-4c60-8462-b86b9fdaaf5d
+    }
+    Annotation {
+      Position                [235, 55]
+      Text                    "Go to MBM and MBS driver configuration and pres"
+"s \"Configure\" for Modbus configuration.\n\nRead the README.md file for detai"
+"ls."
+      #GUID                   a40f6bcb-a399-4350-9820-df439134e462
+    }
+    Annotation {
+      Position                [225, 130]
+      Text                    "Data sent to Slave station"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   a94717cf-66fb-418e-bad0-8c38d95256a1
+    }
+    Annotation {
+      Position                [440, 130]
+      Text                    "Data received by Slave station"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   c7089fc9-1dc1-4203-8011-70e5fb5a70fb
+    }
+    Annotation {
+      Position                [280, 20]
+      Text                    "Modbus RTU loopback, /dev/ttyAMA0 -> /dev/ttyUS"
+"B0, baudrate 19200"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   30d98409-46ee-49e2-a817-39a3a8d14549
+    }
+    Annotation {
+      Position                [445, 430]
+      Text                    "Monarco HAT RS-485 diagnostics"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   fa9832a2-ade8-498a-99d6-e98fb373d789
+    }
+    Annotation {
+      Position                [725, 655]
+      Text                    "Bytes received via RS-485"
+      #GUID                   23e8d8b8-9b6c-46d6-a48b-acf533034bce
+    }
+    Annotation {
+      Position                [730, 685]
+      Text                    "Bytes transmitted via RS-485"
+      #GUID                   71943564-9b2e-4111-8e8e-50c5442c1131
+    }
+    Annotation {
+      Position                [725, 720]
+      Text                    "Framing errors on RS-485"
+      #GUID                   552cd715-f758-4dfb-82c4-09dc7ae2e550
+    }
+    Annotation {
+      Position                [720, 750]
+      Text                    "Parity errors on RS-485"
+      #GUID                   d790398e-a863-4967-9cf9-24892e7fb91e
+    }
+  }
+}
