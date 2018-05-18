@@ -49,31 +49,8 @@ REX.HMI.init = function(){
      * {alias:<alias of the signal>, cstring:<Connection string>, write: true | false}    
      */ 
     
-    var spacer1 = {
-        column:1,
-        name:'',
-        background_color:"#eef1f0",
-        rows:[
-            {type: 'ES'},
-            {type: 'ES'},
-            {type: 'ES'}
-        ]
-    };
-    REX.WebBuDi.addSection(spacer1);
-
-    var links1 = {
-        column:1,
-        name:'',
-        background_color:"#A66C20",
-        rows:[
-            {type: 'LINK', desc:"Red indicators", label:"WebBuDi HMI", target_url: 'index-red.html'},
-            {type: 'LINK', desc:"Red indicators", label:"Graphic HMI", target_url: 'designer-red.html'}
-        ]
-    };
-    REX.WebBuDi.addSection(links1);
-    
     var indicators = {
-        column:2,
+        column:1,
         name:'Green indicators',
         rows:[
             {name: 'Constant', alias: 'constant', cstring: 'myproject_task.CNB:Y', type: 'DR', true_color:'green'},
@@ -82,40 +59,28 @@ REX.HMI.init = function(){
         ]
     };
     REX.WebBuDi.addSection(indicators);
+
+    var links1 = {
+        column:1,
+        name:'Links to WebBuDi pages',
+        rows:[
+            {type: 'LINK', desc:"Red indicators", label:"RED", target_url: 'index-red.html'},
+            {type: 'LINK', desc:"Green indicators", label:"GREEN", target_url: 'index.html'},
+            {type: 'LINK', desc:"Blue indicators", label:"BLUE", target_url: 'index-blue.html'}
+        ]
+    };
+    REX.WebBuDi.addSection(links1);
     
     var links2 = {
-        column:2,
-        name:'Links to other HMI pages',
-        background_color:"#A66C20",
+        column:1,
+        name:'Links to HMI Designer pages',
         rows:[
-            {type: 'LINK', desc:"Green indicators", label:"WebBuDi HMI", target_url: 'index.html'},
-            {type: 'LINK', desc:"Green indicators", label:"Graphic HMI", target_url: 'designer-green.html'}
+            {type: 'LINK', desc:"Red indicators", label:"RED", target_url: 'designer-red.html'},            
+            {type: 'LINK', desc:"Green indicators", label:"GREEN", target_url: 'designer-green.html'},
+            {type: 'LINK', desc:"Blue indicators", label:"BLUE", target_url: 'designer-blue.html'}
         ]
     };
     REX.WebBuDi.addSection(links2);
-
-    var spacer3 = {
-        column:3,
-        background_color:"#eef1f0",
-        name:'',
-        rows:[
-            {type: 'ES'},
-            {type: 'ES'},
-            {type: 'ES'}
-        ]
-    };
-    REX.WebBuDi.addSection(spacer3);
-
-    var links3 = {
-        column:3,
-        name:'',
-        background_color:"#A66C20",
-        rows:[
-            {type: 'LINK', desc:"Blue indicators", label:"WebBuDi HMI", target_url: 'index-blue.html'},
-            {type: 'LINK', desc:"Blue indicators", label:"Graphic HMI", target_url: 'designer-blue.html'}
-        ]
-    };
-    REX.WebBuDi.addSection(links3);
 
     // Set refresh rate (Default: 500 ms)
     REX.HMI.setRefreshRate(100);
