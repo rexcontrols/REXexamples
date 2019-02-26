@@ -1,0 +1,384 @@
+Model {
+  Name                    "subscriber_task"
+  Version                 3.0
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "subscriber_task"
+    Location                [252, 34, 814, 662]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    TiledPaperMargins       [0.196850, 0.196850, 0.196850, 0.196850]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ReportName              "simulink-default.rpt"
+    #GUID                   b1efc608-f54c-482f-8d84-a902872a8bc8
+    Block {
+      BlockType               Reference
+      Name                    "CNB1_SUB2_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [90, 503, 110, 517]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "white"
+      #GUID                   bd37a0ea-b592-4a8f-9b38-4c1c18f41fd9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [295, 338, 315, 352]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "white"
+      #GUID                   00204910-682d-46f7-b79c-93557e7b9a96
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [295, 523, 315, 537]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "white"
+      #GUID                   ac5beadb-513f-43bd-a77d-74fa7eebb6ec
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_SUB1_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [90, 318, 110, 332]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "white"
+      #GUID                   4cd95dd4-02fb-48e3-bdd8-0f0cb0fb2293
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [250, 213, 330, 237]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   42fd23c1-f039-476c-be82-f32d6154cc23
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [310, 388, 390, 412]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   22b1e436-167f-46a6-a77e-c5889355626d
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Position                [310, 568, 390, 592]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   3d2f40b5-126c-405f-a7ac-dd6c328abe1c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Position                [425, 263, 505, 287]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      FontSize                10
+      #GUID                   4335ffb4-5741-4c0d-859f-390d990f283b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display4"
+      Position                [425, 448, 505, 472]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      FontSize                10
+      #GUID                   cdd6eb12-25dc-422d-819a-9c7cc0f0d059
+    }
+    Block {
+      BlockType               From
+      Name                    "From6"
+      Position                [35, 218, 220, 232]
+      ShowName                off
+      GotoTag                 "MQTT__ConnectionStatus"
+      BackgroundColor         "yellow"
+      #GUID                   6ae0dd65-a58c-4a2e-bcab-fbeba06dedf8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MQTT__MqttSubscribe_topic1"
+      Ports                   [1, 4, 0, 0, 0]
+      Position                [150, 289, 215, 356]
+      SourceBlock             "mqttlib/MqttSubscribe"
+      topic                   "rexygen/topic1"
+      QoS                     "1: QoS0 (At most once)"
+      type                    "1: string"
+      mode                    "1: Last value"
+      defBuffSize             2048
+      BackgroundColor         "cyan"
+      FontSize                10
+      #GUID                   a1391832-feb9-4a31-ac37-e3565e9b25cf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MQTT__MqttSubscribe_topic2"
+      Ports                   [1, 4, 0, 0, 0]
+      Position                [150, 474, 215, 541]
+      SourceBlock             "mqttlib/MqttSubscribe"
+      topic                   "rexygen/topic2"
+      QoS                     "1: QoS0 (At most once)"
+      type                    "2: double"
+      mode                    "1: Last value"
+      defBuffSize             2048
+      BackgroundColor         "cyan"
+      FontSize                10
+      #GUID                   9d116847-8185-4bf4-a811-262f0137afea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "STOR"
+      Ports                   [1, 2, 0, 0, 0]
+      Position                [280, 268, 320, 297]
+      SourceBlock             "stringlib/STOR"
+      yerr                    0
+      #GUID                   8a28ab44-91c4-4330-a511-34d5d2d127c9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_SUB1"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [360, 293, 405, 367]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double (F64)"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      0
+      Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
+      User                    ""
+      FontSize                10
+      #GUID                   630d62f2-15c0-4531-8e4f-fb5d18f946b9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_SUB2"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [360, 478, 405, 552]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double (F64)"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      0
+      Title                   "Trend Title"
+      timesrc                 "1: CORETIMER"
+      User                    ""
+      #GUID                   3d900edd-1cb7-46fe-98b9-f2c8faee476d
+    }
+    Line {
+      SrcBlock                "CNB1_SUB2_RUN"
+      SrcPort                 1
+      DstBlock                "MQTT__MqttSubscribe_topic2"
+      DstPort                 1
+      #GUID                   982e5692-75c1-435c-a653-02dcd406acc1
+    }
+    Line {
+      SrcBlock                "CNB_RUN1"
+      SrcPort                 1
+      DstBlock                "TRND_SUB1"
+      DstPort                 5
+      #GUID                   b24936ea-b632-42b7-83d3-033a36eca530
+    }
+    Line {
+      SrcBlock                "CNB_RUN2"
+      SrcPort                 1
+      DstBlock                "TRND_SUB2"
+      DstPort                 5
+      #GUID                   c914f7fe-7b9a-465a-a367-1dca6d88c419
+    }
+    Line {
+      SrcBlock                "CNB_SUB1_RUN"
+      SrcPort                 1
+      DstBlock                "MQTT__MqttSubscribe_topic1"
+      DstPort                 1
+      #GUID                   ef63f264-9953-41c0-8e97-da1c7c720d92
+    }
+    Line {
+      SrcBlock                "From6"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   062ccbe4-5ab5-4a93-89c3-fd4bf61976a5
+    }
+    Line {
+      SrcBlock                "MQTT__MqttSubscribe_topic1"
+      SrcPort                 1
+      Points                  [45, 0]
+      DstBlock                "STOR"
+      DstPort                 1
+      #GUID                   ff5acf5b-e30e-4aa9-95e4-304feb0af2ad
+    }
+    Line {
+      SrcBlock                "MQTT__MqttSubscribe_topic1"
+      SrcPort                 2
+      DstBlock                "TRND_SUB1"
+      DstPort                 2
+      #GUID                   9348265c-8a24-4939-b57e-823140d7d4ab
+    }
+    Line {
+      SrcBlock                "MQTT__MqttSubscribe_topic1"
+      SrcPort                 4
+      Points                  [45, 0; 0, 55]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   c2fa6873-5ce3-4104-b58b-0bbfb771bbc0
+    }
+    Line {
+      SrcBlock                "MQTT__MqttSubscribe_topic2"
+      SrcPort                 1
+      Points                  [45, 0; 0, -25; 80, 0]
+      #GUID                   a8a22709-abab-450f-ada7-208b592255c3
+      Branch {
+        DstBlock                "Display4"
+        DstPort                 1
+        #GUID                   76dc98b5-7591-4cbd-b7be-ea11d7e759ce
+      }
+      Branch {
+        DstBlock                "TRND_SUB2"
+        DstPort                 1
+        #GUID                   229e2f73-1c9c-4c1d-a25d-5271115156d1
+      }
+    }
+    Line {
+      SrcBlock                "MQTT__MqttSubscribe_topic2"
+      SrcPort                 2
+      DstBlock                "TRND_SUB2"
+      DstPort                 2
+      #GUID                   0f4dd408-7668-45a9-adb0-74ac42523881
+    }
+    Line {
+      SrcBlock                "MQTT__MqttSubscribe_topic2"
+      SrcPort                 4
+      Points                  [45, 0; 0, 50]
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   a9bbd026-a774-456a-a9a6-f82a531e3b28
+    }
+    Line {
+      SrcBlock                "STOR"
+      SrcPort                 1
+      Points                  [20, 0]
+      #GUID                   96fd86f9-45ad-468a-8a30-deced7d813ec
+      Branch {
+        DstBlock                "Display3"
+        DstPort                 1
+        #GUID                   1217cf78-f7b3-4f1b-be1a-d8b5428092e4
+      }
+      Branch {
+        DstBlock                "TRND_SUB1"
+        DstPort                 1
+        #GUID                   498efd4c-9a4e-460f-b99b-8fc97253c397
+      }
+    }
+    Annotation {
+      Position                [110, 20]
+      Text                    "MQTT subscriber station"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   30d98409-46ee-49e2-a817-39a3a8d14549
+    }
+    Annotation {
+      Position                [195, 45]
+      Text                    "Subscriber uses public broker 'broker.hivemq.co"
+"m'."
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   37d10f68-fd3f-48ac-824a-fa3906a11f7c
+    }
+    Annotation {
+      Position                [270, 70]
+      Text                    "Subscriber listens to data on topics 'rexygen/t"
+"opic1' and 'rexygen/topic2'."
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   1e45e4e6-88dd-4bed-9fcd-063d546fd91d
+    }
+    Annotation {
+      Position                [125, 200]
+      Text                    "Status of connection to MQTT broker"
+      FontWeight              "bold"
+      FontSize                12
+      #GUID                   ab029736-afc5-4fb4-9f26-46fb7ffc6740
+    }
+    Annotation {
+      Position                [230, 125]
+      Text                    "Go to MQTT driver configuration and press \"Con"
+"figure\" to change broker address.\nGo to MQTT__MqttSubscribe_topic blocks con"
+"figuration to change the topic.\n\nRead the README.md file for details."
+      #GUID                   907684cb-6570-42dd-8f4c-fd7fe9201891
+    }
+  }
+}

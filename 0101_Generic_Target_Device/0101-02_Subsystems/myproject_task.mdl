@@ -1,14 +1,14 @@
 Model {
   Name                    "myproject_task"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -40,7 +40,7 @@ Model {
       BlockType               Reference
       Name                    "CNR_myvalue1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [125, 88, 160, 102]
+      Position                [125, 108, 160, 122]
       SourceBlock             "mathlib/CNR"
       ycn                     2
       BackgroundColor         "magenta"
@@ -50,7 +50,7 @@ Model {
       BlockType               Reference
       Name                    "CNR_myvalue2"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [125, 143, 160, 157]
+      Position                [125, 183, 160, 197]
       SourceBlock             "mathlib/CNR"
       ycn                     7
       BackgroundColor         "magenta"
@@ -60,7 +60,7 @@ Model {
       BlockType               Display
       Name                    "Display"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [355, 83, 435, 107]
+      Position                [355, 103, 435, 127]
       Format                  "short"
       ShowName                off
       Decimation              1
@@ -72,7 +72,7 @@ Model {
       BlockType               Display
       Name                    "Display1"
       Ports                   [1, 0, 0, 0, 0]
-      Position                [355, 138, 435, 162]
+      Position                [355, 178, 435, 202]
       Format                  "short"
       ShowName                off
       Decimation              1
@@ -84,8 +84,9 @@ Model {
       BlockType               SubSystem
       Name                    "My_amplifier"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [255, 88, 280, 102]
+      Position                [255, 108, 280, 122]
       ShowPortLabels          on
+      BackgroundColor         "cyan"
       MaskType                "REX sequence"
       MaskIconFrame           on
       MaskIconOpaque          on
@@ -175,8 +176,9 @@ Model {
       BlockType               SubSystem
       Name                    "My_amplifier_with_mask"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [255, 143, 280, 157]
+      Position                [255, 183, 280, 197]
       ShowPortLabels          on
+      BackgroundColor         "cyan"
       MaskType                "REX sequence"
       MaskPromptString        "Amplifier gain|Amplifier offset"
       MaskStyleString         "edit,edit"
@@ -312,14 +314,20 @@ Model {
       #GUID                   ccb8a548-03c7-4e01-a1ef-1328334cc4bf
     }
     Annotation {
-      Position                [515, 150]
+      Position                [515, 190]
       Text                    "default: 7*2+6=20"
       #GUID                   24466ca9-1b4b-430f-a73e-8ea4d408f3da
     }
     Annotation {
-      Position                [515, 95]
+      Position                [515, 115]
       Text                    "default: 2*3+5=11"
       #GUID                   39deb5d2-5ec2-4a63-a621-7e608c30ec70
+    }
+    Annotation {
+      Position                [275, 235]
+      Text                    "Use Ctrl+U or \n\"Look under mask\" \nfrom cont"
+"ext menu"
+      #GUID                   88ac0d8f-a1c5-42dc-943e-7231ca39a263
     }
   }
 }

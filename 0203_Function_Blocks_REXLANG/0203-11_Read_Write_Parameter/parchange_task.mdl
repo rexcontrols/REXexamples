@@ -1,14 +1,14 @@
 Model {
   Name                    "parchange_task"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,26 +21,26 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
   }
   System {
     Name                    "parchange_task"
-    Location                [342, 32, 697, 418]
+    Location                [342, 32, 766, 397]
     #GUID                   206c44a0-0d1d-4373-b5a3-ccdfd28105e5
     Block {
       BlockType               Reference
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [225, 208, 245, 222]
+      Position                [275, 253, 295, 267]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   7c2bbb30-1a62-4674-b282-c1942d852e1f
@@ -49,7 +49,7 @@ Model {
       BlockType               Reference
       Name                    "CNI"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [185, 167, 205, 183]
+      Position                [240, 142, 260, 158]
       SourceBlock             "mathlib/CNI"
       icn                     1
       #GUID                   05c740a7-ff7e-4cb2-9e78-f9fd49dd668d
@@ -58,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "CNI1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [30, 108, 50, 122]
+      Position                [30, 108, 85, 122]
       SourceBlock             "mathlib/CNI"
       icn                     100
       BackgroundColor         "magenta"
@@ -68,7 +68,7 @@ Model {
       BlockType               Reference
       Name                    "CNR"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [185, 203, 205, 217]
+      Position                [240, 178, 260, 192]
       SourceBlock             "mathlib/CNR"
       ycn                     1
       #GUID                   c7f65d45-40fe-4ca9-b8b5-d7d4552ec5dd
@@ -77,7 +77,7 @@ Model {
       BlockType               Reference
       Name                    "CNR1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [30, 138, 50, 152]
+      Position                [30, 138, 85, 152]
       SourceBlock             "mathlib/CNR"
       ycn                     "15.3"
       BackgroundColor         "magenta"
@@ -87,7 +87,7 @@ Model {
       BlockType               Reference
       Name                    "CNS"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [185, 248, 205, 262]
+      Position                [240, 303, 260, 317]
       SourceBlock             "stringlib/CNS"
       scv                     ""
       nmax                    0
@@ -97,18 +97,54 @@ Model {
       BlockType               Reference
       Name                    "CNS1"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [30, 168, 50, 182]
+      Position                [10, 168, 105, 182]
       SourceBlock             "stringlib/CNS"
-      scv                     "rex"
+      scv                     "rexygen"
       nmax                    0
       BackgroundColor         "magenta"
       #GUID                   b4e57c18-28d4-4f57-8a39-03b1f85387b9
     }
     Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 138, 385, 162]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   eca67901-5510-46a3-a1ea-c8d47a72d80a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 173, 385, 197]
+      Format                  "short"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   62122243-cb44-48c9-b7e1-9b077c3f1acc
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [305, 298, 385, 322]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   20830600-9c89-4f5a-afce-11276d30b415
+    }
+    Block {
       BlockType               Reference
       Name                    "REXLANG"
       Ports                   [18, 17, 0, 0, 0]
-      Position                [85, 108, 135, 292]
+      Position                [135, 108, 185, 292]
       SourceBlock             "speclib/REXLANG"
       srcname                 "parchange.c"
       srctype                 "1: C-like"
@@ -131,13 +167,14 @@ Model {
       p13                     ""
       p14                     ""
       p15                     ""
+      #RTFlags                1025
       #GUID                   947eb4b3-e375-4746-92bb-63417c9ebfa9
     }
     Block {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [265, 163, 310, 237]
+      Position                [315, 208, 360, 282]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       1000
@@ -152,8 +189,8 @@ Model {
       id                      1
       Title                   "Trend Title"
       User                    ""
+      timesrc                 1
       #GUID                   01e1c52e-0327-41e4-b866-0e15eb565a5d
-        timesrc       1
     }
     Line {
       SrcBlock                "CNB"
@@ -165,14 +202,24 @@ Model {
     Line {
       SrcBlock                "CNI"
       SrcPort                 1
-      DstBlock                "TRND"
-      DstPort                 1
-      #GUID                   eb42783e-d578-45c0-b3a4-661064e19aee
+      Points                  [15, 0]
+      #GUID                   94fc52b6-6437-4a2a-ace0-9ebe7d399644
+      Branch {
+        DstBlock                "Display"
+        DstPort                 1
+        #GUID                   86aa48d9-b9f0-42d2-aef1-c9182dcc5b3e
+      }
+      Branch {
+        Points                  [0, 70]
+        DstBlock                "TRND"
+        DstPort                 1
+        #GUID                   a61059c7-3dd2-4fd0-966f-12ebfe3a418c
+      }
     }
     Line {
       SrcBlock                "CNI1"
       SrcPort                 1
-      Points                  [10, 0; 0, 20]
+      Points                  [25, 0; 0, 20]
       DstBlock                "REXLANG"
       DstPort                 3
       #GUID                   34215cf1-26c1-470c-a2c3-2c331de15d24
@@ -180,10 +227,19 @@ Model {
     Line {
       SrcBlock                "CNR"
       SrcPort                 1
-      Points                  [5, 0; 0, -25]
-      DstBlock                "TRND"
-      DstPort                 2
-      #GUID                   79037759-2e76-4cac-834d-1775e538277f
+      Points                  [5, 0]
+      #GUID                   58d27192-0baf-4d8f-95ae-e15286e1cd44
+      Branch {
+        DstBlock                "Display1"
+        DstPort                 1
+        #GUID                   a3b83199-2fed-47fb-9c7d-6ab3f1cd77ca
+      }
+      Branch {
+        Points                  [0, 45]
+        DstBlock                "TRND"
+        DstPort                 2
+        #GUID                   c9bec244-7bcd-42a9-ab19-71a45975a873
+      }
     }
     Line {
       SrcBlock                "CNR1"
@@ -193,12 +249,35 @@ Model {
       #GUID                   5706c6cd-eece-474b-983b-2635a3511968
     }
     Line {
+      SrcBlock                "CNS"
+      SrcPort                 1
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   8a41c64f-a479-4b9b-9738-874d1a2c6d88
+    }
+    Line {
       SrcBlock                "CNS1"
       SrcPort                 1
-      Points                  [10, 0; 0, -20]
+      Points                  [5, 0; 0, -20]
       DstBlock                "REXLANG"
       DstPort                 5
       #GUID                   a293ddf6-f7af-4f05-a1d0-68fa2c77cbc2
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 2
+      Points                  [30, 0; 0, 110]
+      DstBlock                "TRND"
+      DstPort                 3
+      #GUID                   7e17b11c-86a5-43bf-bfcf-9732beb3e338
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 3
+      Points                  [20, 0; 0, 110]
+      DstBlock                "TRND"
+      DstPort                 4
+      #GUID                   8f71ebd1-91d1-4df0-bae7-a6a084bc8de3
     }
     Annotation {
       Position                [140, 45]

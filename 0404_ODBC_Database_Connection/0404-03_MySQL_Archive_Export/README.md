@@ -27,7 +27,7 @@ tick x ntick0 = 0.05 x 2 = 0.1
 The archive is exported in 10 second intervals. See the DB function block,
 tick x factor = 0.05 x 200 = 10 
 
-## Prerequisities ##
+## Prerequisites ##
 
 - *REXYGEN Runtime Core* and DbDrv modules must be installed and running on the target device.
 - ODBC connector for MySQL database is installed on the target device.  

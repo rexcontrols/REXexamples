@@ -1,14 +1,14 @@
 Model {
   Name                    "logo_integration_task"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -62,7 +62,7 @@ Model {
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
       Position                [635, 463, 655, 477]
-      SourceBlock             "lib/CNB"
+      SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   a3024711-0061-4d9a-b30f-fe360a4d7810
     }
@@ -71,7 +71,7 @@ Model {
       Name                    "CNB1"
       Ports                   [0, 1, 0, 0, 0]
       Position                [260, 668, 280, 682]
-      SourceBlock             "lib/CNB"
+      SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   9fd7a7dd-1a67-41d1-aa6d-4f4edcfa2c7e
     }
@@ -80,7 +80,7 @@ Model {
       Name                    "CNB2"
       Ports                   [0, 1, 0, 0, 0]
       Position                [260, 343, 280, 357]
-      SourceBlock             "lib/CNB"
+      SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   af9b7553-2534-41d7-b01f-8bf056ff714f
     }
@@ -89,7 +89,7 @@ Model {
       Name                    "CNB3"
       Ports                   [0, 1, 0, 0, 0]
       Position                [260, 553, 280, 567]
-      SourceBlock             "lib/CNB"
+      SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   cec80c8d-74f1-43dd-bdbd-8eefeb5054e7
     }
@@ -98,7 +98,7 @@ Model {
       Name                    "CNB_BL_AMBER"
       Ports                   [0, 1, 0, 0, 0]
       Position                [455, 633, 475, 647]
-      SourceBlock             "lib/CNB"
+      SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
       #GUID                   b796b2d8-3d83-4263-bab7-8b9e4c9511b6
@@ -108,7 +108,7 @@ Model {
       Name                    "CNB_BL_WHITE"
       Ports                   [0, 1, 0, 0, 0]
       Position                [455, 598, 475, 612]
-      SourceBlock             "lib/CNB"
+      SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
       #GUID                   c58e43ab-4f3c-4670-957f-eb7bab0d43b7
@@ -440,7 +440,7 @@ Model {
       Name                    "RTOI"
       Ports                   [1, 1, 0, 0, 0]
       Position                [200, 483, 225, 497]
-      SourceBlock             "lib/RTOI"
+      SourceBlock             "mathlib/RTOI"
       #GUID                   77693c8c-357c-4532-9b64-bc9d92c14453
     }
     Block {
@@ -448,7 +448,7 @@ Model {
       Name                    "SG"
       Ports                   [0, 1, 0, 0, 0]
       Position                [130, 483, 155, 497]
-      SourceBlock             "lib/SG"
+      SourceBlock             "genlib/SG"
       isig                    "1: SINE"
       amp                     500
       freq                    "0.1"
@@ -483,7 +483,7 @@ Model {
       Name                    "TRND_Analog"
       Ports                   [6, 5, 0, 0, 0]
       Position                [680, 418, 725, 492]
-      SourceBlock             "lib/TRND"
+      SourceBlock             "arclib/TRND"
       n                       2
       l                       9000
       btype                   "8: Double"
@@ -504,7 +504,7 @@ Model {
       Name                    "TRND_Counter"
       Ports                   [6, 5, 0, 0, 0]
       Position                [300, 298, 345, 372]
-      SourceBlock             "lib/TRND"
+      SourceBlock             "arclib/TRND"
       n                       4
       l                       9000
       btype                   "8: Double"
@@ -525,7 +525,7 @@ Model {
       Name                    "TRND_External"
       Ports                   [6, 5, 0, 0, 0]
       Position                [300, 508, 345, 582]
-      SourceBlock             "lib/TRND"
+      SourceBlock             "arclib/TRND"
       n                       1
       l                       9000
       btype                   "8: Double"
@@ -546,7 +546,7 @@ Model {
       Name                    "TRND_Inputs"
       Ports                   [6, 5, 0, 0, 0]
       Position                [300, 623, 345, 697]
-      SourceBlock             "lib/TRND"
+      SourceBlock             "arclib/TRND"
       n                       4
       l                       9000
       btype                   "8: Double"

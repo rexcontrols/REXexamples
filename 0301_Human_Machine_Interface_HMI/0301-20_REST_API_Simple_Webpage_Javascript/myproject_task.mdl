@@ -1,14 +1,14 @@
 Model {
   Name                    "myproject_task"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -49,7 +49,6 @@ Model {
     Block {
       BlockType               Display
       Name                    "Display"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [200, 173, 280, 197]
       Format                  "short"
       ShowName                off
@@ -83,17 +82,22 @@ Model {
       #GUID                   dc641ccd-24ed-492c-aeb1-59a3871a34c7
     }
     Annotation {
-      Position                [170, 45]
-      Text                    "See the README.md file in project folder for de"
-"tailed information."
-      #GUID                   693ee5bc-de59-4cfd-8764-c2fdb5b9c02f
-    }
-    Annotation {
-      Position                [105, 20]
-      Text                    "REST API  project - task"
+      Position                [15, 15]
+      Text                    "REST API project - task"
       FontWeight              "bold"
       FontSize                16
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
       #GUID                   e3601f30-0093-42de-8c87-47483416558a
+    }
+    Annotation {
+      Position                [15, 40]
+      Text                    "See the README.md file in project folder for de"
+"tailed information."
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      FontSize                10
+      #GUID                   693ee5bc-de59-4cfd-8764-c2fdb5b9c02f
     }
   }
 }

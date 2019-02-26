@@ -1,20 +1,19 @@
 Model {
   Name                    "minimal_task"
   Version                 3.0
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
     ShowName                on
-    BlockRotation           0
-    BlockMirror             off
+    Orientation             "right"
   }
   AnnotationDefaults {
     HorizontalAlignment     "center"
@@ -22,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -144,6 +143,7 @@ Model {
       p15                     0
       fname                   ""
       BackgroundColor         "cyan"
+      #RTFlags                1025
       #GUID                   bf1ba61a-13b6-41a1-a2c7-104b76363ee0
     }
     Block {
@@ -166,8 +166,8 @@ Model {
       arc                     0
       id                      1
       Title                   "Trend Title"
+      timesrc                 1
       #GUID                   b4a51372-9e86-435c-8aed-543a7f173f1b
-        timesrc       1
     }
     Line {
       SrcBlock                "CNB_RUN"

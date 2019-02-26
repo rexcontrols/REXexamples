@@ -6,7 +6,7 @@ exchange between two devices over the Modbus RTU protocol using Monarco HAT.
 
 The example is meant to communicate with Advantech ADAM 4024 4-channel Analog
 Output Module, which serves as a slave station. Therefore the master station
-is implemented in REXYGEN . For testing purposes there is also Advantech
+is implemented in REXYGEN. For testing purposes there is also Advantech
 ADAM 4024 simulator available in a separate folder.
 
 ## Prerequisites ##
@@ -39,17 +39,17 @@ documentation (see below).
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
-- [Getting started with REXYGEN  and Monarco HAT](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_MonarcoHAT_RPi_ENG.pdf)
+- [Getting started with REXYGEN and Monarco HAT](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_MonarcoHAT_RPi_ENG.pdf)
 - [MonarcoDrv - Monarco HAT driver](https://www.rexygen.com/doc/PDF/ENGLISH/MonarcoDrv_ENG.pdf)
 - [MbDrv - Modbus driver](https://www.rexygen.com/doc/PDF/ENGLISH/MbDrv_ENG.pdf)
 - [Advantech ADAM 4000 Series User Manual](http://advdownload.advantech.com/productfile/Downloadfile1/1-123YBOV/UM-ADAM-4000_SERIES-ED0-1-EN.PDF)
-- [Function blocks of REXYGEN ](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
 - [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
-- [Complete documentation of REXYGEN ](http://www.rexygen.com/documentation-and-support)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
 - Visit the [Monarco HAT website](http://www.monarco.io)
 - Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REXYGEN .
+automation and control solutions using REXYGEN.

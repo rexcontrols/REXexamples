@@ -8,7 +8,7 @@ This module measures temperature, relative humidity and light intensity.
 The algorithm runs each 500 milliseconds (0.5 s). See the EXEC function block,  
 tick x ntick0 = 0.05 x 10 = 0.5s 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* and OwsDrv modules must be installed and running on the target 
   device (e.g. Raspberry Pi).
 - Owserver (part of the OWFS package) must be installed, correctly configured 

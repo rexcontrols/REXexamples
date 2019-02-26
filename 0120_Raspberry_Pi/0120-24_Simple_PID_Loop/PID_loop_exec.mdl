@@ -1,14 +1,14 @@
 Model {
   Name                    "PID_loop_exec"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -65,7 +65,7 @@ Model {
       SourceDir               "hmisrc"
       GenerateWebWatch        on
       GenerateRexHMI          on
-      RedirectToHMI           off  
+      RedirectToHMI           off
       Compression             off
       #GUID                   e3d1d33c-7373-4a2a-9c18-03c3f2c0f8ee
     }
@@ -112,20 +112,6 @@ Model {
     }
     Block {
       BlockType               Reference
-      Name                    "PID_loop_process"
-      Ports                   [1, 1, 0, 0, 0]
-      Position                [190, 223, 240, 237]
-      SourceBlock             "execlib/TASK"
-      factor                  1
-      start                   1
-      stop                    2
-      stack                   10240
-      filename                ""
-      MDLOPEN                 on
-      #GUID                   830d85cc-ff2f-4ab9-80ae-a9fcafbc22e0
-    }
-    Block {
-      BlockType               Reference
       Name                    "RPI"
       Ports                   [1, 1, 0, 0, 0]
       Position                [100, 118, 150, 132]
@@ -167,13 +153,6 @@ Model {
       DstBlock                "PID_loop_control"
       DstPort                 1
       #GUID                   cff4a95d-20ef-4f5c-bfea-6326f4863790
-    }
-    Line {
-      SrcBlock                "PID_loop_control"
-      SrcPort                 1
-      DstBlock                "PID_loop_process"
-      DstPort                 1
-      #GUID                   732f054d-885e-4e3e-98dc-71d0018425ec
     }
     Line {
       SrcBlock                "RPI"

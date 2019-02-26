@@ -1,14 +1,14 @@
 Model {
   Name                    "weather_task"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -42,10 +42,11 @@ Model {
       Ports                   [1, 2, 0, 0, 0]
       Position                [205, 88, 235, 112]
       SourceBlock             "analoglib/CNDR"
-      n                       2
+      n                       7
       SATF                    on
       up                      [-10 -5 0 5 10 15 20]
       yp                      [ 50 90 80 70 50 20 0 ]
+      FontSize                10
       #GUID                   2d1c46e7-62a8-4c7b-8139-bdccc01bb8c1
     }
     Block {

@@ -1,0 +1,53 @@
+Modbus {
+  Name                    "/dev/ttyAMA0"
+  BaudRate                115200
+  Parity                  0
+  SyncTime                0
+  SpaceTime               0
+  Timeout                 100
+  Flags                   0
+  Gap                     10000
+  #GUID                   03e1fa24-d538-4f0b-bd08-fbd555f8935a
+  Item {
+    Name                    "writeReg0"
+    SlaveAdr                1
+    RegisterAdr             2048
+    Type                    0x00000104
+    Count                   1
+  }
+  Item {
+    Name                    "writeReg1"
+    SlaveAdr                1
+    RegisterAdr             2049
+    Type                    0x00000184
+    Count                   1
+  }
+  Item {
+    Name                    "writeReg2"
+    SlaveAdr                1
+    RegisterAdr             2050
+    Type                    0x00000104
+    Count                   1
+  }
+  Item {
+    Name                    "writeReg3"
+    SlaveAdr                1
+    RegisterAdr             2051
+    Type                    0x00000184
+    Count                   1
+  }
+  Item {
+    Name                    "writeFloat"
+    SlaveAdr                1
+    RegisterAdr             2052
+    Type                    0x00000144
+    Count                   2
+  }
+  Item {
+    Name                    "writeDouble"
+    SlaveAdr                1
+    RegisterAdr             2054
+    Type                    0x00200104
+    Count                   4
+  }
+}

@@ -53,7 +53,7 @@ REX.HMI.init = function(){
         column: 1,
         title: 'User controls',
         rows: [
-            {alias: 'do1_write', desc: 'Output 1', cstring: 'blink_task.CNB_DO1:YCN', type: 'DW'},
+            {alias: 'do1_write', desc: 'Output 1', cstring: 'blink_task.CNB_O1:YCN', type: 'DW'},
             {type: 'ES'}
         ]
     };

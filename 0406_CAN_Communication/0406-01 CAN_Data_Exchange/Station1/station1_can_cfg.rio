@@ -1,0 +1,4 @@
+CANopen {
+  NetAdapter              "can0"
+  NodeMode                0x108
+}

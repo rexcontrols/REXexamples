@@ -21,11 +21,11 @@ for instructions on deploying the HMI on the Raspberry Pi.
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
-- [Getting started with REXYGEN  and UniPi board](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_UniPi_ENG.pdf)
+- [Getting started with REXYGEN and UniPi board](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_UniPi_ENG.pdf)
 - [REXYGEN HMI User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenHMI_ENG.pdf)
-- [Function blocks of REXYGEN ](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
 - [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
-- [Complete documentation of REXYGEN ](http://www.rexygen.com/documentation-and-support)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 
@@ -33,4 +33,4 @@ for instructions on deploying the HMI on the Raspberry Pi.
 - Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org).
 - Visit the [REXYGEN webpage](http://www.rexygen.com) 
 for more information about the example projects and developing advanced 
-automation and control solutions using REXYGEN .
+automation and control solutions using REXYGEN.

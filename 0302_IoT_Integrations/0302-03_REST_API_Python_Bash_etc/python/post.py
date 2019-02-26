@@ -1,76 +1,57 @@
+import requests
 import json
-import urllib2
-import base64
 
-# Values to be written
-value_double = 17.89
-value_long = 1234
-value_bool = 1
-value_string = "External string"
+targetIPAddress = '192.168.1.100:8008'
+taskName = 'rest_api_task'
 
-# URLs of the data points
-url_double = 'http://192.168.1.100:8008/api/tasks/rest_api_task/CNR_IN:ycn'
-url_long = 'http://192.168.1.100:8008/api/tasks/rest_api_task/CNI_IN:icn'
-url_bool = 'http://192.168.1.100:8008/api/tasks/rest_api_task/CNB_IN:YCN'
-url_string = 'http://192.168.1.100:8008/api/tasks/rest_api_task/CNS_IN:scv'
+def RexInitSession(loginREX, passwordREX):
+    s = requests.Session()
+    s.auth = (loginREX, passwordREX)
+    s.headers.update({"Content-Type":"application/json","Accept":"application/json"})
+    
+    return s
+        
+def RexPost(session,connectionString, value):
+    # Build request
+    url = 'http://' + targetIPAddress + '/api/tasks/' + taskName + '/' +connectionString
+    data = json.dumps({"v":value})
+    # Send request
+    r = session.post(url,data)
+    # Process response
+    if r.status_code == 200:
+        ret = True
+        print(connectionString + " = " + str(value) + " successfully written.")
+    else:
+        ret = False
+        print(connectionString +" failed to write.")
+    return ret
 
-# Credentials
-user='admin'
-password = 'mypasswd'
+def RexGet(session, connectionString):
+    # Build request
+    url = 'http://' + targetIPAddress + '/api/tasks/' + taskName + '/' +connectionString
+    # Send request
+    r = session.get(url)
+    data = r.json()['v']
+    # Process response
+    if r.status_code == 200:
+        ret = data
+        print(connectionString + " = " + str(data))
+    else:
+        ret = False
+        print(connectionString +" failed to read.")
+    return ret
 
-# Create HTTP POST request for data type double
-data = json.dumps({"v":value_double})
-req = urllib2.Request(url_double, data)
-req.add_header("Accept", "*/*")
-req.add_header("Content-Type", "application/json")   
-req.add_header("Authorization", "Basic %s" % base64.b64encode('%s:%s' % (user, password)))   
-# Send request
-f = urllib2.urlopen(req)
-# Process response
-response = f.read()
-if f.code == 200:
-    print('Double value written OK')
-f.close()
+# Initialize REST API session (fill in REXYGEN credentials)
+s = RexInitSession('admin','mypassword')
 
-# Create HTTP POST request for data type long
-data = json.dumps({"v":value_long})
-req = urllib2.Request(url_long, data)
-req.add_header("Accept", "*/*")
-req.add_header("Content-Type", "application/json")   
-req.add_header("Authorization", "Basic %s" % base64.b64encode('%s:%s' % (user, password)))   
-# Send request
-f = urllib2.urlopen(req)
-# Process response
-response = f.read()
-if f.code == 200:
-    print('Long value written OK')
-f.close()
+# Read data from REXYGEN using HTTP GET request
+bool = RexGet(s,'CNB_IN:Y')
+long = RexGet(s,'CNI_IN:iy')
+double = RexGet(s,'CNR_IN:y')
+string = RexGet(s,'CNS_IN:sy')
 
-# Create HTTP POST request for data type Boolean
-data = json.dumps({"v":value_bool})
-req = urllib2.Request(url_bool, data)
-req.add_header("Accept", "*/*")
-req.add_header("Content-Type", "application/json")   
-req.add_header("Authorization", "Basic %s" % base64.b64encode('%s:%s' % (user, password)))   
-# Send request
-f = urllib2.urlopen(req)
-# Process response
-response = f.read()
-if f.code == 200:
-    print('Boolean value written OK')
-f.close()
-
-# Create HTTP POST request for data type string
-data = json.dumps({"v":value_string})
-req = urllib2.Request(url_string, data)
-req.add_header("Accept", "*/*")
-req.add_header("Content-Type", "application/json")   
-req.add_header("Authorization", "Basic %s" % base64.b64encode('%s:%s' % (user, password)))   
-# Send request
-f = urllib2.urlopen(req)
-# Process response
-response = f.read()
-if f.code == 200:
-    print('String value written OK')
-f.close()
-
+# Write data to REXYGEN using HTTP POST request
+RexPost(s,'CNB_IN:YCN', 1)
+RexPost(s,'CNI_IN:icn', 1234)
+RexPost(s,'CNR_IN:ycn', 17.89)
+RexPost(s,'CNS_IN:scv', 'Hello from Python')

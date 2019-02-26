@@ -1,14 +1,14 @@
 Model {
   Name                    "logo_monitoring_task"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -41,7 +41,7 @@ Model {
       Name                    "CNB"
       Ports                   [0, 1, 0, 0, 0]
       Position                [525, 343, 545, 357]
-      SourceBlock             "lib/CNB"
+      SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   a3024711-0061-4d9a-b30f-fe360a4d7810
     }
@@ -50,7 +50,7 @@ Model {
       Name                    "CNB1"
       Ports                   [0, 1, 0, 0, 0]
       Position                [520, 223, 540, 237]
-      SourceBlock             "lib/CNB"
+      SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   aa514075-d274-4121-870c-9ab8aa9120d5
     }
@@ -292,7 +292,7 @@ Model {
       Name                    "TRND_Analog"
       Ports                   [6, 5, 0, 0, 0]
       Position                [570, 298, 615, 372]
-      SourceBlock             "lib/TRND"
+      SourceBlock             "arclib/TRND"
       n                       2
       l                       9000
       btype                   "8: Double"
@@ -313,7 +313,7 @@ Model {
       Name                    "TRND_Ramp"
       Ports                   [6, 5, 0, 0, 0]
       Position                [565, 178, 610, 252]
-      SourceBlock             "lib/TRND"
+      SourceBlock             "arclib/TRND"
       n                       2
       l                       9000
       btype                   "8: Double"

@@ -2,7 +2,7 @@
 *                                                      *
 *   REXLANG example - data exchange via UDP protocol   *
 *                                                      *
-*   (c) REX Controls, www.rexcontrols.com              *
+*   Receiver station                                   *
 *                                                      *
 *******************************************************/
 

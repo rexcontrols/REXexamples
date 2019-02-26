@@ -1,0 +1,14 @@
+{
+    "client_id": "RexygenSubscriber",
+    "host": "mqtt.thingspeak.com",
+    "port": "1883",
+    "ping": 5,
+    "reconnect_timeout": 5000000000,
+    "user": "<username>",
+    "pass": "<MQTTAPIKey>",
+    "will_enabled": false,
+    "will_topic": null,
+    "will_qos": 0,
+    "will_retain": false,
+    "will_msg": null
+}

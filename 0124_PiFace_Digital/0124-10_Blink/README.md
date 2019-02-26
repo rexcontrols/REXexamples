@@ -1,8 +1,12 @@
-REXYGEN and the PiFace Digital expansion board
-=========================================================
+Blinking outputs of the PiFace Digital expansion board
+======================================================
+
+A very basic project which demonstrates access to outputs of the PiFace Digital
+platform.
 
 ## Prerequisites ##
-- *REXYGEN Runtime Core* and RPiDrv module must be installed and running on the Raspberry Pi
+- *REXYGEN Runtime Core* and RPiDrv module must be installed and running on the 
+Raspberry Pi
 - SPI bus must be enabled on the Raspberry Pi
 
 ## Running the example ##
@@ -11,9 +15,7 @@ REXYGEN and the PiFace Digital expansion board
 
 ## User interface (HMI) ##
 The example is accompanied by a HTML5-based user interface built on the 
-WebBuDi framework (Web Buttons and Displays) of REXYGEN. See the 
-above mentioned tutorial for instructions on deploying the HMI on the Raspberry 
-Pi.
+WebBuDi framework (Web Buttons and Displays) of REXYGEN.
  
 ## Documentation ##
 

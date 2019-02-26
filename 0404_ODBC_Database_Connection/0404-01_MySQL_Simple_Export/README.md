@@ -17,7 +17,7 @@ tick x ntick0 = 0.05 x 10 = 0.5.
 Data is exported to database in 5 second intervals. See the database driver 
 configuration. In writeGroup, period is set to 5.0 seconds.  
 
-## Prerequisities ##
+## Prerequisites ##
 
 - *REXYGEN Runtime Core* and DbDrv modules must be installed and running on the target device.
 - ODBC connector for MySQL database is installed on the target device. Install 

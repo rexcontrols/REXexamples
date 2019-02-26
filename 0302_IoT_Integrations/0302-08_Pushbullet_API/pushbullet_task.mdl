@@ -1,0 +1,370 @@
+Model {
+  Name                    "pushbullet_task"
+  Version                 3.00
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "pushbullet_task"
+    Location                [307, 32, 1269, 403]
+    #GUID                   5908a457-6bb4-450e-a235-6e94f1d87163
+    Block {
+      BlockType               Reference
+      Name                    "CNB_SMOKE_ALARM"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [100, 248, 120, 262]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      BackgroundColor         "magenta"
+      #GUID                   b53e59e7-90f6-4af1-a04c-68f7460b4e44
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNB_TRIGGER_PUSH"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [375, 243, 395, 257]
+      SourceBlock             "mathlib/CNB"
+      YCN                     off
+      BackgroundColor         "magenta"
+      #GUID                   ba59b422-5e51-49ae-9748-16c93d1c50fe
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNR_temperature"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [125, 103, 155, 117]
+      SourceBlock             "mathlib/CNR"
+      ycn                     "21.7"
+      BackgroundColor         "magenta"
+      #GUID                   eac9f066-e692-4ec2-b1d6-9280d57c6fc8
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 158, 135, 172]
+      SourceBlock             "stringlib/CNS"
+      scv                     "inactive"
+      nmax                    0
+      #GUID                   0b763173-1584-4033-a02e-9f41578f225d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [85, 188, 135, 202]
+      SourceBlock             "stringlib/CNS"
+      scv                     "active"
+      nmax                    0
+      #GUID                   15bb01e3-3d0a-4428-b86d-4e89f9c3005d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_Title"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [50, 308, 235, 322]
+      SourceBlock             "stringlib/CNS"
+      scv                     "Message from REX"
+      nmax                    0
+      FontSize                10
+      BackgroundColor         "magenta"
+      #GUID                   1ddc1f35-3988-49b3-a2d0-d0668bf69450
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CONCAT"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [320, 100, 380, 190]
+      SourceBlock             "stringlib/CONCAT"
+      ptrn                    "{\"body\":\"Hi there, this is a message from RE"
+"X. Temperature is %1 and the smoke sensor is %2. Have a nice day!\",\"title\":"
+"\"%3\",\"type\":\"note\"}"
+      nmax                    0
+      #GUID                   ccdd5b76-cadf-4700-a02c-aa9dcb7f8584
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [655, 113, 860, 137]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   c42416d2-cd2a-4e58-b75c-75f0d8f1ac58
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [655, 138, 860, 162]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   cb55e975-0cb5-4e7c-a670-d78401f3d95b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Position                [655, 163, 860, 187]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   0b4de2f9-ef1d-4bac-b73c-30f35bd6856c
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Position                [655, 188, 860, 212]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   bf48526a-ce46-425b-a49a-1e4476d15fc7
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display4"
+      Position                [655, 212, 860, 238]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a563e959-d9f0-4e64-883f-2945085fbd6d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HTTP2_PushbulletAPI"
+      Ports                   [4, 6, 0, 0, 0]
+      Position                [465, 132, 545, 198]
+      SourceBlock             "speclib/HTTP2"
+      url                     "https://api.pushbullet.com/v2/pushes"
+      method                  "2: POST"
+      user                    "YourAccessToken"
+      password                ""
+      certificate             ""
+      VERIFY                  off
+      postmime                "application/json"
+      acceptmime              "application/json"
+      timeout                 5
+      BLOCKING                off
+      nmax                    0
+      postmax                 256
+      datamax                 1024
+      BackgroundColor         "cyan"
+      #GUID                   81199a34-37cb-4305-a707-c55e628dd0d4
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PJSOCT"
+      Ports                   [2, 9, 0, 0, 0]
+      Position                [575, 117, 615, 213]
+      SourceBlock             "stringlib/PJSOCT"
+      name1                   "sender_name"
+      name2                   "iden"
+      name3                   "created"
+      name4                   "modified"
+      name5                   "type"
+      name6                   ""
+      name7                   ""
+      name8                   ""
+      nmax                    0
+      #GUID                   ed37db5b-b836-4490-806b-67e222ee8720
+    }
+    Block {
+      BlockType               Reference
+      Name                    "RTOS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [200, 96, 240, 124]
+      SourceBlock             "stringlib/RTOS"
+      prec                    5
+      mode                    "1: best fit"
+      #GUID                   6b306d1c-6e31-43e9-a02b-dbe31205ae6c
+    }
+    Block {
+      BlockType               Reference
+      Name                    "SELSOCT"
+      Ports                   [12, 1, 0, 0, 0]
+      Position                [200, 155, 240, 285]
+      SourceBlock             "stringlib/SELSOCT"
+      BINF                    on
+      nmax                    0
+      #GUID                   64f25755-9529-4eb6-a7bb-4a303ebd1600
+    }
+    Line {
+      SrcBlock                "CNB_SMOKE_ALARM"
+      SrcPort                 1
+      DstBlock                "SELSOCT"
+      DstPort                 10
+      #GUID                   52d20630-5308-445d-8fc1-84acbf83e0a7
+    }
+    Line {
+      SrcBlock                "CNB_TRIGGER_PUSH"
+      SrcPort                 1
+      Points                  [25, 0; 0, -60]
+      DstBlock                "HTTP2_PushbulletAPI"
+      DstPort                 4
+      #GUID                   66202b59-f91a-4e66-810b-a95ba328edf2
+    }
+    Line {
+      SrcBlock                "CNR_temperature"
+      SrcPort                 1
+      DstBlock                "RTOS"
+      DstPort                 1
+      #GUID                   460773db-4533-480e-a065-da22cfd220cd
+    }
+    Line {
+      SrcBlock                "CNS"
+      SrcPort                 1
+      DstBlock                "SELSOCT"
+      DstPort                 1
+      #GUID                   212ddd8f-c0b5-427d-815a-5c3d42de0dd9
+    }
+    Line {
+      SrcBlock                "CNS1"
+      SrcPort                 1
+      Points                  [45, 0]
+      DstBlock                "SELSOCT"
+      DstPort                 2
+      #GUID                   901c7447-e293-4696-9ee8-0f41d572cfa2
+    }
+    Line {
+      SrcBlock                "CNS_Title"
+      SrcPort                 1
+      Points                  [65, 0]
+      DstBlock                "CONCAT"
+      DstPort                 3
+      #GUID                   cf2e5faf-4a35-4331-9fe9-b1c301e5cd9e
+    }
+    Line {
+      SrcBlock                "CONCAT"
+      SrcPort                 1
+      DstBlock                "HTTP2_PushbulletAPI"
+      DstPort                 1
+      #GUID                   82a7fd28-9e50-4c15-b81a-a15d7a3cd05c
+    }
+    Line {
+      SrcBlock                "HTTP2_PushbulletAPI"
+      SrcPort                 1
+      DstBlock                "PJSOCT"
+      DstPort                 1
+      #GUID                   50cc5eb5-d483-486a-9ee7-3f28255ad02a
+    }
+    Line {
+      SrcBlock                "HTTP2_PushbulletAPI"
+      SrcPort                 3
+      Points                  [5, 0; 0, 30]
+      DstBlock                "PJSOCT"
+      DstPort                 2
+      #GUID                   ab23e07f-dc7e-411c-a052-405164ef669a
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   7fe180c6-653a-4414-977a-2e980b51bf33
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 2
+      Points                  [20, 0]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   0e30e264-3824-4446-8b77-f2713de8eaa8
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 3
+      Points                  [15, 0; 0, 30]
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   68a2e194-2453-4890-ad72-e0cc2b16c402
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 4
+      Points                  [10, 0; 0, 45]
+      DstBlock                "Display3"
+      DstPort                 1
+      #GUID                   f3167473-93ec-4908-a6e4-28da49a727a4
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 5
+      Points                  [5, 0; 0, 60]
+      DstBlock                "Display4"
+      DstPort                 1
+      #GUID                   99ff9fb2-7dd1-4798-b4a1-159323931935
+    }
+    Line {
+      SrcBlock                "RTOS"
+      SrcPort                 1
+      DstBlock                "CONCAT"
+      DstPort                 1
+      #GUID                   abafb80c-e77b-4d97-98b3-d175bc5a5a24
+    }
+    Line {
+      SrcBlock                "SELSOCT"
+      SrcPort                 1
+      Points                  [45, 0; 0, -100]
+      DstBlock                "CONCAT"
+      DstPort                 2
+      #GUID                   37847e3c-6c5d-44be-a8ca-d2659237fdae
+    }
+    Annotation {
+      Position                [135, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8feb317c-34be-445c-9c14-f35789312c76
+    }
+    Annotation {
+      Position                [95, 15]
+      Text                    "Pushbullet API example"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   d52f859a-11a7-4c8e-849d-abd0a5b60b67
+    }
+    Annotation {
+      Position                [905, 175]
+      Text                    "sender name\n\niden\n\ncreated\n\nmodified\n\nt"
+"ype"
+      FontWeight              "bold"
+      FontSize                10
+      #GUID                   af4d911a-e615-4664-9ba9-61616134b902
+    }
+  }
+}

@@ -17,7 +17,7 @@ trends (graphs) in the Watch mode of *REXYGEN Studio* or in the *REXYGEN Diagnos
 The algorithm runs each 1000 milliseconds (1 s). See the EXEC function block,  
 tick x ntick0 = 0.5 x 2 = 1.0 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target device (Raspberry Pi).
 - I2C bus must be enabled and available (e.g. /dev/i2c-1).
 - The wiring must comply with the attached datasheet. 

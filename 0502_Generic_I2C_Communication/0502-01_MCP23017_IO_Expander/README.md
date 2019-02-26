@@ -13,7 +13,7 @@ inputs with the internal pull-up resistors enabled.
 The algorithm runs each 200 milliseconds (0.2 s). See the EXEC function block,  
 tick x ntick0 = 0.1 x 2 = 0.2 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target device (Raspberry Pi).
 - I2C bus must be enabled and available (e.g. /dev/i2c-1).
 - The wiring must comply with the attached datasheet. 

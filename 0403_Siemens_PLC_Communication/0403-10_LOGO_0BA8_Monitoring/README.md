@@ -14,7 +14,7 @@ algorithm. REXYGEN acts as a client and connects to the LOGO! base module via Et
 Analog inputs of the LOGO! are read and stored in the TRND block in the REXYGEN 
 control algorithm, which provides a time-plot of the measured data in real-time.
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* and S7Drv modules are installed on the target device
 - The LOGO! device is in RUN mode (*logo_monitoring.lsc* attached)
 - The IP address 192.168.1.111 is assumed in the LOGO! device. If the IP address 

@@ -21,7 +21,7 @@ tick x ntick0 = 0.05 x 2 = 0.1
 
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
-- Open it with *RexDraw*.
+- Open it with *REXYGEN Studio*.
 - Compile and download it to the target device.
 - Switch to *Watch mode* and observe the displayed values.
 - Run any of the provided scripts. The values in REXYGEN algorithm will be 

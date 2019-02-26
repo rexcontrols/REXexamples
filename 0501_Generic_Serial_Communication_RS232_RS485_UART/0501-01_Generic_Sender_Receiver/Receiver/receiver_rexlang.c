@@ -4,8 +4,6 @@
 *                                                      *
 *   Receiver station                                   *
 *                                                      *
-*   (c) REX Controls, www.rexcontrols.com              *
-*                                                      *
 *******************************************************/
 
 #define COM_BAUDRATE 57600 //baudrate, e.g. 9600, 19200, 57600, 115200

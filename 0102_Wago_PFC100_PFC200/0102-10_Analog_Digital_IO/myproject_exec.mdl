@@ -1,14 +1,14 @@
 Model {
   Name                    "myproject_exec"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -67,6 +67,7 @@ Model {
       GenerateRexHMI          off
       RedirectToHMI           off
       Compression             off
+      FontSize                10
       #GUID                   be593dea-068c-424f-a924-8f429eca1c4f
     }
     Block {
@@ -90,6 +91,8 @@ Model {
       CompileParams           ""
       SourcesOnTarget         off
       TargetURL               ""
+      FontSize                10
+      LibraryPath             ""
       #GUID                   77866542-c8f0-4bdb-8ef6-70f590a1a5cf
     }
     Block {

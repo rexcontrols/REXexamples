@@ -1,0 +1,349 @@
+Model {
+  Name                    "max31855_task"
+  Version                 3.00
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "max31855_task"
+    Location                [331, 33, 862, 387]
+    #GUID                   1c9630cc-6fd3-4ab3-9c4c-38bbc142953d
+    Block {
+      BlockType               Reference
+      Name                    "CNB"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [400, 163, 420, 177]
+      SourceBlock             "mathlib/CNB"
+      YCN                     on
+      #GUID                   a87433c1-5aed-4cc0-a53e-a7f956b70dbb
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [210, 218, 290, 242]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   4bd1679f-04d8-44c2-ad9f-252ba8f4fb57
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [210, 248, 290, 272]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   1d7f889b-bf47-44e7-a7b3-056cfd86e2e8
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [210, 278, 290, 302]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   a4861710-cf3a-4c0b-ad7b-3e1a3435df97
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [210, 308, 290, 332]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   c93bc4f0-92f3-4859-9e60-70095bb40bfa
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display4"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [420, 78, 500, 102]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   b08e9b4d-53da-4af5-8c35-0475d3729614
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display5"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [415, 233, 495, 257]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   69aa6579-ff01-4f58-84c6-4dd0fafb1628
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_cold_junction"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [210, 158, 235, 172]
+      SourceBlock             "mathlib/LIN"
+      u1                      2032
+      y1                      127
+      u2                      -880
+      y2                      -55
+      #GUID                   1f42cbab-ecab-49a8-8e26-d5145ff3f8a1
+    }
+    Block {
+      BlockType               Reference
+      Name                    "LIN_thermocouple"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [210, 123, 235, 137]
+      SourceBlock             "mathlib/LIN"
+      u1                      6400
+      y1                      1600
+      u2                      -1000
+      y2                      -250
+      #GUID                   037b5170-3574-4694-9c77-235ff572626a
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [45, 108, 95, 292]
+      SourceBlock             "speclib/REXLANG"
+      strs                    0
+      #RTFlags                1025
+      SID                     4
+      LibraryVersion          "1.88"
+      SourceType              "REXLANG"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      tab_matlab              "BASIC"
+      srcname                 "max31855.c"
+      srctype                 "1: C-like"
+      stack                   0
+      debug                   "3: Full check"
+      p0                      "/dev/spidev0.0"
+      p1                      0
+      p2                      0
+      p3                      0
+      p4                      0
+      p5                      0
+      p6                      0
+      p7                      0
+      p8                      0
+      p9                      0
+      p10                     0
+      p11                     0
+      p12                     0
+      p13                     0
+      p14                     0
+      p15                     0
+      fname                   "/dev/spidev0.0"
+      #GUID                   abf9e5d5-48d2-4a39-b917-f3e494fea8be
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [440, 118, 485, 192]
+      SourceBlock             "arclib/TRND"
+      n                       4
+      l                       1000
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    1
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Measured values"
+      timesrc                 1
+      #GUID                   0954cb33-27b8-452f-b5b2-9de9fa77e672
+    }
+    Line {
+      SrcBlock                "CNB"
+      SrcPort                 1
+      DstBlock                "TRND"
+      DstPort                 5
+      #GUID                   84637344-bf45-4892-ad25-6e4fe84ffec2
+    }
+    Line {
+      SrcBlock                "LIN_cold_junction"
+      SrcPort                 1
+      Points                  [125, 0; 0, -25; 30, 0]
+      #GUID                   fd352a05-60fd-4f46-8b9e-e9546df7976f
+      Branch {
+        Points                  [0, 105]
+        DstBlock                "Display5"
+        DstPort                 1
+        #GUID                   cc12eeb7-772b-4ae2-a532-01d6c559ea74
+      }
+      Branch {
+        DstBlock                "TRND"
+        DstPort                 2
+        #GUID                   cc2b7d99-e342-4e8a-b8d6-8791b2bdfd08
+      }
+    }
+    Line {
+      SrcBlock                "LIN_thermocouple"
+      SrcPort                 1
+      Points                  [155, 0]
+      #GUID                   49bd99f6-1203-4301-a6f5-4398882893a3
+      Branch {
+        Points                  [0, -40]
+        DstBlock                "Display4"
+        DstPort                 1
+        #GUID                   a75933d0-469d-4b87-820b-c5181186cb10
+      }
+      Branch {
+        DstBlock                "TRND"
+        DstPort                 1
+        #GUID                   a7a34703-86a4-41aa-92b8-95e6ad13736e
+      }
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 2
+      DstBlock                "LIN_thermocouple"
+      DstPort                 1
+      #GUID                   32df1b3a-a769-42bc-9d90-6e24986cf06c
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 3
+      Points                  [5, 0; 0, 25]
+      DstBlock                "LIN_cold_junction"
+      DstPort                 1
+      #GUID                   f734adbc-59fb-41ec-832a-b85d59c6fc0b
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 12
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   0e80a5cd-5215-42bb-b4ca-cca5bfc07519
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 13
+      Points                  [85, 0; 0, 20]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   ab9c369b-7057-4dc7-8226-49297fee99a8
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 14
+      Points                  [75, 0; 0, 40]
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   e0f6ca01-df9d-40ea-a6e7-8781cd09dfde
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 15
+      Points                  [65, 0; 0, 60]
+      DstBlock                "Display3"
+      DstPort                 1
+      #GUID                   90dfabe3-70ba-4d59-9016-ed6909e57c74
+    }
+    Annotation {
+      Position                [190, 25]
+      Text                    "Reading MAX31855 thermocouple ADC via SPI"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   f2352602-01ea-45a0-ad35-bbbb5d97a079
+    }
+    Annotation {
+      Position                [150, 125]
+      Text                    "thermocouple data"
+      #GUID                   3acfa789-2b50-43c6-8812-73832ccd8e28
+    }
+    Annotation {
+      Position                [320, 125]
+      Text                    "thermocouple temperature"
+      #GUID                   3aa61ac8-3902-4914-ba6b-8c62fcf29b25
+    }
+    Annotation {
+      Position                [145, 165]
+      Text                    "cold junction\ndata"
+      #GUID                   582c7f11-696e-4107-95ec-1903dd0a341c
+    }
+    Annotation {
+      Position                [315, 165]
+      Text                    "cold junction\ntemperature"
+      #GUID                   d184f083-8cf1-49b3-8303-152d99015da4
+    }
+    Annotation {
+      Position                [125, 225]
+      Text                    "fault"
+      #GUID                   f96f1094-93a4-4d79-9390-8bc317b08561
+    }
+    Annotation {
+      Position                [135, 235]
+      Text                    "short to Vcc"
+      #GUID                   788ffa35-4fec-460a-a891-f5cb8891da22
+    }
+    Annotation {
+      Position                [135, 255]
+      Text                    "open circuit"
+      #GUID                   447ca639-7c2b-40cb-b7d3-a436a4f2d345
+    }
+    Annotation {
+      Position                [135, 245]
+      Text                    "short to GND"
+      #GUID                   1701999a-e003-4d3b-9120-855d00d9e3a2
+    }
+    Annotation {
+      Position                [155, 45]
+      Text                    "See the README.md and max31855.c file for detai"
+"ls."
+      #GUID                   70ad03eb-5b20-418e-912b-940d2160dbf3
+    }
+  }
+}

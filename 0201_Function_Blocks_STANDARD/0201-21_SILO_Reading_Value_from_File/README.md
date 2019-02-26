@@ -21,7 +21,7 @@ SILO block. You can use as many external files as needed.
 The algorithm runs each 250 milliseconds (0.25 s). See the EXEC function block,  
 tick x ntick0 = 0.05 x 5 = 0.25 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target device.
 - A text file named *value.txt* must be present in the data directory (/rex/data
 on Linux and C:\ProgramData\REX Controls\REX_active_version\*REXYGEN Runtime Core*\data on 

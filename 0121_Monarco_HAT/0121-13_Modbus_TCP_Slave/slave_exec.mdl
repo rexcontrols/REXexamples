@@ -1,0 +1,172 @@
+Model {
+  Name                    "slave_exec"
+  Version                 3.00
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "slave_exec"
+    Location                [9, 32, 270, 490]
+    #GUID                   9110466e-b85e-40e4-a96d-45487cbee613
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [20, 88, 65, 377]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.005"
+      ntick0                  2
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      FontSize                10
+      #GUID                   ef2623f2-d2f6-4b3e-8529-c2a01e0349e6
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MNR"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 138, 150, 152]
+      SourceBlock             "execlib/IODRV"
+      module                  "MonarcoDrv"
+      classname               "MonarcoHatDrv"
+      cfgname                 "monarco_cfg.rio"
+      factor                  2
+      stack                   10240
+      pri                     3
+      timer                   off
+      FontSize                10
+      #GUID                   47041b53-84c4-4ea4-b659-49b30bc896ea
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MTS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [185, 138, 235, 152]
+      SourceBlock             "execlib/IODRV"
+      module                  "MbDrv"
+      classname               "MtsDrv"
+      cfgname                 "mbtcp_slave_cfg.rio"
+      factor                  2
+      stack                   10240
+      pri                     3
+      timer                   off
+      FontSize                10
+      #GUID                   399b6bf1-49bb-4883-af82-397631035ef2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MbDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [185, 103, 235, 117]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   396e2083-e79c-4189-a39a-0d4bfd596247
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MonarcoDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 103, 150, 117]
+      SourceBlock             "execlib/MODULE"
+      FontSize                10
+      #GUID                   c455e675-12ae-4233-843b-a9bc53b1d62d
+    }
+    Block {
+      BlockType               Reference
+      Name                    "slave_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [100, 243, 150, 257]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   1
+      stop                    2
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      FontSize                10
+      #GUID                   7d3af3e6-c4b4-4247-8bfb-bc4e1c06e0ad
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "MonarcoDrv"
+      DstPort                 1
+      #GUID                   3c3502d5-b558-4c84-8cab-c9d51fa071e2
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "MNR"
+      DstPort                 1
+      #GUID                   07f6e9ac-d09a-4f4a-b0ca-68ed4914ea82
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "slave_task"
+      DstPort                 1
+      #GUID                   4ce64096-0717-44cb-a336-9e69d897e430
+    }
+    Line {
+      SrcBlock                "MNR"
+      SrcPort                 1
+      DstBlock                "MTS"
+      DstPort                 1
+      #GUID                   6e974dba-fe6d-4412-a553-c60b6a35d1f5
+    }
+    Line {
+      SrcBlock                "MonarcoDrv"
+      SrcPort                 1
+      DstBlock                "MbDrv"
+      DstPort                 1
+      #GUID                   12f7d466-efa5-423c-a388-472cc5d34849
+    }
+    Annotation {
+      Position                [105, 70]
+      Text                    "See the README.md file for details."
+      #GUID                   61698452-d26c-4702-89a2-019bb5104a22
+    }
+    Annotation {
+      Position                [10, 10]
+      Text                    "Monarco HAT as Modbus TCP\nslave"
+      FontWeight              "bold"
+      FontSize                16
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      #GUID                   76282def-2766-4fcb-adae-c4a29b408995
+    }
+  }
+}

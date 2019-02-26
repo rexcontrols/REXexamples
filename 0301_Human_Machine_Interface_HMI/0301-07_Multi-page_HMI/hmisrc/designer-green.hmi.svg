@@ -15,26 +15,26 @@
    version="1.1"
    height="800"
    width="1246"
-   inkscape:version="0.92.2 (b81de4013d, 2018-02-13, custom)"
+   inkscape:version="0.92.3 (6d43e4115e, 2018-10-26)"
    sodipodi:docname="designer-green.hmi.svg">
   <sodipodi:namedview
-     inkscape:window-maximized="1"
-     inkscape:window-y="-8"
-     inkscape:window-x="-8"
-     inkscape:window-height="1138"
-     inkscape:window-width="1920"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:window-height="1024"
+     inkscape:window-width="1280"
      units="px"
      showgrid="false"
      inkscape:current-layer="svg8"
      inkscape:document-units="px"
-     inkscape:cy="194.04889"
-     inkscape:cx="-309.34688"
-     inkscape:zoom="0.7"
+     inkscape:cy="443"
+     inkscape:cx="470"
+     inkscape:zoom="0.75"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
-     pagecolor="#ffffff"
+     pagecolor="#eef1f0"
      id="base" />
   <defs
      id="defs2">
@@ -199,8 +199,8 @@
      id="layer1" />
   <g
      rexsvg:module="HMIConfig"
-     rexsvg:version="14"
-     rexsvg:rexversion="2.50.7-9030"
+     rexsvg:version="15"
+     rexsvg:rexversion="2.50.8-9926"
      id="HMIConfig"
      width="200"
      height="80"
@@ -212,7 +212,7 @@
        rx="3"
        ry="3"
        id="rect3041"
-       style="fill:#ffffff;stroke:url(#lg-hmic982-9CB716);stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;stroke:url(#lg-hmic982-0403FB);stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="0"
        y="0" />
     <defs
@@ -223,7 +223,7 @@
          y1="-34.1563"
          x1="24.419901"
          gradientUnits="userSpaceOnUse"
-         id="lg-hmic_7_-9CB716">
+         id="lg-hmic_7_-0403FB">
         <stop
            id="stop906"
            style="stop-color:#0074C5"
@@ -239,7 +239,7 @@
          y1="-29.750999"
          x1="21.861799"
          gradientUnits="userSpaceOnUse"
-         id="lg-hmic_6_-9CB716">
+         id="lg-hmic_6_-0403FB">
         <stop
            id="stop899"
            style="stop-color:#0074C5"
@@ -255,7 +255,7 @@
          y1="-25.5215"
          x1="19.434601"
          gradientUnits="userSpaceOnUse"
-         id="lg-hmic_5_-9CB716">
+         id="lg-hmic_5_-0403FB">
         <stop
            id="stop892"
            style="stop-color:#0074C5"
@@ -271,7 +271,7 @@
          y1="-21.935499"
          x1="17.3594"
          gradientUnits="userSpaceOnUse"
-         id="lg-hmic_4_-9CB716">
+         id="lg-hmic_4_-0403FB">
         <stop
            id="stop885"
            style="stop-color:#0074C5"
@@ -287,7 +287,7 @@
          y1="-16.971201"
          x1="14.4985"
          gradientUnits="userSpaceOnUse"
-         id="lg-hmic_3_-9CB716">
+         id="lg-hmic_3_-0403FB">
         <stop
            id="stop878"
            style="stop-color:#0074C5"
@@ -303,7 +303,7 @@
          y1="-12.7388"
          x1="12.0518"
          gradientUnits="userSpaceOnUse"
-         id="lg-hmic_2_-9CB716">
+         id="lg-hmic_2_-0403FB">
         <stop
            id="stop871"
            style="stop-color:#0074C5"
@@ -319,7 +319,7 @@
          y1="-7.875"
          x1="9.2475996"
          gradientUnits="userSpaceOnUse"
-         id="lg-hmic_1_-9CB716">
+         id="lg-hmic_1_-0403FB">
         <stop
            id="stop864"
            style="stop-color:#0074C5"
@@ -332,8 +332,8 @@
       <linearGradient
          gradientTransform="translate(0,14.5)"
          inkscape:collect="always"
-         xlink:href="#lg-hmic_1_-9CB716"
-         id="lg-hmic982-9CB716"
+         xlink:href="#lg-hmic_1_-0403FB"
+         id="lg-hmic982-0403FB"
          x1="-0.177"
          y1="40"
          x2="200.177"
@@ -341,8 +341,8 @@
          gradientUnits="userSpaceOnUse" />
       <linearGradient
          inkscape:collect="always"
-         xlink:href="#lg-hmic_1_-9CB716"
-         id="lg-hmic984-9CB716"
+         xlink:href="#lg-hmic_1_-0403FB"
+         id="lg-hmic984-0403FB"
          gradientUnits="userSpaceOnUse"
          x1="9.2475996"
          y1="-7.875"
@@ -354,23 +354,6 @@
       </title>
     <desc
        id="desc3016">{
-&quot;ELEMENT_DIMENSIONS&quot;:{
-&quot;browse&quot;:{
-&quot;window&quot;:{
-&quot;height&quot;:500,
-&quot;width&quot;:520
-}
-},
-&quot;tabsizes&quot;:{
-&quot;aliastab_minsize&quot;:200,
-&quot;conntab_minsize&quot;:280,
-&quot;eltab_minsize&quot;:0
-},
-&quot;window&quot;:{
-&quot;height&quot;:500,
-&quot;width&quot;:360
-}
-},
 &quot;HTMLexport&quot;:{
 &quot;ExcludeDefaultLibraries&quot;:false,
 &quot;ExpertMode&quot;:false,
@@ -381,7 +364,7 @@
 &quot;Title&quot;:&quot;Multi-page HMI demonstration&quot;,
 &quot;Tooltips&quot;:true,
 &quot;ViewBox&quot;:true,
-&quot;checkedVersion&quot;:&quot;9323&quot;
+&quot;checkedVersion&quot;:&quot;10442&quot;
 },
 &quot;UserData&quot;:{},
 &quot;connections&quot;:[
@@ -407,10 +390,10 @@
 }
 ],
 &quot;metaData&quot;:{
-&quot;desc&quot;:&quot;Global RexHMI configuration component. User can change project options, configure the HTML export and define list of connections between REX target and HMI.&quot;,
+&quot;desc&quot;:&quot;Global RexHMI configuration component. User can change project options, configure the HTML export and define list of connections between REXYGEN target and HMI.&quot;,
 &quot;header_mode&quot;:{
 &quot;desc&quot;:&quot;Change the default size of the header (thin, packed). If packed click on the logo to show the header.&quot;,
-&quot;order&quot;:&quot;06&quot;,
+&quot;order&quot;:&quot;05&quot;,
 &quot;type&quot;:&quot;enum&quot;,
 &quot;values&quot;:[
 &quot;&quot;,
@@ -423,12 +406,12 @@
 },
 &quot;kiosk_mode&quot;:{
 &quot;desc&quot;:&quot;If True the links from header (from logo and header) are removed and user can not change the refresh rate and target.&quot;,
-&quot;order&quot;:&quot;07&quot;,
+&quot;order&quot;:&quot;06&quot;,
 &quot;type&quot;:&quot;bool&quot;
 },
 &quot;log_level&quot;:{
 &quot;desc&quot;:&quot;Set the global log level for whole RexHMI. The log messages are written both to the right upper corner menu and to the web browser console. Default level is INFO.&quot;,
-&quot;order&quot;:&quot;03&quot;,
+&quot;order&quot;:&quot;02&quot;,
 &quot;type&quot;:&quot;enum&quot;,
 &quot;values&quot;:[
 &quot;&quot;,
@@ -443,17 +426,17 @@
 &quot;desc&quot;:&quot;Changes the default read refresh rate of the whole HMI. Default 500ms&quot;,
 &quot;max&quot;:&quot;300000&quot;,
 &quot;min&quot;:&quot;20&quot;,
-&quot;order&quot;:&quot;02&quot;,
+&quot;order&quot;:&quot;01&quot;,
 &quot;type&quot;:&quot;int&quot;
 },
 &quot;show_clock&quot;:{
 &quot;desc&quot;:&quot;If True the clock are shown in the right upper corner of the template instead of blinking square. If the target is connected the clock are updated if connection get error o lost the time stops.&quot;,
-&quot;order&quot;:&quot;04&quot;,
+&quot;order&quot;:&quot;03&quot;,
 &quot;type&quot;:&quot;bool&quot;
 },
 &quot;target_url&quot;:{
 &quot;desc&quot;:&quot;The URL of the target device. So far only the WebSocket protocol is supported. The URL must also contain the PORT, but the protocol can be omitted. Default is empty string which means ws://127.0.0.1:8008 &lt;br /&gt; Examples: 192.168.1.100:8008 or wss://192.168.1.100:8009 &lt;br /&gt; &lt;i&gt; Note: If the HMI is hosted on the internal web server this option is ignored and HMI connects to the hostname / IP you use in the webbrowser URL.&lt;/i&gt;&quot;,
-&quot;order&quot;:&quot;01&quot;,
+&quot;order&quot;:&quot;07&quot;,
 &quot;prev&quot;:[
 &quot;ws_ip&quot;
 ],
@@ -461,7 +444,7 @@
 },
 &quot;use_client_time&quot;:{
 &quot;desc&quot;:&quot;If True the &lt;code&gt;show_clock&lt;/code&gt; display the time from client computer rather then target. This can be use when target device does not have NTP synchronization or RTC chip.&quot;,
-&quot;order&quot;:&quot;05&quot;,
+&quot;order&quot;:&quot;04&quot;,
 &quot;type&quot;:&quot;bool&quot;
 }
 },
@@ -484,7 +467,7 @@
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18px;font-family:Montserrat;-inkscape-font-specification:Montserrat;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#545e6f;fill-opacity:1"
            id="tspan3039"
            y="65"
-           x="99">HMI Config </tspan></text>
+           x="99">HMI Config</tspan></text>
       <g
          style="stroke-width:0.55555552"
          transform="matrix(1.6877637,0,0,1.6877637,15.611815,15.165)"
@@ -493,37 +476,37 @@
            style="stroke-width:0.55555552"
            id="g913">
           <path
-             style="fill:url(#lg-hmic984-9CB716);stroke-width:0.55555552"
+             style="fill:url(#lg-hmic984-0403FB);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
              d="m 36.293,9.011 h -0.069 -1.87 V 11.74 H 31.889 V 2.045 h 4.334 c 2.562,0 4.03,1.219 4.03,3.379 0,1.482 -0.624,2.549 -1.759,3.116 l 2.036,3.199 H 37.732 Z M 36.224,7.072 c 1.066,0 1.69,-0.54 1.69,-1.565 0,-1.011 -0.624,-1.523 -1.69,-1.523 h -1.87 v 3.089 h 1.87 z"
              id="path869" />
           <path
-             style="fill:url(#lg-hmic_2_-9CB716);stroke-width:0.55555552"
+             style="fill:url(#lg-hmic_2_-0403FB);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
              d="m 44.729,3.983 v 1.926 h 4.626 V 7.847 H 44.729 V 9.8 h 5.276 v 1.939 H 42.264 V 2.045 h 7.588 v 1.938 z"
              id="path876" />
           <path
-             style="fill:url(#lg-hmic_3_-9CB716);stroke-width:0.55555552"
+             style="fill:url(#lg-hmic_3_-0403FB);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
              d="M 60.975,11.739 H 58.026 L 55.935,8.65 53.844,11.739 H 50.977 L 54.439,6.781 51.198,2.045 h 2.867 l 1.87,2.825 1.869,-2.825 h 2.895 l -3.2,4.625 z"
              id="path883" />
           <path
-             style="fill:url(#lg-hmic_4_-9CB716);stroke-width:0.55555552"
+             style="fill:url(#lg-hmic_4_-0403FB);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
              d="M 66.766,11.739 H 64.315 V 8.679 L 60.728,2.045 h 2.466 l 2.34,4.224 2.284,-4.224 h 2.466 l -3.518,6.564 z"
              id="path890" />
           <path
-             style="fill:url(#lg-hmic_5_-9CB716);stroke-width:0.55555552"
+             style="fill:url(#lg-hmic_5_-0403FB);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
              d="m 79.479,6.809 v 3.781 c -1.038,0.733 -2.673,1.26 -4.03,1.26 -2.949,0 -5.179,-2.133 -5.179,-4.958 0,-2.812 2.285,-4.931 5.346,-4.931 1.44,0 2.963,0.555 3.961,1.441 l -1.385,1.676 c -0.707,-0.651 -1.69,-1.053 -2.59,-1.053 -1.593,0 -2.812,1.246 -2.812,2.866 0,1.648 1.232,2.895 2.839,2.895 0.499,0 1.136,-0.18 1.717,-0.471 V 6.809 Z"
              id="path897" />
           <path
-             style="fill:url(#lg-hmic_6_-9CB716);stroke-width:0.55555552"
+             style="fill:url(#lg-hmic_6_-0403FB);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
              d="m 84.011,3.983 v 1.926 h 4.625 V 7.847 H 84.011 V 9.8 h 5.276 v 1.939 H 81.545 V 2.045 h 7.589 v 1.938 z"
              id="path904" />
           <path
-             style="fill:url(#lg-hmic_7_-9CB716);stroke-width:0.55555552"
+             style="fill:url(#lg-hmic_7_-0403FB);stroke-width:0.55555552"
              inkscape:connector-curvature="0"
              d="M 97.827,11.739 93.367,5.77 v 5.969 H 91.054 V 2.045 h 2.174 l 4.474,5.982 V 2.045 H 100 v 9.694 z"
              id="path911" />

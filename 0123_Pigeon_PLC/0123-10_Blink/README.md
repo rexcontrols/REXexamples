@@ -1,11 +1,17 @@
-REXYGEN and Pigeon PLC
-==================
+Blinking outputs of the Pigeon PLC
+==================================
+
+A very basic project which demonstrates access to digital outputs of the Pigeon 
+PLC platform.
 
 ## Prerequisites ##
 
-- *REXYGEN Runtime Core* and RPiDrv module must be installed and running on the Pigeon PLC
-- I2C bus must be enabled on the Pigeon PLC
-- SPI bus must be enabled on the Pigeon PLC
+- *REXYGEN Runtime Core* and RPiDrv module must be installed and running on the 
+Pigeon PLC
+
+## Timing of the project ##
+The algorithm runs each 20 milliseconds (0.02 s). See the EXEC function block,  
+tick x ntick0 = 0.02 x 1 = 0.02 s
 
 ## Running the example ##
 
@@ -15,8 +21,7 @@ REXYGEN and Pigeon PLC
 ## User interface (HMI) ##
 
 The example is accompanied by a HTML5-based user interface built on the 
-WebBuDi framework (Web Buttons and Displays). See the above mentioned tutorial 
-for instructions on deploying the HMI on the Raspberry Pi.
+WebBuDi framework (Web Buttons and Displays).
 
 ## Documentation ##
 

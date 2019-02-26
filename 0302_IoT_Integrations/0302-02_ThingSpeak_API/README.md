@@ -1,13 +1,16 @@
 ThingSpeak API example
 ======================
 
-The source files located in this folder illustrate the use of a HTTP function block.
+The source files located in this folder illustrate the use of a HTTP function 
+block.
 
-Block HTTP is set up to send data to ThingSpeak channel via ThingSpeak API. ThingSpeak
-channel can be used to visualize your data and access it from remote computers / devices.
+The HTTP block is set up to send data to ThingSpeak channel via ThingSpeak API. 
+ThingSpeak channel can be used to visualize your data and access it from remote 
+computers / devices.
 
 ## Note ##
-This example can be easily modified to any other similar API which is using JSON formatting.
+This example can be easily modified to any other similar API which is using JSON 
+formatting.
 
 ## Timing of the project ##
 The algorithm runs each 500 milliseconds (0.5 s). See the EXEC function block,  
@@ -15,17 +18,18 @@ tick x ntick0 = 0.1 x 5 = 0.5 s
 
 ## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target device.
-- Registration (free) at ThingSpeak in order to get unique API key
+- You must register at ThingSpeak (free) and create a private channel in order 
+to get unique API keys.
 
 ## Running the example ##
 - The **exec.mdl* file is the project main file.
 - Open it with *REXYGEN Studio*.
-- Specify your unique ThingSpeak API key into CNS_APIkey:scv. It will concatenate together with 
-  parameter "url" of "HTTP" block whole GET request (https://api.thingspeak.com/update.json?api_key=your_API_key)
-- Change the target device parameter in "EXEC" block according to your HW. PC-Windows is default.
+- Specify your unique ThingSpeak Write API key for the desired channel into 
+CNS_APIkey:scv. It will concatenate together with the "url" parameter of the 
+HTTP block to form the whole GET request (https://api.thingspeak.com/update.json?api_key=your_API_key)
 - Compile and download it to the target device.
-- Change CNB_TRIGGER_POST to ON and check https://thingspeak.com/channels/your_channel_ID to
-see the posted data.
+- Set the BSTATE parameter of the MP_TRIGGER_POST block to ON and check 
+https://thingspeak.com/channels/your_channel_ID to see the posted data.
 
 ## Documentation ##
 - **Press F1 for help** on the selected function block in the *REXYGEN Studio*.

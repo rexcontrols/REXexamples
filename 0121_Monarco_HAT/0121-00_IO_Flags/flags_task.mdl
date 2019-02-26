@@ -1,14 +1,14 @@
 Model {
   Name                    "flags_task"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -39,7 +39,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From1"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [95, 198, 185, 212]
       ShowName                off
       GotoTag                 "MNR__DIN2"
@@ -49,7 +48,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From10"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 178, 645, 192]
       ShowName                off
       GotoTag                 "MNR__CNT1Q"
@@ -59,7 +57,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From11"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 228, 670, 242]
       ShowName                off
       GotoTag                 "MNR__CNT1PUR"
@@ -69,7 +66,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From12"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [685, 403, 830, 417]
       ShowName                off
       GotoTag                 "MNR__CNT1_ResetDone"
@@ -79,7 +75,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From13"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [685, 423, 830, 437]
       ShowName                off
       GotoTag                 "MNR__CNT2_ResetDone"
@@ -89,7 +84,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From14"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [25, 1013, 175, 1027]
       ShowName                off
       GotoTag                 "MNR__ErrorCnt"
@@ -99,8 +93,7 @@ Model {
     Block {
       BlockType               From
       Name                    "From15"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [530, 913, 730, 927]
+      Position                [530, 988, 730, 1002]
       ShowName                off
       GotoTag                 "MNR__SDCW0x024_Status"
       BackgroundColor         "yellow"
@@ -109,7 +102,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From16"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [95, 178, 185, 192]
       ShowName                off
       GotoTag                 "MNR__DIN1"
@@ -119,7 +111,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From17"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [210, 198, 300, 212]
       ShowName                off
       GotoTag                 "MNR__DI2"
@@ -129,7 +120,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From18"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [210, 178, 300, 192]
       ShowName                off
       GotoTag                 "MNR__DI1"
@@ -139,7 +129,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From19"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [210, 218, 300, 232]
       ShowName                off
       GotoTag                 "MNR__DI3"
@@ -149,7 +138,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From2"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [95, 218, 185, 232]
       ShowName                off
       GotoTag                 "MNR__DIN3"
@@ -159,7 +147,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From20"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [210, 238, 300, 252]
       ShowName                off
       GotoTag                 "MNR__DI4"
@@ -169,7 +156,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From21"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [660, 178, 775, 192]
       ShowName                off
       GotoTag                 "MNR__CNT2Q"
@@ -179,7 +165,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From22"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 248, 670, 262]
       ShowName                off
       GotoTag                 "MNR__CNT1PUF"
@@ -189,7 +174,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From23"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 268, 670, 282]
       ShowName                off
       GotoTag                 "MNR__CNT1PUB"
@@ -199,7 +183,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From24"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [685, 228, 825, 242]
       ShowName                off
       GotoTag                 "MNR__CNT2PUR"
@@ -209,7 +192,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From25"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [685, 248, 825, 262]
       ShowName                off
       GotoTag                 "MNR__CNT2PUF"
@@ -219,7 +201,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From26"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [685, 268, 825, 282]
       ShowName                off
       GotoTag                 "MNR__CNT2PUB"
@@ -229,7 +210,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From27"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 318, 670, 332]
       ShowName                off
       GotoTag                 "MNR__CNT1PER"
@@ -239,7 +219,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From28"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 338, 670, 352]
       ShowName                off
       GotoTag                 "MNR__CNT1PEF"
@@ -249,7 +228,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From29"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 358, 670, 372]
       ShowName                off
       GotoTag                 "MNR__CNT1PEB"
@@ -259,7 +237,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From3"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [95, 238, 185, 252]
       ShowName                off
       GotoTag                 "MNR__DIN4"
@@ -269,7 +246,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From30"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [685, 318, 825, 332]
       ShowName                off
       GotoTag                 "MNR__CNT2PER"
@@ -279,7 +255,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From31"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [685, 338, 825, 352]
       ShowName                off
       GotoTag                 "MNR__CNT2PEF"
@@ -289,7 +264,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From32"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [685, 358, 825, 372]
       ShowName                off
       GotoTag                 "MNR__CNT2PEB"
@@ -299,7 +273,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From33"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 518, 620, 532]
       ShowName                off
       GotoTag                 "MNR__AI1"
@@ -309,7 +282,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From34"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 538, 620, 552]
       ShowName                off
       GotoTag                 "MNR__AI2"
@@ -319,7 +291,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From35"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [645, 538, 735, 552]
       ShowName                off
       GotoTag                 "MNR__AIN2"
@@ -329,7 +300,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From36"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 618, 620, 632]
       ShowName                off
       GotoTag                 "MNR__AI1C"
@@ -339,7 +309,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From37"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [530, 638, 620, 652]
       ShowName                off
       GotoTag                 "MNR__AI2C"
@@ -349,7 +318,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From38"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [645, 638, 735, 652]
       ShowName                off
       GotoTag                 "MNR__AIN2C"
@@ -359,7 +327,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From39"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [645, 618, 735, 632]
       ShowName                off
       GotoTag                 "MNR__AIN1C"
@@ -369,7 +336,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From4"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [645, 518, 735, 532]
       ShowName                off
       GotoTag                 "MNR__AIN1"
@@ -379,8 +345,7 @@ Model {
     Block {
       BlockType               From
       Name                    "From43"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [530, 933, 735, 947]
+      Position                [530, 1008, 735, 1022]
       ShowName                off
       GotoTag                 "MNR__SDCW0x024_Fresh"
       BackgroundColor         "yellow"
@@ -389,8 +354,7 @@ Model {
     Block {
       BlockType               From
       Name                    "From6"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [530, 808, 665, 822]
+      Position                [530, 883, 665, 897]
       ShowName                off
       GotoTag                 "MNR__SDCR0x000"
       BackgroundColor         "yellow"
@@ -399,8 +363,7 @@ Model {
     Block {
       BlockType               From
       Name                    "From7"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [530, 828, 730, 842]
+      Position                [530, 903, 730, 917]
       ShowName                off
       GotoTag                 "MNR__SDCR0x000_Status"
       BackgroundColor         "yellow"
@@ -409,8 +372,7 @@ Model {
     Block {
       BlockType               From
       Name                    "From8"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [530, 848, 735, 862]
+      Position                [530, 923, 735, 937]
       ShowName                off
       GotoTag                 "MNR__SDCR0x000_Fresh"
       BackgroundColor         "yellow"
@@ -419,7 +381,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From9"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [25, 988, 175, 1002]
       ShowName                off
       GotoTag                 "MNR__Status"
@@ -429,7 +390,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [215, 323, 305, 337]
       ShowName                off
       GotoTag                 "MNR__DOUT1"
@@ -440,7 +400,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto1"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [215, 343, 305, 357]
       ShowName                off
       GotoTag                 "MNR__DOUT2"
@@ -451,7 +410,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto10"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [650, 718, 740, 732]
       ShowName                off
       GotoTag                 "MNR__AOUT1"
@@ -462,7 +420,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto11"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [650, 738, 740, 752]
       ShowName                off
       GotoTag                 "MNR__AOUT2"
@@ -473,8 +430,7 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto12"
-      Ports                   [1, 0, 0, 0, 0]
-      Position                [535, 893, 670, 907]
+      Position                [535, 968, 670, 982]
       ShowName                off
       GotoTag                 "MNR__SDCW0x024"
       TagVisibility           "local"
@@ -484,7 +440,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto13"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [535, 718, 625, 732]
       ShowName                off
       GotoTag                 "MNR__AO1"
@@ -495,7 +450,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto14"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [535, 738, 625, 752]
       ShowName                off
       GotoTag                 "MNR__AO2"
@@ -506,7 +460,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto15"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [530, 403, 670, 417]
       ShowName                off
       GotoTag                 "MNR__CNT1_Reset"
@@ -518,7 +471,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto16"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [530, 423, 670, 437]
       ShowName                off
       GotoTag                 "MNR__CNT2_Reset"
@@ -529,7 +481,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto17"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [40, 908, 140, 922]
       ShowName                off
       GotoTag                 "MNR__LEDS"
@@ -540,7 +491,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto18"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [40, 928, 170, 942]
       ShowName                off
       GotoTag                 "MNR__LEDS_Mask"
@@ -551,7 +501,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto19"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [40, 673, 150, 687]
       ShowName                off
       GotoTag                 "MNR__LED0"
@@ -562,7 +511,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto2"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [215, 363, 305, 377]
       ShowName                off
       GotoTag                 "MNR__DOUT3"
@@ -573,7 +521,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto20"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [175, 673, 340, 687]
       ShowName                off
       GotoTag                 "MNR__LED0_Mask"
@@ -584,7 +531,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto21"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [220, 793, 310, 807]
       ShowName                off
       GotoTag                 "MNR__LED2"
@@ -595,7 +541,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto22"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [320, 793, 465, 807]
       ShowName                off
       GotoTag                 "MNR__LED2_Mask"
@@ -606,7 +551,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto23"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [100, 323, 190, 337]
       ShowName                off
       GotoTag                 "MNR__DO1"
@@ -617,7 +561,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto24"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [100, 343, 190, 357]
       ShowName                off
       GotoTag                 "MNR__DO2"
@@ -628,7 +571,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto25"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [100, 363, 190, 377]
       ShowName                off
       GotoTag                 "MNR__DO3"
@@ -639,7 +581,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto26"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [100, 383, 190, 397]
       ShowName                off
       GotoTag                 "MNR__DO4"
@@ -650,7 +591,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto27"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [40, 498, 175, 512]
       ShowName                off
       GotoTag                 "MNR__PWM2_Freq"
@@ -661,7 +601,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto28"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [190, 498, 355, 512]
       ShowName                off
       GotoTag                 "MNR__PWM2_Frequency"
@@ -672,7 +611,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto29"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [220, 773, 310, 787]
       ShowName                off
       GotoTag                 "MNR__LED1"
@@ -683,7 +621,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto3"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [215, 383, 305, 397]
       ShowName                off
       GotoTag                 "MNR__DOUT4"
@@ -694,7 +631,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto30"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [320, 773, 465, 787]
       ShowName                off
       GotoTag                 "MNR__LED1_Mask"
@@ -705,7 +641,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto31"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [220, 813, 310, 827]
       ShowName                off
       GotoTag                 "MNR__LED3"
@@ -716,7 +651,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto32"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [320, 813, 465, 827]
       ShowName                off
       GotoTag                 "MNR__LED3_Mask"
@@ -727,7 +661,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto33"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [220, 833, 310, 847]
       ShowName                off
       GotoTag                 "MNR__LED4"
@@ -738,7 +671,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto34"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [320, 833, 465, 847]
       ShowName                off
       GotoTag                 "MNR__LED4_Mask"
@@ -749,7 +681,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto35"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [220, 853, 310, 867]
       ShowName                off
       GotoTag                 "MNR__LED5"
@@ -760,7 +691,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto36"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [320, 853, 465, 867]
       ShowName                off
       GotoTag                 "MNR__LED5_Mask"
@@ -771,7 +701,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto37"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [220, 873, 310, 887]
       ShowName                off
       GotoTag                 "MNR__LED6"
@@ -782,7 +711,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto38"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [320, 873, 465, 887]
       ShowName                off
       GotoTag                 "MNR__LED6_Mask"
@@ -793,7 +721,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto39"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [220, 893, 310, 907]
       ShowName                off
       GotoTag                 "MNR__LED7"
@@ -804,7 +731,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto4"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [40, 478, 175, 492]
       ShowName                off
       GotoTag                 "MNR__PWM1_Freq"
@@ -815,7 +741,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto40"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [320, 893, 465, 907]
       ShowName                off
       GotoTag                 "MNR__LED7_Mask"
@@ -826,7 +751,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto41"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [220, 913, 310, 927]
       ShowName                off
       GotoTag                 "MNR__LED8"
@@ -837,7 +761,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto42"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [320, 913, 465, 927]
       ShowName                off
       GotoTag                 "MNR__LED8_Mask"
@@ -847,8 +770,18 @@ Model {
     }
     Block {
       BlockType               Goto
+      Name                    "Goto43"
+      Position                [535, 833, 670, 847]
+      ShowName                off
+      GotoTag                 "MNR__OWPWR"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      FontSize                10
+      #GUID                   d59f62dc-faff-4a93-bde4-8f7024997db6
+    }
+    Block {
+      BlockType               Goto
       Name                    "Goto5"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [190, 478, 355, 492]
       ShowName                off
       GotoTag                 "MNR__PWM1_Frequency"
@@ -859,7 +792,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto6"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [40, 563, 130, 577]
       ShowName                off
       GotoTag                 "MNR__PWM1A"
@@ -870,7 +802,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto7"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [155, 563, 245, 577]
       ShowName                off
       GotoTag                 "MNR__PWM1B"
@@ -881,7 +812,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto8"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [270, 563, 360, 577]
       ShowName                off
       GotoTag                 "MNR__PWM1C"
@@ -892,7 +822,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto9"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [40, 588, 130, 602]
       ShowName                off
       GotoTag                 "MNR__PWM2A"
@@ -999,7 +928,7 @@ Model {
     Annotation {
       Position                [595, 160]
       Text                    "Quadrature Encoder Mode:"
-      FontName                "Helvetica"
+      FontName                "Arial"
       FontWeight              "bold"
       FontAngle               "normal"
       FontSize                10
@@ -1009,7 +938,7 @@ Model {
       Position                [685, 210]
       Text                    "Pulse Counting Mode, Up Direction, Rising / Fal"
 "ling / Both Edge:"
-      FontName                "Helvetica"
+      FontName                "Arial"
       FontWeight              "bold"
       FontAngle               "normal"
       FontSize                10
@@ -1019,7 +948,7 @@ Model {
       Position                [730, 300]
       Text                    "Pulse Counting Mode, Externally Controlled Dire"
 "ction, Rising / Falling / Both Edge:"
-      FontName                "Helvetica"
+      FontName                "Arial"
       FontWeight              "bold"
       FontAngle               "normal"
       FontSize                10
@@ -1028,7 +957,7 @@ Model {
     Annotation {
       Position                [650, 390]
       Text                    "Value Reset Request and Completion Indication:"
-      FontName                "Helvetica"
+      FontName                "Arial"
       FontWeight              "bold"
       FontAngle               "normal"
       FontSize                10
@@ -1080,14 +1009,14 @@ Model {
       #GUID                   43f768f3-937a-4a78-93b2-ca402fae3280
     }
     Annotation {
-      Position                [630, 795]
+      Position                [630, 870]
       Text                    "Service Data Channel - Read:"
       FontWeight              "bold"
       FontSize                14
       #GUID                   9e94ec72-46a8-40eb-b7b4-698252451f07
     }
     Annotation {
-      Position                [630, 880]
+      Position                [630, 955]
       Text                    "Service Data Channel - Write:"
       FontWeight              "bold"
       FontSize                14
@@ -1156,6 +1085,25 @@ Model {
       Position                [130, 655]
       Text                    "LED is driven by REX only if _Mask is ON"
       #GUID                   124f6c01-4179-4d1f-a11b-09f9ef21a54d
+    }
+    Annotation {
+      Position                [530, 770]
+      Text                    "1-Wire Power Supply Output (5V) Control:"
+      FontWeight              "bold"
+      FontSize                14
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      #GUID                   47e32b30-944a-4f16-9d0e-18de0322da6a
+    }
+    Annotation {
+      Position                [530, 790]
+      Text                    "5V output for 1-Wire bus can be switched on/off"
+" for bus reset,\nor it can be used as an additional digital output.\nDo not us"
+"e the flag without any signal connected to it."
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      FontSize                10
+      #GUID                   a3d0b4cb-6143-4c06-84e8-73db902cf281
     }
   }
 }

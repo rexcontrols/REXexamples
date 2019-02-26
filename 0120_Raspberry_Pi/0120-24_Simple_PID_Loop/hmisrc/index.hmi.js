@@ -95,29 +95,12 @@ REX.HMI.init = function(){
     
     // Links to the WebWatch visualization
     REX.WebBuDi.addSection({
-        column: 1,        
-        background_color:"#A66C20",
-        rows: [
-            {type: 'LINK', desc:"WebWatch", label:"Control", target_url: 'PID_loop_control.html'}
-        ]
-    });
-    
-    REX.WebBuDi.addSection({
-        column: 2,        
-        background_color:"#A66C20",
-        rows: [
-            {type: 'LINK', desc:"WebWatch", label:"Task", target_url: 'PID_loop_task.html'}
-        ]
-    });
-    
-    REX.WebBuDi.addSection({
         column: 3,        
-        background_color:"#A66C20",
         rows: [
-            {type: 'ES'}
+            {type: 'LINK', desc:"Control algorithm", label:"WebWatch", target_url: 'PID_loop_control.html'}
         ]
     });
-     
+    
     /* REX.HMI.Graph - Time-based graph component which is shown on the bottom of the web page.
      * Graph can read arbitrary signal connected via ALIAS and CSTRING or all signals from TRND
      * blocks. 
@@ -125,7 +108,7 @@ REX.HMI.init = function(){
      */
      
     // Add all signals from TRND block with user defined labels
-    REX.HMI.Graph.addTrend({cstring: 'PID_loop_control.TRND_PIDMA', labels: ['Process value','Manipulated variable','Setpoint']});
+    REX.HMI.Graph.addTrend({cstring: 'PID_loop_control.TRND', labels: ['Process value','Manipulated variable','Setpoint']});
     
     /* Add arbitrary signal to graph using ALIAS and CSTRING */
     // REX.HMI.Graph.addSignal({alias:"Graph", cstring:"task_name.block_name:signal", desc:"Signal value", period:1000});

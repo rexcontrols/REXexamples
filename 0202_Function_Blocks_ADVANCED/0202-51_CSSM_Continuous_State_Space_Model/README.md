@@ -20,7 +20,7 @@ The signals are recorded in the TRND block which allows displaying of the trends
 The algorithm runs each 1 second (1.0 s) by default. See the EXEC function block,  
 tick x ntick0 = 0.1 x 10 = 1.0 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target device.
 - License for advanced blocks library must be installed.
 

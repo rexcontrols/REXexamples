@@ -26,7 +26,7 @@ control algorithm, which provides a time-plot of the measured data in real-time.
 Moreover, a connection watchdog is implemented to monitor the connection with 
 REXYGEN.
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* and S7Drv modules are installed on the target device
 - The LOGO! device is in RUN mode (*logo_integration.lsc* attached)
 - The IP address 192.168.1.111 is assumed in the LOGO! device. If the IP address 

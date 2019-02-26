@@ -20,7 +20,7 @@ trends (graphs) in the Watch mode of *REXYGEN Studio* or in the *REXYGEN Diagnos
 The algorithm runs each 500 milliseconds (0.5 s). See the EXEC function block,  
 tick x ntick0 = 0.05 x 10 = 0.5 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target devices.
 
 ## Running the examples ##

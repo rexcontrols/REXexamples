@@ -7,7 +7,7 @@ ADAM 6217 over the Modbus TCP protocol.
 Modbus TCP master is implemented in REXYGEN, ADAM 6217 is Modbus
 TCP slave.
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* and MbDrv modules must be installed and running on target 
 device to run the examples.
 

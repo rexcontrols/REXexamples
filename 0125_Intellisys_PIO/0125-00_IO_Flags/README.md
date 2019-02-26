@@ -19,6 +19,6 @@ Pick only the input and output flags which you need and copy&paste them into you
 
 - Raspberry Pi is a trademark of the [Raspberry Pi Foundation](http://www.raspberrypi.org)
 - [Intellisys PIO website](http://www.intellisys.it/pio/?___store=pio_en)
-- Visit the [REXYGEN webpage](http://www.rexcontrols.com)
+- Visit the [REXYGEN webpage](http://www.rexygen.com)
 for more information about the example projects and developing advanced 
 automation and control solutions using REXYGEN.

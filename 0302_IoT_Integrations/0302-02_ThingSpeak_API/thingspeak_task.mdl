@@ -1,14 +1,14 @@
 Model {
   Name                    "thingspeak_task"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,36 +21,26 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
   }
   System {
     Name                    "thingspeak_task"
-    Location                [292, 33, 812, 400]
+    Location                [292, 33, 882, 400]
     #GUID                   5908a457-6bb4-450e-a235-6e94f1d87163
-    Block {
-      BlockType               Reference
-      Name                    "CNB_TRIGGER_POST"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [260, 203, 280, 217]
-      SourceBlock             "mathlib/CNB"
-      YCN                     off
-      BackgroundColor         "magenta"
-      #GUID                   97847c78-d790-424a-8350-ba6c7884bfb8
-    }
     Block {
       BlockType               Reference
       Name                    "CNR_pressure"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 137, 70, 153]
+      Position                [45, 182, 70, 198]
       SourceBlock             "mathlib/CNR"
       ycn                     105
       #GUID                   04b4275a-1d11-462e-ae7b-1d70c492b9ef
@@ -59,7 +49,7 @@ Model {
       BlockType               Reference
       Name                    "CNR_temperature"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [45, 97, 70, 113]
+      Position                [45, 142, 70, 158]
       SourceBlock             "mathlib/CNR"
       ycn                     "9.81"
       #GUID                   98ac68e0-0d39-4319-84bb-c87e8461ca3f
@@ -68,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "CNS_APIkey"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [260, 148, 280, 162]
+      Position                [260, 193, 280, 207]
       SourceBlock             "stringlib/CNS"
       scv                     "YourThingSpeakAPIKey"
       nmax                    0
@@ -80,7 +70,7 @@ Model {
       BlockType               Reference
       Name                    "CONCAT"
       Ports                   [8, 1, 0, 0, 0]
-      Position                [170, 95, 230, 185]
+      Position                [170, 140, 230, 230]
       SourceBlock             "stringlib/CONCAT"
       ptrn                    "{ \"field1\": %1, \"field2\": %2 }"
       nmax                    0
@@ -90,7 +80,7 @@ Model {
       BlockType               Reference
       Name                    "HTTP2"
       Ports                   [4, 6, 0, 0, 0]
-      Position                [340, 127, 420, 193]
+      Position                [340, 172, 420, 238]
       SourceBlock             "speclib/HTTP2"
       url                     "https://api.thingspeak.com/update.json?api_key="
       method                  "2: POST"
@@ -110,9 +100,21 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "MP_TRIGGER_POST"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [260, 248, 275, 262]
+      SourceBlock             "genlib/MP"
+      BSTATE                  off
+      pwidth                  1
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   31742b79-f2d6-4059-9bea-d45b150eff27
+    }
+    Block {
+      BlockType               Reference
       Name                    "RTOS"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [110, 98, 140, 112]
+      Position                [110, 143, 140, 157]
       SourceBlock             "stringlib/RTOS"
       prec                    3
       mode                    "2: normal"
@@ -122,19 +124,11 @@ Model {
       BlockType               Reference
       Name                    "RTOS1"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [110, 138, 140, 152]
+      Position                [110, 183, 140, 197]
       SourceBlock             "stringlib/RTOS"
       prec                    0
       mode                    "2: normal"
       #GUID                   79ab2c61-d6a0-4953-819b-b2e1c29bf3b6
-    }
-    Line {
-      SrcBlock                "CNB_TRIGGER_POST"
-      SrcPort                 1
-      Points                  [40, 0]
-      DstBlock                "HTTP2"
-      DstPort                 4
-      #GUID                   193a8cad-f46c-4dee-bda2-048714baae6d
     }
     Line {
       SrcBlock                "CNR_pressure"
@@ -165,6 +159,14 @@ Model {
       #GUID                   c6e6b540-78ef-4eee-8322-7bea2ad07f5a
     }
     Line {
+      SrcBlock                "MP_TRIGGER_POST"
+      SrcPort                 1
+      Points                  [45, 0]
+      DstBlock                "HTTP2"
+      DstPort                 4
+      #GUID                   193a8cad-f46c-4dee-bda2-048714baae6d
+    }
+    Line {
       SrcBlock                "RTOS"
       SrcPort                 1
       DstBlock                "CONCAT"
@@ -180,17 +182,43 @@ Model {
       #GUID                   434681c8-669d-4b1a-842f-075b3b5a4c9a
     }
     Annotation {
-      Position                [130, 40]
-      Text                    "See the README.md file for detailed information"
-"."
-      #GUID                   8feb317c-34be-445c-9c14-f35789312c76
-    }
-    Annotation {
       Position                [95, 15]
       Text                    "ThingSpeak API example"
       FontSize                14
       FontWeight              "bold"
       #GUID                   d52f859a-11a7-4c8e-849d-abd0a5b60b67
+    }
+    Annotation {
+      Position                [10, 85]
+      Text                    "See the README.md file for detailed information"
+"."
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      FontSize                12
+      ForegroundColor         "red"
+      #GUID                   3de2bc86-469a-4997-a21f-53c0682bb249
+    }
+    Annotation {
+      Position                [10, 50]
+      Text                    "Free registration at www.thingspeak.com and sub"
+"sequent configuration of \nthe API key is required prior to running the applic"
+"ation."
+      FontWeight              "bold"
+      FontSize                14
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      ForegroundColor         "red"
+      #GUID                   55dd869e-d123-42f7-ae1b-22681401d71a
+    }
+    Annotation {
+      Position                [10, 30]
+      Text                    "Data is sent to your private ThingSpeak channel"
+"."
+      FontWeight              "bold"
+      FontSize                14
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      #GUID                   d5cd756e-e5af-49e9-a7d8-e26358ac52ca
     }
   }
 }

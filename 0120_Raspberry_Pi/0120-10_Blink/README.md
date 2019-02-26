@@ -1,9 +1,17 @@
-﻿REXYGEN on Raspberry Pi
-==================================
+Blinking outputs of the Raspberry Pi
+====================================
+
+A very basic project which demonstrates access to GPIO pins of the Raspberry Pi
+platform.
 
 ## Prerequisites ##
-- *REXYGEN Runtime Core* and RPiDrv module must be installed and running on the Raspberry Pi
+- *REXYGEN Runtime Core* and RPiDrv module must be installed and running on the 
+Raspberry Pi
 - The wiring must comply with the attached schematics. 
+
+## Timing of the project ##
+The algorithm runs each 20 milliseconds (0.02 s). See the EXEC function block,  
+tick x ntick0 = 0.02 x 1 = 0.02 s
 
 ## Running the example ##
 - The **exec.mdl* file is the project main file
@@ -11,8 +19,7 @@
 
 ## User interface (HMI) ##
 The example is accompanied by a HTML5-based user interface built on the 
-WebBuDi framework (Web Buttons and Displays). See the above mentioned tutorial 
-for instructions on deploying the HMI on the Raspberry Pi.
+WebBuDi framework (Web Buttons and Displays).
  
 ## Documentation ##
 

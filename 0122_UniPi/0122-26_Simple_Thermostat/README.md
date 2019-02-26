@@ -2,15 +2,14 @@ UniPi as a simple thermostat
 ============================
  
 This folder contains the source files for the demonstration project on using
-REXYGEN on the Raspberry Pi minicomputer with the UniPi extension
-board. 
+REXYGEN on the Raspberry Pi minicomputer with the UniPi extension board. 
 
 In this example the UniPi is configured to act as a simple thermostat. The 
 temperature is measured by the 1-Wire DS18B20 sensor and the onboard relay 1 is
 switched on and off with a hysteresis of 0.5°C.
 
 The measured temperature and status of the relay is recorded in the TRND blocks
-which allow displaying of the trends (graphs) in the *REXYGEN Diagnostics* diagnostic tool. 
+which allow displaying of the trends (graphs). 
 
 ## Timing of the project ##
 
@@ -19,18 +18,21 @@ tick x ntick0 = 0.05 x 10 = 0.5
 
 ## Prerequisites ##
 
-- *REXYGEN Runtime Core* and RPiDrv modules must be installed and running on the Raspberry Pi.
-- Owserver (part of the OWFS package) must be installed, correctly configured and running on the Raspberry Pi.
+- *REXYGEN Runtime Core* and *RPiDrv* modules must be installed and running on 
+the Raspberry Pi.
+- Owserver (part of the OWFS package) must be installed, correctly configured 
+and running on the Raspberry Pi.
 - I2C bus must be enabled on the Raspberry Pi.
 - The wiring must comply with the attached schematics. 
 
 ## Running the example ##
 
 - The **exec.mdl* file is the project main file, open it with *REXYGEN Studio*.
-- Specify the 64-bit ROM ID of the attached temperature sensor. See the 1-Wire driver manual below.
+- Specify the 64-bit ROM ID of the attached temperature sensor. See the 1-Wire 
+driver manual below.
 - Compile and download the project to the target device.
-- Switch to online mode and watch the algorithm (use Target->Watch Selection 
-  to display data).
+- Switch to watch mode and observe the algorithm (use Target->Watch Selection 
+to display data).
    
 ## Documentation ##
 

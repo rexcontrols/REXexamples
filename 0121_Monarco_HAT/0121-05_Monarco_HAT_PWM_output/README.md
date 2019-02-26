@@ -22,9 +22,9 @@ duty cycle (0.0 to 1.0) in real-time.
 - **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
 - [Getting started with REXYGEN and Monarco HAT](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_MonarcoHAT_RPi_ENG.pdf)
 - [MonarcoDrv - Monarco HAT driver](https://www.rexygen.com/doc/PDF/ENGLISH/MonarcoDrv_ENG.pdf)
-- [Function blocks of REXYGEN ](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
+- [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
 - [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
-- [Complete documentation of REXYGEN ](http://www.rexygen.com/documentation-and-support)
+- [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 
 ## Additional information ##
 - Visit the [Monarco HAT website](http://www.monarco.io).

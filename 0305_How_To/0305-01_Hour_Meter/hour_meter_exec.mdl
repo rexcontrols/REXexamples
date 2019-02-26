@@ -1,14 +1,14 @@
 Model {
   Name                    "hour_meter_exec"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,20 +21,20 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
   }
   System {
     Name                    "hour_meter_exec"
-    Location                [10, 33, 218, 447]
+    Location                [10, 33, 218, 476]
     #GUID                   8314c4e6-b8cd-422a-a79d-83a8d3993346
     Block {
       BlockType               Reference
@@ -58,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "INFO"
       Ports                   [0, 0, 0, 0, 0]
-      Position                [125, 363, 175, 377]
+      Position                [20, 393, 65, 412]
       SourceBlock             "execlib/INFO"
       Title                   "Hour meter"
       Author                  "REX Controls s.r.o."

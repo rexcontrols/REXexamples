@@ -1,14 +1,14 @@
 Model {
   Name                    "PID_loop_control"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,35 +21,26 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
   }
   System {
     Name                    "PID_loop_control"
-    Location                [311, 31, 625, 422]
+    Location                [311, 31, 904, 422]
     #GUID                   8c31a85b-d379-4a64-9df9-e533c64cb9f2
-    Block {
-      BlockType               Inport
-      Name                    "pv"
-      Ports                   [0, 1, 0, 0, 0]
-      Position                [20, 128, 50, 142]
-      Port                    1
-      BackgroundColor         "green"
-      #GUID                   c9a62575-6afa-43ae-950e-2590d62a858a
-    }
     Block {
       BlockType               Reference
       Name                    "CNB_MAN"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [25, 203, 45, 217]
+      Position                [135, 203, 155, 217]
       SourceBlock             "mathlib/CNB"
       YCN                     off
       BackgroundColor         "magenta"
@@ -68,7 +59,7 @@ Model {
       BlockType               Reference
       Name                    "CNR_hv"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [25, 173, 45, 187]
+      Position                [135, 173, 155, 187]
       SourceBlock             "mathlib/CNR"
       ycn                     50
       BackgroundColor         "magenta"
@@ -78,7 +69,7 @@ Model {
       BlockType               Reference
       Name                    "CNR_sp"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [25, 93, 45, 107]
+      Position                [135, 93, 155, 107]
       SourceBlock             "mathlib/CNR"
       ycn                     22
       BackgroundColor         "magenta"
@@ -87,7 +78,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [65, 283, 105, 297]
       ShowName                off
       GotoTag                 "pv"
@@ -97,7 +87,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From1"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [115, 293, 155, 307]
       ShowName                off
       GotoTag                 "mv"
@@ -107,7 +96,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From2"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [65, 303, 105, 317]
       ShowName                off
       GotoTag                 "sp"
@@ -117,8 +105,7 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto"
-      Ports                   [1, 0, 0, 0, 0]
-      Position                [80, 143, 120, 157]
+      Position                [190, 143, 230, 157]
       ShowName                off
       GotoTag                 "pv"
       TagVisibility           "local"
@@ -128,8 +115,7 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto1"
-      Ports                   [1, 0, 0, 0, 0]
-      Position                [250, 108, 290, 122]
+      Position                [405, 138, 445, 152]
       ShowName                off
       GotoTag                 "mv"
       TagVisibility           "local"
@@ -139,8 +125,7 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto2"
-      Ports                   [1, 0, 0, 0, 0]
-      Position                [75, 93, 115, 107]
+      Position                [185, 93, 225, 107]
       ShowName                off
       GotoTag                 "sp"
       TagVisibility           "local"
@@ -149,19 +134,42 @@ Model {
     }
     Block {
       BlockType               Reference
+      Name                    "LIN"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [395, 108, 420, 122]
+      SourceBlock             "mathlib/LIN"
+      u1                      0
+      y1                      0
+      u2                      100
+      y2                      1023
+      #GUID                   ea9e6382-e7ef-46fe-9d68-8c375131d0f6
+    }
+    Block {
+      BlockType               Reference
       Name                    "LPBRK"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [180, 85, 190, 95]
+      Position                [290, 85, 300, 95]
       Orientation             "left"
       SourceBlock             "execlib/LPBRK"
       ShowName                off
       #GUID                   e8ef6659-b295-4ae9-beba-9c4bbb3f92dd
     }
     Block {
+      BlockType               From
+      Name                    "OWS__temperature"
+      Position                [15, 128, 135, 142]
+      BackgroundColor         "yellow"
+      ShowName                off
+      CloseFcn                "tagdialog Close"
+      GotoTag                 "OWS__temperature"
+      FontSize                10
+      #GUID                   1cd52a5b-50a1-4d7e-9e6a-b8a06cef06f9
+    }
+    Block {
       BlockType               Reference
       Name                    "PIDU"
       Ports                   [7, 4, 0, 0, 0]
-      Position                [165, 107, 210, 183]
+      Position                [275, 107, 320, 183]
       SourceBlock             "reglib/PIDU"
       irtype                  "7: PID"
       RACT                    off
@@ -176,7 +184,20 @@ Model {
       lolim                   0
       dz                      0
       icotype                 "1: Analog"
+      BackgroundColor         "cyan"
+      FontSize                10
       #GUID                   dd611064-8314-475d-9400-66af7194888a
+    }
+    Block {
+      BlockType               Goto
+      Name                    "RPI__PWM18"
+      Position                [440, 108, 560, 122]
+      BackgroundColor         "lightBlue"
+      ShowName                off
+      GotoTag                 "RPI__PWM18"
+      TagVisibility           "local"
+      NamePlacement           ""
+      #GUID                   9e6f3eca-6b1d-4e6d-8e25-6ee73014f770
     }
     Block {
       BlockType               Reference
@@ -196,17 +217,8 @@ Model {
       arc                     0
       id                      1
       Title                   "Trend Title"
+      timesrc                 1
       #GUID                   836c29fe-66cb-4523-be37-8f60caaba677
-        timesrc       1
-    }
-    Block {
-      BlockType               Outport
-      Name                    "mv"
-      Ports                   [1, 0, 0, 0, 0]
-      Position                [255, 138, 285, 152]
-      Port                    1
-      BackgroundColor         "green"
-      #GUID                   3195c329-099b-42f0-8891-118f8e14f568
     }
     Line {
       SrcBlock                "CNB_MAN"
@@ -270,6 +282,13 @@ Model {
       #GUID                   6287b9fe-359e-46f0-886e-1f1089fbf497
     }
     Line {
+      SrcBlock                "LIN"
+      SrcPort                 1
+      DstBlock                "RPI__PWM18"
+      DstPort                 1
+      #GUID                   dbf7b82c-478b-4c23-8ea9-fc0d7df57df8
+    }
+    Line {
       SrcBlock                "LPBRK"
       SrcPort                 1
       Points                  [-35, 0; 0, 55]
@@ -278,33 +297,10 @@ Model {
       #GUID                   6caf753f-44f0-4b34-9d7d-44b4aedfedae
     }
     Line {
-      SrcBlock                "PIDU"
+      SrcBlock                "OWS__temperature"
       SrcPort                 1
-      Points                  [10, 0]
-      #GUID                   8c536b5e-cdff-44b7-ae29-3554f540e650
-      Branch {
-        DstBlock                "Goto1"
-        DstPort                 1
-        #GUID                   a4bbd8f3-74c6-4c94-b17a-14a6b7ffaf69
-      }
-      Branch {
-        Points                  [0, -25]
-        DstBlock                "LPBRK"
-        DstPort                 1
-        #GUID                   8a9e09c7-208a-4e11-b93b-31d826c4b0af
-      }
-      Branch {
-        Points                  [0, 30]
-        DstBlock                "mv"
-        DstPort                 1
-        #GUID                   0b589b65-3610-41d0-b739-81c8c2557214
-      }
-    }
-    Line {
-      SrcBlock                "pv"
-      SrcPort                 1
-      Points                  [5, 0]
-      #GUID                   91664bb9-0832-4afc-a094-c0de6378ef28
+      Points                  [30, 0]
+      #GUID                   e448c2f4-57c5-4ba9-8561-5cf808801078
       Branch {
         Points                  [0, 15]
         DstBlock                "Goto"
@@ -315,6 +311,33 @@ Model {
         DstBlock                "PIDU"
         DstPort                 3
         #GUID                   f621e0dc-e3ff-42e5-be22-5fb35b82e324
+      }
+    }
+    Line {
+      SrcBlock                "PIDU"
+      SrcPort                 1
+      Points                  [10, 0]
+      #GUID                   8c536b5e-cdff-44b7-ae29-3554f540e650
+      Branch {
+        Points                  [0, -25]
+        DstBlock                "LPBRK"
+        DstPort                 1
+        #GUID                   8a9e09c7-208a-4e11-b93b-31d826c4b0af
+      }
+      Branch {
+        Points                  [35, 0]
+        #GUID                   0b589b65-3610-41d0-b739-81c8c2557214
+        Branch {
+          Points                  [0, 30]
+          DstBlock                "Goto1"
+          DstPort                 1
+          #GUID                   61100dd8-4b3c-46d6-9713-0d4c3c39e926
+        }
+        Branch {
+          DstBlock                "LIN"
+          DstPort                 1
+          #GUID                   3a24a940-71ab-45a9-837d-46642c16d6db
+        }
       }
     }
     Annotation {

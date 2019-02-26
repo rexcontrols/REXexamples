@@ -24,7 +24,7 @@ block EXEC/ARC).
 The algorithm runs each 50 milliseconds (0.05 s). See the EXEC function block,  
 tick x ntick0 = 0.05 x 1 = 0.05 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target device.
 
 ## Running the example ##

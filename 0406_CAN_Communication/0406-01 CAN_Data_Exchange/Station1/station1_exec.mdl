@@ -1,0 +1,131 @@
+Model {
+  Name                    "station1_exec"
+  Version                 3.00
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "station1_exec"
+    Location                [12, 33, 209, 467]
+    #GUID                   f5ffee10-7913-470f-b666-c0336984f207
+    Block {
+      BlockType               Reference
+      Name                    "CAN0"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 138, 160, 152]
+      SourceBlock             "execlib/IODRV"
+      module                  "CanDrv"
+      classname               "CanDrv"
+      cfgname                 "station1_can_cfg.rio"
+      factor                  1
+      stack                   10240
+      pri                     4
+      timer                   off
+      #GUID                   76e30a46-f2c4-421b-8146-5c5648b4defc
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CanDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 103, 160, 117]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   0fd1e63d-5a10-4eb3-9baa-cd6e1493604f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [30, 88, 75, 377]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  1
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   e88142d9-7671-4c96-918e-1bb0de78c747
+    }
+    Block {
+      BlockType               Reference
+      Name                    "station1_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [115, 242, 165, 258]
+      SourceBlock             "execlib/TASK"
+      ShowName                on
+      NamePlacement           ""
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   102400
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   d297ae01-2f97-425d-8a2c-5b1d1a1d04c5
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "CanDrv"
+      DstPort                 1
+      #GUID                   cdcf9e21-e6e3-4829-9541-4b891f3a8a7c
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "CAN0"
+      DstPort                 1
+      #GUID                   b3a81c94-de91-46fb-a40d-a298c2659db1
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "station1_task"
+      DstPort                 1
+      #GUID                   2b2e7c0a-758f-4cdd-9444-5bc06340ccee
+    }
+    Annotation {
+      Position                [100, 55]
+      Text                    "See the README.md file in project \nfolder for "
+"detailed information."
+      #GUID                   eadec7a5-4d41-4d23-9935-617653a1088b
+    }
+    Annotation {
+      Position                [90, 20]
+      Text                    "CAN communication"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   590291c8-0e77-4cdf-a7fb-59308fed54e0
+    }
+  }
+}

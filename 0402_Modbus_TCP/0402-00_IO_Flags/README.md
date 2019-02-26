@@ -12,7 +12,7 @@ Pick only the input and output flags which you need and copy&paste them into you
 
 ## Documentation ##
 
-- [Modbus driver for REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/DbDrv_ENG.pdf)
+- [Modbus driver for REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/MbDrv_ENG.pdf)
 - [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
 - [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)
 

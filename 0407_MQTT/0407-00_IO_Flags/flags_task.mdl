@@ -1,0 +1,112 @@
+Model {
+  Name                    "flags_task"
+  Version                 3.00
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "flags_task"
+    Location                [215, 35, 1117, 377]
+    #GUID                   f9d9d701-0222-4f50-bb76-8b3ad55f2df7
+    Block {
+      BlockType               From
+      Name                    "From"
+      Position                [50, 188, 235, 202]
+      ShowName                off
+      GotoTag                 "MQTT__ConnectionStatus"
+      BackgroundColor         "yellow"
+      #GUID                   a27c8fa7-b284-4728-bd3f-b378bb3f2dea
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto"
+      Position                [310, 187, 495, 203]
+      ShowName                off
+      GotoTag                 "MQTT__ConfigClientId"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   dc8f7fb5-104e-4a24-9977-5b12e0e94543
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto1"
+      Position                [310, 222, 495, 238]
+      ShowName                off
+      GotoTag                 "MQTT__ConfigUserName"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   878068fb-432d-4502-ac4f-b692ed3e1e21
+    }
+    Block {
+      BlockType               Goto
+      Name                    "Goto4"
+      Position                [310, 252, 495, 268]
+      ShowName                off
+      GotoTag                 "MQTT__ConfigPassword"
+      TagVisibility           "local"
+      BackgroundColor         "lightBlue"
+      #GUID                   aebb59f0-167d-480a-a0bd-847746e133b6
+    }
+    Annotation {
+      Position                [450, 45]
+      Text                    "This example serves as a library. It won't comp"
+"ile because it contains ALL input and output \nflags and there are conflicts.\n"
+"Pick only the input and output flags which you need and copy&paste them into y"
+"our project."
+      FontName                "Arial"
+      FontSize                20
+      FontWeight              "bold"
+      ForegroundColor         "red"
+      #GUID                   d34d75c5-c1dc-47c6-b6b7-2f1d1239b15f
+    }
+    Annotation {
+      Position                [90, 150]
+      Text                    "Input signals"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   dbe9ea69-7434-4098-b352-915058e899f5
+    }
+    Annotation {
+      Position                [355, 150]
+      Text                    "Output signals"
+      FontWeight              "bold"
+      FontSize                14
+      #GUID                   43184ad3-0f13-4609-8f3c-5d60eac4aa60
+    }
+    Annotation {
+      Position                [195, 110]
+      Text                    "MQTT I/O flags"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   3a8fe8f3-d0e8-4076-8cef-4b6a7e632c4f
+    }
+  }
+}

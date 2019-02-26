@@ -19,7 +19,7 @@ program.
 The algorithm runs each 100 milliseconds (0.1 s). See the EXEC function block,  
 tick x ntick0 = 0.01 x 10 = 0.1 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target device (Raspberry Pi).
 - SPI bus must be enabled and available (e.g. /dev/spidev0.0 on the Raspberry Pi)
 - The wiring must comply with the attached datasheet. 

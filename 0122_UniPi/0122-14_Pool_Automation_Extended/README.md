@@ -40,7 +40,7 @@ deploying the HMI on the Raspberry Pi.
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
-- [Getting started with REXYGEN  and UniPi board](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_UniPi_ENG.pdf)
+- [Getting started with REXYGEN and UniPi board](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenGettingStarted_UniPi_ENG.pdf)
 - [REXYGEN HMI User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenHMI_ENG.pdf)
 - [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
 - [OwsDrv - 1-Wire driver](https://www.rexygen.com/doc/PDF/ENGLISH/OwsDrv_ENG.pdf)

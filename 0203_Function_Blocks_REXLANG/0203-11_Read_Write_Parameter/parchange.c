@@ -28,10 +28,10 @@ long main(void)
 {
 //Setting various items (int, double, string)
 	SetExt(".CNI:icn", firstinput);					//relative ItemID
-	SetExt("parchange_task.CNR:ycn", secondinput);	//absolut ItemID
+	SetExt("parchange_task.CNR:ycn", secondinput);	//absolute ItemID
 	SetExt(".CNS:scv", thirdinput);
 
-//Reading items back and writting it to outputs
+//Reading items back and writing it to outputs
 	firstoutput = GetExtInt(".CNI:icn");
 	secondoutput = GetExtDouble(".CNR:ycn");
 	thirdoutput = GetExtString(".CNS:scv");

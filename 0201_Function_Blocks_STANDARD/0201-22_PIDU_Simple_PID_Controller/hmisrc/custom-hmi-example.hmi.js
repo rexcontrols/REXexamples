@@ -3,13 +3,6 @@ REX.HMI.init = function () {
 
     // THIS EXAMPLE IS BASED ON THE "PIDU - Simple PID controller" EXECUTIVE
 
-    // Set different WS server IP (Default: host/rex)
-    //REX.HMI.setTargetUrl('127.0.0.1/rex');
-
-    // Set refresh rate (Default: 500 ms)
-    // REX.HMI.setRefreshRate(500);
-
-
     //Add read items (alias,cstring,type)
     // alias - UNIQE local alias of the connection string (no spaces, asci signs)
     // cstring - connection string
@@ -22,15 +15,21 @@ REX.HMI.init = function () {
     REX.HMI.addItem({alias:"SP-W",cstring:"pidcontrol_control.CNR_sp:ycn", write:true});
 
     // Get item with given alias and assign read event
-    REX.HMI.$i("PV").on("read", function (itm) {
+    REX.HMI.get("PV").on("read", function (itm) {
+        var value = itm.getValue();
+        var stringToFixed = value.toFixed(2);
+        
         // Select element using jQuery library and set read value and round to two decimal places 
-        $('#read-value').val(itm.getValue().toFixed(2));
+        $('#read-value').val(stringToFixed);
     });
 
     // Get item with given alias and assign read event
-    REX.HMI.$i("SP").on("change", function (itm) {
-        $('#read-value-on-change').val(itm.getValue().toFixed(2));
-        var msg = "SP changed to " + itm.getValue().toFixed(2);
+    REX.HMI.get("SP").on("change", function (itm) {
+        var value = itm.getValue();
+        var stringToFixed = value.toFixed(2);
+        $('#read-value-on-change').val(stringToFixed);
+        
+        var msg = "SP changed to " + stringToFixed;
         // Write message to the log        
         REX.HMI.log.info(msg);
         // Also write the same message to console. Press F12 to see
@@ -38,7 +37,7 @@ REX.HMI.init = function () {
     });
 
     // Write items are also read if not disableRefresh flag is set
-    REX.HMI.$i("MAN").on("read", function (itm) {
+    REX.HMI.get("MAN").on("read", function (itm) {
         if (itm.getValue()) {
             $('#write-boolean-value-1').prop("checked", true);
         }
@@ -47,7 +46,7 @@ REX.HMI.init = function () {
         }
     });
 
-    REX.HMI.$i("SP-W").on("change", function (itm) {
+    REX.HMI.get("SP-W").on("change", function (itm) {
         $('#write-value').val(itm.getValue().toFixed(2));
     });
 
@@ -58,18 +57,23 @@ REX.HMI.init = function () {
         // If first one is checked than write 0 othewise 1
         if (value) {
             // write(alias,value)
-            REX.HMI.$i("MAN").write(0);
+            REX.HMI.get("MAN").write(0);
         }
         else {
-            REX.HMI.$i("MAN").write(1);
+            REX.HMI.get("MAN").write(1);
         }
         REX.HMI.log.info("MAN set to " + value);
     });
 
     $('#btn-set').on("click", function (evt) {
         var value = Number($('#write-value').val());
-        REX.HMI.$i("SP-W").write(value);
+        REX.HMI.get("SP-W").write(value);
         REX.HMI.log.info("SP set to " + value);
     });
+    
+    // Set different WS server IP (Default: host/rex)
+    // REX.HMI.setTargetUrl('127.0.0.1/rex');
 
+    // Set refresh rate (Default: 500 ms)
+    // REX.HMI.setRefreshRate(500);
 };

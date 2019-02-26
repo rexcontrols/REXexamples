@@ -1,0 +1,330 @@
+Model {
+  Name                    "debugging_task"
+  Version                 3.0
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "center"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "debugging_task"
+    Location                [334, 34, 925, 382]
+    Open                    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth       200
+    ScreenColor             "white"
+    PaperOrientation        "landscape"
+    PaperPositionMode       "auto"
+    PaperType               "usletter"
+    PaperUnits              "inches"
+    TiledPaperMargins       [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale          1
+    ShowPageBoundaries      off
+    ReportName              "simulink-default.rpt"
+    SIDHighWatermark        7
+    #GUID                   dc18c976-d294-4afb-97eb-1e2c7ffcc8a8
+    Block {
+      BlockType               Reference
+      Name                    "BIS_pulses"
+      Ports                   [0, 2, 0, 0, 0]
+      Position                [45, 258, 60, 282]
+      SourceBlock             "genlib/BIS"
+      Y0                      off
+      t1                      1
+      t2                      2
+      t3                      0
+      t4                      4
+      t5                      5
+      t6                      6
+      t7                      7
+      t8                      8
+      RPT                     on
+      #GUID                   46ba3f2a-1172-48e2-939a-798be27d398a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [280, 98, 545, 122]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   f31f1d5c-e9af-48e3-a6c0-75a999122237
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [280, 248, 390, 272]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  " pulses"
+      DispValue               ""
+      #GUID                   e9185864-6dcc-4034-af40-4696013a6549
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_R1"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 108, 135, 122]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   9b492910-2b87-4cdd-a90c-b47ff6457c83
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_R2"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 138, 135, 152]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   3d2a1e0e-905e-4577-8147-f11381abc661
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_R3"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 168, 135, 182]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   6201f7fd-7bb5-44e1-af66-9907cbf688af
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_R4"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 198, 135, 212]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   392d7e21-d8d1-44de-9fcc-7b283819b3cb
+    }
+    Block {
+      BlockType               Reference
+      Name                    "EDGE_R5"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [110, 258, 135, 272]
+      SourceBlock             "logiclib/EDGE_"
+      iedge                   "1: Rising edge"
+      #GUID                   4d00ae46-b621-4998-8e4b-edce925be582
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_Error"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 108, 60, 122]
+      SourceBlock             "genlib/MP"
+      BSTATE                  off
+      pwidth                  "0.2"
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   8822ad11-b5f7-4ba8-8682-0720ed8a55c2
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_Info"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 168, 60, 182]
+      SourceBlock             "genlib/MP"
+      BSTATE                  off
+      pwidth                  "0.2"
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   68f0a99d-c7d8-462c-a341-c89749263c35
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_Verbose"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 198, 60, 212]
+      SourceBlock             "genlib/MP"
+      BSTATE                  off
+      pwidth                  "0.2"
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   89c5ca6e-3fb7-4071-99be-1659f6548109
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_Warning"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 138, 60, 152]
+      SourceBlock             "genlib/MP"
+      BSTATE                  off
+      pwidth                  "0.2"
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   82fe669f-b5fd-444f-aea6-86629776fac5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "REXLANG"
+      Ports                   [18, 17, 0, 0, 0]
+      Position                [170, 88, 220, 272]
+      SourceBlock             "speclib/REXLANG"
+      strs                    0
+      SID                     4
+      LibraryVersion          "1.88"
+      SourceType              "REXLANG"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      tab_matlab              "BASIC"
+      srcname                 "debugging_rexlang.c"
+      srctype                 "1: C-like"
+      stack                   0
+      debug                   "1: No check"
+      p0                      "2.6"
+      p1                      "8.9"
+      p2                      0
+      p3                      0
+      p4                      0
+      p5                      0
+      p6                      0
+      p7                      0
+      p8                      0
+      p9                      0
+      p10                     0
+      p11                     0
+      p12                     0
+      p13                     0
+      p14                     0
+      p15                     0
+      fname                   ""
+      BackgroundColor         "cyan"
+      #RTFlags                1025
+      #GUID                   bf1ba61a-13b6-41a1-a2c7-104b76363ee0
+    }
+    Line {
+      SrcBlock                "BIS_pulses"
+      SrcPort                 1
+      DstBlock                "EDGE_R5"
+      DstPort                 1
+      #GUID                   af50066e-aac1-48e5-9440-5e5b940d3e6e
+    }
+    Line {
+      SrcBlock                "EDGE_R1"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 3
+      #GUID                   bcd730da-9008-4b3f-9054-a802b5dee58c
+    }
+    Line {
+      SrcBlock                "EDGE_R2"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 6
+      #GUID                   572b74dc-cc75-4d7b-9571-583e3aa25c7e
+    }
+    Line {
+      SrcBlock                "EDGE_R3"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 9
+      #GUID                   5e9976c2-32a4-4b29-aae1-7fcbb10585b6
+    }
+    Line {
+      SrcBlock                "EDGE_R4"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 12
+      #GUID                   5f0c1fa4-5dce-4fc0-a82d-372a6a440d6e
+    }
+    Line {
+      SrcBlock                "EDGE_R5"
+      SrcPort                 1
+      DstBlock                "REXLANG"
+      DstPort                 18
+      #GUID                   0f6804a4-17fe-45bd-a04d-7a76f594c718
+    }
+    Line {
+      SrcBlock                "MP_Error"
+      SrcPort                 1
+      DstBlock                "EDGE_R1"
+      DstPort                 1
+      #GUID                   882494b3-ceb0-4078-bb71-5a01fa9f1751
+    }
+    Line {
+      SrcBlock                "MP_Info"
+      SrcPort                 1
+      DstBlock                "EDGE_R3"
+      DstPort                 1
+      #GUID                   cbc5f3f3-9369-4644-8df3-199788b65002
+    }
+    Line {
+      SrcBlock                "MP_Verbose"
+      SrcPort                 1
+      DstBlock                "EDGE_R4"
+      DstPort                 1
+      #GUID                   68d64bdf-f8b4-475d-8627-93da77de0c8a
+    }
+    Line {
+      SrcBlock                "MP_Warning"
+      SrcPort                 1
+      DstBlock                "EDGE_R2"
+      DstPort                 1
+      #GUID                   d7c39514-eaa1-4b88-9bfd-ab162785c68b
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 2
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   fb6a286b-8e34-4ade-bb8a-f845d3c70c49
+    }
+    Line {
+      SrcBlock                "REXLANG"
+      SrcPort                 17
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   efb277db-1b0d-4218-92e1-bfccb130c9de
+    }
+    Annotation {
+      Position                [155, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      FontSize                12
+      #GUID                   9b312570-962b-49dd-8eeb-21e904256f5d
+    }
+    Annotation {
+      Position                [195, 20]
+      Text                    "REXLANG - Debugging using Trace() command"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   6be559b1-1863-4fae-babd-2a1f8aeb0ce5
+    }
+  }
+}

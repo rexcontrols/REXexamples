@@ -10,7 +10,7 @@ using Javascript and REST API as a communication channel.
 The algorithm runs each 100 milliseconds (0.1 s). See the EXEC function block,  
 tick x ntick0 = 0.05 x 2 = 0.1 
 
-## Prerequisities ##
+## Prerequisites ##
 - *REXYGEN Runtime Core* must be installed and running on the target device.
 
 ## Running the example ##
@@ -19,8 +19,8 @@ tick x ntick0 = 0.05 x 2 = 0.1
 - Compile and download the project to the target device.
 - Switch to Watch mode and observe the algorithm in real-time.
 - Go to http://192.168.1.100:8008/hmi (use the IP address of your device!) and 
-change the CNR value. Changing the value directly from *REXYGEN Studio* has the same 
-effect.
+change the CNR value. Changing the value directly from *REXYGEN Studio* has the 
+same effect.
 
 ## Documentation ##
 

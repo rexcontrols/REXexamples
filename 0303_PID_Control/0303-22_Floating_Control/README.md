@@ -1,4 +1,4 @@
-﻿PIDU - Floating Control 
+PIDU - Floating Control 
 =======================
 
 This folder contains the source files for the demonstration project on cooperation
@@ -52,7 +52,7 @@ are done only by the fine valve.
 ## Documentation ##
 
 - **Press F1 for help** on the selected function block in the *REXYGEN Studio*.
-- [PIDU function block documentation](https://www.rexcontrols.com/media/2.50.5/doc/ENGLISH/MANUALS/BRef/PIDU.html)
+- [PIDU function block documentation](https://www.rexygen.com/doc/ENGLISH/MANUALS/BRef/PIDU.html)
 - [Function blocks of REXYGEN](https://www.rexygen.com/doc/PDF/ENGLISH/BRef_ENG.pdf)
 - [REXYGEN Studio User Guide](https://www.rexygen.com/doc/PDF/ENGLISH/RexygenStudio_ENG.pdf)
 - [Complete documentation of REXYGEN](http://www.rexygen.com/documentation-and-support)

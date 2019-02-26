@@ -1,0 +1,322 @@
+Model {
+  Name                    "twilio_task"
+  Version                 3.00
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "twilio_task"
+    Location                [292, 33, 1136, 400]
+    #GUID                   5908a457-6bb4-450e-a235-6e94f1d87163
+    Block {
+      BlockType               Reference
+      Name                    "CNS_accountSID"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 208, 65, 222]
+      SourceBlock             "stringlib/CNS"
+      scv                     "YourTwilioAccountSID"
+      nmax                    0
+      BackgroundColor         "magenta"
+      #GUID                   a8691700-f759-472b-b69c-8a2c116cdeb9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_from"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 128, 65, 142]
+      SourceBlock             "stringlib/CNS"
+      scv                     "%2B15005550006"
+      nmax                    0
+      BackgroundColor         "magenta"
+      #GUID                   b80208d8-c46d-4a36-b1b9-8c1feead8fb5
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_message"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 158, 65, 172]
+      SourceBlock             "stringlib/CNS"
+      scv                     "Hello from REXYGEN!"
+      nmax                    0
+      BackgroundColor         "magenta"
+      #GUID                   e33b36ca-c055-4db6-8f25-780cc3ea9b98
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CNS_to"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [45, 98, 65, 112]
+      SourceBlock             "stringlib/CNS"
+      scv                     "%2B15005550006"
+      nmax                    0
+      BackgroundColor         "magenta"
+      #GUID                   d4c8fd8e-c57c-4754-9305-235a63ea9d31
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CONCAT"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [115, 95, 175, 185]
+      SourceBlock             "stringlib/CONCAT"
+      ptrn                    "To=%1&From=%2&Body=%3"
+      nmax                    0
+      #GUID                   8397a270-dcdf-4788-a9ec-2e0d980e23cf
+    }
+    Block {
+      BlockType               Reference
+      Name                    "CONCAT1"
+      Ports                   [8, 1, 0, 0, 0]
+      Position                [115, 205, 175, 295]
+      SourceBlock             "stringlib/CONCAT"
+      ptrn                    "%1/Messages.json"
+      nmax                    0
+      #GUID                   56a20477-54c7-4ef0-9c19-8b2eb262c169
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [475, 108, 580, 132]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   2166b058-528d-46e5-8f5c-91745eba4c5d
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [475, 138, 580, 162]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   bc14d6f2-19ef-435d-84b4-10600be834bf
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [475, 168, 805, 192]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   7b753739-1945-4d85-8d0c-c140d09919eb
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [475, 198, 580, 222]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   6990a7ae-89d7-4701-b18a-5844f6bc046e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HTTP2"
+      Ports                   [4, 6, 0, 0, 0]
+      Position                [240, 127, 320, 193]
+      SourceBlock             "speclib/HTTP2"
+      url                     "https://api.twilio.com/2010-04-01/Accounts/"
+      method                  "2: POST"
+      user                    "YourTwilioAccountSID"
+      password                "YourTwilioAuthToken"
+      certificate             ""
+      VERIFY                  off
+      postmime                "application/x-www-form-urlencoded"
+      acceptmime              "application/json"
+      timeout                 5
+      BLOCKING                off
+      nmax                    0
+      postmax                 2560
+      datamax                 10240
+      BackgroundColor         "cyan"
+      #GUID                   0ab78ea0-370f-46d2-87e4-0747d82504ee
+    }
+    Block {
+      BlockType               Reference
+      Name                    "MP_sendSMS"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [40, 323, 55, 337]
+      SourceBlock             "genlib/MP"
+      BSTATE                  off
+      pwidth                  1
+      RPTF                    off
+      BackgroundColor         "magenta"
+      #GUID                   9d91e373-401e-4357-90cb-94a775edb557
+    }
+    Block {
+      BlockType               Reference
+      Name                    "PJSOCT"
+      Ports                   [2, 9, 0, 0, 0]
+      Position                [375, 112, 415, 208]
+      SourceBlock             "stringlib/PJSOCT"
+      name1                   "to"
+      name2                   "from"
+      name3                   "body"
+      name4                   "status"
+      name5                   ""
+      name6                   ""
+      name7                   ""
+      name8                   ""
+      nmax                    0
+      #GUID                   85061b50-780e-4c89-900c-d2758f35f178
+    }
+    Line {
+      SrcBlock                "CNS_accountSID"
+      SrcPort                 1
+      DstBlock                "CONCAT1"
+      DstPort                 1
+      #GUID                   bacc1dac-01eb-4819-b48c-2c1d826d078c
+    }
+    Line {
+      SrcBlock                "CNS_from"
+      SrcPort                 1
+      Points                  [25, 0; 0, -20]
+      DstBlock                "CONCAT"
+      DstPort                 2
+      #GUID                   72dd601e-e517-43cd-ad1c-3b1e78d84f15
+    }
+    Line {
+      SrcBlock                "CNS_message"
+      SrcPort                 1
+      Points                  [30, 0]
+      DstBlock                "CONCAT"
+      DstPort                 3
+      #GUID                   856a5423-1375-408e-b374-d56f6f6405bb
+    }
+    Line {
+      SrcBlock                "CNS_to"
+      SrcPort                 1
+      DstBlock                "CONCAT"
+      DstPort                 1
+      #GUID                   205fcef5-62c3-4f26-ab62-06d3e2c7ef24
+    }
+    Line {
+      SrcBlock                "CONCAT"
+      SrcPort                 1
+      DstBlock                "HTTP2"
+      DstPort                 1
+      #GUID                   f039d53a-2d10-4fda-b77f-d23caf3883c5
+    }
+    Line {
+      SrcBlock                "CONCAT1"
+      SrcPort                 1
+      Points                  [10, 0; 0, -95]
+      DstBlock                "HTTP2"
+      DstPort                 2
+      #GUID                   3fda8e6e-b5ef-4c52-b3fa-cd297835ce58
+    }
+    Line {
+      SrcBlock                "HTTP2"
+      SrcPort                 1
+      DstBlock                "PJSOCT"
+      DstPort                 1
+      #GUID                   17708760-fd0d-4574-8a6d-776e59afb6e3
+    }
+    Line {
+      SrcBlock                "HTTP2"
+      SrcPort                 3
+      Points                  [15, 0; 0, 30]
+      DstBlock                "PJSOCT"
+      DstPort                 2
+      #GUID                   7e884eaf-565d-47d7-a598-ea7991e78c3b
+    }
+    Line {
+      SrcBlock                "MP_sendSMS"
+      SrcPort                 1
+      Points                  [165, 0]
+      DstBlock                "HTTP2"
+      DstPort                 4
+      #GUID                   e3285682-3f68-4078-9fd6-d7303941c40f
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 1
+      DstBlock                "Display"
+      DstPort                 1
+      #GUID                   c1a1cdcf-a136-4965-8f38-f2a18524c4d2
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 2
+      Points                  [40, 0]
+      DstBlock                "Display1"
+      DstPort                 1
+      #GUID                   f731e3ad-0102-4c8d-bf34-fca279bc0c1a
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 3
+      Points                  [35, 0; 0, 40]
+      DstBlock                "Display2"
+      DstPort                 1
+      #GUID                   c60320a6-e8da-4052-8b44-7014affd8556
+    }
+    Line {
+      SrcBlock                "PJSOCT"
+      SrcPort                 4
+      Points                  [30, 0; 0, 60]
+      DstBlock                "Display3"
+      DstPort                 1
+      #GUID                   8031e09e-899e-442e-a950-a13b16e6d2dc
+    }
+    Annotation {
+      Position                [130, 40]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   8feb317c-34be-445c-9c14-f35789312c76
+    }
+    Annotation {
+      Position                [120, 85]
+      Text                    "urlencoded phone numbers! - see README.md"
+      FontSize                10
+      BackgroundColor         "lightBlue"
+      #GUID                   34da9076-ab36-440f-a817-ae2d763fb1e7
+    }
+    Annotation {
+      Position                [110, 15]
+      Text                    "Send SMS via Twilio example"
+      FontSize                14
+      FontWeight              "bold"
+      #GUID                   d52f859a-11a7-4c8e-849d-abd0a5b60b67
+    }
+  }
+}

@@ -4,8 +4,6 @@
 *                                                      *
 *   Sender station                                     *
 *                                                      *
-*   (c) REX Controls, www.rexcontrols.com              *
-*                                                      *
 *******************************************************/
 
 #define SENDER_IP    "192.168.1.100"

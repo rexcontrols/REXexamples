@@ -1,14 +1,14 @@
 Model {
   Name                    "myproject_exec"
   Version                 3.00
-  #RexVersion             "2.50.7 rev. 9062, Date 2018-2-28"
+  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
     NamePlacement           "normal"
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
@@ -21,13 +21,13 @@ Model {
     ForegroundColor         "black"
     BackgroundColor         "white"
     DropShadow              off
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                10
     FontWeight              "normal"
     FontAngle               "normal"
   }
   LineDefaults {
-    FontName                "Helvetica"
+    FontName                "Arial"
     FontSize                9
     FontWeight              "normal"
     FontAngle               "normal"
@@ -58,15 +58,16 @@ Model {
       BlockType               Reference
       Name                    "HMI"
       Ports                   [0, 0, 0, 0, 0]
-      Position                [110, 343, 155, 362]
+      Position                [110, 358, 155, 377]
       SourceBlock             "execlib/HMI"
       IncludeHMI              on
-      HmiDir                  "hmi"
+      HmiDir                  "customhmi"
       SourceDir               "hmisrc"
       GenerateWebWatch        off
       GenerateRexHMI          off
       RedirectToHMI           on
       Compression             off
+      FontSize                10
       #GUID                   d90040fd-5714-4ce1-9038-46ebcd729f9b
     }
     Block {
@@ -99,10 +100,12 @@ Model {
       #GUID                   eadec7a5-4d41-4d23-9935-617653a1088b
     }
     Annotation {
-      Position                [85, 20]
-      Text                    "REST API  project"
+      Position                [15, 15]
+      Text                    "REST API project"
       FontWeight              "bold"
       FontSize                16
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
       #GUID                   590291c8-0e77-4cdf-a7fb-59308fed54e0
     }
   }
