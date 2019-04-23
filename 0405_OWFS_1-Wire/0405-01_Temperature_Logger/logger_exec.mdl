@@ -1,0 +1,144 @@
+Model {
+  Name                    "logger_exec"
+  Version                 3.00
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "logger_exec"
+    Location                [11, 33, 277, 480]
+    #GUID                   39cb8861-5961-447a-bf17-61959d76aae1
+    Block {
+      BlockType               Reference
+      Name                    "EXEC"
+      Ports                   [0, 8, 0, 0, 0]
+      Position                [55, 73, 100, 362]
+      SourceBlock             "execlib/EXEC"
+      target                  "Generic target device"
+      tick                    "0.05"
+      ntick0                  10
+      ntick1                  50
+      ntick2                  100
+      ntick3                  1200
+      pri0                    5
+      pri1                    9
+      pri2                    13
+      pri3                    18
+      #GUID                   0b2d71c6-c300-46d9-935a-fd2fc96683d9
+    }
+    Block {
+      BlockType               Reference
+      Name                    "HMI"
+      Ports                   [0, 0, 0, 0, 0]
+      Position                [55, 393, 100, 412]
+      SourceBlock             "execlib/HMI"
+      IncludeHMI              on
+      HmiDir                  "hmi"
+      SourceDir               "hmisrc"
+      GenerateWebWatch        on
+      GenerateRexHMI          on
+      RedirectToHMI           on
+      Compression             off
+      #GUID                   8ecc3311-bc8c-4b0b-aaaf-9db4449f5d9e
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OWS"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [140, 123, 190, 137]
+      SourceBlock             "execlib/IODRV"
+      module                  "OwsDrv"
+      classname               "OwsDrv"
+      cfgname                 "ow_cfg.rio"
+      factor                  1
+      stack                   10240
+      pri                     3
+      timer                   off
+      #GUID                   c76d9db3-49c6-4090-9f92-001041a0ef5b
+    }
+    Block {
+      BlockType               Reference
+      Name                    "OwsDrv"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [140, 88, 190, 102]
+      SourceBlock             "execlib/MODULE"
+      #GUID                   37ca99bb-06de-4b73-ab60-80a85080da93
+    }
+    Block {
+      BlockType               Reference
+      Name                    "logger_task"
+      Ports                   [1, 1, 0, 0, 0]
+      Position                [140, 228, 190, 242]
+      SourceBlock             "execlib/TASK"
+      factor                  1
+      start                   0
+      stop                    1
+      stack                   10240
+      filename                ""
+      MDLOPEN                 on
+      #GUID                   86a91f34-8f6c-4d78-9c40-ed194e3c0d59
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 1
+      DstBlock                "OwsDrv"
+      DstPort                 1
+      #GUID                   4b47766f-d184-4bca-9be8-d9c3823beee8
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 2
+      DstBlock                "OWS"
+      DstPort                 1
+      #GUID                   9fd896a8-e198-436d-9b4e-24665ed161b8
+    }
+    Line {
+      SrcBlock                "EXEC"
+      SrcPort                 5
+      DstBlock                "logger_task"
+      DstPort                 1
+      #GUID                   78ff6767-ed7e-4761-9eee-99c47d45a19e
+    }
+    Annotation {
+      Position                [135, 45]
+      Text                    "See the README.md file for detailed information"
+"."
+      #GUID                   9a59b980-6211-4c29-bc53-72c34b027df5
+    }
+    Annotation {
+      Position                [110, 20]
+      Text                    "1-Wire temperature logger"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   73206ce6-461d-4cdf-8b05-73302cd80627
+    }
+  }
+}

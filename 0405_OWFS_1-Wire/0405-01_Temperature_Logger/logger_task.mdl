@@ -1,0 +1,345 @@
+Model {
+  Name                    "logger_task"
+  Version                 3.00
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
+  SavedCharacterEncoding  "UTF-8"
+  BlockDefaults {
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    NamePlacement           "normal"
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+    ShowName                on
+    Orientation             "right"
+  }
+  AnnotationDefaults {
+    HorizontalAlignment     "left"
+    VerticalAlignment       "middle"
+    ForegroundColor         "black"
+    BackgroundColor         "white"
+    DropShadow              off
+    FontName                "Arial"
+    FontSize                10
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  LineDefaults {
+    FontName                "Arial"
+    FontSize                9
+    FontWeight              "normal"
+    FontAngle               "normal"
+  }
+  System {
+    Name                    "logger_task"
+    Location                [298, 33, 889, 504]
+    #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
+    Block {
+      BlockType               Reference
+      Name                    "CNB_RUN"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [390, 288, 405, 302]
+      SourceBlock             "mathlib/CNB"
+      SourceType              "CNB"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      YCN                     on
+      #GUID                   0060889a-b1e8-49a6-a279-a278957daff2
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [250, 98, 330, 122]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  " °C"
+      DispValue               ""
+      #GUID                   2c83c799-24a5-4560-b8b8-4380ce992c63
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [250, 128, 330, 152]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  " °C"
+      DispValue               ""
+      #GUID                   6ffe2c47-7c7c-4281-a21e-7961139a525e
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [250, 158, 330, 182]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  " °C"
+      DispValue               ""
+      #GUID                   de46c239-47b0-4347-8eee-cae54df0be3b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Ports                   [1, 0, 0, 0, 0]
+      Position                [250, 188, 330, 212]
+      Format                  "Best fit"
+      ShowName                off
+      Decimation              1
+      Suffix                  " °C"
+      DispValue               ""
+      #GUID                   d9fd5a42-ab48-424b-b246-580eafd65c62
+    }
+    Block {
+      BlockType               From
+      Name                    "From"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 103, 150, 117]
+      ShowName                off
+      GotoTag                 "OWS__sensor1"
+      BackgroundColor         "yellow"
+      #GUID                   bb3de844-f337-403d-914d-af975d61ca5b
+    }
+    Block {
+      BlockType               From
+      Name                    "From1"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 133, 150, 147]
+      ShowName                off
+      GotoTag                 "OWS__sensor2"
+      BackgroundColor         "yellow"
+      #GUID                   fb1653fa-9ca9-4c1f-a5dc-023195667f78
+    }
+    Block {
+      BlockType               From
+      Name                    "From2"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 163, 150, 177]
+      ShowName                off
+      GotoTag                 "OWS__sensor3"
+      BackgroundColor         "yellow"
+      #GUID                   79f61402-df51-43bd-afc4-1b38a778e13b
+    }
+    Block {
+      BlockType               From
+      Name                    "From3"
+      Ports                   [0, 1, 0, 0, 0]
+      Position                [20, 193, 150, 207]
+      ShowName                off
+      GotoTag                 "OWS__sensor4"
+      BackgroundColor         "yellow"
+      #GUID                   0856d651-327f-4635-a3b8-a7bcd015c48f
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_10days"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [450, 352, 495, 428]
+      SourceBlock             "arclib/TRND"
+      SourceType              "TRND"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      n                       4
+      l                       86400
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    20
+      afac                    0
+      arc                     0
+      id                      2
+      Title                   "Temperatures (10 days)"
+      NamePlacement           ""
+      ShowName                on
+      timesrc                 1
+      #GUID                   d818c97b-3077-4f61-a719-3041df174072
+    }
+    Block {
+      BlockType               Reference
+      Name                    "TRND_3hours"
+      Ports                   [6, 5, 0, 0, 0]
+      Position                [450, 242, 495, 318]
+      SourceBlock             "arclib/TRND"
+      SourceType              "TRND"
+      ShowPortLabels          "FromPortIcon"
+      SystemSampleTime        -1
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      n                       4
+      l                       5400
+      btype                   "8: Double"
+      ptype1                  "1: Store"
+      ptype2                  "1: Store"
+      ptype3                  "1: Store"
+      ptype4                  "1: Store"
+      pfac                    4
+      afac                    0
+      arc                     0
+      id                      1
+      Title                   "Temperatures (3 hours)"
+      NamePlacement           ""
+      ShowName                on
+      timesrc                 1
+      #GUID                   911fa63c-448d-4519-93ab-8e6957237a86
+    }
+    Line {
+      SrcBlock                "CNB_RUN"
+      SrcPort                 1
+      Points                  [20, 0]
+      #GUID                   c757f4dd-ad50-41ac-9fee-5238592d97b8
+      Branch {
+        Points                  [0, 110]
+        DstBlock                "TRND_10days"
+        DstPort                 5
+        #GUID                   82f26ea7-bdf9-46da-9a54-7c4e53840c35
+      }
+      Branch {
+        DstBlock                "TRND_3hours"
+        DstPort                 5
+        #GUID                   ffab2dfa-f115-4dce-a563-6884325e8082
+      }
+    }
+    Line {
+      SrcBlock                "From"
+      SrcPort                 1
+      Points                  [65, 0]
+      #GUID                   4c16403e-15e9-4a56-88fe-28342902fd63
+      Branch {
+        Points                  [0, 145; 125, 0]
+        #GUID                   bd79ba9c-c8b4-4bc4-89bf-580c4d5e1f3b
+        Branch {
+          Points                  [0, 110]
+          DstBlock                "TRND_10days"
+          DstPort                 1
+          #GUID                   f95b0e3f-0942-4fc6-b6fd-f1c0a026c997
+        }
+        Branch {
+          DstBlock                "TRND_3hours"
+          DstPort                 1
+          #GUID                   1ad5a0c3-f00d-4296-aa9c-f99626412b48
+        }
+      }
+      Branch {
+        DstBlock                "Display"
+        DstPort                 1
+        #GUID                   2d3b8563-65e2-405e-8762-6a673b6ebf5a
+      }
+    }
+    Line {
+      SrcBlock                "From1"
+      SrcPort                 1
+      Points                  [55, 0]
+      #GUID                   24b351fb-4d84-4c78-89be-c2703da13125
+      Branch {
+        Points                  [0, 125; 125, 0]
+        #GUID                   a67757a4-a0be-44d9-ac95-e222dd92f955
+        Branch {
+          Points                  [0, 110]
+          DstBlock                "TRND_10days"
+          DstPort                 2
+          #GUID                   ad0ccc57-9d16-450e-850d-70591cf52f39
+        }
+        Branch {
+          DstBlock                "TRND_3hours"
+          DstPort                 2
+          #GUID                   83fcd89a-49ff-45c2-a76c-52668d39125f
+        }
+      }
+      Branch {
+        DstBlock                "Display1"
+        DstPort                 1
+        #GUID                   32683c6d-03a9-4867-836a-6c90a8177f38
+      }
+    }
+    Line {
+      SrcBlock                "From2"
+      SrcPort                 1
+      Points                  [45, 0]
+      #GUID                   736bb8b2-155a-4bb7-9573-2da3006bfade
+      Branch {
+        Points                  [0, 105; 125, 0]
+        #GUID                   3e4c90e6-ad26-4146-8b19-c6492d8643cd
+        Branch {
+          Points                  [0, 110]
+          DstBlock                "TRND_10days"
+          DstPort                 3
+          #GUID                   25a8aed5-6577-4d87-8a1d-67a444d53a10
+        }
+        Branch {
+          DstBlock                "TRND_3hours"
+          DstPort                 3
+          #GUID                   84d4b433-88f3-48ee-8b78-543227ce29ed
+        }
+      }
+      Branch {
+        DstBlock                "Display2"
+        DstPort                 1
+        #GUID                   7f8f3e2b-2490-438d-82e7-88e618ff8f58
+      }
+    }
+    Line {
+      SrcBlock                "From3"
+      SrcPort                 1
+      Points                  [35, 0]
+      #GUID                   8910dc3c-e0c3-4cad-925e-c0855ecc803c
+      Branch {
+        Points                  [0, 85; 125, 0]
+        #GUID                   5b97bfef-8a1f-4d54-970e-3f33ca62cb2b
+        Branch {
+          Points                  [0, 110]
+          DstBlock                "TRND_10days"
+          DstPort                 4
+          #GUID                   c7b226b7-359d-435f-8e99-d46dad7e395d
+        }
+        Branch {
+          DstBlock                "TRND_3hours"
+          DstPort                 4
+          #GUID                   c7dc8be8-0c5c-40f5-9a5e-65f95ab4b122
+        }
+      }
+      Branch {
+        DstBlock                "Display3"
+        DstPort                 1
+        #GUID                   22fc71d1-4a62-428c-9e50-de9f816d1408
+      }
+    }
+    Annotation {
+      Position                [115, 20]
+      Text                    "1-Wire temperature logger"
+      FontWeight              "bold"
+      FontSize                16
+      #GUID                   b440336e-823a-4429-9c52-33cb562e60b8
+    }
+    Annotation {
+      Position                [245, 55]
+      Text                    "Go to OWS driver configuration and press \"Conf"
+"igure\" to configure the 1-Wire sensor (64-bit ID).\n\nRead the README.md file"
+" for detailed information."
+      #GUID                   02b82fed-ea27-4a42-8ff5-2958ced35838
+    }
+  }
+}

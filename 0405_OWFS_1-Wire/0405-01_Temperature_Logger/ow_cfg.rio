@@ -1,0 +1,32 @@
+OwsDrv {
+  Version                 1.00
+  TargetName              "localhost:4304"
+  MaxConsAlarms           5
+  MaxRetries              3
+  Timeout                 10
+  ItemCount               4
+  Item {
+    Name                    "sensor1"
+    Path                    "/28.551DDF030000/temperature12"
+    IOType                  0x0018
+    InitValue               "-4.7"
+  }
+  Item {
+    Name                    "sensor2"
+    Path                    "/28.063BC8040000/temperature12"
+    IOType                  0x0018
+    InitValue               "2.63"
+  }
+  Item {
+    Name                    "sensor3"
+    Path                    "/28.B8BDBC020000/temperature12"
+    IOType                  0x0018
+    InitValue               "21.25"
+  }
+  Item {
+    Name                    "sensor4"
+    Path                    "/28.3F11C8040000/temperature12"
+    IOType                  0x0018
+    InitValue               "44.87"
+  }
+}
