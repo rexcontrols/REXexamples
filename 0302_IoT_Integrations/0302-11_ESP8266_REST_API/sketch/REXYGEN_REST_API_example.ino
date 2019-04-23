@@ -1,6 +1,6 @@
 // Developed and tested with following boards/library versions:
-//    esp8266 boards    2.4.2
-//    ArduinoJson       5.13.4
+//    esp8266 boards    2.5.0
+//    ArduinoJson       6.10.0
 //    ESP8266HTTPClient 1.1.0
 //    ESP8266WiFi       1.0.0
 #include <ESP8266WiFi.h>
@@ -81,17 +81,15 @@ float RexygenGet(char* connectionString){
   Serial.println(urlGet);
 
   http.begin(urlGet);
-  //http.addHeader("Content-Type", "application/json");
   http.addHeader("Accept", "application/json");
   http.setAuthorization(rexygenLogin,rexygenPassword);
   httpCode = http.GET(); // Returns http response code
 
   if (httpCode == 200) { // Check the returning code
     const size_t bufferSize = JSON_OBJECT_SIZE(1) + 30;
-    DynamicJsonBuffer jsonBuffer(bufferSize);
-
-    JsonObject& root = jsonBuffer.parseObject(http.getString());
-    v = root["v"];
+    DynamicJsonDocument doc(bufferSize);
+    deserializeJson(doc, http.getString());
+    v = doc["v"];
   }
   else{
     v = -1;
@@ -116,16 +114,15 @@ String RexygenGetString(char* connectionString){
   Serial.println(urlGet);
 
   http.begin(urlGet);
-  //http.addHeader("Content-Type", "application/json");
   http.addHeader("Accept", "application/json");
   http.setAuthorization(rexygenLogin,rexygenPassword);
   httpCode = http.GET(); // Returns http response code
 
   if (httpCode == 200) { // Check the returning code
     const size_t bufferSize = JSON_OBJECT_SIZE(1) + 30;
-    DynamicJsonBuffer jsonBuffer(bufferSize);
-    JsonObject& root = jsonBuffer.parseObject(http.getString());
-    v = root["v"].as<String>();
+    DynamicJsonDocument doc(bufferSize);
+    deserializeJson(doc, http.getString());
+    v = doc["v"].as<String>();
   }
   else{
     v = "null";
