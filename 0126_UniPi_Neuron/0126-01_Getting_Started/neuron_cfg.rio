@@ -1,0 +1,36 @@
+Modbus {
+  Name                    ""
+  Timeout                 1000
+  Flags                   8
+  Gap                     10000
+  #GUID                   bf2fc692-23a5-40fc-8aa4-04af1911f07b
+  Slave {
+    Name                    "slaveMB"
+    IPaddress               "127.0.0.1"
+    Subaddress              0
+    SlaveID                 0
+    MaxRequest              16
+    TCPport                 502
+  }
+  Item {
+    Name                    "DO1_1"
+    SlaveAdr                0
+    RegisterAdr             0
+    Type                    0x00000101
+    Count                   1
+  }
+  Item {
+    Name                    "DI1_1"
+    SlaveAdr                0
+    RegisterAdr             4
+    Type                    0x00000201
+    Count                   1
+  }
+  Item {
+    Name                    "DI1_3"
+    SlaveAdr                0
+    RegisterAdr             6
+    Type                    0x00000201
+    Count                   1
+  }
+}
