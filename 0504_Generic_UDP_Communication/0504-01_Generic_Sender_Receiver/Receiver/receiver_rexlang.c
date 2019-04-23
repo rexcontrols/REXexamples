@@ -6,9 +6,6 @@
 *                                                      *
 *******************************************************/
 
-#define SENDER_IP    "192.168.1.100"
-#define RECEIVER_IP  "192.168.1.200"
-#define senderPort   4000
 #define receiverPort 4001
 #define BUFFER_SIZE  50    //maximum number of bytes to receive
 
@@ -26,52 +23,32 @@ long output(12) dat2;      //the third byte of the received data
 long output(13) dat3;      //the fourth byte of the received data
 
 //declaration of variables
-long hRecvLoc;             //socket handle
+long hCom;                 //communication socket handle
 long buffer[BUFFER_SIZE];  //buffer for incoming data
 long dataCnt;              //number of received bytes
 long convData[2];          //array for data conversions
 
-/* Function for conversion of 2 numbers of type Long representing a decimal 
-number in the double format according to IEEE 754 to a decimal number. 
-Little-endian format is used. */
-double LongAsDouble(long val[])
-{
-	double lbase=((double)(val[1]&0xFFFFF))/((double)0x00100000)+(val[0]&0x7FFFFFFF)*pow(2.0,-52.0);
-	long lexp=(val[1]>>20)&0x7FF;
-	if(val[0]&0x80000000)
-		lbase+=pow(2.0,-21.0);
-	if(lexp==0)
-		return 0.0;
-	if(lexp==0x7FF)
-	{	
-    //deal with NaN and Inf here if necessary
-		return 1.0e60; //substitute value
-	}
-	lbase=(lbase+1.0)*pow(2.0,(double)(lexp-1023));
-	return (val[1]&0x80000000)!=0? -lbase : lbase;
-}
-
-/* Initialization of the REXLANG algorithm */
-// the init procedure is executed once when the REXLANG function block initializes
+// * Initialization of the REXLANG algorithm *
+// The init procedure is executed once when the REXLANG function block initializes.
 long init(void)
 {
-  hRecvLoc = -1;
+  hCom = -1;
   dataCnt = 0;
-	return 0;
+  return 0;
 }
 
-/* The body of REXLANG algorithm */
-// the main procedure is executed once in each sampling period
+// * The body of REXLANG algorithm * 
+// The main procedure is executed once in each sampling period.
 long main(void)
 {
-  if (hRecvLoc<0)
+  if (hCom<0)
   {
-   hRecvLoc = OpenUDP(RECEIVER_IP,receiverPort,SENDER_IP,senderPort);  //opening UDP
+    hCom = OpenUDP(0, receiverPort, 0, 0);  //opening UDP socket, syntax long OpenUDP(string localname, long lclPort, string remotename, long remPort)
   }
   else 
   {
     //receive the data
-    dataCnt = Recv(hRecvLoc,buffer,BUFFER_SIZE); //receive data, max number of bytes = BUFFER_SIZE
+    dataCnt = Recv(hCom,buffer,BUFFER_SIZE); //receive data, max number of bytes = BUFFER_SIZE
 
     //the first signal is of type long, therefore 4 bytes
     signal0 = buffer[0] | buffer[1]<<8 | buffer[2]<<16 | buffer[3]<<24;
@@ -83,28 +60,24 @@ long main(void)
     //the second signal is binary, therefore 1 byte
     signal1 = buffer[4];
     
-    //the third signal is of type double, therefore 8 bytes
-    convData[0] = buffer[5] | buffer[6]<<8 | buffer[7]<<16 | buffer[8]<<24;
-    convData[1] = buffer[9] | buffer[10]<<8 | buffer[11]<<16 | buffer[12]<<24;
-    signal2 = LongAsDouble(convData);
+    //the third signal is of type double, therefore 8 bytes will be processed
+    signal2 = buf2double(subarray(5,buffer),1);
 
-    //the fourth signal is of type double, therefore 8 bytes
-    convData[0] = buffer[13] | buffer[14]<<8 | buffer[15]<<16 | buffer[16]<<24;
-    convData[1] = buffer[17] | buffer[18]<<8 | buffer[19]<<16 | buffer[20]<<24;
-    signal3 = LongAsDouble(convData);
+    //the fourth signal is of type double, therefore 8 bytes will be processed
+    signal3 = buf2double(subarray(13,buffer),1);
   }  
   //publishing the UDP communication handle through output signal (for debugging)
-  handle = hRecvLoc;
+  handle = hCom;
   //and also the number of received bytes
   receivedBytes = dataCnt;
   return 0;
 }
 
-/* Closing the REXLANG algorithm */
-//the exit procedure is executed once when the task is correctly terminated
-// (system shutdown, downloading new control algorithm, etc.)
+// * Closing the REXLANG algorithm * 
+// The exit procedure is executed once when the task is correctly terminated
+// (system shutdown, downloading new application, etc.).
 long exit(void)
 {
-	if(hRecvLoc>=0) Close(hRecvLoc);
+	if(hCom>=0) Close(hCom);
   return 0;
 }

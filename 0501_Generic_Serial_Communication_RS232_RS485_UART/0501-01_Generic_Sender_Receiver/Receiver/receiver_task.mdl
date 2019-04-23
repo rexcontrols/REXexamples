@@ -1,7 +1,7 @@
 Model {
   Name                    "receiver_task"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,16 +34,62 @@ Model {
   }
   System {
     Name                    "receiver_task"
-    Location                [212, 34, 616, 366]
+    Location                [224, 34, 630, 421]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
       Name                    "CNB_RUN"
       Ports                   [0, 1, 0, 0, 0]
-      Position                [190, 138, 210, 152]
+      Position                [195, 243, 215, 257]
       SourceBlock             "mathlib/CNB"
       YCN                     on
       #GUID                   3fcaf061-5f4b-4357-ae12-ce0d51b6f4a4
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display"
+      Position                [225, 73, 305, 97]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   b17975de-3952-4399-8e3d-6235499c0c4b
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display1"
+      Position                [225, 103, 305, 127]
+      ShowName                off
+      Format                  "Best fit"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      #GUID                   503ad361-0ef8-4ac5-81ac-1bee33c9bf2a
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display2"
+      Position                [225, 133, 305, 157]
+      ShowName                off
+      Format                  "short"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      FontSize                10
+      #GUID                   584da2e1-8f47-4a0d-9b10-a507412568c3
+    }
+    Block {
+      BlockType               Display
+      Name                    "Display3"
+      Position                [225, 163, 305, 187]
+      ShowName                off
+      Format                  "short"
+      Decimation              1
+      Suffix                  ""
+      DispValue               ""
+      FontSize                10
+      #GUID                   ebc0cf64-6331-4480-a5e4-dbe541cb39ab
     }
     Block {
       BlockType               Reference
@@ -80,7 +126,7 @@ Model {
       BlockType               Reference
       Name                    "TRND"
       Ports                   [6, 5, 0, 0, 0]
-      Position                [240, 93, 285, 167]
+      Position                [245, 198, 290, 272]
       SourceBlock             "arclib/TRND"
       n                       4
       l                       1000
@@ -107,30 +153,71 @@ Model {
     Line {
       SrcBlock                "REXLANG"
       SrcPort                 2
-      DstBlock                "TRND"
-      DstPort                 1
+      Points                  [75, 0]
       #GUID                   b7abff90-23bf-4c5e-b796-0c52462d66aa
+      Branch {
+        Points                  [0, -20]
+        DstBlock                "Display"
+        DstPort                 1
+        #GUID                   77dec899-0aad-4ef6-a10f-6350dfa11117
+      }
+      Branch {
+        Points                  [0, 105]
+        DstBlock                "TRND"
+        DstPort                 1
+        #GUID                   ce402d7f-55c6-44a3-82b2-0eba989d26f9
+      }
     }
     Line {
       SrcBlock                "REXLANG"
       SrcPort                 3
-      DstBlock                "TRND"
-      DstPort                 2
+      Points                  [65, 0]
       #GUID                   e1f5de69-ffa4-4391-90b7-1ed492dd4652
+      Branch {
+        DstBlock                "Display1"
+        DstPort                 1
+        #GUID                   c8c9ae8c-8c5f-49c5-9985-8b699fa6202f
+      }
+      Branch {
+        Points                  [0, 105]
+        DstBlock                "TRND"
+        DstPort                 2
+        #GUID                   6c11e72f-ef3e-45b5-aec3-8af54500ca7e
+      }
     }
     Line {
       SrcBlock                "REXLANG"
       SrcPort                 4
-      DstBlock                "TRND"
-      DstPort                 3
+      Points                  [55, 0; 0, 20]
       #GUID                   124e7a14-f59b-4431-a8d3-ee54258d4da0
+      Branch {
+        DstBlock                "Display2"
+        DstPort                 1
+        #GUID                   7f5cf9fa-fbad-4ded-a9d0-04ec86293a2f
+      }
+      Branch {
+        Points                  [0, 85]
+        DstBlock                "TRND"
+        DstPort                 3
+        #GUID                   b7d2a4ce-a738-493e-b5cd-d3f72d51f85d
+      }
     }
     Line {
       SrcBlock                "REXLANG"
       SrcPort                 5
-      DstBlock                "TRND"
-      DstPort                 4
+      Points                  [45, 0; 0, 40]
       #GUID                   2ee8e213-2bd8-4cd8-a349-c120fb3ad0ee
+      Branch {
+        DstBlock                "Display3"
+        DstPort                 1
+        #GUID                   ffd64051-4032-4498-ac92-a1e810631c74
+      }
+      Branch {
+        Points                  [0, 65]
+        DstBlock                "TRND"
+        DstPort                 4
+        #GUID                   98b721ca-845c-4aa2-a142-17feee1cbc90
+      }
     }
     Annotation {
       Position                [130, 40]

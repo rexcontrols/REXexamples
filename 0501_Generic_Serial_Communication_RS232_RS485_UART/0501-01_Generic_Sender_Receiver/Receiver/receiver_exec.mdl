@@ -1,7 +1,8 @@
 Model {
   Name                    "receiver_exec"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
+  SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
     BackgroundColor         "white"
@@ -33,15 +34,15 @@ Model {
   }
   System {
     Name                    "receiver_exec"
-    Location                [11, 34, 191, 366]
+    Location                [11, 34, 203, 421]
     #GUID                   39cb8861-5961-447a-bf17-61959d76aae1
     Block {
       BlockType               Reference
       Name                    "EXEC"
       Ports                   [0, 8, 0, 0, 0]
-      Position                [20, 18, 65, 307]
+      Position                [20, 68, 65, 357]
       SourceBlock             "execlib/EXEC"
-      target                  "PC - Linux"
+      target                  "Generic target device"
       tick                    "0.05"
       ntick0                  10
       ntick1                  50
@@ -57,7 +58,7 @@ Model {
       BlockType               Reference
       Name                    "receiver_task"
       Ports                   [1, 1, 0, 0, 0]
-      Position                [105, 173, 155, 187]
+      Position                [105, 223, 155, 237]
       SourceBlock             "execlib/TASK"
       factor                  1
       start                   0
@@ -73,6 +74,20 @@ Model {
       DstBlock                "receiver_task"
       DstPort                 1
       #GUID                   78ff6767-ed7e-4761-9eee-99c47d45a19e
+    }
+    Annotation {
+      Position                [100, 40]
+      Text                    "See the README.md file for details."
+      #GUID                   505d116d-6d28-48bf-a44f-6481d6765e2e
+    }
+    Annotation {
+      Position                [10, 10]
+      Text                    "Receiver station"
+      FontWeight              "bold"
+      FontSize                16
+      HorizontalAlignment     "left"
+      VerticalAlignment       "top"
+      #GUID                   3136f5a9-6a56-45a9-8913-39bb397b5caa
     }
   }
 }
