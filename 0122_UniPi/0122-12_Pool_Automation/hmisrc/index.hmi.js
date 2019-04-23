@@ -102,7 +102,7 @@ REX.HMI.init = function(){
     REX.HMI.setRefreshRate(100);
     
     // Change title of the page
-    REX.HMI.setTitle('UniPi - Pool automation');
+    REX.HMI.setTitle('UniPi v1.1 - Pool automation');
     
     // Show clock in upper right corner
     // REX.HMI.showHeartBeatClock()

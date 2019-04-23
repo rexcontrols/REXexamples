@@ -1,7 +1,7 @@
 Model {
   Name                    "max31855_exec"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -43,7 +43,7 @@ Model {
       Position                [20, 65, 65, 325]
       SourceBlock             "execlib/EXEC"
       SourceType              "EXEC"
-      target                  "PC - Linux"
+      target                  "Generic target device"
       tick                    "0.05"
       ntick0                  10
       ntick1                  50

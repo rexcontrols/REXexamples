@@ -1,7 +1,7 @@
 Model {
   Name                    "pool_task"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -103,7 +103,6 @@ Model {
         Block {
           BlockType               Inport
           Name                    "BUTTON"
-          Ports                   [0, 1, 0, 0, 0]
           Position                [30, 103, 60, 117]
           Port                    1
           #GUID                   e7970ec1-649a-46d4-836c-0beb802a3400
@@ -266,7 +265,7 @@ Model {
         Block {
           BlockType               Reference
           Name                    "TIMER_BTN"
-          Ports                   [2, 2, 0, 0, 0]
+          Ports                   [3, 3, 0, 0, 0]
           Position                [210, 103, 250, 127]
           SourceBlock             "logiclib/TIMER_"
           mode                    "3: Delayed OFF"
@@ -276,7 +275,7 @@ Model {
         Block {
           BlockType               Reference
           Name                    "TIMER_DEBOUNCE"
-          Ports                   [2, 2, 0, 0, 0]
+          Ports                   [3, 3, 0, 0, 0]
           Position                [105, 103, 145, 127]
           SourceBlock             "logiclib/TIMER_"
           mode                    "4: Delayed change"
@@ -286,7 +285,7 @@ Model {
         Block {
           BlockType               Reference
           Name                    "TIMER_LONGPRESS"
-          Ports                   [2, 2, 0, 0, 0]
+          Ports                   [3, 3, 0, 0, 0]
           Position                [225, 193, 265, 217]
           SourceBlock             "logiclib/TIMER_"
           mode                    "2: Delayed ON"
@@ -296,7 +295,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "SINGLE"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [970, 103, 1000, 117]
           Port                    1
           #GUID                   d8bffda6-56a0-43b4-9cc7-f0bebfceb984
@@ -304,7 +302,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "DOUBLE"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [970, 148, 1000, 162]
           Port                    2
           #GUID                   09f79105-de68-43b1-bf91-5d29b66291dd
@@ -312,7 +309,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "TRIPLE"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [970, 193, 1000, 207]
           Port                    3
           #GUID                   bfa5eca3-bc12-4c28-9abd-694b8a4d25b0
@@ -320,7 +316,6 @@ Model {
         Block {
           BlockType               Outport
           Name                    "LONG"
-          Ports                   [1, 0, 0, 0, 0]
           Position                [970, 248, 1000, 262]
           Port                    4
           #GUID                   ae35f25d-5369-4fab-8d9e-ba6c678aba7d
@@ -728,7 +723,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [25, 683, 115, 697]
       ShowName                off
       GotoTag                 "UNP__I01"
@@ -738,7 +732,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From1"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [760, 563, 850, 577]
       ShowName                off
       GotoTag                 "THERMOSTAT"
@@ -748,7 +741,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From2"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [25, 828, 175, 842]
       ShowName                off
       GotoTag                 "OWS__temperature"
@@ -758,7 +750,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto1"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [410, 803, 500, 817]
       ShowName                off
       GotoTag                 "THERMOSTAT"
@@ -1027,8 +1018,8 @@ Model {
       arc                     0
       id                      1
       Title                   "Thermostat actions (10 days)"
+      timesrc                 1
       #GUID                   f9fb0218-a080-4d34-a170-59c9d6531f1c
-        timesrc       1
     }
     Block {
       BlockType               Reference
@@ -1048,8 +1039,8 @@ Model {
       arc                     0
       id                      1
       Title                   "Thermostat actions (3 hours)"
+      timesrc                 1
       #GUID                   e7a16078-d8f9-49b6-96cd-30e6c07a134f
-        timesrc       1
     }
     Block {
       BlockType               Reference
@@ -1711,8 +1702,8 @@ Model {
       #GUID                   b2c31e5a-97a2-4f9d-80f3-b8b19c88b867
     }
     Annotation {
-      Position                [135, 15]
-      Text                    "Pool automation with UniPi - task"
+      Position                [155, 15]
+      Text                    "Pool automation with UniPi v1.1 - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   2ae8677e-4c83-46bd-9341-2f8e9f338465

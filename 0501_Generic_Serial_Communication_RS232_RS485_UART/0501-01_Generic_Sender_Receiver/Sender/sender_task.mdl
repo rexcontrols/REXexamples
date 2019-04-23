@@ -1,7 +1,7 @@
 Model {
   Name                    "sender_task"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -34,7 +34,7 @@ Model {
   }
   System {
     Name                    "sender_task"
-    Location                [215, 35, 611, 366]
+    Location                [229, 34, 625, 365]
     #GUID                   b676e0e9-9b83-4d07-ac82-8f548feafa0e
     Block {
       BlockType               Reference
@@ -61,6 +61,7 @@ Model {
       Position                [80, 88, 140, 102]
       SourceBlock             "mathlib/CNI"
       icn                     87654321
+      BackgroundColor         "magenta"
       #GUID                   a372da76-f99b-4120-b3c0-9b76457093da
     }
     Block {
@@ -70,6 +71,7 @@ Model {
       Position                [80, 178, 140, 192]
       SourceBlock             "mathlib/CNR"
       ycn                     "-247.18"
+      BackgroundColor         "magenta"
       #GUID                   1fb7ced2-926f-4ba5-97e4-3df781f6ceb7
     }
     Block {

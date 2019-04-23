@@ -1,7 +1,7 @@
 Model {
   Name                    "buttonblink_task"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -201,7 +201,7 @@ Model {
     }
     Annotation {
       Position                [185, 15]
-      Text                    "The button and blinking outputs of UniPi - task"
+      Text                    "The button and blinking outputs of UniPi v1.1 - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   698e2678-29aa-4841-8bba-6bf496564638

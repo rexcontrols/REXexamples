@@ -5,7 +5,7 @@ The examples contained in this folder demonstrate the use of 1-Wire devices in
 REXYGEN.
 
 Additional platform specific examples are available for individual platforms 
-supporting the 1-Wire bus (e.g. UniPi, see example 0122-26).
+supporting the 1-Wire bus (e.g. UniPi v1.1 see example 0122-26).
 
 ## Documentation ##
 

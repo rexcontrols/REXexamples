@@ -1,7 +1,7 @@
 Model {
   Name                    "pool_inksc_task"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -177,7 +177,6 @@ Model {
     Block {
       BlockType               From
       Name                    "From"
-      Ports                   [0, 1, 0, 0, 0]
       Position                [25, 448, 115, 462]
       ShowName                off
       GotoTag                 "UNP__I01"
@@ -187,7 +186,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [585, 73, 675, 87]
       ShowName                off
       GotoTag                 "UNP__RLY1"
@@ -198,7 +196,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto1"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [585, 173, 675, 187]
       ShowName                off
       GotoTag                 "UNP__RLY2"
@@ -209,7 +206,6 @@ Model {
     Block {
       BlockType               Goto
       Name                    "Goto2"
-      Ports                   [1, 0, 0, 0, 0]
       Position                [585, 273, 675, 287]
       ShowName                off
       GotoTag                 "UNP__RLY3"
@@ -725,8 +721,8 @@ Model {
       #GUID                   e1c4e033-49b4-4649-9d5e-6612c3fc5201
     }
     Annotation {
-      Position                [135, 15]
-      Text                    "Pool automation with UniPi - task"
+      Position                [155, 15]
+      Text                    "Pool automation with UniPi v1.1 - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   65763596-e271-4845-a141-dd7049bc03de

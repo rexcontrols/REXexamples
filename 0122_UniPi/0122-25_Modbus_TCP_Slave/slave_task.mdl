@@ -1,7 +1,7 @@
 Model {
   Name                    "slave_task"
   Version                 3.0
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -518,14 +518,14 @@ Model {
     }
     Annotation {
       Position                [490, 90]
-      Text                    "UniPi outputs"
+      Text                    "UniPi v1.1 outputs"
       FontWeight              "bold"
       FontSize                16
       #GUID                   e1b5fc28-83b4-4995-aefb-f95ae0623a4d
     }
     Annotation {
       Position                [140, 330]
-      Text                    "UniPi inputs"
+      Text                    "UniPi v1.1 inputs"
       FontWeight              "bold"
       FontSize                16
       #GUID                   b946823f-8070-447c-b85d-1d38132e1c42
@@ -571,7 +571,7 @@ Model {
     }
     Annotation {
       Position                [140, 15]
-      Text                    "UniPi as Modbus TCP slave - task"
+      Text                    "UniPi v1.1 as Modbus TCP slave - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   2ad812a2-f44b-41a3-bbc3-d30db12419e0

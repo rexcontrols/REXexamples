@@ -1,7 +1,7 @@
 Model {
   Name                    "myproject_task"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -281,7 +281,7 @@ Model {
     }
     Annotation {
       Position                [170, 25]
-      Text                    "Getting started with REXYGEN and UniPi"
+      Text                    "Getting started with REXYGEN and UniPi v1.1"
       FontWeight              "bold"
       FontSize                16
       #GUID                   c7b867f7-5096-4c01-a959-398c83a620d5

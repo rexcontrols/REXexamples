@@ -103,7 +103,7 @@ REX.HMI.init = function(){
     REX.HMI.setRefreshRate(100);
     
     // Change title of the page
-    REX.HMI.setTitle('UniPi - blink example with button');
+    REX.HMI.setTitle('UniPi v1.1 - blink example with button');
     
     // Show clock in upper right corner
     // REX.HMI.showHeartBeatClock()

@@ -1,7 +1,7 @@
 Model {
   Name                    "blink_exec"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -75,10 +75,11 @@ Model {
       Ports                   [0, 0, 0, 0, 0]
       Position                [125, 383, 175, 397]
       SourceBlock             "execlib/INFO"
-      Title                   "UniPi - Blink example"
+      Title                   "UniPi v1.1 - Blink example"
       Author                  "REX Controls s.r.o."
-      Description             "UniPi - \"Hello world\""
-      Customer                "Users of the REX Control System"
+      Description             "UniPi v1.1 - \"Hello world\""
+      Customer                "Users of REXYGEN"
+      FontSize                10
       #GUID                   b5966889-a63b-4e3c-805b-bcabd735f29e
     }
     Block {
@@ -146,8 +147,8 @@ Model {
       #GUID                   6ec68359-da23-434a-9fe3-1e8d8a5acb25
     }
     Annotation {
-      Position                [105, 20]
-      Text                    "Blinking outputs of UniPi"
+      Position                [120, 20]
+      Text                    "Blinking outputs of UniPi v1.1"
       FontWeight              "bold"
       FontSize                16
       #GUID                   6cdaa0c2-0c12-402c-915b-f82a00a28131

@@ -1,7 +1,7 @@
 Model {
   Name                    "myproject_exec"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -52,6 +52,7 @@ Model {
       pri1                    9
       pri2                    13
       pri3                    18
+      FontSize                10
       #GUID                   33aed3aa-a4b2-4613-a3c6-b5c295be84c4
     }
     Block {

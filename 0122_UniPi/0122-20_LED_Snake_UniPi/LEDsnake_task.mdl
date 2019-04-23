@@ -1,7 +1,7 @@
 Model {
   Name                    "LEDsnake_task"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -653,7 +653,7 @@ Model {
     }
     Annotation {
       Position                [650, 290]
-      Text                    "UniPi relays"
+      Text                    "UniPi v1.1 relays"
       FontWeight              "bold"
       FontSize                10
       #GUID                   f8ed918e-0920-4036-a76f-b99ee1567666
@@ -665,7 +665,7 @@ Model {
     }
     Annotation {
       Position                [55, 95]
-      Text                    "UniPi inputs"
+      Text                    "UniPi v1.1 inputs"
       FontWeight              "bold"
       FontSize                10
       #GUID                   dfd90c4b-11e9-46c5-83fe-fa920d51a9cc
@@ -677,7 +677,7 @@ Model {
     }
     Annotation {
       Position                [105, 15]
-      Text                    "LED snake on UniPi - task"
+      Text                    "LED snake on UniPi v1.1 - task"
       FontWeight              "bold"
       FontSize                16
       #GUID                   fe2cf331-a5ff-4fb5-9b38-9dad6109f513

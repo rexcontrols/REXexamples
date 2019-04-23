@@ -1,7 +1,7 @@
 Model {
   Name                    "blink_exec"
   Version                 3.00
-  #RexVersion             "2.50.8 rev. 10440 - REXCONV, Date 2019-2-21"
+  #RexVersion             "2.50.9 rev. 10621 - REXCONV, Date 2019-4-10"
   SavedCharacterEncoding  "UTF-8"
   BlockDefaults {
     ForegroundColor         "black"
@@ -78,7 +78,8 @@ Model {
       Title                   "Pigeon PLC - Blink example"
       Author                  "REX Controls s.r.o."
       Description             "Pigeon PLC - \"Hello world\""
-      Customer                "Users of the REX Control System"
+      Customer                "Users of REXYGEN"
+      FontSize                10
       #GUID                   b5966889-a63b-4e3c-805b-bcabd735f29e
     }
     Block {
