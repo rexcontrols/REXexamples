@@ -1,7 +1,0 @@
-Monarco {
-  SpiDevice               "/dev/spidev0.0"
-  SpiClock                4000000
-  RS485Baudrate           9600
-  RS485Mode               56
-  #GUID                   e7d1b7d6-efee-4fe4-b0a8-1b3489b36e50
-}

@@ -1,16 +1,12 @@
 Example projects for REXYGEN
-===========================================
+============================
 
-Dive in and explore the individual example projects! 
+All example projects are included in **REXYGEN Studio**, this repository is no longer maintained.
 
-Some examples are focused on using individual function blocks, others 
-demonstrate the access to inputs and outputs of various platforms. Once you 
-master the basics, there are also more complex *How to...* examples to learn 
-from.  
+Explore the examples at [REXYGEN webpage](https://www.rexygen.com/example-projects-rexygen/). 
 
-Visit the [REXYGEN webpage](http://www.rexygen.com) for more 
-information about these example projects and developing advanced automation and 
-control solutions using REXYGEN.
+
+
 
 
 
